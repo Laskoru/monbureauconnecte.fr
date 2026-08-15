@@ -28,6 +28,9 @@ export const siteConfig = {
     tag: 'monbureauconnecte-21',
   },
 
+  // Email de contact public (mentions légales, confidentialité, contact)
+  contactEmail: 'contact@monbureauconnecte.fr',
+
   // Réseaux / contact (optionnel, laisse vide si non utilisé)
   social: {
     twitter: '',
