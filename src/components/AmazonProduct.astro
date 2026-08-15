@@ -1,7 +1,6 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
 import { siteConfig } from '../siteConfig';
+import { resolveProductImage } from '../lib/products';
 
 interface Props {
   asin: string;
@@ -14,23 +13,9 @@ interface Props {
 const { asin, title, image, blurb, featured = false } = Astro.props;
 const affiliateUrl = `https://www.amazon.fr/dp/${asin}?tag=${siteConfig.amazon.tag}`;
 
-// Résolution automatique de l'image produit, du plus simple au plus explicite :
-//  1. Si une image est fournie dans le frontmatter (URL), on l'utilise.
-//  2. Sinon, on cherche automatiquement une image locale nommée d'après l'ASIN
-//     dans public/products/ (ex. public/products/B08PP39PLD.jpg).
-//     → Pour ajouter une photo, il suffit donc de déposer le fichier, sans rien
-//       éditer dans l'article. Voir public/products/README.md.
-const imageExtensions = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
-let resolvedImage = image;
-if (!resolvedImage) {
-  for (const ext of imageExtensions) {
-    const localPath = path.join(process.cwd(), 'public', 'products', `${asin}.${ext}`);
-    if (fs.existsSync(localPath)) {
-      resolvedImage = `/products/${asin}.${ext}`;
-      break;
-    }
-  }
-}
+// Image produit : champ `image:` du frontmatter, sinon public/products/<ASIN>.<ext>
+// détecté automatiquement (voir public/products/README.md).
+const resolvedImage = resolveProductImage(asin, image);
 ---
 
 <div class:list={['amazon-product', 'card', { 'amazon-product--featured': featured }]}>

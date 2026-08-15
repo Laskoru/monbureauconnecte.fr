@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
+import { resolveProductImages } from '../lib/products';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const latest = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 10);
@@ -87,15 +88,25 @@ const stats = [
   <section class="container article-list">
     <h2 class="article-list__title">Derniers articles</h2>
     {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
-    {latest.map((article) => (
-      <article class="article-card card card--hover">
-        <div class="article-card__body">
-          <p class="eyebrow">{dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min de lecture</p>
-          <h3><a class="stretched-link" href={`/articles/${article.slug}`}>{article.data.title}</a></h3>
-          <p class="article-card__desc">{article.data.description}</p>
-        </div>
-      </article>
-    ))}
+    {latest.map((article) => {
+      const thumbs = resolveProductImages(article.data.products, 2);
+      return (
+        <article class="article-card card card--hover">
+          <div class="article-card__body">
+            <p class="eyebrow">{dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min de lecture</p>
+            <h3><a class="stretched-link" href={`/articles/${article.slug}`}>{article.data.title}</a></h3>
+            <p class="article-card__desc">{article.data.description}</p>
+          </div>
+          {thumbs.length > 0 && (
+            <div class="article-card__thumbs">
+              {thumbs.map((src) => (
+                <img class="article-card__thumb" src={src} alt="" loading="lazy" onerror="this.remove()" />
+              ))}
+            </div>
+          )}
+        </article>
+      );
+    })}
   </section>
 </BaseLayout>
 
@@ -185,7 +196,13 @@ const stats = [
 
   .article-list { display: flex; flex-direction: column; gap: 1.1rem; padding: 2.8rem 1.25rem 3.5rem; }
   .article-list__title { margin-top: 0; }
-  .article-card { padding: 1.4rem 1.5rem; }
+  .article-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.4rem 1.5rem;
+  }
+  .article-card__body { flex: 1; min-width: 0; }
   .article-card h3 {
     margin: 0.35rem 0 0.4rem;
     font-size: 1.3rem;
@@ -193,6 +210,27 @@ const stats = [
   .article-card h3 a { color: var(--color-text); text-decoration: none; }
   .article-card:hover h3 a { color: var(--color-accent); }
   .article-card__desc { color: var(--color-text-muted); margin: 0; }
+
+  /* Miniatures produits, côte à côte à droite du titre */
+  .article-card__thumbs {
+    display: flex;
+    gap: 0.6rem;
+    flex-shrink: 0;
+  }
+  .article-card__thumb {
+    width: 84px;
+    height: 84px;
+    object-fit: contain;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 4px;
+  }
+  @media (max-width: 560px) {
+    .article-card { flex-direction: column; align-items: flex-start; }
+    .article-card__thumbs { order: -1; }
+    .article-card__thumb { width: 72px; height: 72px; }
+  }
 
   @media (max-width: 680px) {
     .categories__grid { grid-template-columns: 1fr; }
