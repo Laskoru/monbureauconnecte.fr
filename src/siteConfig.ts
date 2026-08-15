@@ -25,7 +25,7 @@ export const siteConfig = {
   // Programme Partenaires Amazon
   amazon: {
     enabled: true,
-    tag: 'tonid-21', // ton identifiant de suivi Amazon Associates, remplace-le
+    tag: 'ekoflokyarya-21',
   },
 
   // Réseaux / contact (optionnel, laisse vide si non utilisé)
