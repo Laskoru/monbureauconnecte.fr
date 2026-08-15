@@ -27,6 +27,15 @@ const articles = defineCollection({
         })
       )
       .default([]),
+    // Questions fréquentes affichées en bas d'article (aussi utilisées pour le rich snippet FAQ)
+    faq: z
+      .array(
+        z.object({
+          question: z.string(),
+          answer: z.string(),
+        })
+      )
+      .default([]),
   }),
 });
 

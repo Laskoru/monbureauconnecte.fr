@@ -1,12 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import AmazonProduct from '../components/AmazonProduct.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { siteConfig } from '../siteConfig';
+import { categories, type CategorySlug } from '../categories';
 
 interface Heading { depth: number; slug: string; text: string }
+interface FaqItem { question: string; answer: string }
 
 interface Props {
+  slug: string;
   title: string;
   description: string;
   pubDate: Date;
@@ -14,12 +19,15 @@ interface Props {
   author?: string;
   coverImage?: string;
   coverAlt?: string;
+  category: CategorySlug;
   products?: { asin: string; title: string; image?: string; blurb?: string }[];
   headings?: Heading[];
   readingMinutes?: number;
+  faq?: FaqItem[];
 }
 
 const {
+  slug,
   title,
   description,
   pubDate,
@@ -27,22 +35,65 @@ const {
   author,
   coverImage,
   coverAlt,
+  category,
   products = [],
   headings = [],
   readingMinutes,
+  faq = [],
 } = Astro.props;
 const hasProducts = siteConfig.amazon.enabled && products.length > 0;
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const categoryInfo = categories.find((c) => c.slug === category);
+
+const relatedArticles = (
+  await getCollection('articles', (a) => !a.data.draft && a.data.category === category && a.slug !== slug)
+)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
 
 const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
+
+const siteUrl = Astro.site?.origin ?? Astro.url.origin;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: pubDate.toISOString(),
+  dateModified: (updatedDate ?? pubDate).toISOString(),
+  author: { '@type': 'Organization', name: author ?? siteConfig.author },
+  publisher: { '@type': 'Organization', name: siteConfig.name },
+  ...(coverImage ? { image: coverImage } : {}),
+  mainEntityOfPage: new URL(Astro.url.pathname, siteUrl).toString(),
+};
+
+const faqSchema = faq.length > 0
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faq.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    }
+  : null;
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  ...(categoryInfo ? [{ label: categoryInfo.label, href: `/categorie/${categoryInfo.slug}` }] : []),
+  { label: title },
+];
 ---
 
-<BaseLayout title={title} description={description} ogImage={coverImage}>
+<BaseLayout title={title} description={description} ogImage={coverImage} jsonLd={faqSchema ? [articleSchema, faqSchema] : articleSchema}>
   <article class="container">
+    <Breadcrumbs items={breadcrumbItems} />
+
     <header class="article-header">
       <p class="eyebrow">
         {dateFormatter.format(pubDate)}
@@ -55,7 +106,16 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
       </p>
     </header>
 
-    {coverImage && <img src={coverImage} alt={coverAlt ?? ''} class="article-cover" />}
+    {coverImage && (
+      <img
+        src={coverImage}
+        alt={coverAlt ?? ''}
+        class="article-cover"
+        width="1600"
+        height="800"
+        fetchpriority="high"
+      />
+    )}
 
     {hasProducts && <AffiliateDisclosure />}
 
@@ -82,6 +142,33 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
         ))}
       </div>
     )}
+
+    {faq.length > 0 && (
+      <div class="article-faq">
+        <h2>Questions fréquentes</h2>
+        {faq.map((f) => (
+          <details class="article-faq__item">
+            <summary>{f.question}</summary>
+            <p>{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    )}
+
+    {relatedArticles.length > 0 && (
+      <div class="article-related">
+        <h2>À lire aussi{categoryInfo && <> — {categoryInfo.label}</>}</h2>
+        <div class="article-related__grid">
+          {relatedArticles.map((a) => (
+            <a class="article-related__card card card--hover" href={`/articles/${a.slug}`}>
+              <p class="eyebrow">{dateFormatter.format(a.data.pubDate)}</p>
+              <h3>{a.data.title}</h3>
+              <p class="article-related__desc">{a.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
   </article>
 </BaseLayout>
 
@@ -95,6 +182,7 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
   }
   .article-cover {
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 8;
     object-fit: cover;
     margin: 1.5rem 0;
@@ -102,4 +190,29 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
   }
   .article-body :global(h2) { margin-top: 2.2em; scroll-margin-top: 5rem; }
   .article-body :global(h3) { scroll-margin-top: 5rem; }
+
+  .article-faq { margin-top: 3rem; }
+  .article-faq__item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    padding: 1rem 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  .article-faq__item summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-display);
+  }
+  .article-faq__item p { margin: 0.7rem 0 0; color: var(--color-text-muted); }
+
+  .article-related { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+  .article-related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .article-related__card { padding: 1.25rem; text-decoration: none; color: inherit; }
+  .article-related__card h3 { font-size: 1.05rem; margin: 0.3rem 0 0.4rem; }
+  .article-related__desc { margin: 0; color: var(--color-text-muted); font-size: 0.85rem; }
+
+  @media (max-width: 720px) {
+    .article-related__grid { grid-template-columns: 1fr; }
+  }
 </style>

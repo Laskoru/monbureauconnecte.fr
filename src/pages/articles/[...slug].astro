@@ -16,6 +16,7 @@ const readingMinutes = Math.max(1, Math.round(article.body.trim().split(/\s+/).l
 ---
 
 <ArticleLayout
+  slug={article.slug}
   title={article.data.title}
   description={article.data.description}
   pubDate={article.data.pubDate}
@@ -23,7 +24,9 @@ const readingMinutes = Math.max(1, Math.round(article.body.trim().split(/\s+/).l
   author={article.data.author}
   coverImage={article.data.coverImage}
   coverAlt={article.data.coverAlt}
+  category={article.data.category}
   products={article.data.products}
+  faq={article.data.faq}
   headings={headings}
   readingMinutes={readingMinutes}
 >

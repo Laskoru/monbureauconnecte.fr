@@ -9,11 +9,23 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const { title, description = siteConfig.description, ogImage } = Astro.props;
+const { title, description = siteConfig.description, ogImage, jsonLd } = Astro.props;
 const pageTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
 const { enabled, clientId } = siteConfig.adsense;
+const siteUrl = Astro.site?.origin ?? Astro.url.origin;
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteConfig.name,
+  url: siteUrl,
+  description: siteConfig.description,
+};
+
+const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
 ---
 
 <!DOCTYPE html>
@@ -46,6 +58,10 @@ const { enabled, clientId } = siteConfig.adsense;
     <meta name="twitter:description" content={description} />
 
     <style set:html={`:root { --color-accent: ${siteConfig.accentColor}; }`}></style>
+
+    {jsonLdBlocks.map((block) => (
+      <script type="application/ld+json" set:html={JSON.stringify(block)} />
+    ))}
 
     {enabled && (
       <script
