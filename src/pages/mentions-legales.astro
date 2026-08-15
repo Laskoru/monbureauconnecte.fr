@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../siteConfig';
+---
+
+<BaseLayout title="Mentions légales" description="Mentions légales du site.">
+  <section class="container">
+    <h1>Mentions légales</h1>
+
+    <h2>Éditeur du site</h2>
+    <p>
+      [À compléter : nom et prénom ou dénomination sociale, statut (particulier / auto-entrepreneur / société),
+      adresse, e-mail de contact. Si tu es un particulier, tu peux limiter les infos publiques et fournir
+      le reste sur demande de l'hébergeur, mais un e-mail de contact est obligatoire.]
+    </p>
+
+    <h2>Hébergeur</h2>
+    <p>
+      [À compléter : nom de l'hébergeur (ex. Vercel Inc.), adresse, contact — disponible sur le site de
+      l'hébergeur.]
+    </p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>
+      L'ensemble des contenus présents sur {siteConfig.name} (textes, images, mise en forme) est protégé
+      par le droit d'auteur. Toute reproduction sans autorisation est interdite.
+    </p>
+
+    <h2>Responsabilité</h2>
+    <p>
+      Les informations publiées sur ce site le sont à titre indicatif. {siteConfig.name} ne saurait être
+      tenu responsable des conséquences de leur usage.
+    </p>
+  </section>
+</BaseLayout>

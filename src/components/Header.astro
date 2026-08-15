@@ -1,0 +1,39 @@
+---
+import { siteConfig } from '../siteConfig';
+---
+
+<header class="site-header">
+  <div class="wide site-header__inner">
+    <a href="/" class="site-header__logo">{siteConfig.name}</a>
+    <nav class="site-header__nav">
+      <a href="/">Accueil</a>
+      <a href="/articles">Articles</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.25rem 0;
+  }
+  .site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-header__logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .site-header__nav { display: flex; gap: 1.5rem; }
+  .site-header__nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .site-header__nav a:hover { color: var(--color-text); }
+</style>

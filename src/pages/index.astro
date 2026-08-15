@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../siteConfig';
+
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+const latest = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 10);
+
+const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={siteConfig.name} description={siteConfig.description}>
+  <section class="hero container">
+    <h1>{siteConfig.name}</h1>
+    <p class="hero__tagline">{siteConfig.tagline}</p>
+  </section>
+
+  <section class="container article-list">
+    {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
+    {latest.map((article) => (
+      <a class="article-card" href={`/articles/${article.slug}`}>
+        <h2>{article.data.title}</h2>
+        <p class="article-card__desc">{article.data.description}</p>
+        <p class="article-card__date">{dateFormatter.format(article.data.pubDate)}</p>
+      </a>
+    ))}
+  </section>
+</BaseLayout>
+
+<style>
+  .hero { padding: 2rem 0 1rem; }
+  .hero__tagline { color: var(--color-text-muted); font-size: 1.1rem; }
+  .article-list { display: flex; flex-direction: column; gap: 1.75rem; padding-bottom: 3rem; }
+  .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .article-card h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.3rem;
+    color: var(--color-text);
+  }
+  .article-card__desc { color: var(--color-text-muted); margin: 0 0 0.4rem; }
+  .article-card__date { font-size: 0.85rem; color: var(--color-text-muted); margin: 0; }
+</style>

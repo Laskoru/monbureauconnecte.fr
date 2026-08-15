@@ -1,0 +1,70 @@
+---
+import { siteConfig } from '../siteConfig';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = siteConfig.description, ogImage } = Astro.props;
+const pageTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
+const { enabled, clientId } = siteConfig.adsense;
+---
+
+<!DOCTYPE html>
+<html lang={siteConfig.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={Astro.url} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={siteConfig.locale} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <style set:html={`:root { --color-accent: ${siteConfig.accentColor}; }`}></style>
+
+    {enabled && (
+      <script
+        is:inline
+        define:vars={{ clientId }}
+      >
+        // Le script AdSense ne se charge qu'après acceptation des cookies (RGPD)
+        document.addEventListener('cookie-consent-accepted', function loadAds() {
+          if (window.__adsenseLoaded) return;
+          window.__adsenseLoaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + clientId;
+          s.crossOrigin = 'anonymous';
+          document.head.appendChild(s);
+        }, { once: true });
+      </script>
+    )}
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    {siteConfig.adsense.enabled && <CookieConsent />}
+  </body>
+</html>

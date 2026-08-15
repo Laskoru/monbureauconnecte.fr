@@ -1,0 +1,66 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import AmazonProduct from '../components/AmazonProduct.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import { siteConfig } from '../siteConfig';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author?: string;
+  coverImage?: string;
+  coverAlt?: string;
+  products?: { asin: string; title: string; image?: string; blurb?: string }[];
+}
+
+const { title, description, pubDate, updatedDate, author, coverImage, coverAlt, products = [] } = Astro.props;
+const hasProducts = siteConfig.amazon.enabled && products.length > 0;
+
+const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={description} ogImage={coverImage}>
+  <article class="container">
+    <header class="article-header">
+      <h1>{title}</h1>
+      <p class="article-meta">
+        {author ?? siteConfig.author} · {dateFormatter.format(pubDate)}
+        {updatedDate && <> · mis à jour le {dateFormatter.format(updatedDate)}</>}
+      </p>
+    </header>
+
+    {coverImage && <img src={coverImage} alt={coverAlt ?? ''} class="article-cover" />}
+
+    {hasProducts && <AffiliateDisclosure />}
+
+    <div class="article-body">
+      <slot />
+    </div>
+
+    {hasProducts && (
+      <div class="article-recommendations">
+        <h2>Nos recommandations</h2>
+        {products.map((p) => (
+          <AmazonProduct asin={p.asin} title={p.title} image={p.image} blurb={p.blurb} />
+        ))}
+      </div>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .article-header { margin-bottom: 1.5rem; }
+  .article-meta {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+  }
+  .article-cover { width: 100%; margin: 1.5rem 0; }
+  .article-body :global(h2) { margin-top: 2.2em; }
+</style>

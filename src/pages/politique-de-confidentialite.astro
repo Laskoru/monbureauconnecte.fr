@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../siteConfig';
+---
+
+<BaseLayout title="Politique de confidentialité" description="Politique de confidentialité et cookies du site.">
+  <section class="container">
+    <h1>Politique de confidentialité</h1>
+
+    <h2>Programme Partenaires Amazon</h2>
+    <p>
+      {siteConfig.name} participe au Programme Partenaires Amazon EU, un programme d'affiliation
+      permettant de percevoir une commission sur les achats remplissant les conditions requises, effectués
+      via les liens présents sur ce site vers Amazon.fr. Cliquer sur un lien Amazon vous redirige vers leur
+      site, où Amazon applique sa propre politique de cookies et de confidentialité.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      Ce site ne dépose actuellement aucun cookie publicitaire depuis son propre domaine. Si des
+      publicités personnalisées (Google AdSense) sont activées à l'avenir, cette section sera mise à jour
+      et un bandeau de consentement sera affiché.
+    </p>
+
+    <h2>Vos droits</h2>
+    <p>
+      Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des
+      données vous concernant. Pour l'exercer, contactez [À compléter : e-mail de contact].
+    </p>
+  </section>
+</BaseLayout>
