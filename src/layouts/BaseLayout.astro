@@ -40,6 +40,9 @@ const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? 
     {siteConfig.googleSiteVerification && (
       <meta name="google-site-verification" content={siteConfig.googleSiteVerification} />
     )}
+    {siteConfig.pinterestVerification && (
+      <meta name="p:domain_verify" content={siteConfig.pinterestVerification} />
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

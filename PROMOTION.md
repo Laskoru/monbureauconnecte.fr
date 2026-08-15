@@ -100,3 +100,89 @@ Les gens lient vers des ressources utiles, pas vers des pages « achète ça ».
 - Échanges de liens en masse / annuaires-poubelles.
 - Mettre toujours la même ancre sur-optimisée (« meilleure chaise gaming » x50).
 - Spammer le même lien dans 20 discussions.
+
+---
+
+## 6. Pinterest — plan des tableaux et descriptions d'épingles
+
+### Étapes pour bien démarrer
+1. **Revendique le site** : Paramètres Pinterest → « Revendiquer » → « Revendiquer
+   un site web » → « Ajouter une balise HTML » → copie la valeur du `content`
+   et colle-la dans `src/siteConfig.ts` (champ `pinterestVerification`). Préviens-moi,
+   je peux aussi le faire. → débloque les statistiques et l'attribution des épingles.
+2. **Active les Rich Pins** (facultatif mais recommandé) : le site expose déjà les
+   balises Open Graph nécessaires ; passe une URL d'article dans le validateur
+   Pinterest (Rich Pins Validator) pour les activer.
+3. Crée les 3 tableaux ci-dessous, puis épingle chaque article dans le bon tableau.
+
+### Les 3 tableaux
+- **Setup gaming** — chaises, claviers, souris, écrans, câbles
+- **Télétravail & visio** — bureau, webcam, micro, casque, éclairage, connectique
+- **Ergonomie & confort** — posture, poignets, dos, yeux
+
+### Descriptions d'épingles prêtes à coller
+(une par article — titre optimisé + description avec mots-clés + lien)
+
+**Setup gaming**
+- Meilleures chaises gaming 2026 : comparatif → /articles/meilleures-chaises-gaming
+  « Quelle chaise gaming choisir en 2026 ? Comparatif des meilleurs modèles pour
+  les longues sessions : soutien lombaire, accoudoirs 4D, confort. #gaming #setup #bureau »
+- Claviers mécaniques silencieux → /articles/claviers-mecaniques-silencieux
+  « Les meilleurs claviers mécaniques silencieux pour taper sans déranger en
+  open space ou en visio. #clavier #mecanique #teletravail »
+- Souris ergonomique verticale → /articles/souris-ergonomique-verticale
+  « Mal au poignet ? Notre comparatif des souris ergonomiques verticales contre
+  la tendinite et le canal carpien. #ergonomie #souris #bureau »
+- Bras support écran articulé → /articles/bras-support-ecran-articule
+  « Libérer son bureau et améliorer sa posture avec un bras support écran :
+  comment bien le choisir (VESA, charge, 1 ou 2 écrans). #setup #bureau »
+- Rangement des câbles de bureau → /articles/rangement-cables-bureau
+  « Enfin un bureau net : nos solutions de rangement de câbles sans perçage.
+  #cablemanagement #bureau #setup »
+- Tapis de sol pour chaise → /articles/tapis-sol-chaise-bureau
+  « Protéger son parquet des roulettes de chaise : quel tapis de sol choisir.
+  #bureau #teletravail #parquet »
+
+**Télétravail & visio**
+- Bureau assis-debout électrique → /articles/bureau-assis-debout-electrique
+  « Quel bureau assis-debout choisir pour le télétravail ? Plage de hauteur,
+  moteurs, mémoire : nos critères. #teletravail #bureau #ergonomie »
+- Webcam 1080p vs 4K → /articles/webcams-1080p-vs-4k
+  « Faut-il une webcam 4K pour le télétravail ou une 1080p suffit ? Comparatif
+  et conseils. #webcam #visio #teletravail »
+- Casque anti-bruit télétravail → /articles/casque-reduction-bruit-teletravail
+  « Se concentrer chez soi ou en open space : notre sélection de casques à
+  réduction de bruit. #teletravail #casque #concentration »
+- Micro USB pour la visio → /articles/micro-usb-visioconference-podcast
+  « Un son clair en visio : comment choisir un micro USB pour Teams, Zoom ou
+  le podcast. #visio #micro #teletravail »
+- Ring light pour la visio → /articles/ring-light-eclairage-visio
+  « Mieux paraître en visio : le ring light, gadget ou vrai plus ? Notre avis
+  et notre sélection. #visio #eclairage #teletravail »
+- Hub USB-C & station d'accueil → /articles/hub-usb-c-station-accueil
+  « Tout brancher d'un seul câble : comment choisir un hub USB-C ou une station
+  d'accueil. #usbc #teletravail #setup »
+- Support ordinateur portable → /articles/support-ordinateur-portable-ergonomique
+  « Relever son écran à hauteur des yeux : le support PC portable, presque
+  indispensable en télétravail. #ergonomie #teletravail »
+
+**Ergonomie & confort**
+- Repose-pieds ergonomique → /articles/repose-pieds-ergonomique-bureau
+  « Repose-pieds de bureau : utile ou gadget ? Nos critères pour soulager les
+  jambes et le dos. #ergonomie #bureau #confort »
+- Clavier ergonomique séparé → /articles/clavier-ergonomique-separe
+  « Le clavier ergonomique séparé : pour qui, et vaut-il l'adaptation ? Notre
+  comparatif. #ergonomie #clavier #poignet »
+- Lampe de bureau LED anti-fatigue → /articles/lampe-bureau-led-anti-fatigue
+  « Moins de fatigue visuelle en fin de journée : comment choisir sa lampe de
+  bureau LED. #bureau #lampe #confort »
+- Checklist poste ergonomique (ressource) → /checklist-bureau-ergonomique
+  « La checklist gratuite pour régler son poste de travail : écran, chaise,
+  clavier, lumière, pauses. #ergonomie #teletravail #bureau »
+
+### Bonnes pratiques Pinterest
+- Format d'image vertical (2:3, ex. 1000×1500) = plus de visibilité. Tes photos
+  actuelles sont horizontales : ça marche, mais des visuels verticaux dédiés
+  performent mieux (à créer plus tard).
+- Mets le mot-clé principal au DÉBUT du titre de l'épingle.
+- Épingle régulièrement (quelques-unes/semaine) plutôt qu'en masse d'un coup.

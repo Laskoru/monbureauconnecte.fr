@@ -43,6 +43,11 @@ export const siteConfig = {
   // Code de vérification Google Search Console (méthode "balise HTML").
   // C'est la valeur après "google-site-verification=". Laisse vide si inutile.
   googleSiteVerification: 'yQ6hJa0cIwZROqQE6jF7jHmPDUZgV0CrGCxpwutrV3I',
+
+  // Code de revendication du site sur Pinterest (Paramètres → Revendiquer →
+  // Revendiquer un site web → "Ajouter une balise HTML"). Colle ici la valeur
+  // du content de la balise <meta name="p:domain_verify" content="...">.
+  pinterestVerification: '',
 };
 
 export type SiteConfig = typeof siteConfig;
