@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://monbureauconnecte.fr/sitemap-index.xml
+Sitemap: https://www.monbureauconnecte.fr/sitemap-index.xml

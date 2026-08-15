@@ -68,17 +68,33 @@ const stats = [
     </div>
   </section>
 
+  <section class="container intro">
+    <h2>Notre approche</h2>
+    <p>
+      Choisir un accessoire de bureau, ce n'est pas se ruiner sur le premier modèle à la mode. Que ce soit pour
+      un setup gaming, un poste de télétravail au quotidien ou simplement un bureau plus confortable, chaque
+      article part d'un usage concret et compare des critères mesurables — charge admise, plage de réglage,
+      niveau sonore, autonomie — plutôt que des impressions vagues.
+    </p>
+    <p>
+      On évite le jargon marketing et les classements gonflés artificiellement : chaque produit recommandé est
+      vraiment testé et comparé avant d'atterrir dans un article, avec ses compromis assumés. Les accessoires
+      bureau, gaming et télétravail évoluent vite, alors les comparatifs déjà publiés sont revus régulièrement
+      pour vérifier que les modèles conseillés restent pertinents et que les prix collent encore au marché.
+    </p>
+  </section>
+
   <section class="container article-list">
     <h2 class="article-list__title">Derniers articles</h2>
     {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
     {latest.map((article) => (
-      <a class="article-card card card--hover" href={`/articles/${article.slug}`}>
+      <article class="article-card card card--hover">
         <div class="article-card__body">
           <p class="eyebrow">{dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min de lecture</p>
-          <h3>{article.data.title}</h3>
+          <h3><a class="stretched-link" href={`/articles/${article.slug}`}>{article.data.title}</a></h3>
           <p class="article-card__desc">{article.data.description}</p>
         </div>
-      </a>
+      </article>
     ))}
   </section>
 </BaseLayout>
@@ -142,6 +158,10 @@ const stats = [
     margin: 0.2rem 0 0;
   }
 
+  .intro { padding: 3.6rem 1.25rem 0.5rem; }
+  .intro h2 { margin-top: 0; }
+  .intro p { color: var(--color-text-muted); line-height: 1.7; }
+
   .categories { padding: 3.4rem 1.25rem 1rem; }
   .categories__title { margin: 0 0 0.4rem; }
   .categories__lede { color: var(--color-text-muted); margin: 0 0 1.8rem; }
@@ -165,17 +185,13 @@ const stats = [
 
   .article-list { display: flex; flex-direction: column; gap: 1.1rem; padding: 2.8rem 1.25rem 3.5rem; }
   .article-list__title { margin-top: 0; }
-  .article-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.4rem 1.5rem;
-  }
+  .article-card { padding: 1.4rem 1.5rem; }
   .article-card h3 {
     margin: 0.35rem 0 0.4rem;
     font-size: 1.3rem;
-    color: var(--color-text);
   }
+  .article-card h3 a { color: var(--color-text); text-decoration: none; }
+  .article-card:hover h3 a { color: var(--color-accent); }
   .article-card__desc { color: var(--color-text-muted); margin: 0; }
 
   @media (max-width: 680px) {

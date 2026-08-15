@@ -25,13 +25,11 @@ function readingTime(body: string) {
     <h1>Tous les articles</h1>
     <ul class="article-index">
       {allArticles.map((article) => (
-        <li>
-          <a class="article-index__link" href={`/articles/${article.slug}`}>
-            <span class="article-index__title">{article.data.title}</span>
-            <span class="article-index__meta">
-              {dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min
-            </span>
-          </a>
+        <li class="article-index__row">
+          <a class="article-index__title stretched-link" href={`/articles/${article.slug}`}>{article.data.title}</a>
+          <span class="article-index__meta">
+            {dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min
+          </span>
         </li>
       ))}
     </ul>
@@ -40,19 +38,24 @@ function readingTime(body: string) {
 
 <style>
   .article-index { list-style: none; padding: 0; margin: 1.5rem 0 3rem; }
-  .article-index li { border-bottom: 1px solid var(--color-border); }
-  .article-index__link {
+  .article-index__row {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     gap: 0.4rem 1rem;
     padding: 1.1rem 0.4rem;
-    text-decoration: none;
-    color: inherit;
+    border-bottom: 1px solid var(--color-border);
     transition: padding-left 0.15s ease;
   }
-  .article-index__link:hover { padding-left: 0.75rem; color: var(--color-accent); }
-  .article-index__title { font-family: var(--font-display); font-weight: 600; }
+  .article-index__row:hover { padding-left: 0.75rem; }
+  .article-index__row:hover .article-index__title { color: var(--color-accent); }
+  .article-index__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+  }
   .article-index__meta { color: var(--color-text-muted); font-size: 0.85rem; white-space: nowrap; }
 </style>

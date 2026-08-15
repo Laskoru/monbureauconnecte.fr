@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Remplace par le domaine final du site avant le déploiement
-const SITE_URL = 'https://monbureauconnecte.fr';
+// Domaine final du site — doit correspondre exactement au domaine servi en
+// production (avec ou sans www), sinon Google voit un conflit sur le canonical.
+const SITE_URL = 'https://www.monbureauconnecte.fr';
 
 export default defineConfig({
   site: SITE_URL,
