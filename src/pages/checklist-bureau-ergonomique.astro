@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../siteConfig';
+
+const sections = [
+  {
+    icon: '🖥️',
+    title: 'L’écran',
+    items: [
+      'Le haut de l’écran est à hauteur des yeux (ou légèrement en dessous).',
+      'L’écran est à environ une longueur de bras (50 à 70 cm).',
+      'L’écran est légèrement incliné vers l’arrière (10 à 20°).',
+      'Il est bien en face de toi, pas de côté, pour éviter de tourner la nuque.',
+    ],
+    link: { href: '/articles/bras-support-ecran-articule', label: 'Bras support écran' },
+  },
+  {
+    icon: '🪑',
+    title: 'La chaise et le dos',
+    items: [
+      'Tes pieds reposent à plat sur le sol (ou sur un repose-pieds).',
+      'Genoux à environ 90°, cuisses parallèles au sol.',
+      'Le bas du dos est soutenu par un appui lombaire.',
+      'Les hanches sont légèrement plus hautes que les genoux (~90-100°).',
+    ],
+    link: { href: '/categorie/mobilier', label: 'Chaises & mobilier' },
+  },
+  {
+    icon: '⌨️',
+    title: 'Le clavier et la souris',
+    items: [
+      'Coudes proches du corps, pliés à environ 90°.',
+      'Avant-bras parallèles au sol, épaules relâchées.',
+      'Poignets droits, jamais cassés vers le haut ou le bas.',
+      'Clavier et souris proches l’un de l’autre, à portée sans tendre le bras.',
+    ],
+    link: { href: '/articles/souris-ergonomique-verticale', label: 'Souris ergonomique' },
+  },
+  {
+    icon: '💡',
+    title: 'La lumière',
+    items: [
+      'Aucun reflet du plafonnier ou d’une fenêtre sur l’écran.',
+      'La lumière naturelle arrive de côté, pas de face ni de dos.',
+      'Une lampe de bureau complète l’éclairage ambiant en fin de journée.',
+      'La luminosité de l’écran est proche de celle de la pièce.',
+    ],
+    link: { href: '/articles/lampe-bureau-led-anti-fatigue', label: 'Lampe de bureau' },
+  },
+  {
+    icon: '⏱️',
+    title: 'Les pauses et le mouvement',
+    items: [
+      'Règle du 20-20-20 : toutes les 20 min, regarde à 6 m pendant 20 s.',
+      'Tu te lèves quelques minutes au moins une fois par heure.',
+      'Tu alternes position assise et debout dans la journée si possible.',
+      'Tu changes régulièrement de posture plutôt que de rester figé.',
+    ],
+    link: { href: '/articles/bureau-assis-debout-electrique', label: 'Bureau assis-debout' },
+  },
+];
+---
+
+<BaseLayout
+  title="Checklist : bien régler son poste de travail (ergonomie)"
+  description="La checklist complète pour régler son poste de travail et éviter les douleurs : écran, chaise, clavier, lumière et pauses. Gratuite et imprimable."
+>
+  <section class="container checklist">
+    <p class="eyebrow">Ressource gratuite</p>
+    <h1>Checklist : bien régler son poste de travail</h1>
+    <p class="checklist__lede">
+      Un poste mal réglé fatigue le dos, la nuque et les yeux — souvent sans qu'on s'en rende compte.
+      Passe en revue cette checklist en cochant chaque point : c'est la façon la plus simple de repérer
+      ce qui cloche dans ton installation. Tu peux l'imprimer ou la garder sous la main.
+    </p>
+
+    {sections.map((section) => (
+      <div class="checklist__block">
+        <h2><span class="checklist__icon">{section.icon}</span> {section.title}</h2>
+        <ul class="checklist__items">
+          {section.items.map((item) => (
+            <li><label><input type="checkbox" /> <span>{item}</span></label></li>
+          ))}
+        </ul>
+        <p class="checklist__link">
+          Pour aller plus loin : <a href={section.link.href}>{section.link.label}</a>
+        </p>
+      </div>
+    ))}
+
+    <div class="checklist__cta card">
+      <p>
+        Envie d'équiper ton poste dans les règles de l'art ? Nos guides détaillent, catégorie par
+        catégorie, le matériel qui fait vraiment la différence.
+      </p>
+      <a class="btn btn--primary" href="/guides/ergonomie-bureau">Voir le guide ergonomie →</a>
+    </div>
+
+    <p class="checklist__share">
+      Cette checklist t'a été utile ? N'hésite pas à la partager ou à y faire un lien — elle est en accès
+      libre. Une remarque ? Écris-nous à
+      <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .checklist { padding: 2.5rem 0 3.5rem; max-width: 760px; }
+  .checklist h1 { margin-top: 0.4rem; }
+  .checklist__lede { font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.7; }
+  .checklist__block {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    padding: 1.3rem 1.5rem;
+    margin: 1.2rem 0;
+  }
+  .checklist__block h2 { margin: 0 0 0.8rem; font-size: 1.2rem; }
+  .checklist__icon { margin-right: 0.3rem; }
+  .checklist__items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .checklist__items li { line-height: 1.5; }
+  .checklist__items label { display: flex; gap: 0.6rem; align-items: flex-start; cursor: pointer; }
+  .checklist__items input { margin-top: 0.35rem; accent-color: var(--color-accent); flex-shrink: 0; width: 16px; height: 16px; }
+  .checklist__items input:checked + span { color: var(--color-text-muted); text-decoration: line-through; }
+  .checklist__link { margin: 0.9rem 0 0; font-size: 0.9rem; color: var(--color-text-muted); }
+  .checklist__cta { padding: 1.5rem; margin: 2rem 0 1.5rem; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .checklist__cta p { margin: 0; }
+  .checklist__share { font-size: 0.9rem; color: var(--color-text-muted); }
+</style>

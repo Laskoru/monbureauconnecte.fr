@@ -5,6 +5,7 @@ import AmazonProduct from '../components/AmazonProduct.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import { siteConfig } from '../siteConfig';
 import { categories, type CategorySlug } from '../categories';
 
@@ -62,6 +63,7 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
 });
 
 const siteUrl = Astro.site?.origin ?? Astro.url.origin;
+const shareUrl = new URL(Astro.url.pathname, siteUrl).toString();
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -94,7 +96,7 @@ const breadcrumbItems = [
 ];
 ---
 
-<BaseLayout title={title} description={description} ogImage={coverImage} jsonLd={faqSchema ? [articleSchema, faqSchema] : articleSchema}>
+<BaseLayout title={title} description={description} ogImage={coverImage} ogType="article" jsonLd={faqSchema ? [articleSchema, faqSchema] : articleSchema}>
   <article class="container">
     <Breadcrumbs items={breadcrumbItems} />
 
@@ -155,6 +157,8 @@ const breadcrumbItems = [
         </div>
       </div>
     )}
+
+    <ShareButtons url={shareUrl} title={title} image={coverImage} />
 
     {hasProducts && (
       <div class="article-recommendations">
