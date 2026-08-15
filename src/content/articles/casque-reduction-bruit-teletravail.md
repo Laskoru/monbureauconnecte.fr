@@ -1,7 +1,7 @@
 ---
 title: "Casque à réduction de bruit pour le télétravail : lequel choisir ?"
 description: "Comment choisir un casque à réduction de bruit active pour se concentrer en télétravail ou en open space, et notre sélection de modèles fiables."
-pubDate: 2026-08-20
+pubDate: 2026-08-14
 author: "Rédaction"
 keywords: ["casque réduction de bruit télétravail", "casque anc bureau", "meilleur casque antibruit"]
 coverImage: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=1600&auto=format&fit=crop"
