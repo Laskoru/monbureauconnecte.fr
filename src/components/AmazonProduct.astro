@@ -16,7 +16,7 @@ const affiliateUrl = `https://www.amazon.fr/dp/${asin}?tag=${siteConfig.amazon.t
 <div class:list={['amazon-product', 'card', { 'amazon-product--featured': featured }]}>
   {featured && <span class="ribbon amazon-product__ribbon">Notre choix</span>}
   {image && (
-    <a href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener" class="bracket-frame amazon-product__imgwrap">
+    <a href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener" class="amazon-product__imgwrap">
       <img src={image} alt={title} loading="lazy" />
     </a>
   )}
@@ -40,14 +40,25 @@ const affiliateUrl = `https://www.amazon.fr/dp/${asin}?tag=${siteConfig.amazon.t
     margin: 1.75rem 0;
     flex-wrap: wrap;
   }
-  .amazon-product--featured { border-color: var(--color-accent); box-shadow: var(--glow-accent-sm); }
+  .amazon-product--featured { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
   .amazon-product__ribbon { position: absolute; top: -0.7rem; left: 1.25rem; }
-  .amazon-product__imgwrap { display: inline-block; flex-shrink: 0; }
-  .amazon-product img {
+  .amazon-product__imgwrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
     width: 110px;
     height: 110px;
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .amazon-product img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     display: block;
+    border-radius: 0;
   }
   .amazon-product__body { flex: 1; min-width: 180px; }
   .amazon-product__title { font-weight: 600; margin: 0.3rem 0 0.35rem; }

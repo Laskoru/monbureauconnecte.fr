@@ -4,6 +4,7 @@ description: "Notre sélection des meilleures chaises gaming pour les longues se
 pubDate: 2026-08-01
 author: "Rédaction"
 keywords: ["chaise gaming", "meilleure chaise gaming", "chaise gaming ergonomique"]
+category: "mobilier"
 coverImage: "https://images.unsplash.com/photo-1551033541-2075d8363c66?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Setup gaming avec fauteuil en cuir noir et gris"
 draft: false

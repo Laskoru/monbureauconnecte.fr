@@ -93,7 +93,13 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
     font-size: 0.9rem;
     margin-top: -0.5rem;
   }
-  .article-cover { width: 100%; margin: 1.5rem 0; }
+  .article-cover {
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover;
+    margin: 1.5rem 0;
+    border-radius: var(--radius-lg);
+  }
   .article-body :global(h2) { margin-top: 2.2em; scroll-margin-top: 5rem; }
   .article-body :global(h3) { scroll-margin-top: 5rem; }
 </style>

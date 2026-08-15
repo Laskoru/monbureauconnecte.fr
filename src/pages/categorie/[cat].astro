@@ -1,0 +1,76 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { siteConfig } from '../../siteConfig';
+import { categories } from '../../categories';
+
+export async function getStaticPaths() {
+  return categories.map((cat) => ({
+    params: { cat: cat.slug },
+    props: { cat },
+  }));
+}
+
+const { cat } = Astro.props;
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft && data.category === cat.slug)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout
+  title={cat.label}
+  description={`${cat.description} Tous les comparatifs ${cat.label.toLowerCase()} sur ${siteConfig.name}.`}
+>
+  <section class="container cat-header">
+    <a class="cat-header__back" href="/articles">← Tous les articles</a>
+    <p class="cat-header__icon">{cat.icon}</p>
+    <h1>{cat.label}</h1>
+    <p class="cat-header__desc">{cat.description}</p>
+  </section>
+
+  <section class="container article-list">
+    {articles.length === 0 && <p>Aucun article publié dans cette catégorie pour le moment.</p>}
+    {articles.map((article) => (
+      <a class="article-card card card--hover" href={`/articles/${article.slug}`}>
+        <div class="article-card__body">
+          <p class="eyebrow">{dateFormatter.format(article.data.pubDate)}</p>
+          <h3>{article.data.title}</h3>
+          <p class="article-card__desc">{article.data.description}</p>
+        </div>
+      </a>
+    ))}
+  </section>
+</BaseLayout>
+
+<style>
+  .cat-header { padding: 2.5rem 0 1rem; }
+  .cat-header__back {
+    display: inline-block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+  }
+  .cat-header__back:hover { color: var(--color-accent); }
+  .cat-header__icon { font-size: 2.4rem; margin: 0 0 0.4rem; }
+  .cat-header h1 { margin-top: 0; }
+  .cat-header__desc { color: var(--color-text-muted); font-size: 1.05rem; max-width: 52ch; }
+
+  .article-list { display: flex; flex-direction: column; gap: 1.1rem; padding: 1.5rem 0 3.5rem; }
+  .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.4rem 1.5rem;
+  }
+  .article-card h3 { margin: 0.35rem 0 0.4rem; font-size: 1.25rem; color: var(--color-text); }
+  .article-card__desc { color: var(--color-text-muted); margin: 0; }
+</style>

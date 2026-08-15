@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../siteConfig';
+import { categories } from '../categories';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const latest = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 10);
@@ -17,44 +18,61 @@ function readingTime(body: string) {
   return Math.max(1, Math.round(words / 200));
 }
 
-const trustPoints = [
-  { label: 'Critères concrets', detail: "Des points de comparaison vérifiables, pas du blabla marketing." },
-  { label: 'Comparatifs impartiaux', detail: 'Un choix par budget et par usage, sans pousser le plus cher.' },
-  { label: 'Mis à jour régulièrement', detail: 'Les fiches sont revues quand les modèles ou les prix bougent.' },
+const categoryCounts = categories.map((cat) => ({
+  ...cat,
+  count: allArticles.filter((a) => a.data.category === cat.slug).length,
+}));
+
+const stats = [
+  { value: String(allArticles.length), label: 'Comparatifs publiés' },
+  { value: String(categories.length), label: 'Catégories couvertes' },
+  { value: '100%', label: 'Rédaction indépendante' },
 ];
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description}>
-  <section class="hero container">
-    <div class="hero__glow" aria-hidden="true"></div>
-    <div class="hero__frame bracket-frame">
-      <p class="eyebrow"><span class="status-dot"></span> En ligne · guides mis à jour</p>
-      <h1>{siteConfig.name}</h1>
-      <p class="hero__tagline">{siteConfig.tagline}</p>
-      {latest.length > 0 && (
-        <a class="hero__cta btn btn--primary" href={`/articles/${latest[0].slug}`}>
-          Lire le dernier comparatif →
-        </a>
-      )}
+  <section class="hero">
+    <div class="wide hero__inner">
+      <p class="hero__badge">🏆 Comparatifs indépendants pour ton poste de travail</p>
+      <h1>{siteConfig.tagline}</h1>
+      <p class="hero__lede">{siteConfig.description}</p>
+      <div class="hero__actions">
+        {latest.length > 0 && (
+          <a class="btn btn--light" href={`/articles/${latest[0].slug}`}>Lire le dernier comparatif</a>
+        )}
+        <a class="btn btn--ghost" href="/articles">Voir tous les articles</a>
+      </div>
+
+      <div class="hero__stats">
+        {stats.map((stat) => (
+          <div class="hero__stat">
+            <p class="hero__stat-value">{stat.value}</p>
+            <p class="hero__stat-label">{stat.label}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 
-  <section class="wide trust-bar">
-    {trustPoints.map((point, i) => (
-      <div class="trust-bar__item card">
-        <span class="trust-bar__index">{String(i + 1).padStart(2, '0')}</span>
-        <p class="trust-bar__label">{point.label}</p>
-        <p class="trust-bar__detail">{point.detail}</p>
-      </div>
-    ))}
+  <section class="wide categories">
+    <h2 class="categories__title">Trouve ce qu'il te faut</h2>
+    <p class="categories__lede">Nos guides sont classés par ce que tu es en train d'équiper.</p>
+    <div class="categories__grid">
+      {categoryCounts.map((cat) => (
+        <a class="categories__item card card--hover" href={`/categorie/${cat.slug}`}>
+          <span class="categories__icon">{cat.icon}</span>
+          <p class="categories__label">{cat.label}</p>
+          <p class="categories__count">{cat.count} article{cat.count > 1 ? 's' : ''}</p>
+        </a>
+      ))}
+    </div>
   </section>
 
   <section class="container article-list">
     <h2 class="article-list__title">Derniers articles</h2>
     {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
-    {latest.map((article, i) => (
+    {latest.map((article) => (
       <a class="article-card card card--hover" href={`/articles/${article.slug}`}>
-        <span class="article-card__index">{String(i + 1).padStart(2, '0')}</span>
         <div class="article-card__body">
           <p class="eyebrow">{dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min de lecture</p>
           <h3>{article.data.title}</h3>
@@ -66,69 +84,92 @@ const trustPoints = [
 </BaseLayout>
 
 <style>
-  .hero { position: relative; padding: 4rem 0 2.5rem; }
-  .hero__glow {
-    position: absolute;
-    top: -80px;
-    left: 50%;
-    translate: -50% 0;
-    width: 680px;
-    height: 420px;
-    background: radial-gradient(closest-side, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 70%);
-    filter: blur(10px);
-    pointer-events: none;
-    z-index: -1;
-    animation: drift 10s ease-in-out infinite alternate;
+  .hero {
+    background: var(--gradient-hero);
+    color: #fff;
+    overflow: hidden;
   }
-  @keyframes drift {
-    from { translate: -54% -2%; }
-    to { translate: -46% 2%; }
+  .hero__inner { padding: 3.6rem 1.25rem 3rem; text-align: center; }
+  .hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 0.5em 1.1em;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 1.4rem;
   }
-  .hero__frame { padding: 2rem 2.25rem 2.25rem; }
-  .hero .eyebrow::before { display: none; }
-  .hero .eyebrow { gap: 0.55em; }
-  .hero h1 { margin-top: 0.6rem; }
-  .hero__tagline { color: var(--color-text-muted); font-size: 1.15rem; max-width: 46ch; }
-  .hero__cta { margin-top: 1.25rem; }
+  .hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.1rem);
+    line-height: 1.1;
+    margin: 0 auto 1.1rem;
+    max-width: 20ch;
+    text-wrap: balance;
+  }
+  .hero__lede {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 60ch;
+    margin: 0 auto 1.9rem;
+  }
+  .hero__actions { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+  .btn--ghost {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .btn--ghost:hover { background: rgba(255, 255, 255, 0.18); }
 
-  .trust-bar {
+  .hero__stats {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 3.5rem);
+    flex-wrap: wrap;
+  }
+  .hero__stat-value {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .hero__stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0.2rem 0 0;
+  }
+
+  .categories { padding: 3.4rem 1.25rem 1rem; }
+  .categories__title { margin: 0 0 0.4rem; }
+  .categories__lede { color: var(--color-text-muted); margin: 0 0 1.8rem; }
+  .categories__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: 0.5rem auto 2.5rem;
   }
-  .trust-bar__item { position: relative; padding: 1.5rem 1.4rem 1.4rem; }
-  .trust-bar__index {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--color-accent);
-    margin-bottom: 0.6rem;
-  }
-  .trust-bar__label {
-    margin: 0 0 0.35rem;
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 0.98rem;
-  }
-  .trust-bar__detail { margin: 0; color: var(--color-text-muted); font-size: 0.88rem; }
-
-  .article-list { display: flex; flex-direction: column; gap: 1.25rem; padding-bottom: 3.5rem; }
-  .article-list__title { margin-top: 0; }
-  .article-card {
+  .categories__item {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
     color: inherit;
-    padding: 1.25rem 1.4rem;
+    padding: 1.8rem 1.2rem;
   }
-  .article-card__index {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--color-accent);
-    flex-shrink: 0;
-    padding-top: 0.2rem;
+  .categories__icon { font-size: 2.1rem; margin-bottom: 0.6rem; }
+  .categories__label { font-weight: 700; margin: 0 0 0.25rem; }
+  .categories__count { font-size: 0.82rem; color: var(--color-text-faint); margin: 0; }
+
+  .article-list { display: flex; flex-direction: column; gap: 1.1rem; padding: 2.8rem 1.25rem 3.5rem; }
+  .article-list__title { margin-top: 0; }
+  .article-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.4rem 1.5rem;
   }
   .article-card h3 {
     margin: 0.35rem 0 0.4rem;
@@ -138,7 +179,6 @@ const trustPoints = [
   .article-card__desc { color: var(--color-text-muted); margin: 0; }
 
   @media (max-width: 680px) {
-    .trust-bar { grid-template-columns: 1fr; }
-    .article-card__index { display: none; }
+    .categories__grid { grid-template-columns: 1fr; }
   }
 </style>

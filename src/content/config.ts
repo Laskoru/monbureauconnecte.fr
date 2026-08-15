@@ -10,6 +10,8 @@ const articles = defineCollection({
     author: z.string().optional(),
     // mots-clés ciblés par l'article, utile pour ton suivi éditorial
     keywords: z.array(z.string()).default([]),
+    // catégorie utilisée pour le classement par thème sur l'accueil
+    category: z.enum(['mobilier', 'peripheriques', 'audio-visio']),
     // image de couverture optionnelle, chemin relatif dans /public
     coverImage: z.string().optional(),
     coverAlt: z.string().optional(),

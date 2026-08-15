@@ -4,6 +4,7 @@ description: "Faut-il investir dans une webcam 4K pour le télétravail, ou une 
 pubDate: 2026-08-10
 author: "Rédaction"
 keywords: ["webcam télétravail", "webcam 1080p", "webcam 4K visioconférence"]
+category: "audio-visio"
 coverImage: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Écran affichant une visioconférence en grille"
 draft: false
