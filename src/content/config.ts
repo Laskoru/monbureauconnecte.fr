@@ -22,7 +22,11 @@ const articles = defineCollection({
         z.object({
           asin: z.string(), // identifiant produit Amazon, visible dans l'URL du produit
           title: z.string(),
-          image: z.string().optional(), // URL d'image produit (depuis Amazon ou hébergée par toi)
+          // Image produit (OPTIONNEL) : le plus simple est de NE PAS remplir ce
+          // champ et de déposer la photo dans public/products/<ASIN>.jpg —
+          // elle est alors détectée automatiquement. Voir public/products/README.md.
+          // Ce champ ne sert que si tu veux forcer une URL précise.
+          image: z.string().optional(),
           blurb: z.string().optional(), // une phrase expliquant pourquoi tu le recommandes
         })
       )

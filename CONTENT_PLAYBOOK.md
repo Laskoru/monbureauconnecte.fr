@@ -73,6 +73,10 @@ Un ASIN inventé = un lien affilié cassé = zéro commission + mauvaise expéri
   `# TODO-HUMAIN: ajouter 2 produits Amazon vérifiés (ASIN réels) avant publication`
   L'humain les ajoutera pendant la relecture. C'est un brouillon, c'est normal.
 - 2 produits par article : le premier est mis en avant comme "Notre choix".
+- **Ne remplis pas le champ `image:` des produits.** Les photos sont gérées
+  séparément : l'humain dépose le fichier dans `public/products/<ASIN>.jpg` et
+  l'image apparaît automatiquement (voir `public/products/README.md`). Laisse
+  donc `image` absent — pas de `# TODO-HUMAIN` nécessaire pour ça.
 
 ## Règle images
 
