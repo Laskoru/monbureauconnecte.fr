@@ -11,42 +11,106 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
   month: 'long',
   day: 'numeric',
 });
+
+function readingTime(body: string) {
+  const words = body.trim().split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
+const trustPoints = [
+  { label: 'Critères concrets', detail: "Des points de comparaison vérifiables, pas du blabla marketing." },
+  { label: 'Comparatifs impartiaux', detail: 'Un choix par budget et par usage, sans pousser le plus cher.' },
+  { label: 'Mis à jour régulièrement', detail: 'Les fiches sont revues quand les modèles ou les prix bougent.' },
+];
 ---
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description}>
   <section class="hero container">
+    <p class="eyebrow">Guides & comparatifs</p>
     <h1>{siteConfig.name}</h1>
     <p class="hero__tagline">{siteConfig.tagline}</p>
+    {latest.length > 0 && (
+      <a class="hero__cta btn btn--primary" href={`/articles/${latest[0].slug}`}>
+        Lire le dernier comparatif →
+      </a>
+    )}
+  </section>
+
+  <section class="wide trust-bar">
+    {trustPoints.map((point) => (
+      <div class="trust-bar__item">
+        <p class="trust-bar__label">{point.label}</p>
+        <p class="trust-bar__detail">{point.detail}</p>
+      </div>
+    ))}
   </section>
 
   <section class="container article-list">
+    <h2 class="article-list__title">Derniers articles</h2>
     {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
-    {latest.map((article) => (
-      <a class="article-card" href={`/articles/${article.slug}`}>
-        <h2>{article.data.title}</h2>
-        <p class="article-card__desc">{article.data.description}</p>
-        <p class="article-card__date">{dateFormatter.format(article.data.pubDate)}</p>
+    {latest.map((article, i) => (
+      <a class="article-card card card--hover" href={`/articles/${article.slug}`}>
+        <span class="article-card__index">{String(i + 1).padStart(2, '0')}</span>
+        <div class="article-card__body">
+          <p class="eyebrow">{dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min de lecture</p>
+          <h3>{article.data.title}</h3>
+          <p class="article-card__desc">{article.data.description}</p>
+        </div>
       </a>
     ))}
   </section>
 </BaseLayout>
 
 <style>
-  .hero { padding: 2rem 0 1rem; }
-  .hero__tagline { color: var(--color-text-muted); font-size: 1.1rem; }
-  .article-list { display: flex; flex-direction: column; gap: 1.75rem; padding-bottom: 3rem; }
-  .article-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding-bottom: 1.75rem;
+  .hero { padding: 3.5rem 0 2rem; }
+  .hero h1 { margin-top: 0.5rem; }
+  .hero__tagline { color: var(--color-text-muted); font-size: 1.15rem; max-width: 46ch; }
+  .hero__cta { margin-top: 1.25rem; }
+
+  .trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1.75rem 1.25rem;
+    margin: 0.5rem auto 2.5rem;
+    border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
   }
-  .article-card h2 {
-    margin: 0 0 0.4rem;
+  .trust-bar__label {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.98rem;
+  }
+  .trust-bar__label::before { content: '✓ '; color: var(--color-accent); }
+  .trust-bar__detail { margin: 0; color: var(--color-text-muted); font-size: 0.88rem; }
+
+  .article-list { display: flex; flex-direction: column; gap: 1.25rem; padding-bottom: 3.5rem; }
+  .article-list__title { margin-top: 0; }
+  .article-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.25rem 1.4rem;
+  }
+  .article-card__index {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    flex-shrink: 0;
+    padding-top: 0.2rem;
+  }
+  .article-card h3 {
+    margin: 0.35rem 0 0.4rem;
     font-size: 1.3rem;
     color: var(--color-text);
   }
-  .article-card__desc { color: var(--color-text-muted); margin: 0 0 0.4rem; }
-  .article-card__date { font-size: 0.85rem; color: var(--color-text-muted); margin: 0; }
+  .article-card__desc { color: var(--color-text-muted); margin: 0; }
+
+  @media (max-width: 680px) {
+    .trust-bar { grid-template-columns: 1fr; }
+    .article-card__index { display: none; }
+  }
 </style>

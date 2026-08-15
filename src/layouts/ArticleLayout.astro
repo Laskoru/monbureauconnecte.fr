@@ -4,6 +4,8 @@ import AmazonProduct from '../components/AmazonProduct.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import { siteConfig } from '../siteConfig';
 
+interface Heading { depth: number; slug: string; text: string }
+
 interface Props {
   title: string;
   description: string;
@@ -13,10 +15,24 @@ interface Props {
   coverImage?: string;
   coverAlt?: string;
   products?: { asin: string; title: string; image?: string; blurb?: string }[];
+  headings?: Heading[];
+  readingMinutes?: number;
 }
 
-const { title, description, pubDate, updatedDate, author, coverImage, coverAlt, products = [] } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  coverImage,
+  coverAlt,
+  products = [],
+  headings = [],
+  readingMinutes,
+} = Astro.props;
 const hasProducts = siteConfig.amazon.enabled && products.length > 0;
+const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), {
   year: 'numeric',
@@ -28,9 +44,13 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
 <BaseLayout title={title} description={description} ogImage={coverImage}>
   <article class="container">
     <header class="article-header">
+      <p class="eyebrow">
+        {dateFormatter.format(pubDate)}
+        {readingMinutes && <> · {readingMinutes} min de lecture</>}
+      </p>
       <h1>{title}</h1>
       <p class="article-meta">
-        {author ?? siteConfig.author} · {dateFormatter.format(pubDate)}
+        {author ?? siteConfig.author}
         {updatedDate && <> · mis à jour le {dateFormatter.format(updatedDate)}</>}
       </p>
     </header>
@@ -39,6 +59,17 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
 
     {hasProducts && <AffiliateDisclosure />}
 
+    {tocHeadings.length > 1 && (
+      <nav class="toc" aria-label="Sommaire">
+        <p class="toc__title">Sommaire</p>
+        <ol>
+          {tocHeadings.map((h) => (
+            <li data-depth={h.depth}><a href={`#${h.slug}`}>{h.text}</a></li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
     <div class="article-body">
       <slot />
     </div>
@@ -46,8 +77,8 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
     {hasProducts && (
       <div class="article-recommendations">
         <h2>Nos recommandations</h2>
-        {products.map((p) => (
-          <AmazonProduct asin={p.asin} title={p.title} image={p.image} blurb={p.blurb} />
+        {products.map((p, i) => (
+          <AmazonProduct asin={p.asin} title={p.title} image={p.image} blurb={p.blurb} featured={i === 0} />
         ))}
       </div>
     )}
@@ -56,11 +87,13 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
 
 <style>
   .article-header { margin-bottom: 1.5rem; }
+  .article-header h1 { margin-top: 0.4rem; }
   .article-meta {
     color: var(--color-text-muted);
     font-size: 0.9rem;
     margin-top: -0.5rem;
   }
   .article-cover { width: 100%; margin: 1.5rem 0; }
-  .article-body :global(h2) { margin-top: 2.2em; }
+  .article-body :global(h2) { margin-top: 2.2em; scroll-margin-top: 5rem; }
+  .article-body :global(h3) { scroll-margin-top: 5rem; }
 </style>

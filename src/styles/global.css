@@ -1,16 +1,61 @@
 :root {
-  --color-bg: #fbfaf7;
-  --color-text: #1c1c1a;
-  --color-text-muted: #5c5c57;
-  --color-border: #e4e2da;
-  --color-accent: #2f6e5e; /* surchargé dynamiquement depuis siteConfig.accentColor */
+  --color-bg: #f4f5f7;
+  --color-bg-grid: #e9ebef;
+  --color-text: #191c22;
+  --color-text-muted: #5b6070;
+  --color-border: #d9dce2;
+  --color-accent: #3452c4; /* surchargé dynamiquement depuis siteConfig.accentColor */
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  --color-signal: #f2a33b; /* accent secondaire, à utiliser avec parcimonie */
   --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(20, 22, 30, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 22, 30, 0.08);
 
-  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-display: 'Space Grotesk', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
 
   --max-width: 720px;
-  --radius: 6px;
+  --radius: 3px;
+  --radius-lg: 10px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+}
+
+:root:not([data-theme='light']) {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #14161b;
+    --color-bg-grid: #1d2028;
+    --color-text: #eceef2;
+    --color-text-muted: #9aa0ae;
+    --color-border: #2b2f39;
+    --color-accent-soft: color-mix(in srgb, var(--color-accent) 18%, transparent);
+    --color-surface: #1b1e25;
+    --color-surface-raised: #20232b;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #14161b;
+  --color-bg-grid: #1d2028;
+  --color-text: #eceef2;
+  --color-text-muted: #9aa0ae;
+  --color-border: #2b2f39;
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  --color-surface: #1b1e25;
+  --color-surface-raised: #20232b;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 * {
@@ -19,28 +64,35 @@
 
 html {
   color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--color-text);
-  background: var(--color-bg);
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(var(--color-bg-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-bg-grid) 1px, transparent 1px);
+  background-size: 32px 32px;
   line-height: 1.6;
   font-size: 17px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.2;
+  line-height: 1.15;
   font-weight: 600;
+  letter-spacing: -0.01em;
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.4rem; margin-top: 0; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.25rem; }
+h1 { font-size: 2.6rem; margin-top: 0; }
+h2 { font-size: 1.55rem; }
+h3 { font-size: 1.2rem; }
 
 p { margin: 1em 0; }
 
@@ -66,6 +118,44 @@ a:hover { text-decoration-thickness: 2px; }
 
 img { max-width: 100%; height: auto; border-radius: var(--radius); }
 
+/* Eyebrow / tag façon fiche technique */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-signal);
+  flex-shrink: 0;
+}
+
+/* Repères façon viseur, sur les visuels produits/couverture */
+.bracket-frame {
+  position: relative;
+  padding: 10px;
+}
+.bracket-frame::before,
+.bracket-frame::after,
+.bracket-frame > .bf-tr,
+.bracket-frame > .bf-bl {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-accent);
+}
+.bracket-frame::before { top: 0; left: 0; border-right: none; border-bottom: none; }
+.bracket-frame::after { bottom: 0; right: 0; border-left: none; border-top: none; }
+
 blockquote {
   border-left: 3px solid var(--color-accent);
   margin: 1.5em 0;
@@ -75,11 +165,12 @@ blockquote {
 }
 
 code {
+  font-family: var(--font-mono);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 0.15em 0.4em;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 hr {
@@ -96,3 +187,135 @@ hr {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* Bouton, style bloc bureau technique */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.7em 1.3em;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease, border-color 0.12s ease;
+}
+.btn:hover { transform: translateY(-1px); text-decoration: none; }
+.btn--primary {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn--primary:hover { box-shadow: var(--shadow-md); }
+.btn--outline {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+.btn--outline:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+/* Ruban "meilleur choix" */
+.ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-accent);
+  padding: 0.3em 0.6em;
+  border-radius: 999px;
+}
+
+/* Carte, surface surélevée réutilisable */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card--hover:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tableau comparatif, pour les specs produits dans les articles */
+.compare-table-wrap {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--color-surface);
+}
+.compare-table th,
+.compare-table td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+.compare-table thead th {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--color-bg);
+}
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.compare-table tbody tr:hover { background: var(--color-accent-soft); }
+
+/* Sommaire d'article */
+.toc {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  padding: 1.1rem 1.3rem;
+  margin: 1.75rem 0 2rem;
+}
+.toc__title {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: toc-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.toc li { counter-increment: toc-counter; }
+.toc li::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  margin-right: 0.6em;
+  font-size: 0.85em;
+}
+.toc a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.toc a:hover { color: var(--color-accent); }
+.toc li[data-depth='3'] { margin-left: 1.3rem; }
+.toc li[data-depth='3']::before { content: '–'; font-family: var(--font-body); }
+

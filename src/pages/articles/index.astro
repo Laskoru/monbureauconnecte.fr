@@ -12,16 +12,26 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
   month: 'long',
   day: 'numeric',
 });
+
+function readingTime(body: string) {
+  const words = body.trim().split(/\s+/).length;
+  return Math.max(1, Math.round(words / 200));
+}
 ---
 
 <BaseLayout title="Tous les articles" description={`Tous les articles publiés sur ${siteConfig.name}.`}>
   <section class="container">
+    <p class="eyebrow">{allArticles.length} article{allArticles.length > 1 ? 's' : ''}</p>
     <h1>Tous les articles</h1>
     <ul class="article-index">
       {allArticles.map((article) => (
         <li>
-          <a href={`/articles/${article.slug}`}>{article.data.title}</a>
-          <span class="article-index__date">{dateFormatter.format(article.data.pubDate)}</span>
+          <a class="article-index__link" href={`/articles/${article.slug}`}>
+            <span class="article-index__title">{article.data.title}</span>
+            <span class="article-index__meta">
+              {dateFormatter.format(article.data.pubDate)} · {readingTime(article.body)} min
+            </span>
+          </a>
         </li>
       ))}
     </ul>
@@ -29,13 +39,20 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
 </BaseLayout>
 
 <style>
-  .article-index { list-style: none; padding: 0; margin: 2rem 0; }
-  .article-index li {
+  .article-index { list-style: none; padding: 0; margin: 1.5rem 0 3rem; }
+  .article-index li { border-bottom: 1px solid var(--color-border); }
+  .article-index__link {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--color-border);
+    align-items: baseline;
+    gap: 0.4rem 1rem;
+    padding: 1.1rem 0.4rem;
+    text-decoration: none;
+    color: inherit;
+    transition: padding-left 0.15s ease;
   }
-  .article-index__date { color: var(--color-text-muted); font-size: 0.85rem; white-space: nowrap; }
+  .article-index__link:hover { padding-left: 0.75rem; color: var(--color-accent); }
+  .article-index__title { font-family: var(--font-display); font-weight: 600; }
+  .article-index__meta { color: var(--color-text-muted); font-size: 0.85rem; white-space: nowrap; }
 </style>

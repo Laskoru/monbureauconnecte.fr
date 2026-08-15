@@ -6,14 +6,12 @@ author: "Rédaction"
 keywords: ["chaise gaming", "meilleure chaise gaming", "chaise gaming ergonomique"]
 draft: false
 products:
-  - asin: "B0EXEMPLE1"
-    title: "Nom du modèle 1 (à remplacer)"
-    image: "https://m.media-amazon.com/images/I/exemple1.jpg"
-    blurb: "Le bon compromis prix/confort pour un usage quotidien de plusieurs heures."
-  - asin: "B0EXEMPLE2"
-    title: "Nom du modèle 2 (à remplacer)"
-    image: "https://m.media-amazon.com/images/I/exemple2.jpg"
-    blurb: "Le choix haut de gamme si le confort lombaire est la priorité absolue."
+  - asin: "B081396NSX"
+    title: "SONGMICS OBG73BRV1 — Noir/Rouge, accoudoirs 4D, charge 150 kg"
+    blurb: "Bon compromis pour un usage quotidien : accoudoirs 4D, appui-tête et support lombaire réglables, environ 140-150€."
+  - asin: "B07L5H2J7P"
+    title: "SONGMICS OBG77BR — avec repose-pieds télescopique"
+    blurb: "Version avec repose-pieds intégré, utile si tu comptes t'en servir aussi pour te détendre entre deux sessions."
 ---
 
 ## Pourquoi le choix d'une chaise gaming compte vraiment
