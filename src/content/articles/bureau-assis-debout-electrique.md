@@ -12,9 +12,9 @@ products:
   - asin: "B09P5295PQ"
     title: "FEZIBO 120x60 cm — plateau entier, fonction mémoire"
     blurb: "Format compact, idéal pour un premier bureau assis-debout sans exploser le budget."
-  - asin: "B09R79TZ94"
-    title: "FLEXISPOT 160x80 cm — cadre gris, double moteur"
-    blurb: "Plus spacieux et plus stable en position haute, pour un setup avec plusieurs écrans."
+  - asin: "B0GZNJKBM7"
+    title: "FLEXISPOT 110x54 cm — rehausseur d'écran, étagère et tiroirs, blanc"
+    blurb: "Une option compacte avec rangement intégré (étagère, tiroirs, rehausseur d'écran) et mémoire de hauteur, pratique pour garder un petit espace bien organisé."
 ---
 
 ## Pourquoi passer à un bureau assis-debout
