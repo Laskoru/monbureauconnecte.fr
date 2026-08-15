@@ -25,7 +25,7 @@ export const siteConfig = {
   // Programme Partenaires Amazon
   amazon: {
     enabled: true,
-    tag: 'ekoflokyarya-21',
+    tag: 'monbureauconnecte-21',
   },
 
   // Réseaux / contact (optionnel, laisse vide si non utilisé)

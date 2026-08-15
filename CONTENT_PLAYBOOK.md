@@ -78,6 +78,22 @@ Un ASIN inventé = un lien affilié cassé = zéro commission + mauvaise expéri
   l'image apparaît automatiquement (voir `public/products/README.md`). Laisse
   donc `image` absent — pas de `# TODO-HUMAIN` nécessaire pour ça.
 
+## Tableau comparatif (optionnel mais recommandé)
+
+Quand l'article compare des produits sur des critères mesurables, ajoute un
+bloc `comparison` au frontmatter — il s'affiche en tableau après le corps :
+
+```yaml
+comparison:
+  columns: ["Critère", "Modèle A", "Modèle B"]
+  rows:
+    - ["Charge max", "150 kg", "120 kg"]
+    - ["Poids", "9 kg", "7 kg"]
+```
+
+Chaque ligne doit avoir autant de cellules que `columns`. N'invente pas de
+chiffres : mets seulement des specs vérifiables, sinon laisse le bloc de côté.
+
 ## Règle images
 
 - Utilise une vraie photo Unsplash (licence libre) : format d'URL

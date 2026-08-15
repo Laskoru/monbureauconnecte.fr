@@ -10,6 +10,7 @@ import { categories, type CategorySlug } from '../categories';
 
 interface Heading { depth: number; slug: string; text: string }
 interface FaqItem { question: string; answer: string }
+interface Comparison { columns: string[]; rows: string[][] }
 
 interface Props {
   slug: string;
@@ -25,6 +26,7 @@ interface Props {
   headings?: Heading[];
   readingMinutes?: number;
   faq?: FaqItem[];
+  comparison?: Comparison;
 }
 
 const {
@@ -41,6 +43,7 @@ const {
   headings = [],
   readingMinutes,
   faq = [],
+  comparison,
 } = Astro.props;
 const hasProducts = siteConfig.amazon.enabled && products.length > 0;
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
@@ -134,6 +137,24 @@ const breadcrumbItems = [
     <div class="article-body">
       <slot />
     </div>
+
+    {comparison && comparison.rows.length > 0 && (
+      <div class="article-comparison">
+        <h2>Comparatif en un coup d'œil</h2>
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>{comparison.columns.map((col) => <th>{col}</th>)}</tr>
+            </thead>
+            <tbody>
+              {comparison.rows.map((row) => (
+                <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}</tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
 
     {hasProducts && (
       <div class="article-recommendations">

@@ -40,6 +40,15 @@ const articles = defineCollection({
         })
       )
       .default([]),
+    // Tableau comparatif optionnel, affiché après le corps de l'article.
+    // `columns` = en-têtes (ex. ["Critère", "Modèle A", "Modèle B"]),
+    // `rows` = lignes, chacune ayant le même nombre de cellules que `columns`.
+    comparison: z
+      .object({
+        columns: z.array(z.string()),
+        rows: z.array(z.array(z.string())),
+      })
+      .optional(),
   }),
 });
 
