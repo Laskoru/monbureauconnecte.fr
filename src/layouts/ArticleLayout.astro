@@ -4,6 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 import AmazonProduct from '../components/AmazonProduct.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import { siteConfig } from '../siteConfig';
 import { categories, type CategorySlug } from '../categories';
 
@@ -158,14 +159,8 @@ const breadcrumbItems = [
     {relatedArticles.length > 0 && (
       <div class="article-related">
         <h2>À lire aussi{categoryInfo && <> — {categoryInfo.label}</>}</h2>
-        <div class="article-related__grid">
-          {relatedArticles.map((a) => (
-            <article class="article-related__card card card--hover">
-              <p class="eyebrow">{dateFormatter.format(a.data.pubDate)}</p>
-              <h3><a class="stretched-link" href={`/articles/${a.slug}`}>{a.data.title}</a></h3>
-              <p class="article-related__desc">{a.data.description}</p>
-            </article>
-          ))}
+        <div class="article-related__list">
+          {relatedArticles.map((a) => <ArticleCard article={a} />)}
         </div>
       </div>
     )}
@@ -207,14 +202,5 @@ const breadcrumbItems = [
   .article-faq__item p { margin: 0.7rem 0 0; color: var(--color-text-muted); }
 
   .article-related { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
-  .article-related__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .article-related__card { padding: 1.25rem; }
-  .article-related__card h3 { font-size: 1.05rem; margin: 0.3rem 0 0.4rem; }
-  .article-related__card h3 a { color: var(--color-text); text-decoration: none; }
-  .article-related__card:hover h3 a { color: var(--color-accent); }
-  .article-related__desc { margin: 0; color: var(--color-text-muted); font-size: 0.85rem; }
-
-  @media (max-width: 720px) {
-    .article-related__grid { grid-template-columns: 1fr; }
-  }
+  .article-related__list { display: flex; flex-direction: column; gap: 1.1rem; }
 </style>

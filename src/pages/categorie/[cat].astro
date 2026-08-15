@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
 import { siteConfig } from '../../siteConfig';
 import { categories } from '../../categories';
 
@@ -17,12 +18,6 @@ const { cat } = Astro.props;
 const articles = (await getCollection('articles', ({ data }) => !data.draft && data.category === cat.slug)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
 ---
 
 <BaseLayout
@@ -38,15 +33,7 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
 
   <section class="container article-list">
     {articles.length === 0 && <p>Aucun article publié dans cette catégorie pour le moment.</p>}
-    {articles.map((article) => (
-      <article class="article-card card card--hover">
-        <div class="article-card__body">
-          <p class="eyebrow">{dateFormatter.format(article.data.pubDate)}</p>
-          <h3><a class="stretched-link" href={`/articles/${article.slug}`}>{article.data.title}</a></h3>
-          <p class="article-card__desc">{article.data.description}</p>
-        </div>
-      </article>
-    ))}
+    {articles.map((article) => <ArticleCard article={article} />)}
   </section>
 </BaseLayout>
 
@@ -57,9 +44,4 @@ const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'
   .cat-header__desc { color: var(--color-text-muted); font-size: 1.05rem; max-width: 52ch; }
 
   .article-list { display: flex; flex-direction: column; gap: 1.1rem; padding: 1.5rem 0 3.5rem; }
-  .article-card { padding: 1.4rem 1.5rem; }
-  .article-card h3 { margin: 0.35rem 0 0.4rem; font-size: 1.25rem; }
-  .article-card h3 a { color: var(--color-text); text-decoration: none; }
-  .article-card:hover h3 a { color: var(--color-accent); }
-  .article-card__desc { color: var(--color-text-muted); margin: 0; }
 </style>
