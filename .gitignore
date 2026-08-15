@@ -3,3 +3,6 @@ dist/
 .astro/
 .env
 .DS_Store
+
+# Config locale de l'outil (preview, etc.) — ne pas versionner
+.claude/
