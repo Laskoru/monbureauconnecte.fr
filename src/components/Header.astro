@@ -5,7 +5,7 @@ import { siteConfig } from '../siteConfig';
 <header class="site-header">
   <div class="wide site-header__inner">
     <a href="/" class="site-header__logo">
-      <span class="site-header__dot"></span>
+      <span class="status-dot"></span>
       {siteConfig.name}
     </a>
     <nav class="site-header__nav" id="site-nav">
@@ -59,6 +59,16 @@ import { siteConfig } from '../siteConfig';
     background: color-mix(in srgb, var(--color-bg) 75%, transparent);
     backdrop-filter: blur(8px);
   }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0.5;
+  }
   .site-header__inner {
     display: flex;
     align-items: center;
@@ -74,13 +84,6 @@ import { siteConfig } from '../siteConfig';
     font-weight: 600;
     color: var(--color-text);
     text-decoration: none;
-    flex-shrink: 0;
-  }
-  .site-header__dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--color-signal);
     flex-shrink: 0;
   }
   .site-header__nav { display: flex; gap: 1.5rem; margin-left: auto; }

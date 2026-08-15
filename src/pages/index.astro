@@ -26,19 +26,23 @@ const trustPoints = [
 
 <BaseLayout title={siteConfig.name} description={siteConfig.description}>
   <section class="hero container">
-    <p class="eyebrow">Guides & comparatifs</p>
-    <h1>{siteConfig.name}</h1>
-    <p class="hero__tagline">{siteConfig.tagline}</p>
-    {latest.length > 0 && (
-      <a class="hero__cta btn btn--primary" href={`/articles/${latest[0].slug}`}>
-        Lire le dernier comparatif →
-      </a>
-    )}
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__frame bracket-frame">
+      <p class="eyebrow"><span class="status-dot"></span> En ligne · guides mis à jour</p>
+      <h1>{siteConfig.name}</h1>
+      <p class="hero__tagline">{siteConfig.tagline}</p>
+      {latest.length > 0 && (
+        <a class="hero__cta btn btn--primary" href={`/articles/${latest[0].slug}`}>
+          Lire le dernier comparatif →
+        </a>
+      )}
+    </div>
   </section>
 
   <section class="wide trust-bar">
-    {trustPoints.map((point) => (
-      <div class="trust-bar__item">
+    {trustPoints.map((point, i) => (
+      <div class="trust-bar__item card">
+        <span class="trust-bar__index">{String(i + 1).padStart(2, '0')}</span>
         <p class="trust-bar__label">{point.label}</p>
         <p class="trust-bar__detail">{point.detail}</p>
       </div>
@@ -62,27 +66,51 @@ const trustPoints = [
 </BaseLayout>
 
 <style>
-  .hero { padding: 3.5rem 0 2rem; }
-  .hero h1 { margin-top: 0.5rem; }
+  .hero { position: relative; padding: 4rem 0 2.5rem; }
+  .hero__glow {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    translate: -50% 0;
+    width: 680px;
+    height: 420px;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 70%);
+    filter: blur(10px);
+    pointer-events: none;
+    z-index: -1;
+    animation: drift 10s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { translate: -54% -2%; }
+    to { translate: -46% 2%; }
+  }
+  .hero__frame { padding: 2rem 2.25rem 2.25rem; }
+  .hero .eyebrow::before { display: none; }
+  .hero .eyebrow { gap: 0.55em; }
+  .hero h1 { margin-top: 0.6rem; }
   .hero__tagline { color: var(--color-text-muted); font-size: 1.15rem; max-width: 46ch; }
   .hero__cta { margin-top: 1.25rem; }
 
   .trust-bar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    padding: 1.75rem 1.25rem;
+    gap: 1rem;
     margin: 0.5rem auto 2.5rem;
-    border-top: 1px solid var(--color-border);
-    border-bottom: 1px solid var(--color-border);
+  }
+  .trust-bar__item { position: relative; padding: 1.5rem 1.4rem 1.4rem; }
+  .trust-bar__index {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    margin-bottom: 0.6rem;
   }
   .trust-bar__label {
-    margin: 0 0 0.3rem;
+    margin: 0 0 0.35rem;
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 0.98rem;
   }
-  .trust-bar__label::before { content: '✓ '; color: var(--color-accent); }
   .trust-bar__detail { margin: 0; color: var(--color-text-muted); font-size: 0.88rem; }
 
   .article-list { display: flex; flex-direction: column; gap: 1.25rem; padding-bottom: 3.5rem; }

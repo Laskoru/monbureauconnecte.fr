@@ -4,8 +4,8 @@ description: "Comment choisir un casque à réduction de bruit active pour se co
 pubDate: 2026-08-20
 author: "Rédaction"
 keywords: ["casque réduction de bruit télétravail", "casque anc bureau", "meilleur casque antibruit"]
-coverImage: "/covers/casque-bruit.svg"
-coverAlt: "Illustration d'un casque à réduction de bruit"
+coverImage: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=1600&auto=format&fit=crop"
+coverAlt: "Casque audio sans fil noir posé sur un bureau"
 draft: false
 products:
   - asin: "B0BTDX26B2"
