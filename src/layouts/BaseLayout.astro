@@ -46,13 +46,6 @@ const { enabled, clientId } = siteConfig.adsense;
     <meta name="twitter:description" content={description} />
 
     <style set:html={`:root { --color-accent: ${siteConfig.accentColor}; }`}></style>
-    <script is:inline>
-      // Applique le thème stocké avant le premier rendu, pour éviter un flash.
-      (function () {
-        var stored = localStorage.getItem('theme-preference');
-        if (stored) document.documentElement.setAttribute('data-theme', stored);
-      })();
-    </script>
 
     {enabled && (
       <script
