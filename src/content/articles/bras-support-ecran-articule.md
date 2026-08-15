@@ -4,6 +4,8 @@ description: "Un bon bras support écran libère de la place et améliore la pos
 pubDate: 2026-08-21
 author: "Rédaction"
 keywords: ["bras support écran", "bras moniteur articulé", "support écran pc bureau"]
+coverImage: "/covers/bras-ecran.svg"
+coverAlt: "Illustration d'un bras support écran articulé"
 draft: false
 products:
   - asin: "B07T4HQS2N"

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e3e6ec" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#f4f5f7"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <path d="M40 96 L40 40 L96 40" fill="none" stroke="#3454b4" stroke-width="4"/>
+  <path d="M1104 590 L1160 590 L1160 534" fill="none" stroke="#3454b4" stroke-width="4"/>
+
+  <circle cx="56" cy="130" r="5" fill="#f2a33b"/>
+  <text x="72" y="136" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="18" letter-spacing="2" fill="#5b6070">MOBILIER</text>
+
+  <text font-family="'Space Grotesk', 'Arial Narrow', sans-serif" font-weight="700" font-size="52" fill="#191c22">
+    <tspan x="56" y="230">Meilleures chaises</tspan>
+    <tspan x="56" y="292">gaming</tspan>
+  </text>
+
+  <text x="56" y="560" font-family="'Inter', system-ui, sans-serif" font-size="20" fill="#5b6070">Mon Bureau Connecté</text>
+
+  <g transform="translate(840,175)" stroke="#3454b4" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="30" y="0" width="110" height="180" rx="26"/>
+    <line x1="30" y1="60" x2="140" y2="60"/>
+    <rect x="10" y="180" width="160" height="34" rx="14"/>
+    <line x1="0" y1="200" x2="30" y2="180"/>
+    <line x1="180" y1="200" x2="150" y2="180"/>
+    <line x1="90" y1="214" x2="90" y2="270"/>
+    <line x1="90" y1="270" x2="30" y2="320"/>
+    <line x1="90" y1="270" x2="150" y2="320"/>
+    <line x1="90" y1="270" x2="90" y2="330"/>
+    <circle cx="30" cy="326" r="6"/>
+    <circle cx="150" cy="326" r="6"/>
+    <circle cx="90" cy="336" r="6"/>
+  </g>
+</svg>

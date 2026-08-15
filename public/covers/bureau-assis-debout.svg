@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e3e6ec" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#f4f5f7"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <path d="M40 96 L40 40 L96 40" fill="none" stroke="#3454b4" stroke-width="4"/>
+  <path d="M1104 590 L1160 590 L1160 534" fill="none" stroke="#3454b4" stroke-width="4"/>
+
+  <circle cx="56" cy="130" r="5" fill="#f2a33b"/>
+  <text x="72" y="136" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="18" letter-spacing="2" fill="#5b6070">MOBILIER</text>
+
+  <text font-family="'Space Grotesk', 'Arial Narrow', sans-serif" font-weight="700" font-size="52" fill="#191c22">
+    <tspan x="56" y="230">Bureau assis-debout</tspan>
+    <tspan x="56" y="292">électrique</tspan>
+  </text>
+
+  <text x="56" y="560" font-family="'Inter', system-ui, sans-serif" font-size="20" fill="#5b6070">Mon Bureau Connecté</text>
+
+  <g transform="translate(830,180)" stroke="#3454b4" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="30" width="220" height="16" rx="6"/>
+    <line x1="34" y1="46" x2="34" y2="220"/>
+    <line x1="186" y1="46" x2="186" y2="220"/>
+    <line x1="110" y1="80" x2="110" y2="200"/>
+    <path d="M92 100 L110 80 L128 100"/>
+    <path d="M92 180 L110 200 L128 180"/>
+  </g>
+</svg>

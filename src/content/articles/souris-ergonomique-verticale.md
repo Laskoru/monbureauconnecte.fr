@@ -4,6 +4,8 @@ description: "Tendinite, syndrome du canal carpien, douleurs au poignet : notre 
 pubDate: 2026-08-19
 author: "Rédaction"
 keywords: ["souris ergonomique verticale", "souris verticale poignet", "meilleure souris ergonomique"]
+coverImage: "/covers/souris-verticale.svg"
+coverAlt: "Illustration d'une souris ergonomique verticale"
 draft: false
 products:
   - asin: "B07FNHV4MW"

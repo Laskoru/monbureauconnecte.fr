@@ -4,6 +4,8 @@ description: "Notre sélection de claviers mécaniques silencieux, pour taper sa
 pubDate: 2026-08-17
 author: "Rédaction"
 keywords: ["clavier mécanique silencieux", "clavier silencieux télétravail", "clavier open space"]
+coverImage: "/covers/claviers-mecaniques.svg"
+coverAlt: "Illustration d'un clavier mécanique"
 draft: false
 products:
   - asin: "B07W5JK8DT"

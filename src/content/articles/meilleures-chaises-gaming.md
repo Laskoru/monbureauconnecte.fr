@@ -4,6 +4,8 @@ description: "Notre sélection des meilleures chaises gaming pour les longues se
 pubDate: 2026-08-15
 author: "Rédaction"
 keywords: ["chaise gaming", "meilleure chaise gaming", "chaise gaming ergonomique"]
+coverImage: "/covers/chaises-gaming.svg"
+coverAlt: "Illustration d'une chaise gaming"
 draft: false
 products:
   - asin: "B081396NSX"

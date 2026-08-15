@@ -4,6 +4,8 @@ description: "Comment choisir son bureau assis-debout électrique pour le télé
 pubDate: 2026-08-16
 author: "Rédaction"
 keywords: ["bureau assis-debout", "bureau électrique télétravail", "bureau réglable en hauteur"]
+coverImage: "/covers/bureau-assis-debout.svg"
+coverAlt: "Illustration d'un bureau assis-debout réglable"
 draft: false
 products:
   - asin: "B09P5295PQ"
