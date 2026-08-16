@@ -8,8 +8,8 @@ Format : `- [ ] Sujet — angle — catégorie`.
 
 - [x] Tapis de sol pour chaise de bureau — protéger le parquet et rouler sans forcer — mobilier
 - [x] Coussin d'assise ergonomique — soulager le coccyx en position assise prolongée — mobilier
-- [ ] Coussin lombaire pour chaise — corriger le soutien du bas du dos à petit prix — mobilier
-- [ ] Caisson de rangement sous bureau — libérer le plateau sans encombrer — mobilier
+- [x] Coussin lombaire pour chaise — corriger le soutien du bas du dos à petit prix — mobilier
+- [x] Caisson de rangement sous bureau — libérer le plateau sans encombrer — mobilier
 - [ ] Tabouret assis-debout (siège selle) — alterner les appuis sur un bureau haut — mobilier
 - [ ] Plante de bureau dépolluante — améliorer l'air et le confort visuel — mobilier
 - [ ] Chaise de bureau sans accoudoirs — pour les petits espaces et les bureaux bas — mobilier
