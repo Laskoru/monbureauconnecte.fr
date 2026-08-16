@@ -7,7 +7,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 ## Mobilier & Confort
 
 - [x] Tapis de sol pour chaise de bureau — protéger le parquet et rouler sans forcer — mobilier
-- [ ] Coussin d'assise ergonomique — soulager le coccyx en position assise prolongée — mobilier
+- [x] Coussin d'assise ergonomique — soulager le coccyx en position assise prolongée — mobilier
 - [ ] Coussin lombaire pour chaise — corriger le soutien du bas du dos à petit prix — mobilier
 - [ ] Caisson de rangement sous bureau — libérer le plateau sans encombrer — mobilier
 - [ ] Tabouret assis-debout (siège selle) — alterner les appuis sur un bureau haut — mobilier
