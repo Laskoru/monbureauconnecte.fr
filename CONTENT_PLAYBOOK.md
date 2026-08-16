@@ -6,8 +6,8 @@ par la routine automatique quotidienne **et** peut être utilisé à la main.
 ## Objectif d'une exécution
 
 Créer **1 à 2 nouveaux articles** (vise 2 si les sujets s'y prêtent), chacun
-**publié directement** (`draft: false`), puis commiter et pousser sur `main`.
-Les articles sont EN LIGNE dès le déploiement Vercel — soigne donc la qualité,
+**en brouillon** (`draft: true`), puis commiter et pousser sur `main`.
+Les brouillons ne sont PAS visibles en ligne. Un process local ajoutera les images et publiera. Soigne quand même la qualité,
 et ne publie jamais un article sans 2 produits à ASIN réels ni sans coverImage.
 
 Chaque article doit prendre un sujet **différent** (deux idées non cochées
@@ -42,7 +42,7 @@ keywords: ["mot-clé principal", "variante 1", "variante 2"]
 category: "mobilier"   # UNIQUEMENT: mobilier | peripheriques | audio-visio
 coverImage: "https://images.unsplash.com/photo-XXXX?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Description factuelle de l'image pour l'accessibilité"
-draft: false            # PUBLIÉ directement en ligne
+draft: true            # PUBLIÉ directement en ligne
 products:
   - asin: "B0XXXXXXXX"
     title: "Marque Modèle — 2-3 caractéristiques clés"
@@ -135,7 +135,7 @@ chiffres : mets seulement des specs vérifiables, sinon laisse le bloc de côté
 ## Commit
 
 - Message : `Nouveaux articles : <titres>`.
-- Pousser sur `main`. Vercel redéploie tout seul et les articles (`draft: false`)
+- Pousser sur `main`. Vercel redéploie tout seul et les articles (`draft: true`)
   sont en ligne immédiatement.
 
 ## Rappel de la promesse éditoriale
