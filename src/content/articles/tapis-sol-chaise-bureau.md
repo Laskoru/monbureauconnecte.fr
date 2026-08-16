@@ -5,8 +5,9 @@ pubDate: 2026-08-15
 author: "Rédaction"
 keywords: ["tapis de sol chaise de bureau", "protection parquet chaise", "tapis protection sol bureau"]
 category: "mobilier"
-# TODO-HUMAIN: ajouter une image de couverture (URL Unsplash vérifiée, non trouvée avec certitude en génération auto)
-draft: true
+coverImage: "https://images.unsplash.com/photo-1755520795091-adf1f3f307e0?q=80&w=1600&auto=format&fit=crop"
+coverAlt: "Bureau et chaise sur un parquet, près d'une fenêtre"
+draft: false
 products:
   - asin: "B08PP39PLD"
     title: "NATRKE — PVC transparent, 76 x 122 cm, sans BPA"
