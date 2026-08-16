@@ -7,7 +7,7 @@ keywords: ["coussin d'assise ergonomique", "coussin coccyx bureau", "coussin erg
 category: "mobilier"
 coverImage: "https://images.unsplash.com/photo-1758600588243-4de37a8817a8?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Personne assise sur une chaise de bureau"
-draft: true
+draft: false
 products:
   - asin: "B08QR8Z769"
     title: "Feagar — mousse à mémoire de forme, housse lavable"
