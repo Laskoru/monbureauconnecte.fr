@@ -5,10 +5,10 @@ par la routine automatique quotidienne **et** peut être utilisé à la main.
 
 ## Objectif d'une exécution
 
-Créer **1 à 2 nouveaux articles** (vise 2 si les sujets s'y prêtent), chacun en
-**brouillon** (`draft: true`), puis commiter et pousser sur `main`. Un humain les
-relit ensuite, complète ce qui manque, puis passe `draft: false` pour publier.
-Les brouillons ne sont PAS visibles sur le site tant que `draft: true`.
+Créer **1 à 2 nouveaux articles** (vise 2 si les sujets s'y prêtent), chacun
+**publié directement** (`draft: false`), puis commiter et pousser sur `main`.
+Les articles sont EN LIGNE dès le déploiement Vercel — soigne donc la qualité,
+et ne publie jamais un article sans 2 produits à ASIN réels ni sans coverImage.
 
 Chaque article doit prendre un sujet **différent** (deux idées non cochées
 distinctes) — jamais deux articles sur le même sujet dans la même exécution.
@@ -42,7 +42,7 @@ keywords: ["mot-clé principal", "variante 1", "variante 2"]
 category: "mobilier"   # UNIQUEMENT: mobilier | peripheriques | audio-visio
 coverImage: "https://images.unsplash.com/photo-XXXX?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Description factuelle de l'image pour l'accessibilité"
-draft: true            # TOUJOURS true en génération auto
+draft: false            # PUBLIÉ directement en ligne
 products:
   - asin: "B0XXXXXXXX"
     title: "Marque Modèle — 2-3 caractéristiques clés"
@@ -134,10 +134,9 @@ chiffres : mets seulement des specs vérifiables, sinon laisse le bloc de côté
 
 ## Commit
 
-- Message : `Nouvel article (brouillon) : <titre court>` puis une ligne
-  résumant ce qui reste à faire côté humain (produits/image à vérifier).
-- Pousser sur `main`. Vercel redéploie tout seul, mais comme `draft: true`,
-  l'article n'apparaît pas encore en ligne.
+- Message : `Nouveaux articles : <titres>`.
+- Pousser sur `main`. Vercel redéploie tout seul et les articles (`draft: false`)
+  sont en ligne immédiatement.
 
 ## Rappel de la promesse éditoriale
 
