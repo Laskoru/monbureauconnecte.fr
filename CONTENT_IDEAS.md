@@ -46,3 +46,16 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [ ] Onduleur (UPS) pour le télétravail — ne rien perdre en cas de coupure — peripheriques
 - [ ] Kit de nettoyage écran et clavier — entretenir son matériel sans l'abîmer — mobilier
 - [ ] Chauffe-tasse USB pour le bureau — garder son café chaud en réunion — mobilier
+
+## Ajouts (réserve)
+
+- [ ] Lampe à pince pour bureau — gagner de la place — mobilier
+- [ ] Panneau acoustique de bureau — réduire l'écho en visio — mobilier
+- [ ] Rehausseur d'écran avec rangement — mobilier
+- [ ] Chargeur à induction de bureau — peripheriques
+- [ ] Clavier sans fil compact pour voyage — peripheriques
+- [ ] Souris de voyage fine et silencieuse — peripheriques
+- [ ] Enceinte PC compacte pour le télétravail — audio-visio
+- [ ] Support / stand pour casque audio — audio-visio
+- [ ] Webcam 4K avec cadrage automatique — audio-visio
+- [ ] Casque sans fil longue autonomie pour le bureau — audio-visio
