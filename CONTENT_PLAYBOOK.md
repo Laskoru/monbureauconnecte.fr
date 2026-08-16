@@ -5,22 +5,30 @@ par la routine automatique quotidienne **et** peut être utilisé à la main.
 
 ## Objectif d'une exécution
 
-Créer **UN seul** nouvel article, en **brouillon** (`draft: true`), le commiter
-et le pousser sur `main`. Un humain le relit ensuite, complète ce qui manque,
-puis passe `draft: false` pour le publier. Les brouillons ne sont PAS visibles
-sur le site tant que `draft: true`.
+Créer **1 à 2 nouveaux articles** (vise 2 si les sujets s'y prêtent), chacun en
+**brouillon** (`draft: true`), puis commiter et pousser sur `main`. Un humain les
+relit ensuite, complète ce qui manque, puis passe `draft: false` pour publier.
+Les brouillons ne sont PAS visibles sur le site tant que `draft: true`.
 
-## Étapes
+Chaque article doit prendre un sujet **différent** (deux idées non cochées
+distinctes) — jamais deux articles sur le même sujet dans la même exécution.
+Applique tout le processus ci-dessous à chaque article. Mieux vaut 1 article
+solide que 2 bâclés : si le 2e ne peut pas être fait correctement, n'en fais
+qu'un.
+
+## Étapes (à répéter pour chaque article)
 
 1. **Choisir le sujet.** Ouvre `CONTENT_IDEAS.md`. Prends la première idée non
-   cochée (`- [ ]`). Vérifie qu'aucun fichier de `src/content/articles/` ne
-   traite déjà le sujet. Coche l'idée (`- [x]`) dans le même commit.
+   cochée (`- [ ]`) — et pour le 2e article, la suivante encore non cochée.
+   Vérifie qu'aucun fichier de `src/content/articles/` ne traite déjà le sujet.
+   Coche l'idée (`- [x]`).
 2. **Rédiger** l'article dans `src/content/articles/<slug>.md` en suivant le
    format ci-dessous. Le slug est en kebab-case, sans accents, descriptif
    (ex. `tapis-souris-xxl-bureau.md`).
 3. **Vérifier les produits Amazon** (voir la règle critique plus bas).
 4. **Choisir une image** de couverture (voir règle images).
-5. **Commiter et pousser** sur `main`.
+5. **Commiter et pousser** sur `main` (un seul commit pour l'ensemble, ou un par
+   article — peu importe, tant que tout est poussé).
 
 ## Format exact du frontmatter
 
