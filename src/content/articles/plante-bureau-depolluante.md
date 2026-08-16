@@ -5,9 +5,8 @@ pubDate: 2026-08-16
 author: "Rédaction"
 keywords: ["plante de bureau dépolluante", "plante dépolluante intérieur", "plante verte bureau facile"]
 category: "mobilier"
-# COVER: green potted plant on office desk near laptop
 coverAlt: "Bureau en bois avec écran, clavier et plusieurs grandes plantes vertes en pot"
-draft: true
+draft: false
 products:
   - asin: "B0CFZXBQP8"
     title: "Sansevieria Laurentii — plante d'intérieur, tolère la faible luminosité"

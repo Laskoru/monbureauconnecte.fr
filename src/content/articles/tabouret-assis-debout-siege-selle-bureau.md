@@ -5,9 +5,8 @@ pubDate: 2026-08-16
 author: "Rédaction"
 keywords: ["tabouret assis-debout", "siège selle bureau", "tabouret dynamique bureau haut"]
 category: "mobilier"
-# COVER: sit-stand saddle stool at standing desk office
 coverAlt: "Personne travaillant debout à un bureau réglable en hauteur dans un espace de travail partagé"
-draft: true
+draft: false
 products:
   - asin: "B0CM936YRY"
     title: "SONGMICS OSC008B01 — tabouret dynamique, hauteur réglable, base large"
