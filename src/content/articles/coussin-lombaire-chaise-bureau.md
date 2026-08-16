@@ -7,7 +7,7 @@ keywords: ["coussin lombaire chaise de bureau", "soutien lombaire bureau", "cous
 category: "mobilier"
 coverImage: "https://images.unsplash.com/photo-1758600588243-4de37a8817a8?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Personne assise sur une chaise de bureau, dos calé contre le dossier"
-draft: true
+draft: false
 products:
   - asin: "B086W5MYRD"
     title: "SUPA MODERN — mousse à mémoire de forme, sangles réglables"

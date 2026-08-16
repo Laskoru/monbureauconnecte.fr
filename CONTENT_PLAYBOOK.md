@@ -7,8 +7,9 @@ par la routine automatique quotidienne **et** peut être utilisé à la main.
 
 Créer **1 à 2 nouveaux articles** (vise 2 si les sujets s'y prêtent), chacun
 **en brouillon** (`draft: true`), puis commiter et pousser sur `main`.
-Les brouillons ne sont PAS visibles en ligne. Un process local ajoutera les images et publiera. Soigne quand même la qualité,
-et ne publie jamais un article sans 2 produits à ASIN réels ni sans coverImage.
+Les brouillons ne sont PAS visibles en ligne. Un process local ajoutera les
+images (couverture + produits) et publiera. Soigne quand même la qualité, et
+laisse toujours 2 produits à ASIN réels pour que le process local puisse finir.
 
 Chaque article doit prendre un sujet **différent** (deux idées non cochées
 distinctes) — jamais deux articles sur le même sujet dans la même exécution.
@@ -40,9 +41,10 @@ pubDate: AAAA-MM-JJ   # la date du jour de génération
 author: "Rédaction"
 keywords: ["mot-clé principal", "variante 1", "variante 2"]
 category: "mobilier"   # UNIQUEMENT: mobilier | peripheriques | audio-visio
-coverImage: "https://images.unsplash.com/photo-XXXX?q=80&w=1600&auto=format&fit=crop"
+# coverImage : NE PAS mettre d'URL. La couverture est téléchargée localement
+# (public/covers/<slug>.jpg) exactement comme les images produits.
 coverAlt: "Description factuelle de l'image pour l'accessibilité"
-draft: true            # PUBLIÉ directement en ligne
+draft: true            # le process local passe à false après avoir ajouté les images
 products:
   - asin: "B0XXXXXXXX"
     title: "Marque Modèle — 2-3 caractéristiques clés"
@@ -124,19 +126,25 @@ comparison:
 Chaque ligne doit avoir autant de cellules que `columns`. N'invente pas de
 chiffres : mets seulement des specs vérifiables, sinon laisse le bloc de côté.
 
-## Règle images
+## Règle images (couverture + produits : tout est géré en local)
 
-- Utilise une vraie photo Unsplash (licence libre) : format d'URL
-  `https://images.unsplash.com/photo-XXXX?q=80&w=1600&auto=format&fit=crop`.
-- L'URL doit être réelle et correspondre au sujet. Si tu ne peux pas en trouver
-  une fiable, omets `coverImage`/`coverAlt` et ajoute :
-  `# TODO-HUMAIN: ajouter une image de couverture`
+Ne cherche PAS d'URL d'image. Les photos sont téléchargées par le process local,
+comme les images produits :
+
+- **Couverture** : n'ajoute pas de `coverImage`. Renseigne seulement `coverAlt`
+  (description factuelle) et ajoute dans le corps du frontmatter une indication
+  pour le process local :
+  `# COVER: <mots-clés en anglais pour trouver la photo>` (ex. `# COVER: under desk storage drawer cabinet`).
+  Le process local téléchargera la photo dans `public/covers/<slug>.jpg` et elle
+  sera détectée automatiquement au build.
+- **Produits** : ne remplis pas `image:`. Le process local dépose
+  `public/products/<ASIN>.jpg` (voir règle ASIN plus haut).
 
 ## Commit
 
-- Message : `Nouveaux articles : <titres>`.
-- Pousser sur `main`. Vercel redéploie tout seul et les articles (`draft: true`)
-  sont en ligne immédiatement.
+- Message : `Nouveaux brouillons : <titres>`.
+- Pousser sur `main`. Les articles restent `draft: true` (invisibles en ligne)
+  jusqu'à ce que le process local ajoute les images et passe `draft: false`.
 
 ## Rappel de la promesse éditoriale
 
