@@ -122,6 +122,17 @@ Seulement en dernier recours, après plusieurs recherches infructueuses : laisse
 **noms de produits repérés** pour que l'humain finisse vite :
 `# TODO-HUMAIN: ASIN à vérifier sur amazon.fr — <marque modèle 1>, <marque modèle 2>`
 
+### Les deux produits doivent être COMPARABLES
+
+Un comparatif n'a de sens que si les deux produits jouent dans la même cour.
+Vise un **écart de prix inférieur à ~50 %** entre les deux : opposer un modèle à
+77 € et un autre à 140 €, ce n'est pas un comparatif, c'est deux catégories
+différentes — et le lecteur ne sait pas quoi en faire.
+
+Le bon axe de différenciation n'est donc pas le prix, mais l'usage : deux
+modèles au tarif voisin qui répondent à des besoins distincts (compact contre
+plus encadrant, filaire contre sans fil, simple contre polyvalent).
+
 ### Format et rappels
 
 - 2 produits par article ; le premier est mis en avant comme « Notre choix ».

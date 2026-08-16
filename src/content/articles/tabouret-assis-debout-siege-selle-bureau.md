@@ -11,12 +11,12 @@ products:
   - asin: "B0CM936YRY"
     title: "SONGMICS OSC008B01 — tabouret dynamique, hauteur réglable, base large"
     blurb: "Un tabouret complet à assise basculante à 360°, avec une hauteur réglable qui couvre aussi bien un bureau standard qu'un bureau assis-debout relevé."
-  - asin: "B07ZZHX414"
-    title: "Humantool — tabouret de selle portable, se pose sur une chaise existante"
-    blurb: "Pas un tabouret à part entière mais un accessoire léger qui transforme n'importe quelle chaise de bureau en assise type selle, pour tester le concept sans investir."
+  - asin: "B07XSB9W4H"
+    title: "Waytex — siège assis-debout avec dossier et repose-pieds, réglable 57-81 cm"
+    blurb: "Une assise haute plus encadrante, avec dossier et repose-pieds réglable : le choix logique si tu tiens plusieurs heures d'affilée derrière un plan de travail haut."
 faq:
   - question: "Un tabouret assis-debout convient-il pour toute la journée de travail ?"
-    answer: "Non, et ce n'est pas son rôle. L'idée n'est pas de remplacer complètement la chaise de bureau mais d'alterner : quelques sessions d'une heure ou deux dessus, en particulier sur les créneaux où le bureau est relevé en position debout, puis un retour à une assise classique. Utilisé en continu sur huit heures, il devient fatigant, comme n'importe quelle assise sans dossier."
+    answer: "Non, et ce n'est pas son rôle. L'idée n'est pas de remplacer complètement la chaise de bureau mais d'alterner : quelques sessions d'une heure ou deux dessus, en particulier sur les créneaux où le bureau est relevé en position debout, puis un retour à une assise classique. Utilisé en continu sur huit heures, il devient fatigant — un peu moins sur les modèles pourvus d'un dossier et d'un repose-pieds, mais le principe reste l'alternance."
   - question: "Quelle est la différence entre un tabouret dynamique et un vrai siège selle ?"
     answer: "Le tabouret dynamique a une assise ronde ou ovale classique montée sur un pied basculant, qui bouge avec le corps. Le siège selle a une assise fendue en deux parties, inspirée d'une selle de cheval, qui ouvre davantage l'angle des hanches et redresse le bassin. Les deux favorisent le mouvement, mais le siège selle demande un temps d'adaptation plus long."
   - question: "Faut-il forcément un bureau assis-debout électrique pour en profiter ?"
@@ -36,11 +36,12 @@ Ce n'est pas un gadget réservé aux passionnés d'ergonomie. C'est un compléme
 - **Le type d'assise (ronde, ovale ou selle)** : l'assise ronde classique convient à la plupart des morphologies et demande peu d'adaptation ; l'assise type selle ouvre davantage l'angle des hanches mais demande quelques jours d'habitude, en particulier pour les personnes peu habituées à ce genre de position.
 - **L'amplitude de bascule** : un tabouret purement statique n'apporte pas grand-chose de plus qu'une chaise sans dossier. L'intérêt réside dans le mouvement libre à 360° ou l'inclinaison qui accompagne les changements de posture naturels.
 - **Le poids et la portabilité** : dans un bureau partagé ou pour un usage occasionnel, un modèle léger, facile à glisser sous le bureau ou à déplacer d'un poste à l'autre, est plus pratique qu'un tabouret volumineux fixe.
-- **La charge maximale annoncée** : un point à vérifier avant l'achat, en particulier sur les modèles les plus légers ou les accessoires qui se fixent sur une chaise existante plutôt que sur un pied indépendant.
+- **La charge maximale annoncée** : un point à vérifier avant l'achat, en particulier sur les modèles les plus légers, dont la base étroite limite souvent le poids admissible.
+- **La présence d'un repose-pieds** : en position haute, les pieds ne touchent plus le sol. Sans repose-pieds réglable, tout le poids des jambes tire sur les cuisses et l'assise devient vite désagréable.
 
 ## Comment choisir selon ton usage
 
-**Pour découvrir le concept sans investir** : un accessoire de type selle amovible, qui se pose directement sur une chaise de bureau existante, permet de tester la sensation d'ouverture des hanches sans acheter un tabouret complet. C'est la solution la plus économique et la plus simple à essayer.
+**Pour des sessions longues derrière un plan de travail haut** : un siège assis-debout doté d'un dossier et d'un repose-pieds réglable soulage nettement plus qu'un tabouret nu. Le dossier ne sert pas à s'avachir mais à caler ponctuellement le bas du dos, et le repose-pieds évite que les jambes pendent dans le vide en position haute.
 
 **Pour un usage quotidien devant un bureau assis-debout** : un tabouret dynamique complet, avec une large plage de hauteur réglable et une base stable, est le choix le plus polyvalent. Il suit les changements de hauteur du bureau sans qu'il faille en changer.
 
@@ -56,4 +57,4 @@ Il vaut aussi la peine de vérifier, avant d'acheter, la hauteur du bureau utili
 
 ## Conclusion
 
-Le tabouret assis-debout, qu'il prenne la forme d'une assise dynamique complète ou d'un simple accessoire type selle posé sur une chaise, répond à un vrai besoin : casser la position statique sans repasser sans arrêt de la position assise à la position debout complète. Le choix se joue surtout sur la plage de hauteur réglable, la stabilité de la base et le type d'assise retenu, plus que sur le prix affiché. Utilisé en alternance avec une vraie chaise de bureau, quelques heures par jour, il apporte un vrai bénéfice de mouvement sans demander un changement complet de poste de travail.
+Le tabouret assis-debout, qu'il prenne la forme d'une assise dynamique nue ou d'un siège haut avec dossier et repose-pieds, répond à un vrai besoin : casser la position statique sans repasser sans arrêt de la position assise à la position debout complète. Le choix se joue surtout sur la plage de hauteur réglable, la stabilité de la base et le type d'assise retenu, plus que sur le prix affiché. Utilisé en alternance avec une vraie chaise de bureau, quelques heures par jour, il apporte un vrai bénéfice de mouvement sans demander un changement complet de poste de travail.

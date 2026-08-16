@@ -9,9 +9,6 @@ coverImage: "https://images.unsplash.com/photo-1622131278701-eb225474ffd2?q=80&w
 coverAlt: "Personne travaillant debout à un bureau réglable en hauteur"
 draft: false
 products:
-  - asin: "B09P5295PQ"
-    title: "FEZIBO 120x60 cm — plateau entier, fonction mémoire"
-    blurb: "Format compact, idéal pour un premier bureau assis-debout sans exploser le budget."
   - asin: "B0GZNJKBM7"
     title: "FLEXISPOT 110x54 cm — rehausseur d'écran, étagère et tiroirs, blanc"
     blurb: "Une option compacte avec rangement intégré (étagère, tiroirs, rehausseur d'écran) et mémoire de hauteur, pratique pour garder un petit espace bien organisé."

@@ -12,9 +12,6 @@ products:
   - asin: "B07W5JK8DT"
     title: "Logitech MX Mechanical — AZERTY, switches silencieux"
     blurb: "La référence pour le télétravail : boutons tactiles silencieux, sans fil, autonomie de plusieurs semaines."
-  - asin: "B0CPVFBRBB"
-    title: "Keychron K8 — sans fil, rétroéclairé"
-    blurb: "Un bon compromis prix/plaisir de frappe pour découvrir le mécanique sans investir dans le haut de gamme."
 ---
 
 ## Pourquoi un clavier mécanique silencieux
