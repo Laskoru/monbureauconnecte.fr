@@ -5,10 +5,16 @@ pubDate: 2026-08-16
 author: "Rédaction"
 keywords: ["coussin d'assise ergonomique", "coussin coccyx bureau", "coussin ergonomique chaise de bureau"]
 category: "mobilier"
-# TODO-HUMAIN: ajouter une image de couverture (URL Unsplash vérifiée — le domaine images.unsplash.com était inaccessible depuis l'environnement de génération auto, impossible de vérifier une URL)
+coverImage: "https://images.unsplash.com/photo-1758600588243-4de37a8817a8?q=80&w=1600&auto=format&fit=crop"
+coverAlt: "Personne assise sur une chaise de bureau"
 draft: true
-# TODO-HUMAIN: ajouter 2 produits Amazon vérifiés (ASIN réels) avant publication. Le domaine amazon.fr était inaccessible depuis l'environnement de génération auto (bloqué par la politique réseau), impossible de vérifier un ASIN avec certitude. Pistes à vérifier manuellement sur amazon.fr avant de les ajouter : "HAZARA Coussin ergonomique pour coccyx en mousse à mémoire de forme" (coussin en U) et "Levesolls Coussin Coccyx" (mousse à mémoire à récupération lente, housse lavable).
-products: []
+products:
+  - asin: "B08QR8Z769"
+    title: "Feagar — mousse à mémoire de forme, housse lavable"
+    blurb: "Un coussin polyvalent (bureau, voiture) qui répartit la pression et soulage le coccyx, avec une housse déhoussable et lavable."
+  - asin: "B0DPKYCBP3"
+    title: "AUVON — forme en U, coccyx dégagé"
+    blurb: "La découpe en U laisse le coccyx totalement libre : utile en cas de gêne marquée (sciatique, hémorroïdes, post-grossesse)."
 faq:
   - question: "Un coussin d'assise ergonomique est-il vraiment utile si ma chaise de bureau est déjà de bonne qualité ?"
     answer: "Oui, les deux se complètent : même une chaise ergonomique haut de gamme utilise une assise standard qui répartit la pression de façon homogène, alors qu'un coussin en U ou en forme de fer à cheval décharge spécifiquement la zone du coccyx. Si tu ressens une gêne localisée après plusieurs heures assis, c'est justement le signe qu'une chaise seule ne suffit pas toujours à résoudre le problème."

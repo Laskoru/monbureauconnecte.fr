@@ -60,23 +60,45 @@ faq:
   peut pas vérifier. Rester sur des ordres de grandeur ("environ 140-150 €",
   "plusieurs semaines d'autonomie").
 
-## RÈGLE CRITIQUE : les ASIN Amazon
+## RÈGLE CRITIQUE : les produits Amazon (ASIN)
 
-Un ASIN inventé = un lien affilié cassé = zéro commission + mauvaise expérience.
+**Objectif : chaque article doit contenir 2 produits avec de vrais ASIN.** C'est
+important : une fois l'ASIN présent, l'humain n'a plus qu'à déposer l'image
+`public/products/<ASIN>.jpg`. Ne te contente donc PAS de laisser `products: []` —
+fais réellement la recherche. Un ASIN inventé reste toutefois interdit (lien
+cassé = zéro commission) : la règle est « cherche vraiment, mais n'invente jamais ».
 
-- **Vérifie chaque ASIN** avant de l'utiliser : cherche le produit réel
-  (WebSearch/WebFetch sur `amazon.fr`, ou le navigateur si disponible) et
-  confirme que l'ASIN existe et correspond bien au produit décrit.
-- Un ASIN Amazon fait 10 caractères, commence généralement par `B0`.
-- **Si tu ne peux PAS vérifier un produit** : ne l'invente pas. Laisse le bloc
-  `products:` vide et ajoute cette ligne juste au-dessus dans le frontmatter :
-  `# TODO-HUMAIN: ajouter 2 produits Amazon vérifiés (ASIN réels) avant publication`
-  L'humain les ajoutera pendant la relecture. C'est un brouillon, c'est normal.
-- 2 produits par article : le premier est mis en avant comme "Notre choix".
+### Comment trouver un ASIN quand `amazon.fr` est bloqué (cas de la routine cloud)
+
+L'environnement d'exécution bloque souvent l'accès direct à `amazon.fr`, mais
+**WebSearch fait remonter des URLs Amazon dans ses résultats** — c'est là qu'on
+récupère les ASIN. Procédure fiable :
+
+1. `WebSearch` : `<type de produit> amazon.fr` (ex. `coussin coccyx ergonomique amazon.fr`).
+2. Dans les résultats, repère les URLs de la forme `amazon.fr/.../dp/XXXXXXXXXX`
+   ou `amazon.fr/dp/XXXXXXXXXX` — les 10 caractères après `/dp/` sont l'ASIN
+   (il commence presque toujours par `B0`).
+3. Fais une 2ᵉ recherche pour confirmer : `"<ASIN>" amazon` doit renvoyer une page
+   produit correspondant bien au produit décrit (même type, même marque).
+4. Choisis 2 produits pertinents et distincts (ex. un modèle standard + une
+   variante ou un modèle d'un autre positionnement).
+
+Essaie plusieurs formulations de recherche (marque + modèle, synonymes) avant
+d'abandonner. Dans la grande majorité des cas, 2-3 recherches suffisent.
+
+### Si vraiment aucun ASIN fiable n'est trouvé (rare)
+
+Seulement en dernier recours, après plusieurs recherches infructueuses : laisse
+`products: []` et ajoute au-dessus, dans le frontmatter, une ligne listant les
+**noms de produits repérés** pour que l'humain finisse vite :
+`# TODO-HUMAIN: ASIN à vérifier sur amazon.fr — <marque modèle 1>, <marque modèle 2>`
+
+### Format et rappels
+
+- 2 produits par article ; le premier est mis en avant comme « Notre choix ».
 - **Ne remplis pas le champ `image:` des produits.** Les photos sont gérées
-  séparément : l'humain dépose le fichier dans `public/products/<ASIN>.jpg` et
-  l'image apparaît automatiquement (voir `public/products/README.md`). Laisse
-  donc `image` absent — pas de `# TODO-HUMAIN` nécessaire pour ça.
+  séparément : l'humain dépose `public/products/<ASIN>.jpg` et l'image apparaît
+  automatiquement (voir `public/products/README.md`). Laisse `image` absent.
 
 ## Tableau comparatif (optionnel mais recommandé)
 
