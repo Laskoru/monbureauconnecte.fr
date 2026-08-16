@@ -6,7 +6,7 @@ author: "Rédaction"
 keywords: ["plante de bureau dépolluante", "plante dépolluante intérieur", "plante verte bureau facile"]
 category: "mobilier"
 # COVER: green potted plant on office desk near laptop
-coverAlt: "Petite plante verte en pot posée à côté d'un ordinateur portable sur un bureau"
+coverAlt: "Bureau en bois avec écran, clavier et plusieurs grandes plantes vertes en pot"
 draft: true
 products:
   - asin: "B0CFZXBQP8"

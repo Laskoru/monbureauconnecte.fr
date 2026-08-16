@@ -6,7 +6,7 @@ author: "Rédaction"
 keywords: ["tabouret assis-debout", "siège selle bureau", "tabouret dynamique bureau haut"]
 category: "mobilier"
 # COVER: sit-stand saddle stool at standing desk office
-coverAlt: "Tabouret assis-debout de type selle posé devant un bureau réglable en hauteur"
+coverAlt: "Personne travaillant debout à un bureau réglable en hauteur dans un espace de travail partagé"
 draft: true
 products:
   - asin: "B0CM936YRY"
