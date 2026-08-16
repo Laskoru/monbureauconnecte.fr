@@ -10,8 +10,8 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [x] Coussin d'assise ergonomique — soulager le coccyx en position assise prolongée — mobilier
 - [x] Coussin lombaire pour chaise — corriger le soutien du bas du dos à petit prix — mobilier
 - [x] Caisson de rangement sous bureau — libérer le plateau sans encombrer — mobilier
-- [ ] Tabouret assis-debout (siège selle) — alterner les appuis sur un bureau haut — mobilier
-- [ ] Plante de bureau dépolluante — améliorer l'air et le confort visuel — mobilier
+- [x] Tabouret assis-debout (siège selle) — alterner les appuis sur un bureau haut — mobilier
+- [x] Plante de bureau dépolluante — améliorer l'air et le confort visuel — mobilier
 - [ ] Chaise de bureau sans accoudoirs — pour les petits espaces et les bureaux bas — mobilier
 - [ ] Bureau d'angle pour petit espace — optimiser un coin de pièce en télétravail — mobilier
 
