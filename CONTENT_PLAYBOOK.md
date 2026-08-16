@@ -5,31 +5,50 @@ par la routine automatique quotidienne **et** peut être utilisé à la main.
 
 ## Objectif d'une exécution
 
-Créer **1 à 2 nouveaux articles** (vise 2 si les sujets s'y prêtent), chacun
-**en brouillon** (`draft: true`), puis commiter et pousser sur `main`.
-Les brouillons ne sont PAS visibles en ligne. Un process local ajoutera les
-images (couverture + produits) et publiera. Soigne quand même la qualité, et
-laisse toujours 2 produits à ASIN réels pour que le process local puisse finir.
+Créer **1 seul nouvel article**, **en brouillon** (`draft: true`), puis commiter
+et pousser sur `main`. Les brouillons ne sont PAS visibles en ligne : un process
+local ajoute les images (couverture + produits) et publie ensuite. Laisse
+toujours 2 produits à ASIN réels pour qu'il puisse finir le travail.
 
-Chaque article doit prendre un sujet **différent** (deux idées non cochées
-distinctes) — jamais deux articles sur le même sujet dans la même exécution.
-Applique tout le processus ci-dessous à chaque article. Mieux vaut 1 article
-solide que 2 bâclés : si le 2e ne peut pas être fait correctement, n'en fais
-qu'un.
+### Pourquoi un seul article (et pas plus)
 
-## Étapes (à répéter pour chaque article)
+Le site publie **délibérément peu : 3 articles par semaine maximum**. La
+fréquence de publication n'est pas un critère de classement Google, et un
+volume élevé sur un domaine récent relève au contraire du « scaled content
+abuse » que Google sanctionne depuis 2024.
+
+La consigne est donc claire : **prends tout le temps nécessaire pour un seul
+article vraiment bon** — recherche produit sérieuse, angle utile, conseils
+concrets — plutôt que d'en produire plusieurs corrects. Un article de plus ne
+fera jamais gagner de positions ; un article médiocre peut en faire perdre.
+
+## Étapes
 
 1. **Choisir le sujet.** Ouvre `CONTENT_IDEAS.md`. Prends la première idée non
-   cochée (`- [ ]`) — et pour le 2e article, la suivante encore non cochée.
-   Vérifie qu'aucun fichier de `src/content/articles/` ne traite déjà le sujet.
-   Coche l'idée (`- [x]`).
+   cochée (`- [ ]`). Vérifie qu'aucun fichier de `src/content/articles/` ne
+   traite déjà le sujet. Coche l'idée (`- [x]`).
 2. **Rédiger** l'article dans `src/content/articles/<slug>.md` en suivant le
    format ci-dessous. Le slug est en kebab-case, sans accents, descriptif
    (ex. `tapis-souris-xxl-bureau.md`).
 3. **Vérifier les produits Amazon** (voir la règle critique plus bas).
-4. **Choisir une image** de couverture (voir règle images).
-5. **Commiter et pousser** sur `main` (un seul commit pour l'ensemble, ou un par
-   article — peu importe, tant que tout est poussé).
+4. **Mailler en interne** : lier 2 à 3 articles existants (voir plus bas).
+5. **Renseigner l'indication de couverture** (voir règle images).
+6. **Commiter et pousser** sur `main`.
+
+## Maillage interne (à ne pas négliger)
+
+Chaque nouvel article doit citer et lier **2 à 3 articles existants** du site,
+avec un lien markdown vers `/articles/<slug>` et une ancre naturelle intégrée
+à une phrase (pas de « cliquez ici »). Exemple :
+
+```md
+Si le problème vient surtout de l'assise, notre comparatif des
+[chaises gaming](/articles/meilleures-chaises-gaming) traite la question plus en détail.
+```
+
+C'est l'un des rares leviers SEO entièrement sous notre contrôle : il fait
+circuler l'autorité entre les pages et aide Google à comprendre la structure
+thématique du site.
 
 ## Format exact du frontmatter
 
