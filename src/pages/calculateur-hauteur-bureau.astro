@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../siteConfig';
+
+// Ratios anthropométriques usuels (proportion de la taille debout).
+// Ils servent de POINT DE DÉPART à ajuster au ressenti — voir la note sur la page.
+const RATIOS = {
+  assise: 0.25, // hauteur du siège (creux du genou au sol)
+  plateauAssis: 0.42, // dessus du plateau en position assise
+  plateauDebout: 0.62, // dessus du plateau en position debout
+  yeux: 0.7, // hauteur des yeux assis = haut de l'écran
+};
+
+// Hauteur d'un bureau fixe standard vendu dans le commerce (norme de fait).
+const BUREAU_STANDARD = 74;
+
+const faq = [
+  {
+    question: 'Ces hauteurs conviennent-elles à tout le monde ?',
+    answer:
+      "Ce sont des points de départ statistiques, calculés à partir de proportions moyennes du corps humain. Les longueurs de jambes et de buste varient d'une personne à l'autre à taille égale : considère ces valeurs comme un réglage initial, puis ajuste de un ou deux centimètres selon ton ressenti après quelques jours.",
+  },
+  {
+    question: 'Mon bureau fixe est trop haut, que faire ?',
+    answer:
+      "C'est le cas le plus fréquent, surtout en dessous d'1,75 m : les bureaux du commerce sont presque tous à 74 cm. La solution n'est pas de baisser le siège (tes bras seraient trop bas), mais de garder la bonne hauteur d'assise et d'ajouter un repose-pieds pour que tes pieds restent à plat. Un bureau réglable règle le problème à la source.",
+  },
+  {
+    question: 'Faut-il vraiment que le haut de l’écran soit au niveau des yeux ?',
+    answer:
+      "Le haut de la dalle doit se situer à hauteur des yeux ou légèrement en dessous, pour que le regard descende naturellement plutôt que de forcer la nuque vers le haut. Sur un ordinateur portable posé directement sur le bureau, l'écran est toujours trop bas : un support ou un écran externe est le seul vrai remède.",
+  },
+  {
+    question: 'Et pour la position debout ?',
+    answer:
+      "Le plateau doit arriver à hauteur de coudes debout, bras relâchés le long du corps et avant-bras à l'horizontale. L'écran monte d'autant. Debout, l'erreur la plus courante est un plateau trop bas, qui pousse à se pencher en avant.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Calculateur de hauteur de bureau ergonomique',
+  applicationCategory: 'HealthApplication',
+  operatingSystem: 'Tout navigateur',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  description:
+    "Calcule la hauteur idéale de ton bureau (assis et debout), de ton siège et de ton écran à partir de ta taille.",
+};
+---
+
+<BaseLayout
+  title="Calculateur de hauteur de bureau idéale (assis et debout)"
+  description="Entre ta taille : ce calculateur gratuit donne la hauteur idéale de ton bureau assis et debout, de ton siège et de ton écran, et te dit si ton bureau est trop haut."
+  jsonLd={[appSchema, faqSchema]}
+>
+  <section class="container calc">
+    <p class="eyebrow">Outil gratuit</p>
+    <h1>Quelle est la bonne hauteur pour ton bureau ?</h1>
+    <p class="calc__lede">
+      La quasi-totalité des bureaux vendus en France mesurent <strong>74 cm</strong> — une hauteur
+      pensée pour une personne d'environ 1,78 m. Si tu ne fais pas cette taille, ton poste est
+      probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs.
+    </p>
+
+    <!-- ---------- Outil ---------- -->
+    <div class="calc__tool card">
+      <div class="calc__field">
+        <label for="taille">Ta taille</label>
+        <div class="calc__inputs">
+          <input type="range" id="taille-range" min="140" max="210" value="175" step="1"
+                 aria-label="Ta taille en centimètres (curseur)" />
+          <div class="calc__number">
+            <input type="number" id="taille" min="140" max="210" value="175" step="1" inputmode="numeric" />
+            <span>cm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc__results" id="results">
+        <div class="calc__result">
+          <p class="calc__result-label">Plateau du bureau <em>assis</em></p>
+          <p class="calc__result-value"><span data-out="plateauAssis">73</span> cm</p>
+          <p class="calc__result-hint"><span data-range="plateauAssis">71 – 75</span> cm</p>
+        </div>
+        <div class="calc__result">
+          <p class="calc__result-label">Plateau du bureau <em>debout</em></p>
+          <p class="calc__result-value"><span data-out="plateauDebout">109</span> cm</p>
+          <p class="calc__result-hint"><span data-range="plateauDebout">107 – 111</span> cm</p>
+        </div>
+        <div class="calc__result">
+          <p class="calc__result-label">Assise du siège</p>
+          <p class="calc__result-value"><span data-out="assise">44</span> cm</p>
+          <p class="calc__result-hint"><span data-range="assise">42 – 46</span> cm</p>
+        </div>
+        <div class="calc__result">
+          <p class="calc__result-label">Haut de l'écran</p>
+          <p class="calc__result-value"><span data-out="yeux">123</span> cm</p>
+          <p class="calc__result-hint">au niveau des yeux, du sol</p>
+        </div>
+      </div>
+
+      <p class="calc__verdict" id="verdict" role="status"></p>
+    </div>
+
+    <!-- ---------- Schéma ---------- -->
+    <figure class="calc__figure">
+      <svg viewBox="0 0 560 300" role="img" aria-labelledby="schema-titre">
+        <title id="schema-titre">
+          Schéma d'un poste de travail vu de côté, situant la hauteur du plateau, de l'assise et du haut de l'écran
+        </title>
+        <!-- sol -->
+        <line x1="20" y1="270" x2="540" y2="270" class="s-floor" />
+        <!-- bureau -->
+        <rect x="180" y="168" width="250" height="8" class="s-solid" />
+        <line x1="415" y1="176" x2="415" y2="270" class="s-solid-line" />
+        <!-- écran -->
+        <rect x="300" y="78" width="105" height="72" rx="3" class="s-screen" />
+        <line x1="352" y1="150" x2="352" y2="168" class="s-solid-line" />
+        <!-- chaise -->
+        <rect x="90" y="212" width="86" height="7" class="s-solid" />
+        <line x1="133" y1="219" x2="133" y2="270" class="s-solid-line" />
+        <line x1="92" y1="212" x2="92" y2="150" class="s-solid-line" />
+        <!-- cotes -->
+        <g class="s-dim">
+          <line x1="470" y1="176" x2="470" y2="270" />
+          <text x="478" y="228">plateau</text>
+          <line x1="60" y1="219" x2="60" y2="270" />
+          <text x="14" y="248">assise</text>
+          <line x1="255" y1="78" x2="255" y2="270" />
+          <text x="196" y="70">haut de l'écran</text>
+        </g>
+      </svg>
+      <figcaption>
+        Les trois hauteurs se mesurent toujours <strong>depuis le sol</strong>, plateau et assise
+        compris.
+      </figcaption>
+    </figure>
+
+    <!-- ---------- Vérifications ---------- -->
+    <h2>Vérifier au ressenti, une fois réglé</h2>
+    <p>
+      Les chiffres donnent le point de départ ; ton corps donne la confirmation. Une fois installé,
+      ces quatre repères doivent être vrais en même temps :
+    </p>
+    <ul class="calc__checks">
+      <li>Tes <strong>coudes forment un angle d'environ 90°</strong>, épaules relâchées, quand tes mains sont sur le clavier.</li>
+      <li>Tes <strong>poignets sont droits</strong>, jamais cassés vers le haut pour atteindre les touches.</li>
+      <li>Tes <strong>pieds reposent à plat</strong> au sol, cuisses à peu près parallèles au sol.</li>
+      <li>Ton <strong>regard descend légèrement</strong> vers l'écran, sans que tu aies à lever le menton.</li>
+    </ul>
+    <p class="calc__caveat">
+      Ces valeurs sont calculées à partir de proportions moyennes du corps humain. À taille égale,
+      la longueur des jambes varie&nbsp;: ajuste d'un ou deux centimètres après quelques jours
+      d'essai. En cas de douleur persistante, un professionnel de santé reste le bon interlocuteur.
+    </p>
+
+    <!-- ---------- Aller plus loin ---------- -->
+    <h2>Corriger ce qui ne va pas</h2>
+    <div class="calc__links">
+      <a class="calc__link card card--hover" href="/articles/bureau-assis-debout-electrique">
+        <strong>Bureau assis-debout</strong>
+        <span>La seule solution qui donne exactement les deux hauteurs calculées ici.</span>
+      </a>
+      <a class="calc__link card card--hover" href="/articles/repose-pieds-ergonomique-bureau">
+        <strong>Repose-pieds</strong>
+        <span>Le correctif quand le bureau est trop haut et qu'on ne peut pas le baisser.</span>
+      </a>
+      <a class="calc__link card card--hover" href="/articles/support-ordinateur-portable-ergonomique">
+        <strong>Support pour portable</strong>
+        <span>Pour remonter un écran de portable au niveau des yeux.</span>
+      </a>
+      <a class="calc__link card card--hover" href="/articles/bras-support-ecran-articule">
+        <strong>Bras d'écran articulé</strong>
+        <span>Règle la hauteur de l'écran au centimètre près et libère le plateau.</span>
+      </a>
+    </div>
+
+    <!-- ---------- FAQ ---------- -->
+    <h2>Questions fréquentes</h2>
+    <div class="calc__faq">
+      {faq.map((f) => (
+        <details>
+          <summary>{f.question}</summary>
+          <p>{f.answer}</p>
+        </details>
+      ))}
+    </div>
+
+    <p class="calc__share">
+      Cet outil est en accès libre&nbsp;: n'hésite pas à le partager ou à y faire un lien. Une
+      remarque, une erreur à signaler&nbsp;? Écris-nous à
+      <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+    </p>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ RATIOS, BUREAU_STANDARD }}>
+  (function () {
+    var range = document.getElementById('taille-range');
+    var number = document.getElementById('taille');
+    var verdict = document.getElementById('verdict');
+    var outs = document.querySelectorAll('[data-out]');
+    var ranges = document.querySelectorAll('[data-range]');
+
+    function compute(taille) {
+      var v = {};
+      for (var key in RATIOS) v[key] = Math.round(RATIOS[key] * taille);
+      return v;
+    }
+
+    function render(taille) {
+      var v = compute(taille);
+
+      outs.forEach(function (el) {
+        el.textContent = v[el.getAttribute('data-out')];
+      });
+      ranges.forEach(function (el) {
+        var k = el.getAttribute('data-range');
+        el.textContent = v[k] - 2 + ' – ' + (v[k] + 2);
+      });
+
+      // Comparaison avec le bureau standard du commerce
+      var ecart = BUREAU_STANDARD - v.plateauAssis;
+      var msg;
+      if (ecart >= 3) {
+        msg =
+          'Un bureau standard (74 cm) est <strong>trop haut de ' + ecart + ' cm</strong> pour toi. ' +
+          'Garde la bonne hauteur d\'assise et ajoute un repose-pieds, ou passe à un plateau réglable.';
+        verdict.className = 'calc__verdict calc__verdict--warn';
+      } else if (ecart <= -3) {
+        msg =
+          'Un bureau standard (74 cm) est <strong>trop bas de ' + Math.abs(ecart) + ' cm</strong> pour toi. ' +
+          'Il faut le surélever (rehausseurs) ou choisir un modèle réglable en hauteur.';
+        verdict.className = 'calc__verdict calc__verdict--warn';
+      } else {
+        msg =
+          'Bonne nouvelle&nbsp;: un bureau standard (74 cm) ' +
+          (ecart === 0
+            ? 'correspond <strong>exactement</strong> à ta taille.'
+            : 'te convient, à <strong>' + Math.abs(ecart) + ' cm près</strong>.') +
+          ' Concentre-toi sur le réglage du siège et de l\'écran.';
+        verdict.className = 'calc__verdict calc__verdict--ok';
+      }
+      verdict.innerHTML = msg;
+    }
+
+    function sync(value, source) {
+      var t = parseInt(value, 10);
+      if (isNaN(t)) return;
+      t = Math.min(210, Math.max(140, t));
+      if (source !== 'range') range.value = t;
+      if (source !== 'number') number.value = t;
+      render(t);
+    }
+
+    range.addEventListener('input', function () { sync(range.value, 'range'); });
+    number.addEventListener('input', function () { sync(number.value, 'number'); });
+    number.addEventListener('blur', function () { sync(number.value, ''); });
+
+    render(parseInt(range.value, 10));
+  })();
+</script>
+
+<style>
+  .calc { padding: 2.5rem 0 3.5rem; max-width: 760px; }
+  .calc h1 { margin-top: 0.4rem; }
+  .calc h2 { margin: 2.4rem 0 0.8rem; font-size: 1.35rem; }
+  .calc__lede { font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.7; }
+
+  /* ---- Outil ---- */
+  .calc__tool { padding: 1.5rem; margin: 1.8rem 0 2rem; }
+  .calc__field { display: flex; flex-direction: column; gap: 0.7rem; }
+  .calc__field label { font-weight: 600; }
+  .calc__inputs { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .calc__inputs input[type='range'] { flex: 1; min-width: 200px; accent-color: var(--color-accent); }
+  .calc__number { display: flex; align-items: baseline; gap: 0.35rem; }
+  .calc__number input {
+    width: 5.2rem;
+    padding: 0.45rem 0.6rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+  .calc__number span { color: var(--color-text-muted); font-size: 0.9rem; }
+
+  .calc__results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.9rem;
+    margin: 1.6rem 0 0;
+  }
+  .calc__result {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.9rem 1rem;
+  }
+  .calc__result-label { margin: 0; font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.35; }
+  .calc__result-label em { font-style: normal; color: var(--color-accent); font-weight: 600; }
+  .calc__result-value {
+    margin: 0.35rem 0 0.1rem;
+    font-family: var(--font-display);
+    font-size: 1.85rem;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .calc__result-hint { margin: 0; font-size: 0.78rem; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+
+  .calc__verdict {
+    margin: 1.4rem 0 0;
+    padding: 0.9rem 1.1rem;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    line-height: 1.55;
+    border: 1px solid var(--color-border);
+  }
+  .calc__verdict--warn { background: color-mix(in srgb, var(--color-accent) 9%, transparent); border-color: color-mix(in srgb, var(--color-accent) 35%, transparent); }
+  .calc__verdict--ok { background: color-mix(in srgb, var(--color-signal) 10%, transparent); border-color: color-mix(in srgb, var(--color-signal) 35%, transparent); }
+
+  /* ---- Schéma ---- */
+  .calc__figure { margin: 2.2rem 0 0; }
+  .calc__figure svg { width: 100%; height: auto; display: block; }
+  .calc__figure figcaption { margin-top: 0.6rem; font-size: 0.87rem; color: var(--color-text-muted); }
+  .s-floor { stroke: var(--color-text-muted); stroke-width: 2; }
+  .s-solid { fill: var(--color-text-muted); }
+  .s-solid-line { stroke: var(--color-text-muted); stroke-width: 3; }
+  .s-screen { fill: none; stroke: var(--color-accent); stroke-width: 3; }
+  .s-dim line { stroke: var(--color-accent); stroke-width: 1; stroke-dasharray: 4 3; }
+  .s-dim text { fill: var(--color-accent); font-size: 13px; font-weight: 600; }
+
+  /* ---- Listes ---- */
+  .calc__checks { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.55; }
+  .calc__caveat {
+    margin: 1.3rem 0 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-border);
+    padding-left: 1rem;
+  }
+
+  /* ---- Liens ---- */
+  .calc__links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.9rem; }
+  .calc__link { padding: 1.1rem 1.2rem; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 0.3rem; }
+  .calc__link strong { color: var(--color-accent); }
+  .calc__link span { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
+
+  /* ---- FAQ ---- */
+  .calc__faq { display: flex; flex-direction: column; gap: 0.5rem; }
+  .calc__faq details { border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); padding: 0.9rem 1.1rem; }
+  .calc__faq summary { cursor: pointer; font-weight: 600; }
+  .calc__faq p { margin: 0.7rem 0 0; color: var(--color-text-muted); line-height: 1.6; }
+
+  .calc__share { margin-top: 2.2rem; font-size: 0.9rem; color: var(--color-text-muted); }
+</style>
