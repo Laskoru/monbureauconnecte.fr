@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "pins": "node scripts/generate-pins.mjs",
-    "tiktok-briefs": "node scripts/generate-tiktok-briefs.mjs"
+    "tiktok-briefs": "node scripts/generate-tiktok-briefs.mjs",
+    "pinterest-profile": "node scripts/generate-pinterest-profile.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
