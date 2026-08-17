@@ -28,6 +28,12 @@ const articles = defineCollection({
           // Ce champ ne sert que si tu veux forcer une URL précise.
           image: z.string().optional(),
           blurb: z.string().optional(), // une phrase expliquant pourquoi tu le recommandes
+
+          // Requête de repli vers une recherche Amazon si le produit devient
+
+          // indisponible. Optionnel : sinon la marque+modèle du titre est utilisée.
+
+          search: z.string().optional(),
         })
       )
       .default([]),
