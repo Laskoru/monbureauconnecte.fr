@@ -111,9 +111,21 @@ async function main() {
   fs.mkdirSync(OUT_CSV_DIR, { recursive: true });
 
   const files = fs.readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.md'));
-  const rows = [['Title', 'Media URL', 'Pinterest board', 'Description', 'Link', 'Keywords']];
+  const rows = [['Title', 'Media URL', 'Pinterest board', 'Description', 'Link', 'Publish date', 'Keywords']];
   let done = 0;
   let skipped = 0;
+
+  // Étale les épingles à 3/jour à partir de demain 9h (heure de Paris) —
+  // Pinterest favorise un rythme régulier plutôt qu'un paquet publié d'un coup.
+  const PINS_PER_DAY = 3;
+  const PUBLISH_HOUR_UTC = 8; // ~9-10h à Paris selon l'heure d'été/hiver
+  function publishDateFor(index) {
+    const dayOffset = Math.floor(index / PINS_PER_DAY) + 1;
+    const date = new Date();
+    date.setUTCDate(date.getUTCDate() + dayOffset);
+    date.setUTCHours(PUBLISH_HOUR_UTC, 0, 0, 0);
+    return date.toISOString().replace(/\.\d{3}Z$/, '');
+  }
 
   for (const file of files) {
     const slug = file.replace(/\.md$/, '');
@@ -148,7 +160,8 @@ async function main() {
       const link = `${SITE_URL}/articles/${slug}`;
       const mediaUrl = `${SITE_URL}/pins/${slug}.jpg`;
 
-      rows.push([data.title, mediaUrl, board, description, link, keywords]);
+      const publishDate = publishDateFor(done);
+      rows.push([data.title, mediaUrl, board, description, link, publishDate, keywords]);
       done++;
     } catch (err) {
       console.warn(`⚠ échec sur ${slug} : ${err.message}`);
