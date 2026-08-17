@@ -8,7 +8,8 @@ import ArticleCard from '../components/ArticleCard.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import { siteConfig } from '../siteConfig';
 import { categories, type CategorySlug } from '../categories';
-import { isAvailable, searchUrl } from '../lib/availability';
+import { isAvailable } from '../lib/availability';
+import AmazonSearchCTA from '../components/AmazonSearchCTA.astro';
 
 interface Heading { depth: number; slug: string; text: string }
 interface FaqItem { question: string; answer: string }
@@ -69,7 +70,6 @@ const comparisonColumnUnavailable = comparison?.columns.map((_, i) => i > 0 && p
 // on propose une recherche Amazon sur le sujet (toujours valide, ne meurt
 // jamais) avant de présenter LE produit vérifié en fin d'article.
 const searchTopic = keywords[0];
-const midArticleSearchUrl = searchTopic ? searchUrl(searchTopic) : null;
 
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const categoryInfo = categories.find((c) => c.slug === category);
@@ -164,28 +164,7 @@ const breadcrumbItems = [
       <slot />
     </div>
 
-    {midArticleSearchUrl && (
-      <div class="article-search-cta">
-        <span class="article-search-cta__icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
-            <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-          </svg>
-        </span>
-        <div class="article-search-cta__body">
-          <p class="article-search-cta__intro">Envie de comparer toi-même les modèles du moment ?</p>
-          <p class="article-search-cta__sub">Prix, avis et disponibilité en direct sur Amazon.</p>
-        </div>
-        <a
-          class="btn btn--primary article-search-cta__link"
-          href={midArticleSearchUrl}
-          target="_blank"
-          rel="nofollow sponsored noopener"
-        >
-          Voir « {searchTopic} » →
-        </a>
-      </div>
-    )}
+    {searchTopic && <AmazonSearchCTA topic={searchTopic} />}
 
     {comparison && comparison.rows.length > 0 && (
       <div class="article-comparison">
@@ -270,42 +249,6 @@ const breadcrumbItems = [
   }
   .article-body :global(h2) { margin-top: 2.2em; scroll-margin-top: 5rem; }
   .article-body :global(h3) { scroll-margin-top: 5rem; }
-
-  .article-search-cta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.9rem 1.1rem;
-    margin: 2.2rem 0;
-    padding: 1.15rem 1.4rem;
-    background: var(--color-accent-soft);
-    border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
-    border-radius: var(--radius-lg);
-  }
-  .article-search-cta__icon {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 999px;
-    background: var(--color-surface);
-    color: var(--color-accent);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 20%, transparent);
-  }
-  .article-search-cta__body { flex: 1 1 220px; min-width: 0; }
-  .article-search-cta__intro { margin: 0; color: var(--color-text); font-weight: 600; font-size: 0.98rem; }
-  .article-search-cta__sub { margin: 0.2rem 0 0; color: var(--color-text-muted); font-size: 0.85rem; }
-  /* Le texte du bouton dépend du mot-clé de l'article (longueur variable) :
-     il DOIT pouvoir passer à la ligne, sinon il déborde du bloc — et donc de
-     la page — sur mobile. */
-  .article-search-cta__link { flex: 0 1 auto; min-width: 0; white-space: normal; text-align: center; }
-
-  @media (max-width: 480px) {
-    .article-search-cta__icon { display: none; }
-    .article-search-cta__link { width: 100%; }
-  }
 
   .article-faq { margin-top: 3rem; }
   .article-faq__item {

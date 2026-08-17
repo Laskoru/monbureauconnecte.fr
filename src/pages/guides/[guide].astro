@@ -23,7 +23,7 @@ const articles = guide.articles.map((slug) => bySlug.get(slug)).filter((a) => a 
     <p class="guide__icon">{guide.icon}</p>
     <h1>{guide.title}</h1>
     <div class="guide__intro">
-      {guide.intro.map((p) => <p>{p}</p>)}
+      {guide.intro.map((p) => <p set:html={p} />)}
     </div>
 
     <h2 class="guide__section">Les comparatifs de ce guide</h2>

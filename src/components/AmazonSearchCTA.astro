@@ -1,0 +1,72 @@
+---
+import { searchUrl } from '../lib/availability';
+
+interface Props {
+  /** Le sujet recherché, ex. "chaise gaming" — sert de requête et s'affiche dans le bouton. */
+  topic: string;
+  intro?: string;
+  sub?: string;
+}
+
+const {
+  topic,
+  intro = 'Envie de comparer toi-même les modèles du moment ?',
+  sub = 'Prix, avis et disponibilité en direct sur Amazon.',
+} = Astro.props;
+
+const url = searchUrl(topic);
+---
+
+<div class="amazon-search-cta">
+  <span class="amazon-search-cta__icon" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+      <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  </span>
+  <div class="amazon-search-cta__body">
+    <p class="amazon-search-cta__intro">{intro}</p>
+    <p class="amazon-search-cta__sub">{sub}</p>
+  </div>
+  <a class="btn btn--primary amazon-search-cta__link" href={url} target="_blank" rel="nofollow sponsored noopener">
+    Voir « {topic} » →
+  </a>
+</div>
+
+<style>
+  .amazon-search-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.9rem 1.1rem;
+    margin: 1.75rem 0;
+    padding: 1.15rem 1.4rem;
+    background: var(--color-accent-soft);
+    border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
+    border-radius: var(--radius-lg);
+  }
+  .amazon-search-cta__icon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: var(--color-surface);
+    color: var(--color-accent);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 20%, transparent);
+  }
+  .amazon-search-cta__body { flex: 1 1 220px; min-width: 0; }
+  .amazon-search-cta__intro { margin: 0; color: var(--color-text); font-weight: 600; font-size: 0.98rem; }
+  .amazon-search-cta__sub { margin: 0.2rem 0 0; color: var(--color-text-muted); font-size: 0.85rem; }
+  /* Le texte du bouton dépend du sujet (longueur variable) : il DOIT pouvoir
+     passer à la ligne, sinon il déborde du bloc — et donc de la page — sur
+     mobile (bug réel rencontré et corrigé le 17/08/2026). */
+  .amazon-search-cta__link { flex: 0 1 auto; min-width: 0; white-space: normal; text-align: center; }
+
+  @media (max-width: 480px) {
+    .amazon-search-cta__icon { display: none; }
+    .amazon-search-cta__link { width: 100%; }
+  }
+</style>

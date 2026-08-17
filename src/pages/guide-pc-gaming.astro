@@ -1,0 +1,403 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AmazonSearchCTA from '../components/AmazonSearchCTA.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import { siteConfig } from '../siteConfig';
+import { searchUrl } from '../lib/availability';
+
+// Une recherche Amazon par composant plutôt qu'une fiche produit précise :
+// le CPU/GPU est la catégorie qui bouge le plus vite (prix, stocks, nouveaux
+// modèles chaque trimestre) — un lien de recherche bien ciblé ne meurt
+// jamais et reste pertinent bien plus longtemps qu'un ASIN figé.
+const parts = [
+  {
+    id: 'cpu',
+    icon: '🧠',
+    title: 'Le processeur (CPU)',
+    lede: "Le cœur de la machine. Pour jouer, un modèle milieu de gamme récent suffit largement — inutile de viser le haut de gamme, le budget est mieux dépensé sur la carte graphique.",
+    criteria: [
+      'Le socket : il doit correspondre à la carte mère (AM5 pour AMD récent, LGA1700 pour Intel récent). Impossible de mélanger les deux.',
+      "Le nombre de cœurs : 6 cœurs suffisent pour la quasi-totalité des jeux actuels ; au-delà, le gain se voit surtout en montage vidéo ou streaming simultané.",
+      "Le ventilateur fourni : plusieurs CPU milieu de gamme incluent un refroidisseur correct de série, ce qui évite un achat supplémentaire.",
+      "L'iGPU (puce graphique intégrée) : un vrai filet de sécurité pour afficher une image le temps de recevoir la carte graphique, ou en cas de panne GPU.",
+    ],
+    search: 'processeur gaming AMD Ryzen 5 9600X AM5',
+  },
+  {
+    id: 'carte-mere',
+    icon: '🔌',
+    title: 'La carte mère',
+    lede: "Elle détermine tout le reste : le socket du processeur, le type de RAM compatible, et le nombre de ports disponibles pour évoluer plus tard.",
+    criteria: [
+      'Le chipset : un B650 (AM5) ou B760 (LGA1700) couvre les besoins gaming sans payer les fonctions inutiles des chipsets haut de gamme (X670, Z790).',
+      "Le format : ATX pour un boîtier standard, Micro-ATX si l'encombrement compte plus que les emplacements d'extension.",
+      "Le nombre de ports M.2 : au moins deux, pour ajouter un second SSD plus tard sans tout démonter.",
+      'La connectique arrière : Wi-Fi intégré et USB-C évitent d’avoir à ajouter une carte séparée par la suite.',
+    ],
+    search: 'carte mère B650 AM5 DDR5',
+  },
+  {
+    id: 'ram',
+    icon: '💾',
+    title: 'La mémoire (RAM)',
+    lede: "32 Go est devenu le standard confortable pour jouer tout en ayant Discord, un navigateur et parfois un stream ouverts en même temps.",
+    criteria: [
+      'Le type : DDR5 sur toute plateforme récente (AM5 ou LGA1700 dernière génération) — la DDR4 ne se justifie que sur une plateforme plus ancienne.',
+      'La quantité : 32 Go (2x16 Go) plutôt que 16 Go, pour ne pas avoir à y revenir dans un an.',
+      'Le kit à 2 barrettes plutôt qu’une seule de 32 Go : la carte mère fonctionne en double canal, ce qui améliore réellement les performances.',
+      "La fréquence et le profil XMP/EXPO : vérifie que la vitesse annoncée est bien supportée par la carte mère choisie.",
+    ],
+    search: 'RAM DDR5 32 Go 5600 MHz',
+  },
+  {
+    id: 'gpu',
+    icon: '🎮',
+    title: 'La carte graphique (GPU)',
+    lede: "C'est elle qui fait le plus varier le budget — et c'est celle qui compte le plus pour les FPS. Mieux vaut économiser ailleurs que sur ce poste.",
+    criteria: [
+      'La définition visée : une carte milieu de gamme couvre bien le 1080p et le 1440p ; le 4K demande une gamme au-dessus.',
+      'La mémoire vidéo (VRAM) : 8 Go est le minimum confortable aujourd’hui pour ne pas se retrouver limité dans deux ou trois ans.',
+      "L'encombrement : mesure l'espace disponible dans le boîtier avant d'acheter — certains modèles dépassent 30 cm de long.",
+      "L'alimentation nécessaire : chaque fiche produit indique la puissance minimale recommandée ; vérifie que ton alimentation suit.",
+    ],
+    search: 'carte graphique RTX 5060 8 Go',
+  },
+  {
+    id: 'stockage',
+    icon: '⚡',
+    title: 'Le stockage (SSD)',
+    lede: "Un SSD NVMe s'installe directement sur la carte mère, sans câble, et divise par plusieurs les temps de chargement par rapport à un disque dur classique.",
+    criteria: [
+      "La capacité : 1 To est le bon point de départ — un jeu récent peut à lui seul dépasser 100 Go.",
+      "L'interface : NVMe PCIe 4.0 offre déjà des débits très largement suffisants pour jouer ; le PCIe 5.0 profite surtout aux gros transferts de fichiers.",
+      "Le format M.2 2280 : le standard quasi universel, vérifie juste qu'il correspond aux ports de la carte mère choisie.",
+      'Un dissipateur thermique intégré évite la chauffe sur de longues sessions, surtout dans un boîtier compact.',
+    ],
+    search: 'SSD NVMe 1 To PCIe 4.0',
+  },
+  {
+    id: 'alimentation',
+    icon: '🔋',
+    title: "L'alimentation (PSU)",
+    lede: "La pièce qu'on a tendance à sous-estimer, alors qu'elle conditionne la stabilité de toute la machine — un mauvais choix ici peut endommager les autres composants.",
+    criteria: [
+      "La puissance : additionne les besoins du CPU et du GPU, puis prends une marge confortable plutôt que le strict minimum.",
+      'La certification 80+ (Bronze, Gold, Platine) : indique le rendement énergétique — viser au moins Gold pour un bon compromis coût/efficacité.',
+      'Le modulaire : les câbles non utilisés se débranchent entièrement, ce qui facilite le montage et améliore la circulation d’air.',
+      "La marque et la garantie : une alimentation défaillante peut endommager tout le reste — ce n'est pas le poste où économiser au maximum.",
+    ],
+    search: 'alimentation PC 750W 80+ Gold modulaire',
+  },
+  {
+    id: 'boitier',
+    icon: '🖥️',
+    title: 'Le boîtier',
+    lede: "Le plus visible, mais pas le moins important : un bon flux d'air garde tous les composants à une température plus basse, donc plus silencieux et plus durables.",
+    criteria: [
+      "La compatibilité : vérifie qu'il accepte le format de la carte mère (ATX) et la longueur de la carte graphique choisie.",
+      "Le flux d'air : un boîtier avec de vraies grilles d'aération (« airflow ») refroidit mieux qu'un modèle tout en verre trempé, même si ce dernier est plus spectaculaire.",
+      'Le nombre de ventilateurs inclus : en avoir 2 ou 3 dès l’achat évite d’en racheter immédiatement.',
+      "La gestion des câbles : un espace dédié à l'arrière facilite grandement le montage et le nettoyage futur.",
+    ],
+    search: 'boîtier PC ATX airflow',
+  },
+];
+
+// 3 configurations complètes selon le budget. Chaque palier reste cohérent
+// en interne (même plateforme CPU/carte mère/RAM d'un bout à l'autre) ; seule
+// la génération/gamme change d'un palier à l'autre. Toujours des recherches,
+// jamais un ASIN précis — la logique reste la même que le reste du site.
+const tiers = [
+  {
+    id: 'budget-800',
+    label: '≈ 800 €',
+    tagline: '1080p correct, pour débuter ou remplacer une machine vieillissante',
+    parts: [
+      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 5 5600 AM4' },
+      { icon: '🔌', label: 'Carte mère', search: 'carte mère B550 AM4 DDR4' },
+      { icon: '💾', label: 'RAM', search: 'RAM DDR4 16 Go 3200 MHz' },
+      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 4060 8 Go' },
+      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 500 Go PCIe 3.0' },
+      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 550W 80+ Bronze' },
+      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX pas cher' },
+    ],
+  },
+  {
+    id: 'budget-1000',
+    label: '≈ 1000-1100 €',
+    tagline: "L'entrée dans le neuf : plateforme actuelle (AM5/DDR5), encore évolutive dans quelques années",
+    parts: [
+      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 5 8400F AM5' },
+      { icon: '🔌', label: 'Carte mère', search: 'carte mère A620 AM5 DDR5' },
+      { icon: '💾', label: 'RAM', search: 'RAM DDR5 16 Go 5200 MHz' },
+      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 4060 8 Go' },
+      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 1 To PCIe 4.0' },
+      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 650W 80+ Bronze' },
+      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX airflow' },
+    ],
+  },
+  {
+    id: 'budget-1500',
+    label: '≈ 1500 €',
+    tagline: 'Le confort 1440p, avec de la marge pour les prochaines années',
+    parts: [
+      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 5 9600X AM5' },
+      { icon: '🔌', label: 'Carte mère', search: 'carte mère B650 AM5 DDR5' },
+      { icon: '💾', label: 'RAM', search: 'RAM DDR5 32 Go 5600 MHz' },
+      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 5070 12 Go' },
+      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 1 To PCIe 4.0' },
+      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 750W 80+ Gold modulaire' },
+      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX airflow' },
+    ],
+  },
+  {
+    id: 'budget-2500',
+    label: '≈ 2200-2500 €',
+    tagline: '1440p très fluide voire 4K, sans compromis sur les prochaines années',
+    parts: [
+      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 7 9800X3D AM5' },
+      { icon: '🔌', label: 'Carte mère', search: 'carte mère X870 AM5 DDR5' },
+      { icon: '💾', label: 'RAM', search: 'RAM DDR5 32 Go 6000 MHz' },
+      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 5080 16 Go' },
+      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 2 To PCIe 4.0' },
+      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 1000W 80+ Gold ATX 3.0' },
+      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX premium airflow' },
+    ],
+  },
+];
+
+const totalLow = 1150;
+const totalHigh = 1450;
+
+const faq = [
+  {
+    question: 'Faut-il forcément assembler le PC soi-même ?',
+    answer:
+      "Non, mais c'est plus simple qu'il n'y paraît : compter environ deux à trois heures pour un premier montage, avec des tutoriels vidéo pour chaque étape. Si l'idée ne tente vraiment pas, la plupart des composants ci-dessus se retrouvent aussi dans des configurations pré-montées équivalentes.",
+  },
+  {
+    question: 'Ces pièces sont-elles compatibles entre elles ?',
+    answer:
+      "Oui, chaque configuration proposée reste cohérente en interne : dans un même palier, le processeur et la carte mère partagent le même socket, la RAM est au format attendu par la carte mère (DDR4 ou DDR5 selon la plateforme), et l'alimentation dépasse largement la consommation du processeur et de la carte graphique réunis. En revanche, ne mélange pas des pièces de paliers différents sans vérifier : un processeur du palier « 800 € » (socket AM4) n'est par exemple pas compatible avec une carte mère du palier « 1500 € » (socket AM5).",
+  },
+  {
+    question: 'Pourquoi le palier « 800 € » utilise une plateforme différente (AM4) ?',
+    answer:
+      "Parce que c'est ce qui reste le plus rentable à ce budget : les cartes mères et la mémoire DDR4 coûtent nettement moins cher que leurs équivalents DDR5, ce qui laisse plus de budget pour la carte graphique — le poste qui compte le plus pour les performances en jeu. À partir d'environ 1000-1100 €, la plateforme actuelle (AM5, DDR5) devient plus pertinente, notamment pour la marge d'évolution qu'elle offre.",
+  },
+  {
+    question: 'Faut-il un système de refroidissement supplémentaire ?',
+    answer:
+      "Pas pour les paliers « 800 € », « 1000-1100 € » et « 1500 € » : le ventilateur fourni avec le processeur suffit largement à un usage gaming classique. Pour le palier « 2200-2500 € », un refroidissement à air haut de gamme ou un watercooling AIO 240-360 mm est recommandé, le processeur et la carte graphique dégageant nettement plus de chaleur.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+---
+
+<BaseLayout
+  title="Monter un PC gaming : le guide pièce par pièce"
+  description="Comment choisir chaque composant d'un PC gaming milieu de gamme : processeur, carte mère, RAM, carte graphique, stockage, alimentation et boîtier, avec une configuration cohérente et vérifiée."
+  jsonLd={faqSchema}
+>
+  <section class="container pcguide">
+    <p class="eyebrow">Guide d'achat</p>
+    <h1>Monter un PC gaming : le guide pièce par pièce</h1>
+    <p class="pcguide__lede">
+      Choisir chaque composant d'un PC gaming peut vite devenir intimidant : sockets, chipsets,
+      compatibilités... Ce guide reprend chaque pièce dans l'ordre, avec les critères qui comptent
+      vraiment, et propose <strong>quatre configurations cohérentes</strong> selon le budget visé,
+      d'environ 800 € à plus de 2 200 €.
+    </p>
+    <p class="pcguide__note">
+      Cette page couvre uniquement la tour (les composants internes). Les périphériques — écran,
+      clavier, souris, casque — sont traités dans notre
+      <a href="/guides/setup-gaming">guide setup gaming</a> séparément.
+    </p>
+
+    <AffiliateDisclosure />
+
+    <nav class="pcguide__toc" aria-label="Sommaire des composants">
+      {parts.map((p) => (
+        <a href={`#${p.id}`}>{p.icon} {p.title}</a>
+      ))}
+    </nav>
+
+    <h2>3 configurations selon ton budget</h2>
+    <p class="pcguide__tiers-lede">
+      Les critères détaillés plus bas expliquent quoi vérifier pour chaque pièce, quel que soit le
+      budget. Si tu veux aller plus vite, voici directement de quoi chercher pour trois niveaux de
+      prix — les trois configurations restent cohérentes en interne (même plateforme du CPU au
+      boîtier).
+    </p>
+    <div class="pcguide__tiers">
+      {tiers.map((t) => (
+        <div class="pcguide__tier card">
+          <p class="pcguide__tier-price">{t.label}</p>
+          <p class="pcguide__tier-tagline">{t.tagline}</p>
+          <ul class="pcguide__tier-list">
+            {t.parts.map((c) => (
+              <li>
+                <a href={searchUrl(c.search)} target="_blank" rel="nofollow sponsored noopener">
+                  <span class="pcguide__tier-item-label">{c.icon} {c.label}</span>
+                  <span class="pcguide__tier-item-arrow">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <h2>Le détail, pièce par pièce</h2>
+    <p class="pcguide__lede">
+      Ce qui compte pour bien choisir chaque composant, indépendamment du budget visé.
+    </p>
+
+    {parts.map((p) => (
+      <div class="pcguide__part" id={p.id}>
+        <h2>{p.icon} {p.title}</h2>
+        <p class="pcguide__part-lede">{p.lede}</p>
+        <ul class="pcguide__criteria">
+          {p.criteria.map((c) => <li>{c}</li>)}
+        </ul>
+        <AmazonSearchCTA topic={p.search} />
+      </div>
+    ))}
+
+    <div class="pcguide__summary card">
+      <h2>Récapitulatif : la check-list des 7 pièces</h2>
+      <p class="pcguide__summary-sub">
+        Pour l'exemple « confort 1440p » détaillé ci-dessus (budget ≈ {totalLow}-{totalHigh} €) —
+        les trois autres paliers suivent la même logique, voir plus haut.
+      </p>
+      <ul class="pcguide__summary-list">
+        {parts.map((p) => (
+          <li><a href={`#${p.id}`}><span>{p.icon} {p.title}</span><span>Voir le critère →</span></a></li>
+        ))}
+      </ul>
+    </div>
+
+    <h2>Questions fréquentes</h2>
+    <div class="pcguide__faq">
+      {faq.map((f) => (
+        <details>
+          <summary>{f.question}</summary>
+          <p>{f.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pcguide { padding: 2.5rem 0 3.5rem; max-width: 780px; }
+  .pcguide h1 { margin-top: 0.4rem; }
+  .pcguide__lede { font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.7; }
+  .pcguide__note {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    border-left: 3px solid var(--color-border);
+    padding-left: 1rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+
+  .pcguide__toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0 2.5rem;
+    padding: 1rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  }
+  .pcguide__toc a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    padding: 0.35rem 0.7rem;
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    white-space: nowrap;
+  }
+  .pcguide__toc a:hover { color: var(--color-accent); }
+
+  .pcguide__tiers-lede { color: var(--color-text-muted); line-height: 1.6; margin: 0.3rem 0 1.5rem; }
+  .pcguide__tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .pcguide__tier { padding: 1.3rem 1.4rem; display: flex; flex-direction: column; }
+  .pcguide__tier-price {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+  .pcguide__tier-tagline { margin: 0.3rem 0 1rem; color: var(--color-text-muted); font-size: 0.86rem; line-height: 1.5; }
+  .pcguide__tier-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .pcguide__tier-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: inherit;
+    text-decoration: none;
+    font-size: 0.88rem;
+  }
+  .pcguide__tier-list li:last-child a { border-bottom: none; }
+  .pcguide__tier-list a:hover .pcguide__tier-item-label { color: var(--color-accent); }
+  .pcguide__tier-item-arrow { color: var(--color-text-muted); flex-shrink: 0; }
+
+  .pcguide__part { margin: 2.8rem 0; scroll-margin-top: 5rem; }
+  .pcguide__part h2 { margin: 0 0 0.5rem; }
+  .pcguide__part-lede { color: var(--color-text-muted); line-height: 1.6; margin: 0 0 1rem; }
+  .pcguide__criteria {
+    margin: 0 0 0.5rem;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    line-height: 1.55;
+  }
+
+  .pcguide__summary { padding: 1.5rem; margin: 3rem 0; }
+  .pcguide__summary h2 { margin: 0 0 0.4rem; font-size: 1.2rem; }
+  .pcguide__summary-sub { margin: 0 0 1rem; color: var(--color-text-muted); font-size: 0.86rem; }
+  .pcguide__summary-list { list-style: none; margin: 0 0 1.2rem; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .pcguide__summary-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.92rem;
+    padding: 0.55rem 0.2rem;
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+    color: inherit;
+    text-decoration: none;
+  }
+  .pcguide__summary-list a:hover span:last-child { text-decoration: underline; }
+  .pcguide__summary-list a span:first-child { font-weight: 600; flex-shrink: 0; }
+  .pcguide__summary-list a span:last-child { color: var(--color-accent); font-size: 0.85rem; white-space: nowrap; }
+
+  .pcguide__faq { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
+  .pcguide__faq details { border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-surface); padding: 0.9rem 1.1rem; }
+  .pcguide__faq summary { cursor: pointer; font-weight: 600; }
+  .pcguide__faq p { margin: 0.7rem 0 0; color: var(--color-text-muted); line-height: 1.6; }
+</style>

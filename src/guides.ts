@@ -45,6 +45,7 @@ export const guides: Guide[] = [
     intro: [
       "Un bon setup gaming, ce n'est pas qu'une question de puissance : c'est surtout du confort sur la durée. Les longues sessions révèlent vite les mauvais choix — une chaise qui fait mal au dos, des câbles qui s'emmêlent, un écran mal placé qui force la nuque.",
       "On a réuni ici les comparatifs qui comptent pour un poste où l'on passe des heures : de quoi bien s'asseoir, taper et viser, positionner ses écrans, et garder un bureau net. L'objectif : un espace où l'on se sent bien manette ou souris en main, pas seulement une vitrine.",
+      'Ce guide couvre les périphériques autour du PC. Pour la tour elle-même — processeur, carte graphique, RAM et le reste — direction notre <a href="/guide-pc-gaming">guide PC gaming pièce par pièce</a>, avec des configurations complètes selon le budget.',
     ],
     articles: [
       'meilleures-chaises-gaming',
