@@ -25,6 +25,12 @@ const guideCounts = guides.map((g) => ({
     </p>
 
     <div class="guides-index__grid">
+      <article class="guides-index__card card card--hover">
+        <span class="guides-index__icon">🖥️</span>
+        <h2><a class="stretched-link" href="/guide-pc-gaming">Guide PC gaming pièce par pièce</a></h2>
+        <p class="guides-index__desc">4 configurations complètes selon ton budget, du premier PC au haut de gamme.</p>
+        <p class="guides-index__count">Outil interactif</p>
+      </article>
       {guideCounts.map((guide) => (
         <article class="guides-index__card card card--hover">
           <span class="guides-index__icon">{guide.icon}</span>

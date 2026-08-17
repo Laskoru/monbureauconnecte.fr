@@ -64,6 +64,33 @@ const stats = [
 
   <section class="section">
     <div class="wide">
+      <p class="section__eyebrow">Outils gratuits</p>
+      <h2 class="section__title">Va plus vite avec nos guides interactifs</h2>
+      <div class="tools__grid">
+        <a class="tools__item card card--hover" href="/guide-pc-gaming">
+          <span class="tools__icon">🖥️</span>
+          <span class="tools__label">Guide PC gaming pièce par pièce</span>
+          <span class="tools__desc">4 configurations complètes selon ton budget, du premier PC au haut de gamme.</span>
+          <span class="tools__cta">Découvrir →</span>
+        </a>
+        <a class="tools__item card card--hover" href="/calculateur-hauteur-bureau">
+          <span class="tools__icon">📐</span>
+          <span class="tools__label">Calculateur de hauteur de bureau</span>
+          <span class="tools__desc">Les bonnes hauteurs de bureau, siège et écran calculées selon ta taille.</span>
+          <span class="tools__cta">Calculer →</span>
+        </a>
+        <a class="tools__item card card--hover" href="/checklist-bureau-ergonomique">
+          <span class="tools__icon">✅</span>
+          <span class="tools__label">Checklist ergonomie</span>
+          <span class="tools__desc">Le tour complet pour vérifier que ton poste est bien réglé.</span>
+          <span class="tools__cta">Vérifier →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wide">
       <div class="section__head">
         <div>
           <p class="section__eyebrow">Derniers articles</p>
@@ -229,6 +256,35 @@ const stats = [
     white-space: nowrap;
   }
   .section__link:hover { text-decoration: underline; }
+
+  /* ---- Outils gratuits ---- */
+  .tools__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+  .tools__item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.6rem 1.5rem;
+  }
+  .tools__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    background: var(--color-accent-soft);
+    margin-bottom: 1rem;
+  }
+  .tools__label { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+  .tools__desc { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0.3rem 0 1rem; flex: 1; }
+  .tools__cta { font-size: 0.82rem; font-weight: 600; color: var(--color-accent); }
 
   /* ---- Catégories ---- */
   .categories__grid {
