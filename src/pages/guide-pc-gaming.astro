@@ -16,7 +16,7 @@ const tiers = [
   {
     id: 'budget-800',
     badge: '💰 Le meilleur prix',
-    price: '≈ 800 €',
+    price: '≈ 950 €',
     specLine: 'Ryzen 5 5600 (AM4) + RTX 4060 8 Go + 16 Go DDR4 + SSD 500 Go',
     reasoning:
       "La plateforme AM4, plus ancienne, coûte nettement moins cher que l'AM5/DDR5 actuel — de quoi mettre l'essentiel du budget sur la carte graphique, le poste qui compte vraiment pour les FPS. De quoi jouer confortablement en 1080p sur la plupart des jeux récents.",
@@ -33,13 +33,13 @@ const tiers = [
   {
     id: 'budget-1000',
     badge: '⚖️ Le bon compromis',
-    price: '≈ 1000-1100 €',
+    price: '≈ 1250 €',
     specLine: 'Ryzen 5 8400F (AM5) + RTX 4060 8 Go + 16 Go DDR5 + SSD 1 To',
     reasoning:
       "Le premier palier sur la plateforme actuelle (AM5, DDR5) : un CPU accessible et une carte mère d'entrée de gamme suffisent, ce qui laisse le budget se concentrer sur la même carte graphique que le palier précédent. L'avantage : une vraie marge pour upgrader le processeur dans quelques années sans tout changer.",
     parts: [
       { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 8400F', search: 'AMD Ryzen 5 8400F AM5' },
-      { icon: '🔌', label: 'Carte mère', name: 'A620 (AM5, DDR5)', search: 'carte mère A620 AM5 DDR5' },
+      { icon: '🔌', label: 'Carte mère', name: 'A620 (AM5, DDR5, Micro-ATX)', search: 'carte mère A620 AM5 DDR5 Micro-ATX' },
       { icon: '💾', label: 'RAM', name: '16 Go DDR5 5200 MHz', search: 'RAM DDR5 16 Go 5200 MHz' },
       { icon: '🎮', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
       { icon: '⚡', label: 'SSD', name: '1 To NVMe PCIe 4.0', search: 'SSD NVMe 1 To PCIe 4.0' },
@@ -50,17 +50,17 @@ const tiers = [
   {
     id: 'budget-1500',
     badge: '🎯 Notre recommandation',
-    price: '≈ 1500 €',
-    specLine: 'Ryzen 5 9600X (AM5) + RTX 5070 12 Go + 32 Go DDR5 + SSD 1 To',
+    price: '≈ 2000 €',
+    specLine: 'Ryzen 5 9600X (AM5) + RTX 5070 12 Go + 32 Go DDR5 + SSD 2 To',
     reasoning:
-      "Le point d'équilibre : processeur et carte mère de génération courante, 32 Go de RAM pour ne plus jamais y repenser, et une carte graphique qui passe confortablement en 1440p. C'est la configuration qu'on choisirait pour un usage gaming sérieux, sans se ruiner.",
+      "Le point d'équilibre : processeur et carte mère de génération courante, 32 Go de RAM pour ne plus jamais y repenser, une carte graphique qui passe confortablement en 1440p, et 2 To de stockage pour ne pas jongler avec les désinstallations. C'est la configuration qu'on choisirait pour un usage gaming sérieux, sans se ruiner.",
     highlight: true,
     parts: [
       { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 9600X', search: 'AMD Ryzen 5 9600X AM5' },
       { icon: '🔌', label: 'Carte mère', name: 'B650 (AM5, DDR5)', search: 'carte mère B650 AM5 DDR5' },
       { icon: '💾', label: 'RAM', name: '32 Go DDR5 5600 MHz', search: 'RAM DDR5 32 Go 5600 MHz' },
       { icon: '🎮', label: 'GPU', name: 'RTX 5070 12 Go', search: 'carte graphique RTX 5070 12 Go' },
-      { icon: '⚡', label: 'SSD', name: '1 To NVMe PCIe 4.0', search: 'SSD NVMe 1 To PCIe 4.0' },
+      { icon: '⚡', label: 'SSD', name: '2 To NVMe PCIe 4.0', search: 'SSD NVMe 2 To PCIe 4.0' },
       { icon: '🔋', label: 'Alimentation', name: '750 W 80+ Gold, modulaire', search: 'alimentation PC 750W 80+ Gold modulaire' },
       { icon: '🖥️', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
     ],
@@ -68,7 +68,7 @@ const tiers = [
   {
     id: 'budget-2500',
     badge: '🚀 Sans compromis',
-    price: '≈ 2200-2500 €',
+    price: '≈ 3200 €',
     specLine: 'Ryzen 7 9800X3D (AM5) + RTX 5080 16 Go + 32 Go DDR5 rapide + SSD 2 To',
     reasoning:
       "Le 9800X3D reste le processeur le plus performant du marché en gaming pur grâce à sa mémoire cache 3D, et la RTX 5080 pousse confortablement jusqu'en 4K. Une config pensée pour ne pas devoir y retoucher avant plusieurs années, quel que soit le jeu.",
@@ -175,17 +175,17 @@ const faq = [
   {
     question: 'Ces pièces sont-elles compatibles entre elles ?',
     answer:
-      "Oui, chaque palier proposé reste cohérent en interne : le processeur et la carte mère partagent le même socket, la RAM est au format attendu par la carte mère (DDR4 ou DDR5 selon la plateforme), et l'alimentation dépasse largement la consommation du processeur et de la carte graphique réunis. En revanche, ne mélange pas des pièces de paliers différents sans vérifier : un processeur du palier « 800 € » (socket AM4) n'est par exemple pas compatible avec une carte mère du palier « 1500 € » (socket AM5).",
+      "Oui, chaque palier proposé reste cohérent en interne : le processeur et la carte mère partagent le même socket, la RAM est au format attendu par la carte mère (DDR4 ou DDR5 selon la plateforme), et l'alimentation dépasse largement la consommation du processeur et de la carte graphique réunis. En revanche, ne mélange pas des pièces de paliers différents sans vérifier : un processeur du palier « 950 € » (socket AM4) n'est par exemple pas compatible avec une carte mère du palier « 2000 € » (socket AM5).",
   },
   {
-    question: 'Pourquoi le palier « 800 € » utilise une plateforme différente (AM4) ?',
+    question: 'Pourquoi le palier « 950 € » utilise une plateforme différente (AM4) ?',
     answer:
-      "Parce que c'est ce qui reste le plus rentable à ce budget : les cartes mères et la mémoire DDR4 coûtent nettement moins cher que leurs équivalents DDR5, ce qui laisse plus de budget pour la carte graphique — le poste qui compte le plus pour les performances en jeu. À partir d'environ 1000-1100 €, la plateforme actuelle (AM5, DDR5) devient plus pertinente, notamment pour la marge d'évolution qu'elle offre.",
+      "Parce que c'est ce qui reste le plus rentable à ce budget : les cartes mères et la mémoire DDR4 coûtent nettement moins cher que leurs équivalents DDR5, ce qui laisse plus de budget pour la carte graphique — le poste qui compte le plus pour les performances en jeu. À partir d'environ 1250 €, la plateforme actuelle (AM5, DDR5) devient plus pertinente, notamment pour la marge d'évolution qu'elle offre.",
   },
   {
     question: 'Faut-il un système de refroidissement supplémentaire ?',
     answer:
-      "Pas pour les paliers « 800 € », « 1000-1100 € » et « 1500 € » : le ventilateur fourni avec le processeur suffit largement à un usage gaming classique. Pour le palier « 2200-2500 € », un refroidissement à air haut de gamme ou un watercooling AIO 240-360 mm est recommandé, le processeur et la carte graphique dégageant nettement plus de chaleur.",
+      "Pas pour les paliers « 950 € », « 1250 € » et « 2000 € » : le ventilateur fourni avec le processeur suffit largement à un usage gaming classique. Pour le palier « 3200 € », un refroidissement à air haut de gamme ou un watercooling AIO 240-360 mm est recommandé, le processeur et la carte graphique dégageant nettement plus de chaleur.",
   },
 ];
 
@@ -202,14 +202,14 @@ const faqSchema = {
 
 <BaseLayout
   title="Monter un PC gaming : le guide pièce par pièce"
-  description="4 configurations PC gaming complètes selon ton budget (800 à 2500 €), avec les critères qui comptent pour bien choisir chaque composant."
+  description="4 configurations PC gaming complètes selon ton budget (950 à 3200 €), avec les critères qui comptent pour bien choisir chaque composant."
   jsonLd={faqSchema}
 >
   <section class="container pcguide">
     <p class="eyebrow">Guide d'achat</p>
     <h1>Monter un PC gaming : le guide pièce par pièce</h1>
     <p class="pcguide__lede">
-      Quatre configurations cohérentes selon ton budget, d'environ 800 € à plus de 2 200 € — choisis
+      Quatre configurations cohérentes selon ton budget, d'environ 950 € à plus de 3 200 € — choisis
       ton palier, puis suis les liens pour chaque pièce. Les critères détaillés plus bas expliquent
       le « pourquoi » si tu veux creuser.
     </p>
@@ -217,6 +217,12 @@ const faqSchema = {
       Cette page couvre uniquement la tour (les composants internes). Les périphériques — écran,
       clavier, souris, casque — sont traités dans notre
       <a href="/guides/setup-gaming">guide setup gaming</a> séparément.
+    </p>
+    <p class="pcguide__note">
+      <strong>À propos des prix</strong> : la RAM et les SSD traversent une pénurie mondiale de
+      mémoire depuis fin 2025, qui a fait grimper leurs tarifs de façon inhabituelle. Les montants
+      ci-dessous reflètent le marché actuel et peuvent encore bouger dans les mois qui viennent —
+      vérifie toujours le prix affiché sur la fiche produit avant d'acheter.
     </p>
 
     <AffiliateDisclosure />
