@@ -21,13 +21,13 @@ const tiers = [
     reasoning:
       "La plateforme AM4, plus ancienne, coûte nettement moins cher que l'AM5/DDR5 actuel — de quoi mettre l'essentiel du budget sur la carte graphique, le poste qui compte vraiment pour les FPS. De quoi jouer confortablement en 1080p sur la plupart des jeux récents.",
     parts: [
-      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 5 5600 AM4' },
-      { icon: '🔌', label: 'Carte mère', search: 'carte mère B550 AM4 DDR4' },
-      { icon: '💾', label: 'RAM', search: 'RAM DDR4 16 Go 3200 MHz' },
-      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 4060 8 Go' },
-      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 500 Go PCIe 3.0' },
-      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 550W 80+ Bronze' },
-      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX pas cher' },
+      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 5600', search: 'AMD Ryzen 5 5600 AM4' },
+      { icon: '🔌', label: 'Carte mère', name: 'B550 (AM4, DDR4)', search: 'carte mère B550 AM4 DDR4' },
+      { icon: '💾', label: 'RAM', name: '16 Go DDR4 3200 MHz', search: 'RAM DDR4 16 Go 3200 MHz' },
+      { icon: '🎮', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
+      { icon: '⚡', label: 'SSD', name: '500 Go NVMe PCIe 3.0', search: 'SSD NVMe 500 Go PCIe 3.0' },
+      { icon: '🔋', label: 'Alimentation', name: '550 W 80+ Bronze', search: 'alimentation PC 550W 80+ Bronze' },
+      { icon: '🖥️', label: 'Boîtier', name: 'ATX, entrée de gamme', search: 'boîtier PC ATX pas cher' },
     ],
   },
   {
@@ -38,13 +38,13 @@ const tiers = [
     reasoning:
       "Le premier palier sur la plateforme actuelle (AM5, DDR5) : un CPU accessible et une carte mère d'entrée de gamme suffisent, ce qui laisse le budget se concentrer sur la même carte graphique que le palier précédent. L'avantage : une vraie marge pour upgrader le processeur dans quelques années sans tout changer.",
     parts: [
-      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 5 8400F AM5' },
-      { icon: '🔌', label: 'Carte mère', search: 'carte mère A620 AM5 DDR5' },
-      { icon: '💾', label: 'RAM', search: 'RAM DDR5 16 Go 5200 MHz' },
-      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 4060 8 Go' },
-      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 1 To PCIe 4.0' },
-      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 650W 80+ Bronze' },
-      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX airflow' },
+      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 8400F', search: 'AMD Ryzen 5 8400F AM5' },
+      { icon: '🔌', label: 'Carte mère', name: 'A620 (AM5, DDR5)', search: 'carte mère A620 AM5 DDR5' },
+      { icon: '💾', label: 'RAM', name: '16 Go DDR5 5200 MHz', search: 'RAM DDR5 16 Go 5200 MHz' },
+      { icon: '🎮', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
+      { icon: '⚡', label: 'SSD', name: '1 To NVMe PCIe 4.0', search: 'SSD NVMe 1 To PCIe 4.0' },
+      { icon: '🔋', label: 'Alimentation', name: '650 W 80+ Bronze', search: 'alimentation PC 650W 80+ Bronze' },
+      { icon: '🖥️', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
     ],
   },
   {
@@ -56,13 +56,13 @@ const tiers = [
       "Le point d'équilibre : processeur et carte mère de génération courante, 32 Go de RAM pour ne plus jamais y repenser, et une carte graphique qui passe confortablement en 1440p. C'est la configuration qu'on choisirait pour un usage gaming sérieux, sans se ruiner.",
     highlight: true,
     parts: [
-      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 5 9600X AM5' },
-      { icon: '🔌', label: 'Carte mère', search: 'carte mère B650 AM5 DDR5' },
-      { icon: '💾', label: 'RAM', search: 'RAM DDR5 32 Go 5600 MHz' },
-      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 5070 12 Go' },
-      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 1 To PCIe 4.0' },
-      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 750W 80+ Gold modulaire' },
-      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX airflow' },
+      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 9600X', search: 'AMD Ryzen 5 9600X AM5' },
+      { icon: '🔌', label: 'Carte mère', name: 'B650 (AM5, DDR5)', search: 'carte mère B650 AM5 DDR5' },
+      { icon: '💾', label: 'RAM', name: '32 Go DDR5 5600 MHz', search: 'RAM DDR5 32 Go 5600 MHz' },
+      { icon: '🎮', label: 'GPU', name: 'RTX 5070 12 Go', search: 'carte graphique RTX 5070 12 Go' },
+      { icon: '⚡', label: 'SSD', name: '1 To NVMe PCIe 4.0', search: 'SSD NVMe 1 To PCIe 4.0' },
+      { icon: '🔋', label: 'Alimentation', name: '750 W 80+ Gold, modulaire', search: 'alimentation PC 750W 80+ Gold modulaire' },
+      { icon: '🖥️', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
     ],
   },
   {
@@ -73,13 +73,13 @@ const tiers = [
     reasoning:
       "Le 9800X3D reste le processeur le plus performant du marché en gaming pur grâce à sa mémoire cache 3D, et la RTX 5080 pousse confortablement jusqu'en 4K. Une config pensée pour ne pas devoir y retoucher avant plusieurs années, quel que soit le jeu.",
     parts: [
-      { icon: '🧠', label: 'CPU', search: 'AMD Ryzen 7 9800X3D AM5' },
-      { icon: '🔌', label: 'Carte mère', search: 'carte mère X870 AM5 DDR5' },
-      { icon: '💾', label: 'RAM', search: 'RAM DDR5 32 Go 6000 MHz' },
-      { icon: '🎮', label: 'GPU', search: 'carte graphique RTX 5080 16 Go' },
-      { icon: '⚡', label: 'SSD', search: 'SSD NVMe 2 To PCIe 4.0' },
-      { icon: '🔋', label: 'Alimentation', search: 'alimentation PC 1000W 80+ Gold ATX 3.0' },
-      { icon: '🖥️', label: 'Boîtier', search: 'boîtier PC ATX premium airflow' },
+      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 7 9800X3D', search: 'AMD Ryzen 7 9800X3D AM5' },
+      { icon: '🔌', label: 'Carte mère', name: 'X870 (AM5, DDR5)', search: 'carte mère X870 AM5 DDR5' },
+      { icon: '💾', label: 'RAM', name: '32 Go DDR5 6000 MHz', search: 'RAM DDR5 32 Go 6000 MHz' },
+      { icon: '🎮', label: 'GPU', name: 'RTX 5080 16 Go', search: 'carte graphique RTX 5080 16 Go' },
+      { icon: '⚡', label: 'SSD', name: '2 To NVMe PCIe 4.0', search: 'SSD NVMe 2 To PCIe 4.0' },
+      { icon: '🔋', label: 'Alimentation', name: '1000 W 80+ Gold, ATX 3.0', search: 'alimentation PC 1000W 80+ Gold ATX 3.0' },
+      { icon: '🖥️', label: 'Boîtier', name: 'ATX premium airflow', search: 'boîtier PC ATX premium airflow' },
     ],
   },
 ];
@@ -233,8 +233,11 @@ const faqSchema = {
             {t.parts.map((c) => (
               <li>
                 <a href={searchUrl(c.search)} target="_blank" rel="nofollow sponsored noopener">
-                  <span class="pcguide__tier-item-label">{c.icon} {c.label}</span>
-                  <span class="pcguide__tier-item-arrow">→</span>
+                  <span class="pcguide__tier-item-top">
+                    <span class="pcguide__tier-item-label">{c.icon} {c.label}</span>
+                    <span class="pcguide__tier-item-arrow">→</span>
+                  </span>
+                  <span class="pcguide__tier-item-name">{c.name}</span>
                 </a>
               </li>
             ))}
@@ -326,17 +329,23 @@ const faqSchema = {
   }
   .pcguide__tier-reasoning { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0 0 1.1rem; flex: 1; }
   .pcguide__tier-list { list-style: none; margin: 0; padding: 0.9rem 0 0; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; }
+  .pcguide__tier-list li + li { border-top: 1px dashed var(--color-border); }
   .pcguide__tier-list a {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 0.5rem 0.1rem;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.55rem 0.1rem;
     color: inherit;
     text-decoration: none;
-    font-size: 0.86rem;
   }
-  .pcguide__tier-list a:hover .pcguide__tier-item-label { color: var(--color-accent); }
+  /* Ligne 1 : icône + label, courte et fixe, jamais de débordement possible.
+     Ligne 2 : le nom du composant, longueur variable — sur sa propre ligne
+     pour pouvoir passer librement à la ligne sur mobile (cf. le bug de
+     débordement du 17/08/2026 sur un motif similaire). */
+  .pcguide__tier-item-top { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
+  .pcguide__tier-item-label { font-size: 0.8rem; color: var(--color-text-muted); }
+  .pcguide__tier-item-name { font-size: 0.92rem; font-weight: 600; }
+  .pcguide__tier-list a:hover .pcguide__tier-item-name { color: var(--color-accent); }
   .pcguide__tier-item-arrow { color: var(--color-text-muted); flex-shrink: 0; }
 
   /* ---- Détail par pièce, en accordéon ---- */
