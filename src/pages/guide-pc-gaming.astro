@@ -289,9 +289,14 @@ const faqSchema = {
   .pcguide__section-lede { color: var(--color-text-muted); line-height: 1.6; margin: 0 0 1.4rem; }
 
   /* ---- Paliers de budget : le cœur de la page ---- */
+  /* minmax(340px, 1fr) est choisi pour que 2 colonnes exactement tiennent
+     dans la largeur de la page (820px) : avec un seuil plus bas (ex. 260px),
+     3 colonnes rentrent de justesse et la 4ᵉ carte se retrouve seule sur sa
+     ligne, avec du vide à côté — pas terrible visuellement. En dessous de
+     ~700px de large, ça repasse naturellement à 1 colonne. */
   .pcguide__tiers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 1.1rem;
     margin: 1.8rem 0;
   }
