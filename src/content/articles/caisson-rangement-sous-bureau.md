@@ -12,9 +12,6 @@ products:
   - asin: "B08VJM5NHB"
     title: "HOMCOM — caisson à roulettes, tiroir + niche ouverte"
     blurb: "Un caisson compact avec un tiroir fermé et une niche ouverte pour un accès rapide, monté sur roulettes pour se déplacer facilement sous le bureau."
-  - asin: "B0B7679NQS"
-    title: "HOCSOK — caisson 4 tiroirs sur roulettes, documents et fournitures"
-    blurb: "Plusieurs tiroirs dédiés pour séparer papiers, fournitures et petits accessoires, une option pratique pour qui veut classer plutôt qu'entasser."
 faq:
   - question: "Un caisson de rangement sous bureau, est-ce compatible avec tous les bureaux ?"
     answer: "Pas systématiquement. Il faut vérifier la hauteur disponible sous le plateau (souvent entre 60 et 70 cm) et l'espace libre une fois les jambes du bureau et les pieds de l'utilisateur pris en compte. Un bureau assis-debout électrique avec des jambes centrales très rapprochées peut par exemple limiter les emplacements possibles."

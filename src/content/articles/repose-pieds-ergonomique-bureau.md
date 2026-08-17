@@ -12,9 +12,6 @@ products:
   - asin: "B097N2DK98"
     title: "ACROPAQ — 3 hauteurs, inclinaison -30° à +30°"
     blurb: "Le format le plus complet pour le prix : réglage en hauteur et en inclinaison, surface antidérapante."
-  - asin: "B0DYP852QV"
-    title: "Fellowes Everyday Plus — base antidérapante"
-    blurb: "Marque reconnue en ergonomie de bureau, format compact qui se glisse facilement sous n'importe quel bureau."
 faq:
   - question: "Un repose-pieds est-il vraiment utile si mon bureau est à la bonne hauteur ?"
     answer: "Oui, dans une moindre mesure : même avec un bureau bien réglé, un repose-pieds permet de changer régulièrement l'angle des genoux et des chevilles, ce qui limite l'engourdissement sur les journées longues assises."

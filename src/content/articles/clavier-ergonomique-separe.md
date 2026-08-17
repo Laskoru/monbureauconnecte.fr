@@ -12,9 +12,6 @@ products:
   - asin: "B07W6GVT3X"
     title: "Logitech ERGO K860 — clavier en deux parties, repose-poignets"
     blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, très bonne prise en main dès les premiers jours."
-  - asin: "B07W4DJ2N3"
-    title: "Logitech Wave Keys — courbe légère, plus accessible"
-    blurb: "Une transition plus douce depuis un clavier classique, avec une courbure moins marquée qu'un vrai clavier scindé."
 faq:
   - question: "Un clavier ergonomique séparé demande-t-il un temps d'adaptation ?"
     answer: "Oui, généralement une à deux semaines pour retrouver sa vitesse de frappe habituelle, le temps que les mains s'habituent à l'écartement et à la courbe. Le confort au niveau des poignets, lui, se ressent souvent dès les premiers jours."

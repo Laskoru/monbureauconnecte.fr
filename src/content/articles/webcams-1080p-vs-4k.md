@@ -12,9 +12,6 @@ products:
   - asin: "B006A2Q81M"
     title: "Logitech C920 HD Pro — Full HD 1080p"
     blurb: "La référence increvable du télétravail : plug-and-play, corrections automatiques de la lumière, très bon rapport qualité/prix."
-  - asin: "B0F1TYFRYT"
-    title: "Logitech Brio 4K — pour les visios exigeantes"
-    blurb: "Utile si tu fais des présentations clients ou du partage d'écran fréquent en grand format, où le surplus de netteté se voit vraiment."
 ---
 
 ## Le 1080p suffit-il vraiment ?

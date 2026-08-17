@@ -12,17 +12,6 @@ products:
   - asin: "B081396NSX"
     title: "SONGMICS OBG73BRV1 — Noir/Rouge, accoudoirs 4D, charge 150 kg"
     blurb: "Bon compromis pour un usage quotidien : accoudoirs 4D, appui-tête et support lombaire réglables, environ 140-150€."
-  - asin: "B07L5H2J7P"
-    title: "SONGMICS OBG77BR — avec repose-pieds télescopique"
-    blurb: "Version avec repose-pieds intégré, utile si tu comptes t'en servir aussi pour te détendre entre deux sessions."
-comparison:
-  columns: ["Critère", "OBG73BRV1", "OBG77BR"]
-  rows:
-    - ["Accoudoirs", "4D réglables", "4D réglables"]
-    - ["Charge max", "150 kg", "150 kg"]
-    - ["Repose-pieds", "Non", "Oui, télescopique"]
-    - ["Support lombaire", "Réglable", "Réglable"]
-    - ["Idéal pour", "Usage quotidien", "Détente + jeu"]
 ---
 
 ## Pourquoi le choix d'une chaise gaming compte vraiment

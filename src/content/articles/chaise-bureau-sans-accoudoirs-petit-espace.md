@@ -12,9 +12,6 @@ products:
   - asin: "B0DCFWWGD6"
     title: "Chaise compacte en maille sans accoudoirs — hauteur réglable, dossier bas"
     blurb: "Le choix le plus simple : assise en mousse dense, maille respirante, rotation à 360° et hauteur réglable de 42 à 54 cm pour s'adapter à un bureau standard."
-  - asin: "B0BLBLKCZ2"
-    title: "Chaise ergonomique sans accoudoirs avec support lombaire — dossier bas, petit espace"
-    blurb: "Une option plus encadrante côté dos, avec un renfort lombaire intégré, pour qui reste assis plusieurs heures d'affilée malgré un espace réduit."
 faq:
   - question: "Une chaise sans accoudoirs est-elle vraiment moins confortable ?"
     answer: "Pas nécessairement. Les accoudoirs aident surtout à relâcher les épaules pendant les pauses ou la lecture, mais ils ne sont pas indispensables pour taper au clavier : une bonne hauteur d'assise et un dossier qui soutient le bas du dos comptent davantage au quotidien. Le vrai compromis, c'est l'absence de point d'appui pour les bras entre deux tâches."
@@ -22,13 +19,6 @@ faq:
     answer: "Sans accoudoirs, une chaise se glisse généralement sous un plateau à partir de 60 cm de dégagement en profondeur, contre 70-75 cm pour un modèle avec accoudoirs 4D qui dépassent sur les côtés. C'est surtout un gain en largeur de circulation dans la pièce, pas seulement sous le bureau."
   - question: "Peut-on ajouter des accoudoirs après coup sur une chaise qui n'en a pas ?"
     answer: "Rarement de façon propre. Quelques modèles vendent des accoudoirs cliquables en option, mais la plupart des chaises sans accoudoirs ne prévoient pas de fixation adaptée. Mieux vaut trancher la question avant l'achat plutôt que compter sur un ajout ultérieur."
-comparison:
-  columns: ["Critère", "Chaise compacte en maille", "Chaise avec support lombaire"]
-  rows:
-    - ["Réglage hauteur", "42-54 cm", "Plage réglable standard"]
-    - ["Dossier", "Bas, maille respirante", "Bas, renfort lombaire intégré"]
-    - ["Rotation", "360°", "360°, pivotante"]
-    - ["Profil", "Le plus compact des deux", "Légèrement plus encadrant"]
 ---
 
 ## Pourquoi l'absence d'accoudoirs change tout dans un petit espace

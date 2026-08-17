@@ -12,9 +12,6 @@ products:
   - asin: "B07FNHV4MW"
     title: "Logitech MX Vertical — sans fil, 4000 PPP, multi-appareils"
     blurb: "La référence du genre : angle à 57° qui réduit vraiment la pronation du poignet, autonomie de plusieurs semaines, compatible PC/Mac."
-  - asin: "B07W4DGC27"
-    title: "Logitech Lift — format compact, clics silencieux"
-    blurb: "Plus petite et plus légère que la MX Vertical, avec une molette crantée agréable. Idéale pour les mains moyennes à petites."
 ---
 
 ## Pourquoi passer à une souris verticale

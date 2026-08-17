@@ -12,9 +12,6 @@ products:
   - asin: "B08NDB5NWP"
     title: "TONOR TM20 — micro de conférence, bouton muet"
     blurb: "Pensé pour les réunions : capte la voix à 360° autour du micro, avec un bouton muet accessible, idéal pour Zoom ou Teams."
-  - asin: "B08CVP2HXP"
-    title: "TONOR TC30 — micro à condensateur pour podcast"
-    blurb: "Plus orienté enregistrement et streaming, avec un rendu plus riche pour qui veut aussi faire du podcast ou de la voix off."
 faq:
   - question: "Un micro USB est-il vraiment meilleur que le micro intégré d'un ordinateur portable ?"
     answer: "Dans la grande majorité des cas oui, nettement : le micro intégré capte aussi le bruit du clavier et de la pièce, alors qu'un micro USB dédié, bien positionné, isole mieux la voix et réduit le bruit de fond perçu par les autres participants."

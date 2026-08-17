@@ -12,9 +12,6 @@ products:
   - asin: "B0BTDX26B2"
     title: "Sony WH-CH720N — réduction de bruit active, 35h d'autonomie"
     blurb: "Très bon niveau de réduction de bruit pour le prix, léger sur la durée, micro correct pour les appels occasionnels."
-  - asin: "B0C3HCD34R"
-    title: "Soundcore by Anker Q20i — over-ear, jusqu'à 40h en ANC"
-    blurb: "L'option économique pour découvrir la réduction de bruit active sans gros budget, avec une autonomie confortable."
 ---
 
 ## Pourquoi un casque à réduction de bruit change le télétravail

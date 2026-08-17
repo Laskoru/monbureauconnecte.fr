@@ -12,9 +12,6 @@ products:
   - asin: "B0D1DLY4H4"
     title: "SKYLEO — bras pivotant, 5 modes de couleur, 11 niveaux"
     blurb: "Très complet pour le prix : fonction mémoire et minuterie, bras articulé qui couvre bien un plan de travail large."
-  - asin: "B0GCMSMTR1"
-    title: "Neatfi Pro Series — IRC 95, 2200 lumens"
-    blurb: "Le choix haut de gamme si le rendu des couleurs compte (retouche photo, dessin) : indice de rendu des couleurs élevé et tête large sans zone d'ombre."
 faq:
   - question: "Quelle température de couleur choisir pour travailler ?"
     answer: "Une lumière neutre à blanche (4000-5000K) est le meilleur compromis pour lire et travailler sur écran ; le blanc chaud (moins de 3000K) convient mieux en soirée pour limiter la stimulation avant le coucher."

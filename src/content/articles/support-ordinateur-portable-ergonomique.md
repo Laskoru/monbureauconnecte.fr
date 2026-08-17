@@ -12,9 +12,6 @@ products:
   - asin: "B0BFQKMFRW"
     title: "BESIGN LS03S — support aluminium ergonomique"
     blurb: "Angle d'inclinaison bien pensé et base stable, l'un des supports les mieux notés dans sa catégorie."
-  - asin: "B086V28W64"
-    title: "Babacom — 5 hauteurs réglables, pliable"
-    blurb: "Format compact et pliable, pratique si le support doit aussi voyager avec l'ordinateur portable."
 faq:
   - question: "Un support ordinateur portable suffit-il, ou faut-il aussi un clavier externe ?"
     answer: "Un support seul relève l'écran à hauteur des yeux, mais éloigne aussi le clavier intégré, moins pratique à utiliser en hauteur. Pour un usage prolongé, l'associer à un clavier et une souris externes reste la configuration la plus confortable."

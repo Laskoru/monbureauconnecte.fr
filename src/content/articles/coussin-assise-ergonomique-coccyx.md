@@ -12,9 +12,6 @@ products:
   - asin: "B08QR8Z769"
     title: "Feagar — mousse à mémoire de forme, housse lavable"
     blurb: "Un coussin polyvalent (bureau, voiture) qui répartit la pression et soulage le coccyx, avec une housse déhoussable et lavable."
-  - asin: "B0DPKYCBP3"
-    title: "AUVON — forme en U, coccyx dégagé"
-    blurb: "La découpe en U laisse le coccyx totalement libre : utile en cas de gêne marquée (sciatique, hémorroïdes, post-grossesse)."
 faq:
   - question: "Un coussin d'assise ergonomique est-il vraiment utile si ma chaise de bureau est déjà de bonne qualité ?"
     answer: "Oui, les deux se complètent : même une chaise ergonomique haut de gamme utilise une assise standard qui répartit la pression de façon homogène, alors qu'un coussin en U ou en forme de fer à cheval décharge spécifiquement la zone du coccyx. Si tu ressens une gêne localisée après plusieurs heures assis, c'est justement le signe qu'une chaise seule ne suffit pas toujours à résoudre le problème."

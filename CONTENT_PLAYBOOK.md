@@ -7,8 +7,28 @@ par la routine automatique quotidienne **et** peut être utilisé à la main.
 
 Créer **1 seul nouvel article**, **en brouillon** (`draft: true`), puis commiter
 et pousser sur `main`. Les brouillons ne sont PAS visibles en ligne : un process
-local ajoute les images (couverture + produits) et publie ensuite. Laisse
-toujours 2 produits à ASIN réels pour qu'il puisse finir le travail.
+local ajoute les images (couverture + produit) et publie ensuite. Laisse
+toujours 1 produit à ASIN réel pour qu'il puisse finir le travail.
+
+### Format éditorial : guide → recherche → un seul choix
+
+Chaque article est un **vrai guide d'achat**, pas un duel entre deux fiches
+produit. Il se termine par UN SEUL produit recommandé, pas deux. La page se lit
+dans cet ordre (la recherche et le produit sont ajoutés automatiquement par le
+site, tu n'as rien à écrire pour eux) :
+
+1. Le corps de l'article : ce qui compte, les critères à vérifier avant
+   d'acheter, comment choisir selon son usage. C'est la partie que tu écris.
+2. Un lien « Voir « *mot-clé* » sur Amazon » généré automatiquement à partir de
+   `keywords[0]` — un lien de recherche, jamais mort, pour qui veut comparer
+   lui-même les modèles du moment.
+3. Le bloc « Notre choix » : le produit unique du frontmatter, avec son image,
+   sa note réelle et son prix.
+
+Pourquoi un seul produit et pas deux : un ASIN unique divise par deux le risque
+de rupture de stock, élimine le problème d'écart de prix entre deux produits,
+et le lien de recherche du point 2 fait déjà le travail de comparaison — sans
+jamais devenir obsolète, contrairement à une fiche produit précise.
 
 ### Pourquoi un seul article (et pas plus)
 
@@ -65,7 +85,7 @@ category: "mobilier"   # UNIQUEMENT: mobilier | peripheriques | audio-visio
 coverAlt: "Description factuelle de l'image pour l'accessibilité"
 draft: true            # le process local passe à false après avoir ajouté les images
 products:
-  - asin: "B0XXXXXXXX"
+  - asin: "B0XXXXXXXX"        # UN SEUL produit — voir « RÈGLE CRITIQUE » plus bas
     title: "Marque Modèle — 2-3 caractéristiques clés"
     blurb: "Une phrase expliquant pour qui / pourquoi ce produit."
 faq:
@@ -89,13 +109,15 @@ faq:
   peut pas vérifier. Rester sur des ordres de grandeur ("environ 140-150 €",
   "plusieurs semaines d'autonomie").
 
-## RÈGLE CRITIQUE : les produits Amazon (ASIN)
+## RÈGLE CRITIQUE : le produit Amazon (ASIN)
 
-**Objectif : chaque article doit contenir 2 produits avec de vrais ASIN.** C'est
-important : une fois l'ASIN présent, l'humain n'a plus qu'à déposer l'image
-`public/products/<ASIN>.jpg`. Ne te contente donc PAS de laisser `products: []` —
-fais réellement la recherche. Un ASIN inventé reste toutefois interdit (lien
-cassé = zéro commission) : la règle est « cherche vraiment, mais n'invente jamais ».
+**Objectif : chaque article doit contenir UN SEUL produit avec un vrai ASIN.**
+C'est important : une fois l'ASIN présent, l'humain n'a plus qu'à déposer
+l'image `public/products/<ASIN>.jpg`. Ne te contente donc PAS de laisser
+`products: []` — fais réellement la recherche. Un ASIN inventé reste toutefois
+interdit (lien cassé = zéro commission) : la règle est « cherche vraiment, mais
+n'invente jamais ». N'ajoute JAMAIS un deuxième produit — le format n'en veut
+qu'un (voir la section format éditorial plus haut).
 
 ### Comment trouver un ASIN quand `amazon.fr` est bloqué (cas de la routine cloud)
 
@@ -108,9 +130,12 @@ récupère les ASIN. Procédure fiable :
    ou `amazon.fr/dp/XXXXXXXXXX` — les 10 caractères après `/dp/` sont l'ASIN
    (il commence presque toujours par `B0`).
 3. Fais une 2ᵉ recherche pour confirmer : `"<ASIN>" amazon` doit renvoyer une page
-   produit correspondant bien au produit décrit (même type, même marque).
-4. Choisis 2 produits pertinents et distincts (ex. un modèle standard + une
-   variante ou un modèle d'un autre positionnement).
+   produit correspondant bien au produit décrit (même type, même marque), sur
+   le marché **français** (amazon.fr, pas .it/.com/.de — un même produit a un
+   ASIN différent selon le pays).
+4. Choisis le produit le plus représentatif du sujet — celui que tu
+   recommanderais spontanément si on te posait la question, pas forcément le
+   moins cher ni le plus cher.
 
 Essaie plusieurs formulations de recherche (marque + modèle, synonymes) avant
 d'abandonner. Dans la grande majorité des cas, 2-3 recherches suffisent.
@@ -122,39 +147,19 @@ Seulement en dernier recours, après plusieurs recherches infructueuses : laisse
 **noms de produits repérés** pour que l'humain finisse vite :
 `# TODO-HUMAIN: ASIN à vérifier sur amazon.fr — <marque modèle 1>, <marque modèle 2>`
 
-### Les deux produits doivent être COMPARABLES
-
-Un comparatif n'a de sens que si les deux produits jouent dans la même cour.
-Vise un **écart de prix inférieur à ~50 %** entre les deux : opposer un modèle à
-77 € et un autre à 140 €, ce n'est pas un comparatif, c'est deux catégories
-différentes — et le lecteur ne sait pas quoi en faire.
-
-Le bon axe de différenciation n'est donc pas le prix, mais l'usage : deux
-modèles au tarif voisin qui répondent à des besoins distincts (compact contre
-plus encadrant, filaire contre sans fil, simple contre polyvalent).
-
 ### Format et rappels
 
-- 2 produits par article ; le premier est mis en avant comme « Notre choix ».
-- **Ne remplis pas le champ `image:` des produits.** Les photos sont gérées
+- **Un seul produit par article** — le bloc « Notre choix » en fin de page.
+  N'ajoute jamais de deuxième entrée dans `products:`.
+- **Ne remplis pas le champ `image:` du produit.** La photo est gérée
   séparément : l'humain dépose `public/products/<ASIN>.jpg` et l'image apparaît
   automatiquement (voir `public/products/README.md`). Laisse `image` absent.
-
-## Tableau comparatif (optionnel mais recommandé)
-
-Quand l'article compare des produits sur des critères mesurables, ajoute un
-bloc `comparison` au frontmatter — il s'affiche en tableau après le corps :
-
-```yaml
-comparison:
-  columns: ["Critère", "Modèle A", "Modèle B"]
-  rows:
-    - ["Charge max", "150 kg", "120 kg"]
-    - ["Poids", "9 kg", "7 kg"]
-```
-
-Chaque ligne doit avoir autant de cellules que `columns`. N'invente pas de
-chiffres : mets seulement des specs vérifiables, sinon laisse le bloc de côté.
+- **N'ajoute pas de bloc `comparison`.** Ce format a été abandonné (il
+  comparait deux SKU précis, ce qui devenait faux dès que l'un des deux
+  changeait de prix ou de stock). Si tu veux comparer des approches, fais-le en
+  prose dans une section `## Comment choisir selon ton usage` — les
+  caractéristiques générales restent vraies même quand un produit précis ne
+  l'est plus.
 
 ## Règle images (couverture + produits : tout est géré en local)
 

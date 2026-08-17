@@ -12,9 +12,6 @@ products:
   - asin: "B0DG2XCHQ2"
     title: "NEEWER Basics 7\" — compact, dimmable"
     blurb: "Format compact qui se pose facilement à côté de l'écran, suffisant pour la plupart des visios en intérieur."
-  - asin: "B0F1MZCCWZ"
-    title: "NEEWER 12\" 24W — plus puissant, avec support téléphone"
-    blurb: "Utile dans une pièce peu lumineuse ou pour un usage qui dépasse la simple visio (présentation filmée, contenu vidéo)."
 ---
 
 ## Pourquoi l'éclairage change la perception en visio

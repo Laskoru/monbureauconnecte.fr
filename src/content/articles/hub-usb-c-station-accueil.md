@@ -12,9 +12,6 @@ products:
   - asin: "B0CV9TX1V3"
     title: "Kensington — station d'accueil 10-en-1"
     blurb: "Marque reconnue en accessoires professionnels : 3 sorties vidéo, 100W de charge, fiable pour un usage quotidien intensif."
-  - asin: "B09Z64KNV4"
-    title: "MOKiN — hub 16-en-1, double HDMI/DisplayPort"
-    blurb: "Très complet pour le prix, avec lecteur de carte SD/TF en plus, pratique pour qui manipule des fichiers médias."
 faq:
   - question: "Quelle différence entre un simple hub et une vraie station d'accueil ?"
     answer: "Un hub ajoute quelques ports supplémentaires (USB, HDMI). Une station d'accueil va plus loin : elle centralise aussi l'alimentation et le réseau filaire, avec un seul câble à brancher et débrancher pour tout connecter d'un coup."

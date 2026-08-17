@@ -12,9 +12,6 @@ products:
   - asin: "B086W5MYRD"
     title: "SUPA MODERN — mousse à mémoire de forme, sangles réglables"
     blurb: "Un coussin lombaire polyvalent (bureau, voiture) avec des sangles ajustables de 12 à 26 cm pour bien le fixer au dossier, et une housse respirante amovible."
-  - asin: "B01IJNJAZ0"
-    title: "Everlasting Comfort — best-seller, maintien renforcé"
-    blurb: "Un modèle très plébiscité, avec une mousse plus ferme et un maintien plus marqué : une valeur sûre pour une gêne lombaire déjà installée."
 faq:
   - question: "Un coussin lombaire est-il utile même sur une chaise de bureau récente ?"
     answer: "Oui, dans beaucoup de cas. Le dossier d'une chaise de bureau standard, même correcte, est souvent trop droit ou trop reculé par rapport à la courbure naturelle du bas du dos. Un coussin lombaire vient combler cet espace et maintenir la cambrure, ce qu'un dossier plat ne fait pas toujours, même sur un siège de bonne qualité."

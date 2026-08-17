@@ -12,9 +12,6 @@ products:
   - asin: "B09CTYQYCH"
     title: "HomeProtek — panier passe-câbles sous bureau"
     blurb: "Le classique efficace : un panier fixé sous le plateau qui regroupe multiprise et chargeurs, hors de vue."
-  - asin: "B0DGQC997R"
-    title: "Cache Câble Bureau sans percer — filet flexible noir"
-    blurb: "Sans perçage ni vis, avec un filet extensible qui s'adapte à la quantité de câbles à ranger."
 faq:
   - question: "Faut-il percer le bureau pour installer un rangement câbles ?"
     answer: "Non, la plupart des paniers et goulottes récents se fixent par pince ou adhésif renforcé, sans perçage. Le perçage reste une option plus stable mais n'est nécessaire que pour des installations très chargées."

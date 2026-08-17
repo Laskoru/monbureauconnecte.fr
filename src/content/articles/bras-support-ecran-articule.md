@@ -12,9 +12,6 @@ products:
   - asin: "B07T4HQS2N"
     title: "HUANUO — bras simple, 13 à 32 pouces, jusqu'à 9 kg"
     blurb: "Installation rapide en conception monobloc, bon compromis pour un premier écran externe sur un bureau classique."
-  - asin: "B0CKPH347G"
-    title: "BONTEC — bras double écran, jusqu'à 9 kg par bras"
-    blurb: "Pensé pour un setup à deux écrans : chaque bras se règle indépendamment, pratique pour aligner des tailles différentes."
 ---
 
 ## Pourquoi installer un bras support écran

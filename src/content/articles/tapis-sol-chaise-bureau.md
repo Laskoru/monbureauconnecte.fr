@@ -12,9 +12,6 @@ products:
   - asin: "B08PP39PLD"
     title: "NATRKE — PVC transparent, 76 x 122 cm, sans BPA"
     blurb: "Le format le plus discret : transparent, il se fond dans le décor tout en protégeant efficacement un parquet ou un stratifié."
-  - asin: "B071JC4CKF"
-    title: "casa pura — vinyle recyclé, 75 x 120 cm, base antidérapante"
-    blurb: "Un tapis plus épais et plus stable, pensé pour rester bien à plat sous une chaise à roulettes qui bouge beaucoup dans la journée."
 faq:
   - question: "Un tapis de sol est-il vraiment nécessaire sur un parquet ?"
     answer: "S'il s'agit d'un parquet massif ou vitrifié fragile, oui : les roulettes d'une chaise de bureau, surtout avec des roulettes dures d'origine, finissent par marquer ou rayer la surface au fil des mois. Sur un sol déjà très résistant (carrelage, béton ciré), c'est plus une question de confort de glisse que de protection stricte."
