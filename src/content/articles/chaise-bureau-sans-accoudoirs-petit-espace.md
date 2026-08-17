@@ -5,9 +5,8 @@ pubDate: 2026-08-17
 author: "Rédaction"
 keywords: ["chaise de bureau sans accoudoirs", "chaise bureau petit espace", "chaise compacte télétravail"]
 category: "mobilier"
-# COVER: compact office chair small home workspace no armrests
-coverAlt: "Petite chaise de bureau sans accoudoirs rangée sous un bureau étroit dans un espace de travail compact"
-draft: true
+coverAlt: "Chaise de bureau en bois sans accoudoirs installée dans un coin bureau compact sous des combles"
+draft: false
 products:
   - asin: "B0DCFWWGD6"
     title: "Chaise compacte en maille sans accoudoirs — hauteur réglable, dossier bas"
