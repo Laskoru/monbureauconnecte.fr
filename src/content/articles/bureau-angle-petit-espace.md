@@ -5,7 +5,7 @@ pubDate: 2026-08-18
 author: "Rédaction"
 keywords: ["bureau d'angle petit espace", "bureau d'angle compact", "bureau d'angle télétravail"]
 category: "mobilier"
-coverAlt: "Bureau d'angle compact installé dans un coin de pièce avec un ordinateur portable, en télétravail"
+coverAlt: "Bureau intégré sous une étagère murale, avec ordinateur portable, écran et chaise de bureau à roulettes"
 # COVER: corner desk small space home office
 draft: true
 products:
