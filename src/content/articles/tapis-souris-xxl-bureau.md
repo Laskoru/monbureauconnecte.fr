@@ -6,7 +6,7 @@ author: "Rédaction"
 keywords: ["tapis de souris XXL", "tapis de souris bureau", "tapis clavier souris étendu"]
 category: "peripheriques"
 coverAlt: "Grand tapis de bureau en feutre gris couvrant le plateau, avec un clavier et un trackpad posés dessus, une main effleurant le trackpad"
-draft: true
+draft: false
 products:
   - asin: "B06X19FLTC"
     title: "Amazon Basics — Grand tapis de souris gaming, 90 x 43 cm"
