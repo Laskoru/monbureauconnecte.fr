@@ -13,7 +13,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [x] Tabouret assis-debout (siège selle) — alterner les appuis sur un bureau haut — mobilier
 - [x] Plante de bureau dépolluante — améliorer l'air et le confort visuel — mobilier
 - [x] Chaise de bureau sans accoudoirs — pour les petits espaces et les bureaux bas — mobilier
-- [ ] Bureau d'angle pour petit espace — optimiser un coin de pièce en télétravail — mobilier
+- [x] Bureau d'angle pour petit espace — optimiser un coin de pièce en télétravail — mobilier
 
 ## Périphériques
 
