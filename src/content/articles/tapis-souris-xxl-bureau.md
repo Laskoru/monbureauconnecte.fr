@@ -5,7 +5,7 @@ pubDate: 2026-08-18
 author: "Rédaction"
 keywords: ["tapis de souris XXL", "tapis de souris bureau", "tapis clavier souris étendu"]
 category: "peripheriques"
-coverAlt: "Grand tapis de bureau en feutre gris couvrant le plateau, avec un clavier et un trackpad posés dessus, une main effleurant le trackpad"
+coverAlt: "Grand tapis de souris noir sur un bureau, avec une souris filaire posée dessus et un clavier mécanique visible dans le coin"
 draft: false
 products:
   - asin: "B06X19FLTC"
