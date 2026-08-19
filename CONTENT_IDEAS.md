@@ -18,7 +18,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 ## Périphériques
 
 - [x] Tapis de souris XXL de bureau — surface étendue pour clavier + souris — peripheriques
-- [ ] Souris sans fil silencieuse — clics discrets pour l'open space — peripheriques
+- [x] Souris sans fil silencieuse — clics discrets pour l'open space — peripheriques
 - [ ] Trackball vs souris classique — soulager le poignet autrement — peripheriques
 - [ ] Repose-poignet clavier et souris — prévenir les tensions au poignet — peripheriques
 - [ ] Clavier compact sans pavé numérique (TKL) — gagner de la place pour la souris — peripheriques
