@@ -5,9 +5,8 @@ pubDate: 2026-08-19
 author: "Rédaction"
 keywords: ["souris sans fil silencieuse", "souris silencieuse bureau", "souris sans fil silencieuse 2026", "clic silencieux souris"]
 category: "peripheriques"
-coverAlt: "Main posée sur une souris sans fil grise, sur un bureau dans un environnement de travail partagé"
-# COVER: silent wireless mouse office desk
-draft: true
+coverAlt: "Souris sans fil blanche posée sur un bureau clair, vue de trois quarts"
+draft: false
 products:
   - asin: "B07W6G822T"
     title: "Logitech Signature M650 — clics silencieux, Bluetooth, multi-appareils"
