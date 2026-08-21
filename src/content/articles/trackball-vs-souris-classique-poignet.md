@@ -7,7 +7,7 @@ keywords: ["trackball vs souris", "trackball souris poignet", "meilleur trackbal
 category: "peripheriques"
 coverAlt: "Trackball sans fil noir posé sur un bureau, main positionnée sur la boule de contrôle"
 # COVER: ergonomic trackball mouse desk setup
-draft: true
+draft: false
 products:
   - asin: "B0DB5DMDW3"
     title: "Logitech ERGO M575S — trackball sans fil, contrôle au pouce, Bluetooth"
