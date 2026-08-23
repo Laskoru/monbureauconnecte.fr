@@ -5,13 +5,12 @@ pubDate: 2026-08-23
 author: "Rédaction"
 keywords: ["repose-poignet clavier souris", "repose-poignet ergonomique", "repose-poignet gel poignet", "meilleur repose-poignet 2026"]
 category: "peripheriques"
-coverAlt: "Mains posées sur un repose-poignet en gel devant un clavier d'ordinateur"
-# COVER: gel wrist rest keyboard mouse desk setup
-draft: true
+coverAlt: "Vue de dessus de mains en train de taper sur un ordinateur portable posé sur un bureau en bois, avec tasse de café, lunettes et plante"
+draft: false
 products:
-  - asin: "B09993NN17"
-    title: "Set repose-poignet clavier + souris en gel, mousse mémoire de forme"
-    blurb: "Le duo complet le plus simple pour commencer : un repose-poignet pour le clavier et un pour la souris, en gel à mémoire de forme, base antidérapante."
+  - asin: "B0GXKT85H7"
+    title: "Giecy — Set repose-poignet clavier + souris en gel translucide, antidérapant"
+    blurb: "Le duo complet le plus simple pour commencer : un repose-poignet pour le clavier et un pour la souris, en gel souple à la forme de nuage, avec une base antidérapante."
 faq:
   - question: "Un repose-poignet suffit-il à lui seul contre les douleurs au poignet ?"
     answer: "Non, c'est un complément utile mais pas une solution miracle. Il corrige surtout la position du poignet à l'arrêt, entre deux frappes. Si la douleur vient d'un mauvais réglage global du poste (hauteur du bureau, position de la souris trop éloignée), il faudra aussi revoir ces éléments pour un vrai soulagement durable."
