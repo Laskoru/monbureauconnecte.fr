@@ -34,7 +34,7 @@ C'est aussi un choix qui a du sens pour qui travaille sur un support d'ordinateu
 - **La largeur réelle du clavier** : vérifie les dimensions annoncées plutôt que de te fier au terme « compact », qui recouvre des tailles assez différentes selon les marques et les gammes.
 - **La présence des touches de navigation** : un vrai TKL garde les flèches, Inser/Suppr, Origine/Fin et Pg préc/suiv à droite des lettres. Un format encore plus réduit (60 % ou 65 %) supprime aussi ces touches, ce qui demande un vrai temps d'adaptation pour qui les utilise souvent.
 - **La connectivité** : filaire, Bluetooth ou récepteur USB. Le sans-fil simplifie le rangement et le nettoyage du bureau, mais vérifie l'autonomie annoncée si tu comptes t'en servir plusieurs heures par jour.
-- **Le type de frappe** : à membrane (plus silencieux et économique) ou mécanique (frappe plus précise, souvent plus bruyante sauf sur les switches dits « silencieux »). Si le bruit en open space ou en visio est un vrai sujet, notre comparatif des [claviers mécaniques silencieux](/articles/claviers-mecaniques-silencieux) détaille les switches à privilégier.
+- **Le type de frappe** : à membrane (plus silencieux et économique) ou mécanique (frappe plus précise, souvent plus bruyante sauf sur les switches dits « silencieux »). Si le bruit en open space ou en visio est un vrai sujet, notre comparatif des [claviers mécaniques silencieux](/articles/claviers-mecaniques-silencieux/) détaille les switches à privilégier.
 - **La disposition AZERTY complète** : certains modèles compacts, pensés d'abord pour un marché anglophone, réorganisent ou suppriment des touches spécifiques au français (accents, touches mortes) — à vérifier avant d'acheter, surtout sur les modèles gaming importés.
 - **La compatibilité multi-appareils** : utile si tu bascules régulièrement entre un ordinateur professionnel et un ordinateur personnel dans la même journée.
 - **La qualité de fabrication du châssis** : un clavier compact repose souvent sur un socle plus fin qu'un clavier complet ; vérifie qu'il ne fléchit pas au centre lors d'une frappe rapide, un défaut fréquent sur les modèles d'entrée de gamme les moins chers.
@@ -47,7 +47,7 @@ Si tu passes plusieurs heures par jour à taper de longs textes, un modèle avec
 
 Pour qui jongle encore régulièrement avec des chiffres — comptabilité, saisie de données répétée — mieux vaut garder un clavier complet ou ajouter un pavé numérique externe sans fil à côté du TKL plutôt que de se priver totalement du bloc numérique : le gain de place ne compense pas la perte de vitesse de saisie dans ce cas précis.
 
-Enfin, si le sujet de fond est surtout la tension dans les poignets plus que la place sur le bureau, le format TKL seul n'y changera pas grand-chose : notre article sur le [clavier ergonomique séparé](/articles/clavier-ergonomique-separe) traite spécifiquement de cet angle-là, avec des modèles pensés pour l'alignement naturel des mains plutôt que pour le gain d'espace.
+Enfin, si le sujet de fond est surtout la tension dans les poignets plus que la place sur le bureau, le format TKL seul n'y changera pas grand-chose : notre article sur le [clavier ergonomique séparé](/articles/clavier-ergonomique-separe/) traite spécifiquement de cet angle-là, avec des modèles pensés pour l'alignement naturel des mains plutôt que pour le gain d'espace.
 
 ## Ce que tu perds vraiment (et ce que tu ne perds pas)
 
@@ -57,7 +57,7 @@ Le seul vrai temps d'adaptation concerne la position de la souris, qui se rappro
 
 ## Un détail qui compte : le rangement du câble et du récepteur
 
-Un clavier compact sans fil n'a d'intérêt que si le reste du bureau suit la même logique de sobriété. Un récepteur USB qui traîne, un câble de charge mal rangé ou un chargeur qui reste branché en permanence annulent une bonne partie du gain visuel obtenu en réduisant la taille du clavier. Si le désordre de câbles est un problème récurrent sur ton poste, notre guide sur le [rangement des câbles de bureau](/articles/rangement-cables-bureau) propose des solutions simples pour garder un plan de travail net une fois le clavier changé.
+Un clavier compact sans fil n'a d'intérêt que si le reste du bureau suit la même logique de sobriété. Un récepteur USB qui traîne, un câble de charge mal rangé ou un chargeur qui reste branché en permanence annulent une bonne partie du gain visuel obtenu en réduisant la taille du clavier. Si le désordre de câbles est un problème récurrent sur ton poste, notre guide sur le [rangement des câbles de bureau](/articles/rangement-cables-bureau/) propose des solutions simples pour garder un plan de travail net une fois le clavier changé.
 
 Pense aussi à l'autonomie annoncée si tu optes pour un modèle sans fil : un clavier qui se recharge via USB-C toutes les quelques semaines reste largement gérable, à condition de ne pas attendre la panne totale de batterie pour y penser. Certains modèles conservent en plus quelques heures d'utilisation après une charge très courte, un vrai plus si tu oublies régulièrement de recharger tes périphériques.
 

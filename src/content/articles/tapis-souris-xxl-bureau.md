@@ -30,13 +30,13 @@ L'intérêt dépasse le simple confort de glisse. Un grand tapis protège aussi 
 
 ## Bureautique ou gaming : un même produit convient aux deux
 
-Contrairement à ce que le vocabulaire marketing laisse penser, un tapis XXL « gaming » fonctionne tout aussi bien pour un usage bureautique pur — la seule différence tient généralement à l'esthétique (finitions RGB, imprimés) plutôt qu'à la fonction. Si l'objectif est simplement d'unifier la zone clavier-souris, un modèle sobre en noir ou gris reste le choix le plus durable visuellement, en particulier sur un [bureau assis-debout électrique](/articles/bureau-assis-debout-electrique) où le tapis doit rester en place malgré les changements de hauteur répétés.
+Contrairement à ce que le vocabulaire marketing laisse penser, un tapis XXL « gaming » fonctionne tout aussi bien pour un usage bureautique pur — la seule différence tient généralement à l'esthétique (finitions RGB, imprimés) plutôt qu'à la fonction. Si l'objectif est simplement d'unifier la zone clavier-souris, un modèle sobre en noir ou gris reste le choix le plus durable visuellement, en particulier sur un [bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/) où le tapis doit rester en place malgré les changements de hauteur répétés.
 
-Pour les setups avec [hub USB-C et station d'accueil](/articles/hub-usb-c-station-accueil), pense à vérifier que le tapis ne recouvre pas les ports ou les câbles qui doivent rester accessibles sur les bords du bureau — certains modèles très larges (100 cm et plus) empiètent sur ces zones selon la disposition du poste.
+Pour les setups avec [hub USB-C et station d'accueil](/articles/hub-usb-c-station-accueil/), pense à vérifier que le tapis ne recouvre pas les ports ou les câbles qui doivent rester accessibles sur les bords du bureau — certains modèles très larges (100 cm et plus) empiètent sur ces zones selon la disposition du poste.
 
 ## Quelle taille pour quel bureau
 
-Sur un bureau standard de 120-140 cm de large, un tapis de 80-90 cm laisse une marge confortable de chaque côté pour d'autres accessoires. Sur un bureau plus large (160 cm et plus) ou un setup double écran, viser plutôt 90-100 cm pour vraiment couvrir toute la zone de frappe et de manipulation. À l'inverse, sur un petit bureau ou dans un espace partagé avec un [rangement câbles bureau](/articles/rangement-cables-bureau) déjà en place, un format intermédiaire de 70-80 cm évite de se retrouver à l'étroit.
+Sur un bureau standard de 120-140 cm de large, un tapis de 80-90 cm laisse une marge confortable de chaque côté pour d'autres accessoires. Sur un bureau plus large (160 cm et plus) ou un setup double écran, viser plutôt 90-100 cm pour vraiment couvrir toute la zone de frappe et de manipulation. À l'inverse, sur un petit bureau ou dans un espace partagé avec un [rangement câbles bureau](/articles/rangement-cables-bureau/) déjà en place, un format intermédiaire de 70-80 cm évite de se retrouver à l'étroit.
 
 ## Notre choix
 
