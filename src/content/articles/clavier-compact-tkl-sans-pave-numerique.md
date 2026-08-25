@@ -5,9 +5,8 @@ pubDate: 2026-08-24
 author: "Rédaction"
 keywords: ["clavier TKL", "clavier compact sans pavé numérique", "clavier sans pavé numérique bureau"]
 category: "peripheriques"
-# COVER: compact keyboard without number pad desk setup
-coverAlt: "Clavier compact sans pavé numérique posé sur un bureau, avec une souris juste à côté"
-draft: true
+coverAlt: "Bureau épuré dans une lumière tamisée avec un clavier compact rétroéclairé au centre, un grand écran, une souris et des enceintes"
+draft: false
 products:
   - asin: "B07W7JHZKR"
     title: "Logitech MX Keys Mini — clavier compact sans fil, rétroéclairé, AZERTY"
