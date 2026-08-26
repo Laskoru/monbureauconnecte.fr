@@ -3,6 +3,8 @@ title: "Rangement câbles de bureau : comment enfin avoir un bureau net"
 description: "Chargeurs, multiprise, câbles d'écran : comment organiser les câbles sous le bureau sans tout percer. Nos critères et notre sélection."
 pubDate: 2026-07-24
 author: "Rédaction"
+pinHook: "Enfin *fini*, le nœud de câbles"
+pinSub: "Un bureau net en quelques minutes."
 keywords: ["rangement câbles bureau", "goulotte passe câbles", "cable management bureau"]
 category: "mobilier"
 coverImage: "https://images.unsplash.com/photo-1760348213270-7cd00b8c3405?q=80&w=1600&auto=format&fit=crop"

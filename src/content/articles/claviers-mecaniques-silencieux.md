@@ -3,6 +3,8 @@ title: "Meilleurs claviers mécaniques silencieux pour l'open space et la visio"
 description: "Notre sélection de claviers mécaniques silencieux, pour taper sans déranger en open space ou pendant une visioconférence."
 pubDate: 2026-08-07
 author: "Rédaction"
+pinHook: "La frappe mécanique, *en silence*"
+pinSub: "Les claviers silencieux pour l'open space."
 keywords: ["clavier mécanique silencieux", "clavier silencieux télétravail", "clavier open space"]
 category: "peripheriques"
 coverImage: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=1600&auto=format&fit=crop"

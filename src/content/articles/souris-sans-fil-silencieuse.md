@@ -3,6 +3,8 @@ title: "Souris sans fil silencieuse : laquelle choisir en 2026"
 description: "Clics qui claquent en open space ? Notre guide pour choisir une souris sans fil vraiment silencieuse, sans sacrifier précision ni confort."
 pubDate: 2026-08-19
 author: "Rédaction"
+pinHook: "Des clics *discrets*, partout"
+pinSub: "La souris silencieuse idéale."
 keywords: ["souris sans fil silencieuse", "souris silencieuse bureau", "souris sans fil silencieuse 2026", "clic silencieux souris"]
 category: "peripheriques"
 coverAlt: "Souris sans fil blanche posée sur un bureau clair, vue de trois quarts"

@@ -3,6 +3,8 @@ title: "Support ordinateur portable ergonomique : pourquoi c'est presque indispe
 description: "Travailler sur un ordinateur portable posé à plat fatigue vite la nuque. Nos critères de choix et notre sélection de supports ergonomiques."
 pubDate: 2026-07-30
 author: "Rédaction"
+pinHook: "L'écran *à hauteur des yeux*"
+pinSub: "Le support portable presque indispensable."
 keywords: ["support ordinateur portable ergonomique", "support pc portable bureau", "laptop stand"]
 category: "peripheriques"
 coverImage: "https://images.unsplash.com/photo-1629317480826-910f729d1709?q=80&w=1600&auto=format&fit=crop"

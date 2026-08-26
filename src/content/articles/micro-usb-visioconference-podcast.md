@@ -3,6 +3,8 @@ title: "Micro USB pour visioconférence et podcast : lequel choisir ?"
 description: "Le micro intégré de ton ordinateur ne suffit pas toujours. Comment choisir un micro USB pour les visios ou l'enregistrement, et notre sélection."
 pubDate: 2026-08-05
 author: "Rédaction"
+pinHook: "Une voix *claire et pro* en visio"
+pinSub: "Le micro USB bien choisi."
 keywords: ["micro usb visioconférence", "micro usb podcast", "meilleur micro usb pc"]
 category: "audio-visio"
 coverImage: "https://images.unsplash.com/photo-1601856254555-a9c0ebef8af3?q=80&w=1600&auto=format&fit=crop"

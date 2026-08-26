@@ -3,6 +3,8 @@ title: "Clavier ergonomique séparé : à qui s'adresse ce format ?"
 description: "Un clavier en deux parties peut sembler déroutant, mais il change vraiment la donne pour les poignets. Notre comparatif et nos recommandations."
 pubDate: 2026-08-02
 author: "Rédaction"
+pinHook: "Taper *sans forcer* sur les poignets"
+pinSub: "Le clavier ergonomique séparé décrypté."
 keywords: ["clavier ergonomique séparé", "clavier split", "clavier ergonomique poignet"]
 category: "peripheriques"
 coverImage: "https://images.unsplash.com/photo-1651248340514-f5822cb997c2?q=80&w=1600&auto=format&fit=crop"

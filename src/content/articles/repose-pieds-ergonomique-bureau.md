@@ -3,6 +3,8 @@ title: "Repose-pieds ergonomique de bureau : utile ou gadget ?"
 description: "Un repose-pieds améliore-t-il vraiment la posture au bureau ? Nos critères de choix et notre sélection de modèles réglables."
 pubDate: 2026-07-18
 author: "Rédaction"
+pinHook: "Les jambes *soulagées* toute la journée"
+pinSub: "Repose-pieds : utile ou gadget ?"
 keywords: ["repose-pieds ergonomique", "repose pieds bureau", "repose-pieds réglable"]
 category: "mobilier"
 coverImage: "https://images.unsplash.com/photo-1688578737378-d395892980ed?q=80&w=1600&auto=format&fit=crop"

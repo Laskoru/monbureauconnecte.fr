@@ -3,6 +3,8 @@ title: "Repose-poignet clavier et souris : lequel choisir en 2026 ?"
 description: "Tensions au poignet en tapant ou en cliquant ? Notre guide pour bien choisir un repose-poignet clavier et souris efficace, sans se tromper."
 pubDate: 2026-08-23
 author: "Rédaction"
+pinHook: "Des poignets *sans tension*"
+pinSub: "Le repose-poignet clavier + souris."
 keywords: ["repose-poignet clavier souris", "repose-poignet ergonomique", "repose-poignet gel poignet", "meilleur repose-poignet 2026"]
 category: "peripheriques"
 coverAlt: "Vue de dessus de mains en train de taper sur un ordinateur portable posé sur un bureau en bois, avec tasse de café, lunettes et plante"

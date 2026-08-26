@@ -3,6 +3,8 @@ title: "Caisson de rangement sous bureau : libérer le plateau sans encombrer"
 description: "Comment choisir un caisson de rangement sous bureau pour ranger dossiers et fournitures sans envahir l'espace de travail."
 pubDate: 2026-08-16
 author: "Rédaction"
+pinHook: "Un plateau *enfin dégagé*"
+pinSub: "Le caisson qui range tout, discret."
 keywords: ["caisson de rangement sous bureau", "caisson bureau à roulettes", "rangement bureau télétravail"]
 category: "mobilier"
 coverImage: "https://images.unsplash.com/photo-1688578737378-d395892980ed?q=80&w=1600&auto=format&fit=crop"
