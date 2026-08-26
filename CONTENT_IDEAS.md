@@ -22,7 +22,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [x] Trackball vs souris classique — soulager le poignet autrement — peripheriques
 - [x] Repose-poignet clavier et souris — prévenir les tensions au poignet — peripheriques
 - [x] Clavier compact sans pavé numérique (TKL) — gagner de la place pour la souris — peripheriques
-- [ ] Souris gaming pour le travail — DPI et boutons programmables au quotidien — peripheriques
+- [x] Souris gaming pour le travail — DPI et boutons programmables au quotidien — peripheriques
 - [ ] Pavé numérique externe sans fil — compléter un clavier compact — peripheriques
 - [ ] Tablette graphique d'entrée de gamme — pour annoter et dessiner au bureau — peripheriques
 - [ ] Hub USB-A multiport — brancher ses vieux périphériques sur un portable récent — peripheriques
