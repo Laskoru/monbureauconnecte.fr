@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { siteConfig } from '../siteConfig';
+
+// Outils gratuits — l'aimant à liens de Mon Bureau Connecté.
+const tools = [
+  {
+    icon: '📐',
+    title: 'Calculateur de hauteur de bureau',
+    desc: 'Trouve la hauteur idéale de ton bureau — assis et assis-debout — selon ta taille, en un instant.',
+    href: '/calculateur-hauteur-bureau/',
+    cta: 'Ouvrir le calculateur',
+  },
+  {
+    icon: '✅',
+    title: 'Checklist ergonomie du poste',
+    desc: 'Règle ton poste comme il faut : écran, siège, clavier, souris. La checklist complète pour éviter les douleurs.',
+    href: '/checklist-bureau-ergonomique/',
+    cta: 'Voir la checklist',
+  },
+  {
+    icon: '🖥️',
+    title: 'Guide : monter son PC gaming',
+    desc: 'Monter ton PC pièce par pièce, avec des configurations cohérentes selon ton budget.',
+    href: '/guide-pc-gaming/',
+    cta: 'Lire le guide',
+  },
+];
+---
+
+<BaseLayout
+  title="Outils gratuits"
+  description={`Des outils gratuits pour équiper et régler ton poste de travail : calculateur de hauteur de bureau, checklist ergonomie, guide de montage PC. ${siteConfig.name}.`}
+>
+  <section class="container outils">
+    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Outils gratuits' }]} />
+
+    <header class="outils__head">
+      <p class="outils__eyebrow">100 % gratuit · sans inscription</p>
+      <h1>Outils gratuits</h1>
+      <p class="outils__lede">
+        Des outils pratiques pour aménager ton poste sans te tromper — calculs, réglages et montage.
+        Utilise-les autant que tu veux, et partage-les si ça peut aider quelqu’un.
+      </p>
+    </header>
+
+    <div class="outils__grid">
+      {tools.map((t) => (
+        <article class="tool card card--hover">
+          <span class="tool__icon" aria-hidden="true">{t.icon}</span>
+          <h2><a class="stretched-link" href={t.href}>{t.title}</a></h2>
+          <p class="tool__desc">{t.desc}</p>
+          <span class="tool__cta">{t.cta} →</span>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .outils { padding: 2.5rem 0 3.5rem; }
+  .outils__head { max-width: 60ch; }
+  .outils__eyebrow {
+    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--color-accent); font-weight: 700; margin: 0 0 0.4rem;
+  }
+  .outils h1 { margin: 0; }
+  .outils__lede { color: var(--color-text-muted); font-size: 1.05rem; margin-top: 0.7rem; }
+
+  .outils__grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.1rem; margin-top: 2.4rem;
+  }
+  .tool { position: relative; padding: 1.7rem 1.6rem; display: flex; flex-direction: column; }
+  .tool__icon { font-size: 2rem; }
+  .tool h2 { margin: 0.7rem 0 0.4rem; font-size: 1.25rem; }
+  .tool h2 a { color: var(--color-text); text-decoration: none; }
+  .tool:hover h2 a { color: var(--color-accent); }
+  .tool__desc { color: var(--color-text-muted); font-size: 0.95rem; margin: 0 0 1rem; flex: 1; }
+  .tool__cta { color: var(--color-accent); font-weight: 600; font-size: 0.95rem; }
+</style>
