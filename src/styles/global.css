@@ -1,23 +1,23 @@
 :root {
   color-scheme: dark;
 
-  /* Palette sombre premium */
-  --color-bg: #0d1017;
-  --color-bg-soft: #12161f; /* fond de section alternatif, pour donner du relief */
-  --color-text: #eceff5;
-  --color-text-muted: #9aa4b3;
-  --color-text-faint: #646d7b;
-  --color-border: #242b37;
-  --color-accent: #4c8dff; /* surchargé dynamiquement depuis siteConfig.accentColor */
-  --color-accent-soft: color-mix(in srgb, var(--color-accent) 16%, transparent);
-  --color-signal: #f5a53b; /* accent secondaire chaud, à utiliser avec parcimonie */
-  --color-surface: #161b25;
-  --color-surface-raised: #1c2330;
+  /* Palette studio tech — sombre premium, plus net */
+  --color-bg: #10141b; /* charbon */
+  --color-bg-soft: #171d27; /* ardoise, fond de section */
+  --color-text: #eef2f7; /* blanc froid */
+  --color-text-muted: #9aa6b4;
+  --color-text-faint: #626d7c;
+  --color-border: #29323f;
+  --color-accent: #5b9bff; /* bleu vif — surchargé depuis siteConfig.accentColor */
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  --color-signal: #6ee0d0; /* cyan frais, accent secondaire */
+  --color-surface: #1a212b;
+  --color-surface-raised: #212a36;
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 16px 40px -16px rgba(0, 0, 0, 0.7);
+  --shadow-md: 0 18px 44px -16px rgba(0, 0, 0, 0.68);
 
-  --font-display: 'Outfit', 'Inter', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 
   --max-width: 720px;
@@ -44,6 +44,12 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background-color: var(--color-bg);
+  /* Lueur discrète bleu/cyan en haut de page pour un fond moins plat */
+  background-image:
+    radial-gradient(120% 60% at 12% -10%, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 58%),
+    radial-gradient(90% 50% at 92% -6%, color-mix(in srgb, var(--color-signal) 12%, transparent), transparent 60%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   line-height: 1.6;
   font-size: 17px;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -51,14 +57,14 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.15;
+  line-height: 1.1;
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.7rem; margin-top: 0; }
+h1 { font-size: 2.85rem; margin-top: 0; }
 h2 { font-size: 1.6rem; }
 h3 { font-size: 1.22rem; }
 
