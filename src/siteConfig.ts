@@ -51,6 +51,17 @@ export const siteConfig = {
   // Revendiquer un site web → "Ajouter une balise HTML"). Colle ici la valeur
   // du content de la balise <meta name="p:domain_verify" content="...">.
   pinterestVerification: 'c423934bbd4908b7a53d8d6217675a21',
+
+  // Encart "ressource gratuite" de la sidebar (l'aimant à liens du site)
+  freebie: {
+    url: '/outils/',
+    title: 'Outils gratuits',
+    desc: 'Calculateur de hauteur de bureau, checklist ergonomie et guide PC.',
+    cta: 'Voir les outils',
+  },
+
+  // Newsletter : colle ici l'URL du formulaire de ton service (Brevo/Mailchimp).
+  newsletter: { actionUrl: '' },
 };
 
 export type SiteConfig = typeof siteConfig;
