@@ -14,6 +14,11 @@ products:
   - asin: "B0BTDX26B2"
     title: "Sony WH-CH720N — réduction de bruit active, 35h d'autonomie"
     blurb: "Très bon niveau de réduction de bruit pour le prix, léger sur la durée, micro correct pour les appels occasionnels."
+faq:
+  - question: "Réduction de bruit active ou passive ?"
+    answer: "La réduction active (ANC) supprime électroniquement les bruits constants (ventilation, brouhaha), idéale en open space ou à la maison. La passive ne fait qu'isoler physiquement. Pour se concentrer en télétravail, l'ANC apporte un vrai confort."
+  - question: "Faut-il un micro sur le casque pour les visios ?"
+    answer: "Oui, un micro intégré de qualité (avec réduction de bruit) suffit pour des visios claires sans matériel séparé. Un micro-perche ou des micros à formation de faisceau garantissent d'être bien entendu."
 ---
 
 ## Pourquoi un casque à réduction de bruit change le télétravail

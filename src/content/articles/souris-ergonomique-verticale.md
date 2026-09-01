@@ -14,6 +14,11 @@ products:
   - asin: "B07FNHV4MW"
     title: "Logitech MX Vertical — sans fil, 4000 PPP, multi-appareils"
     blurb: "La référence du genre : angle à 57° qui réduit vraiment la pronation du poignet, autonomie de plusieurs semaines, compatible PC/Mac."
+faq:
+  - question: "Une souris verticale soulage-t-elle le poignet ?"
+    answer: "Oui : en plaçant la main en position poignée de main (pouce vers le haut), elle réduit la torsion de l'avant-bras, souvent responsable des douleurs. Le confort se ressent surtout sur de longues journées."
+  - question: "Faut-il un temps d'adaptation ?"
+    answer: "Un peu : les premiers jours, la préhension et la précision demandent un ajustement, puis le geste devient naturel. Choisissez une taille adaptée à votre main pour faciliter la transition."
 ---
 
 ## Pourquoi passer à une souris verticale

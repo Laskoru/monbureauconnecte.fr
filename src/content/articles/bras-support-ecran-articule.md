@@ -14,6 +14,11 @@ products:
   - asin: "B07T4HQS2N"
     title: "HUANUO — bras simple, 13 à 32 pouces, jusqu'à 9 kg"
     blurb: "Installation rapide en conception monobloc, bon compromis pour un premier écran externe sur un bureau classique."
+faq:
+  - question: "À quelle hauteur régler son écran ?"
+    answer: "Le haut de l'écran doit arriver au niveau des yeux, à environ un bras de distance, pour garder la nuque droite. Un bras articulé permet ce réglage précis, contrairement à un pied fixe."
+  - question: "Un bras d'écran convient-il à tous les écrans ?"
+    answer: "La plupart des bras acceptent la norme VESA (75x75 ou 100x100 mm) et une plage de taille/poids indiquée (souvent 17 à 32 pouces). Vérifiez que votre écran est compatible VESA et que son poids entre dans la fourchette du bras."
 ---
 
 ## Pourquoi installer un bras support écran

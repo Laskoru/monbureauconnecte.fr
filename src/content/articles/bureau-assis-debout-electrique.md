@@ -14,6 +14,11 @@ products:
   - asin: "B0DQ8FGRTV"
     title: "FLEXISPOT 120x60 cm — double moteur, plateau monobloc, mémoire de hauteur"
     blurb: "Le double moteur monte plus vite et plus silencieusement qu'un simple moteur, et encaisse jusqu'à 100 kg : c'est le choix à faire si le bureau porte deux écrans et bouge plusieurs fois par jour."
+faq:
+  - question: "Un bureau assis-debout est-il vraiment utile ?"
+    answer: "Oui : alterner assis et debout réduit la sédentarité et soulage le dos. L'idéal est de changer de position régulièrement plutôt que de rester debout des heures. Un modèle électrique avec mémoire de hauteurs rend l'alternance facile."
+  - question: "Électrique ou manuel ?"
+    answer: "L'électrique se règle en quelques secondes au bouton, avec mémorisation des hauteurs, ce qui favorise l'alternance ; le manuel à manivelle est moins cher mais plus contraignant, donc souvent délaissé. Pour un usage quotidien, l'électrique tient mieux dans l'habitude."
 ---
 
 ## Pourquoi passer à un bureau assis-debout

@@ -14,6 +14,11 @@ products:
   - asin: "B0DG2XCHQ2"
     title: "NEEWER Basics 7\" — compact, dimmable"
     blurb: "Format compact qui se pose facilement à côté de l'écran, suffisant pour la plupart des visios en intérieur."
+faq:
+  - question: "Une ring light améliore-t-elle vraiment les visios ?"
+    answer: "Nettement : un éclairage frontal doux supprime les ombres du visage et donne une image plus nette, surtout dans une pièce mal éclairée. C'est l'accessoire le plus rentable pour paraître à son avantage en visio."
+  - question: "Quelle taille de ring light choisir ?"
+    answer: "Pour un bureau, une ring light de 25 à 30 cm posée derrière l'écran ou clipsée suffit. Privilégiez une température de couleur réglable (chaud à froid) et une intensité variable pour vous adapter à la pièce."
 ---
 
 ## Pourquoi l'éclairage change la perception en visio

@@ -14,6 +14,11 @@ products:
   - asin: "B081396NSX"
     title: "SONGMICS OBG73BRV1 — Noir/Rouge, accoudoirs 4D, charge 150 kg"
     blurb: "Bon compromis pour un usage quotidien : accoudoirs 4D, appui-tête et support lombaire réglables, environ 140-150€."
+faq:
+  - question: "Une chaise gaming est-elle bonne pour le télétravail ?"
+    answer: "Oui, si le maintien est au rendez-vous : dossier haut inclinable, soutien lombaire réglable et accoudoirs ajustables. Beaucoup offrent un bon rapport confort/prix pour de longues journées assises."
+  - question: "Chaise gaming ou chaise de bureau ergonomique ?"
+    answer: "La gaming mise sur le maintien enveloppant et le style ; l'ergonomique sur les réglages fins (assise, mécanisme synchrone). Pour de longues heures, l'essentiel reste le soutien lombaire et des accoudoirs réglables, présents sur les bons modèles des deux."
 ---
 
 ## Pourquoi le choix d'une chaise gaming compte vraiment

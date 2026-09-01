@@ -14,6 +14,11 @@ products:
   - asin: "B07W5JK8DT"
     title: "Logitech MX Mechanical — AZERTY, switches silencieux"
     blurb: "La référence pour le télétravail : boutons tactiles silencieux, sans fil, autonomie de plusieurs semaines."
+faq:
+  - question: "Un clavier mécanique peut-il être silencieux ?"
+    answer: "Oui : les switchs dits silencieux (rouge silent, brun silencieux) et des amortisseurs réduisent nettement le bruit de frappe, tout en gardant le confort mécanique. C'est le bon compromis pour un bureau partagé ou des visios."
+  - question: "Quels switchs choisir pour travailler ?"
+    answer: "Pour la bureautique, les switchs linéaires silencieux (rouge silent) ou tactiles légers (brun) sont les plus agréables et discrets. Évitez les switchs clicky (bleus), trop bruyants en environnement pro."
 ---
 
 ## Pourquoi un clavier mécanique silencieux

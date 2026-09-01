@@ -13,6 +13,11 @@ products:
   - asin: "B06X19FLTC"
     title: "Amazon Basics — Grand tapis de souris gaming, 90 x 43 cm"
     blurb: "Surface tissu lisse, base antidérapante, largement de quoi accueillir clavier et souris côte à côte."
+faq:
+  - question: "À quoi sert un tapis de souris XXL ?"
+    answer: "Il couvre toute la zone clavier + souris : surface homogène et confortable, repose-poignet naturel, meilleure glisse. Il protège aussi le bureau et unifie l'esthétique du poste."
+  - question: "Comment nettoyer un grand tapis de souris ?"
+    answer: "La plupart des modèles en tissu se nettoient à l'eau tiède savonneuse, à la main, puis séchage à plat à l'air libre. Évitez le sèche-linge, qui déforme la base en caoutchouc."
 ---
 
 ## Pourquoi passer à un tapis XXL

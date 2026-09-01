@@ -14,6 +14,11 @@ products:
   - asin: "B006A2Q81M"
     title: "Logitech C920 HD Pro — Full HD 1080p"
     blurb: "La référence increvable du télétravail : plug-and-play, corrections automatiques de la lumière, très bon rapport qualité/prix."
+faq:
+  - question: "1080p ou 4K pour le télétravail ?"
+    answer: "Le 1080p suffit largement pour la visioconférence : les plateformes compressent le flux et la différence est peu visible. La 4K a un intérêt pour le streaming, l'enregistrement ou un cadrage recadré, au prix d'un débit plus lourd."
+  - question: "Qu'est-ce qui compte le plus sur une webcam ?"
+    answer: "Au-delà de la résolution : le comportement en basse lumière, l'autofocus, le champ de vision et un bon micro. Une 1080p bien équipée bat souvent une 4K bas de gamme pour les visios du quotidien."
 ---
 
 ## Le 1080p suffit-il vraiment ?
