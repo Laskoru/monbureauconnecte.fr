@@ -34,3 +34,9 @@ Une webcam 4K a un vrai intérêt si tu fais des présentations où le partage d
 ## Conclusion
 
 Pour la majorité des télétravailleurs, une bonne 1080p avec une correction de lumière fiable couvre largement les besoins. La 4K devient pertinente pour un usage plus exigeant : présentations client récurrentes, enregistrement de contenu, ou setup où l'image doit vraiment impressionner.
+
+## Pour aller plus loin
+
+- [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
+- [Micro USB pour visio et podcast](/articles/micro-usb-visioconference-podcast/)
+- [Casque à réduction de bruit pour le télétravail](/articles/casque-reduction-bruit-teletravail/)

@@ -35,3 +35,9 @@ La transition vers une souris verticale demande quelques jours d'adaptation, le 
 ## Conclusion
 
 Une souris verticale n'est pas un gadget ergonomique parmi d'autres : c'est l'un des rares accessoires dont l'effet sur le confort du poignet se ressent dès les premières semaines d'utilisation, surtout pour qui passe plusieurs heures par jour devant un écran.
+
+## Pour aller plus loin
+
+- [Trackball ou souris classique ?](/articles/trackball-vs-souris-classique-poignet/)
+- [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)
+- [Souris sans fil silencieuse](/articles/souris-sans-fil-silencieuse/)

@@ -40,3 +40,9 @@ Pour un poste fixe à la maison, un modèle en aluminium avec plusieurs hauteurs
 ## Conclusion
 
 Associé à un clavier et une souris externes, un support ordinateur portable transforme un simple laptop en un vrai poste ergonomique, pour un coût largement inférieur à celui d'un bras d'écran ou d'un moniteur externe.
+
+## Pour aller plus loin
+
+- [Bras support d'écran articulé](/articles/bras-support-ecran-articule/)
+- [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)
+- [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)

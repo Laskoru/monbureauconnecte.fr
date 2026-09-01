@@ -34,3 +34,9 @@ Pour un usage bureautique quotidien en open space, privilégie un modèle avec d
 ## Conclusion
 
 Le bon clavier mécanique silencieux dépend surtout de l'environnement : en open space partagé, mise sur la réduction de bruit avant tout ; en bureau fermé ou en télétravail solo, le confort de frappe peut peser davantage dans la balance.
+
+## Pour aller plus loin
+
+- [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)
+- [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
+- [Tapis de souris XXL](/articles/tapis-souris-xxl-bureau/)

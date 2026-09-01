@@ -59,3 +59,9 @@ Enfin, un caisson n'a d'intérêt que si son contenu reste trié : la tentation 
 ## Conclusion
 
 Le caisson de rangement sous bureau est une solution simple pour dégager un plan de travail sans sacrifier l'accès aux objets utilisés au quotidien. L'essentiel se joue sur la compatibilité avec l'espace disponible sous le bureau, la répartition entre tiroirs fermés et niches ouvertes, et la solidité de la structure sur la durée. Bien choisi et bien rangé, il transforme un poste de travail encombré en un espace nettement plus fonctionnel, sans nécessiter de meuble supplémentaire dans la pièce.
+
+## Pour aller plus loin
+
+- [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
+- [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
+- [Bras support d'écran articulé](/articles/bras-support-ecran-articule/)

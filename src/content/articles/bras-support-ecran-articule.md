@@ -35,3 +35,9 @@ Pour un seul écran, un bras simple avec ressort à gaz suffit largement et coû
 ## Conclusion
 
 Le bras support écran est l'un des accessoires qui a le meilleur rapport entre le prix et l'amélioration réelle de la posture au quotidien, à condition de bien vérifier la compatibilité VESA et la charge supportée avant l'achat.
+
+## Pour aller plus loin
+
+- [Support pour ordinateur portable](/articles/support-ordinateur-portable-ergonomique/)
+- [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
+- [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)

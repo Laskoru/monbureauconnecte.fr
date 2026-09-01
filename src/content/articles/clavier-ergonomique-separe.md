@@ -40,3 +40,9 @@ Pour découvrir le format sans trop bouleverser ses habitudes, un clavier avec u
 ## Conclusion
 
 Le clavier ergonomique séparé n'est pas réservé aux cas de douleurs avérées : c'est un investissement préventif pertinent pour quiconque tape plusieurs heures par jour, avec un vrai ressenti dès les premières semaines d'utilisation.
+
+## Pour aller plus loin
+
+- [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)
+- [Souris ergonomique verticale](/articles/souris-ergonomique-verticale/)
+- [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)

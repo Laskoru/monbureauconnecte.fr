@@ -56,3 +56,9 @@ Il vaut aussi la peine d'accepter, dès le départ, qu'une plante demande un min
 ## Conclusion
 
 La plante de bureau dépolluante n'est pas un accessoire miracle pour l'air ambiant, mais c'est un ajout simple, durable et peu coûteux qui améliore réellement le cadre de travail au quotidien. Le choix se joue avant tout sur la tolérance à la lumière disponible sur le poste et sur le temps qu'on peut raisonnablement consacrer à l'arrosage — des variétés comme la sansevieria ou la plante araignée couvrent la grande majorité des situations de bureau, avec un entretien qui reste largement à la portée de qui n'a jamais eu la main verte.
+
+## Pour aller plus loin
+
+- [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)
+- [Caisson de rangement sous le bureau](/articles/caisson-rangement-sous-bureau/)
+- [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)

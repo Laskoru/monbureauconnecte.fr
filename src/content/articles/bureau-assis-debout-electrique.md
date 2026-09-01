@@ -35,3 +35,9 @@ Pour un premier setup ou un espace limité, un modèle compact avec un plateau s
 ## Conclusion
 
 Le bureau assis-debout n'est pas un gadget : c'est l'un des achats qui a le plus d'impact réel sur le confort en télétravail, à condition de bien dimensionner la plage de hauteur et la stabilité selon ton setup.
+
+## Pour aller plus loin
+
+- [Tabouret assis-debout / siège selle](/articles/tabouret-assis-debout-siege-selle-bureau/)
+- [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
+- [Tapis de sol pour chaise de bureau](/articles/tapis-sol-chaise-bureau/)

@@ -61,3 +61,9 @@ Côté entretien, un simple passage à l'aspirateur ou un coup de chiffon humide
 ## Conclusion
 
 Le tapis de sol pour chaise de bureau fait partie de ces petits accessoires qu'on regrette de ne pas avoir installés plus tôt, une fois qu'on aperçoit les premières marques sur le parquet. Le choix se résume à peu de critères — matériau adapté au sol, épaisseur suffisante, base qui ne glisse pas — mais les respecter évite des années de frottement inutile sur une surface qui, elle, coûte bien plus cher à réparer qu'à protéger.
+
+## Pour aller plus loin
+
+- [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
+- [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
+- [Tabouret assis-debout / siège selle](/articles/tabouret-assis-debout-siege-selle-bureau/)

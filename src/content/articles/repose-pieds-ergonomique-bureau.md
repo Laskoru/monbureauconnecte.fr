@@ -40,3 +40,9 @@ Pour un usage occasionnel ou un bureau déjà bien réglé, un modèle simple av
 ## Conclusion
 
 Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu coûteux qui aide surtout à casser l'immobilité prolongée des jambes, un facteur de fatigue souvent sous-estimé en télétravail comme au bureau.
+
+## Pour aller plus loin
+
+- [Coussin d'assise ergonomique (coccyx)](/articles/coussin-assise-ergonomique-coccyx/)
+- [Tabouret assis-debout / siège selle](/articles/tabouret-assis-debout-siege-selle-bureau/)
+- [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)

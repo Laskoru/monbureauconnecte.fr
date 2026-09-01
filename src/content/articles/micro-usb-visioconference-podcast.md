@@ -40,3 +40,9 @@ Pour des visios professionnelles classiques, un micro de conférence avec bouton
 ## Conclusion
 
 Un micro USB dédié reste l'un des accessoires les plus rentables pour améliorer la qualité perçue en visioconférence : le gain en clarté est immédiat, sans changer le reste du matériel.
+
+## Pour aller plus loin
+
+- [Webcam 1080p ou 4K ?](/articles/webcams-1080p-vs-4k/)
+- [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
+- [Casque à réduction de bruit pour le télétravail](/articles/casque-reduction-bruit-teletravail/)

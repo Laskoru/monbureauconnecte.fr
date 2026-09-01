@@ -40,3 +40,9 @@ Pour un poste simple avec un seul écran externe, un hub compact avec HDMI, USB-
 ## Conclusion
 
 Le bon hub ou la bonne station d'accueil dépend surtout du nombre d'écrans à gérer et de la stabilité réseau recherchée : au-delà d'un simple écran externe, investir dans une vraie station d'accueil avec Ethernet change vraiment le confort d'usage au quotidien.
+
+## Pour aller plus loin
+
+- [Support pour ordinateur portable](/articles/support-ordinateur-portable-ergonomique/)
+- [Pavé numérique externe sans fil](/articles/pave-numerique-externe-sans-fil/)
+- [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)

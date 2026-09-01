@@ -35,3 +35,9 @@ Pour un usage quotidien intensif avec beaucoup d'appels, un modèle milieu de ga
 ## Conclusion
 
 Le bon casque à réduction de bruit dépend surtout de l'environnement à couper : bruit de fond continu (voisinage, ventilation) ou brouhaha de conversations en open space. Dans les deux cas, le confort sur plusieurs heures compte autant que la performance de l'ANC elle-même.
+
+## Pour aller plus loin
+
+- [Micro USB pour visio et podcast](/articles/micro-usb-visioconference-podcast/)
+- [Webcam 1080p ou 4K ?](/articles/webcams-1080p-vs-4k/)
+- [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)

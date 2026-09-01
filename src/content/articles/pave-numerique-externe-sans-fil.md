@@ -68,3 +68,9 @@ La plupart des modèles fonctionnent sous **Windows, macOS et Linux** sans pilot
 ## En résumé
 
 Le bon pavé numérique externe sans fil, c'est d'abord un choix de **liaison** — **RF 2,4 GHz** pour la simplicité, **Bluetooth** pour la souplesse — avec une **bonne autonomie**, un **agencement adapté** à votre saisie et un format **compact et stable**. De quoi redonner à un portable ou à un clavier compact toute l'efficacité d'un pavé numérique, sans câble.
+
+## Pour aller plus loin
+
+- [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)
+- [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
+- [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)

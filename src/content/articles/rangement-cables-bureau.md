@@ -40,3 +40,9 @@ Pour un bureau simple avec peu de câbles, un jeu de clips autocollants ou un pe
 ## Conclusion
 
 Le rangement des câbles n'a rien d'un détail cosmétique : un bureau dégagé limite les faux mouvements, facilite le nettoyage et rend n'importe quel autre accessoire (bras d'écran, lampe, hub USB) plus simple à intégrer proprement.
+
+## Pour aller plus loin
+
+- [Caisson de rangement sous le bureau](/articles/caisson-rangement-sous-bureau/)
+- [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)
+- [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)

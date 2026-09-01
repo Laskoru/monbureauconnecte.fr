@@ -40,3 +40,9 @@ Pour un usage bureautique classique, un modèle avec plusieurs températures de 
 ## Conclusion
 
 Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers pour un effet réel sur le confort visuel en fin de journée, à condition de privilégier le réglage de luminosité et de température de couleur plutôt que la seule puissance en lumens.
+
+## Pour aller plus loin
+
+- [Bras support d'écran articulé](/articles/bras-support-ecran-articule/)
+- [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
+- [Plante de bureau dépolluante](/articles/plante-bureau-depolluante/)

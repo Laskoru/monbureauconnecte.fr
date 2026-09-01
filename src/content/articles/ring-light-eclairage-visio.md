@@ -35,3 +35,9 @@ Pour des visios professionnelles ponctuelles, un petit modèle compact avec lumi
 ## Conclusion
 
 Le ring light n'a rien d'un gadget réservé aux créateurs de contenu : dans une pièce mal éclairée, c'est souvent l'accessoire qui a le plus d'impact visible sur la qualité perçue d'une visioconférence, pour un budget très raisonnable.
+
+## Pour aller plus loin
+
+- [Webcam 1080p ou 4K ?](/articles/webcams-1080p-vs-4k/)
+- [Micro USB pour visio et podcast](/articles/micro-usb-visioconference-podcast/)
+- [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)

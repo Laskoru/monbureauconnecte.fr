@@ -61,3 +61,9 @@ Il vaut aussi mieux ne pas laisser le coussin en plein soleil ou près d'une sou
 ## Conclusion
 
 Le coussin d'assise ergonomique est un accessoire simple, peu coûteux et facile à tester, qui répond à un problème très concret : la pression excessive sur le coccyx en position assise prolongée. Le choix se résume à quelques critères clairs — découpe en U marquée, densité de mousse suffisante, housse lavable et base antidérapante — mais bien les respecter fait toute la différence entre un coussin qui s'affaisse en quelques semaines et un accessoire qui tient plusieurs années d'usage quotidien.
+
+## Pour aller plus loin
+
+- [Coussin lombaire pour chaise de bureau](/articles/coussin-lombaire-chaise-bureau/)
+- [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
+- [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)

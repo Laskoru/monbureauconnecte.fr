@@ -57,3 +57,9 @@ Il vaut aussi la peine de vérifier, avant d'acheter, la hauteur du bureau utili
 ## Conclusion
 
 Le tabouret assis-debout, qu'il prenne la forme d'une assise dynamique nue ou d'un siège haut avec dossier et repose-pieds, répond à un vrai besoin : casser la position statique sans repasser sans arrêt de la position assise à la position debout complète. Le choix se joue surtout sur la plage de hauteur réglable, la stabilité de la base et le type d'assise retenu, plus que sur le prix affiché. Utilisé en alternance avec une vraie chaise de bureau, quelques heures par jour, il apporte un vrai bénéfice de mouvement sans demander un changement complet de poste de travail.
+
+## Pour aller plus loin
+
+- [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
+- [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
+- [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)

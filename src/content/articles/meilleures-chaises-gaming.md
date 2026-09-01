@@ -37,3 +37,9 @@ Pour un usage occasionnel (moins de 3h/jour), un modèle d'entrée de gamme avec
 ## Conclusion
 
 Le bon choix dépend surtout du nombre d'heures passées assis par jour et de la priorité donnée au confort lombaire versus au style. Dans les deux cas, éviter les modèles sans réglages lombaires ni accoudoirs ajustables, qui vieillissent mal sur la durée.
+
+## Pour aller plus loin
+
+- [Chaise sans accoudoirs pour petit espace](/articles/chaise-bureau-sans-accoudoirs-petit-espace/)
+- [Coussin lombaire pour chaise de bureau](/articles/coussin-lombaire-chaise-bureau/)
+- [Souris gaming pour le travail](/articles/souris-gaming-pour-le-travail/)

@@ -59,3 +59,9 @@ Il vaut aussi la peine de vérifier, avant d'ajouter un coussin, que le dossier 
 ## Conclusion
 
 Le coussin lombaire pour chaise de bureau est l'un des accessoires les plus rentables pour qui passe de longues heures assis : peu coûteux, simple à installer, et capable de corriger un vrai défaut de conception présent sur la grande majorité des chaises de bureau standard. Le choix se joue sur quelques critères concrets — courbure marquée, fixation par sangles fiable, densité de mousse adaptée à l'intensité de la gêne — plus que sur la marque ou le prix affiché. Bien choisi, il tient plusieurs années et évite d'investir prématurément dans un nouveau siège ergonomique complet.
+
+## Pour aller plus loin
+
+- [Coussin d'assise ergonomique (coccyx)](/articles/coussin-assise-ergonomique-coccyx/)
+- [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
+- [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
