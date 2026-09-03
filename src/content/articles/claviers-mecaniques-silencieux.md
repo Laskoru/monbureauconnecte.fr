@@ -1,5 +1,5 @@
 ---
-title: "Meilleurs claviers mécaniques silencieux pour l'open space et la visio"
+title: "Quel clavier mécanique silencieux pour l'open space et la visio ?"
 description: "Notre sélection de claviers mécaniques silencieux, pour taper sans déranger en open space ou pendant une visioconférence."
 pubDate: 2026-08-07
 author: "Rédaction"

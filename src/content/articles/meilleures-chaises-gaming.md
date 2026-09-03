@@ -1,5 +1,5 @@
 ---
-title: "Meilleures chaises gaming en 2026 : notre comparatif"
+title: "Quelle chaise gaming choisir ? Notre comparatif 2026"
 description: "Notre sélection des meilleures chaises gaming pour les longues sessions, du modèle économique au haut de gamme ergonomique."
 pubDate: 2026-08-01
 author: "Rédaction"
