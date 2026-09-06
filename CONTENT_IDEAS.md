@@ -47,6 +47,19 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [ ] Kit de nettoyage écran et clavier — entretenir son matériel sans l'abîmer — mobilier
 - [ ] Chauffe-tasse USB pour le bureau — garder son café chaud en réunion — mobilier
 
+## Conseils (sans produit — secours si captcha Amazon bloque l'article du jour)
+
+Utilisée quand `check-product.sh` renvoie `CAPTCHA=1` avant qu'un produit soit
+validé : au lieu d'abandonner la rédaction du jour, on publie un article de
+conseil sans bloc `products:`, insensible au captcha. Format identique, sans
+tag catégorie imposé (choisir mobilier/peripheriques/audio-visio selon le sujet).
+
+- [x] Bien régler sa chaise et son écran — réglages ergonomiques gratuits — mobilier (sans produit)
+- [ ] Pourquoi tu as mal aux cervicales en télétravail (et comment corriger sans acheter) — mobilier (sans produit)
+- [ ] Organiser son bureau pour réduire la fatigue visuelle — peripheriques (sans produit)
+- [ ] Le syndrome du canal carpien au bureau : signes et prévention — peripheriques (sans produit)
+- [ ] Bien préparer sa visio (son, lumière, cadrage) sans acheter de matériel — audio-visio (sans produit)
+
 ## Ajouts (réserve)
 
 - [ ] Lampe à pince pour bureau — gagner de la place — mobilier
