@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import GearFinder from '../components/GearFinder.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
 
@@ -24,8 +25,8 @@ const stats = [
   <section class="hero">
     <div class="wide hero__inner">
       <p class="hero__badge"><span class="hero__badge-dot"></span> Comparatifs indépendants · bureau · gaming · télétravail</p>
-      <h1 class="hero__title">{siteConfig.tagline}</h1>
-      <p class="hero__lede">{siteConfig.description}</p>
+      <h1 class="hero__title">Le matériel qui transforme ton <span class="hero__hl">bureau</span> en poste de pro.</h1>
+      <p class="hero__lede">{siteConfig.tagline} — pour choisir juste, sans te faire avoir par le marketing.</p>
       <div class="hero__actions">
         {latest.length > 0 && (
           <a class="btn btn--primary" href={`/articles/${latest[0].slug}/`}>Lire le dernier comparatif →</a>
@@ -43,6 +44,8 @@ const stats = [
       </div>
     </div>
   </section>
+
+  <GearFinder />
 
   <section class="section section--soft">
     <div class="wide">
@@ -187,8 +190,15 @@ const stats = [
     line-height: 1.05;
     letter-spacing: -0.02em;
     margin: 0 0 1.2rem;
-    max-width: 17ch;
+    max-width: 20ch;
     text-wrap: balance;
+  }
+  .hero__hl {
+    color: var(--color-signal);
+    text-decoration: underline wavy var(--color-accent);
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 3px;
+    white-space: nowrap;
   }
   .hero__lede {
     font-size: clamp(1.02rem, 1.6vw, 1.18rem);
@@ -352,3 +362,13 @@ const stats = [
     .categories__grid { grid-template-columns: 1fr; }
   }
 </style>
+
+<script>
+  // Compteurs animés du hero
+  document.querySelectorAll('.hero__stat-value').forEach((el) => {
+    const raw = el.textContent || ''; const m = raw.match(/\d+/); if (!m) return;
+    const end = +m[0], post = raw.slice(m.index + m[0].length); let cur = 0;
+    const step = Math.max(1, Math.ceil(end / 26));
+    const t = setInterval(() => { cur += step; if (cur >= end) { cur = end; clearInterval(t); } el.textContent = cur + post; }, 26);
+  });
+</script>
