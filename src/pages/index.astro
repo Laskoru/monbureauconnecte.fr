@@ -50,7 +50,7 @@ const stats = [
         {latest.length > 0 && (
           <a class="btn btn--primary" href={`/articles/${latest[0].slug}/`}>Lire le dernier comparatif →</a>
         )}
-        <a class="btn btn--glass" href="/articles/">Voir tous les articles</a>
+        <a class="btn btn--outline" href="/articles/">Voir tous les articles</a>
       </div>
 
       <div class="hero__stats">
@@ -197,101 +197,93 @@ const stats = [
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    color: #fff;
-    background-color: #0b0d13;
-    background-image:
-      linear-gradient(96deg, rgba(9, 11, 17, 0.95) 0%, rgba(9, 11, 17, 0.74) 46%, rgba(9, 11, 17, 0.34) 100%),
-      linear-gradient(180deg, rgba(9, 11, 17, 0.35) 0%, rgba(9, 11, 17, 0) 32%, var(--color-bg) 100%),
-      url('https://images.unsplash.com/photo-1626218174358-7769486c4b79?q=80&w=2000&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:
+      radial-gradient(75% 120% at 88% -12%, color-mix(in srgb, var(--color-accent) 13%, transparent), transparent 60%),
+      radial-gradient(60% 90% at 6% 0%, color-mix(in srgb, var(--color-signal) 9%, transparent), transparent 55%),
+      linear-gradient(180deg, #ffffff 0%, var(--color-bg) 100%);
+    border-bottom: 1px solid var(--color-border);
   }
-  /* halo d'accent, discret */
+  /* fine grille de points, très discrète, fondue vers le coin haut-droit */
   .hero::before {
     content: '';
     position: absolute;
-    top: -20%;
-    right: -10%;
-    width: 55%;
-    height: 90%;
-    background: radial-gradient(closest-side, color-mix(in srgb, var(--color-accent) 30%, transparent), transparent 70%);
-    filter: blur(30px);
+    inset: 0;
+    background-image: radial-gradient(color-mix(in srgb, var(--color-text) 7%, transparent) 1px, transparent 1.4px);
+    background-size: 24px 24px;
+    -webkit-mask-image: radial-gradient(72% 65% at 85% 0%, #000, transparent 72%);
+    mask-image: radial-gradient(72% 65% at 85% 0%, #000, transparent 72%);
+    opacity: 0.55;
     z-index: -1;
     pointer-events: none;
   }
   .hero__inner {
-    padding: clamp(4rem, 13vh, 8rem) 1.25rem clamp(3.5rem, 9vh, 6rem);
+    padding: clamp(3.4rem, 11vh, 6.5rem) 1.25rem clamp(3rem, 8vh, 5rem);
   }
   .hero__badge {
     display: inline-flex;
     align-items: center;
     gap: 0.55em;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    backdrop-filter: blur(6px);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
     padding: 0.5em 1em;
     border-radius: 999px;
+    font-family: var(--font-body);
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.01em;
-    color: rgba(255, 255, 255, 0.92);
-    margin: 0 0 1.5rem;
+    color: var(--color-text-muted);
+    margin: 0 0 1.6rem;
   }
   .hero__badge-dot {
     width: 7px; height: 7px; border-radius: 50%;
     background: var(--color-signal);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-signal) 30%, transparent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-signal) 22%, transparent);
   }
   .hero__title {
-    font-size: clamp(2.3rem, 5.2vw, 3.9rem);
-    line-height: 1.05;
+    font-size: clamp(2.4rem, 5.4vw, 4rem);
+    line-height: 1.04;
     letter-spacing: -0.02em;
-    margin: 0 0 1.2rem;
-    max-width: 20ch;
+    margin: 0 0 1.3rem;
+    max-width: 18ch;
     text-wrap: balance;
+    color: var(--color-text);
   }
   .hero__hl {
-    color: var(--color-signal);
-    text-decoration: underline wavy var(--color-accent);
-    text-underline-offset: 0.18em;
-    text-decoration-thickness: 3px;
+    color: var(--color-accent);
+    background: linear-gradient(180deg, transparent 64%, color-mix(in srgb, var(--color-signal) 32%, transparent) 64%);
+    padding: 0 0.05em;
     white-space: nowrap;
   }
   .hero__lede {
-    font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.82);
+    color: var(--color-text-muted);
     max-width: 56ch;
     margin: 0 0 2rem;
   }
   .hero__actions { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3rem; }
-  .btn--glass {
-    background: rgba(255, 255, 255, 0.08);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    backdrop-filter: blur(6px);
-  }
-  .btn--glass:hover { background: rgba(255, 255, 255, 0.16); border-color: rgba(255, 255, 255, 0.5); }
 
   .hero__stats {
     display: flex;
     gap: clamp(1.5rem, 5vw, 3.5rem);
     flex-wrap: wrap;
     padding-top: 1.8rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid var(--color-border);
     max-width: 560px;
   }
   .hero__stat-value {
     font-family: var(--font-display);
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
-    font-weight: 700;
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    font-weight: 600;
     margin: 0;
-    color: #fff;
+    color: var(--color-text);
   }
   .hero__stat-label {
+    font-family: var(--font-body);
     font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.65);
+    color: var(--color-text-muted);
     margin: 0.2rem 0 0;
   }
 

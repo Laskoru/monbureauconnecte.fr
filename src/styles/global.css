@@ -1,22 +1,22 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  /* Palette studio tech — sombre premium, plus net */
-  --color-bg: #10141b; /* charbon */
-  --color-bg-soft: #171d27; /* ardoise, fond de section */
-  --color-text: #eef2f7; /* blanc froid */
-  --color-text-muted: #9aa6b4;
-  --color-text-faint: #626d7c;
-  --color-border: #29323f;
-  --color-accent: #5b9bff; /* bleu vif — surchargé depuis siteConfig.accentColor */
-  --color-accent-soft: color-mix(in srgb, var(--color-accent) 18%, transparent);
-  --color-signal: #6ee0d0; /* cyan frais, accent secondaire */
-  --color-surface: #1a212b;
-  --color-surface-raised: #212a36;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 18px 44px -16px rgba(0, 0, 0, 0.68);
+  /* Palette claire éditoriale — lumineuse, nette, chaleureuse */
+  --color-bg: #f7f8fb; /* blanc cassé légèrement bleuté */
+  --color-bg-soft: #eef1f7; /* fond de section alterné */
+  --color-text: #15223c; /* bleu-ardoise profond, plus doux que le noir */
+  --color-text-muted: #56617a;
+  --color-text-faint: #97a1b4;
+  --color-border: #e3e8f0;
+  --color-accent: #2563eb; /* bleu franc — surchargé depuis siteConfig.accentColor */
+  --color-accent-soft: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  --color-signal: #f2860b; /* ambre chaud, accent secondaire */
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(21, 34, 60, 0.06);
+  --shadow-md: 0 16px 40px -20px rgba(21, 34, 60, 0.26);
 
-  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 
@@ -44,28 +44,29 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background-color: var(--color-bg);
-  /* Lueur discrète bleu/cyan en haut de page pour un fond moins plat */
+  /* Voile de couleur très léger en haut de page pour un fond moins plat */
   background-image:
-    radial-gradient(120% 60% at 12% -10%, color-mix(in srgb, var(--color-accent) 16%, transparent), transparent 58%),
-    radial-gradient(90% 50% at 92% -6%, color-mix(in srgb, var(--color-signal) 12%, transparent), transparent 60%);
+    radial-gradient(120% 55% at 8% -12%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 55%),
+    radial-gradient(95% 45% at 96% -8%, color-mix(in srgb, var(--color-signal) 7%, transparent), transparent 60%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   line-height: 1.6;
   font-size: 17px;
+  -webkit-font-smoothing: antialiased;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  line-height: 1.12;
+  font-weight: 600;
+  letter-spacing: -0.008em;
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: 2.85rem; margin-top: 0; }
-h2 { font-size: 1.6rem; }
+h1 { font-size: 2.75rem; font-weight: 600; margin-top: 0; letter-spacing: -0.015em; }
+h2 { font-size: 1.62rem; }
 h3 { font-size: 1.22rem; }
 
 p { margin: 1em 0; }

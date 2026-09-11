@@ -53,11 +53,16 @@
 <style>
   .cookie-banner {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #191c22;
-    color: white;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
     z-index: 100;
     padding: 1rem 1.25rem;
   }
@@ -71,7 +76,7 @@
     justify-content: space-between;
   }
   .cookie-banner p { margin: 0; font-size: 0.9rem; max-width: 640px; }
-  .cookie-banner a { color: white; }
+  .cookie-banner a { color: var(--color-accent); }
   .cookie-banner__actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
   .btn {
     border: none;
@@ -80,6 +85,6 @@
     font-size: 0.9rem;
     cursor: pointer;
   }
-  .btn--accent { background: var(--color-accent); color: white; }
-  .btn--ghost { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); }
+  .btn--accent { background: var(--color-accent); color: #fff; font-weight: 600; }
+  .btn--ghost { background: transparent; color: var(--color-text-muted); border: 1px solid var(--color-border); }
 </style>
