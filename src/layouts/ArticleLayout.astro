@@ -10,10 +10,13 @@ import { siteConfig } from '../siteConfig';
 import { categories, type CategorySlug } from '../categories';
 import { isAvailable } from '../lib/availability';
 import AmazonSearchCTA from '../components/AmazonSearchCTA.astro';
+import InteractiveGuide from '../components/InteractiveGuide.astro';
 
 interface Heading { depth: number; slug: string; text: string }
 interface FaqItem { question: string; answer: string }
 interface Comparison { columns: string[]; rows: string[][] }
+interface GuideOption { label: string; result: string }
+interface InteractiveGuideData { title: string; question: string; intro?: string; options: GuideOption[] }
 
 interface Props {
   slug: string;
@@ -30,6 +33,7 @@ interface Props {
   readingMinutes?: number;
   faq?: FaqItem[];
   comparison?: Comparison;
+  interactiveGuide?: InteractiveGuideData;
 }
 
 const {
@@ -48,6 +52,7 @@ const {
   readingMinutes,
   faq = [],
   comparison,
+  interactiveGuide,
 } = Astro.props;
 const hasProducts = siteConfig.amazon.enabled && products.length > 0;
 
@@ -180,6 +185,8 @@ const jsonLdArticle = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSche
     <div class="article-body">
       <slot />
     </div>
+
+    {interactiveGuide && <InteractiveGuide guide={interactiveGuide} />}
 
     {hasProducts && searchTopic && <AmazonSearchCTA topic={searchTopic} />}
 

@@ -46,6 +46,23 @@ const articles = defineCollection({
         })
       )
       .default([]),
+    // Mini-guide interactif : une question, des réponses cliquables, un conseil
+    // dynamique. Rendu par le composant InteractiveGuide, après le corps.
+    interactiveGuide: z
+      .object({
+        title: z.string(),
+        question: z.string(),
+        intro: z.string().optional(),
+        options: z
+          .array(
+            z.object({
+              label: z.string(),
+              result: z.string(),
+            })
+          )
+          .min(2),
+      })
+      .optional(),
     // Tableau comparatif optionnel, affiché après le corps de l'article.
     // `columns` = en-têtes (ex. ["Critère", "Modèle A", "Modèle B"]),
     // `rows` = lignes, chacune ayant le même nombre de cellules que `columns`.

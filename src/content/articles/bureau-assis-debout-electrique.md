@@ -15,6 +15,18 @@ products:
   - asin: "B0DQ8FGRTV"
     title: "FLEXISPOT 120x60 cm — double moteur, plateau monobloc, mémoire de hauteur"
     blurb: "Le double moteur monte plus vite et plus silencieusement qu'un simple moteur, et encaisse jusqu'à 100 kg : c'est le choix à faire si le bureau porte deux écrans et bouge plusieurs fois par jour."
+interactiveGuide:
+  title: "Quel bureau assis-debout pour toi ?"
+  question: "Ton poste, c'est plutôt…"
+  options:
+    - label: "1 écran, budget serré"
+      result: "Un <strong>simple moteur</strong> suffit largement. Concentre-toi sur une <strong>plage de hauteur</strong> qui couvre ta position assise ET debout (≈ 65-125 cm), et si possible une mémoire de position. Inutile de surpayer la stabilité pour un petit plateau léger."
+    - label: "2 écrans / matériel lourd"
+      result: "Prends un <strong>double moteur</strong> : il monte plus vite, plus silencieusement, et surtout <strong>ne flotte pas</strong> en position haute. Vérifie une charge max d'au moins 100 kg et un plateau monobloc rigide."
+    - label: "Je change de position souvent"
+      result: "La <strong>mémoire de positions</strong> (3-4 hauteurs) devient ta priorité : c'est elle qui rend l'alternance sans effort — donc réelle. Un double moteur ajoute la rapidité qui va avec."
+    - label: "Petit budget, je teste l'idée"
+      result: "Un <strong>rehausseur posé</strong> sur ton bureau actuel dépanne à petit prix, mais il faut déplacer le matériel à chaque changement. Bien pour tester ; si tu accroches, passe vite à un vrai bureau électrique."
 faq:
   - question: "Un bureau assis-debout est-il vraiment utile ?"
     answer: "Oui : alterner assis et debout réduit la sédentarité et soulage le dos. L'idéal est de changer de position régulièrement plutôt que de rester debout des heures. Un modèle électrique avec mémoire de hauteurs rend l'alternance facile."
