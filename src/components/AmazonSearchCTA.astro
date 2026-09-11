@@ -14,7 +14,15 @@ const {
   sub = 'Prix, avis et disponibilité en direct sur Amazon.',
 } = Astro.props;
 
-const url = searchUrl(topic);
+// Nettoie la requête : on retire les mots qui n'ont aucun sens comme recherche
+// Amazon (gratuit, avis, comparatif, meilleur, guide, années…) pour éviter des
+// recherches absurdes comme « ergonomie bureau gratuit ».
+const cleanTopic = topic
+  .replace(/\b(gratuit|gratuite|gratuits|gratuites|avis|comparatif|comparatifs|test|tests|meilleur|meilleure|meilleurs|meilleures|pas cher|guide|20\d\d)\b/gi, '')
+  .replace(/\s+/g, ' ')
+  .trim() || topic;
+
+const url = searchUrl(cleanTopic);
 ---
 
 <div class="amazon-search-cta">
@@ -29,7 +37,7 @@ const url = searchUrl(topic);
     <p class="amazon-search-cta__sub">{sub}</p>
   </div>
   <a class="btn btn--primary amazon-search-cta__link" href={url} target="_blank" rel="nofollow sponsored noopener">
-    Voir « {topic} » →
+    Voir « {cleanTopic} » →
   </a>
 </div>
 

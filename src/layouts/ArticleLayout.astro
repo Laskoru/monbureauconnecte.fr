@@ -181,7 +181,7 @@ const jsonLdArticle = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSche
       <slot />
     </div>
 
-    {searchTopic && <AmazonSearchCTA topic={searchTopic} />}
+    {hasProducts && searchTopic && <AmazonSearchCTA topic={searchTopic} />}
 
     {comparison && comparison.rows.length > 0 && (
       <div class="article-comparison">
