@@ -31,15 +31,36 @@ const sameAs = [siteConfig.social?.pinterest, siteConfig.social?.instagram, site
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
   name: siteConfig.name,
   url: siteUrl,
   description: siteConfig.description,
   logo: logoUrl,
   image: resolvedOgImage,
+  // Signaux d'expertise thématique (E-E-A-T) : ce sur quoi le site fait autorité.
+  knowsAbout: [
+    'ergonomie du poste de travail',
+    'télétravail',
+    'périphériques informatiques',
+    'matériel gaming',
+    'accessoires de bureau',
+  ],
+  ...(siteConfig.contactEmail ? { email: siteConfig.contactEmail } : {}),
   ...(sameAs.length ? { sameAs } : {}),
 };
 
-const jsonLdBlocks = [organizationSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
+// Entité WebSite : aide Google à reconnaître le site et son nom dans les résultats.
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  name: siteConfig.name,
+  url: siteUrl,
+  inLanguage: siteConfig.lang,
+  publisher: { '@id': `${siteUrl}/#organization` },
+};
+
+const jsonLdBlocks = [organizationSchema, websiteSchema, ...(jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [])];
 ---
 
 <!DOCTYPE html>

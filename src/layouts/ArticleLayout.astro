@@ -6,6 +6,7 @@ import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ShareButtons from '../components/ShareButtons.astro';
+import AuthorBox from '../components/AuthorBox.astro';
 import { siteConfig } from '../siteConfig';
 import { categories, type CategorySlug } from '../categories';
 import { isAvailable } from '../lib/availability';
@@ -243,6 +244,8 @@ const jsonLdArticle = [articleSchema, breadcrumbSchema, ...(faqSchema ? [faqSche
         ))}
       </div>
     )}
+
+    <AuthorBox author={author} />
 
     {relatedArticles.length > 0 && (
       <div class="article-related">
