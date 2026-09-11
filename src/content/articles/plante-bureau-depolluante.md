@@ -2,13 +2,27 @@
 title: "Plante de bureau dépolluante : laquelle choisir pour un poste de travail"
 description: "Quelle plante dépolluante installer sur un bureau, selon la lumière disponible et le temps qu'on peut consacrer à son entretien."
 pubDate: 2026-08-16
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "Un bureau *plus sain*, plus agréable"
 pinSub: "La plante dépolluante idéale."
 keywords: ["plante de bureau dépolluante", "plante dépolluante intérieur", "plante verte bureau facile"]
 category: "mobilier"
-coverAlt: "Bureau en bois avec écran, clavier et plusieurs grandes plantes vertes en pot"
+coverImage: "/covers/plante-bureau-depolluante-inbody.jpg"
+coverAlt: "Bureau avec écran, clavier et plusieurs plantes vertes en pot devant une fenêtre"
 draft: false
+interactiveGuide:
+  title: "Quelle plante pour ton bureau ?"
+  question: "Ton poste, c'est plutôt…"
+  options:
+    - label: "Peu de lumière / sans fenêtre"
+      result: "Vise une <strong>sansevieria</strong> ou un <strong>ZZ (Zamioculcas)</strong> : ce sont les plus tolérantes à l'ombre, elles survivent à une simple lumière artificielle de bureau."
+    - label: "Bien éclairé (près d'une fenêtre)"
+      result: "Tu as le choix : un <strong>pothos</strong> retombant, un <strong>chlorophytum</strong> ou une petite plante à feuillage. Évite juste le soleil direct brûlant derrière une vitre."
+    - label: "J'oublie souvent d'arroser"
+      result: "Prends du <strong>quasi increvable</strong> : sansevieria, ZZ ou une <strong>succulente</strong>. Elles préfèrent qu'on les oublie plutôt que de les noyer — l'excès d'eau est leur seul ennemi."
+    - label: "Je veux surtout du volume déco"
+      result: "Une <strong>grande plante</strong> type dracaena ou kentia habille un coin de bureau et apaise visuellement. Vérifie juste qu'elle a la lumière qu'il lui faut et la place pour grandir."
 products:
   - asin: "B0CFZXBQP8"
     title: "Sansevieria Laurentii — plante d'intérieur, tolère la faible luminosité"
@@ -37,6 +51,9 @@ Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NAS
 - **La toxicité éventuelle** : un point à vérifier si des animaux ou de jeunes enfants ont accès au bureau à la maison, certaines plantes d'intérieur courantes étant légèrement toxiques en cas d'ingestion.
 - **Le pot et le drainage** : un pot sans trou de drainage associé à un arrosage trop généreux est la cause la plus fréquente de plante qui dépérit sur un bureau ; un pot adapté avec une soucoupe évite ce problème simple.
 
+> 🛒 **Notre sélection du moment**
+> Envie de verdir ton poste ? Pour voir les plantes d'intérieur faciles et dépolluantes disponibles : [voir les plantes dépolluantes d'intérieur sur Amazon](https://www.amazon.fr/s?k=plante+depolluante+interieur&tag=monbureauconnecte-21).
+
 ## Comment choisir selon ton usage
 
 **Pour un bureau sans lumière naturelle directe** : la sansevieria reste la valeur la plus sûre. Elle tolère un éclairage artificiel standard, pousse lentement, et supporte sans problème un oubli d'arrosage de plusieurs semaines pendant les vacances.
@@ -53,9 +70,16 @@ Une plante verte améliore le cadre de travail, mais elle ne corrige pas un écl
 
 Il vaut aussi la peine d'accepter, dès le départ, qu'une plante demande un minimum d'attention même parmi les variétés les plus tolérantes : un arrosage complètement oublié pendant plusieurs mois finit par l'affaiblir. Choisir une espèce adaptée au rythme réel qu'on peut lui consacrer évite la déception d'une plante qui dépérit après quelques semaines seulement.
 
+> **L'essentiel à retenir**
+> Soyons honnêtes : une plante seule n'assainit pas vraiment l'air d'une pièce entière. Son vrai bénéfice est le **confort visuel** et une ambiance plus agréable — bien réels. Choisis-la donc selon ta **lumière** et le **temps** que tu peux y consacrer : **sansevieria ou ZZ** dans un coin sombre ou si tu oublies d'arroser, plus de liberté près d'une fenêtre. L'erreur n°1 reste le **trop d'eau**, pas le manque.
+
 ## Conclusion
 
 La plante de bureau dépolluante n'est pas un accessoire miracle pour l'air ambiant, mais c'est un ajout simple, durable et peu coûteux qui améliore réellement le cadre de travail au quotidien. Le choix se joue avant tout sur la tolérance à la lumière disponible sur le poste et sur le temps qu'on peut raisonnablement consacrer à l'arrosage — des variétés comme la sansevieria ou la plante araignée couvrent la grande majorité des situations de bureau, avec un entretien qui reste largement à la portée de qui n'a jamais eu la main verte.
+
+## Le bon pot et le bon emplacement
+
+Un détail souvent oublié : le **pot** compte autant que la plante. Un cache-pot **sans trou de drainage** retient l'eau au fond et fait pourrir les racines — la première cause de mort des plantes de bureau. Privilégie un pot avec **drainage** et une soucoupe qu'on vide, ou glisse un pot technique perforé dans un joli cache-pot. Côté emplacement, évite de coller la plante contre une vitre en plein soleil (elle grille) ou juste au-dessus d'un radiateur (l'air sec la déssèche). Un coin lumineux mais sans soleil direct, à l'écart des sources de chaleur, convient à la grande majorité des plantes de bureau.
 
 ## Pour aller plus loin
 

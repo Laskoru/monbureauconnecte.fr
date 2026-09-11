@@ -2,13 +2,27 @@
 title: "Chaise de bureau sans accoudoirs : le bon choix pour un petit espace"
 description: "Pourquoi une chaise sans accoudoirs se glisse mieux sous un bureau bas ou étroit, et comment en choisir une sans sacrifier le confort."
 pubDate: 2026-08-17
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "La chaise qui *se glisse partout*"
 pinSub: "Sans accoudoirs, pour les petits espaces."
 keywords: ["chaise de bureau sans accoudoirs", "chaise bureau petit espace", "chaise compacte télétravail"]
 category: "mobilier"
-coverAlt: "Chaise de bureau en bois sans accoudoirs installée dans un coin bureau compact sous des combles"
+coverImage: "/covers/chaise-bureau-sans-accoudoirs-petit-espace-inbody.jpg"
+coverAlt: "Coin bureau compact dans un petit espace, avec assise sans accoudoirs"
 draft: false
+interactiveGuide:
+  title: "Sans accoudoirs : est-ce le bon choix pour toi ?"
+  question: "Ta contrainte principale, c'est…"
+  options:
+    - label: "Un bureau bas ou étroit"
+      result: "Oui, c'est l'usage idéal : sans accoudoirs, la chaise <strong>se glisse entièrement sous le plateau</strong> (dès ~60 cm de dégagement contre 70-75 avec accoudoirs 4D). On gagne de la place et on range mieux."
+    - label: "Une petite pièce encombrée"
+      result: "Bon choix aussi : la chaise prend <strong>moins de largeur</strong> et facilite la circulation autour du bureau. Vise un dossier bas si tu veux la ranger complètement sous le plan."
+    - label: "J'ai le dos fragile"
+      result: "L'essentiel n'est pas les accoudoirs mais le <strong>soutien lombaire</strong> et la bonne hauteur d'assise. Une chaise sans accoudoirs avec un bon dossier fait le travail ; ajoute un <a href='/articles/coussin-lombaire-chaise-bureau/'>coussin lombaire</a> au besoin."
+    - label: "Je fais beaucoup de pauses/lecture"
+      result: "C'est le seul vrai compromis : sans accoudoirs, pas d'appui pour relâcher les bras entre deux tâches. Si tu y tiens, regarde plutôt une chaise à <strong>accoudoirs escamotables</strong> ou rentrants."
 products:
   - asin: "B0DCFWWGD6"
     title: "Chaise compacte en maille sans accoudoirs — hauteur réglable, dossier bas"
@@ -39,6 +53,9 @@ Ce choix n'est pas réservé aux petits espaces à tout prix : il convient aussi
 - **L'encombrement replié** : au-delà de la largeur de l'assise, regarder la profondeur totale une fois la chaise poussée sous le bureau — un critère qui compte autant que la largeur dans une petite pièce.
 - **La charge maximale annoncée** : les modèles les plus compacts ont souvent une base plus légère ; vérifier ce chiffre avant l'achat plutôt qu'après.
 
+> 🛒 **Comparer les modèles du moment**
+> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les chaises de bureau sans accoudoirs sur Amazon](https://www.amazon.fr/s?k=chaise+bureau+sans+accoudoirs&tag=monbureauconnecte-21).
+
 ## Comment choisir selon ton usage
 
 **Pour un bureau dans une chambre ou un studio** : privilégier le modèle le plus compact possible, quitte à perdre un peu de rembourrage, si le gain de place conditionne l'organisation de la pièce. La chaise compacte en maille coche cette case : elle se range vraiment sous le bureau une fois le travail terminé.
@@ -60,6 +77,9 @@ Un point à vérifier malgré tout avant de comparer deux références : le mode
 Retirer les accoudoirs libère de l'espace, mais ne remplace pas un dossier de qualité ni un réglage de hauteur correct par rapport à l'écran et au clavier. Une chaise trop basse ou trop haute reste inconfortable, avec ou sans accoudoirs — la priorité va toujours au réglage global du poste avant de trancher sur ce détail. De la même façon, si le manque de rangement pousse à entasser des affaires sous le bureau au point de gêner les jambes, le vrai problème n'est pas la chaise : notre article sur le [caisson de rangement sous bureau](/articles/caisson-rangement-sous-bureau/) traite spécifiquement de ce cas.
 
 Il faut aussi accepter un compromis réel : sans accoudoirs, il n'y a plus d'appui pour les bras pendant un appel téléphonique long ou une pause lecture. Pour qui alterne beaucoup entre ces usages, ce n'est pas forcément le bon choix — mieux vaut alors un modèle avec accoudoirs rabattables, qui combine les deux avantages au prix d'un léger surcoût.
+
+> **L'essentiel à retenir**
+> Sans accoudoirs, une chaise **se glisse sous le bureau** et libère de la place — l'atout n°1 dans un petit espace. Les accoudoirs ne sont pas indispensables pour taper : priorité au **soutien lombaire** et à la **bonne hauteur d'assise**. Le seul vrai compromis, c'est l'absence d'appui pour les bras pendant les pauses — que des accoudoirs escamotables règlent si tu y tiens.
 
 ## Conclusion
 

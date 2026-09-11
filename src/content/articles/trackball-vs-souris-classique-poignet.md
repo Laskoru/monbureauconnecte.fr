@@ -2,14 +2,27 @@
 title: "Trackball vs souris classique en 2026 : lequel choisir pour le poignet ?"
 description: "Douleurs au poignet avec une souris classique ? Notre comparatif trackball vs souris pour choisir selon ton usage, sans se tromper d'accessoire."
 pubDate: 2026-08-21
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "Soulager le poignet, *autrement*"
 pinSub: "Trackball ou souris : le comparatif."
 keywords: ["trackball vs souris", "trackball souris poignet", "meilleur trackball 2026", "trackball ergonomique bureau"]
 category: "peripheriques"
-coverAlt: "Trackball sans fil noir posé sur un bureau, main positionnée sur la boule de contrôle"
-# COVER: ergonomic trackball mouse desk setup
+coverImage: "/covers/trackball-vs-souris-classique-poignet-inbody.jpg"
+coverAlt: "Trackball posé sur un bureau, boule de contrôle visible"
 draft: false
+interactiveGuide:
+  title: "Trackball ou souris : lequel pour toi ?"
+  question: "Ta raison principale, c'est…"
+  options:
+    - label: "J'ai mal au poignet / à l'épaule"
+      result: "Le <strong>trackball</strong> est fait pour ça : la main ne se déplace plus, seul le pouce (ou le doigt) bouge la boule. Fini le glissement répété et l'extension du bras. Prévois 1 à 2 semaines d'adaptation."
+    - label: "Je manque de place sur le bureau"
+      result: "Idéal : un trackball reste <strong>immobile</strong>, il ne lui faut aucune zone de déplacement. Parfait sur un petit bureau ou un plateau encombré, là où une souris manque de place."
+    - label: "Je fais du travail de précision fine"
+      result: "Le trackball <strong>à doigt</strong> (pas à pouce) offre plus de précision ; mais pour du dessin/retouche pointu, une <a href='/articles/souris-ergonomique-verticale/'>souris verticale</a> ou une souris classique de qualité peut rester plus adaptée."
+    - label: "Je veux juste tester en douceur"
+      result: "Commence par un <strong>trackball à pouce</strong> (type Logitech ERGO M575) : c'est la transition la plus douce depuis une souris, on garde une forme de main familière."
 products:
   - asin: "B0DB5DMDW3"
     title: "Logitech ERGO M575S — trackball sans fil, contrôle au pouce, Bluetooth"
@@ -44,6 +57,9 @@ Il faut aussi distinguer le trackball du pavé tactile qui équipe certains clav
 - **Le poids et la stabilité du boîtier** : un trackball trop léger a tendance à glisser légèrement sous la pression du pouce ou des doigts, ce qui oblige à le retenir de l'autre main en permanence ; un boîtier lesté ou muni de patins antidérapants reste immobile même en usage intensif
 - **La compatibilité multi-appareils** : plusieurs modèles récents permettent de basculer d'un ordinateur à un autre (poste pro et poste personnel, par exemple) d'une simple pression, un vrai gain de temps si tu changes souvent de machine dans la journée
 
+> 🛒 **Comparer les modèles du moment**
+> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les trackballs ergonomiques sur Amazon](https://www.amazon.fr/s?k=trackball+ergonomique&tag=monbureauconnecte-21).
+
 ## Comment choisir selon ton usage
 
 **Pour un usage bureautique classique (mail, navigation, tableurs)**, un trackball à contrôle au pouce d'entrée ou moyenne gamme suffit largement. C'est le format le plus simple pour une première transition depuis une souris classique, avec un temps d'adaptation raisonnable.
@@ -63,6 +79,9 @@ La transition se passe mieux si elle est progressive plutôt que brutale. Garder
 Côté entretien, un coup de chiffon sec régulier sur la boule et sur les capteurs internes suffit à préserver la fluidité du suivi. Sur les modèles qui s'encrassent plus vite, un nettoyage plus poussé (démontage de la boule, nettoyage des rouleaux de contact) toutes les quelques semaines évite les décrochages ou les micro-saccades qui s'installent progressivement et finissent par gêner la précision, surtout perceptible sur les tâches fines. C'est un entretien simple, mais trop souvent oublié une fois l'habitude prise.
 
 Enfin, ne néglige pas l'ensemble du poste de travail : un trackball bien choisi ne compense pas une chaise mal réglée ou un écran trop bas, qui restent des causes fréquentes de tensions au poignet et à la nuque par ricochet. L'accessoire fait sa part, mais il s'inscrit dans un ensemble.
+
+> **L'essentiel à retenir**
+> Le trackball soulage le poignet et l'épaule parce que **la main ne se déplace plus** — seul le pouce ou le doigt bouge. Il gagne aussi de la place (aucune zone de déplacement). En échange : une **adaptation** d'une à deux semaines, et l'effort se reporte sur le pouce. Débute par un **trackball à pouce** (transition douce) ; pour la précision fine, une souris verticale peut rester plus adaptée.
 
 ## Conclusion
 
