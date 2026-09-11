@@ -5,9 +5,28 @@ import ArticleCard from '../components/ArticleCard.astro';
 import GearFinder from '../components/GearFinder.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
+import { guides } from '../guides';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
-const latest = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 10);
+const latest = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 6);
+
+const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
+const published = new Set(allArticles.map((a) => a.slug));
+
+// Navigation "par besoin" : nos guides-hubs, chacun répond à un problème concret.
+const needCounts = guides.map((g) => ({
+  ...g,
+  count: g.articles.filter((slug) => published.has(slug)).length,
+}));
+
+// Comparatifs de référence : nos guides d'achat phares, un par grand besoin.
+const featuredSlugs = [
+  'bureau-assis-debout-electrique',
+  'meilleures-chaises-gaming',
+  'souris-ergonomique-verticale',
+  'casque-reduction-bruit-teletravail',
+];
+const featured = featuredSlugs.map((s) => bySlug.get(s)).filter(Boolean);
 
 const categoryCounts = categories.map((cat) => ({
   ...cat,
@@ -16,7 +35,7 @@ const categoryCounts = categories.map((cat) => ({
 
 const stats = [
   { value: String(allArticles.length), label: 'Comparatifs publiés' },
-  { value: String(categories.length), label: 'Catégories couvertes' },
+  { value: String(guides.length), label: 'Besoins couverts' },
   { value: '100%', label: 'Rédaction indépendante' },
 ];
 ---
@@ -47,11 +66,66 @@ const stats = [
 
   <GearFinder />
 
+  <section class="section section--soft" id="besoins">
+    <div class="wide">
+      <p class="section__eyebrow">Par besoin</p>
+      <h2 class="section__title">Quel est ton problème ?</h2>
+      <p class="section__lede">
+        Nos guides sont organisés autour des situations les plus fréquentes au bureau. Choisis la tienne :
+        on t'emmène directement aux comparatifs qui la règlent.
+      </p>
+      <div class="needs__grid">
+        {needCounts.map((need) => (
+          <a class="needs__item card card--hover" href={`/guides/${need.slug}/`}>
+            <span class="needs__icon">{need.icon}</span>
+            <span class="needs__label">{need.title}</span>
+            <span class="needs__desc">{need.description}</span>
+            <span class="needs__count">{need.count} comparatif{need.count > 1 ? 's' : ''} →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="section">
+      <div class="wide">
+        <div class="section__head">
+          <div>
+            <p class="section__eyebrow">Nos tests de référence</p>
+            <h2 class="section__title">Comparatifs de référence</h2>
+          </div>
+          <a class="section__link" href="/articles/">Tous les comparatifs →</a>
+        </div>
+        <p class="section__lede">Nos guides d'achat les plus complets, un pour chaque grand besoin — pour choisir sans te tromper.</p>
+        <div class="featured__grid">
+          {featured.map((article) => <ArticleCard article={article} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="section section--soft">
     <div class="wide">
-      <p class="section__eyebrow">Catégories</p>
-      <h2 class="section__title">Trouve ce qu'il te faut</h2>
-      <p class="section__lede">Nos comparatifs sont classés par ce que tu es en train d'équiper.</p>
+      <div class="section__head">
+        <div>
+          <p class="section__eyebrow">Derniers articles</p>
+          <h2 class="section__title">Les comparatifs récents</h2>
+        </div>
+        <a class="section__link" href="/articles/">Voir tout →</a>
+      </div>
+      <div class="article-list">
+        {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
+        {latest.map((article) => <ArticleCard article={article} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wide">
+      <p class="section__eyebrow">Par type de matériel</p>
+      <h2 class="section__title">Ou parcours par catégorie</h2>
+      <p class="section__lede">Tu sais déjà ce que tu cherches ? Va droit au rayon.</p>
       <div class="categories__grid">
         {categoryCounts.map((cat) => (
           <a class="categories__item card card--hover" href={`/categorie/${cat.slug}/`}>
@@ -65,7 +139,7 @@ const stats = [
     </div>
   </section>
 
-  <section class="section" id="outils">
+  <section class="section section--soft" id="outils">
     <div class="wide">
       <p class="section__eyebrow">Outils gratuits</p>
       <h2 class="section__title">Va plus vite avec nos guides interactifs</h2>
@@ -93,22 +167,6 @@ const stats = [
   </section>
 
   <section class="section">
-    <div class="wide">
-      <div class="section__head">
-        <div>
-          <p class="section__eyebrow">Derniers articles</p>
-          <h2 class="section__title">Les comparatifs récents</h2>
-        </div>
-        <a class="section__link" href="/articles/">Voir tout →</a>
-      </div>
-      <div class="article-list">
-        {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
-        {latest.map((article) => <ArticleCard article={article} />)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
     <div class="wide approach">
       <div class="approach__text">
         <p class="section__eyebrow">Notre approche</p>
@@ -324,6 +382,42 @@ const stats = [
   .categories__desc { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0.3rem 0 1rem; flex: 1; }
   .categories__count { font-size: 0.82rem; font-weight: 600; color: var(--color-accent); }
 
+  /* ---- Par besoin (problèmes) ---- */
+  .needs__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+  .needs__item {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.6rem 1.5rem;
+  }
+  .needs__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    border-radius: 14px;
+    background: var(--color-accent-soft);
+    margin-bottom: 1rem;
+  }
+  .needs__label { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; }
+  .needs__desc { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0.45rem 0 1rem; flex: 1; }
+  .needs__count { font-size: 0.82rem; font-weight: 600; color: var(--color-accent); }
+
+  /* ---- Comparatifs de référence ---- */
+  .featured__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
   /* ---- Derniers articles ---- */
   .article-list { display: flex; flex-direction: column; gap: 1rem; }
 
@@ -355,11 +449,16 @@ const stats = [
     flex-shrink: 0;
   }
 
+  @media (max-width: 880px) {
+    .needs__grid { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 780px) {
     .approach { grid-template-columns: 1fr; gap: 1.6rem; }
+    .featured__grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 680px) {
     .categories__grid { grid-template-columns: 1fr; }
+    .needs__grid { grid-template-columns: 1fr; }
   }
 </style>
 

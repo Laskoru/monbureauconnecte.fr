@@ -76,4 +76,62 @@ export const guides: Guide[] = [
       'support-ordinateur-portable-ergonomique',
     ],
   },
+  {
+    slug: 'mal-de-dos',
+    icon: '🦴',
+    title: 'Mal de dos au bureau : soulager et prévenir',
+    description:
+      "Bas du dos douloureux en fin de journée ? Le guide des accessoires qui soulagent vraiment : soutien lombaire, assise, bureau assis-debout et bons réglages.",
+    intro: [
+      "Le mal de dos est la gêne numéro un des postes assis. Après quelques heures, le bas du dos tire, on s'avachit, et la douleur s'installe jour après jour. La cause est presque toujours la même : une assise qui ne soutient pas la courbe naturelle du dos et une position figée trop longtemps.",
+      "Bonne nouvelle : on n'a pas besoin de tout changer. Un bon soutien lombaire, une assise qui répartit la pression, la possibilité d'alterner assis et debout, et surtout de bons réglages de départ suffisent à faire une vraie différence. Ce guide réunit nos comparatifs classés du geste gratuit à l'équipement, à piocher selon ce qui te fait le plus mal.",
+    ],
+    articles: [
+      'bien-regler-chaise-ecran-ergonomie-gratuite',
+      'coussin-lombaire-chaise-bureau',
+      'coussin-assise-ergonomique-coccyx',
+      'bureau-assis-debout-electrique',
+      'tabouret-assis-debout-siege-selle-bureau',
+      'repose-pieds-ergonomique-bureau',
+      'meilleures-chaises-gaming',
+    ],
+  },
+  {
+    slug: 'douleurs-poignet',
+    icon: '🖐️',
+    title: 'Douleurs au poignet et à la main : quoi changer',
+    description:
+      "Poignet qui chauffe, engourdissements, tendinite naissante : le guide des souris, claviers et repose-poignets qui soulagent les mains à l'ordinateur.",
+    intro: [
+      "Souris et clavier sont sous nos mains toute la journée, et ce sont eux qui déclenchent le plus de troubles musculo-squelettiques : poignet qui chauffe, picotements dans les doigts, avant-bras tendu. Le coupable habituel, c'est une main pliée ou tordue des heures durant dans une position que le corps n'aime pas.",
+      "La solution passe rarement par un seul produit miracle, mais par un geste plus naturel : un poignet droit, une main moins crispée, moins de trajets inutiles. Ce guide compare les formats qui y aident vraiment — souris verticale, trackball, clavier séparé, repose-poignet — avec, pour chacun, à qui il s'adresse et ses limites.",
+    ],
+    articles: [
+      'souris-ergonomique-verticale',
+      'trackball-vs-souris-classique-poignet',
+      'repose-poignet-clavier-souris',
+      'clavier-ergonomique-separe',
+      'clavier-compact-tkl-sans-pave-numerique',
+    ],
+  },
+  {
+    slug: 'petit-bureau-rangement',
+    icon: '📦',
+    title: 'Petit bureau : gagner de la place et ranger',
+    description:
+      "Bureau étroit et encombré ? Le guide pour libérer le plateau et travailler au calme sur un petit espace : format compact, rangement et gestion des câbles.",
+    intro: [
+      "Sur un petit bureau, chaque centimètre compte. Un plateau encombré, des câbles qui pendent et un clavier trop large finissent par gêner la souris, la concentration et l'envie de s'y installer. Le problème n'est pas la taille du bureau, mais la façon dont l'espace est occupé.",
+      "L'idée : choisir du matériel qui prend moins de place, sortir le superflu du plateau et discipliner les câbles une bonne fois. Ce guide réunit nos comparatifs orientés gain de place — format compact, rangement sous le bureau, connectique tout-en-un — pour transformer un coin étroit en poste net et agréable.",
+    ],
+    articles: [
+      'chaise-bureau-sans-accoudoirs-petit-espace',
+      'clavier-compact-tkl-sans-pave-numerique',
+      'caisson-rangement-sous-bureau',
+      'rangement-cables-bureau',
+      'hub-usb-c-station-accueil',
+      'support-ordinateur-portable-ergonomique',
+      'tapis-souris-xxl-bureau',
+    ],
+  },
 ];
