@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { siteConfig } from '../../siteConfig';
+import { budgets } from '../../budgets';
+
+const published = new Set((await getCollection('articles', ({ data }) => !data.draft)).map((a) => a.slug));
+const budgetCounts = budgets.map((b) => ({
+  ...b,
+  count: b.articles.filter((slug) => published.has(slug)).length,
+}));
+---
+
+<BaseLayout
+  title="Choisir par budget"
+  description={`Équiper son poste de travail selon son budget : petit budget, équilibré ou setup complet. ${siteConfig.name}.`}
+>
+  <section class="container budget-index">
+    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Par budget' }]} />
+    <h1>Choisir par budget</h1>
+    <p class="budget-index__lede">
+      Chaque enveloppe a ses bons choix. Dis-nous combien tu veux y mettre, on te montre les comparatifs
+      qui donnent le meilleur résultat pour ce prix — du geste gratuit à l'investissement qui dure.
+    </p>
+
+    <div class="budget-index__grid">
+      {budgetCounts.map((b) => (
+        <article class="budget-index__card card card--hover">
+          <span class="budget-index__icon">{b.icon}</span>
+          <h2><a class="stretched-link" href={`/budget/${b.slug}/`}>{b.label}</a></h2>
+          <p class="budget-index__range">{b.range}</p>
+          <p class="budget-index__desc">{b.tagline}</p>
+          <p class="budget-index__count">{b.count} comparatif{b.count > 1 ? 's' : ''} →</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .budget-index { padding: 2.5rem 0 3.5rem; }
+  .budget-index h1 { margin-top: 0; }
+  .budget-index__lede { color: var(--color-text-muted); font-size: 1.05rem; max-width: 62ch; }
+  .budget-index__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .budget-index__card { position: relative; padding: 1.6rem 1.5rem; }
+  .budget-index__icon { font-size: 2rem; }
+  .budget-index__card h2 { margin: 0.5rem 0 0.3rem; font-size: 1.3rem; }
+  .budget-index__card h2 a { color: var(--color-text); text-decoration: none; }
+  .budget-index__card:hover h2 a { color: var(--color-accent); }
+  .budget-index__range { margin: 0 0 0.5rem; font-weight: 600; font-size: 0.85rem; color: var(--color-accent); }
+  .budget-index__desc { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.5; margin: 0 0 1rem; }
+  .budget-index__count { font-size: 0.82rem; font-weight: 600; color: var(--color-accent); margin: 0; }
+</style>

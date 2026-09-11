@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { budgets } from '../../budgets';
+
+export async function getStaticPaths() {
+  return budgets.map((budget) => ({ params: { budget: budget.slug }, props: { budget } }));
+}
+
+const { budget } = Astro.props;
+
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
+const articles = budget.articles.map((slug) => bySlug.get(slug)).filter((a) => a !== undefined);
+---
+
+<BaseLayout title={`${budget.label} — ${budget.tagline}`} description={budget.description}>
+  <section class="container budget">
+    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Par budget', href: '/budget' }, { label: budget.label }]} />
+    <p class="budget__icon">{budget.icon}</p>
+    <h1>{budget.label}</h1>
+    <p class="budget__range">{budget.range}</p>
+    <div class="budget__intro">
+      {budget.intro.map((p) => <p set:html={p} />)}
+    </div>
+
+    <h2 class="budget__section">Les comparatifs de cette sélection</h2>
+    <div class="article-list">
+      {articles.map((article) => <ArticleCard article={article} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .budget { padding: 2.5rem 0 3.5rem; }
+  .budget__icon { font-size: 2.4rem; margin: 0 0 0.4rem; }
+  .budget h1 { margin-top: 0; }
+  .budget__range {
+    display: inline-block;
+    margin: 0 0 1rem;
+    padding: 0.3em 0.9em;
+    border-radius: 999px;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .budget__intro { max-width: 68ch; }
+  .budget__intro p { color: var(--color-text-muted); line-height: 1.7; }
+  .budget__section { margin-top: 2.5rem; }
+  .article-list { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.2rem; }
+</style>
