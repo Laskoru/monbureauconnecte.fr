@@ -2,6 +2,7 @@
 title: "Coussin d'assise ergonomique : soulager le coccyx au bureau"
 description: "Comment choisir un coussin d'assise ergonomique pour soulager le coccyx et le bas du dos en position assise prolongée."
 pubDate: 2026-08-16
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "Rester assis *sans douleur*"
 pinSub: "Le coussin qui soulage le coccyx."
@@ -14,6 +15,18 @@ products:
   - asin: "B08QR8Z769"
     title: "Feagar — mousse à mémoire de forme, housse lavable"
     blurb: "Un coussin polyvalent (bureau, voiture) qui répartit la pression et soulage le coccyx, avec une housse déhoussable et lavable."
+interactiveGuide:
+  title: "Quel coussin d'assise pour toi ?"
+  question: "Ton besoin, c'est…"
+  options:
+    - label: "Inconfort léger / prévention"
+      result: "Un coussin en <strong>mousse à mémoire de forme</strong> avec une <strong>découpe en U modérée</strong> suffit. Pas besoin du modèle le plus épais ni le plus technique tant que la gêne n'est pas installée."
+    - label: "Douleur déjà présente au coccyx"
+      result: "Vise une <strong>découpe en U bien marquée</strong> (le coccyx ne touche plus rien) et une <strong>mousse dense</strong>. L'objectif est de retirer complètement l'appui sur la zone, pas juste de l'amortir."
+    - label: "Usage nomade (bureau, voiture)"
+      result: "Choisis un modèle avec <strong>poignée de transport</strong> et <strong>housse lavable</strong>, plus important que l'épaisseur maximale qui nuit à la portabilité."
+    - label: "Pièce chaude / je transpire"
+      result: "Un coussin en <strong>gel</strong> ou à <strong>housse respirante</strong> limite l'effet « assise qui chauffe » d'une mousse à mémoire de forme classique sur plusieurs heures."
 faq:
   - question: "Un coussin d'assise ergonomique est-il vraiment utile si ma chaise de bureau est déjà de bonne qualité ?"
     answer: "Oui, les deux se complètent : même une chaise ergonomique haut de gamme utilise une assise standard qui répartit la pression de façon homogène, alors qu'un coussin en U ou en forme de fer à cheval décharge spécifiquement la zone du coccyx. Si tu ressens une gêne localisée après plusieurs heures assis, c'est justement le signe qu'une chaise seule ne suffit pas toujours à résoudre le problème."
@@ -52,11 +65,17 @@ Il faut cependant rester honnête sur ce qu'un coussin peut et ne peut pas faire
 
 **Pour les fortes chaleurs ou une pièce mal ventilée** : un coussin en gel ou à housse respirante limite l'effet "assise qui chauffe" que peut donner une mousse à mémoire de forme classique sur plusieurs heures d'affilée.
 
+> 🛒 **Comparer les modèles du moment**
+> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les coussins d'assise ergonomiques sur Amazon](https://www.amazon.fr/s?k=coussin+assise+ergonomique+coccyx&tag=monbureauconnecte-21).
+
 ## Entretien et bons réflexes d'usage
 
 Un coussin ergonomique perd de son efficacité s'il n'est pas entretenu régulièrement, notamment parce que l'humidité et la transpiration accumulées finissent par tasser la mousse plus vite que l'usage seul. Retirer et laver la housse toutes les deux à trois semaines en usage quotidien permet de conserver ses propriétés plus longtemps.
 
 Il vaut aussi mieux ne pas laisser le coussin en plein soleil ou près d'une source de chaleur directe, la mousse à mémoire de forme pouvant se déformer ou perdre en élasticité si elle est exposée trop longtemps à une chaleur excessive. Enfin, même le meilleur coussin ne remplace pas des pauses régulières : se lever et marcher quelques minutes toutes les heures reste le complément le plus efficace pour éviter que la pression, même bien répartie, ne finisse par redevenir inconfortable.
+
+> **L'essentiel à retenir**
+> Assis des heures, tout le poids se concentre sur les ischions et le coccyx. Le bon coussin **décharge** cette zone grâce à une **découpe en U bien marquée**, une **mousse assez dense** (elle ne s'affaisse pas), une **housse lavable** et une **base antidérapante**. Prends-le à la bonne **taille** (les cuisses ne doivent pas déborder). Il complète une bonne posture ; une douleur qui persiste relève d'un avis médical.
 
 ## Conclusion
 

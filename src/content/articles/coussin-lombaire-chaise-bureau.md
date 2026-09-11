@@ -2,6 +2,7 @@
 title: "Coussin lombaire pour chaise de bureau : soulager le bas du dos à petit prix"
 description: "Comment choisir un coussin lombaire pour chaise de bureau afin de corriger le soutien du bas du dos sans changer de siège."
 pubDate: 2026-08-16
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "Le bas du dos *enfin soutenu*"
 pinSub: "Le coussin lombaire à petit prix."
@@ -14,6 +15,18 @@ products:
   - asin: "B086W5MYRD"
     title: "SUPA MODERN — mousse à mémoire de forme, sangles réglables"
     blurb: "Un coussin lombaire polyvalent (bureau, voiture) avec des sangles ajustables de 12 à 26 cm pour bien le fixer au dossier, et une housse respirante amovible."
+interactiveGuide:
+  title: "Quel coussin lombaire pour toi ?"
+  question: "Ta situation, c'est…"
+  options:
+    - label: "Gêne légère ou prévention"
+      result: "Un modèle standard en <strong>mousse à mémoire de forme</strong> avec une courbure <strong>modérée</strong> suffit. Inutile de viser le maintien le plus ferme si le dos ne le réclame pas encore."
+    - label: "Douleur lombaire déjà installée"
+      result: "Vise une <strong>mousse plus dense</strong> et une <strong>courbure prononcée</strong>, quitte à une courte adaptation. Le but est de forcer le maintien de la cambrure, pas seulement de l'accompagner."
+    - label: "Usage nomade (bureau, voiture)"
+      result: "Choisis un modèle <strong>léger</strong>, avec <strong>sangles universelles</strong> qui s'adaptent à des dossiers différents, et une poignée de transport."
+    - label: "Chaise gaming / dossier très incurvé"
+      result: "Vérifie en priorité la <strong>longueur des sangles</strong> et la souplesse de la fixation : ces dossiers sont plus larges et plus courbés qu'une chaise de bureau classique."
 faq:
   - question: "Un coussin lombaire est-il utile même sur une chaise de bureau récente ?"
     answer: "Oui, dans beaucoup de cas. Le dossier d'une chaise de bureau standard, même correcte, est souvent trop droit ou trop reculé par rapport à la courbure naturelle du bas du dos. Un coussin lombaire vient combler cet espace et maintenir la cambrure, ce qu'un dossier plat ne fait pas toujours, même sur un siège de bonne qualité."
@@ -30,6 +43,8 @@ Le bas du dos (la région lombaire) est censé garder une légère courbure vers
 Sur quelques minutes, ce n'est pas un problème. Sur sept ou huit heures par jour, cinq jours par semaine, c'est une autre histoire : la tension chronique dans cette zone finit par créer des douleurs sourdes en fin de journée, parfois des raideurs le matin, et dans les cas plus marqués une gêne qui irradie vers les fessiers ou les cuisses. Le coussin lombaire répond directement à ce problème : il vient combler l'espace entre le bas du dos et le dossier, pour maintenir la cambrure naturelle plutôt que de la laisser s'effondrer.
 
 C'est un accessoire particulièrement pertinent pour deux profils : les personnes qui utilisent une chaise correcte mais pas spécifiquement ergonomique (chaise de salle à manger réquisitionnée en télétravail, siège d'entrée de gamme), et celles qui ont déjà une gêne lombaire connue et cherchent un soutien immédiat sans attendre un rendez-vous chez le kiné ou un nouveau siège.
+
+![Personne assise, bas du dos soutenu contre le dossier d'une chaise ergonomique](/covers/coussin-lombaire-chaise-bureau-inbody.jpg)
 
 ## Les critères qui font vraiment la différence
 
@@ -50,11 +65,17 @@ C'est un accessoire particulièrement pertinent pour deux profils : les personne
 
 **Pour les chaises gaming ou aux dossiers très incurvés** : vérifier en priorité la longueur des sangles et la souplesse du système de fixation, car ces dossiers sont souvent plus larges et plus courbés que ceux d'une chaise de bureau classique.
 
+> 🛒 **Comparer les modèles du moment**
+> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les coussins lombaires de bureau sur Amazon](https://www.amazon.fr/s?k=coussin+lombaire+bureau&tag=monbureauconnecte-21).
+
 ## Ce qu'un coussin lombaire ne remplace pas
 
 Un coussin lombaire corrige un problème de soutien ponctuel, pas l'ensemble d'une posture de travail. Il ne compense pas un écran mal réglé qui pousse à se pencher en avant, ni une chaise réglée à la mauvaise hauteur par rapport au bureau, ni un manque de pauses régulières. Si la douleur persiste ou s'aggrave malgré un coussin bien positionné, direction un professionnel de santé plutôt que d'accumuler les accessoires en espérant que l'un d'eux fasse la différence à lui seul.
 
 Il vaut aussi la peine de vérifier, avant d'ajouter un coussin, que le dossier de la chaise permet déjà un réglage d'inclinaison correct : sur certains sièges, redresser légèrement le dossier ou ajuster sa profondeur d'assise règle une partie du problème sans accessoire supplémentaire. Le coussin lombaire vient en complément de ces réglages, pas à leur place.
+
+> **L'essentiel à retenir**
+> La plupart des chaises ont un dossier trop plat qui laisse le bas du dos s'affaisser. Un bon coussin lombaire comble ce creux — à condition d'avoir une **courbure vraiment marquée**, des **sangles** qui l'empêchent de glisser, et une **mousse dense** (adaptée à l'intensité de ta gêne). Adaptation **progressive** les premiers jours. Et souviens-toi : il complète un bon réglage de poste, il ne le remplace pas.
 
 ## Conclusion
 
