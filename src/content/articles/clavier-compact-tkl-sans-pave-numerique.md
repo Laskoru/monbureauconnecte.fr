@@ -2,17 +2,31 @@
 title: "Clavier compact TKL : gagner de la place pour la souris sur un petit bureau"
 description: "Le format TKL, sans pavé numérique, libère de l'espace pour la souris. Nos critères pour bien choisir et notre sélection pour le bureau."
 pubDate: 2026-08-24
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "Plus de place pour *la souris*"
 pinSub: "Le clavier compact TKL, bien choisi."
 keywords: ["clavier TKL", "clavier compact sans pavé numérique", "clavier sans pavé numérique bureau"]
 category: "peripheriques"
-coverAlt: "Bureau épuré dans une lumière tamisée avec un clavier compact rétroéclairé au centre, un grand écran, une souris et des enceintes"
+coverImage: "/covers/clavier-compact-tkl-sans-pave-numerique-inbody.jpg"
+coverAlt: "Clavier compact sans pavé numérique posé sur un bureau, à côté d'un macropad"
 draft: false
 products:
   - asin: "B07W7JHZKR"
     title: "Logitech MX Keys Mini — clavier compact sans fil, rétroéclairé, AZERTY"
     blurb: "Un format TKL premium, silencieux et bien construit, pensé pour un usage bureautique intensif au quotidien."
+interactiveGuide:
+  title: "Le format compact est-il fait pour toi ?"
+  question: "Sur ton bureau, tu…"
+  options:
+    - label: "Manques de place pour la souris"
+      result: "C'est le cœur du bénéfice TKL : la souris se rapproche dans l'axe de l'épaule. Un <strong>vrai TKL</strong> (qui garde flèches et navigation) est le bon choix, sans réapprentissage."
+    - label: "Tapes beaucoup de chiffres"
+      result: "Ne te prive pas du pavé : garde un clavier complet, ou prends un TKL <strong>+ un <a href='/articles/pave-numerique-externe-sans-fil/'>pavé numérique externe</a></strong> que tu poses seulement quand tu en as besoin."
+    - label: "Veux un bureau minimaliste"
+      result: "Vise un TKL <strong>sans fil</strong> et pense au rangement du récepteur et du câble de charge — sinon le gain visuel est perdu. Un format 65 % va encore plus loin si tu n'utilises jamais les touches de navigation."
+    - label: "As surtout mal aux poignets"
+      result: "Le TKL seul n'y changera pas grand-chose : le sujet est l'<strong>alignement des mains</strong>, pas la largeur. Regarde plutôt le <a href='/articles/clavier-ergonomique-separe/'>clavier ergonomique séparé</a>."
 faq:
   - question: "Un clavier TKL fait-il vraiment perdre en confort au quotidien ?"
     answer: "Pour la grande majorité des usages bureautiques, non : on perd surtout la saisie rapide de longues séries de chiffres. Si tu utilises un tableur toute la journée avec beaucoup de saisie numérique, un pavé numérique externe séparé reste une meilleure option qu'un clavier complet encombrant."
@@ -40,6 +54,9 @@ C'est aussi un choix qui a du sens pour qui travaille sur un support d'ordinateu
 - **La compatibilité multi-appareils** : utile si tu bascules régulièrement entre un ordinateur professionnel et un ordinateur personnel dans la même journée.
 - **La qualité de fabrication du châssis** : un clavier compact repose souvent sur un socle plus fin qu'un clavier complet ; vérifie qu'il ne fléchit pas au centre lors d'une frappe rapide, un défaut fréquent sur les modèles d'entrée de gamme les moins chers.
 
+> 🛒 **Comparer les modèles du moment**
+> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les claviers compacts sans pavé numérique sur Amazon](https://www.amazon.fr/s?k=clavier+compact+sans+pave+numerique&tag=monbureauconnecte-21).
+
 ## Comment choisir selon ton usage
 
 Pour un usage bureautique classique — mails, navigateur, traitement de texte, tableur avec peu de saisie numérique — un TKL sans fil à membrane suffit largement et reste le choix le plus économique. L'essentiel du bénéfice (place gagnée pour la souris) est déjà là, sans surcoût lié à la frappe mécanique.
@@ -61,6 +78,9 @@ Le seul vrai temps d'adaptation concerne la position de la souris, qui se rappro
 Un clavier compact sans fil n'a d'intérêt que si le reste du bureau suit la même logique de sobriété. Un récepteur USB qui traîne, un câble de charge mal rangé ou un chargeur qui reste branché en permanence annulent une bonne partie du gain visuel obtenu en réduisant la taille du clavier. Si le désordre de câbles est un problème récurrent sur ton poste, notre guide sur le [rangement des câbles de bureau](/articles/rangement-cables-bureau/) propose des solutions simples pour garder un plan de travail net une fois le clavier changé.
 
 Pense aussi à l'autonomie annoncée si tu optes pour un modèle sans fil : un clavier qui se recharge via USB-C toutes les quelques semaines reste largement gérable, à condition de ne pas attendre la panne totale de batterie pour y penser. Certains modèles conservent en plus quelques heures d'utilisation après une charge très courte, un vrai plus si tu oublies régulièrement de recharger tes périphériques.
+
+> **L'essentiel à retenir**
+> Le TKL supprime **le pavé numérique**, rien d'autre : aucun raccourci ni touche de navigation perdu, la disposition des lettres reste identique. Le vrai gain, c'est la **souris qui se rapproche** dans l'axe de l'épaule. Vérifie la présence des **flèches**, la **disposition AZERTY**, et — si tu saisis des chiffres — ajoute un pavé externe plutôt que de renoncer au format.
 
 ## Conclusion
 
