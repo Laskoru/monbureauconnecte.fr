@@ -2,13 +2,27 @@
 title: "Bien régler sa chaise et son écran : les réglages ergonomiques qui ne coûtent rien"
 description: "Avant d'acheter le moindre accessoire, ces réglages gratuits de la chaise, de l'écran et du clavier corrigent déjà une bonne partie des douleurs liées au bureau."
 pubDate: 2026-09-06
+updatedDate: 2026-09-11
 author: "Rédaction"
 pinHook: "Une meilleure posture, *sans rien acheter*"
 pinSub: "Les réglages ergonomiques gratuits, en 10 minutes."
 keywords: ["ergonomie bureau gratuit", "bien régler sa chaise de bureau", "hauteur écran ergonomie", "posture télétravail"]
 category: "mobilier"
+coverImage: "/covers/bien-regler-chaise-ecran-ergonomie-gratuite-inbody.jpg"
 coverAlt: "Bureau assis-debout et chaise ergonomique face à une baie vitrée"
 draft: false
+interactiveGuide:
+  title: "Où as-tu mal ? On te dit quoi régler"
+  question: "Ta gêne principale, c'est…"
+  options:
+    - label: "La nuque / le cou"
+      result: "Neuf fois sur dix, l'<strong>écran est trop bas</strong>. Remonte-le pour que son <strong>haut arrive au niveau des yeux</strong>, à une longueur de bras. En attendant un rehausseur : une pile de livres ou un <a href='/articles/support-ordinateur-portable-ergonomique/'>support portable</a>."
+    - label: "Le bas du dos"
+      result: "Regarde la <strong>hauteur d'assise</strong> (pieds à plat, genoux ≈ hanches) et le <strong>soutien du dossier</strong> dans le creux du dos. S'il reste plat, un <a href='/articles/coussin-lombaire-chaise-bureau/'>coussin lombaire</a> aide — mais commence par les réglages gratuits."
+    - label: "Les épaules"
+      result: "Presque toujours le <strong>clavier/souris trop hauts ou trop loin</strong>. Baisse-les (ou remonte la chaise) pour garder les <strong>avant-bras horizontaux, coudes à ~90°</strong>, proches du corps, sans hausser les épaules."
+    - label: "Les yeux (fatigue, maux de tête)"
+      result: "Question de <strong>lumière et de reflets</strong> : place l'écran <strong>perpendiculaire aux fenêtres</strong>, jamais face à elles, et règle la luminosité proche de celle de la pièce. Fais des pauses regard au loin toutes les 20 min."
 faq:
   - question: "Faut-il forcément un bureau assis-debout pour bien travailler ?"
     answer: "Non, ce n'est pas indispensable. Un bureau fixe bien réglé, avec une chaise à la bonne hauteur et un écran positionné correctement, corrige déjà la majorité des problèmes de posture. Le bureau assis-debout apporte un bénéfice supplémentaire (alterner les positions), mais ce n'est pas un prérequis pour travailler confortablement."
@@ -60,6 +74,15 @@ Aucun réglage, aussi parfait soit-il, ne compense une position figée pendant h
 
 Une fois ces réglages gratuits en place, certains inconforts précis peuvent justifier un accessoire ciblé : un [coussin d'assise](/articles/coussin-assise-ergonomique-coccyx/) en cas de gêne au niveau du coccyx, un [repose-pieds](/articles/repose-pieds-ergonomique-bureau/) si la hauteur de bureau ne permet pas d'avoir les pieds bien à plat, ou une [lampe de bureau anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/) dans une pièce mal éclairée. Mais dans la plupart des cas, ces réglages de base suffisent à corriger l'essentiel.
 
+## Le cas du portable : le piège ergonomique n°1
+
+Si tu travailles sur un **ordinateur portable** posé à plat sur le bureau, aucun réglage ne te sauvera : l'écran et le clavier sont solidaires, donc tu ne peux pas avoir **à la fois** l'écran au niveau des yeux **et** les mains à bonne hauteur. Baisser l'écran pour taper courbe la nuque ; le remonter éloigne le clavier. C'est le compromis perdant sur lequel des millions de gens travaillent sans le savoir.
+
+La solution est gratuite ou presque : **surélève l'écran** (une pile de livres, une boîte, ou un [support pour portable](/articles/support-ordinateur-portable-ergonomique/)) pour amener son haut au niveau des yeux, **et** ajoute un **clavier et une souris externes** posés à bonne hauteur. Tu retrouves alors la même ergonomie qu'un poste fixe : regard droit, avant-bras horizontaux. C'est de loin le geste le plus rentable pour qui vit sur un portable — et il ne coûte souvent rien de plus que ce qu'on a déjà dans un tiroir. Sans ça, tous les autres réglages restent bridés par la contrainte de départ.
+
+> **L'essentiel à retenir**
+> Avant d'acheter quoi que ce soit, règle **dans l'ordre** : hauteur de chaise (pieds à plat, genoux ≈ hanches), profondeur d'assise et dossier, **haut de l'écran au niveau des yeux**, avant-bras horizontaux (coudes ~90°), puis luminosité et reflets. Ces cinq réglages sont **gratuits** et corrigent l'essentiel des tensions. Et par-dessus tout : **bouge** toutes les 30-45 min — aucune posture parfaite ne remplace le mouvement.
+
 ## En résumé
 
-Avant d'ajouter le moindre accessoire, vérifie dans l'ordre : la hauteur de la chaise, la profondeur d'assise et le dossier, la hauteur de l'écran, la position du clavier, puis la luminosité. Ces cinq réglages ne coûtent rien et corrigent déjà la majorité des tensions liées au bureau. Le mouvement régulier reste la meilleure habitude à ajouter par-dessus, quel que soit le niveau de réglage atteint.
+Avant d'ajouter le moindre accessoire, vérifie dans l'ordre : la hauteur de la chaise, la profondeur d'assise et le dossier, la hauteur de l'écran, la position du clavier, puis la luminosité. Ces cinq réglages ne coûtent rien et corrigent déjà la majorité des tensions liées au bureau. Le mouvement régulier reste la meilleure habitude à ajouter par-dessus, quel que soit le niveau de réglage atteint. Prends dix minutes aujourd'hui pour tout revoir dans cet ordre : c'est probablement le meilleur retour sur investissement possible pour ton confort au travail, et il est entièrement gratuit.
