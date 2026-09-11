@@ -3,7 +3,7 @@ title: "Pavé numérique externe sans fil : comment bien le choisir"
 description: "Votre portable n'a pas de pavé numérique ? Un pavé externe sans fil accélère la saisie de chiffres. Les critères (RF ou Bluetooth, autonomie) et notre choix."
 pubDate: 2026-08-31
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 keywords: ["pavé numérique sans fil", "pavé numérique externe", "clavier numérique sans fil", "quel pavé numérique choisir"]
 category: "peripheriques"
 coverImage: "/covers/pave-numerique-externe-sans-fil-inbody.jpg"

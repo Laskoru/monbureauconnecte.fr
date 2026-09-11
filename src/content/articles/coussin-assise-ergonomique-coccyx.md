@@ -3,7 +3,7 @@ title: "Coussin d'assise ergonomique : soulager le coccyx au bureau"
 description: "Comment choisir un coussin d'assise ergonomique pour soulager le coccyx et le bas du dos en position assise prolongée."
 pubDate: 2026-08-16
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Rester assis *sans douleur*"
 pinSub: "Le coussin qui soulage le coccyx."
 keywords: ["coussin d'assise ergonomique", "coussin coccyx bureau", "coussin ergonomique chaise de bureau"]

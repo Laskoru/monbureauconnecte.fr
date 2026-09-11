@@ -3,7 +3,7 @@ title: "Souris ergonomique verticale : notre sélection contre les douleurs au p
 description: "Tendinite, syndrome du canal carpien, douleurs au poignet : notre comparatif des meilleures souris verticales pour un usage bureau et télétravail, et comment bien choisir l'angle."
 pubDate: 2026-08-12
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Dire adieu *aux douleurs* du poignet"
 pinSub: "La souris verticale, bien choisie."
 keywords: ["souris ergonomique verticale", "souris verticale poignet", "meilleure souris ergonomique"]

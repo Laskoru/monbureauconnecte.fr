@@ -3,7 +3,7 @@ title: "Plante de bureau dépolluante : laquelle choisir pour un poste de travai
 description: "Quelle plante dépolluante installer sur un bureau, selon la lumière disponible et le temps qu'on peut consacrer à son entretien."
 pubDate: 2026-08-16
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Un bureau *plus sain*, plus agréable"
 pinSub: "La plante dépolluante idéale."
 keywords: ["plante de bureau dépolluante", "plante dépolluante intérieur", "plante verte bureau facile"]

@@ -3,7 +3,7 @@ title: "Bien régler sa chaise et son écran : les réglages ergonomiques qui ne
 description: "Avant d'acheter le moindre accessoire, ces réglages gratuits de la chaise, de l'écran et du clavier corrigent déjà une bonne partie des douleurs liées au bureau."
 pubDate: 2026-09-06
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Une meilleure posture, *sans rien acheter*"
 pinSub: "Les réglages ergonomiques gratuits, en 10 minutes."
 keywords: ["ergonomie bureau gratuit", "bien régler sa chaise de bureau", "hauteur écran ergonomie", "posture télétravail"]

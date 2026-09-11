@@ -1,30 +1,34 @@
 ---
-// Encart auteur / rédaction en bas d'article. Signal de confiance (E-E-A-T) :
-// une identité éditoriale claire, un rappel de méthode et d'indépendance, et
-// un lien vers la page qui détaille tout. Volontairement HONNÊTE : on ne se
-// présente pas comme un labo de test, on assume la vraie méthode.
+// Encart auteur en bas d'article. Signal de confiance (E-E-A-T) : un auteur
+// identifié, une bio honnête (aucun faux diplôme), et des liens vers la page
+// auteur, la méthode et le contact. Volontairement transparent sur la méthode.
 import { siteConfig } from '../siteConfig';
 const author = (Astro.props as { author?: string }).author || siteConfig.author;
+const initials = author
+  .split(/\s+/)
+  .map((w) => w[0])
+  .join('')
+  .slice(0, 2)
+  .toUpperCase();
 ---
 
 <aside class="authorbox" aria-label="À propos de l'auteur">
-  <div class="authorbox__avatar" aria-hidden="true">
-    <svg width="30" height="30" viewBox="0 0 32 32">
-      <rect width="32" height="32" rx="8" fill="var(--color-accent)" />
-      <path d="M8 24V13l8 7 8-7v11" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
-      <circle cx="16" cy="7" r="2.6" fill="var(--color-signal)" />
-    </svg>
-  </div>
+  <div class="authorbox__avatar" aria-hidden="true">{initials}</div>
   <div class="authorbox__body">
-    <p class="authorbox__name">{author} · <span>{siteConfig.name}</span></p>
+    <p class="authorbox__name">
+      <a href="/auteur">{author}</a>
+      <span>Fondateur &amp; rédacteur de {siteConfig.name}</span>
+    </p>
     <p class="authorbox__text">
-      Cet article a été rédigé et relu par notre rédaction. On compare des <strong>critères mesurables</strong>
-      et de vrais retours d'utilisateurs — on ne teste pas en laboratoire, et on l'assume. Le site est
-      <strong>100 % indépendant</strong> : aucune marque ne nous sponsorise, et nos liens Amazon sont affiliés
-      (une petite commission si tu achètes, sans surcoût pour toi).
+      Je compare le matériel de bureau, de télétravail et de gaming pour n'en garder que ce qui vaut
+      vraiment le coup. Je ne teste pas en laboratoire — je m'appuie sur des <strong>critères mesurables</strong>
+      et de vrais retours d'utilisateurs, et je l'assume. Le site est <strong>100 % indépendant</strong> :
+      aucune marque ne me sponsorise, et mes liens Amazon sont affiliés (une petite commission si tu achètes,
+      sans surcoût pour toi).
     </p>
     <p class="authorbox__links">
-      <a href="/a-propos">Notre méthode &amp; notre indépendance →</a>
+      <a href="/auteur">En savoir plus sur l'auteur →</a>
+      <a href="/a-propos">Notre méthode</a>
       <a href="/contact">Signaler une erreur</a>
     </p>
   </div>
@@ -33,7 +37,7 @@ const author = (Astro.props as { author?: string }).author || siteConfig.author;
 <style>
   .authorbox {
     display: flex;
-    gap: 1rem;
+    gap: 1.1rem;
     align-items: flex-start;
     margin: 2.5rem 0 0;
     padding: 1.4rem 1.5rem;
@@ -41,22 +45,40 @@ const author = (Astro.props as { author?: string }).author || siteConfig.author;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
   }
-  .authorbox__avatar { flex-shrink: 0; line-height: 0; }
-  .authorbox__avatar svg { border-radius: 8px; }
-  .authorbox__name {
-    margin: 0 0 0.35rem;
+  .authorbox__avatar {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    color: #fff;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 1rem;
-    color: var(--color-text);
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
   }
-  .authorbox__name span { color: var(--color-text-muted); font-weight: 500; }
+  .authorbox__name {
+    margin: 0 0 0.4rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+  }
+  .authorbox__name a { color: var(--color-text); text-decoration: none; font-weight: 600; }
+  .authorbox__name a:hover { color: var(--color-accent); }
+  .authorbox__name span { font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; color: var(--color-text-muted); }
   .authorbox__text { margin: 0 0 0.7rem; font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted); }
   .authorbox__text strong { color: var(--color-text); }
   .authorbox__links { margin: 0; display: flex; flex-wrap: wrap; gap: 1.1rem; font-size: 0.88rem; font-weight: 600; }
   .authorbox__links a { color: var(--color-accent); text-decoration: none; }
   .authorbox__links a:hover { text-decoration: underline; }
   @media (max-width: 560px) {
-    .authorbox { flex-direction: column; gap: 0.7rem; }
+    .authorbox { gap: 0.9rem; padding: 1.2rem; }
+    .authorbox__avatar { width: 44px; height: 44px; font-size: 1rem; }
   }
 </style>

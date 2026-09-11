@@ -3,7 +3,7 @@ title: "Casque à réduction de bruit pour le télétravail en 2026"
 description: "Comment choisir un casque à réduction de bruit active pour se concentrer en télétravail ou en open space : ANC, confort, autonomie, micro. Nos critères et notre sélection."
 pubDate: 2026-08-14
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Le calme, *même en open space*"
 pinSub: "Le casque anti-bruit pour le télétravail."
 keywords: ["casque réduction de bruit télétravail", "casque anc bureau", "meilleur casque antibruit", "meilleur casque antibruit 2026"]

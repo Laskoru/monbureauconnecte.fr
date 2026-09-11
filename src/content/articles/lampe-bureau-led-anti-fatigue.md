@@ -3,7 +3,7 @@ title: "Lampe de bureau LED anti-fatigue : comment bien la choisir"
 description: "Une bonne lampe de bureau réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles LED."
 pubDate: 2026-07-21
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Une lumière *qui ménage les yeux*"
 pinSub: "La lampe LED anti-fatigue bien choisie."
 keywords: ["lampe de bureau led", "lampe anti-fatigue oculaire", "lampe de bureau réglable"]

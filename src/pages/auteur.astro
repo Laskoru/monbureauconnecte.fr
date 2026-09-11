@@ -1,0 +1,105 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { siteConfig } from '../siteConfig';
+
+const authorName = siteConfig.author; // "Hugo B."
+const siteUrl = Astro.site?.origin ?? Astro.url.origin;
+
+const allArticles = await getCollection('articles', ({ data }) => !data.draft);
+const recent = allArticles
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 6);
+
+const initials = authorName
+  .split(/\s+/)
+  .map((w) => w[0])
+  .join('')
+  .slice(0, 2)
+  .toUpperCase();
+
+// Données structurées : page profil + personne rattachée à l'organisation.
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    name: authorName,
+    url: `${siteUrl}/auteur`,
+    jobTitle: 'Fondateur et rédacteur',
+    worksFor: { '@id': `${siteUrl}/#organization` },
+    knowsAbout: ['ergonomie du poste de travail', 'télétravail', 'périphériques informatiques', 'matériel gaming'],
+  },
+};
+---
+
+<BaseLayout
+  title={`${authorName} — auteur`}
+  description={`${authorName}, fondateur et rédacteur de ${siteConfig.name}. Qui écrit les comparatifs, avec quelle méthode et en toute indépendance.`}
+  jsonLd={jsonLd}
+>
+  <section class="container author">
+    <div class="author__head">
+      <div class="author__avatar" aria-hidden="true">{initials}</div>
+      <div>
+        <p class="eyebrow">Auteur</p>
+        <h1>{authorName}</h1>
+        <p class="author__role">Fondateur &amp; rédacteur de {siteConfig.name}</p>
+      </div>
+    </div>
+
+    <div class="author__bio">
+      <p>
+        Bonjour 👋 Je suis Hugo, la personne derrière {siteConfig.name}. J'ai lancé ce site pour une raison
+        simple : choisir du bon matériel de bureau, de télétravail ou de gaming est devenu un casse-tête, entre
+        le marketing, les faux avis et les milliers de références qui se ressemblent.
+      </p>
+      <p>
+        Mon travail, ce n'est pas de tester chaque produit en laboratoire — je préfère être honnête là-dessus
+        plutôt que de le prétendre. C'est de <strong>comparer méthodiquement</strong> les caractéristiques qui
+        comptent vraiment à l'usage (plage de réglage, charge, autonomie, niveau sonore…), de croiser des
+        <strong>retours d'utilisateurs réels</strong>, et d'en tirer des recommandations claires, pour un profil
+        et un budget donnés — plutôt que de désigner un « meilleur » universel qui n'existe pas.
+      </p>
+      <p>
+        Le site est <strong>100 % indépendant</strong> : aucune marque ne paie pour figurer ou être mieux
+        classée. {siteConfig.name} se finance uniquement via l'affiliation Amazon — si tu achètes après avoir
+        cliqué sur un lien, je touche une petite commission, <strong>sans aucun surcoût pour toi</strong>. Ça ne
+        change jamais mon avis : quand un produit a des défauts, je le dis.
+      </p>
+      <p class="author__links">
+        <a class="btn btn--outline" href="/a-propos">Notre méthode en détail</a>
+        <a class="btn btn--outline" href="/contact">Me contacter</a>
+      </p>
+    </div>
+
+    <h2 class="author__section">Les derniers comparatifs</h2>
+    <div class="article-list">
+      {recent.map((article) => <ArticleCard article={article} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .author { padding: 2.5rem 0 3.5rem; max-width: 760px; }
+  .author__head { display: flex; align-items: center; gap: 1.2rem; }
+  .author__avatar {
+    flex-shrink: 0;
+    width: 76px; height: 76px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--color-accent); color: #fff;
+    font-family: var(--font-display); font-weight: 600; font-size: 1.7rem;
+  }
+  .author__head h1 { margin: 0.15rem 0 0.1rem; }
+  .author__role { margin: 0; color: var(--color-text-muted); font-weight: 500; }
+  .author__bio { margin-top: 1.8rem; }
+  .author__bio p { color: var(--color-text-muted); line-height: 1.75; }
+  .author__bio strong { color: var(--color-text); }
+  .author__links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
+  .author__section { margin-top: 2.8rem; }
+  .article-list { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.2rem; }
+  @media (max-width: 520px) {
+    .author__head { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+  }
+</style>

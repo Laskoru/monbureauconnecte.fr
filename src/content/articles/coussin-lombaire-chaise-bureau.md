@@ -3,7 +3,7 @@ title: "Coussin lombaire pour chaise de bureau : soulager le bas du dos à petit
 description: "Comment choisir un coussin lombaire pour chaise de bureau afin de corriger le soutien du bas du dos sans changer de siège."
 pubDate: 2026-08-16
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Le bas du dos *enfin soutenu*"
 pinSub: "Le coussin lombaire à petit prix."
 keywords: ["coussin lombaire chaise de bureau", "soutien lombaire bureau", "coussin dossier ergonomique"]

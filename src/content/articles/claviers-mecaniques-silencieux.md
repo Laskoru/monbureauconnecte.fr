@@ -3,7 +3,7 @@ title: "Quel clavier mécanique silencieux pour l'open space et la visio ?"
 description: "Notre sélection de claviers mécaniques silencieux, pour taper sans déranger en open space ou en visio : quels switches choisir, quel format, et les pièges à éviter."
 pubDate: 2026-08-07
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "La frappe mécanique, *en silence*"
 pinSub: "Les claviers silencieux pour l'open space."
 keywords: ["clavier mécanique silencieux", "clavier silencieux télétravail", "clavier open space"]

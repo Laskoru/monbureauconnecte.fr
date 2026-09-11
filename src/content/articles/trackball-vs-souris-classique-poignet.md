@@ -3,7 +3,7 @@ title: "Trackball vs souris classique en 2026 : lequel choisir pour le poignet ?
 description: "Douleurs au poignet avec une souris classique ? Notre comparatif trackball vs souris pour choisir selon ton usage, sans se tromper d'accessoire."
 pubDate: 2026-08-21
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Soulager le poignet, *autrement*"
 pinSub: "Trackball ou souris : le comparatif."
 keywords: ["trackball vs souris", "trackball souris poignet", "meilleur trackball 2026", "trackball ergonomique bureau"]

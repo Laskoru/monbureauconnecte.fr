@@ -3,7 +3,7 @@ title: "Bras support écran articulé : comment bien le choisir pour ton bureau"
 description: "Un bon bras support écran libère de la place et améliore la posture. Nos critères de choix (VESA, charge, ressort à gaz) et notre sélection pour un ou deux moniteurs."
 pubDate: 2026-08-15
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "L'écran *à la bonne hauteur*, enfin"
 pinSub: "Le bras articulé qui libère le bureau."
 keywords: ["bras support écran", "bras moniteur articulé", "support écran pc bureau"]

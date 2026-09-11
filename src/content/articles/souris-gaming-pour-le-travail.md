@@ -3,7 +3,7 @@ title: "Souris gaming au bureau : DPI et boutons programmables au quotidien"
 description: "Utiliser une souris gaming pour travailler ? DPI réglable, boutons programmables et macros : notre guide pour bien choisir, loin des clichés du RGB."
 pubDate: 2026-08-26
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Des raccourcis *sous le pouce*"
 pinSub: "La souris gaming qui accélère ta journée de travail."
 keywords: ["souris gaming pour le travail", "souris gaming bureau", "boutons programmables souris", "DPI souris travail"]

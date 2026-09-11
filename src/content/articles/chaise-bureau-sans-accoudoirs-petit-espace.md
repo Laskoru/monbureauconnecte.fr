@@ -3,7 +3,7 @@ title: "Chaise de bureau sans accoudoirs : le bon choix pour un petit espace"
 description: "Pourquoi une chaise sans accoudoirs se glisse mieux sous un bureau bas ou étroit, et comment en choisir une sans sacrifier le confort."
 pubDate: 2026-08-17
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "La chaise qui *se glisse partout*"
 pinSub: "Sans accoudoirs, pour les petits espaces."
 keywords: ["chaise de bureau sans accoudoirs", "chaise bureau petit espace", "chaise compacte télétravail"]

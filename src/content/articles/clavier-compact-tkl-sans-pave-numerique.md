@@ -3,7 +3,7 @@ title: "Clavier compact TKL : gagner de la place pour la souris sur un petit bur
 description: "Le format TKL, sans pavé numérique, libère de l'espace pour la souris. Nos critères pour bien choisir et notre sélection pour le bureau."
 pubDate: 2026-08-24
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Plus de place pour *la souris*"
 pinSub: "Le clavier compact TKL, bien choisi."
 keywords: ["clavier TKL", "clavier compact sans pavé numérique", "clavier sans pavé numérique bureau"]

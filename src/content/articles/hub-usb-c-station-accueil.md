@@ -3,7 +3,7 @@ title: "Hub USB-C et station d'accueil en 2026 : lequel choisir ?"
 description: "Multi-écrans, Ethernet, charge : comment choisir un hub ou une station d'accueil USB-C pour un poste de télétravail complet, et éviter les pièges de compatibilité."
 pubDate: 2026-07-27
 updatedDate: 2026-09-11
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Tout brancher *d'un seul câble*"
 pinSub: "Le hub USB-C / station idéal."
 keywords: ["station d'accueil usb-c", "hub usb-c télétravail", "dock usb-c ordinateur portable", "hub usb-c 2026"]
