@@ -15,6 +15,14 @@ products:
   - asin: "B07W7JHZKR"
     title: "Logitech MX Keys Mini — clavier compact sans fil, rétroéclairé, AZERTY"
     blurb: "Un format TKL premium, silencieux et bien construit, pensé pour un usage bureautique intensif au quotidien."
+    pros:
+      - "Format compact qui rapproche la souris"
+      - "Frappe silencieuse et rétroéclairée"
+      - "Multi-appareils, très bien construit"
+    cons:
+      - "Pas de pavé numérique"
+      - "Batterie à recharger"
+      - "Tarif élevé pour un clavier"
 interactiveGuide:
   title: "Le format compact est-il fait pour toi ?"
   question: "Sur ton bureau, tu…"

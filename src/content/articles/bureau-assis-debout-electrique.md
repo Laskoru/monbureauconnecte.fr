@@ -15,6 +15,14 @@ products:
   - asin: "B0DQ8FGRTV"
     title: "FLEXISPOT 120x60 cm — double moteur, plateau monobloc, mémoire de hauteur"
     blurb: "Le double moteur monte plus vite et plus silencieusement qu'un simple moteur, et encaisse jusqu'à 100 kg : c'est le choix à faire si le bureau porte deux écrans et bouge plusieurs fois par jour."
+    pros:
+      - "Double moteur : montée rapide et silencieuse"
+      - "Mémoire de hauteur, jusqu’à 100 kg"
+      - "Passage assis/debout en quelques secondes"
+    cons:
+      - "Investissement conséquent"
+      - "Assemblage long et lourd"
+      - "Plateau parfois à acheter à part"
 interactiveGuide:
   title: "Quel bureau assis-debout pour toi ?"
   question: "Ton poste, c'est plutôt…"

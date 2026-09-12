@@ -15,6 +15,14 @@ products:
   - asin: "B08QR8Z769"
     title: "Feagar — mousse à mémoire de forme, housse lavable"
     blurb: "Un coussin polyvalent (bureau, voiture) qui répartit la pression et soulage le coccyx, avec une housse déhoussable et lavable."
+    pros:
+      - "Soulage la pression sur le coccyx"
+      - "Polyvalent (bureau, voiture)"
+      - "Housse déhoussable et lavable"
+    cons:
+      - "Rehausse l’assise (régler la chaise)"
+      - "La mousse se tasse avec les années"
+      - "Housse à laver régulièrement"
 interactiveGuide:
   title: "Quel coussin d'assise pour toi ?"
   question: "Ton besoin, c'est…"

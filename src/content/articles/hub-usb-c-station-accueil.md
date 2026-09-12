@@ -15,6 +15,14 @@ products:
   - asin: "B0CV9TX1V3"
     title: "Kensington — station d'accueil 10-en-1"
     blurb: "Marque reconnue en accessoires professionnels : 3 sorties vidéo, 100W de charge, fiable pour un usage quotidien intensif."
+    pros:
+      - "3 sorties vidéo, charge 100 W"
+      - "Marque pro reconnue, fiable"
+      - "Un seul câble vers le portable"
+    cons:
+      - "Tarif au-dessus des hubs génériques"
+      - "Peut chauffer en usage intensif"
+      - "Compatibilité écran à vérifier selon le portable"
 interactiveGuide:
   title: "Hub simple ou station d'accueil : de quoi as-tu besoin ?"
   question: "Ton poste, c'est…"

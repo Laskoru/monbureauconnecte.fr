@@ -15,6 +15,14 @@ products:
   - asin: "B0BTDX26B2"
     title: "Sony WH-CH720N — réduction de bruit active, 35h d'autonomie"
     blurb: "Très bon niveau de réduction de bruit pour le prix, léger sur la durée, micro correct pour les appels occasionnels."
+    pros:
+      - "Bonne réduction de bruit pour le prix"
+      - "Léger sur la durée"
+      - "35 h d’autonomie"
+    cons:
+      - "Micro juste correct pour les appels"
+      - "Finition plastique"
+      - "ANC en retrait des modèles premium"
 interactiveGuide:
   title: "Quel casque anti-bruit pour ton environnement ?"
   question: "Ce qui te dérange le plus, c'est…"

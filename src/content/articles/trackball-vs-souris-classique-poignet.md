@@ -27,6 +27,14 @@ products:
   - asin: "B0DB5DMDW3"
     title: "Logitech ERGO M575S — trackball sans fil, contrôle au pouce, Bluetooth"
     blurb: "Le trackball le plus simple pour passer le cap : forme contournée qui repose la main, autonomie de plusieurs mois, compatible PC et Mac."
+    pros:
+      - "Le poignet ne bouge plus (bille au pouce)"
+      - "Autonomie de plusieurs mois"
+      - "PC/Mac, Bluetooth ou dongle"
+    cons:
+      - "Temps d’adaptation réel"
+      - "Bille à nettoyer de temps en temps"
+      - "Moins précis pour le graphisme fin"
 faq:
   - question: "Un trackball est-il vraiment plus ergonomique qu'une souris classique ?"
     answer: "Oui pour le poignet et l'avant-bras : comme la main ne bouge plus pour déplacer le pointeur, il n'y a plus de glissement répété ni d'extension du bras. En revanche, l'effort se déplace vers le pouce ou les doigts selon le modèle, ce qui demande une vraie période d'adaptation."

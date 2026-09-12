@@ -27,6 +27,14 @@ products:
   - asin: "B0GXKT85H7"
     title: "Giecy — Set repose-poignet clavier + souris en gel translucide, antidérapant"
     blurb: "Le duo complet le plus simple pour commencer : un repose-poignet pour le clavier et un pour la souris, en gel souple à la forme de nuage, avec une base antidérapante."
+    pros:
+      - "Duo clavier + souris complet"
+      - "Gel souple qui épouse le poignet"
+      - "Base antidérapante"
+    cons:
+      - "Le gel peut se déformer à la longue"
+      - "Housse non lavable"
+      - "Hauteur fixe (pas pour tous les claviers)"
 faq:
   - question: "Un repose-poignet suffit-il à lui seul contre les douleurs au poignet ?"
     answer: "Non, c'est un complément utile mais pas une solution miracle. Il corrige surtout la position du poignet à l'arrêt, entre deux frappes. Si la douleur vient d'un mauvais réglage global du poste (hauteur du bureau, position de la souris trop éloignée), il faudra aussi revoir ces éléments pour un vrai soulagement durable."

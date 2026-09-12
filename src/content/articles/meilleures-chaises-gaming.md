@@ -15,6 +15,14 @@ products:
   - asin: "B081396NSX"
     title: "SONGMICS OBG73BRV1 — Noir/Rouge, accoudoirs 4D, charge 150 kg"
     blurb: "Bon compromis pour un usage quotidien : accoudoirs 4D, appui-tête et support lombaire réglables, environ 140-150€."
+    pros:
+      - "Accoudoirs 4D réglables"
+      - "Appui-tête et lombaire ajustables"
+      - "Bon rapport qualité/prix"
+    cons:
+      - "Assise ferme, look « gaming » marqué"
+      - "Assemblage à prévoir"
+      - "Simili-cuir qui chauffe l’été"
 interactiveGuide:
   title: "Quelle chaise gaming pour toi ?"
   question: "Tu la veux surtout pour…"

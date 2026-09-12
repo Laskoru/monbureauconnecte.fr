@@ -15,6 +15,14 @@ products:
   - asin: "B086W5MYRD"
     title: "SUPA MODERN — mousse à mémoire de forme, sangles réglables"
     blurb: "Un coussin lombaire polyvalent (bureau, voiture) avec des sangles ajustables de 12 à 26 cm pour bien le fixer au dossier, et une housse respirante amovible."
+    pros:
+      - "Soutient le bas du dos"
+      - "Sangles réglables (12-26 cm)"
+      - "Housse respirante amovible"
+    cons:
+      - "Position à ajuster selon la chaise"
+      - "Peut glisser sur certains dossiers"
+      - "Avance un peu l’assise"
 interactiveGuide:
   title: "Quel coussin lombaire pour toi ?"
   question: "Ta situation, c'est…"

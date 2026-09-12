@@ -15,6 +15,14 @@ products:
   - asin: "B08VJM5NHB"
     title: "HOMCOM — caisson à roulettes, tiroir + niche ouverte"
     blurb: "Un caisson compact avec un tiroir fermé et une niche ouverte pour un accès rapide, monté sur roulettes pour se déplacer facilement sous le bureau."
+    pros:
+      - "Compact, se glisse sous le bureau"
+      - "Tiroir fermé + niche à accès rapide"
+      - "Roulettes pour le déplacer facilement"
+    cons:
+      - "Capacité limitée (petit caisson)"
+      - "Tiroir sans serrure"
+      - "Roulettes basiques"
 interactiveGuide:
   title: "Quel caisson pour ton bureau ?"
   question: "Ta priorité, c'est…"

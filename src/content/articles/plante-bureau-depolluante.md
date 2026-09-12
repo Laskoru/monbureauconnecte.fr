@@ -27,6 +27,14 @@ products:
   - asin: "B0CFZXBQP8"
     title: "Sansevieria Laurentii — plante d'intérieur, tolère la faible luminosité"
     blurb: "Une des plantes les plus résistantes pour un bureau : elle supporte les oublis d'arrosage et se contente d'un poste éloigné d'une fenêtre, ce qui en fait un bon premier choix."
+    pros:
+      - "Très résistante, tolère l’oubli d’arrosage"
+      - "Supporte la faible luminosité"
+      - "Bon premier choix de plante"
+    cons:
+      - "Croissance lente"
+      - "Toxique en cas d’ingestion (animaux, enfants)"
+      - "Craint l’excès d’eau (pourriture)"
 faq:
   - question: "Une plante dépolluante suffit-elle à assainir vraiment l'air d'un bureau ?"
     answer: "Il faut rester honnête sur ce point : l'effet mesuré d'une seule plante en pot sur la qualité de l'air d'une vraie pièce (par opposition à une chambre expérimentale fermée) est modeste. L'intérêt principal au quotidien tient surtout au confort visuel, à la réduction du stress et à une ambiance de travail plus agréable — des bénéfices bien réels, même si l'effet purement chimique sur l'air reste limité à l'échelle d'un bureau normal."

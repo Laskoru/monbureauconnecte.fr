@@ -15,6 +15,14 @@ products:
   - asin: "B0B42XQNMH"
     title: "Razer Basilisk V3 Pro — souris gaming sans fil, 11 boutons programmables, capteur 30 000 DPI"
     blurb: "Onze boutons personnalisables et une molette à défilement libre ou cranté au choix : de quoi automatiser de vraies tâches répétitives, pas seulement des combos de jeu."
+    pros:
+      - "11 boutons programmables (macros utiles)"
+      - "Molette libre ou crantée au choix"
+      - "Capteur très précis"
+    cons:
+      - "Prix élevé"
+      - "Logiciel Razer un peu lourd"
+      - "Lourde pour un usage nomade"
 interactiveGuide:
   title: "Une souris gaming au bureau : pour quel usage ?"
   question: "Au quotidien, tu…"

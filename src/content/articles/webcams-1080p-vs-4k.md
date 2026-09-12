@@ -15,6 +15,14 @@ products:
   - asin: "B006A2Q81M"
     title: "Logitech C920 HD Pro — Full HD 1080p"
     blurb: "La référence increvable du télétravail : plug-and-play, corrections automatiques de la lumière, très bon rapport qualité/prix."
+    pros:
+      - "Plug-and-play, très fiable"
+      - "1080p correct, corrections de lumière auto"
+      - "Excellent rapport qualité/prix"
+    cons:
+      - "1080p maxi (pas de 4K)"
+      - "Micro moyen"
+      - "Réglages fins via le logiciel Logitech"
 interactiveGuide:
   title: "1080p ou 4K : de quoi as-tu besoin ?"
   question: "Tu utilises ta webcam surtout pour…"

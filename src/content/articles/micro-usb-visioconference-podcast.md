@@ -15,6 +15,14 @@ products:
   - asin: "B08NDB5NWP"
     title: "TONOR TM20 — micro de conférence, bouton muet"
     blurb: "Pensé pour les réunions : capte la voix à 360° autour du micro, avec un bouton muet accessible, idéal pour Zoom ou Teams."
+    pros:
+      - "Capte la voix à 360°"
+      - "Bouton muet accessible"
+      - "Plug-and-play pour Zoom/Teams"
+    cons:
+      - "Capte aussi les bruits de la pièce"
+      - "Qualité « réunion » plus que « podcast pro »"
+      - "Pied fixe, non orientable"
 interactiveGuide:
   title: "Quel micro USB pour toi ?"
   question: "Ton usage principal, c'est…"

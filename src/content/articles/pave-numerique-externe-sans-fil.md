@@ -26,6 +26,14 @@ products:
   - asin: "B0F2XXPFMQ"
     title: "Trust Xalas — Pavé numérique sans fil (récepteur USB 2,4 GHz, 22 touches)"
     blurb: "Signé Trust, marque reconnue en périphériques : un pavé compact 22 touches en liaison sans fil 2,4 GHz (dongle USB, plug and play, aucun pilote). Idéal pour compléter un portable ou un clavier compact sans câble. Simple, fiable et abordable."
+    pros:
+      - "Complète un portable ou un clavier compact"
+      - "Sans fil 2,4 GHz, plug and play"
+      - "Compact et abordable"
+    cons:
+      - "Fonctionne à pile"
+      - "Dongle USB à ne pas perdre"
+      - "Touches un peu légères"
 faq:
   - question: "À quoi sert un pavé numérique externe ?"
     answer: "Beaucoup d'ordinateurs portables et de claviers compacts (format TKL) n'ont pas de pavé numérique. Or, pour saisir beaucoup de chiffres — comptabilité, tableurs, caisses, saisie de données — le pavé accélère énormément le travail et réduit la fatigue. Un pavé externe sans fil se pose où l'on veut sur le bureau, à droite ou à gauche selon la main, sans encombrer d'un câble."

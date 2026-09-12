@@ -15,6 +15,14 @@ products:
   - asin: "B0BFQKMFRW"
     title: "BESIGN LS03S — support aluminium ergonomique"
     blurb: "Angle d'inclinaison bien pensé et base stable, l'un des supports les mieux notés dans sa catégorie."
+    pros:
+      - "Remonte l’écran à hauteur des yeux"
+      - "Base stable en aluminium"
+      - "Bien noté dans sa catégorie"
+    cons:
+      - "Impose un clavier externe"
+      - "Angle fixe (pas de réglage fin)"
+      - "Peu adapté aux très grands portables"
 interactiveGuide:
   title: "Quel support portable pour toi ?"
   question: "Comment utilises-tu ton portable ?"

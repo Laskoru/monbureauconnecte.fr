@@ -15,6 +15,14 @@ products:
   - asin: "B097N2DK98"
     title: "ACROPAQ — 3 hauteurs, inclinaison -30° à +30°"
     blurb: "Le format le plus complet pour le prix : réglage en hauteur et en inclinaison, surface antidérapante."
+    pros:
+      - "Réglable en hauteur et en inclinaison"
+      - "Surface antidérapante"
+      - "Soulage jambes et bas du dos"
+    cons:
+      - "Surface un peu petite pour de grands pieds"
+      - "Plastique d’entrée de gamme"
+      - "Peut glisser sur moquette"
 interactiveGuide:
   title: "As-tu besoin d'un repose-pieds ?"
   question: "Ta situation, c'est…"

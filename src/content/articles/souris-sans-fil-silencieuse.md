@@ -15,6 +15,14 @@ products:
   - asin: "B07W6G822T"
     title: "Logitech Signature M650 — clics silencieux, Bluetooth, multi-appareils"
     blurb: "Clics réduits de plus de 90 % par rapport à une souris classique, autonomie annoncée de deux ans, boutons latéraux personnalisables."
+    pros:
+      - "Clics silencieux (−90 %)"
+      - "Autonomie annoncée de 2 ans"
+      - "Boutons latéraux personnalisables"
+    cons:
+      - "Capteur bureautique (pas pour le jeu)"
+      - "Fonctionne à pile (non rechargeable)"
+      - "Deux tailles à bien choisir"
 interactiveGuide:
   title: "As-tu besoin d'une souris silencieuse ?"
   question: "Ton environnement, c'est…"

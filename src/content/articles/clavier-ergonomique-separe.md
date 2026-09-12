@@ -15,6 +15,14 @@ products:
   - asin: "B07W6GVT3X"
     title: "Logitech ERGO K860 — clavier en deux parties, repose-poignets"
     blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, très bonne prise en main dès les premiers jours."
+    pros:
+      - "Courbe qui détend les poignets"
+      - "Repose-poignets rembourré"
+      - "Bonne prise en main rapide"
+    cons:
+      - "Encombrant sur le bureau"
+      - "Temps d’adaptation les premiers jours"
+      - "Pas de rétroéclairage"
 interactiveGuide:
   title: "Quel clavier ergonomique pour toi ?"
   question: "Où en es-tu avec le format ergo ?"

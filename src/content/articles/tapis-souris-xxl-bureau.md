@@ -15,6 +15,14 @@ products:
   - asin: "B06X19FLTC"
     title: "Amazon Basics — Grand tapis de souris gaming, 90 x 43 cm"
     blurb: "Surface tissu lisse, base antidérapante, largement de quoi accueillir clavier et souris côte à côte."
+    pros:
+      - "Accueille clavier et souris côte à côte"
+      - "Surface lisse, glisse régulière"
+      - "Base antidérapante, prix mini"
+    cons:
+      - "Bords non surpiqués (usure possible)"
+      - "Encombre tout le bureau"
+      - "Se salit vite (à laver)"
 interactiveGuide:
   title: "Quelle taille de tapis XXL pour toi ?"
   question: "Ton bureau fait…"

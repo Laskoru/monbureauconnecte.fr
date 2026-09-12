@@ -15,6 +15,14 @@ products:
   - asin: "B08PP39PLD"
     title: "NATRKE — PVC transparent, 76 x 122 cm, sans BPA"
     blurb: "Le format le plus discret : transparent, il se fond dans le décor tout en protégeant efficacement un parquet ou un stratifié."
+    pros:
+      - "Transparent et discret"
+      - "Protège parquet et stratifié"
+      - "Sans BPA"
+    cons:
+      - "Peut marquer un sol fragile à la longue"
+      - "Se corne aux angles au déballage"
+      - "Format unique (mesurer avant)"
 interactiveGuide:
   title: "Quel tapis de sol pour ton sol ?"
   question: "Ta chaise roule sur…"

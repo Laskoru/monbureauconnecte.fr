@@ -15,6 +15,14 @@ products:
   - asin: "B07FNHV4MW"
     title: "Logitech MX Vertical — sans fil, 4000 PPP, multi-appareils"
     blurb: "La référence du genre : angle à 57° qui réduit vraiment la pronation du poignet, autonomie de plusieurs semaines, compatible PC/Mac."
+    pros:
+      - "Angle 57° qui réduit la pronation du poignet"
+      - "Autonomie de plusieurs semaines"
+      - "Multi-appareils PC/Mac"
+    cons:
+      - "Temps d’adaptation à la position"
+      - "Volumineuse, pensée pour grande main"
+      - "Tarif élevé"
 interactiveGuide:
   title: "La souris verticale est-elle faite pour toi ?"
   question: "Ta situation, c'est plutôt…"

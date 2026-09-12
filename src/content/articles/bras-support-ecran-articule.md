@@ -15,6 +15,14 @@ products:
   - asin: "B07T4HQS2N"
     title: "HUANUO — bras simple, 13 à 32 pouces, jusqu'à 9 kg"
     blurb: "Installation rapide en conception monobloc, bon compromis pour un premier écran externe sur un bureau classique."
+    pros:
+      - "Libère de la place sur le bureau"
+      - "Écran orientable en hauteur et profondeur"
+      - "Compatible 13 à 32 pouces (jusqu’à 9 kg)"
+    cons:
+      - "Un seul écran (modèle simple)"
+      - "Pince limite sur un bureau à bord épais"
+      - "Réglages fermes à ajuster au montage"
 interactiveGuide:
   title: "Quel bras d'écran pour toi ?"
   question: "Ton setup, c'est…"

@@ -27,6 +27,14 @@ products:
   - asin: "B0CM936YRY"
     title: "SONGMICS OSC008B01 — tabouret dynamique, hauteur réglable, base large"
     blurb: "Un tabouret complet à assise basculante à 360°, avec une hauteur réglable qui couvre aussi bien un bureau standard qu'un bureau assis-debout relevé."
+    pros:
+      - "Assise basculante qui sollicite le dos"
+      - "Hauteur large (bureau standard ou relevé)"
+      - "Base large stable"
+    cons:
+      - "Sans dossier (fatigant au début)"
+      - "À alterner avec une vraie chaise"
+      - "Assise ferme"
 faq:
   - question: "Un tabouret assis-debout convient-il pour toute la journée de travail ?"
     answer: "Non, et ce n'est pas son rôle. L'idée n'est pas de remplacer complètement la chaise de bureau mais d'alterner : quelques sessions d'une heure ou deux dessus, en particulier sur les créneaux où le bureau est relevé en position debout, puis un retour à une assise classique. Utilisé en continu sur huit heures, il devient fatigant — un peu moins sur les modèles pourvus d'un dossier et d'un repose-pieds, mais le principe reste l'alternance."

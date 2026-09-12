@@ -27,6 +27,14 @@ products:
   - asin: "B0DCFWWGD6"
     title: "Chaise compacte en maille sans accoudoirs — hauteur réglable, dossier bas"
     blurb: "Le choix le plus simple : assise en mousse dense, maille respirante, rotation à 360° et hauteur réglable de 42 à 54 cm pour s'adapter à un bureau standard."
+    pros:
+      - "Se glisse entièrement sous le bureau"
+      - "Maille respirante, rotation 360°"
+      - "Hauteur réglable 42-54 cm"
+    cons:
+      - "Sans accoudoirs (pas au goût de tous)"
+      - "Dossier bas : peu de soutien haut du dos"
+      - "Assise ferme"
 faq:
   - question: "Une chaise sans accoudoirs est-elle vraiment moins confortable ?"
     answer: "Pas nécessairement. Les accoudoirs aident surtout à relâcher les épaules pendant les pauses ou la lecture, mais ils ne sont pas indispensables pour taper au clavier : une bonne hauteur d'assise et un dossier qui soutient le bas du dos comptent davantage au quotidien. Le vrai compromis, c'est l'absence de point d'appui pour les bras entre deux tâches."

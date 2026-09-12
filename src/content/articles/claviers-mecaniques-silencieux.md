@@ -15,6 +15,14 @@ products:
   - asin: "B07W5JK8DT"
     title: "Logitech MX Mechanical — AZERTY, switches silencieux"
     blurb: "La référence pour le télétravail : boutons tactiles silencieux, sans fil, autonomie de plusieurs semaines."
+    pros:
+      - "Switches tactiles silencieux"
+      - "Sans fil, multi-appareils"
+      - "Autonomie de plusieurs semaines"
+    cons:
+      - "Plus épais et lourd qu’un clavier plat"
+      - "Tarif élevé"
+      - "Repose-poignet non fourni"
 interactiveGuide:
   title: "Quel switch silencieux pour toi ?"
   question: "Tu tapes surtout…"

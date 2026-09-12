@@ -15,6 +15,14 @@ products:
   - asin: "B0D1DLY4H4"
     title: "SKYLEO — bras pivotant, 5 modes de couleur, 11 niveaux"
     blurb: "Très complet pour le prix : fonction mémoire et minuterie, bras articulé qui couvre bien un plan de travail large."
+    pros:
+      - "5 teintes, 11 niveaux d’intensité"
+      - "Fonction mémoire et minuterie"
+      - "Bras articulé couvrant un large plan"
+    cons:
+      - "Pince selon l’épaisseur du bureau"
+      - "Commande tactile sensible"
+      - "Alimentation par câble USB"
 interactiveGuide:
   title: "Quelle lampe de bureau pour toi ?"
   question: "Tu travailles surtout…"

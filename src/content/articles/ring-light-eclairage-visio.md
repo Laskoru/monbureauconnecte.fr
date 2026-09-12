@@ -15,6 +15,14 @@ products:
   - asin: "B0DG2XCHQ2"
     title: "NEEWER Basics 7\" — compact, dimmable"
     blurb: "Format compact qui se pose facilement à côté de l'écran, suffisant pour la plupart des visios en intérieur."
+    pros:
+      - "Compact, se pose à côté de l’écran"
+      - "Intensité réglable"
+      - "Suffisant pour la plupart des visios"
+    cons:
+      - "Éclairage d’appoint (pas pour tournage pro)"
+      - "Pince/trépied basique"
+      - "Alimentation USB requise"
 interactiveGuide:
   title: "Un ring light est-il utile pour toi ?"
   question: "En visio, ton problème c'est…"
