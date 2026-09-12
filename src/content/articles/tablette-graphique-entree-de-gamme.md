@@ -2,7 +2,7 @@
 title: "Tablette graphique d'entrée de gamme : comment bien choisir la sienne"
 description: "Annoter, dessiner ou signer des documents au bureau : quels critères pour une tablette graphique d'entrée de gamme, et comment éviter les mauvaises surprises."
 pubDate: 2026-09-12
-author: "Rédaction"
+author: "Hugo B."
 pinHook: "Dessiner et annoter au bureau, *sans se ruiner*"
 pinSub: "Les critères pour bien choisir une tablette graphique d'entrée de gamme."
 keywords: ["tablette graphique pas cher", "tablette graphique débutant", "tablette graphique bureau", "meilleure tablette graphique entrée de gamme"]

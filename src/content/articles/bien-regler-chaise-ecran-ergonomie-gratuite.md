@@ -30,6 +30,11 @@ faq:
     answer: "La cause la plus fréquente n'est pas la chaise mais la position du clavier et de la souris : s'ils sont trop hauts ou trop loin, les épaules restent en tension toute la journée pour les atteindre. Vérifie que tes avant-bras sont horizontaux et proches du corps, coudes pliés à environ 90 degrés, sans avoir à lever les épaules pour atteindre le clavier."
   - question: "À quelle fréquence faut-il changer de position dans la journée ?"
     answer: "Une règle simple et largement recommandée consiste à bouger au moins un peu toutes les 30 à 45 minutes : se lever quelques secondes, changer l'inclinaison du dossier, marcher jusqu'à la cuisine. Rester rigoureusement immobile dans la posture « parfaite » toute la journée n'est pas plus sain qu'une mauvaise posture occasionnelle — c'est l'absence totale de mouvement qui pose problème."
+sources:
+  - label: "INRS — Travail sur écran : prévention des risques"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS — Travail sur écran : réglementation et normes"
+    url: "https://www.inrs.fr/risques/travail-ecran/reglementation-normes.html"
 ---
 
 ## Le réglage compte plus que l'équipement
