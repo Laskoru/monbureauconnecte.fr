@@ -48,12 +48,14 @@ export const guides: Guide[] = [
       'Ce guide couvre les périphériques autour du PC. Pour la tour elle-même — processeur, carte graphique, RAM et le reste — direction notre <a href="/guide-pc-gaming">guide PC gaming pièce par pièce</a>, avec des configurations complètes selon le budget.',
     ],
     articles: [
+      'quelle-config-pc-gaming-choisir',
+      'cout-reel-setup-gaming-complet',
       'meilleures-chaises-gaming',
+      'souris-gaming-pour-le-travail',
       'claviers-mecaniques-silencieux',
-      'souris-ergonomique-verticale',
       'bras-support-ecran-articule',
       'rangement-cables-bureau',
-      'tapis-sol-chaise-bureau',
+      'tapis-souris-xxl-bureau',
     ],
   },
   {

@@ -17,6 +17,12 @@ export const categories = [
     label: 'Audio & Visio',
     description: 'Casques et webcams pour des visios nettes et un environnement calme.',
   },
+  {
+    slug: 'pc-gaming',
+    icon: '🖥️',
+    label: 'PC & Config gaming',
+    description: 'Bien choisir sa configuration PC gaming : composants, budget et vrai coût.',
+  },
 ] as const;
 
 export type CategorySlug = (typeof categories)[number]['slug'];
