@@ -47,6 +47,10 @@ export const siteConfig = {
   // C'est la valeur après "google-site-verification=". Laisse vide si inutile.
   googleSiteVerification: 'yQ6hJa0cIwZROqQE6jF7jHmPDUZgV0CrGCxpwutrV3I',
 
+  // Identifiant de mesure Google Analytics 4 (format G-XXXXXXXXXX). Laisse vide
+  // pour désactiver. La balise gtag.js est alors chargée dans le <head>.
+  gaId: 'G-WX8JFGFHW4',
+
   // Code de revendication du site sur Pinterest (Paramètres → Revendiquer →
   // Revendiquer un site web → "Ajouter une balise HTML"). Colle ici la valeur
   // du content de la balise <meta name="p:domain_verify" content="...">.
