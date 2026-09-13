@@ -1,0 +1,164 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { siteConfig } from '../siteConfig';
+
+// Page pilier visuelle « poste de travail idéal » : le format signature des
+// références ergonomie (Ergolab, Ergotech) — un schéma annoté avec les bons
+// angles et distances, relié aux réglages, à la checklist et au matériel.
+const regles = [
+  { n: 1, title: 'Haut de l’écran à hauteur des yeux', why: 'Le regard tombe naturellement 5 à 10° vers le bas : la nuque reste droite, sans se courber vers le bas ni se casser vers le haut.', links: [{ label: 'Support / rehausseur d’écran', href: '/articles/support-ordinateur-portable-ergonomique/' }, { label: 'Bras d’écran articulé', href: '/articles/bras-support-ecran-articule/' }] },
+  { n: 2, title: 'Écran à une longueur de bras', why: 'Environ 50 à 70 cm des yeux : assez loin pour reposer la vue, assez près pour lire sans se pencher.', links: [] },
+  { n: 3, title: 'Coudes à ~90°, bureau à la bonne hauteur', why: 'Avant-bras à l’horizontale, épaules relâchées. C’est la hauteur du bureau (ou de l’assise) qui règle ça.', links: [{ label: 'Calculer ma hauteur de bureau', href: '/calculateur-hauteur-bureau/' }, { label: 'Bureau assis-debout réglable', href: '/articles/bureau-assis-debout-electrique/' }] },
+  { n: 4, title: 'Poignets droits, dans l’axe', why: 'Ni cassés vers le haut ni vers le bas. Un clavier séparé et une souris verticale gardent l’alignement naturel.', links: [{ label: 'Clavier ergonomique séparé', href: '/articles/clavier-ergonomique-separe/' }, { label: 'Souris verticale', href: '/articles/souris-ergonomique-verticale/' }] },
+  { n: 5, title: 'Dos soutenu, bien au fond du siège', why: 'La cambrure lombaire est soutenue, le dos droit et les épaules détendues — 80 % du confort vient de là.', links: [{ label: 'Coussin lombaire', href: '/articles/coussin-lombaire-chaise-bureau/' }, { label: 'Coussin d’assise', href: '/articles/coussin-assise-ergonomique-coccyx/' }] },
+  { n: 6, title: 'Cuisses horizontales, pieds à plat', why: 'Genoux à ~90°, pieds bien posés au sol. Si les pieds pendent, un repose-pieds rétablit l’angle.', links: [{ label: 'Repose-pieds réglable', href: '/articles/repose-pieds-ergonomique-bureau/' }] },
+  { n: 7, title: 'Bouger et faire une pause régulièrement', why: 'La meilleure posture est celle qu’on change : levez-vous quelques minutes toutes les 30 à 60 min. Un bureau assis-debout aide beaucoup.', links: [{ label: 'Bureau assis-debout', href: '/articles/bureau-assis-debout-electrique/' }] },
+];
+
+const faq = [
+  { q: 'À quelle hauteur régler mon bureau ?', a: 'À la hauteur qui met vos avant-bras à l’horizontale, coudes à environ 90°, épaules relâchées — souvent autour de 70-75 cm pour une personne de taille moyenne, mais cela dépend de vous. Notre calculateur de hauteur de bureau vous donne le repère personnalisé en quelques secondes.' },
+  { q: 'Faut-il un bureau assis-debout ?', a: 'Ce n’est pas obligatoire, mais c’est le meilleur moyen d’alterner les postures dans la journée, ce qui vaut mieux que « la » posture parfaite tenue des heures. Si le budget le permet, c’est l’achat qui change le plus le confort sur la durée.' },
+  { q: 'Un bon fauteuil suffit-il à éviter le mal de dos ?', a: 'Il y contribue énormément, mais l’ensemble compte : hauteur d’écran, réglage du bureau, soutien lombaire, pieds à plat, et surtout les pauses. Un excellent siège ne compense pas un écran trop bas ou une immobilité de plusieurs heures.' },
+];
+
+const siteUrl = Astro.site?.origin ?? Astro.url.origin;
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }];
+---
+
+<BaseLayout
+  title="Le poste de travail idéal : le schéma des bons réglages"
+  description={`Le schéma du poste de travail ergonomique parfait : hauteur d'écran, angle des coudes, soutien du dos, pieds à plat… tous les bons réglages en un coup d'œil. ${siteConfig.name}.`}
+  jsonLd={jsonLd}
+>
+  <section class="container poste">
+    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Le poste de travail idéal' }]} />
+
+    <header class="poste__head">
+      <p class="poste__eyebrow">Le guide visuel</p>
+      <h1>Le poste de travail idéal</h1>
+      <p class="poste__lede">
+        Un poste bien réglé, c'est <strong>moins de tensions</strong> et plus de concentration —
+        et ça ne coûte souvent rien à ajuster. Voici, en un coup d'œil, les 7 repères qui comptent.
+      </p>
+    </header>
+
+    <figure class="poste__figure">
+      <svg viewBox="0 0 640 420" role="img" aria-label="Schéma d'une personne bien installée à son bureau" class="ergo">
+        <!-- sol -->
+        <line x1="20" y1="372" x2="620" y2="372" class="e-floor" />
+        <!-- bureau -->
+        <line x1="330" y1="250" x2="560" y2="250" class="e-desk" />
+        <line x1="345" y1="250" x2="345" y2="372" class="e-leg" />
+        <line x1="545" y1="250" x2="545" y2="372" class="e-leg" />
+        <!-- écran -->
+        <rect x="430" y="150" width="120" height="92" rx="6" class="e-screen" />
+        <line x1="490" y1="242" x2="490" y2="250" class="e-leg" />
+        <line x1="470" y1="250" x2="510" y2="250" class="e-leg" />
+        <!-- ligne des yeux -->
+        <line x1="205" y1="158" x2="430" y2="158" class="e-dash" />
+        <!-- chaise -->
+        <line x1="150" y1="255" x2="235" y2="255" class="e-chair" />
+        <line x1="150" y1="255" x2="150" y2="372" class="e-leg" />
+        <line x1="145" y1="175" x2="150" y2="255" class="e-chairback" />
+        <!-- personne (profil, tournée vers l'écran à droite) -->
+        <circle cx="205" cy="150" r="20" class="e-body" />
+        <!-- tronc -->
+        <line x1="200" y1="170" x2="200" y2="250" class="e-body" />
+        <!-- bras : épaule -> coude -> main sur bureau -->
+        <line x1="200" y1="188" x2="235" y2="240" class="e-body" />
+        <line x1="235" y1="240" x2="345" y2="248" class="e-body" />
+        <!-- cuisse + tibia -->
+        <line x1="200" y1="250" x2="285" y2="250" class="e-body" />
+        <line x1="285" y1="250" x2="285" y2="368" class="e-body" />
+        <line x1="285" y1="368" x2="320" y2="368" class="e-body" />
+        <!-- marqueurs d'angle 90° -->
+        <path d="M 222 240 l 12 0 l 0 -12" class="e-angle" />
+        <path d="M 273 250 l 12 0 M 285 250 l 0 12" class="e-angle" />
+        <!-- badges numérotés -->
+        <g class="e-badge"><circle cx="470" cy="150" r="13" /><text x="470" y="155">1</text></g>
+        <g class="e-badge"><circle cx="325" cy="158" r="13" /><text x="325" y="163">2</text></g>
+        <g class="e-badge"><circle cx="235" cy="240" r="13" /><text x="235" y="245">3</text></g>
+        <g class="e-badge"><circle cx="300" cy="238" r="13" /><text x="300" y="243">4</text></g>
+        <g class="e-badge"><circle cx="143" cy="205" r="13" /><text x="143" y="210">5</text></g>
+        <g class="e-badge"><circle cx="285" cy="345" r="13" /><text x="285" y="350">6</text></g>
+      </svg>
+      <figcaption>Profil d'un poste bien réglé. Chaque numéro renvoie au repère correspondant ci-dessous.</figcaption>
+    </figure>
+
+    <ol class="poste__rules">
+      {regles.map((r) => (
+        <li class="rule">
+          <span class="rule__n" aria-hidden="true">{r.n}</span>
+          <div class="rule__body">
+            <p class="rule__title">{r.title}</p>
+            <p class="rule__why">{r.why}</p>
+            {r.links.length > 0 && (
+              <p class="rule__links">{r.links.map((l) => <a href={l.href}>{l.label} →</a>)}</p>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <aside class="poste__tools">
+      <h2>Passez du schéma à votre poste</h2>
+      <p>Deux outils gratuits pour appliquer ces repères chez vous :</p>
+      <p class="poste__tools-links">
+        <a class="btn btn--primary" href="/calculateur-hauteur-bureau/">Calculer ma hauteur de bureau →</a>
+        <a class="btn btn--outline" href="/checklist-bureau-ergonomique/">La checklist ergonomique</a>
+      </p>
+    </aside>
+
+    <div class="poste__faq">
+      <h2>Questions fréquentes</h2>
+      {faq.map((f) => (<details class="poste__faq-item"><summary>{f.q}</summary><p>{f.a}</p></details>))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .poste { padding: 2.2rem 0 3.5rem; }
+  .poste__head { max-width: 740px; margin-bottom: 1.4rem; }
+  .poste__eyebrow { font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-accent); margin: 0 0 0.5rem; }
+  .poste__head h1 { margin: 0 0 0.6rem; }
+  .poste__lede { color: var(--color-text-muted); font-size: 1.12rem; line-height: 1.7; }
+  .poste__lede strong { color: var(--color-text); }
+
+  .poste__figure { margin: 0 0 2rem; padding: 1.4rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .ergo { width: 100%; height: auto; display: block; }
+  .e-floor { stroke: var(--color-border); stroke-width: 2; }
+  .e-desk { stroke: var(--color-text); stroke-width: 3; stroke-linecap: round; }
+  .e-leg { stroke: var(--color-text-muted); stroke-width: 2; }
+  .e-screen { fill: color-mix(in srgb, var(--color-accent) 12%, transparent); stroke: var(--color-accent); stroke-width: 2.5; }
+  .e-chair { stroke: var(--color-text-muted); stroke-width: 3; stroke-linecap: round; }
+  .e-chairback { stroke: var(--color-text-muted); stroke-width: 3; stroke-linecap: round; }
+  .e-body { stroke: var(--color-text); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  circle.e-body { fill: color-mix(in srgb, var(--color-text) 8%, transparent); }
+  .e-angle { stroke: var(--color-accent); stroke-width: 2; fill: none; }
+  .e-dash { stroke: var(--color-text-muted); stroke-width: 1.5; stroke-dasharray: 5 5; }
+  .e-badge circle { fill: var(--color-accent); }
+  .e-badge text { fill: #fff; font-family: var(--font-display, sans-serif); font-size: 15px; font-weight: 700; text-anchor: middle; }
+  .poste__figure figcaption { margin: 0.9rem 0 0; font-size: 0.85rem; color: var(--color-text-muted); text-align: center; }
+
+  .poste__rules { list-style: none; margin: 0 0 2rem; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .rule { display: flex; gap: 0.9rem; padding: 1.1rem 1.2rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .rule__n { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--color-accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; }
+  .rule__title { margin: 0 0 0.25rem; font-weight: 700; color: var(--color-text); }
+  .rule__why { margin: 0 0 0.6rem; font-size: 0.9rem; line-height: 1.55; color: var(--color-text-muted); }
+  .rule__links { margin: 0; display: flex; flex-direction: column; gap: 0.25rem; }
+  .rule__links a { color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 0.87rem; }
+  .rule__links a:hover { text-decoration: underline; }
+
+  .poste__tools { margin: 0 0 2.4rem; padding: 1.5rem 1.6rem; border-radius: var(--radius-lg); background: var(--color-bg-soft); border: 1px solid var(--color-border); }
+  .poste__tools h2 { margin: 0 0 0.5rem; font-size: 1.25rem; }
+  .poste__tools p { color: var(--color-text-muted); margin: 0 0 0.9rem; }
+  .poste__tools-links { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+
+  .poste__faq h2 { font-size: 1.4rem; margin: 0 0 1rem; }
+  .poste__faq-item { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: 1rem 1.3rem; margin-bottom: 0.8rem; }
+  .poste__faq-item summary { cursor: pointer; font-weight: 600; font-family: var(--font-display); }
+  .poste__faq-item p { margin: 0.7rem 0 0; color: var(--color-text-muted); line-height: 1.6; }
+
+  @media (max-width: 640px) { .poste__rules { grid-template-columns: 1fr; } }
+</style>
