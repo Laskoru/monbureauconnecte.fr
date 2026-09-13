@@ -50,7 +50,7 @@ Un ordinateur portable moderne propose souvent seulement **2 à 3 ports USB-C**,
 
 Au-delà du confort, il y a aussi un enjeu de **fiabilité**. Brancher et débrancher sans cesse les mêmes ports finit par les user, et multiplier les câbles directement sur le portable fragilise ses prises. Un dock joue le rôle d'intermédiaire : c'est lui qui encaisse les manipulations quotidiennes, pendant que le portable ne voit qu'un seul câble propre. Sur la durée, c'est autant de sérénité pour un matériel souvent coûteux.
 
-![Hub USB multiport à plusieurs ports posé sur un bureau](/covers/hub-usb-c-station-accueil-inbody.jpg)
+![Hub USB multiport à plusieurs ports posé sur un bureau](/covers/hub-usb-c-station-accueil-inbody.webp)
 
 ## Hub ou station d'accueil : ce n'est pas la même chose
 

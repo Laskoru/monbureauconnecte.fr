@@ -52,7 +52,7 @@ C'est une solution particulièrement adaptée au télétravail et aux petits esp
 
 Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantage de rester mobile dans la plupart des modèles à roulettes : il peut suivre un réaménagement du bureau, être partagé entre deux postes en horaires décalés, ou simplement être sorti le temps de nettoyer le sol.
 
-![Caisson de rangement à tiroirs pour documents de bureau](/covers/caisson-rangement-sous-bureau-inbody.jpg)
+![Caisson de rangement à tiroirs pour documents de bureau](/covers/caisson-rangement-sous-bureau-inbody.webp)
 
 ## Les critères qui font vraiment la différence
 

@@ -6,7 +6,7 @@ updatedDate: 2026-09-11
 author: "Hugo B."
 keywords: ["pavé numérique sans fil", "pavé numérique externe", "clavier numérique sans fil", "quel pavé numérique choisir"]
 category: "peripheriques"
-coverImage: "/covers/pave-numerique-externe-sans-fil-inbody.jpg"
+coverImage: "/covers/pave-numerique-externe-sans-fil-inbody.webp"
 coverAlt: "Gros plan sur la rangée de chiffres d'un clavier rétroéclairé"
 pinHook: "Le pavé numérique qui *booste* ta saisie de chiffres"
 pinSub: "RF ou Bluetooth, autonomie : bien choisir."

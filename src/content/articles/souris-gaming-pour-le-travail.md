@@ -8,7 +8,7 @@ pinHook: "Des raccourcis *sous le pouce*"
 pinSub: "La souris gaming qui accélère ta journée de travail."
 keywords: ["souris gaming pour le travail", "souris gaming bureau", "boutons programmables souris", "DPI souris travail"]
 category: "peripheriques"
-coverImage: "/covers/souris-gaming-pour-le-travail-inbody.jpg"
+coverImage: "/covers/souris-gaming-pour-le-travail-inbody.webp"
 coverAlt: "Souris gaming tenue en main devant un écran"
 draft: false
 products:

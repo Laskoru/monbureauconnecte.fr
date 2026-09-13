@@ -50,7 +50,7 @@ Travailler sous un éclairage trop faible, trop dur ou mal orienté force les ye
 
 Le passage à la LED a rendu ces lampes plus fines, moins chaudes et bien plus réglables. Mais toutes ne se valent pas, et deux modèles au même prix peuvent offrir un confort visuel très différent selon quelques critères précis.
 
-![Lampe de bureau LED allumée sur un plan de travail clair](/covers/lampe-bureau-led-anti-fatigue-inbody.jpg)
+![Lampe de bureau LED allumée sur un plan de travail clair](/covers/lampe-bureau-led-anti-fatigue-inbody.webp)
 
 ## Ce qui fait vraiment la différence
 

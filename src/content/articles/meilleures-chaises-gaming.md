@@ -68,7 +68,7 @@ Le **vérin** (le cylindre à gaz qui règle la hauteur) doit être de **classe 
 
 Le **similicuir** a du style et se nettoie d'un coup d'éponge mais respire peu ; le **tissu** est plus frais sur la durée. Vérifie enfin la **charge maximale supportée** et garde une marge par rapport à ton poids : une chaise utilisée près de sa limite se fatigue plus vite.
 
-![Chaise gaming à dossier haut à côté d'un setup deux écrans](/covers/meilleures-chaises-gaming-inbody.jpg)
+![Chaise gaming à dossier haut à côté d'un setup deux écrans](/covers/meilleures-chaises-gaming-inbody.webp)
 
 ## Chaise gaming ou chaise de bureau ergonomique ?
 

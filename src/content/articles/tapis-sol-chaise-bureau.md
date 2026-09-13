@@ -54,7 +54,7 @@ Il y a aussi un bénéfice de confort qu'on sous-estime souvent : sur certains s
 
 Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifié récent, présenté comme résistant à l'usage, garde une couche de finition en surface qui s'use avec le temps et les frottements répétés. Une fois cette couche entamée, l'humidité et la poussière s'infiltrent plus facilement, et le sol vieillit plus vite qu'il ne le devrait. Anticiper avec un tapis coûte quelques dizaines d'euros ; poncer et revernir une zone de parquet coûte largement plus, sans compter le temps d'immobilisation de la pièce.
 
-![Roulette de chaise de bureau sur un sol à protéger](/covers/tapis-sol-chaise-bureau-inbody.jpg)
+![Roulette de chaise de bureau sur un sol à protéger](/covers/tapis-sol-chaise-bureau-inbody.webp)
 
 ## Les critères qui font vraiment la différence
 

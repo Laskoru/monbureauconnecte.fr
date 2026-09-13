@@ -8,7 +8,7 @@ pinHook: "Le *vrai* prix d'un setup gaming"
 pinSub: "Poste par poste, sans mauvaise surprise."
 keywords: ["cout setup gaming", "prix setup gaming complet", "budget setup gaming 2026", "combien coute un setup gaming"]
 category: "pc-gaming"
-coverImage: "/covers/cout-reel-setup-gaming-complet.jpg"
+coverImage: "/covers/cout-reel-setup-gaming-complet.webp"
 coverAlt: "Setup gaming complet avec écran, tour RGB, clavier et souris dans une pièce sombre"
 draft: false
 interactiveGuide:
@@ -40,7 +40,7 @@ C'est l'erreur numéro un quand on se lance : on calcule le prix de la **tour**,
 
 La bonne nouvelle, c'est qu'on n'est pas obligé de tout acheter d'un coup, ni au même niveau de gamme. L'important, c'est de **connaître les postes** pour répartir son budget en connaissance de cause, plutôt que de se retrouver à court pour la chaise après avoir tout mis dans la carte graphique.
 
-![Setup gaming complet : écran, tour RGB, clavier et souris](/covers/cout-reel-setup-gaming-complet.jpg)
+![Setup gaming complet : écran, tour RGB, clavier et souris](/covers/cout-reel-setup-gaming-complet.webp)
 
 ## Le vrai coût, poste par poste
 

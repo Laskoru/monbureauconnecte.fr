@@ -8,7 +8,7 @@ pinHook: "Une meilleure posture, *sans rien acheter*"
 pinSub: "Les réglages ergonomiques gratuits, en 10 minutes."
 keywords: ["ergonomie bureau gratuit", "bien régler sa chaise de bureau", "hauteur écran ergonomie", "posture télétravail"]
 category: "mobilier"
-coverImage: "/covers/bien-regler-chaise-ecran-ergonomie-gratuite-inbody.jpg"
+coverImage: "/covers/bien-regler-chaise-ecran-ergonomie-gratuite-inbody.webp"
 coverAlt: "Bureau assis-debout et chaise ergonomique face à une baie vitrée"
 draft: false
 interactiveGuide:

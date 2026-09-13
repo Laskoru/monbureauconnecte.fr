@@ -8,7 +8,7 @@ pinHook: "Plus de place pour *la souris*"
 pinSub: "Le clavier compact TKL, bien choisi."
 keywords: ["clavier TKL", "clavier compact sans pavé numérique", "clavier sans pavé numérique bureau"]
 category: "peripheriques"
-coverImage: "/covers/clavier-compact-tkl-sans-pave-numerique-inbody.jpg"
+coverImage: "/covers/clavier-compact-tkl-sans-pave-numerique-inbody.webp"
 coverAlt: "Clavier compact sans pavé numérique posé sur un bureau, à côté d'un macropad"
 draft: false
 products:

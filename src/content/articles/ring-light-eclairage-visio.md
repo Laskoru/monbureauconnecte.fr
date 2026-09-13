@@ -50,7 +50,7 @@ Une webcam, même haut de gamme, ne peut pas compenser un **mauvais éclairage**
 
 Le nom fait penser aux streamers et aux vidéastes, mais le bénéfice est le même en réunion Teams ou Zoom : on paraît **net, présent et à son avantage**, ce qui compte quand on parle à un client ou à sa hiérarchie.
 
-![Ring light éclairant une personne filmée en visio](/covers/ring-light-eclairage-visio-inbody.jpg)
+![Ring light éclairant une personne filmée en visio](/covers/ring-light-eclairage-visio-inbody.webp)
 
 ## Ce qui différencie un bon modèle pour le bureau
 

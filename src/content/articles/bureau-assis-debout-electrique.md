@@ -82,7 +82,7 @@ Ce capteur arrête le plateau s'il rencontre un obstacle en montant ou en descen
 
 Regarde la **charge maximale** annoncée (souvent 70 à 125 kg) et garde de la marge : deux écrans, un bras articulé, un PC posé sur le plateau, ça monte vite. Côté plateau, un **monobloc** est plus rigide et plus net qu'un plateau en deux parties ; les dimensions 120×60 cm sont un bon standard, 140×70 cm si tu veux respirer.
 
-![Bureau assis-debout électrique en position haute avec fauteuil ergonomique](/covers/bureau-assis-debout-inbody.jpg)
+![Bureau assis-debout électrique en position haute avec fauteuil ergonomique](/covers/bureau-assis-debout-inbody.webp)
 
 ### La stabilité, le vrai juge de paix
 

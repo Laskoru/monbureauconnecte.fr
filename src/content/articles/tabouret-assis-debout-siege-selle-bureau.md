@@ -8,7 +8,7 @@ pinHook: "Bouger *en travaillant*"
 pinSub: "Le tabouret assis-debout bien choisi."
 keywords: ["tabouret assis-debout", "siège selle bureau", "tabouret dynamique bureau haut"]
 category: "mobilier"
-coverImage: "/covers/tabouret-assis-debout-siege-selle-bureau-inbody.jpg"
+coverImage: "/covers/tabouret-assis-debout-siege-selle-bureau-inbody.webp"
 coverAlt: "Tabouret d'appoint pour un poste de travail"
 draft: false
 interactiveGuide:

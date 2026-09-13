@@ -52,7 +52,7 @@ Sur quelques minutes, ce n'est pas un problème. Sur sept ou huit heures par jou
 
 C'est un accessoire particulièrement pertinent pour deux profils : les personnes qui utilisent une chaise correcte mais pas spécifiquement ergonomique (chaise de salle à manger réquisitionnée en télétravail, siège d'entrée de gamme), et celles qui ont déjà une gêne lombaire connue et cherchent un soutien immédiat sans attendre un rendez-vous chez le kiné ou un nouveau siège.
 
-![Personne assise, bas du dos soutenu contre le dossier d'une chaise ergonomique](/covers/coussin-lombaire-chaise-bureau-inbody.jpg)
+![Personne assise, bas du dos soutenu contre le dossier d'une chaise ergonomique](/covers/coussin-lombaire-chaise-bureau-inbody.webp)
 
 ## Les critères qui font vraiment la différence
 

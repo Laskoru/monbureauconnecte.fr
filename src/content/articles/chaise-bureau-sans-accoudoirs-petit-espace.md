@@ -8,7 +8,7 @@ pinHook: "La chaise qui *se glisse partout*"
 pinSub: "Sans accoudoirs, pour les petits espaces."
 keywords: ["chaise de bureau sans accoudoirs", "chaise bureau petit espace", "chaise compacte télétravail"]
 category: "mobilier"
-coverImage: "/covers/chaise-bureau-sans-accoudoirs-petit-espace-inbody.jpg"
+coverImage: "/covers/chaise-bureau-sans-accoudoirs-petit-espace-inbody.webp"
 coverAlt: "Coin bureau compact dans un petit espace, avec assise sans accoudoirs"
 draft: false
 interactiveGuide:

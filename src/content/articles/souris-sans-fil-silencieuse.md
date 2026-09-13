@@ -8,7 +8,7 @@ pinHook: "Des clics *discrets*, partout"
 pinSub: "La souris silencieuse idéale."
 keywords: ["souris sans fil silencieuse", "souris silencieuse bureau", "souris sans fil silencieuse 2026", "clic silencieux souris"]
 category: "peripheriques"
-coverImage: "/covers/souris-sans-fil-silencieuse-inbody.jpg"
+coverImage: "/covers/souris-sans-fil-silencieuse-inbody.webp"
 coverAlt: "Souris sans fil posée sur un bureau clair, vue de trois quarts"
 draft: false
 products:

@@ -50,7 +50,7 @@ Un ordinateur portable posé à plat sur le bureau place l'écran **bien en dess
 
 C'est, avec le clavier externe, l'un des changements les plus rentables qu'on puisse faire sur un poste de travail nomade : quelques dizaines d'euros pour corriger un problème que des millions de personnes subissent sans le savoir, huit heures par jour.
 
-![Ordinateur portable surélevé sur un support, avec clavier et souris externes](/covers/support-ordinateur-portable-ergonomique-inbody.jpg)
+![Ordinateur portable surélevé sur un support, avec clavier et souris externes](/covers/support-ordinateur-portable-ergonomique-inbody.webp)
 
 ## Le duo indispensable : support + clavier externe
 

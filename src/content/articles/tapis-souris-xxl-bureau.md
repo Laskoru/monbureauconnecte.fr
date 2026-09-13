@@ -8,7 +8,7 @@ pinHook: "Clavier *et* souris, une seule surface"
 pinSub: "Le tapis XXL qui habille le bureau."
 keywords: ["tapis de souris XXL", "tapis de souris bureau", "tapis clavier souris étendu"]
 category: "peripheriques"
-coverImage: "/covers/tapis-souris-xxl-bureau-inbody.jpg"
+coverImage: "/covers/tapis-souris-xxl-bureau-inbody.webp"
 coverAlt: "Grand tapis de souris posé sur un bureau, avec une souris et un clavier"
 draft: false
 products:

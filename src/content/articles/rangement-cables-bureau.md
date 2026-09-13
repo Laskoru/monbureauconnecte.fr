@@ -50,7 +50,7 @@ Un bureau de télétravail ou de gaming accumule vite les câbles : écran, clav
 
 C'est aussi un multiplicateur : un bras d'écran, une lampe, un hub USB paraissent tout de suite plus soignés une fois les câbles disciplinés. À l'inverse, le plus beau des setups est gâché par un plat de spaghettis qui pend sous le plateau. Bonne nouvelle : ranger ses câbles ne demande ni perçage ni gros budget.
 
-![Câbles regroupés et rangés proprement sous un plateau de bureau](/covers/rangement-cables-bureau-inbody.jpg)
+![Câbles regroupés et rangés proprement sous un plateau de bureau](/covers/rangement-cables-bureau-inbody.webp)
 
 ## Les solutions qui existent
 

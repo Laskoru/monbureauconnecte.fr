@@ -50,7 +50,7 @@ Une souris classique impose au poignet une **rotation en pronation** permanente 
 
 Ce n'est pas un gadget marketing : c'est un des rares accessoires ergonomiques dont l'effet se ressent souvent **dès les premières semaines**, en particulier pour qui travaille toute la journée à l'écran.
 
-![Main et poignet posés au bureau devant un clavier](/covers/souris-ergonomique-verticale-inbody.jpg)
+![Main et poignet posés au bureau devant un clavier](/covers/souris-ergonomique-verticale-inbody.webp)
 
 ## Ce qui différencie une bonne souris verticale
 

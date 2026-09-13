@@ -8,7 +8,7 @@ pinHook: "Un bureau *plus sain*, plus agréable"
 pinSub: "La plante dépolluante idéale."
 keywords: ["plante de bureau dépolluante", "plante dépolluante intérieur", "plante verte bureau facile"]
 category: "mobilier"
-coverImage: "/covers/plante-bureau-depolluante-inbody.jpg"
+coverImage: "/covers/plante-bureau-depolluante-inbody.webp"
 coverAlt: "Bureau avec écran, clavier et plusieurs plantes vertes en pot devant une fenêtre"
 draft: false
 interactiveGuide:

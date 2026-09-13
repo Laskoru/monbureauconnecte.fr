@@ -50,7 +50,7 @@ Un clavier mécanique procure une frappe plus **précise** et plus **agréable**
 
 Bonne nouvelle : « silencieux » ne veut pas dire « mou ». Un bon switch silent conserve un point d'activation franc — on sait qu'on a tapé — mais amortit le claquement mécanique et le retour de la touche, les deux sources principales de bruit. Le résultat, une fois bien réglé, est un clavier qu'on entend à peine à un mètre, sans rien perdre du plaisir de frappe qui fait tout l'intérêt du mécanique.
 
-![Clavier mécanique compact posé sur un bureau en bois](/covers/claviers-mecaniques-silencieux-inbody.jpg)
+![Clavier mécanique compact posé sur un bureau en bois](/covers/claviers-mecaniques-silencieux-inbody.webp)
 
 ## Comprendre les switches (le vrai sujet)
 

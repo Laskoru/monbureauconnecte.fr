@@ -8,7 +8,7 @@ pinHook: "Des poignets *sans tension*"
 pinSub: "Le repose-poignet clavier + souris."
 keywords: ["repose-poignet clavier souris", "repose-poignet ergonomique", "repose-poignet gel poignet", "meilleur repose-poignet 2026"]
 category: "peripheriques"
-coverImage: "/covers/repose-poignet-clavier-souris-inbody.jpg"
+coverImage: "/covers/repose-poignet-clavier-souris-inbody.webp"
 coverAlt: "Repose-poignet posé devant un clavier sur un bureau"
 draft: false
 interactiveGuide:

@@ -50,7 +50,7 @@ Un clavier classique oblige les poignets à se tourner légèrement vers l'inté
 
 Ce format intrigue au premier abord, mais il ne s'adresse pas qu'aux personnes déjà en douleur : c'est aussi un excellent choix **préventif** pour qui tape beaucoup.
 
-![Clavier ergonomique séparé posé sur un bureau](/covers/clavier-ergonomique-separe-inbody.jpg)
+![Clavier ergonomique séparé posé sur un bureau](/covers/clavier-ergonomique-separe-inbody.webp)
 
 ## Ce qui différencie les modèles
 

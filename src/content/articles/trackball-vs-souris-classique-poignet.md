@@ -8,7 +8,7 @@ pinHook: "Soulager le poignet, *autrement*"
 pinSub: "Trackball ou souris : le comparatif."
 keywords: ["trackball vs souris", "trackball souris poignet", "meilleur trackball 2026", "trackball ergonomique bureau"]
 category: "peripheriques"
-coverImage: "/covers/trackball-vs-souris-classique-poignet-inbody.jpg"
+coverImage: "/covers/trackball-vs-souris-classique-poignet-inbody.webp"
 coverAlt: "Trackball posé sur un bureau, boule de contrôle visible"
 draft: false
 interactiveGuide:

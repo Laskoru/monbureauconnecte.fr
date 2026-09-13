@@ -50,7 +50,7 @@ Passer sa journée de travail à la maison n'élimine pas les distractions sonor
 
 L'effet est parfois spectaculaire dès qu'on l'active : le bruit de la ventilation, de la circulation ou de la machine à café passe au second plan. Encore faut-il choisir un modèle adapté à **ce qui te dérange vraiment**, car tous les bruits ne se traitent pas de la même façon.
 
-![Casque à réduction de bruit posé sur un ordinateur portable](/covers/casque-reduction-bruit-teletravail-inbody.jpg)
+![Casque à réduction de bruit posé sur un ordinateur portable](/covers/casque-reduction-bruit-teletravail-inbody.webp)
 
 ## Ce qui fait vraiment la différence
 

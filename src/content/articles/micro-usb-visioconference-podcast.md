@@ -48,7 +48,7 @@ faq:
 
 Le micro intégré d'un ordinateur portable est placé près du clavier et de l'écran : il capte à la fois les **bruits de frappe** et l'ambiance de la pièce. En visioconférence, c'est souvent ce qui rend un interlocuteur difficile à comprendre, même avec une bonne connexion. Un micro USB dédié, **même d'entrée de gamme**, améliore nettement la clarté perçue par les autres participants — c'est l'un des upgrades les plus rentables d'un poste de télétravail.
 
-![Micros de podcast sur bras articulés et casques sur un bureau](/covers/micro-usb-visioconference-podcast-inbody.jpg)
+![Micros de podcast sur bras articulés et casques sur un bureau](/covers/micro-usb-visioconference-podcast-inbody.webp)
 
 ## Ce qui fait la différence entre les modèles
 
