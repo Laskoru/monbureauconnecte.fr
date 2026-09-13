@@ -81,6 +81,8 @@ const stats = [
 
 <BaseLayout title="Accessoires bureau, gaming & télétravail comparés" description={siteConfig.description}>
   <section class="hero">
+    <img class="hero__bg" src="/covers/bureau-assis-debout-electrique.jpg" alt="" width="1600" height="900" fetchpriority="high" />
+    <div class="hero__scrim"></div>
     <div class="wide hero__inner">
       <p class="hero__badge"><span class="hero__badge-dot"></span> Comparatifs indépendants · bureau · gaming · télétravail</p>
       <h1 class="hero__title">Le matériel qui transforme ton <span class="hero__hl">bureau</span> en poste de pro.</h1>
@@ -636,6 +638,20 @@ const stats = [
     .categories__grid { grid-template-columns: 1fr; }
     .needs__grid { grid-template-columns: 1fr; }
   }
+
+  /* ── Hero photographique immersif (design) ── */
+  .hero { position: relative; overflow: hidden; background: #0e1626; }
+  .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,20,40,0.58) 0%, rgba(9,15,30,0.84) 100%); }
+  .hero__inner { position: relative; z-index: 1; }
+  .hero__badge { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.28); color: #fff; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .hero__title { color: #fff; }
+  .hero__lede { color: rgba(255,255,255,0.88); }
+  .hero .btn--outline { color: #fff; border-color: rgba(255,255,255,0.55); background: transparent; }
+  .hero .btn--outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+  .hero__stats { border-top-color: rgba(255,255,255,0.22); }
+  .hero__stat-value { color: #fff; }
+  .hero__stat-label { color: rgba(255,255,255,0.75); }
 </style>
 
 <script>
