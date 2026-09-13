@@ -25,7 +25,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [x] Souris gaming pour le travail — DPI et boutons programmables au quotidien — peripheriques
 - [x] Pavé numérique externe sans fil — compléter un clavier compact — peripheriques
 - [x] Tablette graphique d'entrée de gamme — pour annoter et dessiner au bureau — peripheriques
-- [ ] Hub USB-A multiport — brancher ses vieux périphériques sur un portable récent — peripheriques
+- [x] Hub USB-A multiport — brancher ses vieux périphériques sur un portable récent — peripheriques
 
 ## Audio & Visio
 
