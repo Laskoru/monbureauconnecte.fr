@@ -8,7 +8,6 @@ pinHook: "Rebrancher *tous tes vieux périphériques*"
 pinSub: "Le hub USB-A qui règle le problème d'un coup."
 keywords: ["hub usb-a multiport", "adaptateur usb-c vers usb-a", "brancher usb-a sur usb-c", "hub usb-a pas cher"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1760376789487-994070337c76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8VVNCJTIwaHVifGVufDB8MHx8fDE3ODkzMjgwNDd8Mg&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Hub USB noir avec plusieurs ports et interrupteurs, posé sur un bureau"
 draft: false
 faq:
