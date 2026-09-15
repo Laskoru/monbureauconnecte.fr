@@ -49,7 +49,7 @@ export const siteConfig = {
 
   // Identifiant de mesure Google Analytics 4 (format G-XXXXXXXXXX). Laisse vide
   // pour désactiver. La balise gtag.js est alors chargée dans le <head>.
-  gaId: 'G-WX8JFGFHW4',
+  gaId: 'G-P7LLVBW3E4',
 
   // Code de revendication du site sur Pinterest (Paramètres → Revendiquer →
   // Revendiquer un site web → "Ajouter une balise HTML"). Colle ici la valeur
