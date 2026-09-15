@@ -8,7 +8,6 @@ pinHook: "Un geste, *ta vie privée protégée*"
 pinSub: "Le petit accessoire qui bloque la webcam en un clic."
 keywords: ["cache webcam confidentialité", "cache de confidentialité webcam", "protection vie privée webcam", "webcam avec obturateur intégré"]
 category: "audio-visio"
-coverImage: "https://images.unsplash.com/photo-1755155469427-a61921d9cf01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600"
 coverAlt: "Cache de confidentialité coulissant fixé sur la webcam intégrée d'un écran"
 draft: false
 topPick:
