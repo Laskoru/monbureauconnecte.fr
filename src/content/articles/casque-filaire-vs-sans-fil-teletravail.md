@@ -8,7 +8,6 @@ pinHook: "Filaire ou sans fil ? *Le vrai comparatif*"
 pinSub: "Casque télétravail : latence, autonomie, fiabilité."
 keywords: ["casque filaire vs sans fil télétravail", "casque sans fil bureau", "casque filaire réunion visio", "meilleur casque télétravail 2026"]
 category: "audio-visio"
-coverImage: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Casque audio sans fil posé entre un clavier et une souris sur un bureau"
 draft: false
 topPick:
