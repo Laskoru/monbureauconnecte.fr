@@ -8,7 +8,6 @@ pinHook: "Le calme, *sans se faire remarquer*"
 pinSub: "Écouteurs anti-bruit : l'alternative discrète au casque en open space."
 keywords: ["écouteurs réduction de bruit open space", "écouteurs anc bureau", "écouteurs sans fil open space", "meilleurs écouteurs anti-bruit télétravail"]
 category: "audio-visio"
-coverImage: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8d2lyZWxlc3MlMjBlYXJidWRzJTIwY2FzZSUyMGNoYXJnaW5nfGVufDB8MHx8fDE3ODk3MDg0NTF8Mg&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Écouteurs sans fil blancs posés à côté de leur boîtier de charge sur une table claire"
 draft: false
 topPick:
