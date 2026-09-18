@@ -31,7 +31,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 
 - [x] Webcam avec cache de confidentialité — sécuriser sa vie privée en visio — audio-visio
 - [x] Casque filaire vs sans fil pour le télétravail — latence, autonomie, fiabilité — audio-visio
-- [ ] Écouteurs à réduction de bruit pour l'open space — alternative discrète au casque — audio-visio
+- [x] Écouteurs à réduction de bruit pour l'open space — alternative discrète au casque — audio-visio
 - [ ] Enceinte de conférence (speakerphone) — pour les réunions à plusieurs — audio-visio
 - [ ] Bras articulé pour microphone — libérer le bureau et bien placer le micro — audio-visio
 - [ ] Support / trépied pour webcam externe — cadrer correctement en visio — audio-visio
