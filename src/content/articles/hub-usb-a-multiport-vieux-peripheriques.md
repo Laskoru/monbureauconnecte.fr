@@ -8,6 +8,11 @@ pinHook: "Rebrancher *tous tes vieux périphériques*"
 pinSub: "Le hub USB-A qui règle le problème d'un coup."
 keywords: ["hub usb-a multiport", "adaptateur usb-c vers usb-a", "brancher usb-a sur usb-c", "hub usb-a pas cher"]
 category: "peripheriques"
+topPick:
+  name: "Hub USB 3.0 multiport Anker (4 ports)"
+  blurb: "La référence fiable et compacte : quatre ports USB-A 3.0, reconnu sans pilote sous Windows et macOS, et un câble assez long pour le laisser branché en permanence."
+  url: "https://www.amazon.fr/s?k=anker+hub+usb+3.0+4+ports&tag=monbureauconnecte-21"
+  ctaLabel: "Voir les hubs USB Anker sur Amazon"
 coverAlt: "Hub USB noir avec plusieurs ports et interrupteurs, posé sur un bureau"
 draft: false
 faq:

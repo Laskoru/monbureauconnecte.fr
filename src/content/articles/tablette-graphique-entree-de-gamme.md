@@ -7,6 +7,11 @@ pinHook: "Dessiner et annoter au bureau, *sans se ruiner*"
 pinSub: "Les critères pour bien choisir une tablette graphique d'entrée de gamme."
 keywords: ["tablette graphique pas cher", "tablette graphique débutant", "tablette graphique bureau", "meilleure tablette graphique entrée de gamme"]
 category: "peripheriques"
+topPick:
+  name: "Wacom Intuos S"
+  blurb: "Le choix sûr pour débuter : format compact, stylet sans pile, 4 touches programmables, et une compatibilité Windows/macOS irréprochable — la marque de référence, au prix d'une entrée de gamme."
+  url: "https://www.amazon.fr/s?k=wacom+intuos+s&tag=monbureauconnecte-21"
+  ctaLabel: "Voir la Wacom Intuos S sur Amazon"
 coverAlt: "Une main tenant un stylet sur une tablette graphique, posée à côté d'un clavier d'ordinateur portable et de feutres de dessin"
 draft: false
 faq:
