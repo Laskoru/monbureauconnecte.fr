@@ -6,9 +6,10 @@
   --color-bg-soft: #eef1f7; /* fond de section alterné */
   --color-text: #15223c; /* bleu-ardoise profond, plus doux que le noir */
   --color-text-muted: #56617a;
-  --color-text-faint: #97a1b4;
+  --color-text-faint: #646a77;
   --color-border: #e3e8f0;
   --color-accent: #2563eb; /* bleu franc — surchargé depuis siteConfig.accentColor */
+  --color-accent-text: #2461e6; /* accent assombri pour les petits textes (contraste ≥ 4.5) */
   --color-accent-soft: color-mix(in srgb, var(--color-accent) 10%, transparent);
   --color-signal: #f2860b; /* ambre chaud, accent secondaire */
   --color-surface: #ffffff;
@@ -102,7 +103,7 @@ img { max-width: 100%; height: auto; border-radius: var(--radius); }
   font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.02em;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 blockquote {

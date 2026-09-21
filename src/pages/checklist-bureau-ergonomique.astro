@@ -74,12 +74,14 @@ const sections = [
       ce qui cloche dans ton installation. Tu peux l'imprimer ou la garder sous la main.
     </p>
 
+    <p class="checklist__progress" id="cl-progress" hidden><span id="cl-count">0</span> / {sections.reduce((n, s) => n + s.items.length, 0)} points cochés — ta progression est mémorisée sur cet appareil.</p>
+
     {sections.map((section) => (
       <div class="checklist__block">
         <h2><span class="checklist__icon">{section.icon}</span> {section.title}</h2>
         <ul class="checklist__items">
-          {section.items.map((item) => (
-            <li><label><input type="checkbox" /> <span>{item}</span></label></li>
+          {section.items.map((item, i) => (
+            <li><label><input type="checkbox" class="cl-cb" data-key={`${section.title}-${i}`} /> <span>{item}</span></label></li>
           ))}
         </ul>
         <p class="checklist__link">
@@ -126,4 +128,34 @@ const sections = [
   .checklist__cta { padding: 1.5rem; margin: 2rem 0 1.5rem; display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
   .checklist__cta p { margin: 0; }
   .checklist__share { font-size: 0.9rem; color: var(--color-text-muted); }
+  .checklist__progress { font-weight: 600; color: var(--color-accent); margin: 0 0 1.5rem; }
+  .checklist__items li.is-done span { text-decoration: line-through; opacity: 0.6; }
 </style>
+
+<script is:inline>
+  // Progression mémorisée (localStorage) : la checklist se retrouve telle qu'on l'a laissée.
+  (function () {
+    const KEY = 'mbc-checklist-ergonomie';
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { saved = {}; }
+    const boxes = document.querySelectorAll('.cl-cb');
+    const progress = document.getElementById('cl-progress');
+    const count = document.getElementById('cl-count');
+    function refresh() {
+      let n = 0;
+      boxes.forEach((cb) => { cb.closest('li')?.classList.toggle('is-done', cb.checked); if (cb.checked) n++; });
+      if (count) count.textContent = String(n);
+      if (progress) progress.hidden = n === 0;
+    }
+    boxes.forEach((cb) => {
+      const k = cb.getAttribute('data-key');
+      if (k && saved[k]) cb.checked = true;
+      cb.addEventListener('change', () => {
+        if (k) saved[k] = cb.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+        refresh();
+      });
+    });
+    refresh();
+  })();
+</script>
