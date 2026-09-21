@@ -18,7 +18,7 @@ const articles = budget.articles.map((slug) => bySlug.get(slug)).filter((a) => a
 
 <BaseLayout title={`${budget.label} — ${budget.tagline}`} description={budget.description}>
   <section class="container budget">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Par budget', href: '/budget' }, { label: budget.label }]} />
+    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Par budget', href: '/budget/' }, { label: budget.label }]} />
     <p class="budget__icon">{budget.icon}</p>
     <h1>{budget.label}</h1>
     <p class="budget__range">{budget.range}</p>

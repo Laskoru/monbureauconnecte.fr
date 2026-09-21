@@ -102,6 +102,6 @@ Savoir combien coûte *vraiment* un setup gaming, c'est déjà éviter la moiti�
 ## Pour aller plus loin
 
 - [Quelle config PC gaming choisir ? (par budget)](/articles/quelle-config-pc-gaming-choisir/)
-- [Guide PC gaming interactif](/guide-pc-gaming)
+- [Guide PC gaming interactif](/guide-pc-gaming/)
 - [Quelle chaise gaming choisir ?](/articles/meilleures-chaises-gaming/)
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)

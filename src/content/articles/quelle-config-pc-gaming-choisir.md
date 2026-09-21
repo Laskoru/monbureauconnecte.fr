@@ -79,7 +79,7 @@ Voici les grands paliers. Ils bougent avec les prix, mais la **logique** reste s
 
 Pour un premier PC, le palier **800-900 €** offre le meilleur rapport plaisir/prix : sur la plateforme AM4 (plus ancienne, donc moins chère), tout le budget se concentre sur la carte graphique. Le palier **1000 €** bascule sur la plateforme actuelle : un peu plus cher, mais tu pourras changer de processeur dans quelques années sans remplacer la carte mère et la RAM. Au-delà, on gagne en définition et en confort sur la durée.
 
-Envie d'un détail pièce par pièce avec des liens directs vers chaque composant ? Notre **[guide PC gaming interactif](/guide-pc-gaming)** propose des configurations complètes par budget, prêtes à comparer.
+Envie d'un détail pièce par pièce avec des liens directs vers chaque composant ? Notre **[guide PC gaming interactif](/guide-pc-gaming/)** propose des configurations complètes par budget, prêtes à comparer.
 
 ## Monter soi-même ou acheter un PC tout fait ?
 
@@ -97,11 +97,11 @@ Un bon PC dans un mauvais poste, c'est du potentiel gâché. Une fois la config 
 
 ## Conclusion
 
-Choisir une config PC gaming n'a rien de sorcier une fois la hiérarchie posée : le GPU d'abord, le reste en soutien, et un budget calé sur la définition visée. Que tu montes ta machine ou que tu l'achètes toute faite, garde en tête que la carte graphique et l'alimentation sont les deux pièces à ne jamais brader. Pour aller plus loin, notre [guide PC gaming interactif](/guide-pc-gaming) te donne des configurations complètes, prêtes à l'emploi, palier par palier.
+Choisir une config PC gaming n'a rien de sorcier une fois la hiérarchie posée : le GPU d'abord, le reste en soutien, et un budget calé sur la définition visée. Que tu montes ta machine ou que tu l'achètes toute faite, garde en tête que la carte graphique et l'alimentation sont les deux pièces à ne jamais brader. Pour aller plus loin, notre [guide PC gaming interactif](/guide-pc-gaming/) te donne des configurations complètes, prêtes à l'emploi, palier par palier.
 
 ## Pour aller plus loin
 
-- [Guide PC gaming interactif (configs par budget)](/guide-pc-gaming)
+- [Guide PC gaming interactif (configs par budget)](/guide-pc-gaming/)
 - [Combien coûte vraiment un setup gaming complet ?](/articles/cout-reel-setup-gaming-complet/)
 - [Quelle chaise gaming choisir ?](/articles/meilleures-chaises-gaming/)
 - [Souris gaming au bureau : DPI et boutons programmables](/articles/souris-gaming-pour-le-travail/)

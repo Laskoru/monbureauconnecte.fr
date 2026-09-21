@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { coverSrcSet } from '../lib/covers';
 import ArticleCard from '../components/ArticleCard.astro';
 import GearFinder from '../components/GearFinder.astro';
 import { siteConfig } from '../siteConfig';
@@ -81,7 +82,7 @@ const stats = [
 
 <BaseLayout title="Mon Bureau Connecté — bureau, gaming & télétravail" description={siteConfig.description}>
   <section class="hero">
-    <img class="hero__bg" src="/covers/bureau-assis-debout-electrique.webp" alt="" width="1600" height="900" fetchpriority="high" />
+    <img class="hero__bg" src="/covers/bureau-assis-debout-electrique.webp" srcset={coverSrcSet("/covers/bureau-assis-debout-electrique.webp")} sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" />
     <div class="hero__scrim"></div>
     <div class="wide hero__inner">
       <p class="hero__badge"><span class="hero__badge-dot"></span> Comparatifs indépendants · bureau · gaming · télétravail</p>
@@ -218,19 +219,19 @@ const stats = [
       <p class="section__eyebrow">Outils gratuits</p>
       <h2 class="section__title">Va plus vite avec nos guides interactifs</h2>
       <div class="tools__grid">
-        <a class="tools__item card card--hover" href="/guide-pc-gaming">
+        <a class="tools__item card card--hover" href="/guide-pc-gaming/">
           <span class="tools__icon">🖥️</span>
           <span class="tools__label">Guide PC gaming pièce par pièce</span>
           <span class="tools__desc">4 configurations complètes selon ton budget, du premier PC au haut de gamme.</span>
           <span class="tools__cta">Découvrir →</span>
         </a>
-        <a class="tools__item card card--hover" href="/calculateur-hauteur-bureau">
+        <a class="tools__item card card--hover" href="/calculateur-hauteur-bureau/">
           <span class="tools__icon">📐</span>
           <span class="tools__label">Calculateur de hauteur de bureau</span>
           <span class="tools__desc">Les bonnes hauteurs de bureau, siège et écran calculées selon ta taille.</span>
           <span class="tools__cta">Calculer →</span>
         </a>
-        <a class="tools__item card card--hover" href="/checklist-bureau-ergonomique">
+        <a class="tools__item card card--hover" href="/checklist-bureau-ergonomique/">
           <span class="tools__icon">✅</span>
           <span class="tools__label">Checklist ergonomie</span>
           <span class="tools__desc">Le tour complet pour vérifier que ton poste est bien réglé.</span>
@@ -255,7 +256,7 @@ const stats = [
           via l'affiliation — une petite commission si tu achètes, sans surcoût pour toi — et on l'indique
           toujours clairement. Les comparatifs sont revus régulièrement pour rester d'actualité.
         </p>
-        <a class="btn btn--outline" href="/a-propos">Découvrir notre méthode en détail</a>
+        <a class="btn btn--outline" href="/a-propos/">Découvrir notre méthode en détail</a>
       </div>
       <ul class="approach__points">
         <li><span>✓</span> Critères concrets et vérifiables</li>
