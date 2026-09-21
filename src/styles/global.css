@@ -8,7 +8,7 @@
   --color-text-muted: #56617a;
   --color-text-faint: #646a77;
   --color-border: #e3e8f0;
-  --color-accent: #2563eb; /* bleu franc — surchargé depuis siteConfig.accentColor */
+  --color-accent: #2461e6; /* bleu franc — surchargé depuis siteConfig.accentColor */
   --color-accent-text: #2461e6; /* accent assombri pour les petits textes (contraste ≥ 4.5) */
   --color-accent-soft: color-mix(in srgb, var(--color-accent) 10%, transparent);
   --color-signal: #f2860b; /* ambre chaud, accent secondaire */
