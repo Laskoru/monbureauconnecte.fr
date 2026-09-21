@@ -4,6 +4,10 @@ La routine quotidienne prend la première idée non cochée, écrit l'article en
 brouillon, puis coche l'idée. Ajoute librement de nouvelles idées en bas.
 Format : `- [ ] Sujet — angle — catégorie`.
 
+## 🎁 Saison — priorité : à publier avant mi-octobre (indexés pour Noël / Black Friday)
+- [ ] Idées cadeaux pour un télétravailleur ou un gamer : sélection par budget (Noël 2026) — guide cadeaux utile, sans gadgets — peripheriques
+- [ ] Black Friday setup bureau & gaming : ce qu'il faut attendre, ce qu'il faut acheter maintenant — guide d'achat malin — mobilier
+
 ## Mobilier & Confort
 
 - [x] Tapis de sol pour chaise de bureau — protéger le parquet et rouler sans forcer — mobilier
