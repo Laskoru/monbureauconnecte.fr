@@ -39,7 +39,7 @@ faq:
   - question: "Une ring light améliore-t-elle vraiment les visios ?"
     answer: "Nettement : un éclairage frontal doux supprime les ombres du visage et donne une image plus nette, surtout dans une pièce mal éclairée. C'est l'accessoire le plus rentable pour paraître à son avantage en visio."
   - question: "Quelle taille de ring light choisir ?"
-    answer: "Pour un bureau, une ring light de 25 à 30 cm posée derrière l'écran ou clipsée suffit. Privilégiez une température de couleur réglable (chaud à froid) et une intensité variable pour vous adapter à la pièce."
+    answer: "Pour un bureau, une ring light de 25 à 30 cm posée derrière l'écran ou clipsée suffit. Privilégie une température de couleur réglable (chaud à froid) et une intensité variable pour t'adapter à la pièce."
   - question: "Ring light ou lampe de bureau : quelle différence pour la visio ?"
     answer: "Une lampe de bureau éclaire le plan de travail, souvent de côté, ce qui crée des ombres sur le visage en visio. Un ring light diffuse une lumière large et frontale, pensée pour éclairer le visage de façon homogène face à la caméra. Pour bien travailler, c'est la lampe ; pour bien apparaître à l'écran, c'est le ring light — les deux sont complémentaires."
 ---

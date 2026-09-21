@@ -40,8 +40,6 @@ Avant de plonger dans les références, une règle simple guide tout le reste : 
 
 Le reste des composants a un rôle de **support** : le processeur alimente la carte graphique en données, la RAM et le SSD fluidifient l'ensemble, l'alimentation et le boîtier assurent la fiabilité. Bien dimensionnés, ils ne brident pas le GPU ; surdimensionnés, ils gaspillent du budget qui aurait mieux servi ailleurs. Garde cette hiérarchie en tête, et la moitié des mauvais choix disparaît.
 
-![Intérieur d'un PC gaming : carte graphique, ventirad et carte mère](/covers/quelle-config-pc-gaming-choisir.webp)
-
 ## Les composants, un par un
 
 ### Le processeur (CPU)

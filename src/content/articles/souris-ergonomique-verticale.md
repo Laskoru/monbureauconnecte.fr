@@ -39,7 +39,7 @@ faq:
   - question: "Une souris verticale soulage-t-elle le poignet ?"
     answer: "Oui : en plaçant la main en position poignée de main (pouce vers le haut), elle réduit la torsion de l'avant-bras, souvent responsable des douleurs. Le confort se ressent surtout sur de longues journées."
   - question: "Faut-il un temps d'adaptation ?"
-    answer: "Un peu : les premiers jours, la préhension et la précision demandent un ajustement, puis le geste devient naturel. Choisissez une taille adaptée à votre main pour faciliter la transition."
+    answer: "Un peu : les premiers jours, la préhension et la précision demandent un ajustement, puis le geste devient naturel. Choisis une taille adaptée à ta main pour faciliter la transition."
   - question: "Souris verticale ou trackball ?"
     answer: "La verticale corrige l'angle du poignet tout en gardant un déplacement classique de la main ; le trackball, lui, supprime le déplacement du bras (on ne bouge que le pouce ou l'index). Si ta gêne vient de la torsion du poignet, la verticale ; si elle vient des mouvements d'épaule ou d'un manque de place, le trackball."
 ---

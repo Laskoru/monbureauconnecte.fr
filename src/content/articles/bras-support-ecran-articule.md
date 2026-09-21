@@ -39,7 +39,7 @@ faq:
   - question: "À quelle hauteur régler son écran ?"
     answer: "Le haut de l'écran doit arriver au niveau des yeux, à environ un bras de distance, pour garder la nuque droite. Un bras articulé permet ce réglage précis, contrairement à un pied fixe."
   - question: "Un bras d'écran convient-il à tous les écrans ?"
-    answer: "La plupart des bras acceptent la norme VESA (75x75 ou 100x100 mm) et une plage de taille/poids indiquée (souvent 17 à 32 pouces). Vérifiez que votre écran est compatible VESA et que son poids entre dans la fourchette du bras."
+    answer: "La plupart des bras acceptent la norme VESA (75x75 ou 100x100 mm) et une plage de taille/poids indiquée (souvent 17 à 32 pouces). Vérifie que ton écran est compatible VESA et que son poids entre dans la fourchette du bras."
   - question: "Mon écran n'a pas de trous VESA, que faire ?"
     answer: "Certains écrans grand public (souvent fins ou avec un pied design) n'ont pas de fixation VESA à l'arrière. Il existe des adaptateurs VESA universels (une plaque qui se glisse sous le pied ou se clipse), mais vérifie leur compatibilité avec ton modèle précis avant d'acheter, car ils ne conviennent pas à tous les châssis."
 ---

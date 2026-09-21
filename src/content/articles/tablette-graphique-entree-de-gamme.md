@@ -33,7 +33,7 @@ Pour ces usages, il n'est pas nécessaire d'investir dans du matériel professio
 
 ### La zone active et sa correspondance avec l'écran
 
-La zone active, c'est la surface de la tablette réellement sensible au stylet. Sur les modèles d'entrée de gamme, elle est en général compacte, ce qui suffit amplement pour de l'annotation ou de l'initiation. Le point à vérifier est la **correspondance** entre cette zone et votre écran : plus la zone active est petite par rapport à un grand moniteur, plus les mouvements du stylet devront être précis pour couvrir tout l'écran. Pour un usage bureautique occasionnel, ce n'est pas gênant ; pour dessiner plus régulièrement, une zone un peu plus généreuse apporte du confort.
+La zone active, c'est la surface de la tablette réellement sensible au stylet. Sur les modèles d'entrée de gamme, elle est en général compacte, ce qui suffit amplement pour de l'annotation ou de l'initiation. Le point à vérifier est la **correspondance** entre cette zone et ton écran : plus la zone active est petite par rapport à un grand moniteur, plus les mouvements du stylet devront être précis pour couvrir tout l'écran. Pour un usage bureautique occasionnel, ce n'est pas gênant ; pour dessiner plus régulièrement, une zone un peu plus généreuse apporte du confort.
 
 ### La sensibilité à la pression du stylet
 
@@ -45,18 +45,18 @@ Les stylets récents fonctionnent le plus souvent **sans pile** (alimentés par 
 
 ### La connectique et la compatibilité logicielle
 
-La plupart des tablettes d'entrée de gamme se branchent en **USB** et sont reconnues nativement par Windows et macOS, sans configuration complexe. Vérifiez la compatibilité avec les logiciels que vous utilisez réellement (lecteur PDF, suite bureautique, logiciel de visioconférence) plutôt que de viser uniquement des logiciels de dessin professionnels que vous n'utiliserez peut-être jamais.
+La plupart des tablettes d'entrée de gamme se branchent en **USB** et sont reconnues nativement par Windows et macOS, sans configuration complexe. Vérifie la compatibilité avec les logiciels que tu utilises réellement (lecteur PDF, suite bureautique, logiciel de visioconférence) plutôt que de viser uniquement des logiciels de dessin professionnels que tu n'utiliseras peut-être jamais.
 
 ### Les touches de raccourci sur la tablette elle-même
 
-Certains modèles ajoutent des **touches programmables directement sur le bord de la tablette** (annuler, zoom, changement d'outil). Pratique pour un usage intensif, mais loin d'être indispensable pour de l'annotation occasionnelle : ne payez pas plus cher pour cette fonction si vous ne comptez pas vous en servir.
+Certains modèles ajoutent des **touches programmables directement sur le bord de la tablette** (annuler, zoom, changement d'outil). Pratique pour un usage intensif, mais loin d'être indispensable pour de l'annotation occasionnelle : ne paie pas plus cher pour cette fonction si tu ne comptes pas t'en servir.
 
 > 🛒 **Notre sélection du moment**
 > Pour comparer les tablettes graphiques d'entrée de gamme disponibles en ce moment : [voir les tablettes graphiques sur Amazon](https://www.amazon.fr/s?k=tablette+graphique+debutant&tag=monbureauconnecte-21).
 >
 > *En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.*
 
-## Comment choisir selon votre usage
+## Comment choisir selon ton usage
 
 - **Annotation de documents et signature occasionnelle** : un format compact avec une sensibilité de base suffit largement, inutile de viser plus.
 - **Initiation au dessin numérique ou à la retouche photo légère** : privilégiez une zone active un peu plus grande et une sensibilité à la pression plus fine, pour progresser sans être bridé par le matériel.
@@ -70,11 +70,11 @@ Certains modèles ajoutent des **touches programmables directement sur le bord d
 
 ## Installer et bien démarrer
 
-L'installation se limite en général à brancher la tablette en USB et à laisser le système d'exploitation ou le pilote constructeur la reconnaître automatiquement. Un premier réglage utile consiste à ajuster la **zone active mappée** dans les paramètres du pilote si votre écran est très large ou en format inhabituel, pour que le stylet couvre bien tout l'espace visible sans zone morte. Prenez aussi quelques minutes pour tester la **sensibilité à la pression** dans un logiciel de dessin simple ou un lecteur PDF : la plupart des pilotes permettent d'ajuster la courbe de pression si le trait vous semble trop dur ou trop mou par défaut.
+L'installation se limite en général à brancher la tablette en USB et à laisser le système d'exploitation ou le pilote constructeur la reconnaître automatiquement. Un premier réglage utile consiste à ajuster la **zone active mappée** dans les paramètres du pilote si ton écran est très large ou en format inhabituel, pour que le stylet couvre bien tout l'espace visible sans zone morte. Prends aussi quelques minutes pour tester la **sensibilité à la pression** dans un logiciel de dessin simple ou un lecteur PDF : la plupart des pilotes permettent d'ajuster la courbe de pression si le trait te semble trop dur ou trop mou par défaut.
 
 ## Conclusion
 
-Pour de l'annotation de documents, de la signature ou une première découverte du dessin numérique au bureau, une tablette graphique d'entrée de gamme suffit très largement. L'essentiel est de vérifier une zone active cohérente avec votre écran, un stylet sans pile avec quelques boutons utiles, et une bonne compatibilité avec les logiciels que vous utilisez réellement — inutile de payer pour des fonctions professionnelles dont vous ne vous servirez pas.
+Pour de l'annotation de documents, de la signature ou une première découverte du dessin numérique au bureau, une tablette graphique d'entrée de gamme suffit très largement. L'essentiel est de vérifier une zone active cohérente avec ton écran, un stylet sans pile avec quelques boutons utiles, et une bonne compatibilité avec les logiciels que tu utilises réellement — inutile de payer pour des fonctions professionnelles dont tu ne te serviras pas.
 
 ## Pour aller plus loin
 

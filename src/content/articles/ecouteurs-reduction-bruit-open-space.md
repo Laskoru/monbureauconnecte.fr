@@ -23,7 +23,7 @@ comparison:
     - ["Efficacité de l'ANC", "Très bonne sur les modèles récents, légèrement en retrait des meilleurs casques", "Généralement la référence en isolation active"]
     - ["Autonomie", "Quelques heures par charge, complétée par le boîtier au fil de la journée", "Plusieurs dizaines d'heures sans recharge"]
     - ["Encombrement / transport", "Minuscule boîtier qui tient dans une poche", "Prend de la place dans un sac"]
-    - ["Prix à qualité égale", "Comparable, parfois un peu supérieur pour une bonne ANC intra", "Comparable"]
+    - ["Prix à qualité égale", "Souvent un peu plus cher pour une bonne ANC intra", "Large choix à tous les prix"]
 faq:
   - question: "Les écouteurs intra-auriculaires isolent-ils aussi bien qu'un casque du bruit ?"
     answer: "Sur l'isolation passive pure, un casque circum-aural englobant toute l'oreille a un léger avantage naturel. Mais côté réduction active (ANC), les meilleurs écouteurs intra-auriculaires récents rivalisent désormais avec de bons casques sur les bruits constants (ventilation, climatisation, brouhaha de fond) : l'écart s'est beaucoup réduit ces dernières années. Le point le plus important reste le choix de la bonne taille d'embout, qui conditionne l'étanchéité acoustique bien plus que la marque ou le prix."
@@ -41,7 +41,7 @@ Ce n'est pas qu'une question d'apparence. Des écouteurs se glissent dans une po
 
 ## Écouteurs ANC ou casque : ce qui change vraiment
 
-Les deux formats visent le même résultat — couper le bruit ambiant — mais n'y arrivent pas de la même façon ni avec les mêmes compromis. Le tableau ci-dessus résume l'essentiel : le casque garde l'avantage en autonomie brute et en efficacité d'isolation pure, tandis que les écouteurs l'emportent largement sur la discrétion, le confort avec des lunettes et l'encombrement au quotidien. Aucun des deux n'est strictement meilleur ; le bon choix dépend surtout de l'environnement de travail et de la durée de port visée dans une même session.
+Les deux formats visent le même résultat — couper le bruit ambiant — mais n'y arrivent pas de la même façon ni avec les mêmes compromis. Le tableau en fin d'article résume l'essentiel : le casque garde l'avantage en autonomie brute et en efficacité d'isolation pure, tandis que les écouteurs l'emportent largement sur la discrétion, le confort avec des lunettes et l'encombrement au quotidien. Aucun des deux n'est strictement meilleur ; le bon choix dépend surtout de l'environnement de travail et de la durée de port visée dans une même session.
 
 ## Les critères qui font vraiment la différence
 

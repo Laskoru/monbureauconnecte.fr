@@ -1,6 +1,6 @@
 ---
 title: "Pavé numérique externe sans fil : comment bien le choisir"
-description: "Votre portable n'a pas de pavé numérique ? Un pavé externe sans fil accélère la saisie de chiffres. Les critères (RF ou Bluetooth, autonomie) et notre choix."
+description: "Ton portable n'a pas de pavé numérique ? Un pavé externe sans fil accélère la saisie de chiffres. Les critères (RF ou Bluetooth, autonomie) et notre choix."
 pubDate: 2026-08-31
 updatedDate: 2026-09-11
 author: "Hugo B."
@@ -58,7 +58,7 @@ Concrètement, la différence de vitesse est spectaculaire. Saisir une colonne d
 C'est le choix structurant :
 
 - **RF 2,4 GHz (récepteur USB)** : on branche le dongle, ça fonctionne **immédiatement**, sans appairage ni pilote, avec une **latence minime**. Le plus simple et le plus fiable pour un poste fixe.
-- **Bluetooth** : n'occupe **aucun port USB**, se couple à un PC comme à une tablette, mais demande un **appairage** et parfois une reconnexion. Idéal si vous manquez de ports ou travaillez en nomade.
+- **Bluetooth** : n'occupe **aucun port USB**, se couple à un PC comme à une tablette, mais demande un **appairage** et parfois une reconnexion. Idéal si tu manques de ports ou travailles en nomade.
 
 ### L'alimentation et l'autonomie
 
@@ -66,7 +66,7 @@ Deux écoles : **piles** (souvent AAA, autonomie de plusieurs mois avec veille a
 
 ### Le nombre de touches et l'agencement
 
-Un pavé complet compte en général **19 à 22 touches** (chiffres, opérateurs, Entrée, Verr. Num, parfois Tab et Retour). Plus de touches = plus de fonctions, utile pour la comptabilité. Vérifiez que l'agencement correspond à votre usage (certains ajoutent des raccourcis).
+Un pavé complet compte en général **19 à 22 touches** (chiffres, opérateurs, Entrée, Verr. Num, parfois Tab et Retour). Plus de touches = plus de fonctions, utile pour la comptabilité. Vérifie que l'agencement correspond à ton usage (certains ajoutent des raccourcis).
 
 ### La compacité et la stabilité
 
@@ -79,12 +79,12 @@ La plupart des modèles fonctionnent sous **Windows, macOS et Linux** sans pilot
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les pavés numériques sans fil sur Amazon](https://www.amazon.fr/s?k=pave+numerique+sans+fil&tag=monbureauconnecte-21).
 
-## Comment choisir selon votre usage
+## Comment choisir selon ton usage
 
 - **Poste fixe, simplicité maximale** : un modèle **RF 2,4 GHz** avec dongle, plug and play.
 - **Manque de ports USB ou usage nomade** : un modèle **Bluetooth**.
 - **Saisie intensive (compta, data)** : privilégiez un pavé **22 touches** avec bonne course de frappe.
-- **Vous alternez droite/gauche** : un modèle **compact et léger**, facile à déplacer.
+- **Tu alternes droite/gauche** : un modèle **compact et léger**, facile à déplacer.
 
 ## Les idées reçues
 
@@ -107,7 +107,7 @@ La question se pose forcément quand on quitte un clavier complet. Le **clavier 
 
 ## En résumé
 
-Le bon pavé numérique externe sans fil, c'est d'abord un choix de **liaison** — **RF 2,4 GHz** pour la simplicité, **Bluetooth** pour la souplesse — avec une **bonne autonomie**, un **agencement adapté** à votre saisie et un format **compact et stable**. De quoi redonner à un portable ou à un clavier compact toute l'efficacité d'un pavé numérique, sans câble.
+Le bon pavé numérique externe sans fil, c'est d'abord un choix de **liaison** — **RF 2,4 GHz** pour la simplicité, **Bluetooth** pour la souplesse — avec une **bonne autonomie**, un **agencement adapté** à ta saisie et un format **compact et stable**. De quoi redonner à un portable ou à un clavier compact toute l'efficacité d'un pavé numérique, sans câble.
 
 ## Pour aller plus loin
 
