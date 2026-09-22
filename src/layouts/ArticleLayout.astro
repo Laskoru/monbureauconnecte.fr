@@ -31,6 +31,7 @@ interface Product { asin: string; title: string; image?: string; blurb?: string;
 interface Props {
   slug: string;
   title: string;
+  seoTitle?: string;
   description: string;
   pubDate: Date;
   updatedDate?: Date;
@@ -51,7 +52,7 @@ interface Props {
 }
 
 const {
-  slug, title, description, pubDate, updatedDate, author, coverImage, coverAlt, category,
+  slug, title, seoTitle, description, pubDate, updatedDate, author, coverImage, coverAlt, category,
   keywords = [], products = [], headings = [], readingMinutes, faq = [], comparison,
   interactiveGuide, howto, sources = [], topPick, hasAmazonLinks = false,
 } = Astro.props;
@@ -98,7 +99,7 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
 ---
 
 <BaseLayout
-  title={title}
+  title={seoTitle ?? title}
   description={description}
   ogImage={coverImageAbs}
   ogType="article"

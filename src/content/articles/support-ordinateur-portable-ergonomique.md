@@ -1,5 +1,6 @@
 ---
 title: "Support ordinateur portable ergonomique : pourquoi c'est presque indispensable"
+seoTitle: "Support ordinateur portable ergonomique : indispensable ?"
 description: "Travailler sur un portable posé à plat fatigue vite la nuque. Nos critères de choix, le duo gagnant avec un clavier externe, et notre sélection."
 pubDate: 2026-07-30
 updatedDate: 2026-09-11

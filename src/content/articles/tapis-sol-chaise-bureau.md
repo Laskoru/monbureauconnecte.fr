@@ -1,5 +1,6 @@
 ---
 title: "Tapis de sol pour chaise de bureau : protéger le parquet efficacement"
+seoTitle: "Tapis de sol pour chaise de bureau : protéger le parquet"
 description: "Comment choisir un tapis de protection pour rouler sans forcer et éviter les rayures sur parquet ou stratifié, sans se ruiner."
 pubDate: 2026-08-15
 updatedDate: 2026-09-11

@@ -1,5 +1,6 @@
 ---
 title: "Tapis de souris XXL pour le bureau : lequel choisir pour clavier et souris"
+seoTitle: "Tapis de souris XXL pour le bureau : lequel choisir"
 description: "Un tapis XXL unifie clavier et souris sur une seule surface fluide. Nos critères de choix et notre sélection pour un bureau télétravail ou gaming."
 pubDate: 2026-08-18
 updatedDate: 2026-09-11

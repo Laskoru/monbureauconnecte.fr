@@ -1,5 +1,6 @@
 ---
 title: "Écouteurs à réduction de bruit pour l'open space : l'alternative discrète au casque"
+seoTitle: "Écouteurs à réduction de bruit pour l'open space"
 description: "En open space, des écouteurs à réduction de bruit passent inaperçus là où un casque se voit. Confort, autonomie, micro : comment bien choisir."
 pubDate: 2026-09-18
 updatedDate: 2026-09-18

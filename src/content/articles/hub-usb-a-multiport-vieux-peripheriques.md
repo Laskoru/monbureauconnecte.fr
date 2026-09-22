@@ -1,5 +1,6 @@
 ---
 title: "Hub USB-A multiport : rebrancher ses vieux périphériques sur un PC récent"
+seoTitle: "Hub USB-A multiport : rebrancher ses vieux périphériques"
 description: "Plus un seul port USB-A sur ton PC récent ? Le hub USB-A multiport permet de rebrancher souris, clavier et clés USB sans rien racheter. Comment bien le choisir."
 pubDate: 2026-09-13
 updatedDate: 2026-09-13

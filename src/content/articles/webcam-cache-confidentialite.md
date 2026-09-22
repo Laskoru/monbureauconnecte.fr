@@ -1,5 +1,6 @@
 ---
 title: "Cache de confidentialité pour webcam : pourquoi (et comment) bien le choisir"
+seoTitle: "Cache webcam : pourquoi et comment bien le choisir"
 description: "Un cache de webcam coulissant protège ta vie privée en un geste. Adhésif universel ou webcam à obturateur intégré : comment choisir et bien l'installer."
 pubDate: 2026-09-15
 updatedDate: 2026-09-15

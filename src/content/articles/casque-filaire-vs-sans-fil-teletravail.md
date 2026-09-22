@@ -1,5 +1,6 @@
 ---
 title: "Casque filaire vs sans fil pour le télétravail en 2026 : lequel choisir ?"
+seoTitle: "Casque filaire ou sans fil pour le télétravail ?"
 description: "Latence, autonomie, fiabilité : notre comparatif casque filaire vs sans fil pour le télétravail, pour choisir sans se tromper selon ton usage."
 pubDate: 2026-09-17
 updatedDate: 2026-09-17

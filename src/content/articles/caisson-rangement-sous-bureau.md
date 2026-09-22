@@ -1,5 +1,6 @@
 ---
 title: "Caisson de rangement sous bureau : libérer le plateau sans encombrer"
+seoTitle: "Caisson de rangement sous bureau : libérer le plateau"
 description: "Comment choisir un caisson de rangement sous bureau pour ranger dossiers et fournitures sans envahir l'espace de travail."
 pubDate: 2026-08-16
 updatedDate: 2026-09-11

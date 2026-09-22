@@ -1,5 +1,6 @@
 ---
 title: "Tabouret assis-debout (siège selle) : bien choisir pour un bureau haut"
+seoTitle: "Tabouret assis-debout (siège selle) : bien choisir"
 description: "Comment choisir un tabouret assis-debout ou un siège selle pour varier les appuis derrière un bureau haut, sans fatigue ni mauvaise surprise."
 pubDate: 2026-08-16
 updatedDate: 2026-09-11

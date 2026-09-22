@@ -1,5 +1,6 @@
 ---
 title: "Plante de bureau dépolluante : laquelle choisir pour un poste de travail"
+seoTitle: "Plante de bureau dépolluante : laquelle choisir"
 description: "Quelle plante dépolluante installer sur un bureau, selon la lumière disponible et le temps qu'on peut consacrer à son entretien."
 pubDate: 2026-08-16
 updatedDate: 2026-09-11
