@@ -1,9 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { coverSrcSet } from '../lib/covers';
+import { coverSrcSet, resolveCoverImage } from '../lib/covers';
+import { resolveProductImage } from '../lib/products';
+import { getRating } from '../lib/ratings';
+import { isAvailable, productUrl } from '../lib/availability';
 import ArticleCard from '../components/ArticleCard.astro';
-import GearFinder from '../components/GearFinder.astro';
 import Icon from '../components/Icon.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
@@ -15,103 +17,128 @@ const sorted = [...allArticles].sort((a, b) => b.data.pubDate.valueOf() - a.data
 const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
 const published = new Set(allArticles.map((a) => a.slug));
 
-// Comparatifs de référence : 1 grand + 3 compacts, un par grand besoin
+// Comparatifs de référence (un par grand besoin) + les plus récents
 const featuredSlugs = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail'];
 const featured = featuredSlugs.map((s) => bySlug.get(s)).filter(Boolean);
-const [lead, ...side] = featured;
+const [lead, ...others] = featured;
 const latest = sorted.filter((a) => !featuredSlugs.includes(a.slug)).slice(0, 6);
 
-// Navigation par problème : nos guides-hubs
-const needCounts = guides.map((g) => ({ ...g, count: g.articles.filter((slug) => published.has(slug)).length }));
-// Navigation par budget
-const budgetCounts = budgets.map((b) => ({ ...b, count: b.articles.filter((slug) => published.has(slug)).length }));
-const categoryCounts = categories.map((cat) => ({ ...cat, count: allArticles.filter((a) => a.data.category === cat.slug).length }));
+// Produits recommandés : le premier produit disponible (avec photo) de comparatifs choisis
+const nf = new Intl.NumberFormat('fr-FR');
+const shortTitle = (t: string) => t.split(/\s[—–-]\s/)[0].trim();
+const picks = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail', 'claviers-mecaniques-silencieux', 'bras-support-ecran-articule', 'webcams-1080p-vs-4k', 'hub-usb-c-station-accueil']
+  .map((slug) => {
+    const a = bySlug.get(slug); if (!a) return null;
+    const p = (a.data.products ?? []).find((x) => isAvailable(x.asin) && resolveProductImage(x.asin, x.image));
+    if (!p) return null;
+    return { article: a, product: p, image: resolveProductImage(p.asin, p.image)!, rating: getRating(p.asin) };
+  })
+  .filter(Boolean)
+  .slice(0, 4);
 
-const promises = [
-  { icon: 'shield', label: '100 % indépendant', note: 'aucun placement payé' },
-  { icon: 'ruler', label: 'Critères mesurables', note: 'plage de réglage, charge, dB, autonomie' },
-  { icon: 'refresh', label: 'Mis à jour en 2026', note: 'modèles et prix revus' },
-  { icon: 'tag', label: 'Affiliation transparente', note: 'sans surcoût pour toi' },
-];
+// Guides par besoin illustrés par la couverture de leur premier article
+const needs = guides.map((g) => {
+  const first = g.articles.map((s) => bySlug.get(s)).find(Boolean);
+  return { ...g, cover: first ? resolveCoverImage(first.slug, first.data.coverImage) : null, count: g.articles.filter((s) => published.has(s)).length };
+});
+const budgetCounts = budgets.map((b) => ({ ...b, count: b.articles.filter((s) => published.has(s)).length }));
+const categoryCounts = categories.map((c) => ({ ...c, count: allArticles.filter((a) => a.data.category === c.slug).length }));
+const collage = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'casque-reduction-bruit-teletravail'].map((s) => bySlug.get(s)).filter(Boolean).map((a) => ({ src: resolveCoverImage(a.slug, a.data.coverImage), alt: a.data.coverAlt ?? '' }));
+const nbProducts = allArticles.reduce((n, a) => n + (a.data.products?.length ?? 0), 0);
 
 const tools = [
-  { icon: 'posture', title: 'Le poste de travail idéal', desc: 'Le schéma coté des 7 repères : écran, coudes, dos, pieds.', href: '/poste-de-travail-ideal/', cta: 'Voir le schéma' },
-  { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Bureau assis et debout, siège et écran calculés selon ta taille.', href: '/calculateur-hauteur-bureau/', cta: 'Calculer' },
-  { icon: 'checklist', title: 'Checklist ergonomie', desc: 'Le tour complet pour vérifier que ton poste est bien réglé.', href: '/checklist-bureau-ergonomique/', cta: 'Vérifier' },
-  { icon: 'cpu', title: 'Guide PC gaming pièce par pièce', desc: '4 configurations complètes selon ton budget, du premier PC au haut de gamme.', href: '/guide-pc-gaming/', cta: 'Découvrir' },
-  { icon: 'book', title: 'Lexique du bureau', desc: 'VESA, DPI, ANC, Power Delivery, switchs : les termes expliqués simplement.', href: '/lexique/', cta: 'Consulter' },
+  { icon: 'ruler', title: 'Calculateur de hauteur de bureau', href: '/calculateur-hauteur-bureau/' },
+  { icon: 'posture', title: 'Le poste de travail idéal', href: '/poste-de-travail-ideal/' },
+  { icon: 'checklist', title: 'Checklist ergonomie', href: '/checklist-bureau-ergonomique/' },
+  { icon: 'cpu', title: 'Guide PC gaming', href: '/guide-pc-gaming/' },
+  { icon: 'book', title: 'Lexique du bureau', href: '/lexique/' },
 ];
 
-// FAQ générale du site (aussi bonne pour le SEO)
 const faqs = [
   { q: 'Vos comparatifs sont-ils sponsorisés ?', a: "Non. Aucune marque ne paie pour figurer ou être mieux classée. On se rémunère uniquement via les liens affiliés : si tu achètes après avoir cliqué, on touche une petite commission, sans surcoût pour toi. Ça ne change ni nos choix, ni nos critiques." },
   { q: 'Comment choisissez-vous les produits recommandés ?', a: "On part toujours d'un usage concret (mal de dos, petit bureau, visio…) et on compare des critères vérifiables : plage de réglage, charge admise, niveau sonore, autonomie. On assume les compromis de chaque modèle plutôt que de gonfler un classement." },
+  { q: 'D’où viennent les notes affichées ?', a: "Les étoiles et le nombre d'avis proviennent directement de la fiche Amazon du produit, relevés automatiquement et réactualisés régulièrement. Nous n'écrivons aucun avis client : ce sont ceux, réels, laissés par les acheteurs." },
   { q: 'À quelle fréquence les articles sont-ils mis à jour ?', a: "Régulièrement. Les modèles conseillés et les prix évoluent vite : on révise les comparatifs pour qu'ils restent d'actualité, et la date de dernière mise à jour est indiquée en haut de chaque article." },
   { q: "C'est quoi, un « lien affilié Amazon » ?", a: "C'est un lien qui indique à Amazon que tu viens de chez nous. Si tu achètes, Amazon nous reverse une petite commission — le prix reste exactement le même pour toi. C'est ce qui finance le site et nous permet de rester indépendants." },
-  { q: 'Pourquoi des liens de recherche plutôt qu’un produit précis ?', a: "Parce qu'un modèle précis peut être en rupture ou changer de prix du jour au lendemain. Un lien vers une recherche Amazon t'amène aux modèles disponibles aujourd'hui, correspondant au type de produit qu'on recommande — plus fiable dans le temps." },
 ];
 ---
 
 <BaseLayout title="Mon Bureau Connecté — bureau, gaming & télétravail" description={siteConfig.description}>
-  <!-- ═══════ HERO : photo + fiche de réglage ═══════ -->
-  <section class="hero">
-    <img class="hero__bg" src="/covers/bureau-assis-debout-electrique.webp" srcset={coverSrcSet('/covers/bureau-assis-debout-electrique.webp')} sizes="100vw" width="1600" height="900" fetchpriority="high" decoding="async" alt="Poste de travail avec bureau assis-debout, écran sur bras et fauteuil ergonomique" />
+  <!-- ═══ HERO : titre + collage photo ═══ -->
+  <section class="hero blueprint">
     <div class="wide hero__grid">
       <div class="hero__text">
-        <p class="hero__eyebrow"><span class="hero__tick" aria-hidden="true"></span> Bureau · Gaming · Télétravail</p>
-        <h1 class="hero__title">Un poste de travail réglé <span class="hero__hl">au millimètre.</span></h1>
-        <p class="hero__lede">Comparatifs indépendants et outils gratuits pour choisir chaise, bureau, périphériques et casque sur des critères mesurables — pas sur le marketing.</p>
+        <h1 class="hero__title">Le bon matériel pour ton poste de travail, comparé sur des critères mesurables.</h1>
+        <p class="hero__lede">Chaises, bureaux assis-debout, périphériques, casques et webcams : des comparatifs indépendants, des outils gratuits pour régler ton poste, et les vraies notes Amazon — jamais retouchées.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="/guides/"><Icon name="sliders" size={18} /> Trouver par problème</a>
-          <a class="btn btn--ghost-night" href="/articles/">Tous les comparatifs</a>
+          <a class="btn btn--primary" href="/guides/">Trouver par besoin</a>
+          <a class="btn btn--outline" href="/articles/">Voir les comparatifs</a>
         </div>
-        <p class="hero__data" aria-label="Le site en chiffres"><span><b>{allArticles.length}</b> comparatifs</span><span><b>{guides.length}</b> problèmes couverts</span><span><b>0</b> placement payé</span></p>
+        <ul class="hero__proof">
+          <li><Icon name="check" size={18} /> {allArticles.length} comparatifs, {nbProducts} produits passés au crible</li>
+          <li><Icon name="shield" size={18} /> Indépendant : aucune marque ne paie pour figurer</li>
+          <li><Icon name="refresh" size={18} /> Modèles et prix revus en 2026</li>
+        </ul>
       </div>
-
-      <aside class="fr" aria-label="Fiche de réglage : la hauteur de ton bureau selon ta taille">
-        <p class="fr__title"><Icon name="ruler" size={16} /> Fiche de réglage</p>
-        <label class="fr__field" for="fr-taille">
-          <span class="fr__label">Ta taille</span>
-          <span class="fr__val"><output id="fr-out" for="fr-taille">175</output> cm</span>
-        </label>
-        <input class="fr__range" type="range" id="fr-taille" min="140" max="210" value="175" step="1" aria-label="Ta taille en centimètres" />
-        <dl class="fr__specs">
-          <div><dt>Plateau assis</dt><dd><b data-fr="0.42">74</b> cm</dd></div>
-          <div><dt>Plateau debout</dt><dd><b data-fr="0.62">109</b> cm</dd></div>
-          <div><dt>Assise du siège</dt><dd><b data-fr="0.25">44</b> cm</dd></div>
-          <div><dt>Haut de l'écran</dt><dd><b data-fr="0.70">123</b> cm</dd></div>
-        </dl>
-        <p class="fr__verdict" id="fr-verdict">Un bureau standard (74 cm) est à ta hauteur.</p>
-        <a class="fr__more" href="/calculateur-hauteur-bureau/">Le détail, le schéma et quoi corriger <Icon name="arrow" size={14} /></a>
-      </aside>
+      <div class="collage" aria-hidden="true">
+        {collage.map((c, i) => c.src && <img class={`collage__img collage__img--${i + 1}`} src={c.src} srcset={coverSrcSet(c.src)} sizes="(max-width: 900px) 40vw, 300px" alt="" width="1600" height="1000" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />)}
+      </div>
     </div>
   </section>
 
-  <!-- ═══════ PROMESSES ═══════ -->
-  <div class="promises">
-    <ul class="wide promises__list">
-      {promises.map((p) => (
-        <li><Icon name={p.icon} size={20} /><span><strong>{p.label}</strong><small>{p.note}</small></span></li>
-      ))}
-    </ul>
-  </div>
-
-  <!-- ═══════ PAR PROBLÈME ═══════ -->
-  <section class="section section--soft blueprint" id="besoins">
+  <!-- ═══ DERNIERS COMPARATIFS ═══ -->
+  <section class="section">
     <div class="wide">
       <div class="section__head">
-        <div><p class="eyebrow section__eyebrow">Navigation par besoin</p><h2 class="section__title">Quel est ton problème ?</h2></div>
+        <div><h2 class="section__title">Les comparatifs de référence</h2><p class="section__lede">Un guide d'achat par grand besoin, avec les critères qui comptent et notre choix.</p></div>
+        <a class="section__link" href="/articles/">Tous les comparatifs <Icon name="arrow" size={16} /></a>
+      </div>
+      {lead && <ArticleCard article={lead} variant="feature" eager />}
+      <div class="grid3">{others.map((a) => <ArticleCard article={a} />)}</div>
+    </div>
+  </section>
+
+  <!-- ═══ PRODUITS RECOMMANDÉS ═══ -->
+  {picks.length > 0 && (
+    <section class="section section--soft">
+      <div class="wide">
+        <div class="section__head">
+          <div><h2 class="section__title">Nos produits recommandés</h2><p class="section__lede">Le premier choix de nos comparatifs, avec la vraie note Amazon. Le prix s'affiche sur la fiche produit.</p></div>
+        </div>
+        <div class="products">
+          {picks.map(({ article, product, image, rating }) => (
+            <article class="prod">
+              <a class="prod__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
+              <div class="prod__body">
+                {product.award && <p class="prod__award">{product.award}</p>}
+                <h3 class="prod__title"><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
+                {rating && <p class="prod__rating"><span class="stars" style={`--pct:${Math.round((rating.rating / 5) * 100)}%`} aria-hidden="true"></span><strong>{rating.rating.toFixed(1).replace('.', ',')}</strong>/5 · {nf.format(rating.count)} avis</p>}
+                {product.blurb && <p class="prod__blurb">{product.blurb}</p>}
+                <div class="prod__actions">
+                  <a class="btn btn--primary btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon</a>
+                  <a class="prod__more" href={`/articles/${article.slug}/`}>Lire le comparatif <Icon name="arrow" size={14} /></a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="products__disc">Liens partenaires : en tant que Partenaire Amazon, {siteConfig.name} perçoit une commission sur les achats éligibles, sans surcoût pour toi.</p>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══ PAR BESOIN ═══ -->
+  <section class="section">
+    <div class="wide">
+      <div class="section__head">
+        <div><h2 class="section__title">Quel est ton problème ?</h2><p class="section__lede">Nos comparatifs rangés par situation réelle : on te dit quoi lire, dans quel ordre.</p></div>
         <a class="section__link" href="/guides/">Tous les guides <Icon name="arrow" size={16} /></a>
       </div>
-      <p class="section__lede">Nos comparatifs sont rangés par situation réelle. Choisis la tienne : on t'emmène droit aux produits qui la règlent, dans l'ordre.</p>
-      <div class="needs reveal">
-        {needCounts.map((n) => (
-          <a class="need card card--hover" href={`/guides/${n.slug}/`}>
-            <span class="need__icon"><Icon name={n.slug} size={22} /></span>
-            <span class="need__body">
-              <span class="need__title">{n.title}</span>
-              <span class="need__count">{n.count} comparatif{n.count > 1 ? 's' : ''}</span>
-            </span>
+      <div class="needs">
+        {needs.map((n) => (
+          <a class="need" href={`/guides/${n.slug}/`}>
+            <span class="need__media">{n.cover ? <img src={n.cover} srcset={coverSrcSet(n.cover)} sizes="140px" alt="" loading="lazy" decoding="async" width="480" height="300" /> : <Icon name={n.slug} size={28} />}</span>
+            <span class="need__body"><span class="need__title">{n.title}</span><span class="need__count">{n.count} comparatif{n.count > 1 ? 's' : ''}</span></span>
             <Icon name="arrow" size={18} class="need__arrow" />
           </a>
         ))}
@@ -119,131 +146,72 @@ const faqs = [
     </div>
   </section>
 
-  <!-- ═══════ PAR BUDGET ═══════ -->
-  <section class="section">
-    <div class="wide">
-      <div class="section__head">
-        <div><p class="eyebrow section__eyebrow">Par budget</p><h2 class="section__title">Combien veux-tu y mettre ?</h2></div>
-        <a class="section__link" href="/budget/">Choisir par budget <Icon name="arrow" size={16} /></a>
+  <!-- ═══ BUDGET + RAYONS ═══ -->
+  <section class="section section--soft">
+    <div class="wide split">
+      <div>
+        <h2 class="section__title">Combien veux-tu y mettre ?</h2>
+        <ul class="list">
+          {budgetCounts.map((b) => (
+            <li><a href={`/budget/${b.slug}/`}><span class="list__icon"><Icon name={b.slug} size={20} /></span><span class="list__text"><strong>{b.label}</strong><span>{b.range} · {b.tagline}</span></span><span class="list__count">{b.count}</span></a></li>
+          ))}
+        </ul>
       </div>
-      <p class="section__lede">Chaque enveloppe a ses bons choix. Du geste gratuit à l'investissement qui dure.</p>
-      <div class="budgets reveal">
-        {budgetCounts.map((b) => (
-          <a class="budget card card--hover" href={`/budget/${b.slug}/`}>
-            <span class="budget__top"><span class="budget__icon"><Icon name={b.slug} size={22} /></span><span class="spec budget__range"><b>{b.range}</b></span></span>
-            <span class="budget__label">{b.label}</span>
-            <span class="budget__desc">{b.tagline}</span>
-            <span class="budget__count">{b.count} comparatif{b.count > 1 ? 's' : ''} <Icon name="arrow" size={14} /></span>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ INCONTOURNABLES ═══════ -->
-  {lead && (
-    <section class="section section--soft">
-      <div class="wide">
-        <div class="section__head">
-          <div><p class="eyebrow section__eyebrow">La sélection de la rédaction</p><h2 class="section__title">Les comparatifs de référence</h2></div>
-          <a class="section__link" href="/articles/">Tous les comparatifs <Icon name="arrow" size={16} /></a>
-        </div>
-        <div class="una reveal">
-          <div class="una__lead"><ArticleCard article={lead} variant="feature" eager /></div>
-          <div class="una__side">{side.map((a) => <ArticleCard article={a} variant="row" />)}</div>
-        </div>
-      </div>
-    </section>
-  )}
-
-  <GearFinder />
-
-  <!-- ═══════ CATÉGORIES ═══════ -->
-  <section class="section" id="categories">
-    <div class="wide">
-      <p class="eyebrow section__eyebrow">Par type de matériel</p>
-      <h2 class="section__title">Ou va droit au rayon</h2>
-      <p class="section__lede">Tu sais déjà ce que tu cherches ? Mobilier, périphériques, audio & visio, PC gaming.</p>
-      <div class="cats reveal">
-        {categoryCounts.map((cat) => (
-          <a class="cat card card--hover" href={`/categorie/${cat.slug}/`}>
-            <span class="cat__icon"><Icon name={cat.slug} size={24} /></span>
-            <span class="cat__label">{cat.label}</span>
-            <span class="cat__desc">{cat.description}</span>
-            <span class="cat__count">{cat.count} comparatif{cat.count > 1 ? 's' : ''} <Icon name="arrow" size={14} /></span>
-          </a>
-        ))}
+      <div>
+        <h2 class="section__title">Ou va droit au rayon</h2>
+        <ul class="list">
+          {categoryCounts.map((c) => (
+            <li><a href={`/categorie/${c.slug}/`}><span class="list__icon"><Icon name={c.slug} size={20} /></span><span class="list__text"><strong>{c.label}</strong><span>{c.description}</span></span><span class="list__count">{c.count}</span></a></li>
+          ))}
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ═══════ DERNIERS COMPARATIFS ═══════ -->
+  <!-- ═══ DERNIERS ARTICLES ═══ -->
   {latest.length > 0 && (
-    <section class="section section--soft">
+    <section class="section">
       <div class="wide">
         <div class="section__head">
-          <div><p class="eyebrow section__eyebrow">Fraîchement publiés</p><h2 class="section__title">Les derniers comparatifs</h2></div>
+          <div><h2 class="section__title">Fraîchement publiés</h2></div>
           <a class="section__link" href="/articles/">Voir tout <Icon name="arrow" size={16} /></a>
         </div>
-        <div class="grid3 reveal">{latest.map((a) => <ArticleCard article={a} />)}</div>
+        <div class="grid3">{latest.map((a) => <ArticleCard article={a} />)}</div>
       </div>
     </section>
   )}
 
-  <!-- ═══════ OUTILS ═══════ -->
-  <section class="section blueprint" id="outils">
+  <!-- ═══ OUTILS ═══ -->
+  <section class="section section--soft blueprint">
     <div class="wide">
       <div class="section__head">
-        <div><p class="eyebrow section__eyebrow">Outils gratuits</p><h2 class="section__title">Règle ton poste avant d'acheter</h2></div>
-        <a class="section__link" href="/outils/">Tous les outils <Icon name="arrow" size={16} /></a>
+        <div><h2 class="section__title">Règle ton poste avant d'acheter</h2><p class="section__lede">Le premier gain ne coûte souvent rien : un écran à la bonne hauteur, un siège bien réglé. Nos outils gratuits donnent les repères.</p></div>
       </div>
-      <p class="section__lede">Souvent, le premier gain ne coûte rien : un écran à la bonne hauteur, un siège bien réglé. Nos outils te donnent les cotes.</p>
-      <div class="tools reveal">
-        {tools.map((t) => (
-          <a class="tool card card--hover" href={t.href}>
-            <span class="tool__icon"><Icon name={t.icon} size={22} /></span>
-            <span class="tool__title">{t.title}</span>
-            <span class="tool__desc">{t.desc}</span>
-            <span class="tool__cta">{t.cta} <Icon name="arrow" size={14} /></span>
-          </a>
-        ))}
-      </div>
+      <ul class="tools">
+        {tools.map((t) => <li><a href={t.href}><Icon name={t.icon} size={22} /><span>{t.title}</span></a></li>)}
+      </ul>
     </div>
   </section>
 
-  <!-- ═══════ MÉTHODE ═══════ -->
-  <section class="section section--soft">
-    <div class="wide method reveal">
-      <div class="method__text">
-        <p class="eyebrow section__eyebrow">Notre méthode</p>
-        <h2 class="section__title">Des critères qu'on peut mesurer, pas des impressions</h2>
+  <!-- ═══ MÉTHODE + FAQ ═══ -->
+  <section class="section">
+    <div class="wide split split--wide">
+      <div class="method">
+        <h2 class="section__title">Comment nous comparons</h2>
         <p>Chaque comparatif part d'un usage concret — setup gaming, télétravail, dos fragile — et compare ce qui se vérifie : <strong>plage de réglage, charge admise, niveau sonore, autonomie, compatibilité</strong>. Pas de classement gonflé, pas de « meilleur » universel qui n'existe pas.</p>
-        <p>Le site est <strong>100 % indépendant</strong> : aucune marque ne paie pour figurer. On se finance par l'affiliation, et on l'indique toujours.</p>
+        <p>Les étoiles affichées sont les <strong>vraies notes Amazon</strong>, jamais retouchées, et on regarde le volume d'avis autant que la note. Le site est <strong>100 % indépendant</strong> : on se finance par l'affiliation, et on l'indique toujours.</p>
         <a class="btn btn--outline" href="/a-propos/">Notre méthode en détail</a>
       </div>
-      <dl class="method__specs">
-        <div><dt>Critères</dt><dd>Mesurables et vérifiables</dd></div>
-        <div><dt>Marques</dt><dd>Aucune sponsorisée</dd></div>
-        <div><dt>Avis affichés</dt><dd>Vraies notes Amazon, jamais retouchées</dd></div>
-        <div><dt>Révision</dt><dd>Comparatifs relus dans le temps</dd></div>
-        <div><dt>Affiliation</dt><dd>Transparente, sans surcoût</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- ═══════ FAQ ═══════ -->
-  <section class="section" id="faq">
-    <div class="wide faq">
-      <p class="eyebrow section__eyebrow">FAQ</p>
-      <h2 class="section__title">Les questions qu'on nous pose</h2>
-      <p class="section__lede">Transparence totale sur notre fonctionnement et notre indépendance.</p>
-      <div class="faq__list reveal">
-        {faqs.map((item, i) => (
-          <details class="faq__item" open={i === 0}>
-            <summary class="faq__q"><span class="faq__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><span>{item.q}</span><span class="faq__chevron" aria-hidden="true"></span></summary>
-            <p class="faq__a">{item.a}</p>
-          </details>
-        ))}
+      <div class="faq">
+        <h2 class="section__title">Questions fréquentes</h2>
+        <div class="faq__list">
+          {faqs.map((item, i) => (
+            <details class="faq__item" open={i === 0}>
+              <summary class="faq__q"><span>{item.q}</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+              <p class="faq__a">{item.a}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </div>
   </section>
@@ -251,160 +219,90 @@ const faqs = [
   <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
 </BaseLayout>
 
-<script is:inline>
-  (function () {
-    // Fiche de réglage du hero : mêmes ratios que le calculateur (points de départ à ajuster)
-    var r = document.getElementById('fr-taille'), o = document.getElementById('fr-out'), v = document.getElementById('fr-verdict');
-    if (!r) return;
-    var outs = document.querySelectorAll('[data-fr]');
-    function update() {
-      var t = Number(r.value); o.textContent = t;
-      outs.forEach(function (el) { el.textContent = Math.round(t * Number(el.getAttribute('data-fr'))); });
-      var assis = Math.round(t * 0.42), d = assis - 74;
-      v.textContent = Math.abs(d) <= 2 ? 'Un bureau standard (74 cm) est à ta hauteur.' : d < 0 ? 'Un bureau standard (74 cm) est ' + Math.abs(d) + ' cm trop haut pour toi : pense au repose-pieds ou au bureau réglable.' : 'Un bureau standard (74 cm) est ' + d + ' cm trop bas pour toi : un bureau réglable règle ça.';
-    }
-    r.addEventListener('input', update); update();
-  })();
-</script>
-
 <style>
   /* ═══ HERO ═══ */
-  .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--color-night); color: var(--color-on-night); }
-  .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; z-index: -2; transform-origin: 60% 50%; animation: hero-zoom 34s ease-in-out infinite alternate; will-change: transform; }
-  @keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.06); } }
-  .hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(11,21,48,.95) 0%, rgba(11,21,48,.8) 40%, rgba(11,21,48,.4) 72%, rgba(11,21,48,.55) 100%), linear-gradient(0deg, rgba(11,21,48,.92) 0%, rgba(11,21,48,0) 45%); }
-  .hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background-image: var(--grid-dark); background-size: 96px 96px; opacity: .5; -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 60%); mask-image: linear-gradient(90deg, #000 0%, transparent 60%); pointer-events: none; }
-  .hero__grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 400px); gap: 3rem; align-items: center; padding-top: clamp(2.5rem, 6vh, 4.5rem); padding-bottom: clamp(2.5rem, 6vh, 4rem); min-height: min(640px, calc(100vh - 68px)); }
-  .hero__eyebrow { display: inline-flex; align-items: center; gap: .6em; margin: 0 0 1rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-signal); }
-  .hero__tick { width: 14px; height: 2px; background: var(--color-signal); }
-  .hero__title { font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1; margin: 0 0 1.1rem; color: #fff; font-weight: 800; font-stretch: 112%; letter-spacing: -.03em; text-shadow: 0 2px 30px rgba(0,0,0,.35); max-width: 15ch; }
-  .hero__hl { color: var(--color-signal); }
-  .hero__lede { font-size: clamp(1.05rem, 1.6vw, 1.18rem); color: #d9e0ee; max-width: 52ch; margin: 0 0 1.8rem; line-height: 1.55; }
-  .hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 2rem; }
-  .hero__data { display: flex; gap: 1.6rem; flex-wrap: wrap; margin: 0; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.18); font-family: var(--font-mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-on-night-muted); }
-  .hero__data b { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 1.5rem; color: #fff; margin-right: .3em; }
-  @media (min-width: 900px) and (max-height: 760px) {
-    .hero__grid { padding-top: 2rem; padding-bottom: 2rem; gap: 2rem; }
-    .hero__title { font-size: clamp(2.3rem, 4.2vw, 3.6rem); margin-bottom: .8rem; }
-    .hero__lede { font-size: 1.02rem; margin-bottom: 1.2rem; }
-    .hero__cta { margin-bottom: 1.2rem; }
-    .hero__data { padding-top: .9rem; }
-    .hero__data b { font-size: 1.25rem; }
-    .fr { padding: 1rem 1.1rem .9rem; }
-    .fr__specs { gap: .5rem .8rem; }
-  }
+  .hero { background-color: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); gap: 3rem; align-items: center; padding-top: clamp(2.5rem, 7vh, 5rem); padding-bottom: clamp(2.5rem, 7vh, 5rem); }
+  .hero__title { margin: 0 0 1.1rem; font-size: clamp(2.1rem, 4.4vw, 3.6rem); line-height: 1.04; letter-spacing: -.03em; max-width: 18ch; }
+  .hero__lede { margin: 0 0 1.6rem; font-size: clamp(1.02rem, 1.4vw, 1.15rem); line-height: 1.6; color: var(--color-text-muted); max-width: 56ch; }
+  .hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
+  .hero__proof { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; font-size: .92rem; color: var(--color-text-muted); }
+  .hero__proof li { display: flex; align-items: center; gap: .55rem; }
+  .hero__proof svg { color: var(--color-accent-text); flex-shrink: 0; }
+  .collage { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: .8rem; height: 100%; min-height: 420px; }
+  .collage__img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+  .collage__img--1 { grid-row: 1 / 3; }
+  .collage__img--2 { transform: translateY(1.2rem); }
+  .collage__img--3 { transform: translateY(-1.2rem); }
 
-  /* Fiche de réglage (carte du hero) : papier millimétré, repères de coin */
-  .fr { position: relative; background: var(--color-surface); background-image: var(--grid-light); background-size: 96px 96px; color: var(--color-text); border-radius: var(--radius-lg); padding: 1.25rem 1.3rem 1.1rem; box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-signal); }
-  .fr::before, .fr::after { content: ''; position: absolute; width: 10px; height: 10px; border: 2px solid var(--color-accent); pointer-events: none; }
-  .fr::before { left: 8px; bottom: 8px; border-top: 0; border-right: 0; }
-  .fr::after { right: 8px; bottom: 8px; border-top: 0; border-left: 0; }
-  .fr__title { margin: 0 0 .9rem; display: flex; align-items: center; gap: .5em; font-family: var(--font-mono); font-weight: 500; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-accent-text); }
-  .fr__field { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .4rem; }
-  .fr__label { font-weight: 600; font-size: .95rem; }
-  .fr__val { font-family: var(--font-mono); font-size: .9rem; color: var(--color-text-muted); }
-  .fr__val output { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 1.6rem; color: var(--color-text); font-variant-numeric: tabular-nums; }
-  .fr__range { width: 100%; accent-color: var(--color-accent); margin: 0 0 1rem; height: 28px; cursor: pointer; }
-  .fr__specs { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem .9rem; margin: 0 0 .9rem; padding-top: .9rem; border-top: 1px dashed var(--color-border-strong); }
-  .fr__specs div { display: flex; flex-direction: column; gap: .1rem; }
-  .fr__specs dt { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-text-muted); }
-  .fr__specs dd { margin: 0; font-size: .95rem; color: var(--color-text-muted); }
-  .fr__specs dd b { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; color: var(--color-text); font-variant-numeric: tabular-nums; margin-right: .15em; }
-  .fr__verdict { margin: 0 0 .8rem; font-size: .86rem; line-height: 1.45; color: var(--color-text-muted); padding: .55rem .7rem; background: var(--color-signal-soft); border-left: 3px solid var(--color-signal); }
-  .fr__more { display: inline-flex; align-items: center; gap: .35em; color: var(--color-accent-text); text-decoration: none; font-weight: 700; font-size: .88rem; min-height: 28px; }
-  .fr__more:hover { text-decoration: underline; }
+  /* ═══ Grilles ═══ */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 1.25rem; margin-top: 1.5rem; }
 
-  /* ═══ PROMESSES ═══ */
-  .promises { background: var(--color-night-2); color: var(--color-on-night); border-bottom: 1px solid var(--color-night-border); }
-  .promises__list { list-style: none; margin: 0 auto; padding-top: .9rem; padding-bottom: .9rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-  .promises__list li { display: flex; align-items: center; gap: .75rem; color: var(--color-signal); }
-  .promises__list span { display: flex; flex-direction: column; line-height: 1.2; color: #fff; }
-  .promises__list strong { font-size: .9rem; }
-  .promises__list small { font-size: .76rem; color: var(--color-on-night-muted); }
+  /* ═══ Produits ═══ */
+  .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+  .prod { display: flex; flex-direction: column; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow .2s ease, transform .2s ease; }
+  .prod:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+  .prod__media { display: block; aspect-ratio: 1; background: #fff; padding: 1.2rem; border-bottom: 1px solid var(--color-border); }
+  .prod__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .prod__body { padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: .45rem; flex: 1; }
+  .prod__award { margin: 0; font-size: .74rem; font-weight: 700; color: var(--color-signal-text); }
+  .prod__title { margin: 0; font-size: 1.02rem; line-height: 1.3; font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
+  .prod__title a { color: var(--color-text); text-decoration: none; }
+  .prod__title a:hover { color: var(--color-accent-text); }
+  .prod__rating { margin: 0; display: flex; align-items: center; gap: .4rem; font-size: .84rem; color: var(--color-text-muted); }
+  .stars { position: relative; display: inline-block; width: 84px; height: 16px; background: linear-gradient(90deg, var(--color-signal) var(--pct), var(--color-border) var(--pct)); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.1 7.5l6.2-.9zM30 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L30 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM50 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L50 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM70 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L70 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM90 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L90 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9z'/%3E%3C/svg%3E") no-repeat center / contain; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.1 7.5l6.2-.9zM30 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L30 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM50 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L50 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM70 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L70 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM90 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L90 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9z'/%3E%3C/svg%3E") no-repeat center / contain; }
+  .prod__rating strong { color: var(--color-text); }
+  .prod__blurb { margin: 0; font-size: .88rem; line-height: 1.5; color: var(--color-text-muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .prod__actions { margin-top: auto; padding-top: .6rem; display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; }
+  .prod__more { display: inline-flex; align-items: center; gap: .3em; font-size: .86rem; font-weight: 600; color: var(--color-accent-text); text-decoration: none; min-height: 28px; }
+  .prod__more:hover { text-decoration: underline; }
+  .products__disc { margin: 1.2rem 0 0; font-size: .8rem; color: var(--color-text-faint); }
 
-  /* ═══ PAR PROBLÈME ═══ */
+  /* ═══ Par besoin ═══ */
   .needs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .need { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1.1rem 1.2rem; text-decoration: none; color: inherit; }
-  .need__icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--radius); background: var(--color-accent-soft); color: var(--color-accent-text); transition: background .2s ease, color .2s ease; }
-  .need:hover .need__icon { background: var(--color-accent); color: #fff; }
+  .need { display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 1rem; padding: .6rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); text-decoration: none; color: var(--color-text); transition: border-color .15s ease, box-shadow .15s ease; }
+  .need:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
+  .need__media { display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: var(--color-bg-soft); color: var(--color-accent-text); }
+  .need__media img { width: 100%; height: 100%; object-fit: cover; }
   .need__body { display: flex; flex-direction: column; gap: .2rem; min-width: 0; }
-  .need__title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.2; }
-  .need__count { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-text-muted); }
-  :global(.need__arrow) { color: var(--color-border-strong); transition: color .15s ease, transform .15s ease; }
-  .need:hover :global(.need__arrow) { color: var(--color-accent-text); transform: translateX(3px); }
+  .need__title { font-weight: 700; font-size: 1rem; line-height: 1.25; }
+  .need__count { font-size: .82rem; color: var(--color-text-muted); }
+  :global(.need__arrow) { color: var(--color-text-faint); margin-right: .5rem; }
+  .need:hover :global(.need__arrow) { color: var(--color-accent-text); }
 
-  /* ═══ PAR BUDGET ═══ */
-  .budgets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .budget { display: flex; flex-direction: column; text-decoration: none; color: inherit; padding: 1.4rem 1.4rem 1.3rem; }
-  .budget__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-  .budget__icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: var(--radius); background: var(--color-signal-soft); color: var(--color-signal-text); }
-  .budget__range b { color: var(--color-signal-text); }
-  .budget__label { font-family: var(--font-display); font-weight: 700; font-stretch: 106%; font-size: 1.4rem; line-height: 1.1; }
-  .budget__desc { color: var(--color-text-muted); font-size: .92rem; line-height: 1.5; margin: .4rem 0 1rem; flex: 1; }
-  .budget__count { display: inline-flex; align-items: center; gap: .35em; font-weight: 700; font-size: .82rem; color: var(--color-accent-text); }
+  /* ═══ Listes budget / rayons ═══ */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .split--wide { grid-template-columns: 1fr 1.2fr; }
+  .list { list-style: none; margin: 1rem 0 0; padding: 0; }
+  .list a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: .8rem 0; border-top: 1px solid var(--color-border); text-decoration: none; color: var(--color-text); }
+  .list li:last-child a { border-bottom: 1px solid var(--color-border); }
+  .list__icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--radius); background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-accent-text); }
+  .list__text { display: flex; flex-direction: column; }
+  .list__text strong { font-size: 1rem; }
+  .list__text span { font-size: .86rem; color: var(--color-text-muted); }
+  .list__count { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--color-text-faint); }
+  .list a:hover .list__text strong { color: var(--color-accent-text); }
 
-  /* ═══ INCONTOURNABLES ═══ */
-  .una { display: grid; grid-template-columns: 1.35fr 1fr; gap: 1.25rem; }
-  .una__side { display: flex; flex-direction: column; gap: .9rem; }
+  /* ═══ Outils ═══ */
+  .tools { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+  .tools a { display: flex; flex-direction: column; gap: .7rem; padding: 1.2rem; border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); text-decoration: none; font-weight: 700; font-size: .98rem; line-height: 1.25; transition: border-color .15s ease, box-shadow .15s ease; }
+  .tools a:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); color: var(--color-accent-text); }
+  .tools svg { color: var(--color-accent-text); }
 
-  /* ═══ CATÉGORIES ═══ */
-  .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.6rem; }
-  .cat { display: flex; flex-direction: column; text-decoration: none; color: inherit; padding: 1.5rem 1.4rem 1.3rem; }
-  .cat__icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--radius); background: var(--color-accent); color: #fff; margin-bottom: 1rem; }
-  .cat__label { font-family: var(--font-display); font-weight: 700; font-stretch: 106%; font-size: 1.25rem; line-height: 1.12; }
-  .cat__desc { color: var(--color-text-muted); font-size: .92rem; line-height: 1.5; margin: .5rem 0 1.1rem; flex: 1; }
-  .cat__count { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
-
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-
-  /* ═══ OUTILS ═══ */
-  .tools { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
-  .tool { display: flex; flex-direction: column; text-decoration: none; color: inherit; padding: 1.3rem 1.2rem 1.2rem; }
-  .tool__icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius); background: var(--color-night); color: var(--color-signal); margin-bottom: .9rem; }
-  .tool__title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.2; }
-  .tool__desc { color: var(--color-text-muted); font-size: .88rem; line-height: 1.5; margin: .4rem 0 .9rem; flex: 1; }
-  .tool__cta { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
-
-  /* ═══ MÉTHODE ═══ */
-  .method { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
-  .method__text p { color: var(--color-text-muted); line-height: 1.7; }
-  .method__text .btn { margin-top: .6rem; }
-  .method__specs { margin: 0; padding: 1.4rem 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); display: flex; flex-direction: column; box-shadow: var(--shadow-md); }
-  .method__specs div { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: .65rem 0; border-bottom: 1px dashed var(--color-border-strong); }
-  .method__specs div:last-child { border-bottom: 0; }
-  .method__specs dt { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-text-muted); padding-top: .15rem; }
-  .method__specs dd { margin: 0; font-weight: 600; font-size: .95rem; }
-
-  /* ═══ FAQ ═══ */
-  .faq__list { margin-top: 1.4rem; display: flex; flex-direction: column; gap: .7rem; max-width: 820px; }
-  .faq__item { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 0 1.3rem; }
-  .faq__item[open] { border-color: var(--color-border-strong); box-shadow: var(--shadow-sm); }
-  .faq__q { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; cursor: pointer; list-style: none; padding: 1.05rem 0; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.2; color: var(--color-text); }
+  /* ═══ Méthode + FAQ ═══ */
+  .method p { color: var(--color-text-muted); line-height: 1.7; }
+  .method .btn { margin-top: .5rem; }
+  .faq__list { margin-top: 1rem; display: flex; flex-direction: column; border-top: 1px solid var(--color-border); }
+  .faq__item { border-bottom: 1px solid var(--color-border); }
+  .faq__q { display: flex; justify-content: space-between; align-items: center; gap: 1rem; cursor: pointer; list-style: none; padding: .9rem 0; font-weight: 700; font-size: 1.02rem; line-height: 1.3; color: var(--color-text); }
   .faq__q::-webkit-details-marker { display: none; }
-  .faq__idx { font-family: var(--font-mono); font-size: .72rem; color: var(--color-signal-text); }
-  .faq__chevron { width: 11px; height: 11px; border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); transform: rotate(45deg); transition: transform .2s ease; margin-bottom: 3px; }
-  .faq__item[open] .faq__chevron { transform: rotate(-135deg); margin-bottom: -3px; }
-  .faq__a { margin: 0 0 1.2rem 2.2rem; color: var(--color-text-muted); line-height: 1.7; max-width: 70ch; }
+  .faq__chevron { flex-shrink: 0; width: 9px; height: 9px; border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); transform: rotate(45deg); transition: transform .2s ease; margin-right: 4px; }
+  .faq__item[open] .faq__chevron { transform: rotate(-135deg); }
+  .faq__a { margin: 0 0 1.1rem; color: var(--color-text-muted); line-height: 1.65; }
 
   /* ═══ Responsive ═══ */
-  @media (max-width: 1100px) { .tools { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 1000px) {
-    .cats, .grid3, .promises__list, .needs { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 900px) {
-    .hero__grid { grid-template-columns: 1fr; gap: 2rem; min-height: 0; }
-    .hero__title { max-width: none; }
-    .fr { max-width: 520px; }
-    .una { grid-template-columns: 1fr; }
-    .method { grid-template-columns: 1fr; gap: 1.6rem; }
-    .budgets { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 640px) {
-    .hero__bg { object-position: 70% center; }
-    .hero__title { font-size: clamp(2.2rem, 10vw, 3rem); }
-    .cats, .grid3, .promises__list, .needs, .tools { grid-template-columns: 1fr; }
-    .promises__list { gap: .7rem; }
-    .faq__a { margin-left: 0; }
-    .method__specs div { grid-template-columns: 1fr; gap: .2rem; }
-  }
+  @media (max-width: 1100px) { .products { grid-template-columns: repeat(2, 1fr); } .tools { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 1000px) { .grid3, .needs { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) { .hero__grid, .split, .split--wide { grid-template-columns: 1fr; } .collage { min-height: 260px; max-width: 520px; } .collage__img--2, .collage__img--3 { transform: none; } }
+  @media (max-width: 640px) { .grid3, .needs, .products { grid-template-columns: 1fr; } .tools { grid-template-columns: 1fr 1fr; } .collage { display: none; } }
 </style>

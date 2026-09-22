@@ -4,13 +4,12 @@ import { siteConfig } from '../siteConfig';
 import { resolveCoverImage, coverSrcSet } from '../lib/covers';
 import { categories } from '../categories';
 import Icon from './Icon.astro';
+import { frenchNbsp } from '../lib/typo';
 
 interface Props {
   article: CollectionEntry<'articles'>;
-  /** « feature » : grande carte magazine (image dominante, titre en surimpression) ;
-      « row » : ligne horizontale compacte ; sinon carte verticale standard. */
+  /** « feature » : grande carte horizontale (image + texte) ; « row » : ligne compacte ; sinon carte verticale. */
   variant?: 'default' | 'feature' | 'row';
-  /** Charge l'image en priorité (au-dessus de la ligne de flottaison). */
   eager?: boolean;
   featured?: boolean;
 }
@@ -18,91 +17,87 @@ interface Props {
 const { article, variant = 'default', eager = false } = Astro.props;
 const cover = resolveCoverImage(article.slug, article.data.coverImage);
 const cat = categories.find((c) => c.slug === article.data.category);
-const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), { year: 'numeric', month: 'short', day: 'numeric' });
+const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), { year: 'numeric', month: 'long', day: 'numeric' });
 const readingMinutes = Math.max(1, Math.round(article.body.trim().split(/\s+/).length / 200));
 const href = `/articles/${article.slug}/`;
+const nbProducts = article.data.products?.length ?? 0;
 ---
 
 {variant === 'feature' ? (
-  <article class="feat card card--hover">
-    <div class="feat__media">
-      {cover && <img src={cover} srcset={coverSrcSet(cover)} sizes="(max-width: 900px) 100vw, 680px" alt={article.data.coverAlt ?? ''} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" width="1600" height="1000" />}
-    </div>
+  <article class="feat">
+    <a class="feat__media" href={href} tabindex="-1" aria-hidden="true">
+      {cover && <img src={cover} srcset={coverSrcSet(cover)} sizes="(max-width: 900px) 100vw, 520px" alt="" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" width="1600" height="1000" />}
+    </a>
     <div class="feat__body">
-      {cat && <span class="chip chip--night"><Icon name={cat.slug} size={14} /> {cat.label}</span>}
-      <h3 class="feat__title"><a class="stretched-link" href={href}>{article.data.title}</a></h3>
+      <p class="tags">{cat && <span class="tag">{cat.label}</span>}{nbProducts > 0 && <span class="tag tag--soft">{nbProducts} produit{nbProducts > 1 ? 's' : ''} comparé{nbProducts > 1 ? 's' : ''}</span>}</p>
+      <h3 class="feat__title"><a href={href}>{frenchNbsp(article.data.title)}</a></h3>
       <p class="feat__desc">{article.data.description}</p>
-      <p class="feat__meta">{dateFormatter.format(article.data.pubDate)} — {readingMinutes} min de lecture</p>
+      <p class="meta"><span class="meta__author">{article.data.author ?? siteConfig.author}</span> · {dateFormatter.format(article.data.pubDate)} · {readingMinutes} min</p>
     </div>
   </article>
 ) : variant === 'row' ? (
-  <article class="row card card--hover">
-    <div class="row__media">
-      {cover && <img src={cover} srcset={coverSrcSet(cover)} sizes="180px" alt={article.data.coverAlt ?? ''} loading="lazy" decoding="async" width="480" height="300" />}
-    </div>
+  <article class="row">
+    <div class="row__media">{cover && <img src={cover} srcset={coverSrcSet(cover)} sizes="160px" alt="" loading="lazy" decoding="async" width="480" height="300" />}</div>
     <div class="row__body">
-      <p class="row__meta"><span class="row__cat">{cat?.label}</span> · {readingMinutes} min</p>
-      <h3 class="row__title"><a class="stretched-link" href={href}>{article.data.title}</a></h3>
+      {cat && <span class="row__cat">{cat.label}</span>}
+      <h3 class="row__title"><a class="stretched-link" href={href}>{frenchNbsp(article.data.title)}</a></h3>
+      <p class="meta">{dateFormatter.format(article.data.pubDate)} · {readingMinutes} min</p>
     </div>
-    <span class="row__arrow" aria-hidden="true"><Icon name="arrow" size={18} /></span>
   </article>
 ) : (
-  <article class="pc card card--hover">
+  <article class="pc">
     <div class="pc__media">
-      {cover ? (
-        <img src={cover} srcset={coverSrcSet(cover)} sizes="(max-width: 700px) 100vw, 400px" alt={article.data.coverAlt ?? ''} loading={eager ? 'eager' : 'lazy'} decoding="async" width="1600" height="1000" />
-      ) : (
-        <span class="pc__ph" aria-hidden="true"><Icon name={cat?.slug ?? 'map'} size={40} /></span>
-      )}
-      {cat && <span class="chip pc__chip"><Icon name={cat.slug} size={13} /> {cat.label}</span>}
+      {cover ? <img src={cover} srcset={coverSrcSet(cover)} sizes="(max-width: 700px) 100vw, 400px" alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width="1600" height="1000" /> : <span class="pc__ph" aria-hidden="true"><Icon name={cat?.slug ?? 'monitor'} size={40} /></span>}
     </div>
     <div class="pc__body">
-      <h3 class="pc__title"><a class="stretched-link" href={href}>{article.data.title}</a></h3>
+      <p class="tags">{cat && <span class="tag">{cat.label}</span>}{nbProducts > 0 && <span class="tag tag--soft">{nbProducts} produit{nbProducts > 1 ? 's' : ''}</span>}</p>
+      <h3 class="pc__title"><a class="stretched-link" href={href}>{frenchNbsp(article.data.title)}</a></h3>
       <p class="pc__desc">{article.data.description}</p>
-      <p class="pc__meta"><span>{dateFormatter.format(article.data.pubDate)}</span><span>{readingMinutes} min</span></p>
+      <p class="meta">{dateFormatter.format(article.data.pubDate)} · {readingMinutes} min</p>
     </div>
   </article>
 )}
 
 <style>
-  /* ---- Carte standard ---- */
-  .pc { display: flex; flex-direction: column; overflow: hidden; height: 100%; }
-  .pc__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--color-bg-soft); }
-  .pc__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s cubic-bezier(.2,.7,.3,1); }
-  .pc:hover .pc__media img { transform: scale(1.05); }
+  .tags { margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+  .tag { display: inline-block; padding: .25em .65em; border-radius: 999px; background: var(--color-bg-soft); color: var(--color-text); font-size: .74rem; font-weight: 600; }
+  .tag:first-child { background: var(--color-accent-soft); color: var(--color-accent-text); }
+  .tag--soft { color: var(--color-text-muted); }
+  .meta { margin: 0; font-size: .82rem; color: var(--color-text-faint); }
+  .meta__author { color: var(--color-text-muted); font-weight: 600; }
+
+  /* ---- Carte verticale ---- */
+  .pc { position: relative; display: flex; flex-direction: column; height: 100%; }
+  .pc__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: var(--radius-lg); background: var(--color-bg-soft); }
+  .pc__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+  .pc:hover .pc__media img { transform: scale(1.03); }
   .pc__ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--color-accent); opacity: .5; }
-  .pc__chip { position: absolute; left: .75rem; top: .75rem; box-shadow: var(--shadow-sm); }
-  .pc__body { display: flex; flex-direction: column; gap: .55rem; padding: 1.1rem 1.2rem 1.2rem; flex: 1; }
-  .pc__title { margin: 0; font-size: 1.28rem; line-height: 1.15; }
+  .pc__body { display: flex; flex-direction: column; gap: .5rem; padding: .9rem 0 0; flex: 1; }
+  .pc__title { margin: 0; font-size: 1.15rem; line-height: 1.28; }
   .pc__title a { color: var(--color-text); text-decoration: none; }
   .pc:hover .pc__title a { color: var(--color-accent-text); }
-  .pc__desc { margin: 0; color: var(--color-text-muted); font-size: .93rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .pc__meta { margin: auto 0 0; padding-top: .7rem; border-top: 1px dashed var(--color-border); display: flex; justify-content: space-between; font-weight: 700; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--color-text-muted); }
+  .pc__desc { margin: 0; color: var(--color-text-muted); font-size: .92rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .pc .meta { margin-top: auto; padding-top: .4rem; }
 
-  /* ---- Carte magazine (à la une) ---- */
-  .feat { position: relative; overflow: hidden; min-height: 460px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; color: var(--color-on-night); background: var(--color-night); border-color: transparent; }
-  .feat__media { position: absolute; inset: 0; }
-  .feat__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s cubic-bezier(.2,.7,.3,1); }
-  .feat:hover .feat__media img { transform: scale(1.04); }
-  .feat__media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,36,42,.05) 20%, rgba(6,36,42,.55) 60%, rgba(6,36,42,.94) 100%); }
-  .feat__body { position: relative; padding: 1.6rem 1.7rem 1.5rem; display: flex; flex-direction: column; gap: .7rem; }
-  .feat__title { margin: 0; font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1.06; max-width: 24ch; }
-  .feat__title a { color: #fff; text-decoration: none; }
-  .feat:hover .feat__title a { color: var(--color-accent-on-night); }
-  .feat__desc { margin: 0; color: var(--color-on-night-muted); font-size: .98rem; line-height: 1.55; max-width: 60ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .feat__meta { margin: .2rem 0 0; font-weight: 700; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--color-on-night-muted); }
+  /* ---- Grande carte horizontale ---- */
+  .feat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 2rem; align-items: center; padding: 1.25rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+  .feat__media { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: var(--color-bg-soft); }
+  .feat__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .feat__body { display: flex; flex-direction: column; gap: .7rem; }
+  .feat__title { margin: 0; font-size: clamp(1.4rem, 2.2vw, 1.9rem); line-height: 1.18; }
+  .feat__title a { color: var(--color-text); text-decoration: none; }
+  .feat__title a:hover { color: var(--color-accent-text); }
+  .feat__desc { margin: 0; color: var(--color-text-muted); font-size: 1rem; line-height: 1.6; }
 
   /* ---- Ligne compacte ---- */
-  .row { display: grid; grid-template-columns: 112px 1fr auto; align-items: center; gap: 1rem; padding: .7rem; }
-  .row__media { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: var(--color-bg-soft); }
+  .row { position: relative; display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--color-border); }
+  .row__media { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius-sm); background: var(--color-bg-soft); }
   .row__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .row__body { min-width: 0; }
-  .row__meta { margin: 0 0 .3rem; font-weight: 700; font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; color: var(--color-text-muted); }
-  .row__cat { color: var(--color-signal-text); }
-  .row__title { margin: 0; font-size: 1.12rem; line-height: 1.18; }
+  .row__cat { font-size: .74rem; font-weight: 700; color: var(--color-accent-text); }
+  .row__title { margin: .15rem 0 .3rem; font-size: 1.05rem; line-height: 1.28; }
   .row__title a { color: var(--color-text); text-decoration: none; }
   .row:hover .row__title a { color: var(--color-accent-text); }
-  .row__arrow { color: var(--color-border-strong); transition: color .15s ease, transform .15s ease; padding-right: .4rem; }
-  .row:hover .row__arrow { color: var(--color-accent-text); transform: translateX(3px); }
-  @media (max-width: 480px) { .row { grid-template-columns: 88px 1fr; } .row__arrow { display: none; } }
+  @media (max-width: 700px) { .feat { grid-template-columns: 1fr; gap: 1rem; } }
+  @media (max-width: 480px) { .row { grid-template-columns: 96px 1fr; } }
 </style>
