@@ -8,12 +8,13 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import AuthorBox from '../components/AuthorBox.astro';
-import SelectionMethod from '../components/SelectionMethod.astro';
 import { siteConfig } from '../siteConfig';
 import { categories, type CategorySlug } from '../categories';
 import { isAvailable } from '../lib/availability';
 import AmazonSearchCTA from '../components/AmazonSearchCTA.astro';
 import InteractiveGuide from '../components/InteractiveGuide.astro';
+import SelectionMethod from '../components/SelectionMethod.astro';
+import Icon from '../components/Icon.astro';
 
 interface Heading { depth: number; slug: string; text: string }
 interface FaqItem { question: string; answer: string }
@@ -21,10 +22,10 @@ interface Comparison { columns: string[]; rows: string[][] }
 interface Source { label: string; url: string }
 interface GuideOption { label: string; result: string }
 interface InteractiveGuideData { title: string; question: string; intro?: string; options: GuideOption[] }
+interface HowToStep { name: string; text: string }
+interface HowToData { name?: string; steps: HowToStep[] }
 
 interface Props {
-  topPick?: { name: string; blurb?: string; url: string; ctaLabel?: string };
-  hasAmazonLinks?: boolean;
   slug: string;
   title: string;
   description: string;
@@ -34,13 +35,16 @@ interface Props {
   coverImage?: string;
   coverAlt?: string;
   category: CategorySlug;
-  products?: { asin: string; title: string; image?: string; blurb?: string; pros?: string[]; cons?: string[]; award?: string; search?: string }[];
+  products?: { asin: string; title: string; image?: string; blurb?: string; search?: string; pros?: string[]; cons?: string[]; award?: string }[];
   headings?: Heading[];
   readingMinutes?: number;
   faq?: FaqItem[];
   comparison?: Comparison;
   sources?: Source[];
   interactiveGuide?: InteractiveGuideData;
+  howto?: HowToData;
+  topPick?: { name: string; blurb?: string; url: string; ctaLabel?: string };
+  hasAmazonLinks?: boolean;
 }
 
 const {
@@ -60,6 +64,7 @@ const {
   faq = [],
   comparison,
   interactiveGuide,
+  howto,
   sources = [],
   topPick,
   hasAmazonLinks = false,
@@ -143,7 +148,30 @@ const breadcrumbItems = [
 
 // Le JSON-LD BreadcrumbList est émis par le composant <Breadcrumbs /> — ne pas le dupliquer ici.
 
-const jsonLdArticle = [articleSchema, ...(faqSchema ? [faqSchema] : [])];
+// Données structurées HowTo : éligibles aux résultats enrichis « étapes »
+// de Google pour les articles en X étapes. Les étapes décrivent la marche à
+// suivre réellement expliquée dans le corps de l'article (pas de contenu inventé).
+const howtoSchema = howto && howto.steps.length > 1
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: howto.name ?? title,
+      description,
+      ...(coverImageAbs ? { image: coverImageAbs } : {}),
+      step: howto.steps.map((s, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: s.name,
+        text: s.text,
+      })),
+    }
+  : null;
+
+const jsonLdArticle = [
+  articleSchema,
+  ...(howtoSchema ? [howtoSchema] : []),
+  ...(faqSchema ? [faqSchema] : []),
+];
 ---
 
 <BaseLayout
@@ -154,286 +182,286 @@ const jsonLdArticle = [articleSchema, ...(faqSchema ? [faqSchema] : [])];
   jsonLd={jsonLdArticle}
   article={{ publishedTime: pubDate.toISOString(), modifiedTime: (updatedDate ?? pubDate).toISOString(), author: author ?? siteConfig.author, section: categoryInfo?.label, tags: keywords }}
 >
-  <article class="container">
-    <Breadcrumbs items={breadcrumbItems} />
-
-    <header class="article-header">
-      <p class="eyebrow">
-        {dateFormatter.format(pubDate)}
-        {readingMinutes && <> · {readingMinutes} min de lecture</>}
-      </p>
-      <h1>{title}</h1>
-      <p class="article-meta">
-        Par <a class="article-meta__author" href="/auteur/">{author ?? siteConfig.author}</a>
-        {updatedDate && <> · mis à jour le {dateFormatter.format(updatedDate)}</>}
-      </p>
+  <article class="art">
+    <!-- ══ En-tête : catégorie, titre, repères ══ -->
+    <header class="art__head blueprint">
+      <div class="wide"><div class="art__head-in">
+        <Breadcrumbs items={breadcrumbItems} />
+        {categoryInfo && (
+          <a class="chip art__chip" href={`/categorie/${categoryInfo.slug}/`}><Icon name={categoryInfo.slug} size={14} /> {categoryInfo.label}</a>
+        )}
+        <h1 class="art__title">{title}</h1>
+        <p class="art__lede">{description}</p>
+        <dl class="art__spec">
+          <div><dt>Publié</dt><dd>{dateFormatter.format(pubDate)}</dd></div>
+          {updatedDate && updatedDate.getTime() !== pubDate.getTime() && <div><dt>Mis à jour</dt><dd>{dateFormatter.format(updatedDate)}</dd></div>}
+          {readingMinutes && <div><dt>Lecture</dt><dd>{readingMinutes} min</dd></div>}
+          <div><dt>Par</dt><dd><a href="/auteur/">{author ?? siteConfig.author}</a></dd></div>
+        </dl>
+      </div></div>
     </header>
 
     {coverImage && (
-      <img
-        src={coverImage}
-        srcset={coverSrcSet(coverImage)}
-        sizes="(max-width: 760px) 100vw, 680px"
-        alt={coverAlt ?? ''}
-        class="article-cover"
-        width="1600"
-        height="800"
-        fetchpriority="high"
-      />
+      <figure class="wide art__cover">
+        <img
+          src={coverImage}
+          srcset={coverSrcSet(coverImage)}
+          sizes="(max-width: 1200px) 100vw, 1160px"
+          alt={coverAlt ?? ''}
+          width="1600"
+          height="800"
+          fetchpriority="high"
+        />
+      </figure>
     )}
 
-    {hasAffiliateLinks && <AffiliateDisclosure />}
+    <!-- ══ Corps + rail ══ -->
+    <div class="wide art__grid">
+      <div class="art__main">
+        {hasAffiliateLinks && <AffiliateDisclosure />}
 
-    {tocHeadings.length > 1 && (
-      <nav class="toc" aria-label="Sommaire">
-        <p class="toc__title">Sommaire</p>
-        <ol>
-          {tocHeadings.map((h) => (
-            <li data-depth={h.depth}><a href={`#${h.slug}`}>{h.text}</a></li>
-          ))}
-        </ol>
-      </nav>
-    )}
+        {topPick && (
+          <aside class="top-pick" aria-label="Notre choix">
+            <p class="top-pick__label"><span class="ribbon">Notre choix</span></p>
+            <div class="top-pick__body">
+              <div class="top-pick__text">
+                <p class="top-pick__name">{topPick.name}</p>
+                {topPick.blurb && <p class="top-pick__blurb">{topPick.blurb}</p>}
+              </div>
+              <a class="btn btn--signal" href={topPick.url} target="_blank" rel="nofollow sponsored noopener">
+                {topPick.ctaLabel ?? 'Voir le prix sur Amazon'} <Icon name="arrow" size={16} />
+              </a>
+            </div>
+            <p class="top-pick__disc">Lien partenaire — en tant que Partenaire Amazon, nous percevons une commission sur les achats éligibles.</p>
+          </aside>
+        )}
 
-    {topPick && (
-      <aside class="top-pick" aria-label="Notre choix">
-        <p class="top-pick__label">🏆 Notre choix</p>
-        <div class="top-pick__body">
-          <div class="top-pick__text">
-            <p class="top-pick__name">{topPick.name}</p>
-            {topPick.blurb && <p class="top-pick__blurb">{topPick.blurb}</p>}
-          </div>
-          <a class="cta-btn" href={topPick.url} target="_blank" rel="nofollow sponsored noopener">
-            {topPick.ctaLabel ?? 'Voir le prix sur Amazon'} <span aria-hidden="true">→</span>
-          </a>
+        {tocHeadings.length > 1 && (
+          <nav class="toc toc--inline" aria-label="Sommaire">
+            <p class="toc__title">Sommaire</p>
+            <ol>
+              {tocHeadings.map((h) => (
+                <li data-depth={h.depth}><a href={`#${h.slug}`}>{h.text}</a></li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
+        <div class="article-body">
+          <slot />
         </div>
-        <p class="top-pick__disc">Lien partenaire — en tant que Partenaire Amazon, nous percevons une commission sur les achats éligibles.</p>
-      </aside>
-    )}
 
-    <div class="article-body">
-      <slot />
+        {interactiveGuide && <InteractiveGuide guide={interactiveGuide} />}
+
+        {hasProducts && searchTopic && <AmazonSearchCTA topic={searchTopic} />}
+
+        {comparison && comparison.rows.length > 0 && (
+          <div class="article-comparison">
+            <h2>Comparatif en un coup d'œil</h2>
+            <div class="compare-table-wrap">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    {comparison.columns.map((col, i) => (
+                      <th>
+                        {col}
+                        {comparisonColumnUnavailable?.[i] && <span class="compare-table__tag">épuisé</span>}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparison.rows.map((row) => (
+                    <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}</tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {someProductUnavailable && (
+              <p class="compare-table__note">
+                <strong>épuisé</strong> : ce modèle n'est plus en vente chez Amazon. Les caractéristiques
+                restent indicatives ; le bouton sous le produit propose des équivalents disponibles.
+              </p>
+            )}
+          </div>
+        )}
+
+        {sources.length > 0 && (
+          <div class="article-sources">
+            <h2>Sources &amp; références</h2>
+            <p class="article-sources__intro">
+              Les informations de cet article s'appuient sur des sources publiques et reconnues.
+            </p>
+            <ul class="article-sources__list">
+              {sources.map((s) => (
+                <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <ShareButtons url={shareUrl} title={title} image={coverImage} />
+
+        {hasProducts && <SelectionMethod />}
+
+        {hasProducts && (
+          <div class="article-recommendations">
+            <h2>{products.length > 1 ? 'Nos recommandations' : 'Notre choix'}</h2>
+            {products.map((p, i) => (
+              <AmazonProduct asin={p.asin} title={p.title} image={p.image} blurb={p.blurb} search={p.search} pros={p.pros} cons={p.cons} award={p.award} fallbackSearch={keywords[0]} featured={i === featuredIndex} />
+            ))}
+          </div>
+        )}
+
+        {faq.length > 0 && (
+          <div class="article-faq">
+            <h2>Questions fréquentes</h2>
+            {faq.map((f, i) => (
+              <details class="article-faq__item">
+                <summary><span class="article-faq__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>{f.question}</summary>
+                <p>{f.answer}</p>
+              </details>
+            ))}
+          </div>
+        )}
+
+        <AuthorBox author={author} />
+      </div>
+
+      <aside class="art__rail" aria-label="Navigation dans l'article">
+        <div class="art__rail-in">
+          {tocHeadings.length > 1 && (
+            <nav class="toc toc--rail" aria-label="Sommaire">
+              <p class="toc__title">Sommaire</p>
+              <ol>
+                {tocHeadings.map((h) => (
+                  <li data-depth={h.depth}><a href={`#${h.slug}`}>{h.text}</a></li>
+                ))}
+              </ol>
+            </nav>
+          )}
+          <div class="rail-box">
+            <p class="rail-box__title"><Icon name="sliders" size={16} /> Régler ton poste</p>
+            <a href="/poste-de-travail-ideal/">Le poste de travail idéal →</a>
+            <a href="/calculateur-hauteur-bureau/">Calculer ma hauteur de bureau →</a>
+            <a href="/checklist-bureau-ergonomique/">Checklist ergonomie →</a>
+            <a href="/guides/">Guides par besoin →</a>
+          </div>
+        </div>
+      </aside>
     </div>
 
-    {interactiveGuide && <InteractiveGuide guide={interactiveGuide} />}
-
-    {hasProducts && searchTopic && <AmazonSearchCTA topic={searchTopic} />}
-
-    {comparison && comparison.rows.length > 0 && (
-      <div class="article-comparison">
-        <h2>Comparatif en un coup d'œil</h2>
-        <div class="compare-table-wrap">
-          <table class="compare-table">
-            <thead>
-              <tr>
-                {comparison.columns.map((col, i) => (
-                  <th>
-                    {col}
-                    {comparisonColumnUnavailable?.[i] && <span class="compare-table__tag">épuisé</span>}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {comparison.rows.map((row) => (
-                <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}</tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {someProductUnavailable && (
-          <p class="compare-table__note">
-            <strong>épuisé</strong> : ce modèle n'est plus en vente chez Amazon. Les caractéristiques
-            restent indicatives ; le bouton sous le produit propose des équivalents disponibles.
-          </p>
-        )}
-      </div>
-    )}
-
-    {sources.length > 0 && (
-      <div class="article-sources">
-        <h2>Sources &amp; références</h2>
-        <p class="article-sources__intro">
-          Les informations de cet article s'appuient sur des sources publiques et reconnues.
-        </p>
-        <ul class="article-sources__list">
-          {sources.map((s) => (
-            <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>
-          ))}
-        </ul>
-      </div>
-    )}
-
-    <ShareButtons url={shareUrl} title={title} image={coverImage} />
-
-    {hasProducts && (
-      <SelectionMethod />
-      <div class="article-recommendations">
-        <h2>{products.length > 1 ? 'Nos recommandations' : 'Notre choix'}</h2>
-        {products.map((p, i) => (
-          <AmazonProduct asin={p.asin} title={p.title} image={p.image} blurb={p.blurb} search={p.search} pros={p.pros} cons={p.cons} award={p.award} fallbackSearch={keywords[0]} featured={i === featuredIndex} />
-        ))}
-      </div>
-    )}
-
-    {faq.length > 0 && (
-      <div class="article-faq">
-        <h2>Questions fréquentes</h2>
-        {faq.map((f) => (
-          <details class="article-faq__item">
-            <summary>{f.question}</summary>
-            <p>{f.answer}</p>
-          </details>
-        ))}
-      </div>
-    )}
-
-    <AuthorBox author={author} />
-
-    <aside class="article-tools" aria-label="Outils et guides pratiques">
-      <h2>Outils &amp; guides pratiques</h2>
-      <div class="article-tools__list">
-          <a href="/poste-de-travail-ideal/">Le poste de travail idéal →</a>
-          <a href="/calculateur-hauteur-bureau/">Calculateur de hauteur de bureau →</a>
-          <a href="/checklist-bureau-ergonomique/">Checklist ergonomique →</a>
-      </div>
-    </aside>
-
     {relatedArticles.length > 0 && (
-      <div class="article-related">
-        <h2>À lire aussi{categoryInfo && <> — {categoryInfo.label}</>}</h2>
-        <div class="article-related__list">
-          {relatedArticles.map((a) => <ArticleCard article={a} />)}
+      <section class="art__related section--soft blueprint">
+        <div class="wide">
+          <div class="section__head">
+            <div><p class="eyebrow section__eyebrow">À lire aussi</p><h2 class="section__title">{categoryInfo ? categoryInfo.label : 'Dans le même rayon'}</h2></div>
+            {categoryInfo && <a class="section__link" href={`/categorie/${categoryInfo.slug}/`}>Toute la catégorie <Icon name="arrow" size={16} /></a>}
+          </div>
+          <div class="art__related-grid">
+            {relatedArticles.map((a) => <ArticleCard article={a} />)}
+          </div>
         </div>
-      </div>
+      </section>
     )}
   </article>
 </BaseLayout>
 
 <style>
-  .article-header { margin-bottom: 1.5rem; }
-  /* Titre lisible sur mobile : ~30 px sur un téléphone au lieu de 46 px (un titre long prenait tout l'écran). */
-  .article-header h1 { margin-top: 0.4rem; font-size: clamp(1.9rem, 4.2vw + 0.8rem, 2.9rem); line-height: 1.12; }
-  .article-meta {
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-    margin-top: -0.5rem;
-  }
-  .article-meta__author {
-    color: var(--color-text);
-    font-weight: 600;
-    text-decoration: none;
-  }
-  .article-meta__author:hover { color: var(--color-accent); }
-  .article-cover {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 8;
-    object-fit: cover;
-    margin: 1.5rem 0;
-    border-radius: var(--radius-lg);
-  }
-  /* ---- Corps d'article : lecture agréable ---- */
-  .article-body { font-size: 1.07rem; line-height: 1.78; }
+  /* ══ En-tête ══ */
+  .art__head { background-color: var(--color-bg-soft); border-bottom: 1px solid var(--color-border); }
+  .art__head-in { max-width: 820px; padding-top: 1.4rem; padding-bottom: 2.2rem; }
+  .art__chip { margin: .4rem 0 1rem; }
+  .art__title { margin: 0 0 .9rem; font-size: clamp(1.9rem, 4.2vw, 3.1rem); line-height: 1.02; max-width: 24ch; }
+  .art__lede { margin: 0 0 1.4rem; font-size: 1.12rem; line-height: 1.55; color: var(--color-text-muted); max-width: 62ch; }
+  .art__spec { display: flex; flex-wrap: wrap; gap: .6rem 2rem; margin: 0; padding-top: 1rem; border-top: 1px dashed var(--color-border-strong); }
+  .art__spec div { display: flex; flex-direction: column; gap: .15rem; }
+  .art__spec dt { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-text-muted); }
+  .art__spec dd { margin: 0; font-weight: 700; font-size: .95rem; }
+  .art__spec a { color: var(--color-accent-text); text-decoration: none; }
+  .art__spec a:hover { text-decoration: underline; }
+
+  .art__cover { margin: 0 auto; padding-top: 1.5rem; }
+  .art__cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 7; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+
+  /* ══ Grille corps + rail ══ */
+  .art__grid { display: grid; grid-template-columns: minmax(0, 720px) 280px; gap: 3.5rem; justify-content: space-between; padding-top: 2rem; padding-bottom: 3rem; }
+  .art__main { min-width: 0; }
+  .art__rail-in { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1rem; }
+  .toc--rail { margin: 0; max-height: calc(100vh - 220px); overflow: auto; }
+  .toc--inline { display: none; }
+  .rail-box { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: .5rem; }
+  .rail-box__title { margin: 0 0 .3rem; display: flex; align-items: center; gap: .5em; font-family: var(--font-mono); font-weight: 500; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-muted); }
+  .rail-box a { color: var(--color-accent-text); text-decoration: none; font-weight: 600; font-size: .92rem; }
+  .rail-box a:hover { text-decoration: underline; }
+
+  /* ══ Corps d'article ══ */
+  .article-body { font-size: 1.08rem; line-height: 1.78; }
   .article-body :global(p) { margin: 0 0 1.25em; }
-  .article-body :global(> p:first-of-type) { font-size: 1.2rem; line-height: 1.68; color: var(--color-text); }
-  .article-body :global(h2) {
-    margin-top: 2.4em; margin-bottom: 0.55em; scroll-margin-top: 5rem;
-    font-size: 1.55rem; padding-left: 0.7rem;
-    border-left: 4px solid var(--color-accent);
-  }
-  .article-body :global(h3) { margin-top: 1.8em; scroll-margin-top: 5rem; font-size: 1.2rem; color: var(--color-accent); }
-  .article-body :global(a) {
-    color: var(--color-accent); text-decoration: underline;
-    text-underline-offset: 0.18em; text-decoration-thickness: 1.5px;
-  }
-  .article-body :global(a:hover) { text-decoration-thickness: 2.5px; }
+  .article-body :global(> p:first-of-type) { font-size: 1.16rem; line-height: 1.66; }
+  .article-body :global(h2) { position: relative; margin-top: 2.6em; margin-bottom: .6em; padding-top: .9rem; scroll-margin-top: 5.5rem; font-size: clamp(1.6rem, 2.4vw, 2rem); line-height: 1.12; }
+  .article-body :global(h2::before) { content: ''; position: absolute; top: 0; left: 0; width: 44px; height: 3px; background: var(--color-signal); }
+  .article-body :global(h3) { margin-top: 1.9em; scroll-margin-top: 5.5rem; font-size: 1.3rem; color: var(--color-accent-text); }
+  .article-body :global(a) { color: var(--color-accent-text); text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1.5px; text-decoration-color: color-mix(in srgb, var(--color-accent) 45%, transparent); }
+  .article-body :global(a:hover) { text-decoration-color: var(--color-signal); text-decoration-thickness: 2px; }
   .article-body :global(strong) { color: var(--color-text); font-weight: 700; }
-  .article-body :global(img) {
-    display: block; width: 100%; height: auto; margin: 1.9rem 0;
-    border-radius: var(--radius-lg); border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md, 0 18px 44px -16px rgba(0,0,0,.4));
-  }
-  .article-body :global(ul) { list-style: none; padding-left: 0; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: 0.55em; }
-  .article-body :global(ul li) { position: relative; padding-left: 1.6em; }
-  .article-body :global(ul li::before) {
-    content: ''; position: absolute; left: 0.15em; top: 0.62em;
-    width: 0.5em; height: 0.5em; border-radius: 3px; background: var(--color-accent);
-  }
-  .article-body :global(ol) { padding-left: 1.3em; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: 0.55em; }
-  .article-body :global(ol li::marker) { color: var(--color-accent); font-weight: 700; }
-  .article-body :global(blockquote) {
-    margin: 1.9rem 0; padding: 1.1rem 1.35rem; border-radius: var(--radius-lg);
-    background: color-mix(in srgb, var(--color-accent) 9%, var(--color-surface, transparent));
-    border: 1px solid color-mix(in srgb, var(--color-accent) 28%, var(--color-border));
-    border-left: 4px solid var(--color-accent);
-  }
-  .article-body :global(blockquote p) { margin: 0 0 0.5em; }
+  .article-body :global(img) { display: block; width: 100%; height: auto; margin: 1.9rem 0; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+  .article-body :global(ul) { list-style: none; padding-left: 0; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: .55em; }
+  .article-body :global(ul li) { position: relative; padding-left: 1.5em; }
+  .article-body :global(ul li::before) { content: ''; position: absolute; left: .1em; top: .72em; width: .45em; height: .45em; background: var(--color-accent); }
+  .article-body :global(ol) { padding-left: 0; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: .7em; counter-reset: steps; list-style: none; }
+  .article-body :global(ol li) { position: relative; padding-left: 2.6em; counter-increment: steps; }
+  .article-body :global(ol li::before) { content: counter(steps, decimal-leading-zero); position: absolute; left: 0; top: .3em; font-family: var(--font-mono); font-size: .8rem; line-height: 1; color: var(--color-signal-text); }
+  .article-body :global(blockquote) { margin: 1.9rem 0; padding: 1.2rem 1.4rem; border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); color: var(--color-text); font-style: normal; }
+  .article-body :global(blockquote p) { margin: 0 0 .5em; }
   .article-body :global(blockquote p:last-child) { margin-bottom: 0; }
   .article-body :global(blockquote a) { font-weight: 700; }
-  .article-body :global(table) { width: 100%; border-collapse: collapse; margin: 1.7rem 0; font-size: 0.95rem; display: block; overflow-x: auto; }
-  .article-body :global(th), .article-body :global(td) { text-align: left; padding: 0.7rem 0.85rem; border-bottom: 1px solid var(--color-border); }
-  .article-body :global(th) { color: var(--color-accent); font-family: var(--font-display); white-space: nowrap; }
+  .article-body :global(table) { width: 100%; border-collapse: collapse; margin: 1.7rem 0; font-size: .95rem; display: block; overflow-x: auto; }
+  .article-body :global(th), .article-body :global(td) { text-align: left; padding: .7rem .85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  .article-body :global(thead th) { font-family: var(--font-body); font-weight: 700; font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-text-muted); background: var(--color-bg-soft); white-space: nowrap; }
+  .article-body :global(tbody th) { font-weight: 600; }
   .article-body :global(hr) { border: 0; height: 1px; background: var(--color-border); margin: 2.6rem 0; }
 
+  /* ══ FAQ ══ */
   .article-faq { margin-top: 3rem; }
-  .article-faq__item {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-surface);
-    padding: 1rem 1.3rem;
-    margin-bottom: 0.8rem;
-  }
-  .article-faq__item summary {
-    cursor: pointer;
-    font-weight: 600;
-    font-family: var(--font-display);
-  }
-  .article-faq__item p { margin: 0.7rem 0 0; color: var(--color-text-muted); }
+  .article-faq__item { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: .2rem 1.2rem; margin-bottom: .7rem; }
+  .article-faq__item[open] { border-color: var(--color-border-strong); }
+  .article-faq__item summary { cursor: pointer; padding: .8rem 0; font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; line-height: 1.2; display: flex; gap: .8em; align-items: baseline; list-style: none; }
+  .article-faq__item summary::-webkit-details-marker { display: none; }
+  .article-faq__idx { font-family: var(--font-mono); font-size: .72rem; color: var(--color-signal-text); }
+  .article-faq__item p { margin: 0 0 1rem 2.1rem; color: var(--color-text-muted); line-height: 1.65; }
 
-  .article-related { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
-  .article-related__list { display: flex; flex-direction: column; gap: 1.1rem; }
-
-  /* ---- Sources & références (E-E-A-T) ---- */
+  /* ══ Sources ══ */
   .article-sources { margin-top: 2.6rem; padding: 1.3rem 1.5rem; border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid var(--color-border); }
-  .article-sources h2 { margin: 0 0 0.4rem; font-size: 1.15rem; }
-  .article-sources__intro { margin: 0 0 0.9rem; font-size: 0.9rem; color: var(--color-text-muted); }
-  .article-sources__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
-  .article-sources__list li { position: relative; padding-left: 1.4em; font-size: 0.95rem; }
-  .article-sources__list li::before { content: '↗'; position: absolute; left: 0; top: 0; color: var(--color-accent); font-weight: 700; }
-  .article-sources__list a { color: var(--color-accent); text-decoration: none; font-weight: 600; }
+  .article-sources h2 { margin: 0 0 .4rem; font-size: 1.3rem; }
+  .article-sources__intro { margin: 0 0 .9rem; font-size: .9rem; color: var(--color-text-muted); }
+  .article-sources__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .55rem; }
+  .article-sources__list li { position: relative; padding-left: 1.4em; font-size: .95rem; }
+  .article-sources__list li::before { content: '↗'; position: absolute; left: 0; top: 0; color: var(--color-signal-text); font-weight: 700; }
+  .article-sources__list a { color: var(--color-accent-text); text-decoration: none; font-weight: 600; }
   .article-sources__list a:hover { text-decoration: underline; }
 
-  .article-tools { margin-top: 3rem; }
-  .article-tools > h2 { font-size: 1.3rem; margin: 0 0 1rem; }
-  .article-tools__list { display: flex; flex-wrap: wrap; gap: 0.7rem; }
-  .article-tools__list a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.6rem 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: border-color .15s, background .15s; }
-  .article-tools__list a:hover { border-color: var(--color-accent); background: var(--color-bg-soft); }
-
-  /* ---- Carte « Notre choix » (conversion) ---- */
-  .top-pick {
-    margin: 1.6rem 0;
-    padding: 1.2rem 1.4rem 0.9rem;
-    border-radius: var(--radius-lg);
-    background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface, transparent));
-    border: 1px solid color-mix(in srgb, var(--color-accent) 30%, var(--color-border));
-    box-shadow: 0 12px 30px -18px color-mix(in srgb, var(--color-accent) 60%, transparent);
-  }
-  .top-pick__label { margin: 0 0 0.5rem; font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-accent); }
+  /* ══ Notre choix ══ */
+  .top-pick { margin: 1.6rem 0 2rem; padding: 1.3rem 1.5rem 1rem; border-radius: var(--radius-lg); background: var(--color-night-2); background-image: var(--blueprint-dark); background-size: 96px 96px; color: var(--color-on-night); border-top: 4px solid var(--color-signal); box-shadow: var(--shadow-md); }
+  .top-pick__label { margin: 0 0 .7rem; }
   .top-pick__body { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
-  .top-pick__text { flex: 1 1 220px; }
-  .top-pick__name { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; color: var(--color-text); line-height: 1.25; }
-  .top-pick__blurb { margin: 0.35rem 0 0; color: var(--color-text-muted); font-size: 0.96rem; line-height: 1.4; }
-  .top-pick__disc { margin: 0.85rem 0 0; font-size: 0.75rem; color: var(--color-text-faint); }
-  .cta-btn {
-    display: inline-flex; align-items: center; gap: 0.5rem; white-space: nowrap;
-    padding: 0.8rem 1.4rem; border-radius: 999px;
-    background: var(--color-accent); color: #fff; font-weight: 700; font-size: 1rem;
-    text-decoration: none; border: 0; cursor: pointer;
-    box-shadow: 0 10px 22px -10px color-mix(in srgb, var(--color-accent) 75%, transparent);
-    transition: transform .12s ease, filter .12s ease;
+  .top-pick__text { flex: 1 1 240px; }
+  .top-pick__name { margin: 0; font-family: var(--font-display); font-weight: 700; font-stretch: 106%; font-size: 1.4rem; line-height: 1.12; color: #fff; }
+  .top-pick__blurb { margin: .4rem 0 0; color: var(--color-on-night-muted); font-size: .96rem; line-height: 1.45; }
+  .top-pick__disc { margin: .9rem 0 0; font-size: .74rem; color: var(--color-on-night-muted); opacity: .85; }
+
+  /* ══ À lire aussi ══ */
+  .art__related { padding: clamp(2.5rem, 5vw, 4rem) 0; border-top: 1px solid var(--color-border); }
+  .art__related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+  @media (max-width: 1080px) {
+    .art__grid { grid-template-columns: minmax(0, 720px); }
+    .art__rail { display: none; }
+    .toc--inline { display: block; }
   }
-  .cta-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
-  .cta-btn span { transition: transform .12s ease; }
-  .cta-btn:hover span { transform: translateX(3px); }
+  @media (max-width: 800px) { .art__related-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) {
+    .art__cover img { aspect-ratio: 16 / 10; }
+    .art__title { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+  }
 </style>

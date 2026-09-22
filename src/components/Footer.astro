@@ -2,147 +2,89 @@
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
 import { guides } from '../guides';
+import { budgets } from '../budgets';
+import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 ---
 
-<footer class="site-footer">
-  <div class="wide site-footer__grid">
-    <div class="site-footer__brand">
-      <a href="/" class="site-footer__logo" aria-label={`${siteConfig.name} — accueil`}>
-        <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="7" fill="var(--color-accent)"/>
-          <rect x="6.5" y="8" width="19" height="12.5" rx="2" fill="#fff"/>
-        <rect x="14.3" y="20.5" width="3.4" height="2.6" fill="#fff"/>
-        <rect x="10.5" y="23" width="11" height="2" rx="1" fill="#fff"/>
-        <path d="M9.7 16.8l3-3 2.4 2 4-4.4" fill="none" stroke="var(--color-accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>{siteConfig.name}</span>
+<footer class="ftr night blueprint--night">
+  <div class="wide ftr__grid">
+    <div class="ftr__brand">
+      <a href="/" class="ftr__logo" aria-label={`${siteConfig.name} — accueil`}>
+        <Logo size={40} />
+        <span>Mon Bureau <em>Connecté</em></span>
       </a>
-      <p class="site-footer__tagline">{siteConfig.tagline}</p>
+      <p class="ftr__tagline">{siteConfig.tagline}</p>
+      <p class="ftr__spec" aria-hidden="true">Plateau 74 cm · coudes 90° · écran à 50–70 cm — réglé en {year}</p>
+      <div class="ftr__social">
+        {siteConfig.social?.pinterest && (
+          <a href={siteConfig.social.pinterest} target="_blank" rel="noopener" aria-label="Mon Bureau Connecté sur Pinterest">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.4 9.3-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.5 2.1-.8 3.3-.2 1 .5 1.8 1.5 1.8 1.8 0 3.1-1.9 3.1-4.6 0-2.4-1.7-4.1-4.2-4.1-2.9 0-4.5 2.1-4.5 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.1-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.3 6.9-6.3 3.6 0 6.4 2.6 6.4 6 0 3.6-2.3 6.5-5.4 6.5-1.1 0-2.1-.6-2.4-1.2l-.7 2.5c-.2.9-.9 2.1-1.3 2.8.9.3 1.9.4 2.9.4 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          </a>
+        )}
+        <a href="/rss.xml" aria-label="Flux RSS">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
+        </a>
+      </div>
     </div>
 
-    <nav class="site-footer__col" aria-label="Catégories">
-      <p class="site-footer__heading">Catégories</p>
-      {categories.map((cat) => (
-        <a href={`/categorie/${cat.slug}/`}>{cat.label}</a>
-      ))}
+    <nav class="ftr__col" aria-label="Catégories">
+      <p class="ftr__heading">Rayons</p>
+      {categories.map((cat) => <a href={`/categorie/${cat.slug}/`}>{cat.label}</a>)}
+      <a href="/articles/">Tous les comparatifs</a>
+      {budgets.map((b) => <a href={`/budget/${b.slug}/`}>Budget : {b.label.toLowerCase()}</a>)}
     </nav>
 
-    <nav class="site-footer__col" aria-label="Guides">
-      <p class="site-footer__heading">Guides</p>
-      {guides.map((g) => (
-        <a href={`/guides/${g.slug}/`}>{g.title}</a>
-      ))}
+    <nav class="ftr__col" aria-label="Guides par besoin">
+      <p class="ftr__heading">Par besoin</p>
+      {guides.map((g) => <a href={`/guides/${g.slug}/`}>{g.title}</a>)}
     </nav>
 
-    <nav class="site-footer__col" aria-label="Outils et ressources">
-      <p class="site-footer__heading">Outils gratuits</p>
+    <nav class="ftr__col" aria-label="Outils et le site">
+      <p class="ftr__heading">Outils gratuits</p>
       <a href="/calculateur-hauteur-bureau/">Calculateur de hauteur de bureau</a>
+      <a href="/poste-de-travail-ideal/">Le poste de travail idéal</a>
       <a href="/checklist-bureau-ergonomique/">Checklist ergonomie</a>
       <a href="/guide-pc-gaming/">Guide PC gaming pièce par pièce</a>
-    </nav>
-
-    <nav class="site-footer__col" aria-label="Le site">
-      <p class="site-footer__heading">Le site</p>
-      <a href="/a-propos/">À propos</a>
+      <a href="/lexique/">Lexique</a>
+      <p class="ftr__heading ftr__heading--2">Le site</p>
+      <a href="/a-propos/">Notre méthode</a>
       <a href="/auteur/">L'auteur</a>
-      <a href="/outils/">Outils</a>
       <a href="/contact/">Contact</a>
-      <a href="/articles/">Tous les articles</a>
-      <a href="/rss.xml">Flux RSS</a>
-    </nav>
-  </div>
-
-  <div class="wide site-footer__bottom">
-    <p>&copy; {year} {siteConfig.name}. Tous droits réservés.</p>
-    <nav class="site-footer__legal" aria-label="Mentions légales">
       <a href="/mentions-legales/">Mentions légales</a>
       <a href="/politique-de-confidentialite/">Confidentialité</a>
     </nav>
   </div>
 
-  <p class="wide site-footer__disclosure">
-    En tant que Partenaire Amazon, {siteConfig.name} réalise un bénéfice sur les achats remplissant les
-    conditions requises. Certains liens sont des liens affiliés.
-  </p>
+  <div class="wide ftr__bottom">
+    <p>&copy; {year} {siteConfig.name} — Rédaction indépendante. Aucune marque ne paie pour figurer.</p>
+    <p class="ftr__disclosure">
+      En tant que Partenaire Amazon, {siteConfig.name} réalise un bénéfice sur les achats remplissant les
+      conditions requises. Certains liens sont des liens affiliés, sans surcoût pour toi.
+    </p>
+  </div>
 </footer>
 
 <style>
-  .site-footer {
-    border-top: 1px solid var(--color-border);
-    margin-top: 4.5rem;
-    padding: 3rem 0 2rem;
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
-    background: var(--color-bg-soft);
-  }
-  .site-footer__grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 2rem;
-    padding-bottom: 2.5rem;
-  }
-  .site-footer__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--color-text);
-    text-decoration: none;
-  }
-  .site-footer__logo svg { border-radius: 7px; }
-  .site-footer__tagline {
-    margin: 0.9rem 0 0;
-    max-width: 30ch;
-    line-height: 1.55;
-    color: var(--color-text-muted);
-  }
-  .site-footer__heading {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.82rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--color-text);
-    margin: 0 0 0.9rem;
-  }
-  .site-footer__col { display: flex; flex-direction: column; gap: 0.6rem; }
-  .site-footer__col a {
-    color: var(--color-text-muted);
-    text-decoration: none;
-    transition: color 0.15s ease;
-  }
-  .site-footer__col a:hover { color: var(--color-accent); }
+  .ftr { margin-top: 0; padding: 3.5rem 0 2rem; border-top: 4px solid var(--color-accent); }
+  .ftr__grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 2.5rem 2rem; }
+  .ftr__logo { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: #fff; font-family: var(--font-display); font-weight: 700; font-stretch: 108%; font-size: 1.2rem; letter-spacing: -.01em; }
+  .ftr__logo em { font-style: normal; color: var(--color-accent-on-night); }
+  .ftr__tagline { margin: 1rem 0 .4rem; color: var(--color-on-night-muted); max-width: 34ch; line-height: 1.55; }
+  .ftr__spec { margin: 0 0 1.2rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--color-on-night-muted); opacity: .85; }
+  .ftr__social { display: flex; gap: .5rem; }
+  .ftr__social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-sm); border: 1px solid var(--color-night-border); color: var(--color-on-night); transition: background .15s ease, border-color .15s ease; }
+  .ftr__social a:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.4); }
+  .ftr__social svg { width: 20px; height: 20px; }
+  .ftr__col { display: flex; flex-direction: column; gap: .5rem; }
+  .ftr__heading { margin: 0 0 .5rem; font-family: var(--font-mono); font-weight: 500; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-signal); }
+  .ftr__heading--2 { margin-top: 1.2rem; }
+  .ftr__col a { color: var(--color-on-night-muted); text-decoration: none; font-size: .93rem; line-height: 1.4; padding: .2rem 0; transition: color .15s ease; }
+  .ftr__col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .ftr__bottom { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--color-night-border); font-size: .82rem; color: var(--color-on-night-muted); }
+  .ftr__bottom p { margin: 0 0 .5rem; }
+  .ftr__disclosure { opacity: .8; max-width: 80ch; }
 
-  .site-footer__bottom {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-border);
-    font-size: 0.85rem;
-  }
-  .site-footer__bottom p { margin: 0; }
-  .site-footer__legal { display: flex; gap: 1.2rem; }
-  .site-footer__legal a { color: var(--color-text-muted); text-decoration: none; }
-  .site-footer__legal a:hover { color: var(--color-accent); }
-
-  .site-footer__disclosure {
-    margin: 1.5rem auto 0;
-    font-size: 0.78rem;
-    color: var(--color-text-faint);
-    line-height: 1.5;
-  }
-
-  @media (max-width: 720px) {
-    .site-footer__grid { grid-template-columns: 1fr 1fr; gap: 1.8rem 1.5rem; }
-    .site-footer__brand { grid-column: 1 / -1; }
-  }
-  @media (max-width: 460px) {
-    .site-footer__grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 900px) { .ftr__grid { grid-template-columns: 1fr 1fr; } .ftr__brand { grid-column: 1 / -1; } }
+  @media (max-width: 520px) { .ftr__grid { grid-template-columns: 1fr; gap: 2rem; } }
 </style>

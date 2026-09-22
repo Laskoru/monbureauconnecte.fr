@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
 import { categories } from '../categories';
 
 const latest = (await getCollection('articles', ({ data }) => !data.draft))
@@ -10,7 +11,7 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
 
 <BaseLayout title="Page introuvable" description="Cette page n'existe pas ou a été déplacée.">
   <section class="container not-found">
-    <p class="eyebrow">Erreur 404</p>
+    <p class="eyebrow">Erreur 404 — hors plan</p>
     <h1>Cette page n'existe pas (ou plus)</h1>
     <p class="not-found__lede">
       Le lien est peut-être cassé ou la page a été déplacée. Voici comment retrouver ton chemin :
@@ -19,14 +20,14 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
     <div class="not-found__categories">
       {categories.map((cat) => (
         <a class="not-found__cat" href={`/categorie/${cat.slug}/`}>
-          <span>{cat.icon}</span> {cat.label}
+          <Icon name={cat.slug} size={16} /> {cat.label}
         </a>
       ))}
     </div>
 
     {latest.length > 0 && (
       <>
-        <h2>Derniers articles</h2>
+        <h2>Derniers comparatifs</h2>
         <ul class="not-found__list">
           {latest.map((article) => (
             <li><a href={`/articles/${article.slug}/`}>{article.data.title}</a></li>
@@ -47,15 +48,16 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
     padding: 0.55em 1.1em;
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--color-text);
+    background: var(--color-surface);
   }
-  .not-found__cat:hover { border-color: var(--color-accent); color: var(--color-accent); }
+  .not-found__cat:hover { border-color: var(--color-accent); color: var(--color-accent-text); }
   .not-found__list { padding-left: 1.2rem; margin-bottom: 2.5rem; }
   .not-found__list li { margin-bottom: 0.5rem; }
 </style>

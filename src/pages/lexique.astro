@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHead from '../components/PageHead.astro';
 import { siteConfig } from '../siteConfig';
 import { lexique, lexiqueGroups } from '../lexique';
 
@@ -41,14 +41,8 @@ const description = `Lexique du bureau et du télétravail : VESA, DPI, ANC, Pow
 ---
 
 <BaseLayout title="Lexique du bureau : tous les termes expliqués" description={description} jsonLd={faqSchema}>
+  <PageHead eyebrow="Vocabulaire" title="Lexique du bureau et du télétravail" lede={`VESA, DPI, ANC, Power Delivery, switch tactile… Le vocabulaire technique est souvent le premier obstacle quand on cherche à s’équiper. Voici ${lexique.length} termes expliqués en clair, sans jargon marketing, avec un lien vers le comparatif concerné quand il existe.`} icon="book" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Lexique' }]} width="narrow" />
   <section class="container lexique">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Lexique' }]} />
-    <h1>Lexique du bureau et du télétravail</h1>
-    <p class="lexique__lede">
-      VESA, DPI, ANC, Power Delivery, switch tactile… Le vocabulaire technique est souvent le premier
-      obstacle quand on cherche à s’équiper. Voici {lexique.length} termes expliqués en clair, sans jargon
-      marketing, avec un lien vers le comparatif concerné quand il existe.
-    </p>
 
     <nav class="lexique__toc" aria-label="Sommaire du lexique">
       {groups.map((g) => (

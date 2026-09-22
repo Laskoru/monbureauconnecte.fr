@@ -2,23 +2,42 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
 import { siteConfig } from '../../siteConfig';
+import { categories } from '../../categories';
 
 const allArticles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
-<BaseLayout title="Tous les articles" description={`Tous les articles de ${siteConfig.name}, du plus récent au plus ancien : guides pratiques, comparatifs et conseils pour bien choisir — ${siteConfig.tagline.charAt(0).toLowerCase() + siteConfig.tagline.slice(1)}.`}>
-  <section class="container">
-    <p class="eyebrow">{allArticles.length} article{allArticles.length > 1 ? 's' : ''}</p>
-    <h1>Tous les articles</h1>
-    <div class="article-list">
-      {allArticles.map((article) => <ArticleCard article={article} />)}
+<BaseLayout title="Tous les comparatifs" description={`Tous les comparatifs de ${siteConfig.name}, du plus récent au plus ancien : mobilier, périphériques, audio & visio et PC gaming pour un poste de travail qui te va.`}>
+  <PageHead
+    eyebrow="Le catalogue complet"
+    title="Tous les comparatifs"
+    lede="Du plus récent au plus ancien. Pour un parcours guidé selon ton problème, passe plutôt par les guides par besoin."
+    crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Tous les comparatifs' }]}
+    count={String(allArticles.length).padStart(2, '0')}
+  >
+    <div class="filters">
+      <a class="chip" href="/articles/" aria-current="page">Tout</a>
+      {categories.map((c) => <a class="chip" href={`/categorie/${c.slug}/`}><Icon name={c.slug} size={13} /> {c.label}</a>)}
+    </div>
+  </PageHead>
+
+  <section class="wide list">
+    <div class="grid3">
+      {allArticles.map((article, i) => <ArticleCard article={article} eager={i < 3} />)}
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .article-list { display: flex; flex-direction: column; gap: 1.1rem; margin: 1.5rem 0 3rem; }
+  .filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.3rem; }
+  .filters .chip[aria-current] { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+  .list { padding: 2.2rem 1.25rem 3.5rem; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  @media (max-width: 1000px) { .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .grid3 { grid-template-columns: 1fr; } }
 </style>

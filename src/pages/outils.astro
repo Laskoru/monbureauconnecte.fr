@@ -1,64 +1,36 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
 import { siteConfig } from '../siteConfig';
 
 // Outils gratuits — l'aimant à liens de Mon Bureau Connecté.
 const tools = [
-  {
-    icon: '📐',
-    title: 'Calculateur de hauteur de bureau',
-    desc: 'Trouve la hauteur idéale de ton bureau — assis et assis-debout — selon ta taille, en un instant.',
-    href: '/calculateur-hauteur-bureau/',
-    cta: 'Ouvrir le calculateur',
-  },
-  {
-    icon: '✅',
-    title: 'Checklist ergonomie du poste',
-    desc: 'Règle ton poste comme il faut : écran, siège, clavier, souris. La checklist complète pour éviter les douleurs.',
-    href: '/checklist-bureau-ergonomique/',
-    cta: 'Voir la checklist',
-  },
-  {
-    icon: '🧍',
-    title: 'Le poste de travail idéal',
-    desc: "Le schéma des bons réglages : hauteur d'écran, angle des coudes, soutien du dos, pieds à plat — tout en un coup d'œil.",
-    href: '/poste-de-travail-ideal/',
-    cta: 'Voir le schéma',
-  },
-  {
-    icon: '🖥️',
-    title: 'Guide : monter son PC gaming',
-    desc: 'Monter ton PC pièce par pièce, avec des configurations cohérentes selon ton budget.',
-    href: '/guide-pc-gaming/',
-    cta: 'Lire le guide',
-  },
+  { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Trouve la hauteur idéale de ton bureau — assis et assis-debout —, de ton siège et de ton écran selon ta taille, en un instant.', href: '/calculateur-hauteur-bureau/', cta: 'Ouvrir le calculateur' },
+  { icon: 'posture', title: 'Le poste de travail idéal', desc: "Le schéma coté des bons réglages : hauteur d'écran, angle des coudes, soutien du dos, pieds à plat — tout en un coup d'œil.", href: '/poste-de-travail-ideal/', cta: 'Voir le schéma' },
+  { icon: 'checklist', title: 'Checklist ergonomie du poste', desc: 'Règle ton poste comme il faut : écran, siège, clavier, souris, lumière et pauses. La checklist complète, cochable et mémorisée.', href: '/checklist-bureau-ergonomique/', cta: 'Voir la checklist' },
+  { icon: 'cpu', title: 'Guide PC gaming pièce par pièce', desc: '4 configurations complètes selon ton budget, du premier PC au haut de gamme, avec les critères de chaque composant.', href: '/guide-pc-gaming/', cta: 'Composer mon PC' },
+  { icon: 'book', title: 'Lexique du bureau', desc: 'VESA, DPI, ANC, Power Delivery, switchs… les termes techniques expliqués simplement, avec le comparatif qui va avec.', href: '/lexique/', cta: 'Consulter le lexique' },
+  { icon: 'map', title: 'Guides par besoin', desc: 'Un parcours pour chaque problème : télétravail, setup gaming, mal de dos, poignets, petit bureau. On te dit quoi lire, dans quel ordre.', href: '/guides/', cta: 'Choisir mon parcours' },
 ];
 ---
 
-<BaseLayout
-  title="Outils gratuits"
-  description={`Des outils gratuits pour équiper et régler ton poste de travail : calculateur de hauteur de bureau, checklist ergonomie, guide de montage PC. ${siteConfig.name}.`}
->
-  <section class="container outils">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Outils gratuits' }]} />
+<BaseLayout title="Outils gratuits" description={`Des outils gratuits pour équiper et régler ton poste de travail : calculateur de hauteur de bureau, schéma du poste idéal, checklist ergonomie, guide de montage PC, lexique. ${siteConfig.name}.`}>
+  <PageHead
+    eyebrow="100 % gratuit · sans inscription"
+    title="Outils gratuits"
+    lede="Des outils pratiques pour aménager ton poste sans te tromper — calculs, réglages et montage. Utilise-les autant que tu veux, et partage-les si ça peut aider quelqu'un."
+    crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils gratuits' }]}
+  />
 
-    <header class="outils__head">
-      <p class="outils__eyebrow">100 % gratuit · sans inscription</p>
-      <h1>Outils gratuits</h1>
-      <p class="outils__lede">
-        Des outils pratiques pour aménager ton poste sans te tromper — calculs, réglages et montage.
-        Utilise-les autant que tu veux, et partage-les si ça peut aider quelqu’un.
-      </p>
-    </header>
-
-    <div class="outils__grid">
+  <section class="wide tools">
+    <div class="tools__grid">
       {tools.map((t) => (
         <article class="tool card card--hover">
-          <span class="tool__icon" aria-hidden="true">{t.icon}</span>
-          <h2><a class="stretched-link" href={t.href}>{t.title}</a></h2>
+          <span class="tool__icon"><Icon name={t.icon} size={24} /></span>
+          <h2 class="tool__title"><a class="stretched-link" href={t.href}>{t.title}</a></h2>
           <p class="tool__desc">{t.desc}</p>
-          <span class="tool__cta">{t.cta} →</span>
+          <span class="tool__cta">{t.cta} <Icon name="arrow" size={14} /></span>
         </article>
       ))}
     </div>
@@ -66,24 +38,15 @@ const tools = [
 </BaseLayout>
 
 <style>
-  .outils { padding: 2.5rem 0 3.5rem; }
-  .outils__head { max-width: 60ch; }
-  .outils__eyebrow {
-    font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--color-accent); font-weight: 700; margin: 0 0 0.4rem;
-  }
-  .outils h1 { margin: 0; }
-  .outils__lede { color: var(--color-text-muted); font-size: 1.05rem; margin-top: 0.7rem; }
-
-  .outils__grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.1rem; margin-top: 2.4rem;
-  }
-  .tool { position: relative; padding: 1.7rem 1.6rem; display: flex; flex-direction: column; }
-  .tool__icon { font-size: 2rem; }
-  .tool h2 { margin: 0.7rem 0 0.4rem; font-size: 1.25rem; }
-  .tool h2 a { color: var(--color-text); text-decoration: none; }
-  .tool:hover h2 a { color: var(--color-accent); }
-  .tool__desc { color: var(--color-text-muted); font-size: 0.95rem; margin: 0 0 1rem; flex: 1; }
-  .tool__cta { color: var(--color-accent); font-weight: 600; font-size: 0.95rem; }
+  .tools { padding: 2.2rem 1.25rem 3.5rem; }
+  .tools__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+  .tool { padding: 1.5rem 1.5rem 1.4rem; display: flex; flex-direction: column; }
+  .tool__icon { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: var(--radius); background: var(--color-night); color: var(--color-signal); margin-bottom: 1rem; }
+  .tool__title { margin: 0 0 .5rem; font-size: 1.3rem; }
+  .tool__title a { color: var(--color-text); text-decoration: none; }
+  .tool:hover .tool__title a { color: var(--color-accent-text); }
+  .tool__desc { margin: 0 0 1rem; color: var(--color-text-muted); font-size: .95rem; line-height: 1.55; flex: 1; }
+  .tool__cta { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
+  @media (max-width: 900px) { .tools__grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .tools__grid { grid-template-columns: 1fr; } }
 </style>

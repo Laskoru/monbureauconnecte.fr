@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHead from '../components/PageHead.astro';
 import { siteConfig } from '../siteConfig';
 
 // Page pilier visuelle « poste de travail idéal » : le format signature des
@@ -13,11 +13,11 @@ const regles = [
   { n: 4, title: 'Poignets droits, dans l’axe', why: 'Ni cassés vers le haut ni vers le bas. Un clavier séparé et une souris verticale gardent l’alignement naturel.', links: [{ label: 'Clavier ergonomique séparé', href: '/articles/clavier-ergonomique-separe/' }, { label: 'Souris verticale', href: '/articles/souris-ergonomique-verticale/' }] },
   { n: 5, title: 'Dos soutenu, bien au fond du siège', why: 'La cambrure lombaire est soutenue, le dos droit et les épaules détendues — 80 % du confort vient de là.', links: [{ label: 'Coussin lombaire', href: '/articles/coussin-lombaire-chaise-bureau/' }, { label: 'Coussin d’assise', href: '/articles/coussin-assise-ergonomique-coccyx/' }] },
   { n: 6, title: 'Cuisses horizontales, pieds à plat', why: 'Genoux à ~90°, pieds bien posés au sol. Si les pieds pendent, un repose-pieds rétablit l’angle.', links: [{ label: 'Repose-pieds réglable', href: '/articles/repose-pieds-ergonomique-bureau/' }] },
-  { n: 7, title: 'Bouger et faire une pause régulièrement', why: 'La meilleure posture est celle qu’on change : levez-vous quelques minutes toutes les 30 à 60 min. Un bureau assis-debout aide beaucoup.', links: [{ label: 'Bureau assis-debout', href: '/articles/bureau-assis-debout-electrique/' }] },
+  { n: 7, title: 'Bouger et faire une pause régulièrement', why: 'La meilleure posture est celle qu’on change : lève-toi quelques minutes toutes les 30 à 60 min. Un bureau assis-debout aide beaucoup.', links: [{ label: 'Bureau assis-debout', href: '/articles/bureau-assis-debout-electrique/' }] },
 ];
 
 const faq = [
-  { q: 'À quelle hauteur régler mon bureau ?', a: 'À la hauteur qui met vos avant-bras à l’horizontale, coudes à environ 90°, épaules relâchées — souvent autour de 70-75 cm pour une personne de taille moyenne, mais cela dépend de vous. Notre calculateur de hauteur de bureau vous donne le repère personnalisé en quelques secondes.' },
+  { q: 'À quelle hauteur régler mon bureau ?', a: 'À la hauteur qui met tes avant-bras à l’horizontale, coudes à environ 90°, épaules relâchées — souvent autour de 70-75 cm pour une personne de taille moyenne, mais cela dépend de toi. Notre calculateur de hauteur de bureau te donne le repère personnalisé en quelques secondes.' },
   { q: 'Faut-il un bureau assis-debout ?', a: 'Ce n’est pas obligatoire, mais c’est le meilleur moyen d’alterner les postures dans la journée, ce qui vaut mieux que « la » posture parfaite tenue des heures. Si le budget le permet, c’est l’achat qui change le plus le confort sur la durée.' },
   { q: 'Un bon fauteuil suffit-il à éviter le mal de dos ?', a: 'Il y contribue énormément, mais l’ensemble compte : hauteur d’écran, réglage du bureau, soutien lombaire, pieds à plat, et surtout les pauses. Un excellent siège ne compense pas un écran trop bas ou une immobilité de plusieurs heures.' },
 ];
@@ -31,17 +31,8 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
   description={`Le schéma du poste de travail ergonomique parfait : hauteur d'écran, angle des coudes, soutien du dos, pieds à plat… tous les bons réglages en un coup d'œil. ${siteConfig.name}.`}
   jsonLd={jsonLd}
 >
+  <PageHead eyebrow="Le guide visuel" title="Le poste de travail idéal" lede="Un poste bien réglé, c'est moins de tensions et plus de concentration — et ça ne coûte souvent rien à ajuster. Voici, en un coup d'œil, les 7 repères qui comptent." icon="posture" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Le poste de travail idéal' }]} width="narrow" />
   <section class="container poste">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Le poste de travail idéal' }]} />
-
-    <header class="poste__head">
-      <p class="poste__eyebrow">Le guide visuel</p>
-      <h1>Le poste de travail idéal</h1>
-      <p class="poste__lede">
-        Un poste bien réglé, c'est <strong>moins de tensions</strong> et plus de concentration —
-        et ça ne coûte souvent rien à ajuster. Voici, en un coup d'œil, les 7 repères qui comptent.
-      </p>
-    </header>
 
     <figure class="poste__figure">
       <svg viewBox="0 0 640 420" role="img" aria-label="Schéma d'une personne bien installée à son bureau" class="ergo">
@@ -102,8 +93,8 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
     </ol>
 
     <aside class="poste__tools">
-      <h2>Passez du schéma à votre poste</h2>
-      <p>Deux outils gratuits pour appliquer ces repères chez vous :</p>
+      <h2>Passe du schéma à ton poste</h2>
+      <p>Deux outils gratuits pour appliquer ces repères chez toi :</p>
       <p class="poste__tools-links">
         <a class="btn btn--primary" href="/calculateur-hauteur-bureau/">Calculer ma hauteur de bureau →</a>
         <a class="btn btn--outline" href="/checklist-bureau-ergonomique/">La checklist ergonomique</a>

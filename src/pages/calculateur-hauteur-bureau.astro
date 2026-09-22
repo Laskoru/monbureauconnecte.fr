@@ -1,4 +1,5 @@
 ---
+import PageHead from '../components/PageHead.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../siteConfig';
 
@@ -64,14 +65,8 @@ const appSchema = {
   description="Entre ta taille : ce calculateur gratuit donne la hauteur idéale de ton bureau assis et debout, de ton siège et de ton écran, et te dit si ton bureau est trop haut."
   jsonLd={[appSchema, faqSchema]}
 >
+  <PageHead eyebrow="Outil gratuit · sans inscription" title="Quelle est la bonne hauteur pour ton bureau ?" lede="La quasi-totalité des bureaux vendus en France mesurent 74 cm — une hauteur pensée pour une personne d'environ 1,78 m. Si tu ne fais pas cette taille, ton poste est probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs." icon="ruler" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Calculateur de hauteur de bureau' }]} width="narrow" />
   <section class="container calc">
-    <p class="eyebrow">Outil gratuit</p>
-    <h1>Quelle est la bonne hauteur pour ton bureau ?</h1>
-    <p class="calc__lede">
-      La quasi-totalité des bureaux vendus en France mesurent <strong>74 cm</strong> — une hauteur
-      pensée pour une personne d'environ 1,78 m. Si tu ne fais pas cette taille, ton poste est
-      probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs.
-    </p>
 
     <!-- ---------- Outil ---------- -->
     <div class="calc__tool card">

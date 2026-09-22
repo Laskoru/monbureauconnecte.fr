@@ -1,10 +1,12 @@
 ---
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../siteConfig';
 
 const sections = [
   {
-    icon: '🖥️',
+    icon: 'monitor',
     title: 'L’écran',
     items: [
       'Le haut de l’écran est à hauteur des yeux (ou légèrement en dessous).',
@@ -15,7 +17,7 @@ const sections = [
     link: { href: '/articles/bras-support-ecran-articule/', label: 'Bras support écran' },
   },
   {
-    icon: '🪑',
+    icon: 'chair',
     title: 'La chaise et le dos',
     items: [
       'Tes pieds reposent à plat sur le sol (ou sur un repose-pieds).',
@@ -26,7 +28,7 @@ const sections = [
     link: { href: '/categorie/mobilier/', label: 'Chaises & mobilier' },
   },
   {
-    icon: '⌨️',
+    icon: 'keyboard',
     title: 'Le clavier et la souris',
     items: [
       'Coudes proches du corps, pliés à environ 90°.',
@@ -37,7 +39,7 @@ const sections = [
     link: { href: '/articles/souris-ergonomique-verticale/', label: 'Souris ergonomique' },
   },
   {
-    icon: '💡',
+    icon: 'lamp',
     title: 'La lumière',
     items: [
       'Aucun reflet du plafonnier ou d’une fenêtre sur l’écran.',
@@ -48,7 +50,7 @@ const sections = [
     link: { href: '/articles/lampe-bureau-led-anti-fatigue/', label: 'Lampe de bureau' },
   },
   {
-    icon: '⏱️',
+    icon: 'clock',
     title: 'Les pauses et le mouvement',
     items: [
       'Règle du 20-20-20 : toutes les 20 min, regarde à 6 m pendant 20 s.',
@@ -65,20 +67,14 @@ const sections = [
   title="Checklist : bien régler son poste de travail (ergonomie)"
   description="La checklist complète pour régler son poste de travail et éviter les douleurs : écran, chaise, clavier, lumière et pauses. Gratuite et imprimable."
 >
+  <PageHead eyebrow="Ressource gratuite · imprimable" title="Checklist : bien régler son poste de travail" lede="Un poste mal réglé fatigue le dos, la nuque et les yeux — souvent sans qu'on s'en rende compte. Passe en revue cette checklist en cochant chaque point : c'est la façon la plus simple de repérer ce qui cloche dans ton installation. Tu peux l'imprimer ou la garder sous la main." icon="checklist" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Checklist ergonomie' }]} width="narrow" />
   <section class="container checklist">
-    <p class="eyebrow">Ressource gratuite</p>
-    <h1>Checklist : bien régler son poste de travail</h1>
-    <p class="checklist__lede">
-      Un poste mal réglé fatigue le dos, la nuque et les yeux — souvent sans qu'on s'en rende compte.
-      Passe en revue cette checklist en cochant chaque point : c'est la façon la plus simple de repérer
-      ce qui cloche dans ton installation. Tu peux l'imprimer ou la garder sous la main.
-    </p>
 
     <p class="checklist__progress" id="cl-progress" hidden><span id="cl-count">0</span> / {sections.reduce((n, s) => n + s.items.length, 0)} points cochés — ta progression est mémorisée sur cet appareil.</p>
 
     {sections.map((section) => (
       <div class="checklist__block">
-        <h2><span class="checklist__icon">{section.icon}</span> {section.title}</h2>
+        <h2><span class="checklist__icon"><Icon name={section.icon} size={20} /></span> {section.title}</h2>
         <ul class="checklist__items">
           {section.items.map((item, i) => (
             <li><label><input type="checkbox" class="cl-cb" data-key={`${section.title}-${i}`} /> <span>{item}</span></label></li>

@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageHead from '../../components/PageHead.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import Icon from '../../components/Icon.astro';
 import { budgets } from '../../budgets';
 
 export async function getStaticPaths() {
@@ -14,41 +15,62 @@ const { budget } = Astro.props;
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
 const articles = budget.articles.map((slug) => bySlug.get(slug)).filter((a) => a !== undefined);
+const others = budgets.filter((b) => b.slug !== budget.slug);
 ---
 
 <BaseLayout title={`${budget.label} — ${budget.tagline}`} description={budget.description}>
-  <section class="container budget">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Par budget', href: '/budget/' }, { label: budget.label }]} />
-    <p class="budget__icon">{budget.icon}</p>
-    <h1>{budget.label}</h1>
-    <p class="budget__range">{budget.range}</p>
-    <div class="budget__intro">
-      {budget.intro.map((p) => <p set:html={p} />)}
-    </div>
+  <PageHead
+    eyebrow={`Par budget · ${budget.range}`}
+    title={budget.label}
+    lede={budget.tagline}
+    icon={budget.slug}
+    crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Par budget', href: '/budget/' }, { label: budget.label }]}
+    count={String(articles.length).padStart(2, '0')}
+  />
 
-    <h2 class="budget__section">Les comparatifs de cette sélection</h2>
-    <div class="article-list">
-      {articles.map((article) => <ArticleCard article={article} />)}
+  <section class="wide bd">
+    <div class="bd__grid">
+      <div class="bd__main">
+        <div class="bd__intro">
+          {budget.intro.map((p) => <p set:html={p} />)}
+        </div>
+        <h2 class="bd__section"><span class="eyebrow eyebrow--plain">Sélection</span>Les comparatifs de cette enveloppe</h2>
+        <div class="bd__list">
+          {articles.map((article) => <ArticleCard article={article} variant="row" />)}
+        </div>
+      </div>
+      <aside class="bd__side">
+        <div class="bd__box">
+          <p class="bd__box-title"><Icon name="euro" size={16} /> Autres budgets</p>
+          {others.map((b) => (
+            <a class="bd__link" href={`/budget/${b.slug}/`}><Icon name={b.slug} size={18} /> <span>{b.label}<small>{b.range}</small></span> <Icon name="arrow" size={14} /></a>
+          ))}
+        </div>
+        <div class="bd__box bd__box--tool">
+          <p class="bd__box-title"><Icon name="ruler" size={16} /> Le gain gratuit</p>
+          <p class="bd__box-text">Avant d'acheter, règle ton poste : la bonne hauteur de bureau et d'écran ne coûte rien.</p>
+          <a class="btn btn--primary btn--sm" href="/calculateur-hauteur-bureau/">Calculer ma hauteur</a>
+        </div>
+      </aside>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .budget { padding: 2.5rem 0 3.5rem; }
-  .budget__icon { font-size: 2.4rem; margin: 0 0 0.4rem; }
-  .budget h1 { margin-top: 0; }
-  .budget__range {
-    display: inline-block;
-    margin: 0 0 1rem;
-    padding: 0.3em 0.9em;
-    border-radius: 999px;
-    background: var(--color-accent-soft);
-    color: var(--color-accent);
-    font-weight: 600;
-    font-size: 0.85rem;
-  }
-  .budget__intro { max-width: 68ch; }
-  .budget__intro p { color: var(--color-text-muted); line-height: 1.7; }
-  .budget__section { margin-top: 2.5rem; }
-  .article-list { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.2rem; }
+  .bd { padding: 2.2rem 1.25rem 3.5rem; }
+  .bd__grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 2.5rem; align-items: start; }
+  .bd__intro { font-size: 1.08rem; line-height: 1.7; max-width: 66ch; }
+  .bd__intro :global(p) { margin: 0 0 1em; }
+  .bd__section { display: flex; flex-direction: column; gap: .4rem; margin: 2rem 0 1.2rem; font-size: 1.7rem; }
+  .bd__list { display: flex; flex-direction: column; gap: .9rem; }
+  .bd__side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1rem; }
+  .bd__box { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: .3rem; }
+  .bd__box--tool { background: var(--color-bg-soft); background-image: var(--grid-light); background-size: 96px 96px; }
+  .bd__box-title { margin: 0 0 .5rem; display: flex; align-items: center; gap: .5em; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-muted); }
+  .bd__box-text { margin: 0 0 .8rem; font-size: .92rem; line-height: 1.5; color: var(--color-text-muted); }
+  .bd__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .7rem; padding: .55rem 0; border-top: 1px dashed var(--color-border); text-decoration: none; color: var(--color-text); font-weight: 600; font-size: .95rem; }
+  .bd__link span { display: flex; flex-direction: column; }
+  .bd__link small { font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; color: var(--color-text-muted); font-weight: 400; }
+  .bd__link:hover { color: var(--color-accent-text); }
+  @media (max-width: 900px) { .bd__grid { grid-template-columns: 1fr; } .bd__side { position: static; } }
 </style>

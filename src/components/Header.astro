@@ -1,29 +1,39 @@
 ---
 import { siteConfig } from '../siteConfig';
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+const path = Astro.url.pathname;
+const links = [
+  { href: '/guides/', label: 'Par besoin' },
+  { href: '/budget/', label: 'Par budget' },
+  { href: '/articles/', label: 'Comparatifs' },
+  { href: '/poste-de-travail-ideal/', label: 'Poste idéal' },
+  { href: '/outils/', label: 'Outils' },
+];
+const isActive = (href: string) => path === href || (href !== '/' && path.startsWith(href));
 ---
 
-<header class="site-header">
-  <div class="wide site-header__inner">
-    <a href="/" class="site-header__logo" aria-label={`${siteConfig.name} — accueil`}>
-      <svg class="site-header__mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="7" fill="var(--color-accent)"/>
-        <rect x="6.5" y="8" width="19" height="12.5" rx="2" fill="#fff"/>
-        <rect x="14.3" y="20.5" width="3.4" height="2.6" fill="#fff"/>
-        <rect x="10.5" y="23" width="11" height="2" rx="1" fill="#fff"/>
-        <path d="M9.7 16.8l3-3 2.4 2 4-4.4" fill="none" stroke="var(--color-accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="site-header__name">{siteConfig.name}</span>
+<header class="hdr" id="site-header">
+  <div class="wide hdr__in">
+    <a href="/" class="hdr__logo" aria-label={`${siteConfig.name} — accueil`}>
+      <Logo size={34} />
+      <span class="hdr__name">Mon Bureau <span class="hdr__hl">Connecté</span></span>
     </a>
-    <nav class="site-header__nav" id="site-nav">
-      <a href="/">Accueil</a>
-      <a href="/guides/">Par besoin</a>
-      <a href="/poste-de-travail-ideal/">Poste idéal</a>
-      <a href="/budget/">Par budget</a>
-      <a href="/articles/">Comparatifs</a>
-      <a href="/outils/">Outils</a>
+
+    <nav class="hdr__nav" id="site-nav" aria-label="Navigation principale">
+      <ul>
+        {links.map((l) => (
+          <li><a href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a></li>
+        ))}
+      </ul>
+      <a class="btn btn--primary btn--sm hdr__cta hdr__cta--mobile" href="/calculateur-hauteur-bureau/"><Icon name="ruler" size={16} /> Calculer ma hauteur de bureau</a>
     </nav>
-    <div class="site-header__actions">
-      <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+
+    <div class="hdr__actions">
+      <a class="btn btn--primary btn--sm hdr__cta" href="/calculateur-hauteur-bureau/">
+        <Icon name="ruler" size={16} /> Ma hauteur de bureau
+      </a>
+      <button type="button" id="nav-toggle" class="hdr__toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -32,120 +42,79 @@ import { siteConfig } from '../siteConfig';
 
 <script is:inline>
   (function () {
-    var navToggle = document.getElementById('nav-toggle');
+    var toggle = document.getElementById('nav-toggle');
     var nav = document.getElementById('site-nav');
-    navToggle.addEventListener('click', function () {
+    toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', String(open));
-      navToggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      toggle.classList.toggle('is-open', open);
+      document.body.classList.toggle('nav-open', open);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) toggle.click();
     });
   })();
 </script>
 
 <style>
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
+  /* Barre d'outils : fond papier, filet net, repère de règle sous le lien actif */
+  .hdr {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--color-bg) 90%, transparent);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--color-border);
-    padding: 0.9rem 0;
-    background: color-mix(in srgb, var(--color-bg) 82%, transparent);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    transition: box-shadow .25s ease, background .25s ease;
   }
-  .site-header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .site-header__logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    color: var(--color-text);
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-  .site-header__mark { display: block; border-radius: 7px; }
-  .site-header__logo:hover .site-header__name { color: var(--color-accent); }
-  .site-header__name { transition: color 0.15s ease; }
+  .hdr.is-scrolled { box-shadow: 0 10px 30px -22px rgba(15,26,51,.5); background: color-mix(in srgb, var(--color-bg) 96%, transparent); }
+  .hdr__in { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; height: 68px; }
 
-  .site-header__nav { display: flex; gap: 1.75rem; margin-left: auto; }
-  .site-header__nav a {
-    position: relative;
-    color: var(--color-text-muted);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.2rem 0;
-    transition: color 0.15s ease;
-  }
-  .site-header__nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -2px;
-    height: 2px;
-    border-radius: 2px;
-    background: var(--color-accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.18s ease;
-  }
-  .site-header__nav a:hover { color: var(--color-text); }
-  .site-header__nav a:hover::after { transform: scaleX(1); }
-  .site-header__actions { display: flex; align-items: center; gap: 0.5rem; }
+  .hdr__logo { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--color-text); flex-shrink: 0; }
+  .hdr__name { font-family: var(--font-display); font-weight: 700; font-stretch: 108%; font-size: 1.12rem; letter-spacing: -.01em; line-height: 1; transition: color .15s ease; }
+  .hdr__hl { color: var(--color-accent-text); }
+  .hdr__logo:hover .hdr__name { color: var(--color-accent-text); }
 
-  .nav-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    width: 34px;
-    height: 34px;
-    border-radius: var(--radius);
-    border: 1px solid var(--color-border);
-    background: var(--color-surface);
-    cursor: pointer;
+  .hdr__nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: .15rem; }
+  .hdr__nav a:not(.btn) {
+    display: inline-flex; align-items: center; min-height: 40px; padding: 0 .8rem;
+    color: var(--color-text-muted); text-decoration: none; font-size: .92rem; font-weight: 600;
+    border-radius: var(--radius-sm); transition: color .15s ease, background .15s ease;
   }
-  .nav-toggle span {
-    width: 16px;
-    height: 2px;
-    margin: 0 auto;
-    background: var(--color-text);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  .nav-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-  .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
-  .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .hdr__nav a:not(.btn):hover { color: var(--color-text); background: var(--color-accent-soft); }
+  .hdr__nav a[aria-current='page'] { color: var(--color-accent-text); box-shadow: inset 0 -2px 0 var(--color-accent); border-radius: 0; }
+  .hdr__cta--mobile { display: none; }
 
-  @media (max-width: 640px) {
-    .nav-toggle { display: flex; }
-    .site-header__nav {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      margin: 0;
-      flex-direction: column;
-      gap: 0;
-      background: var(--color-surface);
-      border-bottom: 1px solid var(--color-border);
-      box-shadow: var(--shadow-md);
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.2s ease;
+  .hdr__actions { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
+  .hdr__toggle {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 44px; height: 44px; border-radius: var(--radius-sm); border: 1px solid var(--color-border-strong);
+    background: var(--color-surface); cursor: pointer; padding: 0;
+  }
+  .hdr__toggle span { width: 18px; height: 2px; margin: 0 auto; background: var(--color-text); transition: transform .2s ease, opacity .2s ease; }
+  .hdr__toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hdr__toggle.is-open span:nth-child(2) { opacity: 0; }
+  .hdr__toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 1020px) {
+    .hdr__nav ul { gap: 0; }
+    .hdr__nav a:not(.btn) { padding: 0 .55rem; font-size: .88rem; }
+  }
+  @media (max-width: 900px) {
+    .hdr__cta:not(.hdr__cta--mobile) { display: none; }
+  }
+  @media (max-width: 760px) {
+    .hdr__in { height: 62px; }
+    .hdr__toggle { display: flex; }
+    .hdr__nav {
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--color-surface); border-bottom: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
+      max-height: 0; overflow: hidden; transition: max-height .25s ease;
     }
-    .site-header__nav.is-open { max-height: 220px; }
-    .site-header__nav a {
-      padding: 0.9rem 1.25rem;
-      border-top: 1px solid var(--color-border);
-    }
+    .hdr__nav.is-open { max-height: 520px; }
+    .hdr__nav ul { flex-direction: column; padding: .5rem 0 0; }
+    .hdr__nav a:not(.btn) { padding: .9rem 1.25rem; border-radius: 0; font-size: 1.05rem; min-height: 48px; }
+    .hdr__nav a[aria-current='page'] { box-shadow: inset 4px 0 0 var(--color-accent); background: var(--color-accent-soft); }
+    .hdr__cta--mobile { display: inline-flex; margin: .6rem 1.25rem 1.1rem; }
   }
 </style>

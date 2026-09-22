@@ -3,6 +3,7 @@ import { siteConfig } from '../siteConfig';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import Interactions from '../components/Interactions.astro';
 import '../styles/fonts.css';
 import '../styles/global.css';
 
@@ -117,8 +118,8 @@ const jsonLdBlocks = [organizationSchema, websiteSchema, ...(jsonLd ? (Array.isA
       </script>
     )}
     <!-- Polices auto-hébergées : voir src/styles/fonts.css (préchargement des 2 fichiers principaux) -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-normal-400-700-latin.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/hanken-grotesk-normal-400-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-normal-600-800-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/ibm-plex-sans-normal-400-latin.woff2" crossorigin />
 
     <title>{pageTitle}</title>
     <meta name="description" content={metaDescription} />
@@ -171,6 +172,7 @@ const jsonLdBlocks = [organizationSchema, websiteSchema, ...(jsonLd ? (Array.isA
         }, { once: true });
       </script>
     )}
+    <script is:inline>document.documentElement.classList.add('js')</script>
   </head>
   <body>
     <Header />
@@ -178,6 +180,7 @@ const jsonLdBlocks = [organizationSchema, websiteSchema, ...(jsonLd ? (Array.isA
       <slot />
     </main>
     <Footer />
+    <Interactions />
     {(siteConfig.gaId || siteConfig.adsense.enabled) && <CookieConsent />}
   </body>
 </html>

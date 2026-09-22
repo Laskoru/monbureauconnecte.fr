@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
 import { siteConfig } from '../../siteConfig';
 import { categories } from '../../categories';
 
@@ -18,31 +19,62 @@ const { cat } = Astro.props;
 const articles = (await getCollection('articles', ({ data }) => !data.draft && data.category === cat.slug)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+const others = categories.filter((c) => c.slug !== cat.slug);
 ---
 
 <BaseLayout
   title={cat.label}
   noindex={articles.length === 0}
-  description={`${cat.description} Tous les comparatifs ${cat.label.toLowerCase()} sur ${siteConfig.name}.`}
+  description={`${cat.description} Tous les guides ${cat.label.toLowerCase()} sur ${siteConfig.name}.`}
 >
-  <section class="container cat-header">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: cat.label }]} />
-    <p class="cat-header__icon">{cat.icon}</p>
-    <h1>{cat.label}</h1>
-    <p class="cat-header__desc">{cat.description}</p>
-  </section>
+  <PageHead
+    eyebrow="Catégorie"
+    title={cat.label}
+    lede={cat.description}
+    icon={cat.slug}
+    crumbs={[{ label: 'Accueil', href: '/' }, { label: cat.label }]}
+    count={String(articles.length).padStart(2, '0')}
+  />
 
-  <section class="container article-list">
-    {articles.length === 0 && <p>Aucun article publié dans cette catégorie pour le moment.</p>}
-    {articles.map((article) => <ArticleCard article={article} />)}
+  <section class="wide cat-body">
+    <div class="cat-grid">
+      <div class="cat-main">
+        {articles.length === 0 && <p class="cat-empty">Aucun guide publié dans cette catégorie pour le moment — les prochains arrivent chaque semaine.</p>}
+        <div class="grid2">
+          {articles.map((article, i) => <ArticleCard article={article} eager={i < 2} />)}
+        </div>
+      </div>
+      <aside class="cat-side">
+        {'intro' in cat && cat.intro && (
+          <div class="cat-intro">
+            <p class="cat-intro__title"><Icon name="map" size={16} /> Pourquoi cette catégorie</p>
+            <p>{cat.intro}</p>
+          </div>
+        )}
+        <div class="cat-others">
+          <p class="cat-intro__title"><Icon name="sliders" size={16} /> Explorer aussi</p>
+          {others.map((c) => (
+            <a class="cat-others__link" href={`/categorie/${c.slug}/`}><Icon name={c.slug} size={18} /> <span>{c.label}</span> <Icon name="arrow" size={14} /></a>
+          ))}
+          <a class="cat-others__link" href="/guides/"><Icon name="map" size={18} /> <span>Guides par besoin</span> <Icon name="arrow" size={14} /></a>
+        </div>
+      </aside>
+    </div>
   </section>
 </BaseLayout>
 
 <style>
-  .cat-header { padding: 2.5rem 0 1rem; }
-  .cat-header__icon { font-size: 2.4rem; margin: 0 0 0.4rem; }
-  .cat-header h1 { margin-top: 0; }
-  .cat-header__desc { color: var(--color-text-muted); font-size: 1.05rem; max-width: 52ch; }
-
-  .article-list { display: flex; flex-direction: column; gap: 1.1rem; padding: 1.5rem 0 3.5rem; }
+  .cat-body { padding: 2.2rem 1.25rem 3.5rem; }
+  .cat-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 2.5rem; align-items: start; }
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .cat-empty { color: var(--color-text-muted); }
+  .cat-side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1rem; }
+  .cat-intro, .cat-others { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: 1.1rem 1.25rem; }
+  .cat-intro p { margin: 0; font-size: .95rem; line-height: 1.6; color: var(--color-text-muted); }
+  .cat-intro__title { display: flex; align-items: center; gap: .5em; margin: 0 0 .6rem !important; font-family: var(--font-body); font-weight: 700; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-accent-text) !important; }
+  .cat-others { display: flex; flex-direction: column; gap: .2rem; }
+  .cat-others__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .7rem; padding: .55rem .3rem; text-decoration: none; color: var(--color-text); font-weight: 600; font-size: .95rem; border-top: 1px dashed var(--color-border); transition: color .15s ease; }
+  .cat-others__link:hover { color: var(--color-accent-text); }
+  @media (max-width: 960px) { .cat-grid { grid-template-columns: 1fr; } .cat-side { position: static; } }
+  @media (max-width: 640px) { .grid2 { grid-template-columns: 1fr; } }
 </style>

@@ -1,0 +1,60 @@
+---
+// Icônes SVG (trait 2 px, style Lucide) — remplace les emojis des catégories,
+// guides, budgets, outils et composants PC. `name` = slug ou nom générique.
+interface Props { name: string; size?: number; class?: string; stroke?: number }
+const { name, size = 24, class: cls, stroke = 2 } = Astro.props;
+
+const chair = '<rect x="7" y="3" width="10" height="9" rx="2"/><path d="M4 14h16"/><path d="M5 14v-2M19 14v-2"/><path d="M6 21l1-7M18 21l-1-7"/>';
+const keyboard = '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M9 14h6"/>';
+const headphones = '<path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>';
+const monitor = '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>';
+const home = '<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>';
+const gamepad = '<rect x="2" y="7" width="20" height="10" rx="5"/><path d="M6 12h4M8 10v4"/><path d="M15 11h.01M18 13h.01"/>';
+const spine = '<path d="M12 2v20"/><rect x="8" y="5" width="8" height="3" rx="1.5"/><rect x="8" y="10.5" width="8" height="3" rx="1.5"/><rect x="8" y="16" width="8" height="3" rx="1.5"/>';
+const posture = '<circle cx="9" cy="5" r="2.5"/><path d="M9 8v7h6v6"/><path d="M9 11h5"/><path d="M9 15l-3 6"/><path d="M18 9h3v12"/>';
+const hand = '<path d="M8 12V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11 11V4a1.5 1.5 0 0 1 3 0v7"/><path d="M14 11V5a1.5 1.5 0 0 1 3 0v8"/><path d="M17 13V9a1.5 1.5 0 0 1 3 0v6a7 7 0 0 1-7 7h-2a7 7 0 0 1-6-3.5L3 14a1.6 1.6 0 0 1 2.7-1.6L8 15"/>';
+const box = '<path d="M21 8l-9-4-9 4v8l9 4 9-4z"/><path d="M3 8l9 4 9-4"/><path d="M12 12v8"/>';
+const ruler = '<path d="M21 7 7 21l-4-4L17 3z"/><path d="m14 6 2 2M11 9l2 2M8 12l2 2"/>';
+const checklist = '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 1.5 1.5L11 8"/><path d="M13 9h5"/><path d="m7 15 1.5 1.5L11 14"/><path d="M13 15h5"/>';
+const cpu = '<rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>';
+const book = '<path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"/><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/>';
+const plug = '<path d="M9 2v6M15 2v6"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v5"/>';
+const paths: Record<string, string> = {
+  // catégories
+  mobilier: chair, peripheriques: keyboard, 'audio-visio': headphones, 'pc-gaming': monitor,
+  // guides par besoin
+  teletravail: home, 'setup-gaming': gamepad, 'ergonomie-bureau': posture, 'mal-de-dos': spine, 'douleurs-poignet': hand, 'petit-bureau-rangement': box,
+  // budgets
+  'petit-budget': '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5A3 3 0 0 0 9 11.5c0 1.5 1.5 2 3 2.5s3 1 3 2.5a3 3 0 0 1-5.5 1.5"/><path d="M12 6v2M12 16v2"/>',
+  equilibre: '<path d="M12 3v18"/><path d="M5 7h14"/><path d="M3 15l2-8 2 8"/><path d="M3 15a2 2 0 0 0 4 0"/><path d="M17 15l2-8 2 8"/><path d="M17 15a2 2 0 0 0 4 0"/><path d="M8 21h8"/>',
+  'setup-complet': '<path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2"/><path d="M12 15l-3-3c1-4 3-7 7-9 1 0 3 0 4 1s1 3 1 4c-2 4-5 6-9 7z"/><circle cx="15" cy="9" r="1.5"/>',
+  // outils
+  ruler, checklist, cpu, book, posture,
+  // composants PC
+  board: plug, ram: '<rect x="3" y="7" width="18" height="10" rx="1"/><path d="M7 7v10M11 7v10M15 7v10M3 20h18"/>', gpu: gamepad,
+  ssd: '<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>', psu: '<rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/><path d="M6 11v2M10 11v2"/>',
+  tower: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 6h4M10 10h4"/><circle cx="12" cy="17" r="1.5"/>',
+  // génériques
+  chair, keyboard, headphones, monitor, home, gamepad, spine, hand, box, plug,
+  mouse: '<rect x="6" y="3" width="12" height="18" rx="6"/><path d="M12 7v4"/>',
+  webcam: '<circle cx="12" cy="10" r="7"/><circle cx="12" cy="10" r="3"/><path d="M8 21h8M12 17v4"/>',
+  lamp: '<path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/>',
+  eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  sliders: '<path d="M4 6h10M18 6h2"/><circle cx="16" cy="6" r="2"/><path d="M4 12h2M10 12h10"/><circle cx="8" cy="12" r="2"/><path d="M4 18h12"/><circle cx="18" cy="18" r="2"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>',
+  refresh: '<path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 3v5h-5"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  check: '<path d="m5 12 5 5L20 7"/>',
+  arrow: '<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>',
+  shield: '<path d="M12 3 4 6v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/>',
+  tag: '<path d="M4 4h7l9 9-7 7-9-9z"/><circle cx="8" cy="8" r="1.5"/>',
+  map: '<path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14"/><path d="M15 6v14"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  euro: '<path d="M18 6a7 7 0 0 0-11 3H5M7 15h2a7 7 0 0 0 9 3"/><path d="M4 12h9"/>',
+  star: '<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/>',
+};
+const d = paths[name] ?? paths.tag;
+---
+
+<svg class={cls} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width={stroke} stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" set:html={d} />

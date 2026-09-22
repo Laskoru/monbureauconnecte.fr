@@ -1,63 +1,72 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
 import { siteConfig } from '../../siteConfig';
 import { guides } from '../../guides';
 
 const published = new Set((await getCollection('articles', ({ data }) => !data.draft)).map((a) => a.slug));
-const guideCounts = guides.map((g) => ({
+const guideCounts = guides.map((g, i) => ({
   ...g,
+  index: String(i + 1).padStart(2, '0'),
   count: g.articles.filter((slug) => published.has(slug)).length,
 }));
 ---
 
 <BaseLayout
-  title="Guides d’achat"
-  description={`Nos guides thématiques pour t’équiper : télétravail, gaming, ergonomie. ${siteConfig.name}.`}
+  title="Guides par besoin"
+  description={`Nos comparatifs rangés par problème concret : télétravail, setup gaming, ergonomie, mal de dos, poignets, petit bureau. ${siteConfig.name}.`}
 >
-  <section class="container guides-index">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Par besoin' }]} />
-    <h1>Nos guides, par besoin</h1>
-    <p class="guides-index__lede">
-      Chaque guide part d’un problème concret du quotidien — mal de dos, poignet douloureux, petit bureau,
-      visio… — et regroupe les comparatifs qui le règlent. Choisis le tien et équipe-toi sans t’éparpiller.
-    </p>
+  <PageHead
+    eyebrow="Navigation par besoin"
+    title="Par où commencer ?"
+    lede="Chaque guide part d'un problème concret — un dos qui tire, des poignets qui chauffent, un bureau trop petit — et te dit quoi lire, dans quel ordre. Choisis ton parcours."
+    crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Par besoin' }]}
+  />
 
-    <div class="guides-index__grid">
-      <article class="guides-index__card card card--hover">
-        <span class="guides-index__icon">🖥️</span>
-        <h2><a class="stretched-link" href="/guide-pc-gaming/">Guide PC gaming pièce par pièce</a></h2>
-        <p class="guides-index__desc">4 configurations complètes selon ton budget, du premier PC au haut de gamme.</p>
-        <p class="guides-index__count">Outil interactif</p>
-      </article>
+  <section class="wide gi">
+    <div class="gi__grid">
       {guideCounts.map((guide) => (
-        <article class="guides-index__card card card--hover">
-          <span class="guides-index__icon">{guide.icon}</span>
-          <h2><a class="stretched-link" href={`/guides/${guide.slug}/`}>{guide.title}</a></h2>
-          <p class="guides-index__desc">{guide.description}</p>
-          <p class="guides-index__count">{guide.count} article{guide.count > 1 ? 's' : ''}</p>
+        <article class="gi__card card card--hover">
+          <div class="gi__top">
+            <span class="gi__icon"><Icon name={guide.slug} size={26} /></span>
+            <span class="gi__num" aria-hidden="true">{guide.index}</span>
+          </div>
+          <h2 class="gi__title"><a class="stretched-link" href={`/guides/${guide.slug}/`}>{guide.title}</a></h2>
+          <p class="gi__desc">{guide.description}</p>
+          <p class="gi__count">{guide.count} comparatif{guide.count > 1 ? 's' : ''} à suivre <Icon name="arrow" size={14} /></p>
         </article>
       ))}
+    </div>
+
+    <div class="gi__tools">
+      <div>
+        <p class="eyebrow">Outils gratuits</p>
+        <h2 class="gi__tools-title">Et pour trancher vite</h2>
+      </div>
+      <div class="gi__tools-links">
+        <a class="btn btn--primary" href="/calculateur-hauteur-bureau/"><Icon name="ruler" size={18} /> Calculer ma hauteur de bureau</a>
+        <a class="btn btn--outline" href="/checklist-bureau-ergonomique/"><Icon name="checklist" size={18} /> Checklist ergonomie</a>
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .guides-index { padding: 2.5rem 0 3.5rem; }
-  .guides-index h1 { margin-top: 0; }
-  .guides-index__lede { color: var(--color-text-muted); font-size: 1.05rem; max-width: 60ch; }
-  .guides-index__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  .guides-index__card { position: relative; padding: 1.6rem 1.5rem; }
-  .guides-index__icon { font-size: 2rem; }
-  .guides-index__card h2 { margin: 0.6rem 0 0.4rem; font-size: 1.25rem; }
-  .guides-index__card h2 a { color: var(--color-text); text-decoration: none; }
-  .guides-index__card:hover h2 a { color: var(--color-accent); }
-  .guides-index__desc { color: var(--color-text-muted); font-size: 0.92rem; margin: 0 0 0.8rem; }
-  .guides-index__count { font-size: 0.82rem; color: var(--color-text-faint); margin: 0; }
+  .gi { padding: 2.2rem 1.25rem 3.5rem; }
+  .gi__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .gi__card { padding: 1.5rem 1.5rem 1.4rem; display: flex; flex-direction: column; }
+  .gi__top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.1rem; }
+  .gi__icon { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: var(--radius); background: var(--color-accent); color: #fff; }
+  .gi__num { font-family: var(--font-display); font-size: 2.6rem; line-height: 1; color: var(--color-border); }
+  .gi__title { margin: 0 0 .5rem; font-size: 1.8rem; }
+  .gi__title a { color: var(--color-text); text-decoration: none; }
+  .gi__card:hover .gi__title a { color: var(--color-accent-text); }
+  .gi__desc { margin: 0 0 1rem; color: var(--color-text-muted); font-size: .96rem; line-height: 1.55; flex: 1; }
+  .gi__count { margin: 0; display: inline-flex; align-items: center; gap: .35em; font-weight: 700; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
+  .gi__tools { margin-top: 2.5rem; padding: 1.6rem 1.8rem; border-radius: var(--radius-lg); background: var(--color-bg-soft); background-image: var(--blueprint-light); background-size: 96px 96px; border: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+  .gi__tools-title { margin: .3rem 0 0; font-size: 1.8rem; }
+  .gi__tools-links { display: flex; gap: .7rem; flex-wrap: wrap; }
+  @media (max-width: 720px) { .gi__grid { grid-template-columns: 1fr; } }
 </style>

@@ -1,0 +1,49 @@
+---
+// En-tête de page intérieure : fond papier brume + courbes de niveau, fil
+// d'Ariane, étiquette, titre condensé et chapeau. Optionnel : icône et nombre.
+import Breadcrumbs from './Breadcrumbs.astro';
+import Icon from './Icon.astro';
+
+interface Crumb { label: string; href?: string }
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lede?: string;
+  icon?: string;
+  crumbs?: Crumb[];
+  count?: string;
+  /** Largeur du contenu : « narrow » (720) ou « wide » (1160). */
+  width?: 'narrow' | 'wide';
+}
+const { eyebrow, title, lede, icon, crumbs, count, width = 'wide' } = Astro.props;
+---
+
+<header class="ph blueprint">
+  <div class:list={['ph__in', width === 'narrow' ? 'container' : 'wide']}>
+    {crumbs && <Breadcrumbs items={crumbs} />}
+    <div class="ph__row">
+      {icon && <span class="ph__icon"><Icon name={icon} size={30} /></span>}
+      <div class="ph__text">
+        {eyebrow && <p class="eyebrow ph__eyebrow">{eyebrow}</p>}
+        <h1 class="ph__title">{title}</h1>
+        {lede && <p class="ph__lede">{lede}</p>}
+        <slot />
+      </div>
+      {count && <p class="ph__count" aria-hidden="true">{count}</p>}
+    </div>
+  </div>
+</header>
+
+<style>
+  .ph { background: var(--color-bg-soft); border-bottom: 1px solid var(--color-border); }
+  .ph__in { padding-top: 1.4rem; padding-bottom: 2.4rem; }
+  .ph__row { display: flex; gap: 1.4rem; align-items: flex-start; }
+  .ph__icon { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius-lg); background: var(--color-accent); color: #fff; margin-top: .3rem; }
+  .ph__text { flex: 1; min-width: 0; }
+  .ph__eyebrow { margin: .3rem 0 .6rem; }
+  .ph__title { margin: 0 0 .7rem; font-size: clamp(2.2rem, 5vw, 3.6rem); }
+  .ph__lede { margin: 0; font-size: 1.1rem; line-height: 1.55; color: var(--color-text-muted); max-width: 64ch; }
+  .ph__count { flex-shrink: 0; margin: 0; align-self: flex-end; font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem); line-height: .85; color: var(--color-border-strong); letter-spacing: .02em; }
+  .container .ph__title { font-size: clamp(2rem, 4.2vw, 3rem); }
+  @media (max-width: 640px) { .ph__count { display: none; } .ph__icon { width: 50px; height: 50px; } }
+</style>

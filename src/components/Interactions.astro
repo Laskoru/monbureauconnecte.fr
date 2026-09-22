@@ -1,0 +1,72 @@
+---
+// Interactions d'interface, mutualisées et légères (aucun impact SEO/LCP) :
+// reveal au scroll, header intelligent, barre de lecture (articles), bouton
+// retour en haut, sommaire actif. Tout respecte prefers-reduced-motion, et le
+// contenu reste visible si le JS ne s'exécute pas.
+---
+
+<button id="toTop" class="to-top" aria-label="Revenir en haut de page">↑</button>
+
+<script>
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 1) Reveal au scroll (uniquement le contenu sous la ligne de flottaison)
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+      }
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add('is-in'));
+  }
+
+  // 2) Header intelligent + retour en haut + barre de lecture (un seul listener passif)
+  const header = document.getElementById('site-header');
+  const toTop = document.getElementById('toTop');
+  const article = document.querySelector('.art, .article');
+  let bar = null;
+  if (article) { bar = document.createElement('div'); bar.className = 'read-progress'; document.body.appendChild(bar); }
+
+  let ticking = false;
+  function onScroll() {
+    const y = window.scrollY || 0;
+    if (header) header.classList.toggle('is-scrolled', y > 24);
+    if (toTop) toTop.classList.toggle('show', y > 600);
+    if (bar) {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')';
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+  toTop && toTop.addEventListener('click', () =>
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
+  );
+
+  // 3) Sommaire actif (scrollspy) sur les articles
+  const tocLinks = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+  if (tocLinks.length && 'IntersectionObserver' in window) {
+    const map = new Map();
+    tocLinks.forEach((a) => {
+      const id = decodeURIComponent(a.getAttribute('href').slice(1));
+      const target = document.getElementById(id);
+      if (target) map.set(target, a);
+    });
+    const spy = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          tocLinks.forEach((l) => l.classList.remove('active'));
+          const link = map.get(e.target);
+          if (link) link.classList.add('active');
+        }
+      }
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    map.forEach((_link, target) => spy.observe(target));
+  }
+</script>

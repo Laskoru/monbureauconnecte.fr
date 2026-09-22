@@ -4,281 +4,243 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { coverSrcSet } from '../lib/covers';
 import ArticleCard from '../components/ArticleCard.astro';
 import GearFinder from '../components/GearFinder.astro';
+import Icon from '../components/Icon.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
 import { guides } from '../guides';
 import { budgets } from '../budgets';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
-const latest = allArticles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 6);
-
+const sorted = [...allArticles].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
 const published = new Set(allArticles.map((a) => a.slug));
 
-// Navigation "par besoin" : nos guides-hubs, chacun répond à un problème concret.
-const needCounts = guides.map((g) => ({
-  ...g,
-  count: g.articles.filter((slug) => published.has(slug)).length,
-}));
-
-// Navigation "par budget"
-const budgetCounts = budgets.map((b) => ({
-  ...b,
-  count: b.articles.filter((slug) => published.has(slug)).length,
-}));
-
-// Barre de confiance — des signaux honnêtes, rien d'inventé.
-const trust = [
-  { icon: '🎯', label: '100% indépendant', note: 'aucun placement payé' },
-  { icon: '🔄', label: 'Mis à jour en 2026', note: 'modèles et prix revus' },
-  { icon: '📐', label: 'Critères mesurables', note: 'pas d’impressions vagues' },
-  { icon: '🤝', label: 'Affiliation transparente', note: 'on l’indique toujours' },
-];
-
-// FAQ générale du site (aussi bon pour le SEO)
-const faqs = [
-  {
-    q: 'Vos comparatifs sont-ils sponsorisés ?',
-    a: "Non. Aucune marque ne paie pour figurer ou être mieux classée. On se rémunère uniquement via les liens affiliés : si tu achètes après avoir cliqué, on touche une petite commission, sans surcoût pour toi. Ça ne change ni nos choix, ni nos critiques.",
-  },
-  {
-    q: 'Comment choisissez-vous les produits recommandés ?',
-    a: "On part toujours d'un usage concret (mal de dos, petit bureau, visio…) et on compare des critères vérifiables : plage de réglage, charge admise, niveau sonore, autonomie. On assume les compromis de chaque modèle plutôt que de gonfler un classement.",
-  },
-  {
-    q: 'À quelle fréquence les articles sont-ils mis à jour ?',
-    a: "Régulièrement. Les modèles conseillés et les prix évoluent vite : on révise les comparatifs pour qu'ils restent d'actualité, et la date de dernière mise à jour est indiquée en haut de chaque article.",
-  },
-  {
-    q: "C'est quoi, un « lien affilié Amazon » ?",
-    a: "C'est un lien qui indique à Amazon que tu viens de chez nous. Si tu achètes, Amazon nous reverse une petite commission — le prix reste exactement le même pour toi. C'est ce qui finance le site et nous permet de rester indépendants.",
-  },
-  {
-    q: 'Pourquoi des liens de recherche plutôt qu’un produit précis ?',
-    a: "Parce qu'un modèle précis peut être en rupture ou changer de prix du jour au lendemain. Un lien vers une recherche Amazon t'amène aux modèles disponibles aujourd'hui, correspondant au type de produit qu'on recommande — plus fiable dans le temps.",
-  },
-];
-
-// Comparatifs de référence : nos guides d'achat phares, un par grand besoin.
-const featuredSlugs = [
-  'bureau-assis-debout-electrique',
-  'meilleures-chaises-gaming',
-  'souris-ergonomique-verticale',
-  'casque-reduction-bruit-teletravail',
-];
+// Comparatifs de référence : 1 grand + 3 compacts, un par grand besoin
+const featuredSlugs = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail'];
 const featured = featuredSlugs.map((s) => bySlug.get(s)).filter(Boolean);
+const [lead, ...side] = featured;
+const latest = sorted.filter((a) => !featuredSlugs.includes(a.slug)).slice(0, 6);
 
-const categoryCounts = categories.map((cat) => ({
-  ...cat,
-  count: allArticles.filter((a) => a.data.category === cat.slug).length,
-}));
+// Navigation par problème : nos guides-hubs
+const needCounts = guides.map((g) => ({ ...g, count: g.articles.filter((slug) => published.has(slug)).length }));
+// Navigation par budget
+const budgetCounts = budgets.map((b) => ({ ...b, count: b.articles.filter((slug) => published.has(slug)).length }));
+const categoryCounts = categories.map((cat) => ({ ...cat, count: allArticles.filter((a) => a.data.category === cat.slug).length }));
 
-const stats = [
-  { value: String(allArticles.length), label: 'Comparatifs publiés' },
-  { value: String(guides.length), label: 'Besoins couverts' },
-  { value: '100%', label: 'Rédaction indépendante' },
+const promises = [
+  { icon: 'shield', label: '100 % indépendant', note: 'aucun placement payé' },
+  { icon: 'ruler', label: 'Critères mesurables', note: 'plage de réglage, charge, dB, autonomie' },
+  { icon: 'refresh', label: 'Mis à jour en 2026', note: 'modèles et prix revus' },
+  { icon: 'tag', label: 'Affiliation transparente', note: 'sans surcoût pour toi' },
+];
+
+const tools = [
+  { icon: 'posture', title: 'Le poste de travail idéal', desc: 'Le schéma coté des 7 repères : écran, coudes, dos, pieds.', href: '/poste-de-travail-ideal/', cta: 'Voir le schéma' },
+  { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Bureau assis et debout, siège et écran calculés selon ta taille.', href: '/calculateur-hauteur-bureau/', cta: 'Calculer' },
+  { icon: 'checklist', title: 'Checklist ergonomie', desc: 'Le tour complet pour vérifier que ton poste est bien réglé.', href: '/checklist-bureau-ergonomique/', cta: 'Vérifier' },
+  { icon: 'cpu', title: 'Guide PC gaming pièce par pièce', desc: '4 configurations complètes selon ton budget, du premier PC au haut de gamme.', href: '/guide-pc-gaming/', cta: 'Découvrir' },
+  { icon: 'book', title: 'Lexique du bureau', desc: 'VESA, DPI, ANC, Power Delivery, switchs : les termes expliqués simplement.', href: '/lexique/', cta: 'Consulter' },
+];
+
+// FAQ générale du site (aussi bonne pour le SEO)
+const faqs = [
+  { q: 'Vos comparatifs sont-ils sponsorisés ?', a: "Non. Aucune marque ne paie pour figurer ou être mieux classée. On se rémunère uniquement via les liens affiliés : si tu achètes après avoir cliqué, on touche une petite commission, sans surcoût pour toi. Ça ne change ni nos choix, ni nos critiques." },
+  { q: 'Comment choisissez-vous les produits recommandés ?', a: "On part toujours d'un usage concret (mal de dos, petit bureau, visio…) et on compare des critères vérifiables : plage de réglage, charge admise, niveau sonore, autonomie. On assume les compromis de chaque modèle plutôt que de gonfler un classement." },
+  { q: 'À quelle fréquence les articles sont-ils mis à jour ?', a: "Régulièrement. Les modèles conseillés et les prix évoluent vite : on révise les comparatifs pour qu'ils restent d'actualité, et la date de dernière mise à jour est indiquée en haut de chaque article." },
+  { q: "C'est quoi, un « lien affilié Amazon » ?", a: "C'est un lien qui indique à Amazon que tu viens de chez nous. Si tu achètes, Amazon nous reverse une petite commission — le prix reste exactement le même pour toi. C'est ce qui finance le site et nous permet de rester indépendants." },
+  { q: 'Pourquoi des liens de recherche plutôt qu’un produit précis ?', a: "Parce qu'un modèle précis peut être en rupture ou changer de prix du jour au lendemain. Un lien vers une recherche Amazon t'amène aux modèles disponibles aujourd'hui, correspondant au type de produit qu'on recommande — plus fiable dans le temps." },
 ];
 ---
 
 <BaseLayout title="Mon Bureau Connecté — bureau, gaming & télétravail" description={siteConfig.description}>
+  <!-- ═══════ HERO : photo + fiche de réglage ═══════ -->
   <section class="hero">
-    <img class="hero__bg" src="/covers/bureau-assis-debout-electrique.webp" srcset={coverSrcSet("/covers/bureau-assis-debout-electrique.webp")} sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" />
-    <div class="hero__scrim"></div>
-    <div class="wide hero__inner">
-      <p class="hero__badge"><span class="hero__badge-dot"></span> Comparatifs indépendants · bureau · gaming · télétravail</p>
-      <h1 class="hero__title">Le matériel qui transforme ton <span class="hero__hl">bureau</span> en poste de pro.</h1>
-      <p class="hero__lede">{siteConfig.tagline} — pour choisir juste, sans te faire avoir par le marketing.</p>
-      <div class="hero__actions">
-        {latest.length > 0 && (
-          <a class="btn btn--primary" href={`/articles/${latest[0].slug}/`}>Lire le dernier comparatif →</a>
-        )}
-        <a class="btn btn--outline" href="/articles/">Voir tous les articles</a>
+    <img class="hero__bg" src="/covers/bureau-assis-debout-electrique.webp" srcset={coverSrcSet('/covers/bureau-assis-debout-electrique.webp')} sizes="100vw" width="1600" height="900" fetchpriority="high" decoding="async" alt="Poste de travail avec bureau assis-debout, écran sur bras et fauteuil ergonomique" />
+    <div class="wide hero__grid">
+      <div class="hero__text">
+        <p class="hero__eyebrow"><span class="hero__tick" aria-hidden="true"></span> Bureau · Gaming · Télétravail</p>
+        <h1 class="hero__title">Un poste de travail réglé <span class="hero__hl">au millimètre.</span></h1>
+        <p class="hero__lede">Comparatifs indépendants et outils gratuits pour choisir chaise, bureau, périphériques et casque sur des critères mesurables — pas sur le marketing.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="/guides/"><Icon name="sliders" size={18} /> Trouver par problème</a>
+          <a class="btn btn--ghost-night" href="/articles/">Tous les comparatifs</a>
+        </div>
+        <p class="hero__data" aria-label="Le site en chiffres"><span><b>{allArticles.length}</b> comparatifs</span><span><b>{guides.length}</b> problèmes couverts</span><span><b>0</b> placement payé</span></p>
       </div>
 
-      <div class="hero__stats">
-        {stats.map((stat) => (
-          <div class="hero__stat">
-            <p class="hero__stat-value">{stat.value}</p>
-            <p class="hero__stat-label">{stat.label}</p>
-          </div>
-        ))}
-      </div>
+      <aside class="fr" aria-label="Fiche de réglage : la hauteur de ton bureau selon ta taille">
+        <p class="fr__title"><Icon name="ruler" size={16} /> Fiche de réglage</p>
+        <label class="fr__field" for="fr-taille">
+          <span class="fr__label">Ta taille</span>
+          <span class="fr__val"><output id="fr-out" for="fr-taille">175</output> cm</span>
+        </label>
+        <input class="fr__range" type="range" id="fr-taille" min="140" max="210" value="175" step="1" aria-label="Ta taille en centimètres" />
+        <dl class="fr__specs">
+          <div><dt>Plateau assis</dt><dd><b data-fr="0.42">74</b> cm</dd></div>
+          <div><dt>Plateau debout</dt><dd><b data-fr="0.62">109</b> cm</dd></div>
+          <div><dt>Assise du siège</dt><dd><b data-fr="0.25">44</b> cm</dd></div>
+          <div><dt>Haut de l'écran</dt><dd><b data-fr="0.70">123</b> cm</dd></div>
+        </dl>
+        <p class="fr__verdict" id="fr-verdict">Un bureau standard (74 cm) est à ta hauteur.</p>
+        <a class="fr__more" href="/calculateur-hauteur-bureau/">Le détail, le schéma et quoi corriger <Icon name="arrow" size={14} /></a>
+      </aside>
     </div>
   </section>
 
-  <div class="trustband">
-    <div class="wide trustband__inner">
-      {trust.map((t) => (
-        <div class="trustband__item">
-          <span class="trustband__icon">{t.icon}</span>
-          <span class="trustband__text">
-            <strong>{t.label}</strong>
-            <span>{t.note}</span>
-          </span>
-        </div>
+  <!-- ═══════ PROMESSES ═══════ -->
+  <div class="promises">
+    <ul class="wide promises__list">
+      {promises.map((p) => (
+        <li><Icon name={p.icon} size={20} /><span><strong>{p.label}</strong><small>{p.note}</small></span></li>
       ))}
-    </div>
+    </ul>
   </div>
 
-  <GearFinder />
-
-  <section class="section section--soft" id="besoins">
+  <!-- ═══════ PAR PROBLÈME ═══════ -->
+  <section class="section section--soft blueprint" id="besoins">
     <div class="wide">
-      <p class="section__eyebrow">Par besoin</p>
-      <h2 class="section__title">Quel est ton problème ?</h2>
-      <p class="section__lede">
-        Nos guides sont organisés autour des situations les plus fréquentes au bureau. Choisis la tienne :
-        on t'emmène directement aux comparatifs qui la règlent.
-      </p>
-      <div class="needs__grid">
-        {needCounts.map((need) => (
-          <a class="needs__item card card--hover" href={`/guides/${need.slug}/`}>
-            <span class="needs__icon">{need.icon}</span>
-            <span class="needs__label">{need.title}</span>
-            <span class="needs__desc">{need.description}</span>
-            <span class="needs__count">{need.count} comparatif{need.count > 1 ? 's' : ''} →</span>
+      <div class="section__head">
+        <div><p class="eyebrow section__eyebrow">Navigation par besoin</p><h2 class="section__title">Quel est ton problème ?</h2></div>
+        <a class="section__link" href="/guides/">Tous les guides <Icon name="arrow" size={16} /></a>
+      </div>
+      <p class="section__lede">Nos comparatifs sont rangés par situation réelle. Choisis la tienne : on t'emmène droit aux produits qui la règlent, dans l'ordre.</p>
+      <div class="needs reveal">
+        {needCounts.map((n) => (
+          <a class="need card card--hover" href={`/guides/${n.slug}/`}>
+            <span class="need__icon"><Icon name={n.slug} size={22} /></span>
+            <span class="need__body">
+              <span class="need__title">{n.title}</span>
+              <span class="need__count">{n.count} comparatif{n.count > 1 ? 's' : ''}</span>
+            </span>
+            <Icon name="arrow" size={18} class="need__arrow" />
           </a>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- ═══════ PAR BUDGET ═══════ -->
   <section class="section">
     <div class="wide">
-      <p class="section__eyebrow">Par budget</p>
-      <h2 class="section__title">Combien veux-tu y mettre ?</h2>
+      <div class="section__head">
+        <div><p class="eyebrow section__eyebrow">Par budget</p><h2 class="section__title">Combien veux-tu y mettre ?</h2></div>
+        <a class="section__link" href="/budget/">Choisir par budget <Icon name="arrow" size={16} /></a>
+      </div>
       <p class="section__lede">Chaque enveloppe a ses bons choix. Du geste gratuit à l'investissement qui dure.</p>
-      <div class="budgets__grid">
+      <div class="budgets reveal">
         {budgetCounts.map((b) => (
-          <a class="budgets__item card card--hover" href={`/budget/${b.slug}/`}>
-            <span class="budgets__icon">{b.icon}</span>
-            <span class="budgets__label">{b.label}</span>
-            <span class="budgets__range">{b.range}</span>
-            <span class="budgets__desc">{b.tagline}</span>
-            <span class="budgets__count">{b.count} comparatif{b.count > 1 ? 's' : ''} →</span>
+          <a class="budget card card--hover" href={`/budget/${b.slug}/`}>
+            <span class="budget__top"><span class="budget__icon"><Icon name={b.slug} size={22} /></span><span class="spec budget__range"><b>{b.range}</b></span></span>
+            <span class="budget__label">{b.label}</span>
+            <span class="budget__desc">{b.tagline}</span>
+            <span class="budget__count">{b.count} comparatif{b.count > 1 ? 's' : ''} <Icon name="arrow" size={14} /></span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  {featured.length > 0 && (
+  <!-- ═══════ INCONTOURNABLES ═══════ -->
+  {lead && (
     <section class="section section--soft">
       <div class="wide">
         <div class="section__head">
-          <div>
-            <p class="section__eyebrow">La sélection de la rédaction</p>
-            <h2 class="section__title">Nos incontournables</h2>
-          </div>
-          <a class="section__link" href="/articles/">Tous les comparatifs →</a>
+          <div><p class="eyebrow section__eyebrow">La sélection de la rédaction</p><h2 class="section__title">Les comparatifs de référence</h2></div>
+          <a class="section__link" href="/articles/">Tous les comparatifs <Icon name="arrow" size={16} /></a>
         </div>
-        <p class="section__lede">Les guides d'achat qu'on recommande les yeux fermés — un pour chaque grand besoin, testés sur les critères qui comptent.</p>
-        <div class="featured__grid">
-          {featured.map((article) => <ArticleCard article={article} />)}
+        <div class="una reveal">
+          <div class="una__lead"><ArticleCard article={lead} variant="feature" eager /></div>
+          <div class="una__side">{side.map((a) => <ArticleCard article={a} variant="row" />)}</div>
         </div>
       </div>
     </section>
   )}
 
-  <section class="section">
-    <div class="wide">
-      <div class="section__head">
-        <div>
-          <p class="section__eyebrow">Derniers articles</p>
-          <h2 class="section__title">Les comparatifs récents</h2>
-        </div>
-        <a class="section__link" href="/articles/">Voir tout →</a>
-      </div>
-      <div class="article-list">
-        {latest.length === 0 && <p>Aucun article publié pour le moment.</p>}
-        {latest.map((article) => <ArticleCard article={article} />)}
-      </div>
-    </div>
-  </section>
+  <GearFinder />
 
-  <section class="section section--soft">
+  <!-- ═══════ CATÉGORIES ═══════ -->
+  <section class="section" id="categories">
     <div class="wide">
-      <p class="section__eyebrow">Par type de matériel</p>
-      <h2 class="section__title">Ou parcours par catégorie</h2>
-      <p class="section__lede">Tu sais déjà ce que tu cherches ? Va droit au rayon.</p>
-      <div class="categories__grid">
+      <p class="eyebrow section__eyebrow">Par type de matériel</p>
+      <h2 class="section__title">Ou va droit au rayon</h2>
+      <p class="section__lede">Tu sais déjà ce que tu cherches ? Mobilier, périphériques, audio & visio, PC gaming.</p>
+      <div class="cats reveal">
         {categoryCounts.map((cat) => (
-          <a class="categories__item card card--hover" href={`/categorie/${cat.slug}/`}>
-            <span class="categories__icon">{cat.icon}</span>
-            <span class="categories__label">{cat.label}</span>
-            <span class="categories__desc">{cat.description}</span>
-            <span class="categories__count">{cat.count} article{cat.count > 1 ? 's' : ''} →</span>
+          <a class="cat card card--hover" href={`/categorie/${cat.slug}/`}>
+            <span class="cat__icon"><Icon name={cat.slug} size={24} /></span>
+            <span class="cat__label">{cat.label}</span>
+            <span class="cat__desc">{cat.description}</span>
+            <span class="cat__count">{cat.count} comparatif{cat.count > 1 ? 's' : ''} <Icon name="arrow" size={14} /></span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="section" id="outils">
+  <!-- ═══════ DERNIERS COMPARATIFS ═══════ -->
+  {latest.length > 0 && (
+    <section class="section section--soft">
+      <div class="wide">
+        <div class="section__head">
+          <div><p class="eyebrow section__eyebrow">Fraîchement publiés</p><h2 class="section__title">Les derniers comparatifs</h2></div>
+          <a class="section__link" href="/articles/">Voir tout <Icon name="arrow" size={16} /></a>
+        </div>
+        <div class="grid3 reveal">{latest.map((a) => <ArticleCard article={a} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══════ OUTILS ═══════ -->
+  <section class="section blueprint" id="outils">
     <div class="wide">
-      <p class="section__eyebrow">Outils gratuits</p>
-      <h2 class="section__title">Va plus vite avec nos guides interactifs</h2>
-      <div class="tools__grid">
-        <a class="tools__item card card--hover" href="/guide-pc-gaming/">
-          <span class="tools__icon">🖥️</span>
-          <span class="tools__label">Guide PC gaming pièce par pièce</span>
-          <span class="tools__desc">4 configurations complètes selon ton budget, du premier PC au haut de gamme.</span>
-          <span class="tools__cta">Découvrir →</span>
-        </a>
-        <a class="tools__item card card--hover" href="/calculateur-hauteur-bureau/">
-          <span class="tools__icon">📐</span>
-          <span class="tools__label">Calculateur de hauteur de bureau</span>
-          <span class="tools__desc">Les bonnes hauteurs de bureau, siège et écran calculées selon ta taille.</span>
-          <span class="tools__cta">Calculer →</span>
-        </a>
-        <a class="tools__item card card--hover" href="/checklist-bureau-ergonomique/">
-          <span class="tools__icon">✅</span>
-          <span class="tools__label">Checklist ergonomie</span>
-          <span class="tools__desc">Le tour complet pour vérifier que ton poste est bien réglé.</span>
-          <span class="tools__cta">Vérifier →</span>
-        </a>
+      <div class="section__head">
+        <div><p class="eyebrow section__eyebrow">Outils gratuits</p><h2 class="section__title">Règle ton poste avant d'acheter</h2></div>
+        <a class="section__link" href="/outils/">Tous les outils <Icon name="arrow" size={16} /></a>
+      </div>
+      <p class="section__lede">Souvent, le premier gain ne coûte rien : un écran à la bonne hauteur, un siège bien réglé. Nos outils te donnent les cotes.</p>
+      <div class="tools reveal">
+        {tools.map((t) => (
+          <a class="tool card card--hover" href={t.href}>
+            <span class="tool__icon"><Icon name={t.icon} size={22} /></span>
+            <span class="tool__title">{t.title}</span>
+            <span class="tool__desc">{t.desc}</span>
+            <span class="tool__cta">{t.cta} <Icon name="arrow" size={14} /></span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
+  <!-- ═══════ MÉTHODE ═══════ -->
   <section class="section section--soft">
-    <div class="wide approach">
-      <div class="approach__text">
-        <p class="section__eyebrow">Notre méthode</p>
-        <h2 class="section__title">Pourquoi nous faire confiance</h2>
-        <p>
-          Chaque comparatif part d'un usage concret — setup gaming, télétravail, bureau plus confortable —
-          et compare des critères <strong>mesurables</strong> : charge admise, plage de réglage, niveau sonore,
-          autonomie. Pas d'impressions vagues ni de classements gonflés artificiellement.
-        </p>
-        <p>
-          On est <strong>100 % indépendants</strong> : aucune marque ne paie pour figurer. Le site se finance
-          via l'affiliation — une petite commission si tu achètes, sans surcoût pour toi — et on l'indique
-          toujours clairement. Les comparatifs sont revus régulièrement pour rester d'actualité.
-        </p>
-        <a class="btn btn--outline" href="/a-propos/">Découvrir notre méthode en détail</a>
+    <div class="wide method reveal">
+      <div class="method__text">
+        <p class="eyebrow section__eyebrow">Notre méthode</p>
+        <h2 class="section__title">Des critères qu'on peut mesurer, pas des impressions</h2>
+        <p>Chaque comparatif part d'un usage concret — setup gaming, télétravail, dos fragile — et compare ce qui se vérifie : <strong>plage de réglage, charge admise, niveau sonore, autonomie, compatibilité</strong>. Pas de classement gonflé, pas de « meilleur » universel qui n'existe pas.</p>
+        <p>Le site est <strong>100 % indépendant</strong> : aucune marque ne paie pour figurer. On se finance par l'affiliation, et on l'indique toujours.</p>
+        <a class="btn btn--outline" href="/a-propos/">Notre méthode en détail</a>
       </div>
-      <ul class="approach__points">
-        <li><span>✓</span> Critères concrets et vérifiables</li>
-        <li><span>✓</span> Aucune marque sponsorisée</li>
-        <li><span>✓</span> Affiliation transparente, sans surcoût</li>
-        <li><span>✓</span> Comparatifs mis à jour dans le temps</li>
-      </ul>
+      <dl class="method__specs">
+        <div><dt>Critères</dt><dd>Mesurables et vérifiables</dd></div>
+        <div><dt>Marques</dt><dd>Aucune sponsorisée</dd></div>
+        <div><dt>Avis affichés</dt><dd>Vraies notes Amazon, jamais retouchées</dd></div>
+        <div><dt>Révision</dt><dd>Comparatifs relus dans le temps</dd></div>
+        <div><dt>Affiliation</dt><dd>Transparente, sans surcoût</dd></div>
+      </dl>
     </div>
   </section>
 
+  <!-- ═══════ FAQ ═══════ -->
   <section class="section" id="faq">
     <div class="wide faq">
-      <p class="section__eyebrow">FAQ</p>
+      <p class="eyebrow section__eyebrow">FAQ</p>
       <h2 class="section__title">Les questions qu'on nous pose</h2>
       <p class="section__lede">Transparence totale sur notre fonctionnement et notre indépendance.</p>
-      <div class="faq__list">
+      <div class="faq__list reveal">
         {faqs.map((item, i) => (
           <details class="faq__item" open={i === 0}>
-            <summary class="faq__q">
-              <span>{item.q}</span>
-              <span class="faq__chevron" aria-hidden="true"></span>
-            </summary>
+            <summary class="faq__q"><span class="faq__idx" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><span>{item.q}</span><span class="faq__chevron" aria-hidden="true"></span></summary>
             <p class="faq__a">{item.a}</p>
           </details>
         ))}
@@ -286,381 +248,163 @@ const stats = [
     </div>
   </section>
 
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: faqs.map((f) => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
-      })),
-    })}
-  />
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
 </BaseLayout>
 
-<style>
-  .hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    background:
-      radial-gradient(75% 120% at 88% -12%, color-mix(in srgb, var(--color-accent) 13%, transparent), transparent 60%),
-      radial-gradient(60% 90% at 6% 0%, color-mix(in srgb, var(--color-signal) 9%, transparent), transparent 55%),
-      linear-gradient(180deg, #ffffff 0%, var(--color-bg) 100%);
-    border-bottom: 1px solid var(--color-border);
-  }
-  /* fine grille de points, très discrète, fondue vers le coin haut-droit */
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(color-mix(in srgb, var(--color-text) 7%, transparent) 1px, transparent 1.4px);
-    background-size: 24px 24px;
-    -webkit-mask-image: radial-gradient(72% 65% at 85% 0%, #000, transparent 72%);
-    mask-image: radial-gradient(72% 65% at 85% 0%, #000, transparent 72%);
-    opacity: 0.55;
-    z-index: -1;
-    pointer-events: none;
-  }
-  .hero__inner {
-    padding: clamp(3.4rem, 11vh, 6.5rem) 1.25rem clamp(3rem, 8vh, 5rem);
-  }
-  .hero__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55em;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-    padding: 0.5em 1em;
-    border-radius: 999px;
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    color: var(--color-text-muted);
-    margin: 0 0 1.6rem;
-  }
-  .hero__badge-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--color-signal);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-signal) 22%, transparent);
-  }
-  .hero__title {
-    font-size: clamp(2.4rem, 5.4vw, 4rem);
-    line-height: 1.04;
-    letter-spacing: -0.02em;
-    margin: 0 0 1.3rem;
-    max-width: 18ch;
-    text-wrap: balance;
-    color: var(--color-text);
-  }
-  .hero__hl {
-    color: var(--color-accent);
-    background: linear-gradient(180deg, transparent 64%, color-mix(in srgb, var(--color-signal) 32%, transparent) 64%);
-    padding: 0 0.05em;
-    white-space: nowrap;
-  }
-  .hero__lede {
-    font-family: var(--font-body);
-    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
-    line-height: 1.65;
-    color: var(--color-text-muted);
-    max-width: 56ch;
-    margin: 0 0 2rem;
-  }
-  .hero__actions { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 3rem; }
-
-  .hero__stats {
-    display: flex;
-    gap: clamp(1.5rem, 5vw, 3.5rem);
-    flex-wrap: wrap;
-    padding-top: 1.8rem;
-    border-top: 1px solid var(--color-border);
-    max-width: 560px;
-  }
-  .hero__stat-value {
-    font-family: var(--font-display);
-    font-size: clamp(1.9rem, 3vw, 2.4rem);
-    font-weight: 600;
-    margin: 0;
-    color: var(--color-text);
-  }
-  .hero__stat-label {
-    font-family: var(--font-body);
-    font-size: 0.82rem;
-    color: var(--color-text-muted);
-    margin: 0.2rem 0 0;
-  }
-
-  /* ---- Sections génériques ---- */
-  .section { padding: 3.6rem 0; scroll-margin-top: 5rem; }
-  .section--soft { background: var(--color-bg-soft); }
-  .section__eyebrow {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-accent-text);
-    margin: 0 0 0.5rem;
-  }
-  .section__title { margin: 0 0 0.5rem; font-size: clamp(1.5rem, 3vw, 2rem); }
-  .section__lede { color: var(--color-text-muted); margin: 0 0 1.8rem; max-width: 60ch; }
-  .section__head {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1.8rem;
-  }
-  .section__head .section__title { margin-bottom: 0; }
-  .section__link {
-    font-weight: 600;
-    font-size: 0.92rem;
-    text-decoration: none;
-    color: var(--color-accent-text);
-    white-space: nowrap;
-  }
-  .section__link:hover { text-decoration: underline; }
-
-  /* ---- Outils gratuits ---- */
-  .tools__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    margin-top: 1.8rem;
-  }
-  .tools__item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.6rem 1.5rem;
-  }
-  .tools__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    background: var(--color-accent-soft);
-    margin-bottom: 1rem;
-  }
-  .tools__label { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
-  .tools__desc { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0.3rem 0 1rem; flex: 1; }
-  .tools__cta { font-size: 0.82rem; font-weight: 600; color: var(--color-accent); }
-
-  /* ---- Catégories ---- */
-  .categories__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 1rem;
-  }
-  .categories__item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.6rem 1.5rem;
-  }
-  .categories__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    background: var(--color-accent-soft);
-    margin-bottom: 1rem;
-  }
-  .categories__label { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
-  .categories__desc { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0.3rem 0 1rem; flex: 1; }
-  .categories__count { font-size: 0.82rem; font-weight: 600; color: var(--color-accent-text); }
-
-  /* ---- Par besoin (problèmes) ---- */
-  .needs__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1.8rem;
-  }
-  .needs__item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.6rem 1.5rem;
-  }
-  .needs__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    font-size: 1.6rem;
-    border-radius: 14px;
-    background: var(--color-accent-soft);
-    margin-bottom: 1rem;
-  }
-  .needs__label { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; }
-  .needs__desc { color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0.45rem 0 1rem; flex: 1; }
-  .needs__count { font-size: 0.82rem; font-weight: 600; color: var(--color-accent-text); }
-
-  /* ---- Comparatifs de référence ---- */
-  .featured__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  /* ---- Barre de confiance ---- */
-  .trustband {
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
-  }
-  .trustband__inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    padding-top: 1.1rem;
-    padding-bottom: 1.1rem;
-  }
-  .trustband__item { display: flex; align-items: center; gap: 0.7rem; }
-  .trustband__icon {
-    font-size: 1.2rem;
-    width: 40px; height: 40px;
-    display: inline-flex; align-items: center; justify-content: center;
-    background: var(--color-accent-soft);
-    border-radius: 10px;
-    flex-shrink: 0;
-  }
-  .trustband__text { display: flex; flex-direction: column; line-height: 1.25; }
-  .trustband__text strong { font-size: 0.9rem; color: var(--color-text); }
-  .trustband__text span { font-size: 0.78rem; color: var(--color-text-muted); }
-
-  /* ---- Par budget ---- */
-  .budgets__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1.8rem;
-  }
-  .budgets__item {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    padding: 1.6rem 1.5rem;
-  }
-  .budgets__icon {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 48px; height: 48px; font-size: 1.5rem;
-    border-radius: 12px; background: var(--color-accent-soft);
-    margin-bottom: 1rem;
-  }
-  .budgets__label { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; }
-  .budgets__range { font-size: 0.8rem; font-weight: 600; color: var(--color-accent); margin: 0.2rem 0 0.5rem; }
-  .budgets__desc { color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.5; margin: 0 0 1rem; flex: 1; }
-  .budgets__count { font-size: 0.82rem; font-weight: 600; color: var(--color-accent); }
-
-  /* ---- FAQ ---- */
-  .faq__list { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 0.75rem; max-width: 780px; }
-  .faq__item {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: 0 1.3rem;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .faq__item[open] { border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-border)); box-shadow: var(--shadow-sm); }
-  .faq__q {
-    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    cursor: pointer; list-style: none;
-    padding: 1.1rem 0;
-    font-family: var(--font-display); font-weight: 600; font-size: 1.05rem;
-    color: var(--color-text);
-  }
-  .faq__q::-webkit-details-marker { display: none; }
-  .faq__chevron {
-    flex-shrink: 0; width: 12px; height: 12px;
-    border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent);
-    transform: rotate(45deg); transition: transform 0.2s ease;
-    margin-right: 4px; margin-bottom: 3px;
-  }
-  .faq__item[open] .faq__chevron { transform: rotate(-135deg); margin-bottom: -3px; }
-  .faq__a { margin: 0 0 1.2rem; color: var(--color-text-muted); line-height: 1.7; max-width: 68ch; }
-
-  /* ---- Derniers articles ---- */
-  .article-list { display: flex; flex-direction: column; gap: 1rem; }
-
-  /* ---- Approche ---- */
-  .approach {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 2.5rem;
-    align-items: center;
-  }
-  .approach__text .section__title { margin-bottom: 1rem; }
-  .approach__text p { color: var(--color-text-muted); line-height: 1.7; }
-  .approach__text .btn { margin-top: 0.8rem; }
-  .approach__points {
-    list-style: none;
-    margin: 0;
-    padding: 1.5rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-surface);
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-  }
-  .approach__points li { display: flex; gap: 0.7rem; align-items: flex-start; line-height: 1.4; }
-  .approach__points span {
-    color: var(--color-accent);
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
-  @media (max-width: 880px) {
-    .needs__grid { grid-template-columns: repeat(2, 1fr); }
-    .trustband__inner { grid-template-columns: repeat(2, 1fr); row-gap: 0.9rem; }
-  }
-  @media (max-width: 780px) {
-    .approach { grid-template-columns: 1fr; gap: 1.6rem; }
-    .featured__grid { grid-template-columns: 1fr; }
-    .budgets__grid { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 680px) {
-    .categories__grid { grid-template-columns: 1fr; }
-    .needs__grid { grid-template-columns: 1fr; }
-  }
-
-  /* ── Hero photographique immersif (design) ── */
-  .hero { position: relative; overflow: hidden; background: #0e1626; }
-  .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-  .hero__scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,20,40,0.58) 0%, rgba(9,15,30,0.84) 100%); }
-  .hero__inner { position: relative; z-index: 1; }
-  .hero__badge { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.28); color: #fff; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
-  .hero__title { color: #fff; }
-  .hero__lede { color: rgba(255,255,255,0.88); }
-  .hero .btn--outline { color: #fff; border-color: rgba(255,255,255,0.55); background: transparent; }
-  .hero .btn--outline:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
-  .hero__stats { border-top-color: rgba(255,255,255,0.22); }
-  .hero__stat-value { color: #fff; }
-  .hero__stat-label { color: rgba(255,255,255,0.75); }
-</style>
-
-<script>
-  // Compteurs animés du hero
-  document.querySelectorAll('.hero__stat-value').forEach((el) => {
-    const raw = el.textContent || ''; const m = raw.match(/\d+/); if (!m) return;
-    const end = +m[0], post = raw.slice(m.index + m[0].length); let cur = 0;
-    const step = Math.max(1, Math.ceil(end / 26));
-    const t = setInterval(() => { cur += step; if (cur >= end) { cur = end; clearInterval(t); } el.textContent = cur + post; }, 26);
-  });
+<script is:inline>
+  (function () {
+    // Fiche de réglage du hero : mêmes ratios que le calculateur (points de départ à ajuster)
+    var r = document.getElementById('fr-taille'), o = document.getElementById('fr-out'), v = document.getElementById('fr-verdict');
+    if (!r) return;
+    var outs = document.querySelectorAll('[data-fr]');
+    function update() {
+      var t = Number(r.value); o.textContent = t;
+      outs.forEach(function (el) { el.textContent = Math.round(t * Number(el.getAttribute('data-fr'))); });
+      var assis = Math.round(t * 0.42), d = assis - 74;
+      v.textContent = Math.abs(d) <= 2 ? 'Un bureau standard (74 cm) est à ta hauteur.' : d < 0 ? 'Un bureau standard (74 cm) est ' + Math.abs(d) + ' cm trop haut pour toi : pense au repose-pieds ou au bureau réglable.' : 'Un bureau standard (74 cm) est ' + d + ' cm trop bas pour toi : un bureau réglable règle ça.';
+    }
+    r.addEventListener('input', update); update();
+  })();
 </script>
+
+<style>
+  /* ═══ HERO ═══ */
+  .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--color-night); color: var(--color-on-night); }
+  .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; z-index: -2; transform-origin: 60% 50%; animation: hero-zoom 34s ease-in-out infinite alternate; will-change: transform; }
+  @keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.06); } }
+  .hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(11,21,48,.95) 0%, rgba(11,21,48,.8) 40%, rgba(11,21,48,.4) 72%, rgba(11,21,48,.55) 100%), linear-gradient(0deg, rgba(11,21,48,.92) 0%, rgba(11,21,48,0) 45%); }
+  .hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background-image: var(--grid-dark); background-size: 96px 96px; opacity: .5; -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 60%); mask-image: linear-gradient(90deg, #000 0%, transparent 60%); pointer-events: none; }
+  .hero__grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, 400px); gap: 3rem; align-items: center; padding-top: clamp(2.5rem, 6vh, 4.5rem); padding-bottom: clamp(2.5rem, 6vh, 4rem); min-height: min(640px, calc(100vh - 68px)); }
+  .hero__eyebrow { display: inline-flex; align-items: center; gap: .6em; margin: 0 0 1rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-signal); }
+  .hero__tick { width: 14px; height: 2px; background: var(--color-signal); }
+  .hero__title { font-size: clamp(2.5rem, 5vw, 4.4rem); line-height: 1; margin: 0 0 1.1rem; color: #fff; font-weight: 800; font-stretch: 112%; letter-spacing: -.03em; text-shadow: 0 2px 30px rgba(0,0,0,.35); max-width: 15ch; }
+  .hero__hl { color: var(--color-signal); }
+  .hero__lede { font-size: clamp(1.05rem, 1.6vw, 1.18rem); color: #d9e0ee; max-width: 52ch; margin: 0 0 1.8rem; line-height: 1.55; }
+  .hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .hero__data { display: flex; gap: 1.6rem; flex-wrap: wrap; margin: 0; padding-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.18); font-family: var(--font-mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-on-night-muted); }
+  .hero__data b { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 1.5rem; color: #fff; margin-right: .3em; }
+  @media (min-width: 900px) and (max-height: 760px) {
+    .hero__grid { padding-top: 2rem; padding-bottom: 2rem; gap: 2rem; }
+    .hero__title { font-size: clamp(2.3rem, 4.2vw, 3.6rem); margin-bottom: .8rem; }
+    .hero__lede { font-size: 1.02rem; margin-bottom: 1.2rem; }
+    .hero__cta { margin-bottom: 1.2rem; }
+    .hero__data { padding-top: .9rem; }
+    .hero__data b { font-size: 1.25rem; }
+    .fr { padding: 1rem 1.1rem .9rem; }
+    .fr__specs { gap: .5rem .8rem; }
+  }
+
+  /* Fiche de réglage (carte du hero) : papier millimétré, repères de coin */
+  .fr { position: relative; background: var(--color-surface); background-image: var(--grid-light); background-size: 96px 96px; color: var(--color-text); border-radius: var(--radius-lg); padding: 1.25rem 1.3rem 1.1rem; box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-signal); }
+  .fr::before, .fr::after { content: ''; position: absolute; width: 10px; height: 10px; border: 2px solid var(--color-accent); pointer-events: none; }
+  .fr::before { left: 8px; bottom: 8px; border-top: 0; border-right: 0; }
+  .fr::after { right: 8px; bottom: 8px; border-top: 0; border-left: 0; }
+  .fr__title { margin: 0 0 .9rem; display: flex; align-items: center; gap: .5em; font-family: var(--font-mono); font-weight: 500; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-accent-text); }
+  .fr__field { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .4rem; }
+  .fr__label { font-weight: 600; font-size: .95rem; }
+  .fr__val { font-family: var(--font-mono); font-size: .9rem; color: var(--color-text-muted); }
+  .fr__val output { font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 1.6rem; color: var(--color-text); font-variant-numeric: tabular-nums; }
+  .fr__range { width: 100%; accent-color: var(--color-accent); margin: 0 0 1rem; height: 28px; cursor: pointer; }
+  .fr__specs { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem .9rem; margin: 0 0 .9rem; padding-top: .9rem; border-top: 1px dashed var(--color-border-strong); }
+  .fr__specs div { display: flex; flex-direction: column; gap: .1rem; }
+  .fr__specs dt { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-text-muted); }
+  .fr__specs dd { margin: 0; font-size: .95rem; color: var(--color-text-muted); }
+  .fr__specs dd b { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; color: var(--color-text); font-variant-numeric: tabular-nums; margin-right: .15em; }
+  .fr__verdict { margin: 0 0 .8rem; font-size: .86rem; line-height: 1.45; color: var(--color-text-muted); padding: .55rem .7rem; background: var(--color-signal-soft); border-left: 3px solid var(--color-signal); }
+  .fr__more { display: inline-flex; align-items: center; gap: .35em; color: var(--color-accent-text); text-decoration: none; font-weight: 700; font-size: .88rem; min-height: 28px; }
+  .fr__more:hover { text-decoration: underline; }
+
+  /* ═══ PROMESSES ═══ */
+  .promises { background: var(--color-night-2); color: var(--color-on-night); border-bottom: 1px solid var(--color-night-border); }
+  .promises__list { list-style: none; margin: 0 auto; padding-top: .9rem; padding-bottom: .9rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .promises__list li { display: flex; align-items: center; gap: .75rem; color: var(--color-signal); }
+  .promises__list span { display: flex; flex-direction: column; line-height: 1.2; color: #fff; }
+  .promises__list strong { font-size: .9rem; }
+  .promises__list small { font-size: .76rem; color: var(--color-on-night-muted); }
+
+  /* ═══ PAR PROBLÈME ═══ */
+  .needs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .need { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1.1rem 1.2rem; text-decoration: none; color: inherit; }
+  .need__icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--radius); background: var(--color-accent-soft); color: var(--color-accent-text); transition: background .2s ease, color .2s ease; }
+  .need:hover .need__icon { background: var(--color-accent); color: #fff; }
+  .need__body { display: flex; flex-direction: column; gap: .2rem; min-width: 0; }
+  .need__title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.2; }
+  .need__count { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-text-muted); }
+  :global(.need__arrow) { color: var(--color-border-strong); transition: color .15s ease, transform .15s ease; }
+  .need:hover :global(.need__arrow) { color: var(--color-accent-text); transform: translateX(3px); }
+
+  /* ═══ PAR BUDGET ═══ */
+  .budgets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .budget { display: flex; flex-direction: column; text-decoration: none; color: inherit; padding: 1.4rem 1.4rem 1.3rem; }
+  .budget__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .budget__icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: var(--radius); background: var(--color-signal-soft); color: var(--color-signal-text); }
+  .budget__range b { color: var(--color-signal-text); }
+  .budget__label { font-family: var(--font-display); font-weight: 700; font-stretch: 106%; font-size: 1.4rem; line-height: 1.1; }
+  .budget__desc { color: var(--color-text-muted); font-size: .92rem; line-height: 1.5; margin: .4rem 0 1rem; flex: 1; }
+  .budget__count { display: inline-flex; align-items: center; gap: .35em; font-weight: 700; font-size: .82rem; color: var(--color-accent-text); }
+
+  /* ═══ INCONTOURNABLES ═══ */
+  .una { display: grid; grid-template-columns: 1.35fr 1fr; gap: 1.25rem; }
+  .una__side { display: flex; flex-direction: column; gap: .9rem; }
+
+  /* ═══ CATÉGORIES ═══ */
+  .cats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.6rem; }
+  .cat { display: flex; flex-direction: column; text-decoration: none; color: inherit; padding: 1.5rem 1.4rem 1.3rem; }
+  .cat__icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: var(--radius); background: var(--color-accent); color: #fff; margin-bottom: 1rem; }
+  .cat__label { font-family: var(--font-display); font-weight: 700; font-stretch: 106%; font-size: 1.25rem; line-height: 1.12; }
+  .cat__desc { color: var(--color-text-muted); font-size: .92rem; line-height: 1.5; margin: .5rem 0 1.1rem; flex: 1; }
+  .cat__count { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+  /* ═══ OUTILS ═══ */
+  .tools { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+  .tool { display: flex; flex-direction: column; text-decoration: none; color: inherit; padding: 1.3rem 1.2rem 1.2rem; }
+  .tool__icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius); background: var(--color-night); color: var(--color-signal); margin-bottom: .9rem; }
+  .tool__title { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.2; }
+  .tool__desc { color: var(--color-text-muted); font-size: .88rem; line-height: 1.5; margin: .4rem 0 .9rem; flex: 1; }
+  .tool__cta { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
+
+  /* ═══ MÉTHODE ═══ */
+  .method { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
+  .method__text p { color: var(--color-text-muted); line-height: 1.7; }
+  .method__text .btn { margin-top: .6rem; }
+  .method__specs { margin: 0; padding: 1.4rem 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); display: flex; flex-direction: column; box-shadow: var(--shadow-md); }
+  .method__specs div { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: .65rem 0; border-bottom: 1px dashed var(--color-border-strong); }
+  .method__specs div:last-child { border-bottom: 0; }
+  .method__specs dt { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--color-text-muted); padding-top: .15rem; }
+  .method__specs dd { margin: 0; font-weight: 600; font-size: .95rem; }
+
+  /* ═══ FAQ ═══ */
+  .faq__list { margin-top: 1.4rem; display: flex; flex-direction: column; gap: .7rem; max-width: 820px; }
+  .faq__item { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 0 1.3rem; }
+  .faq__item[open] { border-color: var(--color-border-strong); box-shadow: var(--shadow-sm); }
+  .faq__q { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; cursor: pointer; list-style: none; padding: 1.05rem 0; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.2; color: var(--color-text); }
+  .faq__q::-webkit-details-marker { display: none; }
+  .faq__idx { font-family: var(--font-mono); font-size: .72rem; color: var(--color-signal-text); }
+  .faq__chevron { width: 11px; height: 11px; border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); transform: rotate(45deg); transition: transform .2s ease; margin-bottom: 3px; }
+  .faq__item[open] .faq__chevron { transform: rotate(-135deg); margin-bottom: -3px; }
+  .faq__a { margin: 0 0 1.2rem 2.2rem; color: var(--color-text-muted); line-height: 1.7; max-width: 70ch; }
+
+  /* ═══ Responsive ═══ */
+  @media (max-width: 1100px) { .tools { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 1000px) {
+    .cats, .grid3, .promises__list, .needs { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .hero__grid { grid-template-columns: 1fr; gap: 2rem; min-height: 0; }
+    .hero__title { max-width: none; }
+    .fr { max-width: 520px; }
+    .una { grid-template-columns: 1fr; }
+    .method { grid-template-columns: 1fr; gap: 1.6rem; }
+    .budgets { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero__bg { object-position: 70% center; }
+    .hero__title { font-size: clamp(2.2rem, 10vw, 3rem); }
+    .cats, .grid3, .promises__list, .needs, .tools { grid-template-columns: 1fr; }
+    .promises__list { gap: .7rem; }
+    .faq__a { margin-left: 0; }
+    .method__specs div { grid-template-columns: 1fr; gap: .2rem; }
+  }
+</style>

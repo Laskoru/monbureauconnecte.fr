@@ -32,7 +32,7 @@ const jsonLd = {
     ...(personSameAs.length ? { sameAs: personSameAs } : {}),
     jobTitle: 'Fondateur et rédacteur',
     worksFor: { '@id': `${siteUrl}/#organization` },
-    knowsAbout: ['ergonomie du poste de travail', 'télétravail', 'périphériques informatiques', 'matériel gaming'],
+    knowsAbout: ['ergonomie du poste de travail', 'matériel de bureau', 'télétravail', 'périphériques gaming'],
   },
 };
 ---
@@ -54,7 +54,7 @@ const jsonLd = {
 
     <div class="author__bio">
       <p>
-        Bonjour 👋 Je suis Hugo, la personne derrière {siteConfig.name}. J'ai lancé ce site pour une raison
+        Bonjour, je suis Hugo, la personne derrière {siteConfig.name}. J'ai lancé ce site pour une raison
         simple : choisir du bon matériel de bureau, de télétravail ou de gaming est devenu un casse-tête, entre
         le marketing, les faux avis et les milliers de références qui se ressemblent.
       </p>
@@ -85,14 +85,14 @@ const jsonLd = {
 </BaseLayout>
 
 <style>
-  .author { padding: 2.5rem 0 3.5rem; max-width: 760px; }
+  .author { padding: 2.5rem 1.25rem 3.5rem; }
   .author__head { display: flex; align-items: center; gap: 1.2rem; }
   .author__avatar {
     flex-shrink: 0;
-    width: 76px; height: 76px; border-radius: 50%;
+    width: 76px; height: 76px; border-radius: var(--radius);
     display: inline-flex; align-items: center; justify-content: center;
     background: var(--color-accent); color: #fff;
-    font-family: var(--font-display); font-weight: 600; font-size: 1.7rem;
+    font-family: var(--font-display); font-weight: 800; font-stretch: 110%; font-size: 1.8rem;
   }
   .author__head h1 { margin: 0.15rem 0 0.1rem; }
   .author__role { margin: 0; color: var(--color-text-muted); font-weight: 500; }
@@ -101,7 +101,7 @@ const jsonLd = {
   .author__bio strong { color: var(--color-text); }
   .author__links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
   .author__section { margin-top: 2.8rem; }
-  .article-list { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.2rem; }
+  .article-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.4rem; }
   @media (max-width: 520px) {
     .author__head { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
   }

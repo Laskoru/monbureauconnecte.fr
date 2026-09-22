@@ -1,4 +1,6 @@
 ---
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
 import { siteConfig } from '../siteConfig';
@@ -15,71 +17,71 @@ import { searchUrl } from '../lib/availability';
 const tiers = [
   {
     id: 'budget-800',
-    badge: '💰 Le meilleur prix',
+    badge: 'Le meilleur prix',
     price: '≈ 950 €',
     specLine: 'Ryzen 5 5600 (AM4) + RTX 4060 8 Go + 16 Go DDR4 + SSD 500 Go',
     reasoning:
       "La plateforme AM4, plus ancienne, coûte nettement moins cher que l'AM5/DDR5 actuel — de quoi mettre l'essentiel du budget sur la carte graphique, le poste qui compte vraiment pour les FPS. De quoi jouer confortablement en 1080p sur la plupart des jeux récents.",
     parts: [
-      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 5600', search: 'AMD Ryzen 5 5600 AM4' },
-      { icon: '🔌', label: 'Carte mère', name: 'B550 (AM4, DDR4)', search: 'carte mère B550 AM4 DDR4' },
-      { icon: '💾', label: 'RAM', name: '16 Go DDR4 3200 MHz', search: 'RAM DDR4 16 Go 3200 MHz' },
-      { icon: '🎮', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
-      { icon: '⚡', label: 'SSD', name: '500 Go NVMe PCIe 3.0', search: 'SSD NVMe 500 Go PCIe 3.0' },
-      { icon: '🔋', label: 'Alimentation', name: '550 W 80+ Bronze', search: 'alimentation PC 550W 80+ Bronze' },
-      { icon: '🖥️', label: 'Boîtier', name: 'ATX, entrée de gamme', search: 'boîtier PC ATX pas cher' },
+      { icon: 'cpu', label: 'CPU', name: 'AMD Ryzen 5 5600', search: 'AMD Ryzen 5 5600 AM4' },
+      { icon: 'board', label: 'Carte mère', name: 'B550 (AM4, DDR4)', search: 'carte mère B550 AM4 DDR4' },
+      { icon: 'ram', label: 'RAM', name: '16 Go DDR4 3200 MHz', search: 'RAM DDR4 16 Go 3200 MHz' },
+      { icon: 'gpu', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
+      { icon: 'ssd', label: 'SSD', name: '500 Go NVMe PCIe 3.0', search: 'SSD NVMe 500 Go PCIe 3.0' },
+      { icon: 'psu', label: 'Alimentation', name: '550 W 80+ Bronze', search: 'alimentation PC 550W 80+ Bronze' },
+      { icon: 'tower', label: 'Boîtier', name: 'ATX, entrée de gamme', search: 'boîtier PC ATX pas cher' },
     ],
   },
   {
     id: 'budget-1000',
-    badge: '⚖️ Le bon compromis',
+    badge: 'Le bon compromis',
     price: '≈ 1250 €',
     specLine: 'Ryzen 5 8400F (AM5) + RTX 4060 8 Go + 16 Go DDR5 + SSD 1 To',
     reasoning:
       "Le premier palier sur la plateforme actuelle (AM5, DDR5) : un CPU accessible et une carte mère d'entrée de gamme suffisent, ce qui laisse le budget se concentrer sur la même carte graphique que le palier précédent. L'avantage : une vraie marge pour upgrader le processeur dans quelques années sans tout changer.",
     parts: [
-      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 8400F', search: 'AMD Ryzen 5 8400F AM5' },
-      { icon: '🔌', label: 'Carte mère', name: 'A620 (AM5, DDR5, Micro-ATX)', search: 'carte mère A620 AM5 DDR5 Micro-ATX' },
-      { icon: '💾', label: 'RAM', name: '16 Go DDR5 5200 MHz', search: 'RAM DDR5 16 Go 5200 MHz' },
-      { icon: '🎮', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
-      { icon: '⚡', label: 'SSD', name: '1 To NVMe PCIe 4.0', search: 'SSD NVMe 1 To PCIe 4.0' },
-      { icon: '🔋', label: 'Alimentation', name: '650 W 80+ Bronze', search: 'alimentation PC 650W 80+ Bronze' },
-      { icon: '🖥️', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
+      { icon: 'cpu', label: 'CPU', name: 'AMD Ryzen 5 8400F', search: 'AMD Ryzen 5 8400F AM5' },
+      { icon: 'board', label: 'Carte mère', name: 'A620 (AM5, DDR5, Micro-ATX)', search: 'carte mère A620 AM5 DDR5 Micro-ATX' },
+      { icon: 'ram', label: 'RAM', name: '16 Go DDR5 5200 MHz', search: 'RAM DDR5 16 Go 5200 MHz' },
+      { icon: 'gpu', label: 'GPU', name: 'RTX 4060 8 Go', search: 'carte graphique RTX 4060 8 Go' },
+      { icon: 'ssd', label: 'SSD', name: '1 To NVMe PCIe 4.0', search: 'SSD NVMe 1 To PCIe 4.0' },
+      { icon: 'psu', label: 'Alimentation', name: '650 W 80+ Bronze', search: 'alimentation PC 650W 80+ Bronze' },
+      { icon: 'tower', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
     ],
   },
   {
     id: 'budget-1500',
-    badge: '🎯 Notre recommandation',
+    badge: 'Notre recommandation',
     price: '≈ 2000 €',
     specLine: 'Ryzen 5 9600X (AM5) + RTX 5070 12 Go + 32 Go DDR5 + SSD 2 To',
     reasoning:
       "Le point d'équilibre : processeur et carte mère de génération courante, 32 Go de RAM pour ne plus jamais y repenser, une carte graphique qui passe confortablement en 1440p, et 2 To de stockage pour ne pas jongler avec les désinstallations. C'est la configuration qu'on choisirait pour un usage gaming sérieux, sans se ruiner.",
     highlight: true,
     parts: [
-      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 5 9600X', search: 'AMD Ryzen 5 9600X AM5' },
-      { icon: '🔌', label: 'Carte mère', name: 'B650 (AM5, DDR5)', search: 'carte mère B650 AM5 DDR5' },
-      { icon: '💾', label: 'RAM', name: '32 Go DDR5 5600 MHz', search: 'RAM DDR5 32 Go 5600 MHz' },
-      { icon: '🎮', label: 'GPU', name: 'RTX 5070 12 Go', search: 'carte graphique RTX 5070 12 Go' },
-      { icon: '⚡', label: 'SSD', name: '2 To NVMe PCIe 4.0', search: 'SSD NVMe 2 To PCIe 4.0' },
-      { icon: '🔋', label: 'Alimentation', name: '750 W 80+ Gold, modulaire', search: 'alimentation PC 750W 80+ Gold modulaire' },
-      { icon: '🖥️', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
+      { icon: 'cpu', label: 'CPU', name: 'AMD Ryzen 5 9600X', search: 'AMD Ryzen 5 9600X AM5' },
+      { icon: 'board', label: 'Carte mère', name: 'B650 (AM5, DDR5)', search: 'carte mère B650 AM5 DDR5' },
+      { icon: 'ram', label: 'RAM', name: '32 Go DDR5 5600 MHz', search: 'RAM DDR5 32 Go 5600 MHz' },
+      { icon: 'gpu', label: 'GPU', name: 'RTX 5070 12 Go', search: 'carte graphique RTX 5070 12 Go' },
+      { icon: 'ssd', label: 'SSD', name: '2 To NVMe PCIe 4.0', search: 'SSD NVMe 2 To PCIe 4.0' },
+      { icon: 'psu', label: 'Alimentation', name: '750 W 80+ Gold, modulaire', search: 'alimentation PC 750W 80+ Gold modulaire' },
+      { icon: 'tower', label: 'Boîtier', name: 'ATX airflow', search: 'boîtier PC ATX airflow' },
     ],
   },
   {
     id: 'budget-2500',
-    badge: '🚀 Sans compromis',
+    badge: 'Sans compromis',
     price: '≈ 3200 €',
     specLine: 'Ryzen 7 9800X3D (AM5) + RTX 5080 16 Go + 32 Go DDR5 rapide + SSD 2 To',
     reasoning:
       "Le 9800X3D reste le processeur le plus performant du marché en gaming pur grâce à sa mémoire cache 3D, et la RTX 5080 pousse confortablement jusqu'en 4K. Une config pensée pour ne pas devoir y retoucher avant plusieurs années, quel que soit le jeu.",
     parts: [
-      { icon: '🧠', label: 'CPU', name: 'AMD Ryzen 7 9800X3D', search: 'AMD Ryzen 7 9800X3D AM5' },
-      { icon: '🔌', label: 'Carte mère', name: 'X870 (AM5, DDR5)', search: 'carte mère X870 AM5 DDR5' },
-      { icon: '💾', label: 'RAM', name: '32 Go DDR5 6000 MHz', search: 'RAM DDR5 32 Go 6000 MHz' },
-      { icon: '🎮', label: 'GPU', name: 'RTX 5080 16 Go', search: 'carte graphique RTX 5080 16 Go' },
-      { icon: '⚡', label: 'SSD', name: '2 To NVMe PCIe 4.0', search: 'SSD NVMe 2 To PCIe 4.0' },
-      { icon: '🔋', label: 'Alimentation', name: '1000 W 80+ Gold, ATX 3.0', search: 'alimentation PC 1000W 80+ Gold ATX 3.0' },
-      { icon: '🖥️', label: 'Boîtier', name: 'ATX premium airflow', search: 'boîtier PC ATX premium airflow' },
+      { icon: 'cpu', label: 'CPU', name: 'AMD Ryzen 7 9800X3D', search: 'AMD Ryzen 7 9800X3D AM5' },
+      { icon: 'board', label: 'Carte mère', name: 'X870 (AM5, DDR5)', search: 'carte mère X870 AM5 DDR5' },
+      { icon: 'ram', label: 'RAM', name: '32 Go DDR5 6000 MHz', search: 'RAM DDR5 32 Go 6000 MHz' },
+      { icon: 'gpu', label: 'GPU', name: 'RTX 5080 16 Go', search: 'carte graphique RTX 5080 16 Go' },
+      { icon: 'ssd', label: 'SSD', name: '2 To NVMe PCIe 4.0', search: 'SSD NVMe 2 To PCIe 4.0' },
+      { icon: 'psu', label: 'Alimentation', name: '1000 W 80+ Gold, ATX 3.0', search: 'alimentation PC 1000W 80+ Gold ATX 3.0' },
+      { icon: 'tower', label: 'Boîtier', name: 'ATX premium airflow', search: 'boîtier PC ATX premium airflow' },
     ],
   },
 ];
@@ -89,7 +91,7 @@ const tiers = [
 const parts = [
   {
     id: 'cpu',
-    icon: '🧠',
+    icon: 'cpu',
     title: 'Le processeur (CPU)',
     criteria: [
       'Le socket : il doit correspondre à la carte mère (AM5 pour AMD récent, LGA1700 pour Intel récent, AM4 pour les configs d’entrée de gamme). Impossible de mélanger deux sockets différents.',
@@ -100,7 +102,7 @@ const parts = [
   },
   {
     id: 'carte-mere',
-    icon: '🔌',
+    icon: 'board',
     title: 'La carte mère',
     criteria: [
       'Le chipset : il détermine le niveau de fonctionnalités (A620/B550 en entrée de gamme, B650/B850 en milieu de gamme, X670/X870 en haut de gamme) sans changer le socket du processeur.',
@@ -111,7 +113,7 @@ const parts = [
   },
   {
     id: 'ram',
-    icon: '💾',
+    icon: 'ram',
     title: 'La mémoire (RAM)',
     criteria: [
       'Le type : DDR5 sur toute plateforme AM5/LGA1700 récente, DDR4 sur une plateforme plus ancienne (AM4) — les deux ne sont pas interchangeables, la carte mère impose le format.',
@@ -122,7 +124,7 @@ const parts = [
   },
   {
     id: 'gpu',
-    icon: '🎮',
+    icon: 'gpu',
     title: 'La carte graphique (GPU)',
     criteria: [
       'La définition visée : une carte d’entrée ou de milieu de gamme couvre bien le 1080p et le 1440p ; le 4K demande une gamme au-dessus.',
@@ -133,7 +135,7 @@ const parts = [
   },
   {
     id: 'stockage',
-    icon: '⚡',
+    icon: 'ssd',
     title: 'Le stockage (SSD)',
     criteria: [
       "La capacité : 500 Go suffit pour démarrer, 1 To est plus confortable — un jeu récent peut à lui seul dépasser 100 Go.",
@@ -144,7 +146,7 @@ const parts = [
   },
   {
     id: 'alimentation',
-    icon: '🔋',
+    icon: 'psu',
     title: "L'alimentation (PSU)",
     criteria: [
       "La puissance : additionne les besoins du CPU et du GPU, puis prends une marge confortable plutôt que le strict minimum.",
@@ -155,7 +157,7 @@ const parts = [
   },
   {
     id: 'boitier',
-    icon: '🖥️',
+    icon: 'tower',
     title: 'Le boîtier',
     criteria: [
       "La compatibilité : vérifie qu'il accepte le format de la carte mère (ATX) et la longueur de la carte graphique choisie.",
@@ -205,14 +207,8 @@ const faqSchema = {
   description="4 configurations PC gaming complètes selon ton budget (950 à 3200 €), avec les critères qui comptent pour bien choisir chaque composant."
   jsonLd={faqSchema}
 >
+  <PageHead eyebrow="Guide d'achat" title="Monter un PC gaming : le guide pièce par pièce" lede="Quatre configurations cohérentes selon ton budget, d'environ 950 € à plus de 3 200 € — choisis ton palier, puis suis les liens pour chaque pièce. Les critères détaillés plus bas expliquent le « pourquoi » si tu veux creuser." icon="cpu" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Guide PC gaming' }]} width="narrow" />
   <section class="container pcguide">
-    <p class="eyebrow">Guide d'achat</p>
-    <h1>Monter un PC gaming : le guide pièce par pièce</h1>
-    <p class="pcguide__lede">
-      Quatre configurations cohérentes selon ton budget, d'environ 950 € à plus de 3 200 € — choisis
-      ton palier, puis suis les liens pour chaque pièce. Les critères détaillés plus bas expliquent
-      le « pourquoi » si tu veux creuser.
-    </p>
     <p class="pcguide__note">
       Cette page couvre uniquement la tour (les composants internes). Les périphériques — écran,
       clavier, souris, casque — sont traités dans notre
@@ -240,7 +236,7 @@ const faqSchema = {
               <li>
                 <a href={searchUrl(c.search)} target="_blank" rel="nofollow sponsored noopener">
                   <span class="pcguide__tier-item-top">
-                    <span class="pcguide__tier-item-label">{c.icon} {c.label}</span>
+                    <span class="pcguide__tier-item-label"><Icon name={c.icon} size={14} /> {c.label}</span>
                     <span class="pcguide__tier-item-arrow">→</span>
                   </span>
                   <span class="pcguide__tier-item-name">{c.name}</span>
@@ -260,7 +256,7 @@ const faqSchema = {
     <div class="pcguide__parts">
       {parts.map((p) => (
         <details class="pcguide__part" id={p.id}>
-          <summary>{p.icon} {p.title}</summary>
+          <summary><Icon name={p.icon} size={18} /> {p.title}</summary>
           <ul class="pcguide__criteria">
             {p.criteria.map((c) => <li>{c}</li>)}
           </ul>

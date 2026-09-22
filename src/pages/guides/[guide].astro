@@ -1,8 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
 import { guides } from '../../guides';
 
 export async function getStaticPaths() {
@@ -15,30 +16,71 @@ const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
 // On respecte l'ordre défini dans guides.ts, en ignorant les slugs absents.
 const articles = guide.articles.map((slug) => bySlug.get(slug)).filter((a) => a !== undefined);
+const otherGuides = guides.filter((g) => g.slug !== guide.slug);
 ---
 
 <BaseLayout title={guide.title} description={guide.description}>
-  <section class="container guide">
-    <Breadcrumbs items={[{ label: 'Accueil', href: '/' }, { label: 'Guides', href: '/guides/' }, { label: guide.title }]} />
-    <p class="guide__icon">{guide.icon}</p>
-    <h1>{guide.title}</h1>
-    <div class="guide__intro">
-      {guide.intro.map((p) => <p set:html={p} />)}
-    </div>
+  <PageHead
+    eyebrow="Guide par besoin"
+    title={guide.title}
+    lede={guide.description}
+    icon={guide.slug}
+    crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Par besoin', href: '/guides/' }, { label: guide.title }]}
+    count={String(articles.length).padStart(2, '0')}
+  />
 
-    <h2 class="guide__section">Les comparatifs de ce guide</h2>
-    <div class="article-list">
-      {articles.map((article) => <ArticleCard article={article} />)}
+  <section class="wide g">
+    <div class="g__grid">
+      <div class="g__main">
+        <div class="g__intro">
+          {guide.intro.map((p) => <p set:html={p} />)}
+        </div>
+
+        <h2 class="g__section"><span class="eyebrow eyebrow--plain">Étape par étape</span>Les comparatifs à lire</h2>
+        <ol class="g__steps">
+          {articles.map((article, i) => (
+            <li class="g__step">
+              <span class="g__step-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <div class="g__step-card"><ArticleCard article={article} variant="row" /></div>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <aside class="g__side">
+        <div class="g__box">
+          <p class="g__box-title"><Icon name="map" size={16} /> Autres chemins</p>
+          {otherGuides.map((g) => (
+            <a class="g__link" href={`/guides/${g.slug}/`}><Icon name={g.slug} size={18} /> <span>{g.title}</span> <Icon name="arrow" size={14} /></a>
+          ))}
+        </div>
+        <div class="g__box g__box--tool">
+          <p class="g__box-title"><Icon name="ruler" size={16} /> Outil gratuit</p>
+          <p class="g__box-text">Ta taille → la hauteur de ton bureau, de ton siège et de ton écran. Réponse en deux secondes.</p>
+          <a class="btn btn--primary btn--sm" href="/calculateur-hauteur-bureau/">Calculer ma hauteur</a>
+        </div>
+      </aside>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .guide { padding: 2.5rem 0 3.5rem; }
-  .guide__icon { font-size: 2.4rem; margin: 0 0 0.4rem; }
-  .guide h1 { margin-top: 0; }
-  .guide__intro { max-width: 68ch; }
-  .guide__intro p { color: var(--color-text-muted); line-height: 1.7; }
-  .guide__section { margin-top: 2.5rem; }
-  .article-list { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 1.2rem; }
+  .g { padding: 2.2rem 1.25rem 3.5rem; }
+  .g__grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 2.5rem; align-items: start; }
+  .g__intro { font-size: 1.08rem; line-height: 1.7; max-width: 66ch; }
+  .g__intro p { margin: 0 0 1em; }
+  .g__section { display: flex; flex-direction: column; gap: .4rem; margin: 2rem 0 1.2rem; font-size: 1.9rem; }
+  .g__steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .9rem; }
+  .g__step { display: grid; grid-template-columns: 44px 1fr; gap: .8rem; align-items: center; }
+  .g__step-num { font-family: var(--font-display); font-size: 2rem; line-height: 1; color: var(--color-signal-text); text-align: center; }
+  .g__step-card { min-width: 0; }
+  .g__side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1rem; }
+  .g__box { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: .2rem; }
+  .g__box--tool { background: var(--color-bg-soft); background-image: var(--blueprint-light); background-size: 96px 96px; gap: .6rem; }
+  .g__box-title { display: flex; align-items: center; gap: .5em; margin: 0 0 .5rem; font-family: var(--font-body); font-weight: 700; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-accent-text); }
+  .g__box-text { margin: 0; font-size: .92rem; color: var(--color-text-muted); line-height: 1.5; }
+  .g__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .7rem; padding: .55rem .3rem; text-decoration: none; color: var(--color-text); font-weight: 600; font-size: .95rem; border-top: 1px dashed var(--color-border); transition: color .15s ease; }
+  .g__link:hover { color: var(--color-accent-text); }
+  @media (max-width: 960px) { .g__grid { grid-template-columns: 1fr; } .g__side { position: static; } }
+  @media (max-width: 480px) { .g__step { grid-template-columns: 1fr; gap: .2rem; } .g__step-num { text-align: left; font-size: 1.4rem; } }
 </style>
