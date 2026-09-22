@@ -44,7 +44,7 @@
   window.addEventListener('scroll', () => {
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
   }, { passive: true });
-  onScroll();
+  requestAnimationFrame(onScroll); // pas de reflow forcé pendant l'exécution du script
   toTop && toTop.addEventListener('click', () =>
     window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
   );
