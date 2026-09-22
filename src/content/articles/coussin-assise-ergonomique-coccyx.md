@@ -8,7 +8,6 @@ pinHook: "Rester assis *sans douleur*"
 pinSub: "Le coussin qui soulage le coccyx."
 keywords: ["coussin d'assise ergonomique", "coussin coccyx bureau", "coussin ergonomique chaise de bureau"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1758600588243-4de37a8817a8?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Personne assise sur une chaise de bureau"
 draft: false
 products:

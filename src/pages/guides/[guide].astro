@@ -19,7 +19,7 @@ const articles = guide.articles.map((slug) => bySlug.get(slug)).filter((a) => a 
 const otherGuides = guides.filter((g) => g.slug !== guide.slug);
 ---
 
-<BaseLayout title={guide.title} description={guide.description}>
+<BaseLayout title={guide.title} description={guide.description} noindex={articles.length === 0}>
   <PageHead
     eyebrow="Guide par besoin"
     title={guide.title}

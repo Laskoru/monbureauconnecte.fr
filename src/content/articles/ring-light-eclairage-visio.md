@@ -1,6 +1,6 @@
 ---
 title: "Ring light pour la visio : gadget de streamer ou vrai plus pro ?"
-description: "Un ring light n'est pas réservé aux vidéastes. Comment il améliore le rendu en visioconférence, comment bien le régler, et notre sélection de modèles pour le bureau."
+description: "Un ring light n'est pas réservé aux vidéastes : comment il améliore le rendu en visio, comment bien le régler, et notre sélection pour le bureau."
 pubDate: 2026-08-08
 updatedDate: 2026-09-11
 author: "Hugo B."
@@ -8,7 +8,6 @@ pinHook: "Être *bien éclairé* en visio"
 pinSub: "Ring light : gadget ou vrai plus ?"
 keywords: ["ring light visioconférence", "eclairage visio bureau", "lampe annulaire télétravail"]
 category: "audio-visio"
-coverImage: "https://images.unsplash.com/photo-1755997268256-31b838ebd238?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Bureau avec plusieurs écrans et une lampe annulaire"
 draft: false
 products:

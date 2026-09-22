@@ -1,6 +1,6 @@
 ---
 title: "Bureau assis-debout électrique en 2026 : lequel choisir ?"
-description: "Comment choisir son bureau assis-debout électrique pour le télétravail : moteurs, plage de hauteur, stabilité, budget. Nos critères et notre sélection de modèles fiables."
+description: "Choisir son bureau assis-debout électrique pour le télétravail : moteurs, plage de hauteur, stabilité, budget. Nos critères et nos modèles fiables."
 pubDate: 2026-08-04
 updatedDate: 2026-09-11
 author: "Hugo B."
@@ -8,7 +8,6 @@ pinHook: "Travailler *debout ou assis*, en un geste"
 pinSub: "Le bureau électrique bien choisi."
 keywords: ["bureau assis-debout", "bureau électrique télétravail", "bureau réglable en hauteur", "bureau assis-debout 2026"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1622131278701-eb225474ffd2?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Personne travaillant debout à un bureau réglable en hauteur"
 draft: false
 products:

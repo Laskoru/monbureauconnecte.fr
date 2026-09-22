@@ -8,7 +8,6 @@ pinHook: "Le bon cadeau *sans te tromper de budget*"
 pinSub: "Idées cadeaux bureau et gaming, classées par budget."
 keywords: ["idées cadeaux télétravail", "cadeau télétravailleur", "cadeau gamer bureau", "idée cadeau bureau"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1549082976-b56e88e84261?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 coverAlt: "Boîte cadeau et ordinateur portable posés près d'une tasse de café sur un bureau"
 draft: false
 topPick:

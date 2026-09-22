@@ -8,7 +8,6 @@ pinHook: "Un plateau *enfin dégagé*"
 pinSub: "Le caisson qui range tout, discret."
 keywords: ["caisson de rangement sous bureau", "caisson bureau à roulettes", "rangement bureau télétravail"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1688578737378-d395892980ed?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Espace sous un bureau, jambes et zone de rangement disponible"
 draft: false
 products:

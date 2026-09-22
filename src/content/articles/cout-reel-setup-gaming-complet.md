@@ -1,6 +1,6 @@
 ---
 title: "Combien coûte vraiment un setup gaming complet en 2026 ?"
-description: "Le PC n'est que la moitié de la facture. Le vrai coût d'un setup gaming complet en 2026 : écran, périphériques, siège, bureau — poste par poste, et où économiser intelligemment."
+description: "Le PC n'est que la moitié de la facture. Le vrai coût d'un setup gaming complet en 2026 : écran, périphériques, siège, bureau, et où économiser."
 pubDate: 2026-09-12
 updatedDate: 2026-09-12
 author: "Hugo B."

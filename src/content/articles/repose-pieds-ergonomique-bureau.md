@@ -8,7 +8,6 @@ pinHook: "Les jambes *soulagées* toute la journée"
 pinSub: "Repose-pieds : utile ou gadget ?"
 keywords: ["repose-pieds ergonomique", "repose pieds bureau", "repose-pieds réglable"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1688578737378-d395892980ed?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Personne assise à un bureau, jambes sous la table"
 draft: false
 products:

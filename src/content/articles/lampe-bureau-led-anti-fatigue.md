@@ -8,7 +8,6 @@ pinHook: "Une lumière *qui ménage les yeux*"
 pinSub: "La lampe LED anti-fatigue bien choisie."
 keywords: ["lampe de bureau led", "lampe anti-fatigue oculaire", "lampe de bureau réglable"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1519219788971-8d9797e0928e?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Lampe de bureau à bras articulé sur une table en bois"
 draft: false
 products:

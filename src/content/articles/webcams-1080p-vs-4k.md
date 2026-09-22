@@ -1,6 +1,6 @@
 ---
 title: "Webcams 1080p vs 4K en 2026 : laquelle choisir ?"
-description: "Faut-il investir dans une webcam 4K pour le télétravail, ou une 1080p suffit-elle ? Notre comparatif, ce qui compte vraiment au-delà de la résolution, et nos recommandations."
+description: "Webcam 4K ou 1080p pour le télétravail ? Notre comparatif, ce qui compte vraiment au-delà de la résolution, et nos recommandations."
 pubDate: 2026-08-10
 updatedDate: 2026-09-11
 author: "Hugo B."
@@ -8,7 +8,6 @@ pinHook: "1080p ou 4K ? *Le bon choix*"
 pinSub: "Webcams comparées pour la visio."
 keywords: ["webcam télétravail", "webcam 1080p", "webcam 4K visioconférence", "meilleure webcam télétravail 2026"]
 category: "audio-visio"
-coverImage: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1600&auto=format&fit=crop"
 coverAlt: "Écran affichant une visioconférence en grille"
 draft: false
 products:

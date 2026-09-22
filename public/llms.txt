@@ -1,0 +1,21 @@
+# Mon Bureau Connecté
+
+> Mon Bureau Connecté aide à choisir le bon matériel pour son poste de travail : gaming, bureau ergonomique et télétravail, comparatifs et conseils d
+
+Site : https://www.monbureauconnecte.fr/
+Langue : français
+Éditeur : Mon Bureau Connecté — rédaction indépendante (auteur : Hugo B.). Certains liens sont des liens affiliés Amazon, sans surcoût pour le lecteur.
+Contact : contact@monbureauconnecte.fr
+
+## Pages clés
+- Accueil : https://www.monbureauconnecte.fr/
+- Tous les articles : https://www.monbureauconnecte.fr/articles/
+- Guides par besoin : https://www.monbureauconnecte.fr/guides/
+- Par budget : https://www.monbureauconnecte.fr/budget/
+- Outils gratuits : https://www.monbureauconnecte.fr/outils/
+- À propos / méthode : https://www.monbureauconnecte.fr/a-propos/
+- Auteur : https://www.monbureauconnecte.fr/auteur/
+
+## Index
+- Plan du site : https://www.monbureauconnecte.fr/sitemap-index.xml
+- Flux RSS : https://www.monbureauconnecte.fr/rss.xml

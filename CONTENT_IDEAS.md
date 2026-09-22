@@ -76,3 +76,11 @@ tag catégorie imposé (choisir mobilier/peripheriques/audio-visio selon le suje
 - [ ] Support / stand pour casque audio — audio-visio
 - [ ] Webcam 4K avec cadrage automatique — audio-visio
 - [ ] Casque sans fil longue autonomie pour le bureau — audio-visio
+
+## 🔎 Longue traîne (audit SEO du 22/09/2026)
+
+- [ ] Quel bureau pour un petit studio ou une chambre d'étudiant — compact, pliant, escamotable : les bons formats — mobilier
+- [ ] Comment réduire les reflets sur son écran — dalle mate, éclairage, orientation — audio-visio
+- [ ] Onduleur pour PC gaming ou télétravail : utile ou pas — protéger son matériel et son travail — pc-gaming
+- [ ] Quelle chaise de bureau pour un grand gabarit ou une forte charge — charge admise, largeur d'assise, réglages — mobilier
+- [ ] Combien de temps garder son PC gaming avant de le renouveler — durée de vie, upgrades, signes d'usure — pc-gaming

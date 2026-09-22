@@ -1,6 +1,6 @@
 ---
 title: "Bien régler sa chaise et son écran : les réglages ergonomiques qui ne coûtent rien"
-description: "Avant d'acheter le moindre accessoire, ces réglages gratuits de la chaise, de l'écran et du clavier corrigent déjà une bonne partie des douleurs liées au bureau."
+description: "Avant d'acheter le moindre accessoire, ces réglages gratuits de la chaise, de l'écran et du clavier corrigent déjà une bonne part des douleurs."
 pubDate: 2026-09-06
 updatedDate: 2026-09-11
 author: "Hugo B."
