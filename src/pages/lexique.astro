@@ -56,7 +56,7 @@ const description = `Lexique du bureau et du télétravail : VESA, DPI, ANC, Pow
           <h2 id={g.id}>{g.group}</h2>
           <div class="lexique__list">
             {g.entries.map((entry) => (
-              <article class="lexique__item card">
+              <article class="lexique__item">
                 <h3 class="lexique__term">{entry.term}</h3>
                 <p class="lexique__question">{entry.question}</p>
                 <p class="lexique__answer">{entry.answer}</p>
@@ -85,79 +85,42 @@ const description = `Lexique du bureau et du télétravail : VESA, DPI, ANC, Pow
 </BaseLayout>
 
 <style>
-  .lexique { padding: 2.5rem 0 3.5rem; }
-  .lexique h1 { margin-top: 0; }
-  .lexique__lede { color: var(--color-text-muted); font-size: 1.05rem; max-width: 65ch; line-height: 1.65; }
+  .lexique { padding-top: 2.6rem; padding-bottom: 4.5rem; }
 
-  .lexique__toc {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1.8rem 0 2.5rem;
-  }
+  /* Sommaire : étiquettes à angles vifs */
+  .lexique__toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 3rem; }
   .lexique__toc a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0.35em 0.75em;
     font-size: 0.85rem;
     font-weight: 600;
+    line-height: 1.2;
+    color: var(--mine);
     text-decoration: none;
-    color: var(--color-accent);
-    border: 1px solid var(--color-border);
-    background: var(--color-surface);
-    border-radius: 999px;
-    padding: 0.45em 0.95em;
+    background: var(--papier);
+    border: 1px solid var(--filet);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.18s ease;
   }
-  .lexique__toc a:hover { border-color: var(--color-accent); }
+  .lexique__toc a:hover { border-color: var(--mine); }
 
-  .lexique__group { margin-bottom: 2.5rem; }
-  .lexique__group h2 {
-    font-size: 1.35rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--color-border);
-    scroll-margin-top: 5rem;
-  }
-  .lexique__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-top: 1.2rem;
-  }
-  .lexique__item { padding: 1.25rem 1.4rem; }
-  .lexique__term {
-    margin: 0 0 0.15rem;
-    font-size: 1.08rem;
-    color: var(--color-accent);
-  }
-  .lexique__question {
-    margin: 0 0 0.6rem;
-    font-size: 0.86rem;
-    font-weight: 600;
-    color: var(--color-text);
-  }
-  .lexique__answer {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-size: 0.93rem;
-    line-height: 1.6;
-  }
-  .lexique__related {
-    margin: 0.9rem 0 0;
-    padding-top: 0.8rem;
-    border-top: 1px solid var(--color-border);
-    font-size: 0.85rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.7rem;
-  }
-  .lexique__related span { color: var(--color-text-faint); font-weight: 600; }
-  .lexique__related a { color: var(--color-accent); text-decoration: none; }
-  .lexique__related a:hover { text-decoration: underline; }
+  /* Chaque groupe : un titre, puis les termes en lignes réglées (le terme à gauche, la définition à droite) */
+  .lexique__group { margin-bottom: 3.5rem; }
+  .lexique__group h2 { margin: 0 0 1rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); scroll-margin-top: 5rem; }
+  .lexique__list { border-top: 1.5px solid var(--mine); }
+  .lexique__item { display: grid; grid-template-columns: minmax(0, 10.5rem) minmax(0, 1fr); gap: 0.2rem 1.6rem; padding: 1.1rem 0.2rem 1.2rem; border-bottom: 1px solid var(--filet); scroll-margin-top: 5rem; }
+  .lexique__term { grid-row: span 3; margin: 0; font-size: 1.08rem; line-height: 1.35; }
+  .lexique__question { grid-column: 2; margin: 0 0 0.35rem; font-weight: 600; font-size: 0.95rem; line-height: 1.45; }
+  .lexique__answer { grid-column: 2; margin: 0; font-size: 0.95rem; line-height: 1.65; color: var(--gris); }
+  .lexique__related { grid-column: 2; margin: 0.7rem 0 0; display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-size: 0.88rem; }
+  .lexique__related span { font-weight: 600; color: var(--gris); }
 
-  .lexique__outro {
-    margin-top: 2.5rem;
-    padding: 1.2rem 1.4rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background: var(--color-bg-soft);
-    color: var(--color-text-muted);
-    font-size: 0.94rem;
+  .lexique__outro { margin: 1rem 0 0; padding: 0.1rem 0 0.1rem 0.9rem; border-left: 1px solid var(--filet-fort); font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
+  @media (max-width: 600px) {
+    .lexique__item { grid-template-columns: minmax(0, 1fr); }
+    .lexique__term { grid-row: auto; margin-bottom: 0.3rem; }
+    .lexique__question, .lexique__answer, .lexique__related { grid-column: 1; }
   }
 </style>

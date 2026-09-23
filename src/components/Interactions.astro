@@ -5,7 +5,7 @@
 // contenu reste visible si le JS ne s'exécute pas.
 ---
 
-<button id="toTop" class="to-top" aria-label="Revenir en haut de page">↑</button>
+<button id="toTop" class="to-top" aria-label="Revenir en haut de page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></svg></button>
 
 <script>
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -28,7 +28,10 @@
   const toTop = document.getElementById('toTop');
   const article = document.querySelector('.art, .article');
   let bar = null;
-  if (article) { bar = document.createElement('div'); bar.className = 'read-progress'; document.body.appendChild(bar); }
+  if (article) {
+    const track = document.createElement('div'); track.className = 'read-track'; track.setAttribute('aria-hidden', 'true'); document.body.appendChild(track);
+    bar = document.createElement('div'); bar.className = 'read-progress'; document.body.appendChild(bar);
+  }
 
   let ticking = false;
   function onScroll() {

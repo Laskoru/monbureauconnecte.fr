@@ -4,7 +4,7 @@ import { siteConfig } from '../siteConfig';
 ---
 
 <BaseLayout title="Politique de confidentialité" description="Politique de confidentialité, cookies et mesure d'audience du site.">
-  <section class="container">
+  <section class="container legal">
     <h1>Politique de confidentialité</h1>
 
     <h2>Programme Partenaires Amazon</h2>
@@ -55,3 +55,11 @@ import { siteConfig } from '../siteConfig';
     </p>
   </section>
 </BaseLayout>
+
+<style>
+  /* Page de lecture : titre d'épure, sections séparées par un filet fin */
+  .legal { padding-top: 2.6rem; padding-bottom: 4.5rem; }
+  .legal h1 { margin: 0 0 1.4rem; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.4rem); }
+  .legal h2 { margin: 2.4rem 0 0.6rem; padding-top: 0.8rem; border-top: 1px solid var(--filet); font-size: clamp(1.4rem, 1.2rem + 0.7vw, 1.7rem); }
+  .legal p { line-height: 1.7; }
+</style>

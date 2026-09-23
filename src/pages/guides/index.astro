@@ -7,9 +7,8 @@ import { siteConfig } from '../../siteConfig';
 import { guides } from '../../guides';
 
 const published = new Set((await getCollection('articles', ({ data }) => !data.draft)).map((a) => a.slug));
-const guideCounts = guides.map((g, i) => ({
+const guideCounts = guides.map((g) => ({
   ...g,
-  index: String(i + 1).padStart(2, '0'),
   count: g.articles.filter((slug) => published.has(slug)).length,
 }));
 ---
@@ -26,25 +25,20 @@ const guideCounts = guides.map((g, i) => ({
   />
 
   <section class="wide gi">
-    <div class="gi__grid">
+    <div class="gi__list">
       {guideCounts.map((guide) => (
-        <article class="gi__card card card--hover">
-          <div class="gi__top">
-            <span class="gi__icon"><Icon name={guide.slug} size={26} /></span>
-            <span class="gi__num" aria-hidden="true">{guide.index}</span>
-          </div>
+        <article class="gi__row">
           <h2 class="gi__title"><a class="stretched-link" href={`/guides/${guide.slug}/`}>{guide.title}</a></h2>
           <p class="gi__desc">{guide.description}</p>
-          <p class="gi__count">{guide.count} comparatif{guide.count > 1 ? 's' : ''} à suivre <Icon name="arrow" size={14} /></p>
+          <p class="gi__count">{guide.count} comparatif{guide.count > 1 ? 's' : ''} à suivre</p>
+          <Icon name="arrow" size={24} class="gi__fleche" />
         </article>
       ))}
     </div>
 
+    <span class="regle gi__regle" aria-hidden="true"></span>
     <div class="gi__tools">
-      <div>
-        <p class="eyebrow">Outils gratuits</p>
-        <h2 class="gi__tools-title">Et pour trancher vite</h2>
-      </div>
+      <h2 class="gi__tools-title">Et pour trancher vite</h2>
       <div class="gi__tools-links">
         <a class="btn btn--primary" href="/calculateur-hauteur-bureau/"><Icon name="ruler" size={18} /> Calculer ma hauteur de bureau</a>
         <a class="btn btn--outline" href="/checklist-bureau-ergonomique/"><Icon name="checklist" size={18} /> Checklist ergonomie</a>
@@ -54,19 +48,23 @@ const guideCounts = guides.map((g, i) => ({
 </BaseLayout>
 
 <style>
-  .gi { padding: 2.2rem 1.25rem 3.5rem; }
-  .gi__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-  .gi__card { padding: 1.5rem 1.5rem 1.4rem; display: flex; flex-direction: column; }
-  .gi__top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.1rem; }
-  .gi__icon { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: var(--radius); background: var(--color-accent); color: #fff; }
-  .gi__num { font-family: var(--font-display); font-size: 2.6rem; line-height: 1; color: var(--color-border); }
-  .gi__title { margin: 0 0 .5rem; font-size: 1.8rem; }
-  .gi__title a { color: var(--color-text); text-decoration: none; }
-  .gi__card:hover .gi__title a { color: var(--color-accent-text); }
-  .gi__desc { margin: 0 0 1rem; color: var(--color-text-muted); font-size: .96rem; line-height: 1.55; flex: 1; }
-  .gi__count { margin: 0; display: inline-flex; align-items: center; gap: .35em; font-weight: 700; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
-  .gi__tools { margin-top: 2.5rem; padding: 1.6rem 1.8rem; border-radius: var(--radius-lg); background: var(--color-bg-soft); background-image: var(--blueprint-light); background-size: 96px 96px; border: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-  .gi__tools-title { margin: .3rem 0 0; font-size: 1.8rem; }
-  .gi__tools-links { display: flex; gap: .7rem; flex-wrap: wrap; }
-  @media (max-width: 720px) { .gi__grid { grid-template-columns: 1fr; } }
+  .gi { padding-top: 2.6rem; padding-bottom: 4.5rem; }
+  /* Les parcours en lignes réglées : le problème en grand, le compte en mono */
+  .gi__list { border-top: 1.5px solid var(--mine); }
+  .gi__row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: 'title count fleche' 'desc count fleche'; align-items: center; gap: 0.45rem 2rem; padding: 1.3rem 0.4rem 1.4rem; border-bottom: 1px solid var(--filet); transition: background-color 0.18s ease; }
+  .gi__row:hover, .gi__row:focus-within { background: var(--jaune-pale); }
+  .gi__title { grid-area: title; margin: 0; font-weight: 300; font-size: clamp(1.45rem, 1rem + 1.5vw, 2.2rem); line-height: 1.1; }
+  .gi__title a { color: var(--mine); text-decoration: none; }
+  .gi__desc { grid-area: desc; max-width: 70ch; margin: 0; font-size: 0.98rem; line-height: 1.55; color: var(--gris); }
+  .gi__count { grid-area: count; margin: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gris); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .gi__row :global(.gi__fleche) { grid-area: fleche; transition: transform 0.2s var(--ease-out); }
+  .gi__row:hover :global(.gi__fleche) { transform: translateX(6px); }
+
+  .gi__regle { margin-top: clamp(3rem, 6vw, 4.5rem); }
+  .gi__tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.2rem 2rem; padding-top: 2rem; }
+  .gi__tools-title { margin: 0; font-size: clamp(1.6rem, 1.15rem + 1.5vw, 2.4rem); }
+  .gi__tools-links { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+  @media (max-width: 720px) {
+    .gi__row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'title fleche' 'desc fleche' 'count fleche'; gap: 0.4rem 1rem; }
+  }
 </style>

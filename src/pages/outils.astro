@@ -26,11 +26,10 @@ const tools = [
   <section class="wide tools">
     <div class="tools__grid">
       {tools.map((t) => (
-        <article class="tool card card--hover">
-          <span class="tool__icon"><Icon name={t.icon} size={24} /></span>
-          <h2 class="tool__title"><a class="stretched-link" href={t.href}>{t.title}</a></h2>
+        <article class="tool">
+          <h2 class="tool__title"><Icon name={t.icon} size={22} /><a class="stretched-link" href={t.href}>{t.title}</a></h2>
           <p class="tool__desc">{t.desc}</p>
-          <span class="tool__cta">{t.cta} <Icon name="arrow" size={14} /></span>
+          <span class="tool__cta">{t.cta} <Icon name="arrow" size={16} /></span>
         </article>
       ))}
     </div>
@@ -38,15 +37,26 @@ const tools = [
 </BaseLayout>
 
 <style>
-  .tools { padding: 2.2rem 1.25rem 3.5rem; }
-  .tools__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-  .tool { padding: 1.5rem 1.5rem 1.4rem; display: flex; flex-direction: column; }
-  .tool__icon { display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: var(--radius); background: var(--color-night); color: var(--color-signal); margin-bottom: 1rem; }
-  .tool__title { margin: 0 0 .5rem; font-size: 1.3rem; }
-  .tool__title a { color: var(--color-text); text-decoration: none; }
-  .tool:hover .tool__title a { color: var(--color-accent-text); }
-  .tool__desc { margin: 0 0 1rem; color: var(--color-text-muted); font-size: .95rem; line-height: 1.55; flex: 1; }
-  .tool__cta { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-accent-text); }
-  @media (max-width: 900px) { .tools__grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 600px) { .tools__grid { grid-template-columns: 1fr; } }
+  .tools { padding-top: 2.6rem; padding-bottom: 4.5rem; }
+  /* Une bande réglée découpée en cases à filets, comme sur l'accueil */
+  .tools__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1.5px solid var(--mine); }
+  .tool { position: relative; display: flex; flex-direction: column; gap: 0.6rem; padding: 1.4rem 1.3rem 1.5rem; border-bottom: 1px solid var(--filet); transition: background-color 0.18s ease; }
+  .tool:not(:nth-child(3n + 1)) { border-left: 1px solid var(--filet); }
+  .tool:hover, .tool:focus-within { background: var(--papier); }
+  .tool__title { display: flex; align-items: flex-start; gap: 0.6rem; margin: 0; font-family: var(--font-body); font-stretch: 100%; font-weight: 600; font-size: 1.15rem; line-height: 1.3; letter-spacing: -0.005em; }
+  .tool__title :global(svg) { flex-shrink: 0; margin-top: 0.02rem; }
+  .tool__title a { color: var(--mine); text-decoration: none; }
+  .tool__desc { flex: 1; margin: 0; font-size: 0.95rem; line-height: 1.55; color: var(--gris); }
+  .tool__cta { display: inline-flex; align-items: center; gap: 0.4em; margin-top: 0.3rem; font-weight: 600; font-size: 0.92rem; color: var(--mine); }
+  .tool__cta :global(svg) { transition: transform 0.18s var(--ease-out); }
+  .tool:hover .tool__cta :global(svg) { transform: translateX(4px); }
+  @media (max-width: 900px) {
+    .tools__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .tool:not(:nth-child(3n + 1)) { border-left: 0; }
+    .tool:nth-child(even) { border-left: 1px solid var(--filet); }
+  }
+  @media (max-width: 600px) {
+    .tools__grid { grid-template-columns: 1fr; }
+    .tool:nth-child(even) { border-left: 0; }
+  }
 </style>

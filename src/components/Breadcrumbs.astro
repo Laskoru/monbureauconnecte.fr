@@ -32,20 +32,11 @@ const breadcrumbSchema = {
 </nav>
 
 <style>
-  .breadcrumbs { margin-bottom: 1.1rem; }
-  .breadcrumbs ol {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.4rem;
-    margin: 0;
-    padding: 0;
-    font-size: 0.85rem;
-  }
-  .breadcrumbs li { display: flex; align-items: center; gap: 0.4rem; }
-  .breadcrumbs a { color: var(--color-text-muted); text-decoration: none; }
-  .breadcrumbs a:hover { color: var(--color-accent); }
-  .breadcrumbs span[aria-current] { color: var(--color-text-muted); }
-  .breadcrumbs__sep { color: var(--color-text-faint); }
+  .breadcrumbs { margin-bottom: 0.9rem; }
+  .breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.45rem; margin: 0; padding: 0; font-size: 0.85rem; }
+  .breadcrumbs li { display: flex; align-items: center; gap: 0.45rem; min-width: 0; }
+  .breadcrumbs a { display: inline-flex; align-items: center; min-height: 32px; color: var(--gris); text-decoration: none; }
+  .breadcrumbs a:hover { color: var(--mine); text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 2px; text-underline-offset: 0.3em; }
+  .breadcrumbs span[aria-current] { color: var(--gris); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 46ch; }
+  .breadcrumbs__sep { color: var(--filet-fort); }
 </style>

@@ -42,7 +42,7 @@ const method = [
     </p>
     <div class="about__grid">
       {method.map((m) => (
-        <div class="about__card card">
+        <div class="about__item">
           <h3>{m.title}</h3>
           <p>{m.detail}</p>
         </div>
@@ -80,15 +80,14 @@ const method = [
 </BaseLayout>
 
 <style>
-  .about { padding: 2.2rem 1.25rem 3.5rem; }
-  .about h2 { margin-top: 1.8em; }
-  .about__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1rem;
-    margin: 1.5rem 0 0.5rem;
-  }
-  .about__card { padding: 1.3rem 1.4rem; }
-  .about__card h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
-  .about__card p { margin: 0; color: var(--color-text-muted); font-size: 0.92rem; line-height: 1.6; }
+  .about { padding-top: 2.4rem; padding-bottom: 4.5rem; }
+  .about h2 { margin: 2.8rem 0 0.8rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
+  .about h2:first-child { margin-top: 0; }
+  .about p { line-height: 1.7; }
+  /* Les principes de la méthode, en lignes réglées comme une nomenclature */
+  .about__grid { margin: 1.6rem 0 0.5rem; border-top: 1.5px solid var(--mine); }
+  .about__item { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 0.4rem 1.6rem; padding: 1rem 0.2rem 1.1rem; border-bottom: 1px solid var(--filet); }
+  .about__item h3 { margin: 0; font-size: 1.05rem; line-height: 1.4; }
+  .about__item p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
+  @media (max-width: 600px) { .about__item { grid-template-columns: 1fr; } }
 </style>

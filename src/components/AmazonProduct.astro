@@ -2,6 +2,8 @@
 import { resolveProductImage } from '../lib/products';
 import { getRating } from '../lib/ratings';
 import { isAvailable, productUrl, searchUrl, queryFromTitle } from '../lib/availability';
+import { mesuresProduit } from '../lib/mesures';
+import Icon from './Icon.astro';
 
 interface Props {
   asin: string;
@@ -19,164 +21,96 @@ interface Props {
 }
 
 const { asin, title, image, blurb, pros = [], cons = [], award, featured = false, search, fallbackSearch } = Astro.props;
-const ribbonLabel = award ?? 'Notre choix';
 
-// Produit achetable -> lien vers la fiche (meilleure conversion).
-// Produit en rupture constatée -> lien vers une recherche Amazon ciblée :
-// le lecteur trouve un équivalent au lieu de tomber sur une impasse, et le
-// lien reste rémunéré (les liens de recherche sont autorisés et commissionnés).
-// Repli, par ordre de pertinence : requête explicite du frontmatter, sinon le
-// mot-clé principal de l'article (« caisson de rangement sous bureau »), sinon
-// la marque+modèle du titre en dernier recours.
+// Produit achetable : lien vers la fiche (meilleure conversion). Rupture constatée :
+// recherche Amazon ciblée (requête du frontmatter, sinon mot-clé de l'article, sinon
+// marque + modèle), pour proposer un équivalent au lieu d'une impasse.
 const available = isAvailable(asin);
-const affiliateUrl = available
-  ? productUrl(asin)
-  : searchUrl(search || fallbackSearch || queryFromTitle(title));
-
-// Image produit : champ `image:` du frontmatter, sinon public/products/<ASIN>.<ext>
-// détecté automatiquement (voir public/products/README.md).
+const affiliateUrl = available ? productUrl(asin) : searchUrl(search || fallbackSearch || queryFromTitle(title));
 const resolvedImage = resolveProductImage(asin, image);
 
-// Note Amazon réelle (si récupérée par le process local). Jamais inventée.
+// « Coté avant d'être noté » : d'abord les mesures écrites du produit, puis la
+// vraie note Amazon (récupérée par le process local, jamais inventée).
+const mesures = mesuresProduit({ title, pros, blurb });
 const rating = getRating(asin);
 const nf = new Intl.NumberFormat('fr-FR');
 const ratingLabel = rating ? rating.rating.toFixed(1).replace('.', ',') : null;
-const starPct = rating ? Math.round((rating.rating / 5) * 100) : 0;
+const pct = rating ? Math.round((rating.rating / 5) * 1000) / 10 : 0;
+const label = featured ? (award && award !== 'Notre choix' ? `Notre choix · ${award}` : 'Notre choix') : award;
 ---
 
-<div class:list={['amazon-product', 'card', { 'amazon-product--featured': featured }]}>
-  {(featured || award) && <span class="ribbon amazon-product__ribbon">{ribbonLabel}</span>}
-  {resolvedImage && (
-    <a href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener" class="amazon-product__imgwrap">
-      <img
-        src={resolvedImage}
-        alt={title}
-        loading="lazy"
-        onerror="this.closest('.amazon-product__imgwrap').remove()"
-      />
-    </a>
-  )}
-  <div class="amazon-product__body">
-    <p class="eyebrow">Recommandation</p>
-    <p class="amazon-product__title">{title}</p>
-    {rating && (
-      <p class="amazon-product__rating" title={`Note moyenne ${ratingLabel}/5 sur ${nf.format(rating.count)} avis Amazon`}>
-        <span class="stars" aria-hidden="true"><span class="stars__on" style={`width:${starPct}%`}></span></span>
-        <span class="amazon-product__rating-text"><strong>{ratingLabel}</strong>/5 · {nf.format(rating.count)} avis <span class="amazon-product__rating-src">sur Amazon</span></span>
-      </p>
+<article class:list={['fiche', { 'fiche--choix': featured }]}>
+  {label && <p class="fiche__label">{label}</p>}
+  <div class="fiche__grid">
+    {resolvedImage && (
+      <a href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener" class="fiche__media" tabindex="-1" aria-hidden="true">
+        <img src={resolvedImage} alt="" loading="lazy" decoding="async" width="400" height="400" onerror="this.closest('.fiche__media').remove()" />
+      </a>
     )}
-    {blurb && <p class="amazon-product__blurb">{blurb}</p>}
-    {(pros.length > 0 || cons.length > 0) && (
-      <div class="proscons">
-        {pros.length > 0 && (
-          <div class="proscons__col proscons__col--pro">
-            <p class="proscons__title">On aime</p>
-            <ul>{pros.map((p) => <li>{p}</li>)}</ul>
-          </div>
-        )}
-        {cons.length > 0 && (
-          <div class="proscons__col proscons__col--con">
-            <p class="proscons__title">Ce qui peut gêner</p>
-            <ul>{cons.map((c) => <li>{c}</li>)}</ul>
-          </div>
-        )}
-      </div>
-    )}
-    {!available && (
-      <p class="amazon-product__unavailable">
-        Ce modèle n'est plus en stock chez Amazon. Le lien ci-dessous ouvre une recherche
-        sur des modèles équivalents.
-      </p>
-    )}
-    <a class="btn btn--primary amazon-product__cta" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">
-      {available ? 'Voir le prix sur Amazon →' : 'Voir les modèles équivalents →'}
-    </a>
+    <div class="fiche__body">
+      <h3 class="fiche__title">{title}</h3>
+      {mesures.length > 0 && <ul class="mesures" aria-label="Mesures du produit">{mesures.map((m) => <li>{m}</li>)}</ul>}
+      {rating && (
+        <p class="reglette">
+          <span class="reglette__rule" style={`--p:${pct}%`} role="img" aria-label={`Note Amazon : ${ratingLabel} sur 5`}></span>
+          <span class="reglette__val"><b>{ratingLabel}</b>/5 · {nf.format(rating.count)} avis Amazon</span>
+        </p>
+      )}
+      {blurb && <p class="fiche__blurb">{blurb}</p>}
+      {(pros.length > 0 || cons.length > 0) && (
+        <div class="fiche__pc">
+          {pros.length > 0 && (
+            <div class="fiche__col fiche__col--pro">
+              <p class="fiche__col-title">On aime</p>
+              <ul>{pros.map((p) => <li>{p}</li>)}</ul>
+            </div>
+          )}
+          {cons.length > 0 && (
+            <div class="fiche__col fiche__col--con">
+              <p class="fiche__col-title">Ce qui peut gêner</p>
+              <ul>{cons.map((c) => <li>{c}</li>)}</ul>
+            </div>
+          )}
+        </div>
+      )}
+      {!available && (
+        <p class="fiche__na"><span>Épuisé</span> Ce modèle n'est plus en stock chez Amazon. Le lien ouvre une recherche de modèles équivalents.</p>
+      )}
+      <a class="btn btn--buy fiche__cta" href={affiliateUrl} target="_blank" rel="nofollow sponsored noopener">
+        {available ? 'Voir le prix sur Amazon' : 'Voir les modèles équivalents'} <Icon name="external" size={16} />
+      </a>
+    </div>
   </div>
-</div>
+</article>
 
 <style>
-  .amazon-product {
-    position: relative;
-    display: flex;
-    gap: 1.25rem;
-    align-items: center;
-    padding: 1.25rem;
-    margin: 1.75rem 0;
-    flex-wrap: wrap;
+  .fiche { position: relative; margin: 1.75rem 0; background: var(--papier); border: 1px solid var(--filet); }
+  .fiche--choix { border-color: var(--mine); border-top: 4px solid var(--jaune); }
+  /* Onglet posé sur le filet du haut, comme l'indice de révision d'un plan */
+  .fiche__label { position: absolute; top: 0; right: 1.2rem; transform: translateY(-50%); margin: 0; padding: 0.3rem 0.6rem; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mine); background: var(--papier-2); border: 1px solid var(--mine); }
+  .fiche--choix .fiche__label { top: -2px; color: #15171a; background: var(--jaune); border-color: var(--jaune); font-weight: 700; }
+  .fiche__grid { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 1.4rem; padding: 1.1rem 1.2rem 1.3rem; }
+  .fiche__media { display: flex; align-items: center; justify-content: center; align-self: start; aspect-ratio: 1; padding: 0.9rem; background: var(--image-fond); border: 1px solid var(--filet); }
+  .fiche__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .fiche__body { display: flex; flex-direction: column; gap: 0.8rem; min-width: 0; }
+  .fiche__title { margin: 0; font-family: var(--font-body); font-weight: 600; font-size: 1.15rem; line-height: 1.3; letter-spacing: -0.005em; }
+  .fiche__blurb { margin: 0; color: var(--gris); font-size: 0.95rem; line-height: 1.55; }
+  .fiche__pc { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1.4rem; }
+  .fiche__col-title { margin: 0 0 0.35rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .fiche__col--pro .fiche__col-title { color: var(--ok); }
+  .fiche__col--con .fiche__col-title { color: var(--gene); }
+  .fiche__col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
+  .fiche__col li { position: relative; padding-left: 1.3em; font-size: 0.9rem; line-height: 1.45; }
+  .fiche__col li::before, .fiche__col--pro li::after { content: ''; position: absolute; left: 0.1em; top: 0.72em; width: 0.62em; height: 1.5px; background: currentColor; }
+  .fiche__col--pro li::before, .fiche__col--pro li::after { background: var(--ok); }
+  .fiche__col--pro li::after { transform: rotate(90deg); }
+  .fiche__col--con li::before { background: var(--gene); }
+  .fiche__na { margin: 0; padding: 0.6rem 0.8rem; font-size: 0.88rem; line-height: 1.5; color: var(--gris); background: var(--papier-2); border: 1px solid var(--filet); }
+  .fiche__na span { margin-right: 0.4em; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--erreur); }
+  .fiche__cta { align-self: flex-start; }
+  @media (max-width: 600px) {
+    .fiche__grid { grid-template-columns: 1fr; }
+    .fiche__media { max-width: 180px; }
+    .fiche__pc { grid-template-columns: 1fr; }
   }
-  .amazon-product--featured { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
-  .amazon-product__ribbon { position: absolute; top: -0.7rem; left: 1.25rem; }
-  .amazon-product__imgwrap {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 110px;
-    height: 110px;
-    background: #fff;
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  .amazon-product img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    border-radius: 0;
-  }
-  .amazon-product__body { flex: 1; min-width: 180px; }
-  .amazon-product__title { font-weight: 600; margin: 0.3rem 0 0.35rem; }
-  .amazon-product__rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0 0 0.55rem;
-    font-size: 0.86rem;
-    color: var(--color-text-muted);
-  }
-  .amazon-product__rating-text strong { color: var(--color-text); }
-  .amazon-product__rating-src { opacity: 0.7; }
-  /* étoiles : fond gris + calque doré découpé à la largeur = note/5 */
-  .stars {
-    position: relative;
-    display: inline-block;
-    font-size: 0.95rem;
-    line-height: 1;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    color: color-mix(in srgb, var(--color-text-muted) 45%, transparent);
-  }
-  .stars::before { content: '★★★★★'; }
-  .stars__on {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    color: #f5a623;
-  }
-  .stars__on::before { content: '★★★★★'; }
-  .amazon-product__blurb { color: var(--color-text-muted); margin: 0 0 0.9rem; font-size: 0.92rem; }
-  .amazon-product__unavailable {
-    margin: 0 0 0.9rem;
-    padding: 0.55rem 0.75rem;
-    font-size: 0.86rem;
-    line-height: 1.5;
-    color: var(--color-text-muted);
-    background: color-mix(in srgb, var(--color-text-muted) 8%, transparent);
-    border-left: 3px solid color-mix(in srgb, var(--color-text-muted) 45%, transparent);
-    border-radius: 0 var(--radius) var(--radius) 0;
-  }
-  .amazon-product__cta { font-size: 0.88rem; }
-
-  /* ---- Points forts / limites (transparence) ---- */
-  .proscons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.1rem; margin: 0 0 0.95rem; width: 100%; }
-  .proscons__title { margin: 0 0 0.35rem; font-family: var(--font-display); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
-  .proscons__col--pro .proscons__title { color: #1a7f52; }
-  .proscons__col--con .proscons__title { color: #b25f00; }
-  .proscons ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
-  .proscons li { position: relative; padding-left: 1.35em; font-size: 0.87rem; line-height: 1.45; color: var(--color-text-muted); }
-  .proscons li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
-  .proscons__col--pro li::before { content: '✓'; color: #1a7f52; }
-  .proscons__col--con li::before { content: '–'; color: #b25f00; }
-  @media (max-width: 560px) { .proscons { grid-template-columns: 1fr; } }
 </style>

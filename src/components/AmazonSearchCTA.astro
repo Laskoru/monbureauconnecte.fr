@@ -1,5 +1,6 @@
 ---
 import { searchUrl } from '../lib/availability';
+import Icon from './Icon.astro';
 
 interface Props {
   /** Le sujet recherché, ex. "chaise gaming" — sert de requête et s'affiche dans le bouton. */
@@ -26,55 +27,40 @@ const url = searchUrl(cleanTopic);
 ---
 
 <div class="amazon-search-cta">
-  <span class="amazon-search-cta__icon" aria-hidden="true">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
-      <path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-    </svg>
-  </span>
+  <Icon name="search" size={22} class="amazon-search-cta__icon" />
   <div class="amazon-search-cta__body">
     <p class="amazon-search-cta__intro">{intro}</p>
     <p class="amazon-search-cta__sub">{sub}</p>
   </div>
-  <a class="btn btn--primary amazon-search-cta__link" href={url} target="_blank" rel="nofollow sponsored noopener">
-    Voir « {cleanTopic} » →
+  <a class="btn btn--buy amazon-search-cta__link" href={url} target="_blank" rel="nofollow sponsored noopener">
+    Voir « {cleanTopic} » <Icon name="external" size={16} />
   </a>
 </div>
 
 <style>
+  /* Bandeau réglé : filet mine en tête, filet fin en pied, bouton d'achat jaune */
   .amazon-search-cta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.9rem 1.1rem;
+    gap: 0.9rem 1.2rem;
     margin: 1.75rem 0;
-    padding: 1.15rem 1.4rem;
-    background: var(--color-accent-soft);
-    border: 1px solid color-mix(in srgb, var(--color-accent) 30%, transparent);
-    border-radius: var(--radius-lg);
+    padding: 1.1rem 1.2rem;
+    background: var(--papier);
+    border-top: 1.5px solid var(--mine);
+    border-bottom: 1px solid var(--filet);
   }
-  .amazon-search-cta__icon {
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 999px;
-    background: var(--color-surface);
-    color: var(--color-accent);
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 20%, transparent);
-  }
+  .amazon-search-cta :global(.amazon-search-cta__icon) { flex-shrink: 0; color: var(--mine); }
   .amazon-search-cta__body { flex: 1 1 220px; min-width: 0; }
-  .amazon-search-cta__intro { margin: 0; color: var(--color-text); font-weight: 600; font-size: 0.98rem; }
-  .amazon-search-cta__sub { margin: 0.2rem 0 0; color: var(--color-text-muted); font-size: 0.85rem; }
+  .amazon-search-cta__intro { margin: 0; font-weight: 600; font-size: 1rem; line-height: 1.4; color: var(--mine); }
+  .amazon-search-cta__sub { margin: 0.2rem 0 0; font-size: 0.88rem; line-height: 1.5; color: var(--gris); }
   /* Le texte du bouton dépend du sujet (longueur variable) : il DOIT pouvoir
      passer à la ligne, sinon il déborde du bloc — et donc de la page — sur
      mobile (bug réel rencontré et corrigé le 17/08/2026). */
   .amazon-search-cta__link { flex: 0 1 auto; min-width: 0; white-space: normal; text-align: center; }
 
   @media (max-width: 480px) {
-    .amazon-search-cta__icon { display: none; }
+    .amazon-search-cta :global(.amazon-search-cta__icon) { display: none; }
     .amazon-search-cta__link { width: 100%; }
   }
 </style>

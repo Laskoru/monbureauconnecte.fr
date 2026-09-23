@@ -1,0 +1,111 @@
+---
+// Épure du poste de travail, vue de profil, avec ses cotes. Les proportions ne
+// changent pas avec la taille (tout est proportionnel) : seules les valeurs des
+// cotes se recalculent. Ratios anthropométriques : ceux du calculateur de hauteur.
+interface Props { taille?: number; class?: string }
+const { taille = 175, class: cls } = Astro.props;
+const R = { assise: 0.25, plateauAssis: 0.42, plateauDebout: 0.62, yeux: 0.7 };
+const v = (k: keyof typeof R) => Math.round(R[k] * taille);
+const hachures = Array.from({ length: 48 }, (_, i) => 36 + i * 14);
+// Cote verticale : du sol (y = 460) jusqu'à y, flèches pleines aux deux bouts
+const fleches = (x: number, y: number) => `M${x - 4} 452 L${x + 4} 452 L${x} 460 Z M${x - 4} ${y + 8} L${x + 4} ${y + 8} L${x} ${y} Z`;
+---
+
+<svg class:list={['epure', cls]} viewBox="0 0 720 490" role="img" aria-labelledby="epure-titre epure-desc">
+  <title id="epure-titre">Épure d'un poste de travail réglé, vu de profil</title>
+  <desc id="epure-desc">Personne assise à un bureau assis-debout. Cotes : hauteur d'assise, plateau en position assise et debout, haut de l'écran à hauteur des yeux, écran à 50 à 70 cm des yeux, coudes à 90 degrés.</desc>
+
+  <!-- Sol hachuré -->
+  <line class="e-sol" x1="24" y1="460" x2="706" y2="460" />
+  {hachures.map((x) => <line class="e-hach" x1={x} y1="461" x2={x - 9} y2="472" />)}
+
+  <!-- Plateau en position debout (fantôme) -->
+  <rect class="e-fantome" x="300" y="188" width="200" height="8" />
+  <line class="e-fantome" x1="409" y1="196" x2="409" y2="275" />
+
+  <!-- Bureau assis-debout : plateau, colonne, pied -->
+  <rect class="e-plein" x="300" y="275" width="200" height="8" />
+  <rect class="e-plein" x="404" y="283" width="10" height="167" />
+  <rect class="e-plein" x="372" y="450" width="124" height="8" />
+  <!-- Clavier, écran -->
+  <rect class="e-plein" x="318" y="270" width="54" height="5" />
+  <rect class="e-plein" x="380" y="272" width="44" height="3" />
+  <rect class="e-plein" x="400" y="236" width="4" height="36" />
+  <rect class="e-trait" x="394" y="153" width="10" height="83" />
+
+  <!-- Siège -->
+  <line class="e-trait" x1="158" y1="343" x2="146" y2="205" />
+  <rect class="e-plein" x="150" y="343" width="112" height="8" />
+  <line class="e-trait" x1="206" y1="351" x2="206" y2="430" />
+  <path class="e-trait" d="M206 430 L162 442 M206 430 L250 442" />
+  <circle class="e-trait" cx="162" cy="452" r="6" />
+  <circle class="e-trait" cx="250" cy="452" r="6" />
+
+  <!-- Personne -->
+  <circle class="e-corps" cx="224" cy="134" r="19" />
+  <path class="e-corps" d="M218 154 L206 336 L318 338 L322 448 L358 457" />
+  <path class="e-corps" d="M214 190 L226 268 L338 268" />
+
+  <!-- Angle du coude : 90° -->
+  <path class="e-angle" d="M226 250 A18 18 0 0 0 244 268" />
+  <g class="cote-label" data-static="1"><rect x="248" y="232" width="44" height="20" /><text x="270" y="246">90°</text></g>
+
+  <!-- Distance œil-écran -->
+  <line class="e-attache" x1="236" y1="148" x2="236" y2="104" />
+  <line class="e-attache" x1="399" y1="150" x2="399" y2="104" />
+  <line class="e-cote" pathLength="1" x1="236" y1="112" x2="399" y2="112" />
+  <path class="e-fleche" d="M244 108 L244 116 L236 112 Z M391 108 L391 116 L399 112 Z" />
+  <g class="cote-label" data-static="1"><rect x="279" y="102" width="78" height="20" /><text x="318" y="116">50–70 cm</text></g>
+
+  <!-- Assise -->
+  <line class="e-attache" x1="150" y1="343" x2="100" y2="343" />
+  <line class="e-cote" pathLength="1" x1="108" y1="343" x2="108" y2="460" />
+  <path class="e-fleche" d={fleches(108, 343)} />
+  <g class="cote-label"><rect x="72" y="388" width="72" height="34" /><text x="108" y="403"><tspan data-ratio="0.25">{v('assise')}</tspan> cm</text><text class="cote-leg" x="108" y="417">assise</text></g>
+
+  <!-- Plateau assis -->
+  <line class="e-attache" x1="500" y1="275" x2="568" y2="275" />
+  <line class="e-cote" pathLength="1" x1="560" y1="275" x2="560" y2="460" />
+  <path class="e-fleche" d={fleches(560, 275)} />
+  <g class="cote-label"><rect x="524" y="352" width="72" height="34" /><text x="560" y="367"><tspan data-ratio="0.42">{v('plateauAssis')}</tspan> cm</text><text class="cote-leg" x="560" y="381">assis</text></g>
+
+  <!-- Plateau debout -->
+  <line class="e-attache e-attache--jaune" x1="500" y1="188" x2="628" y2="188" />
+  <line class="e-cote" pathLength="1" x1="620" y1="188" x2="620" y2="460" />
+  <path class="e-fleche" d={fleches(620, 188)} />
+  <g class="cote-label"><rect x="584" y="286" width="72" height="34" /><text x="620" y="301"><tspan data-ratio="0.62">{v('plateauDebout')}</tspan> cm</text><text class="cote-leg" x="620" y="315">debout</text></g>
+
+  <!-- Haut de l'écran = hauteur des yeux -->
+  <line class="e-attache" x1="404" y1="153" x2="688" y2="153" />
+  <line class="e-cote" pathLength="1" x1="680" y1="153" x2="680" y2="460" />
+  <path class="e-fleche" d={fleches(680, 153)} />
+  <g class="cote-label"><rect x="644" y="226" width="72" height="34" /><text x="680" y="241"><tspan data-ratio="0.7">{v('yeux')}</tspan> cm</text><text class="cote-leg" x="680" y="255">yeux</text></g>
+</svg>
+
+<style>
+  .epure { display: block; width: 100%; height: auto; overflow: visible; }
+  .epure .e-sol { stroke: var(--mine); stroke-width: 1.5; }
+  .epure .e-hach { stroke: var(--filet-fort); stroke-width: 1; }
+  .epure .e-plein { fill: var(--mine); }
+  .epure .e-trait { fill: none; stroke: var(--mine); stroke-width: 2; stroke-linejoin: round; }
+  .epure .e-corps { fill: none; stroke: var(--mine); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .epure .e-fantome { fill: none; stroke: var(--gris); stroke-width: 1.2; stroke-dasharray: 5 4; }
+  .epure .e-angle { fill: none; stroke: var(--mine); stroke-width: 1.2; }
+  .epure .e-attache { stroke: var(--filet-fort); stroke-width: 1; }
+  .epure .e-attache--jaune { stroke: var(--gris); stroke-dasharray: 5 4; }
+  .epure .e-cote { stroke: var(--mine); stroke-width: 1; }
+  .epure .e-fleche { fill: var(--mine); }
+  .epure .cote-label rect { fill: var(--calque); stroke: var(--mine); stroke-width: 1; transition: fill 0.4s var(--ease-out); }
+  .epure .cote-label text { fill: var(--mine); font-family: var(--font-mono); font-size: 14px; text-anchor: middle; font-variant-numeric: tabular-nums; }
+  .epure .cote-label .cote-leg { font-size: 12px; fill: var(--gris); letter-spacing: 0.04em; text-transform: uppercase; }
+  .epure .cote-label[data-static] rect { stroke: none; }
+  .epure .cote-label.is-new rect { fill: var(--jaune); }
+  .epure .cote-label.is-new text { fill: #15171a; }
+
+  /* Les lignes de cote se tracent au premier affichage */
+  @media (prefers-reduced-motion: no-preference) {
+    .epure .e-cote { stroke-dasharray: 1; stroke-dashoffset: 1; animation: coter 0.6s var(--ease-out) 0.25s forwards; }
+    .epure .e-cote:nth-of-type(2n) { animation-delay: 0.4s; }
+  }
+  @keyframes coter { to { stroke-dashoffset: 0; } }
+</style>

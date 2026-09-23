@@ -1,8 +1,8 @@
 ---
-// Icônes SVG (trait 2 px, style Lucide) — remplace les emojis des catégories,
+// Icônes SVG (trait fin 1,6 px, style Lucide, accordé à l'épure) — remplace les emojis des catégories,
 // guides, budgets, outils et composants PC. `name` = slug ou nom générique.
 interface Props { name: string; size?: number; class?: string; stroke?: number }
-const { name, size = 24, class: cls, stroke = 2 } = Astro.props;
+const { name, size = 24, class: cls, stroke = 1.6 } = Astro.props;
 
 const chair = '<rect x="7" y="3" width="10" height="9" rx="2"/><path d="M4 14h16"/><path d="M5 14v-2M19 14v-2"/><path d="M6 21l1-7M18 21l-1-7"/>';
 const keyboard = '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M9 14h6"/>';
@@ -53,6 +53,12 @@ const paths: Record<string, string> = {
   mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
   euro: '<path d="M18 6a7 7 0 0 0-11 3H5M7 15h2a7 7 0 0 0 9 3"/><path d="M4 12h9"/>',
   chevron: '<path d="m6 9 6 6 6-6"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon: '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>',
+  external: '<path d="M7 17 17 7"/><path d="M8 7h9v9"/>',
+  up: '<path d="M12 19V5"/><path d="m6 11 6-6 6 6"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  minus: '<path d="M5 12h14"/>',
   star: '<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/>',
 };
 const d = paths[name] ?? paths.tag;

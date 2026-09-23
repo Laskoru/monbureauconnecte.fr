@@ -1,51 +1,47 @@
 ---
 // Guide interactif « Trouve ton matériel » : 2 questions -> reco + lien de recherche Amazon.
 import { siteConfig } from '../siteConfig';
-import Icon from './Icon.astro';
 const tag = siteConfig.amazon.tag;
 ---
 
-<section class="finder section night blueprint--night" id="guide">
+<section class="finder section" id="guide">
   <div class="wide finder__inner">
-    <p class="finder__eyebrow"><Icon name="sliders" size={16} /> Guide express</p>
-    <h2 class="finder__title">Trouve ton matériel en 30 secondes</h2>
-    <p class="finder__lede">Réponds à 2 questions, on te dit exactement quoi regarder — et où.</p>
+    <h2 class="finder__title section__title">Trouve ton matériel en 30 secondes</h2>
+    <p class="finder__lede section__lede">Réponds à 2 questions, on te dit exactement quoi regarder — et où.</p>
     <div class="finder__card" id="finderCard" data-tag={tag}></div>
   </div>
 </section>
 
 <style>
-  .finder__inner { text-align: center; }
-  .finder__eyebrow { display: inline-flex; align-items: center; gap: .5em; margin: 0 0 .6rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-signal); }
-  .finder__title { margin: 0; font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
-  .finder__lede { color: var(--color-on-night-muted); margin: .7rem auto 1.8rem; max-width: 46ch; }
-  .finder__card { position: relative; max-width: 640px; margin: 0 auto; text-align: left; background: var(--color-surface); color: var(--color-text); border-radius: var(--radius-lg); padding: 1.8rem; box-shadow: var(--shadow-lg); border-top: 4px solid var(--color-signal); }
+  /* Un panneau papier au filet mine ; le résultat reçoit le filet jaune de 4 px */
+  .finder__card { position: relative; max-width: 720px; padding: 1.6rem 1.6rem 1.5rem; background: var(--papier); color: var(--mine); border: 1px solid var(--mine); }
+  .finder__card.is-result { border-top: 4px solid var(--jaune); }
   .finder__card :global(.prog) { display: flex; gap: 6px; margin-bottom: 1.3rem; }
-  .finder__card :global(.prog i) { height: 4px; flex: 1; background: var(--color-border); transition: background .3s; }
-  .finder__card :global(.prog i.on) { background: var(--color-accent); }
-  .finder__card :global(.q) { font-family: var(--font-display); font-weight: 700; font-stretch: 106%; font-size: 1.35rem; text-align: center; margin-bottom: 1.2rem; }
-  .finder__card :global(.opts) { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
-  .finder__card :global(.opt) { display: flex; align-items: center; gap: .8rem; text-align: left; min-height: 56px; padding: .8rem 1rem; border-radius: var(--radius); border: 1px solid var(--color-border-strong); background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-weight: 600; font-size: .98rem; cursor: pointer; transition: border-color .15s, background .15s, transform .1s; }
-  .finder__card :global(.opt:hover) { border-color: var(--color-accent); background: var(--color-accent-soft); transform: translateY(-2px); }
-  .finder__card :global(.opt svg) { width: 22px; height: 22px; flex: 0 0 auto; color: var(--color-accent-text); }
-  .finder__card :global(.back) { display: block; margin: 1.1rem auto 0; background: none; border: 0; color: var(--color-text-muted); font: 600 .88rem var(--font-body); cursor: pointer; min-height: 32px; }
-  .finder__card :global(.back:hover) { color: var(--color-text); }
-  .finder__card :global(.result) { text-align: center; animation: finderpop .35s ease; }
-  @keyframes finderpop { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
-  .finder__card :global(.result .badge) { display: inline-block; font-family: var(--font-mono); color: var(--color-signal-text); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; background: var(--color-signal-soft); padding: .35em .8em; border-radius: var(--radius-sm); }
-  .finder__card :global(.result .ico) { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius); background: var(--color-night); color: var(--color-signal); margin: .9rem 0 .3rem; }
-  .finder__card :global(.result .ico svg) { width: 32px; height: 32px; }
-  .finder__card :global(.result h3) { font-family: var(--font-display); font-stretch: 106%; font-size: 1.5rem; margin: .4rem 0 0; }
-  .finder__card :global(.result p) { color: var(--color-text-muted); max-width: 42ch; margin: .6rem auto 0; }
-  .finder__card :global(.ract) { display: flex; gap: .7rem; justify-content: center; flex-wrap: wrap; margin-top: 1.4rem; }
-  @media (max-width: 560px) { .finder__card :global(.opts) { grid-template-columns: 1fr; } .finder__card { padding: 1.3rem; } }
+  .finder__card :global(.prog i) { height: 3px; flex: 1; background: var(--filet); transition: background-color 0.3s ease; }
+  .finder__card :global(.prog i.on) { background: var(--mine); }
+  .finder__card :global(.q) { margin: 0 0 1.2rem; font-family: var(--font-display); font-stretch: 125%; font-weight: 400; font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.7rem); line-height: 1.12; letter-spacing: -0.015em; }
+  .finder__card :global(.opts) { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .finder__card :global(.opt) { display: flex; align-items: center; gap: 0.8rem; min-height: 56px; padding: 0.8rem 1rem; text-align: left; border: 1.5px solid var(--mine); border-radius: var(--radius-sm); background: transparent; color: var(--mine); font-family: var(--font-body); font-weight: 600; font-size: 0.98rem; line-height: 1.25; cursor: pointer; transition: background-color 0.18s ease, color 0.18s ease; }
+  .finder__card :global(.opt:hover) { background: var(--jaune-pale); }
+  .finder__card :global(.opt.is-active), .finder__card :global(.opt:active) { background: var(--jaune); color: var(--sur-jaune); }
+  .finder__card :global(.opt svg) { width: 22px; height: 22px; flex: 0 0 auto; }
+  .finder__card :global(.back) { display: inline-flex; align-items: center; gap: 0.4em; min-height: 40px; margin: 1rem 0 0; padding: 0; background: none; border: 0; color: var(--gris); font: 600 0.9rem var(--font-body); cursor: pointer; }
+  .finder__card :global(.back:hover) { color: var(--mine); }
+  .finder__card :global(.back svg) { width: 16px; height: 16px; flex: 0 0 auto; }
+  .finder__card :global(.result) { animation: finder-in 0.32s var(--ease-out); }
+  @keyframes finder-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .finder__card :global(.result h3) { margin: 0; font-size: 1.4rem; line-height: 1.25; }
+  .finder__card :global(.result p) { margin: 0.6rem 0 0; max-width: 52ch; color: var(--gris); line-height: 1.6; }
+  .finder__card :global(.ract) { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
+  @media (max-width: 560px) { .finder__card :global(.opts) { grid-template-columns: 1fr; } .finder__card { padding: 1.2rem; } }
 </style>
 
 <script>
   const card = document.getElementById('finderCard');
   if (card) {
     const TAG = card.dataset.tag || '';
-    const svg = (d: string) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+    // Même trait que Icon.astro (1,6 px) : aucune flèche ni aucun symbole en caractère.
+    const svg = (d: string) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
     const I: Record<string, string> = {
       home: svg('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>'),
       game: svg('<rect x="2" y="7" width="20" height="10" rx="5"/><path d="M6 12h4M8 10v4"/><path d="M15 11h.01M18 13h.01"/>'),
@@ -55,6 +51,9 @@ const tag = siteConfig.amazon.tag;
       headphones: svg('<path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>'),
       ruler: svg('<path d="M21 7 7 21l-4-4L17 3z"/><path d="m14 6 2 2M11 9l2 2M8 12l2 2"/>'),
       plug: svg('<path d="M9 2v6M15 2v6"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v5"/>'),
+      back: svg('<path d="M19 12H5"/><path d="m11 18-6-6 6-6"/>'),
+      refresh: svg('<path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 3v5h-5"/>'),
+      external: svg('<path d="M7 17 17 7"/><path d="M8 7h9v9"/>'),
     };
     const STEPS = [
       { key: 'usage', q: 'Tu bosses surtout en…', opts: [
@@ -77,21 +76,22 @@ const tag = siteConfig.amazon.tag;
       return r;
     }
     function render() {
+      card.classList.toggle('is-result', state.step >= STEPS.length);
       if (state.step >= STEPS.length) {
         const r = reco();
-        card.innerHTML = '<div class="result"><span class="badge">Notre reco</span>'
-          + '<div class="ico">' + I[r.e] + '</div><h3>' + r.t + '</h3><p>' + r.w + '</p>'
+        card.innerHTML = '<div class="result"><h3>' + r.t + '</h3><p>' + r.w + '</p>'
           + '<div class="ract"><a class="btn btn--outline" href="' + r.a + '">Lire notre comparatif</a>'
-          + '<a class="btn btn--primary" target="_blank" rel="sponsored noopener" href="https://www.amazon.fr/s?k=' + r.q + '&tag=' + TAG + '">Voir sur Amazon →</a></div>'
-          + '<button class="back" id="frestart">↺ Recommencer</button></div>';
+          + '<a class="btn btn--buy" target="_blank" rel="sponsored noopener" href="https://www.amazon.fr/s?k=' + r.q + '&tag=' + TAG + '">Voir sur Amazon ' + I.external + '</a></div>'
+          + '<button class="back" id="frestart">' + I.refresh + 'Recommencer</button></div>';
         document.getElementById('frestart')!.addEventListener('click', () => { state.step = 0; state.ans = {}; render(); });
         return;
       }
       const s = STEPS[state.step];
+      // La réponse déjà donnée (retour arrière) reste marquée en jaune : état sélectionné.
       card.innerHTML = '<div class="prog">' + STEPS.map((_, i) => '<i class="' + (i <= state.step ? 'on' : '') + '"></i>').join('') + '</div>'
         + '<div class="q">' + s.q + '</div>'
-        + '<div class="opts">' + s.opts.map((o) => '<button class="opt" data-v="' + o.v + '">' + I[o.e] + o.t + '</button>').join('') + '</div>'
-        + (state.step > 0 ? '<button class="back" id="fback">← Retour</button>' : '');
+        + '<div class="opts">' + s.opts.map((o) => '<button class="opt' + (state.ans[s.key] === o.v ? ' is-active' : '') + '" data-v="' + o.v + '">' + I[o.e] + o.t + '</button>').join('') + '</div>'
+        + (state.step > 0 ? '<button class="back" id="fback">' + I.back + 'Retour</button>' : '');
       card.querySelectorAll<HTMLButtonElement>('.opt').forEach((b) => b.addEventListener('click', () => { state.ans[s.key] = b.dataset.v!; state.step++; render(); }));
       const bk = document.getElementById('fback'); if (bk) bk.addEventListener('click', () => { state.step--; render(); });
     }

@@ -5,7 +5,9 @@ import { coverSrcSet, resolveCoverImage } from '../lib/covers';
 import { resolveProductImage } from '../lib/products';
 import { getRating } from '../lib/ratings';
 import { isAvailable, productUrl } from '../lib/availability';
+import { mesuresProduit } from '../lib/mesures';
 import ArticleCard from '../components/ArticleCard.astro';
+import EpurePoste from '../components/EpurePoste.astro';
 import Icon from '../components/Icon.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
@@ -14,200 +16,283 @@ import { budgets } from '../budgets';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const sorted = [...allArticles].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// Numéro de planche : ordre de publication, stable (01 = le premier comparatif publié)
+const chrono = [...allArticles].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf() || a.slug.localeCompare(b.slug));
+const numero = new Map(chrono.map((a, i) => [a.slug, String(i + 1).padStart(2, '0')]));
 const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
 const published = new Set(allArticles.map((a) => a.slug));
-
-// Comparatifs de référence (un par grand besoin) + les plus récents
-const featuredSlugs = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail'];
-const featured = featuredSlugs.map((s) => bySlug.get(s)).filter(Boolean);
-const [lead, ...others] = featured;
-const latest = sorted.filter((a) => !featuredSlugs.includes(a.slug)).slice(0, 6);
-
-// Produits recommandés : le premier produit disponible (avec photo) de comparatifs choisis
+const total = allArticles.length;
 const nf = new Intl.NumberFormat('fr-FR');
+const dateCourte = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
 const shortTitle = (t: string) => t.split(/\s[—–-]\s/)[0].trim();
-const picks = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail', 'claviers-mecaniques-silencieux', 'bras-support-ecran-articule', 'webcams-1080p-vs-4k', 'hub-usb-c-station-accueil']
+
+const cote = (r: number) => Math.round(r * 175); // taille de départ : 175 cm, même arrondi que l'épure
+
+// Nomenclature : les comparatifs de référence, un par grand besoin
+const refSlugs = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail', 'claviers-mecaniques-silencieux', 'bras-support-ecran-articule', 'webcams-1080p-vs-4k', 'hub-usb-c-station-accueil'];
+const refs = refSlugs.map((s) => bySlug.get(s)).filter((a): a is NonNullable<typeof a> => Boolean(a)).map((a) => ({
+  a,
+  n: a.data.products?.length ?? 0,
+  cover: resolveCoverImage(a.slug, a.data.coverImage),
+  cat: categories.find((c) => c.slug === a.data.category),
+  date: a.data.updatedDate ?? a.data.pubDate,
+  planche: numero.get(a.slug),
+}));
+
+// Choix cotés : le premier produit disponible (avec photo) de comparatifs choisis
+const picks = refSlugs
   .map((slug) => {
-    const a = bySlug.get(slug); if (!a) return null;
-    const p = (a.data.products ?? []).find((x) => isAvailable(x.asin) && resolveProductImage(x.asin, x.image));
-    if (!p) return null;
-    return { article: a, product: p, image: resolveProductImage(p.asin, p.image)!, rating: getRating(p.asin) };
+    const article = bySlug.get(slug); if (!article) return null;
+    const product = (article.data.products ?? []).find((x) => isAvailable(x.asin) && resolveProductImage(x.asin, x.image));
+    if (!product) return null;
+    return { article, product, image: resolveProductImage(product.asin, product.image)!, rating: getRating(product.asin), mesures: mesuresProduit(product) };
   })
-  .filter(Boolean)
+  .filter((x): x is NonNullable<typeof x> => Boolean(x))
   .slice(0, 4);
 
-// Guides par besoin illustrés par la couverture de leur premier article
-const needs = guides.map((g) => {
-  const first = g.articles.map((s) => bySlug.get(s)).find(Boolean);
-  return { ...g, cover: first ? resolveCoverImage(first.slug, first.data.coverImage) : null, count: g.articles.filter((s) => published.has(s)).length };
+// Par problème : libellé court (avant les deux-points)
+const needs = guides.map((g) => ({ ...g, court: g.title.split(/\s:\s/)[0], count: g.articles.filter((s) => published.has(s)).length }));
+
+// Par budget : trois plages sur une même échelle de prix (0 à 300 €, la dernière ouverte)
+const bornes: Record<string, [number, number, boolean]> = { 'petit-budget': [0, 40, false], equilibre: [50, 150, false], 'setup-complet': [150, 300, true] };
+const echelle = 300;
+const budgetRows = budgets.map((b) => {
+  const [de, a, ouvert] = bornes[b.slug] ?? [0, echelle, true];
+  return { ...b, de, a, ouvert, gauche: (de / echelle) * 100, largeur: ((a - de) / echelle) * 100, count: b.articles.filter((s) => published.has(s)).length };
 });
-const budgetCounts = budgets.map((b) => ({ ...b, count: b.articles.filter((s) => published.has(s)).length }));
-const categoryCounts = categories.map((c) => ({ ...c, count: allArticles.filter((a) => a.data.category === c.slug).length }));
-const collage = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'casque-reduction-bruit-teletravail'].map((s) => bySlug.get(s)).filter(Boolean).map((a) => ({ src: resolveCoverImage(a.slug, a.data.coverImage), alt: a.data.coverAlt ?? '' }));
-const nbProducts = allArticles.reduce((n, a) => n + (a.data.products?.length ?? 0), 0);
+const graduations = [0, 100, 200, 300];
+const categoryCounts = categories.map((c) => ({ ...c, count: allArticles.filter((x) => x.data.category === c.slug).length }));
+const latest = sorted.filter((a) => !refSlugs.includes(a.slug)).slice(0, 3);
 
 const tools = [
-  { icon: 'ruler', title: 'Calculateur de hauteur de bureau', href: '/calculateur-hauteur-bureau/' },
-  { icon: 'posture', title: 'Le poste de travail idéal', href: '/poste-de-travail-ideal/' },
-  { icon: 'checklist', title: 'Checklist ergonomie', href: '/checklist-bureau-ergonomique/' },
-  { icon: 'cpu', title: 'Guide PC gaming', href: '/guide-pc-gaming/' },
-  { icon: 'book', title: 'Lexique du bureau', href: '/lexique/' },
+  { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Plateau, siège et écran selon ta taille.', href: '/calculateur-hauteur-bureau/' },
+  { icon: 'posture', title: 'Le poste de travail idéal', desc: 'Le schéma coté des bons réglages.', href: '/poste-de-travail-ideal/' },
+  { icon: 'checklist', title: 'Checklist ergonomie', desc: 'Ce qu’il faut vérifier, point par point.', href: '/checklist-bureau-ergonomique/' },
+  { icon: 'cpu', title: 'Guide PC gaming', desc: 'Chaque pièce expliquée, sans jargon.', href: '/guide-pc-gaming/' },
+  { icon: 'book', title: 'Lexique du bureau', desc: 'Les mots du matériel, en clair.', href: '/lexique/' },
 ];
 
 const faqs = [
   { q: 'Vos comparatifs sont-ils sponsorisés ?', a: "Non. Aucune marque ne paie pour figurer ou être mieux classée. On se rémunère uniquement via les liens affiliés : si tu achètes après avoir cliqué, on touche une petite commission, sans surcoût pour toi. Ça ne change ni nos choix, ni nos critiques." },
   { q: 'Comment choisissez-vous les produits recommandés ?', a: "On part toujours d'un usage concret (mal de dos, petit bureau, visio…) et on compare des critères vérifiables : plage de réglage, charge admise, niveau sonore, autonomie. On assume les compromis de chaque modèle plutôt que de gonfler un classement." },
-  { q: 'D’où viennent les notes affichées ?', a: "Les étoiles et le nombre d'avis proviennent directement de la fiche Amazon du produit, relevés automatiquement et réactualisés régulièrement. Nous n'écrivons aucun avis client : ce sont ceux, réels, laissés par les acheteurs." },
+  { q: 'D’où viennent les notes affichées ?', a: "La note et le nombre d'avis proviennent directement de la fiche Amazon du produit, relevés automatiquement et réactualisés régulièrement. Nous n'écrivons aucun avis client : ce sont ceux, réels, laissés par les acheteurs." },
   { q: 'À quelle fréquence les articles sont-ils mis à jour ?', a: "Régulièrement. Les modèles conseillés et les prix évoluent vite : on révise les comparatifs pour qu'ils restent d'actualité, et la date de dernière mise à jour est indiquée en haut de chaque article." },
-  { q: "C'est quoi, un « lien affilié Amazon » ?", a: "C'est un lien qui indique à Amazon que tu viens de chez nous. Si tu achètes, Amazon nous reverse une petite commission — le prix reste exactement le même pour toi. C'est ce qui finance le site et nous permet de rester indépendants." },
+  { q: "C'est quoi, un « lien affilié Amazon » ?", a: "C'est un lien qui indique à Amazon que tu viens de chez nous. Si tu achètes, Amazon nous reverse une petite commission, et le prix reste exactement le même pour toi. C'est ce qui finance le site et nous permet de rester indépendants." },
 ];
 ---
 
-<BaseLayout title="Mon Bureau Connecté — bureau, gaming & télétravail" description={siteConfig.description}>
-  <!-- ═══ HERO : titre + collage photo ═══ -->
-  <section class="hero blueprint">
+<BaseLayout title="Mon Bureau Connecté : ton poste de travail, réglé au millimètre" description={siteConfig.description}>
+  <!-- ═══ OUVERTURE : l'épure du poste, cotée selon ta taille ═══ -->
+  <section class="hero" aria-labelledby="hero-titre">
     <div class="wide hero__grid">
-      <div class="hero__text">
-        <h1 class="hero__title">Le bon matériel pour ton poste de travail, comparé sur des critères mesurables.</h1>
-        <p class="hero__lede">Chaises, bureaux assis-debout, périphériques, casques et webcams : des comparatifs indépendants, des outils gratuits pour régler ton poste, et les vraies notes Amazon — jamais retouchées.</p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="/guides/">Trouver par besoin</a>
-          <a class="btn btn--outline" href="/articles/">Voir les comparatifs</a>
+      <div class="hero__texte">
+        <h1 id="hero-titre" class="hero__titre">Ton poste, réglé au millimètre.</h1>
+        <p class="hero__chapo">Donne ta taille : on calcule les cotes de ton poste, puis on compare le matériel qui les respecte. {total} comparatifs indépendants, avec les vraies notes Amazon, jamais retouchées.</p>
+        <div class="taille">
+          <label class="taille__label" for="taille-nb">Ta taille</label>
+          <div class="taille__champ">
+            <input id="taille-nb" class="taille__nb" type="number" inputmode="numeric" min="140" max="210" step="1" value="175" aria-describedby="taille-aide" />
+            <span class="taille__unite" aria-hidden="true">cm</span>
+          </div>
+          <input id="taille-curseur" class="taille__curseur" type="range" min="140" max="210" step="1" value="175" aria-label="Ta taille en centimètres" />
+          <p id="taille-aide" class="taille__aide">De 140 à 210 cm. Les cotes se recalculent au centimètre près.</p>
         </div>
-        <ul class="hero__proof">
-          <li><Icon name="check" size={18} /> {allArticles.length} comparatifs, {nbProducts} produits passés au crible</li>
-          <li><Icon name="shield" size={18} /> Indépendant : aucune marque ne paie pour figurer</li>
-          <li><Icon name="refresh" size={18} /> Modèles et prix revus en 2026</li>
-        </ul>
       </div>
-      <div class="collage" aria-hidden="true">
-        {collage.map((c, i) => c.src && <img class={`collage__img collage__img--${i + 1}`} src={c.src} srcset={coverSrcSet(c.src)} sizes="(max-width: 900px) 40vw, 300px" alt="" width="1600" height="1000" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} decoding="async" />)}
+      <figure class="hero__epure">
+        <EpurePoste taille={175} />
+        <dl class="cartouche hero__cartouche">
+          <div><dt>Planche</dt><dd class="mono">00</dd></div>
+          <div><dt>Sujet</dt><dd>Poste assis-debout</dd></div>
+          <div><dt>Échelle</dt><dd>Ta taille</dd></div>
+          <div><dt>Comparatifs</dt><dd class="mono">{total}</dd></div>
+        </dl>
+      </figure>
+      <div class="hero__suite">
+        <dl class="hero__valeurs">
+          <div class="cote-cell"><dt>Assise</dt><dd><b data-ratio="0.25">{cote(0.25)}</b> cm</dd></div>
+          <div class="cote-cell"><dt>Plateau assis</dt><dd><b data-ratio="0.42">{cote(0.42)}</b> cm</dd></div>
+          <div class="cote-cell"><dt>Plateau debout</dt><dd><b data-ratio="0.62">{cote(0.62)}</b> cm</dd></div>
+          <div class="cote-cell"><dt>Haut de l'écran</dt><dd><b data-ratio="0.7">{cote(0.7)}</b> cm</dd></div>
+        </dl>
+        <p class="hero__verdict" id="verdict" aria-live="polite">Un bureau standard (74 cm) te va : règle ta chaise pour garder les coudes à 90°.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="/articles/bureau-assis-debout-electrique/">Voir les bureaux réglables <Icon name="arrow" size={18} /></a>
+          <a class="hero__lien" href="/calculateur-hauteur-bureau/">Le calculateur complet</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ DERNIERS COMPARATIFS ═══ -->
-  <section class="section">
+  <!-- ═══ NOMENCLATURE : les comparatifs de référence ═══ -->
+  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+  <section class="section" aria-labelledby="nomen-titre">
     <div class="wide">
       <div class="section__head">
-        <div><h2 class="section__title">Les comparatifs de référence</h2><p class="section__lede">Un guide d'achat par grand besoin, avec les critères qui comptent et notre choix.</p></div>
-        <a class="section__link" href="/articles/">Tous les comparatifs <Icon name="arrow" size={16} /></a>
+        <div>
+          <h2 id="nomen-titre" class="section__title">Les comparatifs de référence</h2>
+          <p class="section__lede">Un comparatif par grand besoin : les critères qui comptent, les mesures qui départagent, et notre choix.</p>
+        </div>
+        <a class="section__link" href="/articles/">Les {total} comparatifs <Icon name="arrow" size={16} /></a>
       </div>
-      {lead && <ArticleCard article={lead} variant="feature" eager />}
-      <div class="grid3">{others.map((a) => <ArticleCard article={a} />)}</div>
+      <div class="nomen">
+        <ul class="nomen__liste">
+          {refs.map((r, i) => (
+            <li class="nomen__item" data-i={i}>
+              <a class="nomen__lien" href={`/articles/${r.a.slug}/`}>
+                <span class="nomen__no mono" title="Numéro de planche">{r.planche}</span>
+                <span class="nomen__corps">
+                  <span class="nomen__titre">{r.a.data.title}</span>
+                  <span class="nomen__sous"><span>{r.cat?.label}</span><span class="mono">{r.n} produit{r.n > 1 ? 's' : ''}</span><span class="mono">{dateCourte.format(r.date)}</span></span>
+                </span>
+                <Icon name="arrow" size={18} class="nomen__fleche" />
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div class="nomen__vue cadre" aria-hidden="true">
+          {refs.map((r, i) => r.cover && <img class="nomen__img" data-i={i} src={r.cover} srcset={coverSrcSet(r.cover)} sizes="(max-width: 1000px) 1px, 460px" alt="" width="1600" height="1000" loading="lazy" decoding="async" />)}
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ═══ PRODUITS RECOMMANDÉS ═══ -->
+  <!-- ═══ NOS CHOIX, COTÉS : une feuille de caractéristiques ═══ -->
   {picks.length > 0 && (
-    <section class="section section--soft">
-      <div class="wide">
-        <div class="section__head">
-          <div><h2 class="section__title">Nos produits recommandés</h2><p class="section__lede">Le premier choix de nos comparatifs, avec la vraie note Amazon. Le prix s'affiche sur la fiche produit.</p></div>
-        </div>
-        <div class="products">
-          {picks.map(({ article, product, image, rating }) => (
-            <article class="prod">
-              <a class="prod__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
-              <div class="prod__body">
-                {product.award && <p class="prod__award">{product.award}</p>}
-                <h3 class="prod__title"><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
-                {rating && <p class="prod__rating"><span class="stars" style={`--pct:${Math.round((rating.rating / 5) * 100)}%`} aria-hidden="true"></span><strong>{rating.rating.toFixed(1).replace('.', ',')}</strong>/5 · {nf.format(rating.count)} avis</p>}
-                {product.blurb && <p class="prod__blurb">{product.blurb}</p>}
-                <div class="prod__actions">
-                  <a class="btn btn--primary btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon</a>
-                  <a class="prod__more" href={`/articles/${article.slug}/`}>Lire le comparatif <Icon name="arrow" size={14} /></a>
+    <>
+      <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+      <section class="section" aria-labelledby="choix-titre">
+        <div class="wide">
+          <div class="section__head">
+            <div>
+              <h2 id="choix-titre" class="section__title">Nos choix, cotés</h2>
+              <p class="section__lede">Le premier choix de nos comparatifs : ses mesures d'abord, puis sa note Amazon réelle. Le prix s'affiche sur la fiche Amazon.</p>
+            </div>
+          </div>
+          <div class="feuille">
+            {picks.map(({ article, product, image, rating, mesures }) => (
+              <article class="feuille__col">
+                <a class="feuille__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
+                <div class="feuille__nom">
+                  <h3><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
+                  <p class="feuille__award">{product.award ?? 'Notre choix'}</p>
                 </div>
-              </div>
-            </article>
-          ))}
+                {mesures.length > 0 ? <ul class="mesures" aria-label="Mesures">{mesures.map((m) => <li>{m}</li>)}</ul> : <p class="feuille__vide">Mesures détaillées dans le comparatif</p>}
+                {rating ? (
+                  <p class="reglette">
+                    <span class="reglette__rule" style={`--p:${Math.round((rating.rating / 5) * 1000) / 10}%`} role="img" aria-label={`Note Amazon : ${rating.rating.toFixed(1).replace('.', ',')} sur 5`}></span>
+                    <span class="reglette__val"><b>{rating.rating.toFixed(1).replace('.', ',')}</b>/5 · {nf.format(rating.count)} avis</span>
+                  </p>
+                ) : <p class="feuille__vide">Note Amazon indisponible</p>}
+                <div class="feuille__cta">
+                  <a class="btn btn--buy btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon <Icon name="external" size={14} /></a>
+                  <a class="feuille__lire" href={`/articles/${article.slug}/`}>Lire le comparatif</a>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p class="feuille__disc">Liens partenaires : en tant que Partenaire Amazon, {siteConfig.name} perçoit une commission sur les achats éligibles, sans surcoût pour toi.</p>
         </div>
-        <p class="products__disc">Liens partenaires : en tant que Partenaire Amazon, {siteConfig.name} perçoit une commission sur les achats éligibles, sans surcoût pour toi.</p>
-      </div>
-    </section>
+      </section>
+    </>
   )}
 
-  <!-- ═══ PAR BESOIN ═══ -->
-  <section class="section">
+  <!-- ═══ PAR PROBLÈME ═══ -->
+  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+  <section class="section" aria-labelledby="pb-titre">
     <div class="wide">
       <div class="section__head">
-        <div><h2 class="section__title">Quel est ton problème ?</h2><p class="section__lede">Nos comparatifs rangés par situation réelle : on te dit quoi lire, dans quel ordre.</p></div>
+        <div>
+          <h2 id="pb-titre" class="section__title">Quel est ton problème ?</h2>
+          <p class="section__lede">Nos comparatifs rangés par situation réelle : on te dit quoi lire, et dans quel ordre.</p>
+        </div>
         <a class="section__link" href="/guides/">Tous les guides <Icon name="arrow" size={16} /></a>
       </div>
-      <div class="needs">
+      <ul class="pb">
         {needs.map((n) => (
-          <a class="need" href={`/guides/${n.slug}/`}>
-            <span class="need__media">{n.cover ? <img src={n.cover} srcset={coverSrcSet(n.cover)} sizes="140px" alt="" loading="lazy" decoding="async" width="480" height="300" /> : <Icon name={n.slug} size={28} />}</span>
-            <span class="need__body"><span class="need__title">{n.title}</span><span class="need__count">{n.count} comparatif{n.count > 1 ? 's' : ''}</span></span>
-            <Icon name="arrow" size={18} class="need__arrow" />
-          </a>
+          <li><a class="pb__lien" href={`/guides/${n.slug}/`}><span class="pb__titre">{n.court}</span><span class="pb__n mono">{n.count} comparatif{n.count > 1 ? 's' : ''}</span><Icon name="arrow" size={24} class="pb__fleche" /></a></li>
         ))}
-      </div>
+      </ul>
     </div>
   </section>
 
-  <!-- ═══ BUDGET + RAYONS ═══ -->
-  <section class="section section--soft">
-    <div class="wide split">
+  <!-- ═══ PAR BUDGET (règle de prix) + RAYONS ═══ -->
+  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+  <section class="section" aria-labelledby="budget-titre">
+    <div class="wide budg">
       <div>
-        <h2 class="section__title">Combien veux-tu y mettre ?</h2>
-        <ul class="list">
-          {budgetCounts.map((b) => (
-            <li><a href={`/budget/${b.slug}/`}><span class="list__icon"><Icon name={b.slug} size={20} /></span><span class="list__text"><strong>{b.label}</strong><span>{b.range} · {b.tagline}</span></span><span class="list__count">{b.count}</span></a></li>
+        <h2 id="budget-titre" class="section__title">Combien veux-tu y mettre ?</h2>
+        <p class="section__lede">Trois plages de prix posées sur la même règle, pour voir d'un coup d'œil où se situe chaque sélection.</p>
+        <div class="plages">
+          {budgetRows.map((b) => (
+            <a class="plage" href={`/budget/${b.slug}/`}>
+              <span class="plage__nom">{b.label}<span class="plage__n mono">{b.count} comparatifs</span></span>
+              <span class="plage__piste" aria-hidden="true"><span class:list={['plage__barre', { 'plage__barre--ouverte': b.ouvert }]} style={`--g:${b.gauche}%;--l:${b.largeur}%`}></span></span>
+              <span class="plage__prix mono">{b.range}</span>
+            </a>
           ))}
-        </ul>
-      </div>
-      <div>
-        <h2 class="section__title">Ou va droit au rayon</h2>
-        <ul class="list">
-          {categoryCounts.map((c) => (
-            <li><a href={`/categorie/${c.slug}/`}><span class="list__icon"><Icon name={c.slug} size={20} /></span><span class="list__text"><strong>{c.label}</strong><span>{c.description}</span></span><span class="list__count">{c.count}</span></a></li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ DERNIERS ARTICLES ═══ -->
-  {latest.length > 0 && (
-    <section class="section">
-      <div class="wide">
-        <div class="section__head">
-          <div><h2 class="section__title">Fraîchement publiés</h2></div>
-          <a class="section__link" href="/articles/">Voir tout <Icon name="arrow" size={16} /></a>
+          <div class="plages__axe" aria-hidden="true">
+            <span class="plages__graduations">{graduations.map((g) => <span style={`--x:${(g / echelle) * 100}%`}>{g === echelle ? `${g} € et +` : `${g} €`}</span>)}</span>
+          </div>
         </div>
-        <div class="grid3">{latest.map((a) => <ArticleCard article={a} />)}</div>
       </div>
-    </section>
+      <div class="rayons">
+        <h3 class="rayons__titre">Ou va droit au rayon</h3>
+        <ul>
+          {categoryCounts.map((c) => <li><a href={`/categorie/${c.slug}/`}><Icon name={c.slug} size={20} /><span>{c.label}</span><span class="mono">{c.count}</span></a></li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DERNIÈRES PLANCHES ═══ -->
+  {latest.length > 0 && (
+    <>
+      <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+      <section class="section" aria-labelledby="derniers-titre">
+        <div class="wide">
+          <div class="section__head">
+            <h2 id="derniers-titre" class="section__title">Fraîchement publiés</h2>
+            <a class="section__link" href="/articles/">Voir tout <Icon name="arrow" size={16} /></a>
+          </div>
+          <div class="grid3">{latest.map((a) => <ArticleCard article={a} />)}</div>
+        </div>
+      </section>
+    </>
   )}
 
-  <!-- ═══ OUTILS ═══ -->
-  <section class="section section--soft blueprint">
+  <!-- ═══ OUTILS : régler avant d'acheter ═══ -->
+  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+  <section class="section" aria-labelledby="outils-titre">
     <div class="wide">
       <div class="section__head">
-        <div><h2 class="section__title">Règle ton poste avant d'acheter</h2><p class="section__lede">Le premier gain ne coûte souvent rien : un écran à la bonne hauteur, un siège bien réglé. Nos outils gratuits donnent les repères.</p></div>
+        <div>
+          <h2 id="outils-titre" class="section__title">Règle ton poste avant d'acheter</h2>
+          <p class="section__lede">Le premier gain ne coûte souvent rien : un écran à la bonne hauteur, un siège bien réglé. Nos outils gratuits donnent les repères.</p>
+        </div>
+        <a class="section__link" href="/outils/">Tous les outils <Icon name="arrow" size={16} /></a>
       </div>
-      <ul class="tools">
-        {tools.map((t) => <li><a href={t.href}><Icon name={t.icon} size={22} /><span>{t.title}</span></a></li>)}
+      <ul class="outils">
+        {tools.map((t) => <li><a href={t.href}><Icon name={t.icon} size={26} /><span class="outils__titre">{t.title}</span><span class="outils__desc">{t.desc}</span></a></li>)}
       </ul>
     </div>
   </section>
 
   <!-- ═══ MÉTHODE + FAQ ═══ -->
-  <section class="section">
-    <div class="wide split split--wide">
-      <div class="method">
-        <h2 class="section__title">Comment nous comparons</h2>
-        <p>Chaque comparatif part d'un usage concret — setup gaming, télétravail, dos fragile — et compare ce qui se vérifie : <strong>plage de réglage, charge admise, niveau sonore, autonomie, compatibilité</strong>. Pas de classement gonflé, pas de « meilleur » universel qui n'existe pas.</p>
-        <p>Les étoiles affichées sont les <strong>vraies notes Amazon</strong>, jamais retouchées, et on regarde le volume d'avis autant que la note. Le site est <strong>100 % indépendant</strong> : on se finance par l'affiliation, et on l'indique toujours.</p>
+  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
+  <section class="section" aria-labelledby="methode-titre">
+    <div class="wide methode">
+      <div class="methode__texte">
+        <h2 id="methode-titre" class="section__title">Comment on mesure</h2>
+        <p>Chaque comparatif part d'un usage concret (setup gaming, télétravail, dos fragile) et compare ce qui se vérifie : <strong>plage de réglage, charge admise, niveau sonore, autonomie, compatibilité</strong>. Pas de classement gonflé, pas de « meilleur » universel qui n'existe pas.</p>
+        <p>Les notes affichées sont les <strong>vraies notes Amazon</strong>, jamais retouchées, et on regarde le volume d'avis autant que la note. Le site est <strong>100 % indépendant</strong> : on se finance par l'affiliation, et on l'indique toujours.</p>
         <a class="btn btn--outline" href="/a-propos/">Notre méthode en détail</a>
       </div>
       <div class="faq">
         <h2 class="section__title">Questions fréquentes</h2>
-        <div class="faq__list">
+        <div class="faq__liste">
           {faqs.map((item, i) => (
             <details class="faq__item" open={i === 0}>
-              <summary class="faq__q"><span>{item.q}</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+              <summary class="faq__q"><span>{item.q}</span><span class="faq__signe" aria-hidden="true"></span></summary>
               <p class="faq__a">{item.a}</p>
             </details>
           ))}
@@ -219,90 +304,210 @@ const faqs = [
   <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) })} />
 </BaseLayout>
 
+<script is:inline>
+  // Calculateur de l'ouverture : les cotes de l'épure et la liste suivent la taille.
+  (function () {
+    var nb = document.getElementById('taille-nb');
+    var curseur = document.getElementById('taille-curseur');
+    var verdict = document.getElementById('verdict');
+    if (!nb || !curseur) return;
+    var cibles = Array.prototype.slice.call(document.querySelectorAll('[data-ratio]'));
+    var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function texteVerdict(assis) {
+      var d = assis - 74;
+      if (Math.abs(d) <= 1) return 'Un bureau standard (74 cm) te va : règle ta chaise pour garder les coudes à 90°.';
+      if (d < 0) return 'Un bureau standard (74 cm) est ' + (-d) + ' cm trop haut pour toi : monte ta chaise et ajoute un <a href="/articles/repose-pieds-ergonomique-bureau/">repose-pieds</a>, ou passe au <a href="/articles/bureau-assis-debout-electrique/">bureau réglable</a>.';
+      return 'Un bureau standard (74 cm) est ' + d + ' cm trop bas pour toi : un <a href="/articles/bureau-assis-debout-electrique/">bureau réglable en hauteur</a> corrige ça.';
+    }
+    function rendre(t) {
+      cibles.forEach(function (el) {
+        var v = String(Math.round(parseFloat(el.getAttribute('data-ratio')) * t));
+        if (el.textContent === v) return;
+        el.textContent = v;
+        var g = el.closest('.cote-label, .cote-cell');
+        if (g && !reduit) { g.classList.remove('is-new'); void (g.getBBox ? g.getBBox() : g.offsetWidth); g.classList.add('is-new'); clearTimeout(g._t); g._t = setTimeout(function () { g.classList.remove('is-new'); }, 400); }
+      });
+      if (verdict) verdict.innerHTML = texteVerdict(Math.round(0.42 * t));
+    }
+    function sync(val, source) {
+      var t = parseInt(val, 10);
+      if (isNaN(t)) return;
+      var borne = Math.min(210, Math.max(140, t));
+      if (source !== 'nb' || String(borne) === String(t)) nb.value = borne;
+      curseur.value = borne;
+      curseur.style.setProperty('--p', ((borne - 140) / 70) * 100 + '%');
+      rendre(borne);
+    }
+    curseur.addEventListener('input', function () { sync(curseur.value, 'curseur'); });
+    nb.addEventListener('input', function () { sync(nb.value, 'nb'); });
+    nb.addEventListener('blur', function () { sync(nb.value || 175, ''); });
+    sync(175, '');
+  })();
+</script>
+
 <style>
-  /* ═══ HERO ═══ */
-  .hero { background-color: var(--color-surface); border-bottom: 1px solid var(--color-border); }
-  .hero__grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr); gap: 3rem; align-items: center; padding-top: clamp(2.5rem, 7vh, 5rem); padding-bottom: clamp(2.5rem, 7vh, 5rem); }
-  .hero__title { margin: 0 0 1.1rem; font-size: clamp(2.1rem, 4.4vw, 3.6rem); line-height: 1.04; letter-spacing: -.03em; max-width: 18ch; }
-  .hero__lede { margin: 0 0 1.6rem; font-size: clamp(1.02rem, 1.4vw, 1.15rem); line-height: 1.6; color: var(--color-text-muted); max-width: 56ch; }
-  .hero__cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-bottom: 1.6rem; }
-  .hero__proof { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .45rem; font-size: .92rem; color: var(--color-text-muted); }
-  .hero__proof li { display: flex; align-items: center; gap: .55rem; }
-  .hero__proof svg { color: var(--color-accent-text); flex-shrink: 0; }
-  .collage { position: relative; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: .8rem; height: 100%; min-height: 420px; }
-  .collage__img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
-  .collage__img--1 { grid-row: 1 / 3; }
-  .collage__img--2 { transform: translateY(1.2rem); }
-  .collage__img--3 { transform: translateY(-1.2rem); }
+  /* ═══ OUVERTURE ═══ */
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-rows: auto auto; gap: 0 clamp(2rem, 4vw, 4rem); align-items: start; padding-top: clamp(2.2rem, 6vh, 4.5rem); padding-bottom: clamp(2.5rem, 7vh, 5rem); }
+  .hero__titre { margin: 0 0 1.2rem; font-size: clamp(2.4rem, 1rem + 3.4vw, 4rem); line-height: 1.02; letter-spacing: -0.03em; }
+  .hero__chapo { margin: 0 0 2rem; font-size: 1.1rem; line-height: 1.6; color: var(--gris); max-width: 48ch; }
 
-  /* ═══ Grilles ═══ */
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 1.25rem; margin-top: 1.5rem; }
+  .taille { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 0.3rem 1.2rem; margin: 0 0 1.4rem; }
+  .taille__label { grid-column: 1 / -1; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gris); }
+  .taille__champ { display: flex; align-items: baseline; gap: 0.4rem; border-bottom: 1.5px solid var(--mine); }
+  .taille__nb { width: 3.4ch; padding: 0; border: 0; background: transparent; color: var(--mine); font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: 3rem; line-height: 1.1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+  .taille__nb::-webkit-outer-spin-button, .taille__nb::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .taille__nb:focus { outline: none; }
+  .taille__champ:focus-within { border-bottom: 3px solid var(--jaune); margin-bottom: -1.5px; }
+  .taille__unite { font-family: var(--font-mono); font-size: 1rem; color: var(--gris); }
+  .taille__aide { grid-column: 1 / -1; margin: 0.4rem 0 0; font-size: 0.85rem; color: var(--gris); }
 
-  /* ═══ Produits ═══ */
-  .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
-  .prod { display: flex; flex-direction: column; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow .2s ease, transform .2s ease; }
-  .prod:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-  .prod__media { display: block; aspect-ratio: 1; background: #fff; padding: 1.2rem; border-bottom: 1px solid var(--color-border); }
-  .prod__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
-  .prod__body { padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; gap: .45rem; flex: 1; }
-  .prod__award { margin: 0; font-size: .74rem; font-weight: 700; color: var(--color-signal-text); }
-  .prod__title { margin: 0; font-size: 1.02rem; line-height: 1.3; font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
-  .prod__title a { color: var(--color-text); text-decoration: none; }
-  .prod__title a:hover { color: var(--color-accent-text); }
-  .prod__rating { margin: 0; display: flex; align-items: center; gap: .4rem; font-size: .84rem; color: var(--color-text-muted); }
-  .stars { position: relative; display: inline-block; width: 84px; height: 16px; background: linear-gradient(90deg, var(--color-signal) var(--pct), var(--color-border) var(--pct)); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.1 7.5l6.2-.9zM30 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L30 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM50 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L50 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM70 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L70 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM90 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L90 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9z'/%3E%3C/svg%3E") no-repeat center / contain; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.1 7.5l6.2-.9zM30 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L30 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM50 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L50 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM70 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L70 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM90 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L90 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9z'/%3E%3C/svg%3E") no-repeat center / contain; }
-  .prod__rating strong { color: var(--color-text); }
-  .prod__blurb { margin: 0; font-size: .88rem; line-height: 1.5; color: var(--color-text-muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .prod__actions { margin-top: auto; padding-top: .6rem; display: flex; flex-direction: column; gap: .5rem; align-items: flex-start; }
-  .prod__more { display: inline-flex; align-items: center; gap: .3em; font-size: .86rem; font-weight: 600; color: var(--color-accent-text); text-decoration: none; min-height: 28px; }
-  .prod__more:hover { text-decoration: underline; }
-  .products__disc { margin: 1.2rem 0 0; font-size: .8rem; color: var(--color-text-faint); }
+  /* Curseur façon règle : graduations, repère long tous les 10 cm, curseur jaune */
+  .taille__curseur { --p: 50%; -webkit-appearance: none; appearance: none; width: 100%; height: 44px; margin: 0; background: transparent; cursor: pointer; color: var(--filet-fort); }
+  .taille__curseur::-webkit-slider-runnable-track { height: 18px; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 7)) left bottom / calc(100% + 1px) 16px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 70)) left bottom / 100% 6px no-repeat, linear-gradient(var(--jaune), var(--jaune)) left 6px / var(--p) 6px no-repeat; }
+  .taille__curseur::-moz-range-track { height: 18px; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 7)) left bottom / calc(100% + 1px) 16px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 70)) left bottom / 100% 6px no-repeat, linear-gradient(var(--jaune), var(--jaune)) left 6px / var(--p) 6px no-repeat; }
+  .taille__curseur::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 28px; margin-top: -6px; background: var(--mine); border: 3px solid var(--calque); border-radius: 0; }
+  .taille__curseur::-moz-range-thumb { width: 14px; height: 24px; background: var(--mine); border: 3px solid var(--calque); border-radius: 0; }
+  .taille__curseur:focus-visible { outline: 3px solid var(--jaune); outline-offset: 4px; box-shadow: none; }
 
-  /* ═══ Par besoin ═══ */
-  .needs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .need { display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 1rem; padding: .6rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); text-decoration: none; color: var(--color-text); transition: border-color .15s ease, box-shadow .15s ease; }
-  .need:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); }
-  .need__media { display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: var(--color-bg-soft); color: var(--color-accent-text); }
-  .need__media img { width: 100%; height: 100%; object-fit: cover; }
-  .need__body { display: flex; flex-direction: column; gap: .2rem; min-width: 0; }
-  .need__title { font-weight: 700; font-size: 1rem; line-height: 1.25; }
-  .need__count { font-size: .82rem; color: var(--color-text-muted); }
-  :global(.need__arrow) { color: var(--color-text-faint); margin-right: .5rem; }
-  .need:hover :global(.need__arrow) { color: var(--color-accent-text); }
+  .hero__valeurs { display: none; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 1.2rem; border: 1px solid var(--mine); background: var(--papier); }
+  .hero__valeurs > div { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--filet); transition: background-color 0.4s var(--ease-out); }
+  .hero__valeurs > div.is-new { background: var(--jaune); }
+  .hero__valeurs > div.is-new dt, .hero__valeurs > div.is-new dd { color: #15171a; }
+  .hero__valeurs > div:nth-child(odd) { border-right: 1px solid var(--filet); }
+  .hero__valeurs > div:nth-child(n + 3) { border-bottom: 0; }
+  .hero__valeurs dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); }
+  .hero__valeurs dd { margin: 0.1rem 0 0; font-family: var(--font-mono); font-size: 1.05rem; }
+  .hero__valeurs b { font-weight: 700; }
+  .hero__verdict { margin: 0 0 1.6rem; padding-left: 0.9rem; border-left: 1px solid var(--mine); font-size: 0.98rem; line-height: 1.55; max-width: 48ch; }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.4rem; }
+  .hero__lien { font-weight: 600; font-size: 0.95rem; }
 
-  /* ═══ Listes budget / rayons ═══ */
-  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-  .split--wide { grid-template-columns: 1fr 1.2fr; }
-  .list { list-style: none; margin: 1rem 0 0; padding: 0; }
-  .list a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: .8rem 0; border-top: 1px solid var(--color-border); text-decoration: none; color: var(--color-text); }
-  .list li:last-child a { border-bottom: 1px solid var(--color-border); }
-  .list__icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: var(--radius); background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-accent-text); }
-  .list__text { display: flex; flex-direction: column; }
-  .list__text strong { font-size: 1rem; }
-  .list__text span { font-size: .86rem; color: var(--color-text-muted); }
-  .list__count { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--color-text-faint); }
-  .list a:hover .list__text strong { color: var(--color-accent-text); }
+  .hero__texte { grid-column: 1; grid-row: 1; }
+  .hero__suite { grid-column: 1; grid-row: 2; }
+  .hero__epure { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+  .hero__cartouche { align-self: flex-end; width: min(100%, 560px); grid-template-columns: 0.7fr 1.3fr 1fr 1fr; }
 
-  /* ═══ Outils ═══ */
-  .tools { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
-  .tools a { display: flex; flex-direction: column; gap: .7rem; padding: 1.2rem; border-radius: var(--radius-lg); background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); text-decoration: none; font-weight: 700; font-size: .98rem; line-height: 1.25; transition: border-color .15s ease, box-shadow .15s ease; }
-  .tools a:hover { border-color: var(--color-accent); box-shadow: var(--shadow-md); color: var(--color-accent-text); }
-  .tools svg { color: var(--color-accent-text); }
+  /* ═══ NOMENCLATURE + visionneuse ═══ */
+  .nomen { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; }
+  .nomen__liste { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
+  .nomen__item { border-bottom: 1px solid var(--filet); }
+  .nomen__lien { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr) 1.5rem; align-items: baseline; gap: 0.8rem; padding: 0.95rem 0.4rem; text-decoration: none; color: var(--mine); transition: background-color 0.18s ease; }
+  .nomen__lien:hover, .nomen__lien:focus-visible { background: var(--jaune-pale); }
+  .nomen__no { font-size: 0.8rem; color: var(--gris); }
+  .nomen__titre { font-weight: 600; font-size: 1.05rem; line-height: 1.35; }
+  .nomen__corps { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+  .nomen__sous { display: flex; flex-wrap: wrap; gap: 0.15rem 1.1rem; font-size: 0.85rem; color: var(--gris); }
+  .nomen__sous .mono { font-size: 0.78rem; white-space: nowrap; }
+  .nomen :global(.nomen__fleche) { align-self: center; transition: transform 0.18s var(--ease-out); }
+  .nomen__lien:hover :global(.nomen__fleche) { transform: translateX(4px); }
+  .nomen__vue { position: sticky; top: 96px; aspect-ratio: 16 / 11; }
+  .nomen__img { position: absolute; top: 9px; left: 9px; width: calc(100% - 18px); height: calc(100% - 18px); object-fit: cover; opacity: 0; transition: opacity 0.3s ease; }
+  .nomen__img[data-i='0'] { opacity: 1; }
+  .nomen:has(.nomen__item:hover, .nomen__item:focus-within) .nomen__img { opacity: 0; }
+  .nomen:has(.nomen__item[data-i='0']:hover, .nomen__item[data-i='0']:focus-within) .nomen__img[data-i='0'],
+  .nomen:has(.nomen__item[data-i='1']:hover, .nomen__item[data-i='1']:focus-within) .nomen__img[data-i='1'],
+  .nomen:has(.nomen__item[data-i='2']:hover, .nomen__item[data-i='2']:focus-within) .nomen__img[data-i='2'],
+  .nomen:has(.nomen__item[data-i='3']:hover, .nomen__item[data-i='3']:focus-within) .nomen__img[data-i='3'],
+  .nomen:has(.nomen__item[data-i='4']:hover, .nomen__item[data-i='4']:focus-within) .nomen__img[data-i='4'],
+  .nomen:has(.nomen__item[data-i='5']:hover, .nomen__item[data-i='5']:focus-within) .nomen__img[data-i='5'],
+  .nomen:has(.nomen__item[data-i='6']:hover, .nomen__item[data-i='6']:focus-within) .nomen__img[data-i='6'],
+  .nomen:has(.nomen__item[data-i='7']:hover, .nomen__item[data-i='7']:focus-within) .nomen__img[data-i='7'] { opacity: 1; }
 
-  /* ═══ Méthode + FAQ ═══ */
-  .method p { color: var(--color-text-muted); line-height: 1.7; }
-  .method .btn { margin-top: .5rem; }
-  .faq__list { margin-top: 1rem; display: flex; flex-direction: column; border-top: 1px solid var(--color-border); }
-  .faq__item { border-bottom: 1px solid var(--color-border); }
-  .faq__q { display: flex; justify-content: space-between; align-items: center; gap: 1rem; cursor: pointer; list-style: none; padding: .9rem 0; font-weight: 700; font-size: 1.02rem; line-height: 1.3; color: var(--color-text); }
+  /* ═══ FEUILLE DE CARACTÉRISTIQUES ═══ */
+  .feuille { display: grid; grid-template-columns: repeat(4, minmax(230px, 1fr)); grid-template-rows: repeat(5, auto); border-bottom: 1px solid var(--filet); background: var(--papier); overflow-x: auto; scroll-snap-type: x mandatory; }
+  .feuille__col { grid-row: span 5; display: grid; grid-template-rows: subgrid; row-gap: 0.9rem; padding: 1.2rem 1.2rem 1.4rem; border-top: 4px solid var(--jaune); scroll-snap-align: start; }
+  .feuille__col + .feuille__col { border-left: 1px solid var(--filet); }
+  .feuille__media { display: block; aspect-ratio: 1; padding: 1rem; background: var(--image-fond); border: 1px solid var(--filet); }
+  .feuille__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .feuille__nom h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+  .feuille__nom h3 a { text-decoration: none; }
+  .feuille__nom h3 a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.42em; text-underline-offset: -0.18em; }
+  .feuille__award { margin: 0.35rem 0 0; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); }
+  .feuille__vide { margin: 0; font-size: 0.85rem; color: var(--gris); }
+  .feuille .reglette { grid-template-columns: 1fr; }
+  .feuille__cta { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; align-self: end; }
+  .feuille__lire { font-size: 0.88rem; font-weight: 600; }
+  .feuille__disc { margin: 1rem 0 0; font-size: 0.82rem; color: var(--gris); }
+
+  /* ═══ PAR PROBLÈME : la liste en grand ═══ */
+  .pb { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
+  .pb li { border-bottom: 1px solid var(--filet); }
+  .pb__lien { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 1.5rem; padding: 1.1rem 0.4rem; text-decoration: none; color: var(--mine); }
+  .pb__titre { font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: clamp(1.45rem, 1rem + 1.6vw, 2.3rem); line-height: 1.1; letter-spacing: -0.02em; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 0.3em; text-underline-offset: -0.1em; text-decoration-skip-ink: none; transition: text-decoration-color 0.2s ease; }
+  .pb__lien:hover .pb__titre, .pb__lien:focus-visible .pb__titre { text-decoration-color: var(--jaune); }
+  .pb__n { font-size: 0.8rem; color: var(--gris); white-space: nowrap; }
+  .pb :global(.pb__fleche) { transition: transform 0.2s var(--ease-out); }
+  .pb__lien:hover :global(.pb__fleche) { transform: translateX(6px); }
+
+  /* ═══ PAR BUDGET : trois plages sur une règle de prix ═══ */
+  .budg { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: clamp(2rem, 4vw, 4rem); align-items: start; }
+  .plages { border-top: 1.5px solid var(--mine); }
+  .plage { display: grid; grid-template-columns: 11rem minmax(0, 1fr) 11rem; align-items: center; gap: 1.2rem; padding: 1rem 0.4rem; border-bottom: 1px solid var(--filet); text-decoration: none; color: var(--mine); }
+  .plage:hover { background: var(--papier); }
+  .plage__nom { display: flex; flex-direction: column; font-weight: 600; }
+  .plage__n { font-weight: 400; font-size: 0.75rem; color: var(--gris); }
+  .plage__piste { position: relative; height: 22px; color: var(--filet-fort); background: repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 6)) left bottom / calc(100% + 1px) 8px no-repeat, linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat; }
+  .plage__barre { position: absolute; left: var(--g); width: var(--l); top: 5px; height: 8px; background: var(--jaune); border-inline: 1.5px solid var(--mine); }
+  .plage__barre--ouverte { border-right: 0; -webkit-mask: linear-gradient(90deg, var(--mine) 88%, transparent); mask: linear-gradient(90deg, var(--mine) 88%, transparent); }
+  .plage__prix { font-size: 0.8rem; color: var(--gris); text-align: right; }
+  .plages__axe { display: grid; grid-template-columns: 11rem minmax(0, 1fr) 11rem; gap: 1.2rem; padding: 0.5rem 0.4rem 0; }
+  .plages__graduations { grid-column: 2; position: relative; height: 1.2rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--gris); }
+  .plages__graduations span { position: absolute; left: var(--x); transform: translateX(-50%); white-space: nowrap; }
+  .plages__graduations span:first-child { transform: none; }
+  .plages__graduations span:last-child { transform: translateX(-100%); }
+
+  .rayons__titre { margin: 0.3rem 0 1rem; font-size: 1.1rem; }
+  .rayons ul { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
+  .rayons a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.8rem; padding: 0.85rem 0.3rem; border-bottom: 1px solid var(--filet); text-decoration: none; color: var(--mine); font-weight: 500; }
+  .rayons a:hover { background: var(--jaune-pale); }
+  .rayons a .mono { font-size: 0.85rem; color: var(--gris); }
+
+  /* ═══ Dernières planches, outils, méthode ═══ */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4rem 2rem; }
+  .outils { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1.5px solid var(--mine); border-bottom: 1px solid var(--filet); }
+  .outils li + li { border-left: 1px solid var(--filet); }
+  .outils a { display: flex; flex-direction: column; gap: 0.6rem; height: 100%; padding: 1.3rem 1.1rem 1.5rem; text-decoration: none; color: var(--mine); transition: background-color 0.18s ease; }
+  .outils a:hover { background: var(--papier); }
+  .outils__titre { font-weight: 600; font-size: 1rem; line-height: 1.3; }
+  .outils__desc { font-size: 0.88rem; line-height: 1.5; color: var(--gris); }
+  .methode { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 5rem); }
+  .methode__texte p { color: var(--gris); line-height: 1.7; max-width: 56ch; }
+  .methode__texte strong { color: var(--mine); }
+  .methode__texte .btn { margin-top: 0.6rem; }
+  .faq__liste { margin-top: 1rem; border-top: 1.5px solid var(--mine); }
+  .faq__item { border-bottom: 1px solid var(--filet); }
+  .faq__q { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0.2rem; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.35; }
   .faq__q::-webkit-details-marker { display: none; }
-  .faq__chevron { flex-shrink: 0; width: 9px; height: 9px; border-right: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); transform: rotate(45deg); transition: transform .2s ease; margin-right: 4px; }
-  .faq__item[open] .faq__chevron { transform: rotate(-135deg); }
-  .faq__a { margin: 0 0 1.1rem; color: var(--color-text-muted); line-height: 1.65; }
+  .faq__signe { position: relative; flex-shrink: 0; width: 14px; height: 14px; }
+  .faq__signe::before, .faq__signe::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; background: var(--mine); transition: transform 0.2s var(--ease-out); }
+  .faq__signe::after { transform: rotate(90deg); }
+  .faq__item[open] .faq__signe::after { transform: rotate(0deg); }
+  .faq__a { margin: 0 0 1.1rem; padding-right: 2rem; color: var(--gris); line-height: 1.65; }
 
-  /* ═══ Responsive ═══ */
-  @media (max-width: 1100px) { .products { grid-template-columns: repeat(2, 1fr); } .tools { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 1000px) { .grid3, .needs { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 900px) { .hero__grid, .split, .split--wide { grid-template-columns: 1fr; } .collage { min-height: 260px; max-width: 520px; } .collage__img--2, .collage__img--3 { transform: none; } }
-  @media (max-width: 640px) { .grid3, .needs, .products { grid-template-columns: 1fr; } .tools { grid-template-columns: 1fr 1fr; } .collage { display: none; } }
+  /* ═══ Adaptations ═══ */
+  @media (max-width: 1080px) { .outils { grid-template-columns: repeat(3, 1fr); } .outils li:nth-child(4) { border-left: 0; } .outils li:nth-child(n + 4) { border-top: 1px solid var(--filet); } }
+  @media (max-width: 1000px) { .nomen { grid-template-columns: 1fr; } .nomen__vue { display: none; } .budg { grid-template-columns: 1fr; } .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 960px) {
+    .hero__grid { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 1.6rem; }
+    .hero__texte, .hero__suite, .hero__epure { grid-column: 1; grid-row: auto; }
+    .hero__valeurs { display: grid; }
+    .hero__cartouche { align-self: stretch; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hero__cartouche > div:nth-child(2) { border-right: 0; }
+    .hero__cartouche > div:nth-child(n + 3) { border-top: 1px solid var(--filet); }
+    .methode { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 700px) {
+    .plage { grid-template-columns: 1fr auto; gap: 0.6rem 1rem; }
+    .plage__piste { grid-column: 1 / -1; grid-row: 2; }
+    .plage__prix { grid-column: 2; grid-row: 1; }
+    .plages__axe { grid-template-columns: 1fr; }
+    .plages__graduations { grid-column: 1; }
+    .outils { grid-template-columns: 1fr 1fr; }
+    .outils li { border-left: 0 !important; border-top: 1px solid var(--filet); }
+    .outils li:nth-child(even) { border-left: 1px solid var(--filet) !important; }
+    .outils li:nth-child(-n + 2) { border-top: 0; }
+    .grid3 { grid-template-columns: 1fr; }
+    .pb__n { display: none; }
+    .feuille { grid-template-columns: repeat(4, minmax(78%, 1fr)); }
+  }
 </style>

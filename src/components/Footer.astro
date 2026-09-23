@@ -1,21 +1,23 @@
 ---
+import { getCollection } from 'astro:content';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
 import { guides } from '../guides';
 import { budgets } from '../budgets';
 import Logo from './Logo.astro';
 const year = new Date().getFullYear();
+const nbArticles = (await getCollection('articles', ({ data }) => !data.draft)).length;
 ---
 
-<footer class="ftr night blueprint--night">
+<footer class="ftr">
   <div class="wide ftr__grid">
     <div class="ftr__brand">
-      <a href="/" class="ftr__logo" aria-label={`${siteConfig.name} — accueil`}>
+      <a href="/" class="ftr__logo" aria-label={`${siteConfig.name}, accueil`}>
         <Logo size={40} />
-        <span>Mon Bureau <em>Connecté</em></span>
+        <span>Mon Bureau Connecté</span>
       </a>
       <p class="ftr__tagline">{siteConfig.tagline}</p>
-      <p class="ftr__spec" aria-hidden="true">Plateau 74 cm · coudes 90° · écran à 50–70 cm — réglé en {year}</p>
+      <p class="ftr__spec">Plateau 74 cm · coudes à 90° · écran à 50–70 cm</p>
       <div class="ftr__social">
         {siteConfig.social?.pinterest && (
           <a href={siteConfig.social.pinterest} target="_blank" rel="noopener" aria-label="Mon Bureau Connecté sur Pinterest">
@@ -23,16 +25,17 @@ const year = new Date().getFullYear();
           </a>
         )}
         <a href="/rss.xml" aria-label="Flux RSS">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
         </a>
       </div>
     </div>
 
-    <nav class="ftr__col" aria-label="Catégories">
+    <nav class="ftr__col" aria-label="Rayons et budgets">
       <p class="ftr__heading">Rayons</p>
       {categories.map((cat) => <a href={`/categorie/${cat.slug}/`}>{cat.label}</a>)}
       <a href="/articles/">Tous les comparatifs</a>
-      {budgets.map((b) => <a href={`/budget/${b.slug}/`}>Budget : {b.label.toLowerCase()}</a>)}
+      <p class="ftr__heading ftr__heading--2">Budgets</p>
+      {budgets.map((b) => <a href={`/budget/${b.slug}/`}>{b.label}</a>)}
     </nav>
 
     <nav class="ftr__col" aria-label="Guides par besoin">
@@ -56,35 +59,56 @@ const year = new Date().getFullYear();
     </nav>
   </div>
 
-  <div class="wide ftr__bottom">
-    <p>&copy; {year} {siteConfig.name} — Rédaction indépendante. Aucune marque ne paie pour figurer.</p>
+  <div class="wide">
+    <dl class="ftr__cartouche">
+      <div><dt>Site</dt><dd>{siteConfig.name}</dd></div>
+      <div><dt>Comparatifs</dt><dd class="mono">{nbArticles}</dd></div>
+      <div><dt>Outils</dt><dd class="mono">5</dd></div>
+      <div><dt>Révision</dt><dd class="mono">{year}</dd></div>
+      <div><dt>Rédaction</dt><dd>Indépendante, aucune marque ne paie pour figurer</dd></div>
+    </dl>
     <p class="ftr__disclosure">
-      En tant que Partenaire Amazon, {siteConfig.name} réalise un bénéfice sur les achats remplissant les
-      conditions requises. Certains liens sont des liens affiliés, sans surcoût pour toi.
+      &copy; {year} {siteConfig.name}. En tant que Partenaire Amazon, {siteConfig.name} réalise un bénéfice sur les achats
+      remplissant les conditions requises. Certains liens sont des liens affiliés, sans surcoût pour toi.
     </p>
   </div>
 </footer>
 
 <style>
-  .ftr { margin-top: 0; padding: 3.5rem 0 2rem; border-top: 4px solid var(--color-accent); }
-  .ftr__grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 2.5rem 2rem; }
-  .ftr__logo { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: #fff; font-family: var(--font-display); font-weight: 700; font-stretch: 108%; font-size: 1.2rem; letter-spacing: -.01em; }
-  .ftr__logo em { font-style: normal; color: var(--color-accent-on-night); }
-  .ftr__tagline { margin: 1rem 0 .4rem; color: var(--color-on-night-muted); max-width: 34ch; line-height: 1.55; }
-  .ftr__spec { margin: 0 0 1.2rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--color-on-night-muted); opacity: .85; }
-  .ftr__social { display: flex; gap: .5rem; }
-  .ftr__social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--radius-sm); border: 1px solid var(--color-night-border); color: var(--color-on-night); transition: background .15s ease, border-color .15s ease; }
-  .ftr__social a:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.4); }
+  .ftr { background: var(--bande); color: var(--sur-bande); padding: 4rem 0 2rem; border-top: 4px solid var(--jaune); }
+  .ftr__grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 2.5rem 2rem; }
+  .ftr__logo { display: inline-flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--sur-bande); font-family: var(--font-display); font-stretch: 125%; font-weight: 500; font-size: 1.15rem; letter-spacing: -0.01em; }
+  .ftr__tagline { margin: 1.1rem 0 0.5rem; color: var(--sur-bande-2); max-width: 34ch; line-height: 1.55; }
+  .ftr__spec { margin: 0 0 1.3rem; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; color: var(--jaune); text-wrap: balance; }
+  .ftr__social { display: flex; gap: 0.5rem; }
+  .ftr__social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--bande-filet); border-radius: var(--radius-sm); color: var(--sur-bande); transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease; }
+  .ftr__social a:hover { background: var(--jaune); border-color: var(--jaune); color: #15171a; }
   .ftr__social svg { width: 20px; height: 20px; }
-  .ftr__col { display: flex; flex-direction: column; gap: .5rem; }
-  .ftr__heading { margin: 0 0 .5rem; font-family: var(--font-mono); font-weight: 500; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-signal); }
-  .ftr__heading--2 { margin-top: 1.2rem; }
-  .ftr__col a { color: var(--color-on-night-muted); text-decoration: none; font-size: .93rem; line-height: 1.4; padding: .2rem 0; transition: color .15s ease; }
-  .ftr__col a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-  .ftr__bottom { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--color-night-border); font-size: .82rem; color: var(--color-on-night-muted); }
-  .ftr__bottom p { margin: 0 0 .5rem; }
-  .ftr__disclosure { opacity: .8; max-width: 80ch; }
+  .ftr__col { display: flex; flex-direction: column; gap: 0.35rem; }
+  .ftr__heading { margin: 0 0 0.5rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sur-bande-2); }
+  .ftr__heading--2 { margin-top: 1.3rem; }
+  .ftr__col a { color: var(--sur-bande); text-decoration: none; font-size: 0.93rem; line-height: 1.4; padding: 0.2rem 0; }
+  .ftr__col a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 2px; text-underline-offset: 0.25em; }
 
-  @media (max-width: 900px) { .ftr__grid { grid-template-columns: 1fr 1fr; } .ftr__brand { grid-column: 1 / -1; } }
-  @media (max-width: 520px) { .ftr__grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .ftr__cartouche { display: grid; grid-template-columns: 1.3fr 0.7fr 0.6fr 0.7fr 2fr; margin: 3.5rem 0 1.2rem; border: 1px solid var(--sur-bande-2); }
+  .ftr__cartouche > div { padding: 0.6rem 0.9rem 0.7rem; border-right: 1px solid var(--bande-filet); min-width: 0; }
+  .ftr__cartouche > div:last-child { border-right: 0; }
+  .ftr__cartouche dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--sur-bande-2); }
+  .ftr__cartouche dd { margin: 0.2rem 0 0; font-weight: 600; font-size: 0.92rem; line-height: 1.35; }
+  .ftr__cartouche dd.mono { font-family: var(--font-mono); font-weight: 400; }
+  .ftr__disclosure { margin: 0; font-size: 0.82rem; line-height: 1.6; color: var(--sur-bande-2); max-width: 90ch; }
+
+  @media (max-width: 960px) {
+    .ftr__grid { grid-template-columns: 1fr 1fr; }
+    .ftr__brand { grid-column: 1 / -1; }
+    .ftr__cartouche { grid-template-columns: repeat(4, 1fr); }
+    .ftr__cartouche > div:last-child { grid-column: 1 / -1; border-top: 1px solid var(--bande-filet); }
+    .ftr__cartouche > div:nth-child(4) { border-right: 0; }
+  }
+  @media (max-width: 560px) {
+    .ftr__grid { grid-template-columns: 1fr; gap: 2rem; }
+    .ftr__cartouche { grid-template-columns: 1fr 1fr; }
+    .ftr__cartouche > div { border-bottom: 1px solid var(--bande-filet); }
+    .ftr__cartouche > div:nth-child(2n) { border-right: 0; }
+  }
 </style>

@@ -13,8 +13,8 @@
       <a href="/politique-de-confidentialite/">politique de confidentialité</a>.
     </p>
     <div class="cookie-banner__actions">
-      <button id="cookie-refuse" type="button" class="btn btn--ghost">Refuser</button>
-      <button id="cookie-accept" type="button" class="btn btn--accent">Accepter</button>
+      <button id="cookie-refuse" type="button" class="btn btn--outline btn--sm">Refuser</button>
+      <button id="cookie-accept" type="button" class="btn btn--primary btn--sm">Accepter</button>
     </div>
   </div>
 </div>
@@ -53,43 +53,39 @@
 </script>
 
 <style>
-  /* Hors écran par transform (pas de décalage de mise en page / CLS), glisse quand il faut demander le consentement. */
-  .cookie-banner {
-    transform: translateY(110%);
-    visibility: hidden;
-    transition: transform 0.35s ease, visibility 0s linear 0.35s;
-  }
-  .cookie-banner.is-visible { transform: none; visibility: visible; transition: transform 0.35s ease; }
-  @media (prefers-reduced-motion: reduce) { .cookie-banner, .cookie-banner.is-visible { transition: none; } }
+  /* Panneau net posé sur la page : papier, filet mine, angles vifs, aucune ombre.
+     Hors écran par transform (pas de décalage de mise en page / CLS), il glisse
+     quand il faut demander le consentement : entrée ease-out, sortie ease-in. */
   .cookie-banner {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #191c22;
-    color: white;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
     z-index: 100;
-    padding: 1rem 1.25rem;
-  }
-  .cookie-banner__inner {
     max-width: 960px;
     margin: 0 auto;
+    padding: 1rem 1.2rem;
+    background: var(--papier);
+    color: var(--mine);
+    border: 1px solid var(--mine);
+    transform: translateY(calc(100% + 32px));
+    visibility: hidden;
+    transition: transform 0.32s ease-in, visibility 0s linear 0.32s;
+  }
+  .cookie-banner.is-visible { transform: none; visibility: visible; transition: transform 0.32s var(--ease-out); }
+  @media (prefers-reduced-motion: reduce) { .cookie-banner, .cookie-banner.is-visible { transition: none; } }
+  .cookie-banner__inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1rem 1.5rem;
     align-items: center;
     justify-content: space-between;
   }
-  .cookie-banner p { margin: 0; font-size: 0.9rem; max-width: 640px; }
-  .cookie-banner a { color: white; }
-  .cookie-banner__actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
-  .btn {
-    border: none;
-    border-radius: var(--radius);
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    cursor: pointer;
+  .cookie-banner p { flex: 1 1 420px; min-width: 0; max-width: 640px; margin: 0; font-size: 0.9rem; line-height: 1.55; }
+  .cookie-banner__actions { display: flex; gap: 0.6rem; flex-shrink: 0; }
+  @media (max-width: 480px) {
+    .cookie-banner { padding: 0.9rem 1rem 1rem; }
+    .cookie-banner__actions { width: 100%; }
+    .cookie-banner__actions .btn { flex: 1; }
   }
-  .btn--accent { background: var(--color-accent-text, var(--color-accent)); color: white; } /* accent assombri : blanc lisible (contraste ≥ 4.5) */
-  .btn--ghost { background: transparent; color: white; border: 1px solid rgba(255,255,255,0.4); }
 </style>

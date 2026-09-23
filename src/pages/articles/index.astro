@@ -34,10 +34,12 @@ const allArticles = (await getCollection('articles', ({ data }) => !data.draft))
 </BaseLayout>
 
 <style>
-  .filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.3rem; }
-  .filters .chip[aria-current] { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
-  .list { padding: 2.2rem 1.25rem 3.5rem; }
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-  @media (max-width: 1000px) { .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  /* Filtres : étiquettes à angles vifs ; la rubrique affichée est remplie de jaune */
+  .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
+  .filters .chip { min-height: 36px; font-size: 0.85rem; }
+  .filters .chip[aria-current] { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
+  .list { padding-top: 2.6rem; padding-bottom: 4.5rem; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.4rem 2rem; }
+  @media (max-width: 1000px) { .grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 640px) { .grid3 { grid-template-columns: 1fr; } }
 </style>

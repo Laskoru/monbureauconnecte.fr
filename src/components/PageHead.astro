@@ -1,7 +1,7 @@
 ---
-// En-tête de page intérieure : fil d'Ariane, titre, chapeau. Sobre, aligné à gauche.
+// En-tête de page intérieure : fil d'Ariane, grand titre d'épure, chapeau,
+// et le compte de comparatifs en chiffre coté. Une règle graduée ferme l'en-tête.
 import Breadcrumbs from './Breadcrumbs.astro';
-import Icon from './Icon.astro';
 import { frenchNbsp } from '../lib/typo';
 
 interface Crumb { label: string; href?: string }
@@ -9,39 +9,41 @@ interface Props {
   eyebrow?: string; // conservé pour compatibilité, non affiché
   title: string;
   lede?: string;
-  icon?: string;
+  icon?: string; // conservé pour compatibilité, non affiché (pas de pictogramme au-dessus des titres)
   crumbs?: Crumb[];
   count?: string;
-  /** Largeur du contenu : « narrow » (720) ou « wide » (1160). */
+  /** Largeur du contenu : « narrow » (700) ou « wide » (1240). */
   width?: 'narrow' | 'wide';
 }
-const { title, lede, icon, crumbs, count, width = 'wide' } = Astro.props;
+const { title, lede, crumbs, count, width = 'wide' } = Astro.props;
+const n = count ? Number.parseInt(count, 10) : NaN;
 ---
 
 <header class="ph">
   <div class:list={['ph__in', width === 'narrow' ? 'container' : 'wide']}>
     {crumbs && <Breadcrumbs items={crumbs} />}
     <div class="ph__row">
-      {icon && <span class="ph__icon"><Icon name={icon} size={24} /></span>}
       <div class="ph__text">
         <h1 class="ph__title">{frenchNbsp(title)}</h1>
         {lede && <p class="ph__lede">{lede}</p>}
         <slot />
       </div>
-      {count && <p class="ph__count">{count}<span>comparatifs</span></p>}
+      {count && (
+        <p class="ph__count"><span class="ph__num">{count}</span><span class="ph__unit">{Number.isNaN(n) || n > 1 ? 'comparatifs' : 'comparatif'}</span></p>
+      )}
     </div>
   </div>
+  <div class:list={[width === 'narrow' ? 'container' : 'wide']}><span class="regle" aria-hidden="true"></span></div>
 </header>
 
 <style>
-  .ph { background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
-  .ph__in { padding-top: 1.2rem; padding-bottom: 2rem; }
-  .ph__row { display: flex; gap: 1.2rem; align-items: flex-start; margin-top: .6rem; }
-  .ph__icon { flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: var(--radius); background: var(--color-accent-soft); color: var(--color-accent-text); margin-top: .35rem; }
+  .ph__in { padding-top: 1.4rem; padding-bottom: 2.2rem; }
+  .ph__row { display: flex; gap: 2rem; align-items: flex-end; justify-content: space-between; margin-top: 0.4rem; }
   .ph__text { flex: 1; min-width: 0; }
-  .ph__title { margin: 0 0 .6rem; font-size: clamp(1.9rem, 4vw, 2.8rem); }
-  .ph__lede { margin: 0; font-size: 1.06rem; line-height: 1.6; color: var(--color-text-muted); max-width: 66ch; }
-  .ph__count { flex-shrink: 0; margin: .4rem 0 0; display: flex; flex-direction: column; align-items: center; padding: .6rem 1rem; border-radius: var(--radius); background: var(--color-bg-soft); font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; line-height: 1; color: var(--color-accent-text); }
-  .ph__count span { font-family: var(--font-body); font-weight: 600; font-size: .7rem; color: var(--color-text-muted); margin-top: .3rem; }
-  @media (max-width: 640px) { .ph__count { display: none; } .ph__icon { width: 44px; height: 44px; } }
+  .ph__title { margin: 0 0 0.7rem; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.6rem); max-width: 22ch; }
+  .ph__lede { margin: 0; font-size: 1.1rem; line-height: 1.6; color: var(--gris); max-width: 64ch; }
+  .ph__count { flex-shrink: 0; margin: 0; display: flex; flex-direction: column; align-items: flex-end; padding-left: 1.2rem; border-left: 1px solid var(--mine); }
+  .ph__num { font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: 3.4rem; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .ph__unit { margin-top: 0.4rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gris); }
+  @media (max-width: 640px) { .ph__row { flex-direction: column; align-items: flex-start; gap: 1.2rem; } .ph__count { flex-direction: row; align-items: baseline; gap: 0.6rem; padding-left: 0.8rem; } .ph__num { font-size: 2.2rem; } }
 </style>

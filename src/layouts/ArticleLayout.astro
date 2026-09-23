@@ -17,6 +17,7 @@ import AmazonSearchCTA from '../components/AmazonSearchCTA.astro';
 import InteractiveGuide from '../components/InteractiveGuide.astro';
 import Icon from '../components/Icon.astro';
 import { frenchNbsp } from '../lib/typo';
+import { mesuresProduit } from '../lib/mesures';
 
 interface Heading { depth: number; slug: string; text: string }
 interface FaqItem { question: string; answer: string }
@@ -74,6 +75,14 @@ const verdict = products.map((p, i) => ({ p, i, available: productsAvailability[
 const choice = featuredIndex >= 0 ? { p: products[featuredIndex], rating: getRating(products[featuredIndex].asin) } : null;
 
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const choiceMesures = choice ? mesuresProduit(choice.p) : [];
+const choicePct = choice?.rating ? Math.round((choice.rating.rating / 5) * 1000) / 10 : 0;
+// Cartouche : numéro de planche (ordre de publication), rubrique, révision, mesures
+const tousLesArticles = await getCollection('articles', (a) => !a.data.draft);
+const ordre = [...tousLesArticles].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf() || a.slug.localeCompare(b.slug));
+const planche = String(ordre.findIndex((a) => a.slug === slug) + 1).padStart(2, '0');
+const nbPlanches = String(ordre.length).padStart(2, '0');
+const dateCourte = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
 const categoryInfo = categories.find((c) => c.slug === category);
 const relatedArticles = (await getCollection('articles', (a) => !a.data.draft && a.data.category === category && a.slug !== slug))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
@@ -109,50 +118,55 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
   <article class="art">
     <div class="wide art__top">
       <Breadcrumbs items={breadcrumbItems} />
-      <p class="art__tags">{categoryInfo && <a class="art__tag" href={`/categorie/${categoryInfo.slug}/`}>{categoryInfo.label}</a>}{products.length > 0 && <span class="art__tag art__tag--soft">{products.length} produit{products.length > 1 ? 's' : ''} comparé{products.length > 1 ? 's' : ''}</span>}</p>
       <h1 class="art__title">{frenchNbsp(title)}</h1>
       <p class="art__lede">{description}</p>
-      <p class="art__meta">
-        Par <a href="/auteur/">{author ?? siteConfig.author}</a>
-        <span aria-hidden="true">·</span> Publié le {dateFormatter.format(pubDate)}
-        {updatedDate && updatedDate.getTime() !== pubDate.getTime() && <><span aria-hidden="true">·</span> <strong>Mis à jour le {dateFormatter.format(updatedDate)}</strong></>}
-        {readingMinutes && <><span aria-hidden="true">·</span> {readingMinutes} min de lecture</>}
-      </p>
+      <dl class="cartouche art__cartouche">
+        <div><dt>Planche</dt><dd class="mono">{planche}/{nbPlanches}</dd></div>
+        <div><dt>Rubrique</dt><dd>{categoryInfo ? <a href={`/categorie/${categoryInfo.slug}/`}>{categoryInfo.label}</a> : 'Guide'}</dd></div>
+        <div><dt>{updatedDate && updatedDate.getTime() !== pubDate.getTime() ? 'Mis à jour' : 'Publié'}</dt><dd class="mono">{dateCourte.format(updatedDate ?? pubDate)}</dd></div>
+        <div><dt>Mesures</dt><dd class="mono">{products.length > 0 ? `${products.length} produit${products.length > 1 ? 's' : ''}` : 'conseil'}{readingMinutes ? ` · ${readingMinutes} min` : ''}</dd></div>
+        <div><dt>Par</dt><dd><a href="/auteur/">{author ?? siteConfig.author}</a></dd></div>
+      </dl>
     </div>
 
     <div class="wide art__grid">
       <div class="art__main">
         {coverImage && (
-          <figure class="art__cover">
-            <img src={coverImage} srcset={coverSrcSet(coverImage)} sizes="(max-width: 800px) 100vw, 760px" alt={coverAlt ?? ''} width="1600" height="1000" fetchpriority="high" />
+          <figure class="art__cover cadre">
+            <img src={coverImage} srcset={coverSrcSet(coverImage)} sizes="(max-width: 800px) 100vw, 740px" alt={coverAlt ?? ''} width="1600" height="1000" fetchpriority="high" />
           </figure>
         )}
 
         {(choice || topPick) && (
           <aside class="verdict" aria-label="Notre choix">
-            <p class="verdict__label">Notre choix</p>
+            <p class="verdict__label">Notre choix{choice?.p.award && choice.p.award !== 'Notre choix' ? ` · ${choice.p.award}` : ''}</p>
             <div class="verdict__body">
               <div class="verdict__text">
                 <p class="verdict__name">{topPick ? topPick.name : shortTitle(choice!.p.title)}</p>
-                {choice?.rating && <p class="verdict__rating"><span class="stars" style={`--pct:${Math.round((choice.rating.rating / 5) * 100)}%`} aria-hidden="true"></span><strong>{choice.rating.rating.toFixed(1).replace('.', ',')}</strong>/5 · {nf.format(choice.rating.count)} avis Amazon</p>}
+                {!topPick && choiceMesures.length > 0 && <ul class="mesures" aria-label="Mesures du produit">{choiceMesures.map((m) => <li>{m}</li>)}</ul>}
+                {choice?.rating && (
+                  <p class="reglette">
+                    <span class="reglette__rule" style={`--p:${choicePct}%`} role="img" aria-label={`Note Amazon : ${choice.rating.rating.toFixed(1).replace('.', ',')} sur 5`}></span>
+                    <span class="reglette__val"><b>{choice.rating.rating.toFixed(1).replace('.', ',')}</b>/5 · {nf.format(choice.rating.count)} avis Amazon</span>
+                  </p>
+                )}
                 {(topPick?.blurb ?? choice?.p.blurb) && <p class="verdict__blurb">{topPick?.blurb ?? choice?.p.blurb}</p>}
-                {choice?.p.pros && choice.p.pros.length > 0 && <p class="verdict__pros"><strong>Points forts :</strong> {choice.p.pros.slice(0, 3).join(' · ')}</p>}
+                {choice?.p.pros && choice.p.pros.length > 0 && <p class="verdict__pros"><span>Points forts</span> {choice.p.pros.slice(0, 3).join(' · ')}</p>}
               </div>
               <div class="verdict__cta">
-                <a class="btn btn--primary" href={topPick ? topPick.url : productUrl(choice!.p.asin)} target="_blank" rel="nofollow sponsored noopener">{topPick?.ctaLabel ?? 'Voir le prix sur Amazon'} <Icon name="arrow" size={16} /></a>
+                <a class="btn btn--buy" href={topPick ? topPick.url : productUrl(choice!.p.asin)} target="_blank" rel="nofollow sponsored noopener">{topPick?.ctaLabel ?? 'Voir le prix sur Amazon'} <Icon name="external" size={16} /></a>
                 {hasProducts && <a class="verdict__more" href="#recommandations">Voir tous les produits comparés</a>}
               </div>
             </div>
-            <p class="verdict__disc">Lien partenaire — en tant que Partenaire Amazon, nous percevons une commission sur les achats éligibles, sans surcoût pour toi.</p>
           </aside>
         )}
 
         {verdict.length > 1 && (
-          <section class="quick" aria-label="Verdict rapide">
-            <h2 class="quick__title">Ce qu'on retient en 30 secondes</h2>
+          <section class="quick" aria-labelledby="quick-titre">
+            <h2 id="quick-titre" class="quick__title">Ce qu'on retient en 30 secondes</h2>
             <ul class="quick__list">
               {verdict.map((v) => (
-                <li><strong>{v.p.award ?? 'Notre choix'} :</strong> <a href={`#produit-${v.i + 1}`}>{shortTitle(v.p.title)}</a>{v.rating && <span class="quick__rating"> ({v.rating.rating.toFixed(1).replace('.', ',')}/5, {nf.format(v.rating.count)} avis)</span>}{v.p.blurb && <span class="quick__blurb"> — {v.p.blurb}</span>}</li>
+                <li><span class="quick__award">{v.p.award ?? 'Notre choix'}</span><a href={`#produit-${v.i + 1}`}>{shortTitle(v.p.title)}</a>{v.rating && <span class="quick__rating">{v.rating.rating.toFixed(1).replace('.', ',')}/5 · {nf.format(v.rating.count)} avis</span>}{v.p.blurb && <span class="quick__blurb">{v.p.blurb}</span>}</li>
               ))}
             </ul>
           </section>
@@ -177,8 +191,8 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
             <h2>Comparatif en un coup d'œil</h2>
             <div class="compare-table-wrap">
               <table class="compare-table">
-                <thead><tr>{comparison.columns.map((col, i) => <th>{col}{comparisonColumnUnavailable?.[i] && <span class="compare-table__tag">épuisé</span>}</th>)}</tr></thead>
-                <tbody>{comparison.rows.map((row) => <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td>{cell}</td>))}</tr>)}</tbody>
+                <thead><tr>{comparison.columns.map((col, i) => <th class:list={{ 'is-choice': i > 0 && i - 1 === featuredIndex }}>{col}{comparisonColumnUnavailable?.[i] && <span class="compare-table__tag">épuisé</span>}</th>)}</tr></thead>
+                <tbody>{comparison.rows.map((row) => <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td class:list={{ 'is-choice': i - 1 === featuredIndex }}>{cell}</td>))}</tr>)}</tbody>
               </table>
             </div>
             {someProductUnavailable && <p class="compare-table__note"><strong>épuisé</strong> : ce modèle n'est plus en vente chez Amazon. Les caractéristiques restent indicatives ; le bouton sous le produit propose des équivalents disponibles.</p>}
@@ -187,9 +201,9 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
 
         {sources.length > 0 && (
           <div class="article-sources">
-            <h2>Sources &amp; références</h2>
+            <h2>Sources et références</h2>
             <p class="article-sources__intro">Les informations de cet article s'appuient sur des sources publiques et reconnues.</p>
-            <ul class="article-sources__list">{sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}</a></li>)}</ul>
+            <ul class="article-sources__list">{sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}<Icon name="external" size={14} /></a></li>)}</ul>
           </div>
         )}
 
@@ -211,7 +225,7 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
         {faq.length > 0 && (
           <div class="article-faq">
             <h2>Questions fréquentes</h2>
-            {faq.map((f) => <details class="article-faq__item"><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+            {faq.map((f) => <details class="article-faq__item"><summary><span>{f.question}</span><span class="faq-signe" aria-hidden="true"></span></summary><p>{f.answer}</p></details>)}
           </div>
         )}
 
@@ -228,21 +242,22 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
           )}
           <div class="rail-box">
             <p class="rail-box__title">Régler ton poste</p>
-            <a href="/poste-de-travail-ideal/"><Icon name="posture" size={16} /> Le poste de travail idéal</a>
-            <a href="/calculateur-hauteur-bureau/"><Icon name="ruler" size={16} /> Calculer ma hauteur de bureau</a>
-            <a href="/checklist-bureau-ergonomique/"><Icon name="checklist" size={16} /> Checklist ergonomie</a>
-            <a href="/guides/"><Icon name="map" size={16} /> Guides par besoin</a>
+            <a href="/calculateur-hauteur-bureau/"><Icon name="ruler" size={18} /> Calculer ma hauteur de bureau</a>
+            <a href="/poste-de-travail-ideal/"><Icon name="posture" size={18} /> Le poste de travail idéal</a>
+            <a href="/checklist-bureau-ergonomique/"><Icon name="checklist" size={18} /> Checklist ergonomie</a>
+            <a href="/guides/"><Icon name="map" size={18} /> Guides par besoin</a>
           </div>
         </div>
       </aside>
     </div>
 
     {relatedArticles.length > 0 && (
-      <section class="art__related section--soft">
+      <section class="art__related">
         <div class="wide">
+          <span class="regle" aria-hidden="true"></span>
           <div class="section__head">
-            <h2 class="section__title">À lire aussi{categoryInfo && <> — {categoryInfo.label}</>}</h2>
-            {categoryInfo && <a class="section__link" href={`/categorie/${categoryInfo.slug}/`}>Toute la catégorie <Icon name="arrow" size={16} /></a>}
+            <h2 class="section__title">À lire aussi{categoryInfo && <> : {categoryInfo.label}</>}</h2>
+            {categoryInfo && <a class="section__link" href={`/categorie/${categoryInfo.slug}/`}>Toute la rubrique <Icon name="arrow" size={16} /></a>}
           </div>
           <div class="art__related-grid">{relatedArticles.map((a) => <ArticleCard article={a} />)}</div>
         </div>
@@ -252,97 +267,100 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
 </BaseLayout>
 
 <style>
-  .art__top { padding-top: 1.2rem; }
-  .art__tags { margin: .6rem 0 .8rem; display: flex; flex-wrap: wrap; gap: .4rem; }
-  .art__tag { display: inline-block; padding: .25em .7em; border-radius: 999px; background: var(--color-accent-soft); color: var(--color-accent-text); font-size: .76rem; font-weight: 700; text-decoration: none; }
-  .art__tag--soft { background: var(--color-bg-soft); color: var(--color-text-muted); }
-  .art__title { margin: 0 0 .8rem; font-size: clamp(1.9rem, 4vw, 2.9rem); line-height: 1.06; max-width: 26ch; }
-  .art__lede { margin: 0 0 .9rem; font-size: 1.12rem; line-height: 1.6; color: var(--color-text-muted); max-width: 70ch; }
-  .art__meta { margin: 0 0 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem; font-size: .9rem; color: var(--color-text-muted); }
-  .art__meta a { color: var(--color-text); font-weight: 600; text-decoration: none; }
-  .art__meta a:hover { color: var(--color-accent-text); text-decoration: underline; }
-  .art__meta strong { color: var(--color-text); font-weight: 600; }
+  .art__top { padding-top: 1.4rem; padding-bottom: 2rem; }
+  .art__title { margin: 0.3rem 0 1rem; font-size: clamp(2.1rem, 1.1rem + 3vw, 3.5rem); max-width: 24ch; }
+  .art__lede { margin: 0 0 1.6rem; font-size: 1.15rem; line-height: 1.6; color: var(--gris); max-width: 68ch; }
+  .art__cartouche { grid-template-columns: 0.8fr 1.3fr 1fr 1.2fr 1fr; max-width: 980px; }
+  .art__cartouche a { text-decoration: none; }
+  .art__cartouche a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 2px; }
 
-  .art__grid { display: grid; grid-template-columns: minmax(0, 760px) 300px; gap: 3rem; justify-content: space-between; padding-top: .5rem; padding-bottom: 3rem; }
+  .art__grid { display: grid; grid-template-columns: minmax(0, 760px) 280px; gap: 3.5rem; justify-content: space-between; padding-bottom: 3.5rem; }
   .art__main { min-width: 0; }
-  .art__cover { margin: 0 0 1.6rem; }
-  .art__cover img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-lg); }
-  .art__rail-in { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1rem; }
-  .toc--rail { margin: 0; max-height: calc(100vh - 220px); overflow: auto; }
+  .art__cover { margin: 0 0 2rem; }
+  .art__cover img { aspect-ratio: 16 / 9; object-fit: cover; }
+  .art__rail-in { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1.6rem; }
+  .toc--rail { margin: 0; max-height: calc(100vh - 260px); overflow: auto; }
   .toc--inline { display: none; }
-  .rail-box { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: .5rem; }
-  .rail-box__title { margin: 0 0 .3rem; font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--color-text-muted); }
-  .rail-box a { display: inline-flex; align-items: center; gap: .5em; color: var(--color-accent-text); text-decoration: none; font-weight: 600; font-size: .92rem; min-height: 28px; }
-  .rail-box a:hover { text-decoration: underline; }
+  .rail-box { display: flex; flex-direction: column; border-top: 1.5px solid var(--mine); padding-top: 0.9rem; }
+  .rail-box__title { margin: 0 0 0.4rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gris); }
+  .rail-box a { display: flex; align-items: center; gap: 0.6em; min-height: 40px; border-bottom: 1px solid var(--filet); font-size: 0.93rem; text-decoration: none; }
+  .rail-box a:hover { background: var(--jaune-pale); }
 
-  /* ══ Notre choix (encadré) ══ */
-  .verdict { margin: 0 0 1.6rem; padding: 1.3rem 1.5rem 1rem; border: 2px solid var(--color-accent); border-radius: var(--radius-lg); background: var(--color-surface); }
-  .verdict__label { margin: 0 0 .6rem; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--color-accent-text); }
-  .verdict__body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.4rem; align-items: center; }
-  .verdict__name { margin: 0 0 .4rem; font-family: var(--font-display); font-weight: 700; font-size: 1.45rem; line-height: 1.15; }
-  .verdict__rating { margin: 0 0 .5rem; display: flex; align-items: center; gap: .45rem; font-size: .9rem; color: var(--color-text-muted); }
-  .verdict__rating strong { color: var(--color-text); }
-  .verdict__blurb { margin: 0 0 .5rem; color: var(--color-text-muted); line-height: 1.55; }
-  .verdict__pros { margin: 0; font-size: .92rem; line-height: 1.5; }
-  .verdict__cta { display: flex; flex-direction: column; align-items: stretch; gap: .5rem; min-width: 220px; }
-  .verdict__more { text-align: center; font-size: .86rem; font-weight: 600; color: var(--color-accent-text); text-decoration: none; min-height: 28px; }
-  .verdict__more:hover { text-decoration: underline; }
-  .verdict__disc { margin: .9rem 0 0; font-size: .74rem; color: var(--color-text-faint); }
-  .stars { position: relative; display: inline-block; width: 84px; height: 16px; background: linear-gradient(90deg, var(--color-signal) var(--pct), var(--color-border) var(--pct)); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.1 7.5l6.2-.9zM30 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L30 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM50 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L50 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM70 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L70 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM90 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L90 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9z'/%3E%3C/svg%3E") no-repeat center / contain; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 20'%3E%3Cpath d='M10 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L10 15l-5.4 2.9 1-6.1L1.1 7.5l6.2-.9zM30 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L30 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM50 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L50 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM70 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L70 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9zM90 1l2.7 5.6 6.2.9-4.5 4.3 1 6.1L90 15l-5.4 2.9 1-6.1-4.5-4.3 6.2-.9z'/%3E%3C/svg%3E") no-repeat center / contain; }
+  /* ══ Notre choix ══ */
+  .verdict { position: relative; margin: 0.6rem 0 2rem; background: var(--papier); border: 1px solid var(--mine); border-top: 4px solid var(--jaune); }
+  .verdict__label { position: absolute; top: -2px; right: 1.4rem; transform: translateY(-50%); margin: 0; padding: 0.3rem 0.6rem; font-family: var(--font-mono); font-weight: 700; font-size: 0.75rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: #15171a; background: var(--jaune); }
+  .verdict__body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem 2rem; align-items: end; padding: 1.3rem 1.4rem 1.3rem; }
+  .verdict__text { display: flex; flex-direction: column; gap: 0.75rem; min-width: 0; }
+  .verdict__name { margin: 0; font-family: var(--font-display); font-stretch: 125%; font-weight: 400; font-size: clamp(1.45rem, 1.1rem + 1vw, 1.9rem); line-height: 1.1; letter-spacing: -0.02em; }
+  .verdict__blurb { margin: 0; color: var(--gris); line-height: 1.55; }
+  .verdict__pros { margin: 0; font-size: 0.93rem; line-height: 1.5; }
+  .verdict__pros span { margin-right: 0.4em; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ok); }
+  .verdict__cta { display: flex; flex-direction: column; align-items: stretch; gap: 0.6rem; min-width: 230px; }
+  .verdict__more { text-align: center; font-size: 0.88rem; font-weight: 600; }
 
-  /* ══ Verdict rapide ══ */
-  .quick { margin: 0 0 1.6rem; padding: 1.1rem 1.4rem; border-radius: var(--radius-lg); background: var(--color-accent-soft); }
-  .quick__title { margin: 0 0 .6rem; font-size: 1.05rem; font-weight: 700; }
-  .quick__list { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: .4rem; font-size: .95rem; line-height: 1.5; }
-  .quick__list a { color: var(--color-accent-text); font-weight: 600; }
-  .quick__rating, .quick__blurb { color: var(--color-text-muted); }
+  /* ══ Ce qu'on retient ══ */
+  .quick { margin: 0 0 2rem; }
+  .quick__title { margin: 0 0 0.8rem; font-family: var(--font-body); font-stretch: 100%; font-weight: 600; font-size: 1.15rem; letter-spacing: -0.005em; }
+  .quick__list { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
+  .quick__list li { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.2rem 1rem; padding: 0.75rem 0.2rem; border-bottom: 1px solid var(--filet); font-size: 0.95rem; line-height: 1.5; }
+  .quick__award { grid-row: span 3; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); padding-top: 0.2em; }
+  .quick__list a { font-weight: 600; }
+  .quick__rating { font-family: var(--font-mono); font-size: 0.8rem; color: var(--gris); }
+  .quick__blurb { color: var(--gris); }
 
-  /* ══ Corps ══ */
-  .article-body { font-size: 1.06rem; line-height: 1.75; }
+  /* ══ Corps de l'article ══ */
+  .article-body { font-size: 1.0625rem; line-height: 1.75; }
   .article-body :global(p) { margin: 0 0 1.25em; }
-  .article-body :global(h2) { margin-top: 2.3em; margin-bottom: .6em; scroll-margin-top: 5.5rem; font-size: clamp(1.45rem, 2.2vw, 1.8rem); line-height: 1.18; }
-  .article-body :global(h3) { margin-top: 1.8em; scroll-margin-top: 5.5rem; font-size: 1.2rem; }
-  .article-body :global(a) { color: var(--color-accent-text); text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1.5px; }
-  .article-body :global(strong) { color: var(--color-text); font-weight: 700; }
-  .article-body :global(img) { display: block; width: 100%; height: auto; margin: 1.9rem 0; border-radius: var(--radius-lg); }
-  .article-body :global(ul) { list-style: none; padding-left: 0; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: .5em; }
-  .article-body :global(ul li) { position: relative; padding-left: 1.4em; }
-  .article-body :global(ul li::before) { content: ''; position: absolute; left: .1em; top: .74em; width: .42em; height: .42em; border-radius: 1px; background: var(--color-accent); }
-  .article-body :global(ol) { padding-left: 1.4em; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: .55em; }
-  .article-body :global(ol li::marker) { color: var(--color-accent-text); font-weight: 700; }
-  .article-body :global(blockquote) { margin: 1.9rem 0; padding: 1.2rem 1.4rem; border-radius: var(--radius-lg); background: var(--color-signal-soft); border: 1px solid color-mix(in srgb, var(--color-signal) 35%, transparent); color: var(--color-text); font-style: normal; }
-  .article-body :global(blockquote p) { margin: 0 0 .5em; }
+  .article-body :global(h2) { margin: 2.6em 0 0.7em; padding-top: 0.8em; border-top: 1px solid var(--filet); scroll-margin-top: 5.5rem; font-size: clamp(1.5rem, 1.15rem + 1.1vw, 2rem); line-height: 1.12; }
+  .article-body :global(h3) { margin-top: 2em; scroll-margin-top: 5.5rem; font-size: 1.2rem; }
+  .article-body :global(a) { font-weight: 500; }
+  .article-body :global(img) { display: block; width: 100%; height: auto; margin: 2rem 0; border: 1px solid var(--filet); }
+  .article-body :global(ul) { list-style: none; padding-left: 0; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: 0.5em; }
+  .article-body :global(ul li) { position: relative; padding-left: 1.5em; }
+  .article-body :global(ul li::before) { content: ''; position: absolute; left: 0.1em; top: 0.82em; width: 0.7em; height: 2px; background: var(--mine); }
+  .article-body :global(ol) { padding-left: 1.7em; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: 0.55em; }
+  .article-body :global(ol li::marker) { font-family: var(--font-mono); font-size: 0.85em; color: var(--gris); }
+  .article-body :global(blockquote) { margin: 2rem 0; padding: 1.2rem 1.4rem; background: var(--papier); border: 1px solid var(--filet); border-top: 1.5px solid var(--mine); font-style: normal; }
+  .article-body :global(blockquote p) { margin: 0 0 0.5em; }
   .article-body :global(blockquote p:last-child) { margin-bottom: 0; }
-  .article-body :global(table) { width: 100%; border-collapse: collapse; margin: 1.7rem 0; font-size: .95rem; display: block; overflow-x: auto; }
-  .article-body :global(th), .article-body :global(td) { text-align: left; padding: .7rem .85rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
-  .article-body :global(thead th) { background: var(--color-night); color: #fff; font-weight: 700; font-size: .8rem; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+  .article-body :global(table) { width: 100%; border-collapse: collapse; margin: 1.8rem 0; font-size: 0.95rem; display: block; overflow-x: auto; border-top: 1.5px solid var(--mine); }
+  .article-body :global(th), .article-body :global(td) { text-align: left; padding: 0.7rem 0.85rem; border-bottom: 1px solid var(--filet); vertical-align: top; }
+  .article-body :global(thead th) { font-family: var(--font-mono); font-weight: 400; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); white-space: nowrap; border-bottom: 1.5px solid var(--mine); }
   .article-body :global(tbody th) { font-weight: 600; }
-  .article-body :global(hr) { border: 0; height: 1px; background: var(--color-border); margin: 2.6rem 0; }
-
-  /* Tableau comparatif : en-tête sombre comme sur les comparateurs de référence */
-  .article-comparison :global(.compare-table thead th) { background: var(--color-night); color: #fff; }
-  .article-comparison :global(.compare-table__tag) { background: rgba(255,255,255,.18); color: #fff; }
+  .article-body :global(hr) { margin: 2.8rem 0; }
   .article-recommendations__item { scroll-margin-top: 5.5rem; }
 
+  /* ══ FAQ, sources ══ */
   .article-faq { margin-top: 3rem; }
-  .article-faq__item { border-bottom: 1px solid var(--color-border); }
-  .article-faq__item:first-of-type { border-top: 1px solid var(--color-border); }
-  .article-faq__item summary { cursor: pointer; padding: .9rem 0; font-weight: 700; font-size: 1.05rem; line-height: 1.3; list-style: none; }
+  .article-faq h2 { margin-bottom: 0.8rem; }
+  .article-faq__item { border-bottom: 1px solid var(--filet); }
+  .article-faq__item:first-of-type { border-top: 1.5px solid var(--mine); }
+  .article-faq__item summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; cursor: pointer; padding: 1rem 0.2rem; font-weight: 600; font-size: 1.05rem; line-height: 1.35; list-style: none; }
   .article-faq__item summary::-webkit-details-marker { display: none; }
-  .article-faq__item p { margin: 0 0 1rem; color: var(--color-text-muted); line-height: 1.65; }
-  .article-sources { margin-top: 2.6rem; padding: 1.3rem 1.5rem; border-radius: var(--radius-lg); background: var(--color-bg-soft); }
-  .article-sources h2 { margin: 0 0 .4rem; font-size: 1.2rem; }
-  .article-sources__intro { margin: 0 0 .9rem; font-size: .9rem; color: var(--color-text-muted); }
-  .article-sources__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; }
-  .article-sources__list li { position: relative; padding-left: 1.4em; font-size: .95rem; }
-  .article-sources__list li::before { content: '↗'; position: absolute; left: 0; top: 0; color: var(--color-accent-text); font-weight: 700; }
-  .article-sources__list a { color: var(--color-accent-text); text-decoration: none; font-weight: 600; }
-  .article-sources__list a:hover { text-decoration: underline; }
+  .faq-signe { position: relative; flex-shrink: 0; width: 14px; height: 14px; }
+  .faq-signe::before, .faq-signe::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; background: var(--mine); transition: transform 0.2s var(--ease-out); }
+  .faq-signe::after { transform: rotate(90deg); }
+  .article-faq__item[open] .faq-signe::after { transform: rotate(0deg); }
+  .article-faq__item p { margin: 0 0 1.1rem; padding-right: 2rem; color: var(--gris); line-height: 1.65; }
+  .article-sources { margin-top: 3rem; padding-top: 1rem; border-top: 1.5px solid var(--mine); }
+  .article-sources h2 { margin: 0 0 0.4rem; font-family: var(--font-body); font-stretch: 100%; font-weight: 600; font-size: 1.15rem; letter-spacing: -0.005em; }
+  .article-sources__intro { margin: 0 0 0.9rem; font-size: 0.9rem; color: var(--gris); }
+  .article-sources__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+  .article-sources__list a { display: inline-flex; align-items: center; gap: 0.4em; font-size: 0.95rem; font-weight: 500; }
 
-  .art__related { padding: clamp(2.5rem, 5vw, 4rem) 0; }
-  .art__related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 1.25rem; }
+  .art__related { padding: 1rem 0 clamp(3rem, 6vw, 5rem); }
+  .art__related .regle { margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+  .art__related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4rem 2rem; }
 
   @media (max-width: 1080px) { .art__grid { grid-template-columns: minmax(0, 760px); } .art__rail { display: none; } .toc--inline { display: block; } }
+  @media (max-width: 860px) { .art__cartouche { grid-template-columns: repeat(3, minmax(0, 1fr)); } .art__cartouche > div:nth-child(3) { border-right: 0; } .art__cartouche > div:nth-child(n + 4) { border-top: 1px solid var(--filet); } }
   @media (max-width: 800px) { .art__related-grid { grid-template-columns: 1fr; } .verdict__body { grid-template-columns: 1fr; } .verdict__cta { min-width: 0; align-items: flex-start; } }
-  @media (max-width: 640px) { .art__title { font-size: clamp(1.7rem, 7.5vw, 2.3rem); } }
+  @media (max-width: 560px) {
+    .art__cartouche { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .art__cartouche > div { border-right: 1px solid var(--filet) !important; border-top: 0 !important; border-bottom: 1px solid var(--filet); }
+    .art__cartouche > div:nth-child(2n) { border-right: 0 !important; }
+    .art__cartouche > div:last-child { grid-column: 1 / -1; border-bottom: 0; }
+    .quick__list li { grid-template-columns: 1fr; }
+    .quick__award { grid-row: auto; }
+  }
 </style>
