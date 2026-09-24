@@ -8,7 +8,7 @@ pinHook: "Le Black Friday, *sans te faire avoir*"
 pinSub: "Ce qu'il faut attendre, ce qu'il faut acheter maintenant."
 keywords: ["black friday setup bureau", "black friday setup gaming", "promo télétravail black friday", "quand acheter chaise gaming"]
 category: "mobilier"
-coverAlt: "Écran d'ordinateur noir posé sur un bureau en bois clair, dans un espace de travail lumineux"
+coverAlt: "Bureau en bois avec deux écrans à fond de feuillage, tour de PC éclairée, enceinte, clavier et fauteuil ergonomique"
 draft: false
 topPick:
   name: "Multiprise parasurtenseur"
