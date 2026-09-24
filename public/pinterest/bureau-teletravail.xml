@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mon Bureau Connecté · Bureau &amp; télétravail</title>
+    <link>https://www.monbureauconnecte.fr/</link>
+    <description>Épingles du tableau Pinterest « Bureau &amp; télétravail »</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Fri, 25 Sep 2026 04:00:00 GMT</lastBuildDate>
+    <atom:link href="https://www.monbureauconnecte.fr/pinterest/bureau-teletravail.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
+<!-- amorce : la tâche GitHub réécrit ce fichier au premier passage -->
