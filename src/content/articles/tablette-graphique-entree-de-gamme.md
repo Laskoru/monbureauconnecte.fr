@@ -3,6 +3,7 @@ title: "Tablette graphique d'entrée de gamme : comment bien choisir la sienne"
 seoTitle: "Tablette graphique d'entrée de gamme : bien choisir"
 description: "Annoter, dessiner ou signer des documents au bureau : quels critères pour une tablette graphique d'entrée de gamme, et comment éviter les mauvaises surprises."
 pubDate: 2026-09-12
+updatedDate: 2026-09-24
 author: "Hugo B."
 pinHook: "Dessiner et annoter au bureau, *sans se ruiner*"
 pinSub: "Les critères pour bien choisir une tablette graphique d'entrée de gamme."
@@ -42,11 +43,11 @@ Le nombre de **niveaux de pression** (souvent 2048 ou 4096 sur les modèles d'en
 
 ### Le stylet : avec ou sans pile, et le nombre de boutons
 
-Les stylets récents fonctionnent le plus souvent **sans pile** (alimentés par la tablette elle-même), ce qui évite l'entretien et le risque de tomber en panne au mauvais moment. Vérifiez aussi la présence de **boutons latéraux programmables** sur le stylet : ils permettent d'assigner des raccourcis utiles (annuler, gomme, clic droit) sans quitter la main de la surface.
+Les stylets récents fonctionnent le plus souvent **sans pile** (alimentés par la tablette elle-même), ce qui évite l'entretien et le risque de tomber en panne au mauvais moment. Vérifie aussi la présence de **boutons latéraux programmables** sur le stylet : ils permettent d'assigner des raccourcis utiles (annuler, gomme, clic droit) sans quitter la main de la surface.
 
 ### La connectique et la compatibilité logicielle
 
-La plupart des tablettes d'entrée de gamme se branchent en **USB** et sont reconnues nativement par Windows et macOS, sans configuration complexe. Vérifie la compatibilité avec les logiciels que tu utilises réellement (lecteur PDF, suite bureautique, logiciel de visioconférence) plutôt que de viser uniquement des logiciels de dessin professionnels que tu n'utiliseras peut-être jamais.
+La plupart des tablettes d'entrée de gamme se branchent en **USB** et sont reconnues nativement par Windows et macOS, sans configuration complexe. Vérifie la compatibilité avec les logiciels que tu utilises réellement (lecteur PDF, suite bureautique, logiciel de visioconférence) plutôt que de viser uniquement des logiciels de dessin professionnels que tu n'utiliseras peut-être jamais. Regarde aussi le type de prise côté ordinateur : si ton portable n'a plus que des ports USB-C et que la tablette est livrée avec un câble USB-A, prévois un adaptateur ou un [hub USB-A](/articles/hub-usb-a-multiport-vieux-peripheriques/).
 
 ### Les touches de raccourci sur la tablette elle-même
 
@@ -60,7 +61,7 @@ Certains modèles ajoutent des **touches programmables directement sur le bord d
 ## Comment choisir selon ton usage
 
 - **Annotation de documents et signature occasionnelle** : un format compact avec une sensibilité de base suffit largement, inutile de viser plus.
-- **Initiation au dessin numérique ou à la retouche photo légère** : privilégiez une zone active un peu plus grande et une sensibilité à la pression plus fine, pour progresser sans être bridé par le matériel.
+- **Initiation au dessin numérique ou à la retouche photo légère** : privilégie une zone active un peu plus grande et une sensibilité à la pression plus fine, pour progresser sans être bridé par le matériel.
 - **Usage intensif en illustration** : au-delà de l'entrée de gamme, mieux vaut se tourner vers des modèles plus avancés (zone active large, inclinaison du stylet détectée), qui sortent du cadre de cet article.
 
 ## Les idées reçues à écarter
@@ -72,6 +73,17 @@ Certains modèles ajoutent des **touches programmables directement sur le bord d
 ## Installer et bien démarrer
 
 L'installation se limite en général à brancher la tablette en USB et à laisser le système d'exploitation ou le pilote constructeur la reconnaître automatiquement. Un premier réglage utile consiste à ajuster la **zone active mappée** dans les paramètres du pilote si ton écran est très large ou en format inhabituel, pour que le stylet couvre bien tout l'espace visible sans zone morte. Prends aussi quelques minutes pour tester la **sensibilité à la pression** dans un logiciel de dessin simple ou un lecteur PDF : la plupart des pilotes permettent d'ajuster la courbe de pression si le trait te semble trop dur ou trop mou par défaut.
+
+## Les petits soucis du début, et comment les régler
+
+- **Sur deux écrans, les tracés sont déformés** : le pilote peut étaler la zone active sur l'ensemble des écrans, ce qui étire les proportions et réduit la précision. Assigne la tablette à un seul écran (certains modèles permettent de basculer de l'un à l'autre avec une touche) et, si le pilote le propose, active l'option qui conserve les proportions : un cercle tracé sur la tablette reste alors un cercle à l'écran.
+- **La pression ne répond pas dans un logiciel** : si elle fonctionne ailleurs, ce n'est pas une panne mais un réglage du logiciel ou du pilote. Certains outils, comme le surligneur d'un lecteur PDF, gardent d'ailleurs une épaisseur fixe quelle que soit la pression.
+- **La tablette décroche ou n'est pas reconnue** : teste-la sur un autre port, sans hub ni rallonge entre les deux, et désinstalle le pilote d'une ancienne tablette avant d'installer le nouveau, car deux pilotes de tablette cohabitent mal. Télécharge toujours le pilote sur le site du fabricant.
+- **La pointe accroche ou s'aplatit** : elle s'use avec le temps, c'est normal. Beaucoup de tablettes sont livrées avec des pointes de rechange : jette un œil dans la boîte avant d'en commander.
+
+## Où la placer sur le bureau
+
+Pour de l'annotation ponctuelle, la place naturelle de la tablette est celle de la souris, du côté de ta main dominante : tu passes de l'une à l'autre sans déplacer le clavier. Pour une vraie séance de dessin, installe-la devant toi et décale le clavier, avec l'avant-bras posé sur le bureau plutôt qu'en suspension, pour ne pas fatiguer l'épaule. Si tu es gaucher, vérifie que le pilote propose une orientation pour gaucher : la tablette se retourne et les touches de raccourci changent de côté. Et pense au reste du poste : les [réglages gratuits de la chaise et de l'écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/) comptent autant que la tablette dès que les séances s'allongent.
 
 ## Conclusion
 
