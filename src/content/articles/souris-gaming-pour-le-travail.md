@@ -68,7 +68,7 @@ Le RGB est sans doute le premier réflexe qui vient à l'esprit quand on pense "
 
 Autre idée reçue : un DPI très élevé serait un signe de qualité. En réalité, au-delà d'un certain seuil (largement dépassé même par des souris d'entrée de gamme), l'utilité concrète d'un DPI plus élevé devient marginale pour un usage bureautique. Ce qui compte davantage, c'est la stabilité du suivi et la possibilité de régler ce DPI facilement selon la tâche en cours, pas le chiffre maximal affiché sur la boîte.
 
-Enfin, beaucoup pensent qu'une souris gaming est nécessairement inconfortable pour un usage prolongé, à cause de son esthétique parfois agressive. C'est de moins en moins vrai : plusieurs fabricants proposent désormais des formes ergonomiques pensées pour tenir plusieurs heures sans fatigue, loin des designs uniquement pensés pour la performance brute.
+Enfin, beaucoup pensent qu'une souris gaming est nécessairement inconfortable pour un usage prolongé, à cause de son esthétique parfois agressive. C'est de moins en moins vrai : plusieurs fabricants proposent désormais des formes ergonomiques pensées pour tenir plusieurs heures sans fatigue, loin des designs uniquement pensés pour la performance brute. Même chose pour le siège : une bonne chaise gaming fait un excellent siège de bureau, à condition de regarder ses réglages avant son look — c'est tout l'objet de notre [comparatif des chaises gaming](/articles/meilleures-chaises-gaming/).
 
 ## Comment choisir selon ton usage
 

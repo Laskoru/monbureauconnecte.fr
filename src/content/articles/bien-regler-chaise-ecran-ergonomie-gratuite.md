@@ -78,7 +78,7 @@ Aucun réglage, aussi parfait soit-il, ne compense une position figée pendant h
 
 ## Quand passer à l'accessoire
 
-Une fois ces réglages gratuits en place, certains inconforts précis peuvent justifier un accessoire ciblé : un [coussin d'assise](/articles/coussin-assise-ergonomique-coccyx/) en cas de gêne au niveau du coccyx, un [repose-pieds](/articles/repose-pieds-ergonomique-bureau/) si la hauteur de bureau ne permet pas d'avoir les pieds bien à plat, ou une [lampe de bureau anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/) dans une pièce mal éclairée. Mais dans la plupart des cas, ces réglages de base suffisent à corriger l'essentiel.
+Une fois ces réglages gratuits en place, certains inconforts précis peuvent justifier un accessoire ciblé : un [coussin d'assise](/articles/coussin-assise-ergonomique-coccyx/) en cas de gêne au niveau du coccyx, un [repose-pieds](/articles/repose-pieds-ergonomique-bureau/) si la hauteur de bureau ne permet pas d'avoir les pieds bien à plat, ou une [lampe de bureau anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/) dans une pièce mal éclairée. Si c'est la chaise elle-même qui ne se règle pas assez, notre [comparatif des chaises gaming](/articles/meilleures-chaises-gaming/) détaille les réglages à exiger avant d'en changer, à commencer par le soutien lombaire. Mais dans la plupart des cas, ces réglages de base suffisent à corriger l'essentiel.
 
 ## Le cas du portable : le piège ergonomique n°1
 

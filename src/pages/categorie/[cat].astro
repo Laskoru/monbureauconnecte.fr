@@ -39,18 +39,13 @@ const others = categories.filter((c) => c.slug !== cat.slug);
   <section class="wide cat-body">
     <div class="cat-grid">
       <div class="cat-main">
+        {cat.intro && <div class="cat-intro" set:html={cat.intro} />}
         {articles.length === 0 && <p class="cat-empty">Aucun guide publié dans cette catégorie pour le moment — les prochains arrivent chaque semaine.</p>}
         <div class="grid2">
           {articles.map((article, i) => <ArticleCard article={article} eager={i < 2} />)}
         </div>
       </div>
       <aside class="cat-side">
-        {'intro' in cat && cat.intro && (
-          <div class="cat-intro">
-            <p class="cat-intro__title"><Icon name="map" size={16} /> Pourquoi cette catégorie</p>
-            <p>{cat.intro}</p>
-          </div>
-        )}
         <div class="cat-others">
           <p class="cat-intro__title"><Icon name="sliders" size={16} /> Explorer aussi</p>
           {others.map((c) => (
@@ -68,10 +63,13 @@ const others = categories.filter((c) => c.slug !== cat.slug);
   .cat-grid { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 3.5rem; align-items: start; }
   .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem 2rem; }
   .cat-empty { margin: 0; padding: 1.1rem 1.3rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); color: var(--gris); }
+  /* Texte d'introduction en tête de liste : même lecture que l'intro des pages budget */
+  .cat-intro { max-width: 66ch; margin: 0 0 2.4rem; font-size: 1.08rem; line-height: 1.7; }
+  .cat-intro :global(p) { margin: 0 0 1em; }
+  .cat-intro :global(p:last-child) { margin-bottom: 0; }
   /* Colonne latérale : cartes papier, liens en lignes à filets, flèche en pastille */
   .cat-side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1.2rem; }
-  .cat-intro, .cat-others { display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
-  .cat-intro p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
+  .cat-others { display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
   .cat-side .cat-intro__title { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.4rem; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; line-height: 1.3; letter-spacing: -0.01em; color: var(--mine); }
   .cat-others__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.7rem; padding: 0.6rem 0; text-decoration: none; color: var(--mine); font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
   .cat-others__link + .cat-others__link { border-top: 1px solid var(--filet); }

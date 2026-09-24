@@ -25,6 +25,10 @@ const budgetCounts = budgets.map((b) => ({
   />
 
   <section class="wide bi">
+    <div class="bi__intro">
+      <p>Un même inconfort se corrige parfois avec un simple réglage, parfois avec un accessoire à petit prix, parfois seulement avec un meuble plus coûteux. C’est pourquoi nos comparatifs sont aussi rangés par enveloppe : tu compares des choix du même ordre de prix, au lieu d’opposer un repose-poignet à un bureau électrique. Avant toute dépense, commence par les <a href="/articles/bien-regler-chaise-ecran-ergonomie-gratuite/">réglages gratuits de la chaise et de l’écran</a> : ils corrigent déjà une bonne part des douleurs.</p>
+      <p>Le <a href="/budget/petit-budget/">petit budget</a> réunit les accessoires malins qui corrigent l’essentiel sans te ruiner, comme un <a href="/articles/coussin-lombaire-chaise-bureau/">coussin lombaire</a>. L’enveloppe <a href="/budget/equilibre/">équilibrée</a> vise le meilleur rapport qualité-prix pour l’équipement du quotidien, choisi pour tenir plusieurs années. Le <a href="/budget/setup-complet/">setup complet</a> regroupe les pièces maîtresses qu’on garde longtemps, du <a href="/articles/bureau-assis-debout-electrique/">bureau assis-debout</a> au siège.</p>
+    </div>
     <div class="bi__list">
       {budgetCounts.map((b) => (
         <article class="bi__row">
@@ -43,6 +47,10 @@ const budgetCounts = budgets.map((b) => ({
 
 <style>
   .bi { padding-top: 2.6rem; padding-bottom: 4.5rem; }
+  /* Texte d'introduction : même lecture que l'intro des pages budget */
+  .bi__intro { max-width: 66ch; margin: 0 0 2.4rem; font-size: 1.08rem; line-height: 1.7; }
+  .bi__intro p { margin: 0 0 1em; }
+  .bi__intro p:last-child { margin-bottom: 0; }
   /* Trois enveloppes en cartes papier : nom en grand, repère de prix et compte en mono, flèche en pastille */
   .bi__list { display: grid; gap: 1rem; }
   .bi__row { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(10rem, 14rem) auto; align-items: center; gap: 0.4rem 1.6rem; padding: 1.4rem 1.5rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
