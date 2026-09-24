@@ -273,42 +273,41 @@ const appSchema = {
   .calc { padding-top: 2.6rem; padding-bottom: 4.5rem; }
   .calc h2 { margin: 3.2rem 0 0.8rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
 
-  /* ---- Outil : une règle graduée, un champ sur ligne de base, un cartouche ---- */
+  /* ---- Outil : un curseur à piste arrondie, un champ pilule, quatre cartes de résultat ---- */
   .calc__tool { margin: 0 0 2.6rem; }
-  .calc__field { display: flex; flex-direction: column; gap: 0.5rem; }
-  .calc__field label { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gris); }
-  .calc__inputs { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.8rem 1.6rem; }
+  .calc__field { display: flex; flex-direction: column; gap: 0.6rem; }
+  .calc__field label { font-weight: 700; font-size: 0.95rem; color: var(--mine); }
+  .calc__inputs { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1.6rem; }
 
-  /* Curseur façon règle : graduation au centimètre, repère long tous les 10 cm, jaune jusqu'au curseur */
-  .calc__inputs input[type='range'] { --p: 50%; flex: 1 1 260px; min-width: 0; height: 44px; margin: 0; background: transparent; color: var(--filet-fort); cursor: pointer; -webkit-appearance: none; appearance: none; }
-  .calc__inputs input[type='range']::-webkit-slider-runnable-track { height: 18px; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 7)) left bottom / calc(100% + 1px) 16px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 70)) left bottom / 100% 6px no-repeat, linear-gradient(var(--jaune), var(--jaune)) left 6px / var(--p) 6px no-repeat; }
-  .calc__inputs input[type='range']::-moz-range-track { height: 18px; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 7)) left bottom / calc(100% + 1px) 16px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 70)) left bottom / 100% 6px no-repeat, linear-gradient(var(--jaune), var(--jaune)) left 6px / var(--p) 6px no-repeat; }
-  .calc__inputs input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 28px; margin-top: -6px; background: var(--mine); border: 3px solid var(--calque); border-radius: 0; }
-  .calc__inputs input[type='range']::-moz-range-thumb { width: 14px; height: 24px; background: var(--mine); border: 3px solid var(--calque); border-radius: 0; }
-  .calc__inputs input[type='range']:focus-visible { outline: 3px solid var(--jaune); outline-offset: 4px; box-shadow: none; }
+  /* Curseur : piste arrondie sur papier-2, lime jusqu'au curseur, poignée ronde */
+  .calc__inputs input[type='range'] { --p: 50%; flex: 1 1 260px; min-width: 0; height: 44px; margin: 0; background: transparent; cursor: pointer; -webkit-appearance: none; appearance: none; }
+  .calc__inputs input[type='range']::-webkit-slider-runnable-track { height: 10px; border-radius: 5px; background: linear-gradient(var(--jaune), var(--jaune)) left center / var(--p) 100% no-repeat, var(--papier-2); }
+  .calc__inputs input[type='range']::-moz-range-track { height: 10px; border-radius: 5px; background: linear-gradient(var(--jaune), var(--jaune)) left center / var(--p) 100% no-repeat, var(--papier-2); }
+  .calc__inputs input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; box-sizing: border-box; width: 26px; height: 26px; margin-top: -8px; background: var(--mine); border: 4px solid var(--papier); border-radius: 50%; box-shadow: var(--ombre); }
+  .calc__inputs input[type='range']::-moz-range-thumb { box-sizing: border-box; width: 26px; height: 26px; background: var(--mine); border: 4px solid var(--papier); border-radius: 50%; box-shadow: var(--ombre); }
+  .calc__inputs input[type='range']:focus-visible { outline: 3px solid var(--jaune); outline-offset: 4px; box-shadow: none; border-radius: 999px; }
 
-  /* Champ : ligne de base mine de 1,5 px, valeur en mono ; au focus, ligne jaune de 3 px */
-  .calc__number { flex: none; display: flex; align-items: baseline; gap: 0.4rem; padding: 0 0.2rem; border-bottom: 1.5px solid var(--mine); transition: background-color 0.18s ease; }
-  .calc__number:focus-within { margin-bottom: -1.5px; border-bottom: 3px solid var(--jaune); background: var(--jaune-pale); }
-  .calc__number input { width: 3.4ch; padding: 0; border: 0; background: transparent; color: var(--mine); font-family: var(--font-mono); font-size: 2.4rem; line-height: 1.15; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+  /* Champ : pilule papier à filet, valeur en Unbounded ; au focus, filet et anneau lime */
+  .calc__number { flex: none; display: inline-flex; align-items: baseline; gap: 0.35rem; padding: 0.35rem 1.1rem 0.35rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: 999px; box-shadow: var(--ombre); transition: border-color 0.18s ease, box-shadow 0.18s ease; }
+  .calc__number:focus-within { border-color: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale); }
+  .calc__number input { width: 3.4ch; padding: 0; border: 0; background: transparent; color: var(--mine); font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; line-height: 1.2; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
   .calc__number input::-webkit-outer-spin-button, .calc__number input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   .calc__number input:focus { outline: none; box-shadow: none; }
-  .calc__number span { font-family: var(--font-mono); font-size: 1rem; color: var(--gris); }
+  .calc__number span { font-family: var(--font-mono); font-size: 0.95rem; color: var(--gris); }
 
-  /* Résultats : un cartouche en cases à filets */
-  .calc__results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 1.8rem 0 0; background: var(--papier); border: 1px solid var(--mine); }
-  .calc__result { min-width: 0; padding: 0.65rem 0.85rem 0.75rem; border-right: 1px solid var(--filet); }
-  .calc__result:last-child { border-right: 0; }
-  .calc__result-label { margin: 0; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; line-height: 1.35; text-transform: uppercase; color: var(--gris); }
+  /* Résultats : quatre cartes papier, la valeur en Unbounded 800, l'unité et la plage en mono */
+  .calc__results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; margin: 1.8rem 0 0; }
+  .calc__result { min-width: 0; padding: 0.9rem 1rem 1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .calc__result-label { margin: 0; font-weight: 600; font-size: 0.82rem; line-height: 1.35; color: var(--gris); }
   .calc__result-label em { font-style: normal; font-weight: 700; color: var(--mine); }
-  .calc__result-value { margin: 0.5rem 0 0.2rem; font-family: var(--font-mono); font-size: 0.95rem; line-height: 1; color: var(--gris); font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .calc__result-value span { font-size: 2rem; color: var(--mine); }
-  .calc__result-hint { margin: 0; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.4; color: var(--gris); font-variant-numeric: tabular-nums; }
+  .calc__result-value { margin: 0.5rem 0 0.25rem; font-family: var(--font-mono); font-size: 0.9rem; line-height: 1; color: var(--gris); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .calc__result-value span { font-family: var(--font-display); font-weight: 800; font-size: 2rem; letter-spacing: -0.03em; color: var(--mine); }
+  .calc__result-hint { margin: 0; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.4; color: var(--gris); font-variant-numeric: tabular-nums; }
 
-  /* Verdict : filet mine à gauche ; l'écart mesuré est surligné en jaune */
-  .calc__verdict { max-width: 60ch; margin: 1.4rem 0 0; padding: 0.1rem 0 0.1rem 0.9rem; border-left: 1px solid var(--mine); font-size: 1rem; line-height: 1.6; }
+  /* Verdict : une bande arrondie sur papier-2 ; l'écart mesuré est surligné en lime */
+  .calc__verdict { max-width: 60ch; margin: 1.4rem 0 0; padding: 0.9rem 1.1rem; background: var(--papier-2); border-radius: var(--radius); font-size: 1rem; line-height: 1.6; }
   .calc__verdict:empty { display: none; }
-  .calc__verdict :global(strong) { padding: 0 0.2em; }
+  .calc__verdict :global(strong) { padding: 0 0.2em; border-radius: 4px; }
   .calc__verdict--warn :global(strong) { background: var(--jaune); color: var(--sur-jaune); }
   .calc__verdict--ok :global(strong) { background: var(--jaune-pale); }
 
@@ -317,42 +316,41 @@ const appSchema = {
   .calc__figure figcaption { margin-top: 0.8rem; font-size: 0.88rem; line-height: 1.55; color: var(--gris); }
   .calc__figure figcaption strong { color: var(--mine); }
 
-  /* ---- Repères au ressenti : lignes réglées ---- */
-  .calc__checks { list-style: none; margin: 1.2rem 0 0; padding: 0; border-top: 1.5px solid var(--mine); }
-  .calc__checks li { position: relative; padding: 0.75rem 0.2rem 0.75rem 1.6rem; border-bottom: 1px solid var(--filet); line-height: 1.55; }
-  .calc__checks li::before { content: ''; position: absolute; left: 0.2rem; top: 1.5rem; width: 0.75em; height: 1.5px; background: var(--mine); }
-  .calc__caveat { margin: 1.4rem 0 0; padding: 0.1rem 0 0.1rem 0.9rem; border-left: 1px solid var(--filet-fort); font-size: 0.9rem; line-height: 1.6; color: var(--gris); }
+  /* ---- Repères au ressenti : une carte papier, une ligne par repère, puce lime ---- */
+  .calc__checks { list-style: none; margin: 1.2rem 0 0; padding: 0.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .calc__checks li { position: relative; padding: 0.8rem 0.2rem 0.8rem 1.5rem; line-height: 1.55; }
+  .calc__checks li + li { border-top: 1px solid var(--filet); }
+  .calc__checks li::before { content: ''; position: absolute; left: 0.2rem; top: 1.45rem; width: 0.55em; height: 0.55em; border-radius: 50%; background: var(--jaune); }
+  .calc__caveat { margin: 1.4rem 0 0; font-size: 0.9rem; line-height: 1.6; color: var(--gris); }
 
-  /* ---- Liens : lignes réglées ---- */
-  .calc__links { border-top: 1.5px solid var(--mine); }
-  .calc__link { display: grid; grid-template-columns: minmax(0, 12rem) minmax(0, 1fr) auto; align-items: center; gap: 0.3rem 1.4rem; padding: 1rem 0.3rem; border-bottom: 1px solid var(--filet); color: var(--mine); text-decoration: none; transition: background-color 0.18s ease; }
-  .calc__link:hover { background: var(--jaune-pale); }
-  .calc__link strong { font-weight: 600; line-height: 1.35; }
-  .calc__link span { font-size: 0.92rem; line-height: 1.5; color: var(--gris); }
-  .calc__link :global(svg) { transition: transform 0.18s var(--ease-out); }
-  .calc__link:hover :global(svg) { transform: translateX(4px); }
+  /* ---- Liens : quatre cartes papier, flèche en pastille ---- */
+  .calc__links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .calc__link { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr; align-items: start; gap: 0.35rem 1rem; padding: 1.1rem 1.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); color: var(--mine); text-decoration: none; transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
+  .calc__link:hover { transform: translateY(-4px); box-shadow: var(--ombre-2); }
+  .calc__link strong { font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.3; letter-spacing: -0.02em; }
+  .calc__link span { grid-column: 1; font-size: 0.92rem; line-height: 1.5; color: var(--gris); }
+  .calc__link :global(svg) { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 36px; height: 36px; padding: 9px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.18s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .calc__link:hover :global(svg) { transform: translateX(4px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
 
-  /* ---- FAQ : accordéon réglé ---- */
-  .calc__faq { border-top: 1.5px solid var(--mine); }
-  .calc__faq details { border-bottom: 1px solid var(--filet); }
-  .calc__faq summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 0.2rem; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
+  /* ---- FAQ : accordéon en cartes papier, signe plus sur pastille lime pâle ---- */
+  .calc__faq { display: grid; gap: 0.6rem; }
+  .calc__faq details { padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .calc__faq summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
   .calc__faq summary::-webkit-details-marker { display: none; }
-  .calc__faq summary::after { content: ''; flex-shrink: 0; width: 14px; height: 14px; margin-left: auto; background: linear-gradient(var(--mine), var(--mine)) center / 100% 1.5px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 1.5px 100% no-repeat; }
-  .calc__faq details[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 100% 1.5px no-repeat; }
+  .calc__faq summary::after { content: ''; flex-shrink: 0; width: 28px; height: 28px; margin-left: auto; border-radius: 50%; background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 2px 12px no-repeat, var(--jaune-pale); }
+  .calc__faq details[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, var(--jaune-pale); }
   .calc__faq p { margin: 0 0 1.1rem; padding-right: 2rem; line-height: 1.65; color: var(--gris); }
 
   .calc__share { margin-top: 2.6rem; font-size: 0.9rem; color: var(--gris); }
 
   @media (max-width: 600px) {
-    .calc__link { grid-template-columns: minmax(0, 1fr) auto; }
-    .calc__link strong { grid-column: 1; grid-row: 1; }
-    .calc__link span { grid-column: 1; grid-row: 2; }
-    .calc__link :global(svg) { grid-column: 2; grid-row: 1 / span 2; }
+    .calc__links { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
-    .calc__results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .calc__result:nth-child(2n) { border-right: 0; }
-    .calc__result:nth-child(-n + 2) { border-bottom: 1px solid var(--filet); }
-    .calc__number input { font-size: 2rem; }
+    .calc__results { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+    .calc__result { padding: 0.8rem 0.85rem 0.9rem; }
+    .calc__result-value span { font-size: 1.7rem; }
+    .calc__number input { font-size: 1.4rem; }
+    .calc__checks { padding: 0.2rem 1rem; }
   }
 </style>

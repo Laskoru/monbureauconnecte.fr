@@ -43,22 +43,23 @@ const budgetCounts = budgets.map((b) => ({
 
 <style>
   .bi { padding-top: 2.6rem; padding-bottom: 4.5rem; }
-  /* Trois enveloppes en lignes réglées : nom en grand, repère de prix et compte en mono */
-  .bi__list { border-top: 1.5px solid var(--mine); }
-  .bi__row { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(10rem, 14rem) auto; align-items: center; gap: 0.4rem 1.6rem; padding: 1.4rem 0.4rem; border-bottom: 1px solid var(--filet); transition: background-color 0.18s ease; }
-  .bi__row:hover, .bi__row:focus-within { background: var(--jaune-pale); }
-  .bi__row :global(.bi__icon) { align-self: start; margin-top: 0.3rem; color: var(--mine); }
+  /* Trois enveloppes en cartes papier : nom en grand, repère de prix et compte en mono, flèche en pastille */
+  .bi__list { display: grid; gap: 1rem; }
+  .bi__row { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(10rem, 14rem) auto; align-items: center; gap: 0.4rem 1.6rem; padding: 1.4rem 1.5rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
+  .bi__row:hover, .bi__row:focus-within { transform: translateY(-4px); box-shadow: var(--ombre-2); }
+  .bi__row :global(.bi__icon) { width: 48px; height: 48px; padding: 12px; border-radius: 50%; background: var(--jaune-pale); color: var(--mine); }
   .bi__text { min-width: 0; }
-  .bi__title { margin: 0 0 0.35rem; font-weight: 300; font-size: clamp(1.5rem, 1rem + 1.6vw, 2.3rem); line-height: 1.08; }
+  .bi__title { margin: 0 0 0.35rem; font-size: clamp(1.3rem, 1rem + 1.2vw, 1.9rem); line-height: 1.08; }
   .bi__title a { color: var(--mine); text-decoration: none; }
   .bi__desc { margin: 0; font-size: 0.98rem; line-height: 1.5; color: var(--gris); }
   .bi__data { margin: 0; display: flex; flex-direction: column; gap: 0.2rem; font-family: var(--font-mono); font-size: 0.82rem; line-height: 1.4; font-variant-numeric: tabular-nums; }
   .bi__range { color: var(--mine); }
   .bi__count { color: var(--gris); }
-  .bi__row :global(.bi__fleche) { transition: transform 0.2s var(--ease-out); }
-  .bi__row:hover :global(.bi__fleche) { transform: translateX(6px); }
+  .bi__row :global(.bi__fleche) { width: 40px; height: 40px; padding: 9px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.2s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .bi__row:hover :global(.bi__fleche) { transform: translateX(4px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
   @media (max-width: 760px) {
-    .bi__row { grid-template-columns: auto minmax(0, 1fr) auto; gap: 0.5rem 1rem; }
+    .bi__row { grid-template-columns: auto minmax(0, 1fr) auto; gap: 0.5rem 1rem; padding: 1.1rem 1.1rem 1.2rem; }
+    .bi__row :global(.bi__icon) { align-self: start; }
     .bi__data { grid-column: 2; grid-row: 2; flex-direction: row; flex-wrap: wrap; gap: 0.2rem 1rem; }
     .bi__row :global(.bi__fleche) { grid-column: 3; grid-row: 1 / span 2; }
   }

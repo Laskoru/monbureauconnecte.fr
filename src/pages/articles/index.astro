@@ -34,7 +34,7 @@ const allArticles = (await getCollection('articles', ({ data }) => !data.draft))
 </BaseLayout>
 
 <style>
-  /* Filtres : étiquettes à angles vifs ; la rubrique affichée est remplie de jaune */
+  /* Filtres : pilules papier ; la rubrique affichée est remplie de lime, texte sombre */
   .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
   .filters .chip { min-height: 36px; font-size: 0.85rem; }
   .filters .chip[aria-current] { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }

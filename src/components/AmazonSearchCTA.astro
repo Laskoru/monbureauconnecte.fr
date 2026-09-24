@@ -38,19 +38,20 @@ const url = searchUrl(cleanTopic);
 </div>
 
 <style>
-  /* Bandeau réglé : filet mine en tête, filet fin en pied, bouton d'achat jaune */
+  /* Carte papier arrondie à ombre douce, icône sur pastille lime pâle, bouton d'achat lime */
   .amazon-search-cta {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0.9rem 1.2rem;
     margin: 1.75rem 0;
-    padding: 1.1rem 1.2rem;
+    padding: 1.1rem 1.3rem;
     background: var(--papier);
-    border-top: 1.5px solid var(--mine);
-    border-bottom: 1px solid var(--filet);
+    border: 1px solid var(--filet);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--ombre);
   }
-  .amazon-search-cta :global(.amazon-search-cta__icon) { flex-shrink: 0; color: var(--mine); }
+  .amazon-search-cta :global(.amazon-search-cta__icon) { flex-shrink: 0; width: 44px; height: 44px; padding: 11px; border-radius: 50%; background: var(--jaune-pale); color: var(--mine); }
   .amazon-search-cta__body { flex: 1 1 220px; min-width: 0; }
   .amazon-search-cta__intro { margin: 0; font-weight: 600; font-size: 1rem; line-height: 1.4; color: var(--mine); }
   .amazon-search-cta__sub { margin: 0.2rem 0 0; font-size: 0.88rem; line-height: 1.5; color: var(--gris); }

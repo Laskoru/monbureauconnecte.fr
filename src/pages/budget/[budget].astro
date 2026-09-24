@@ -62,17 +62,21 @@ const others = budgets.filter((b) => b.slug !== budget.slug);
   .bd__intro { font-size: 1.08rem; line-height: 1.7; max-width: 66ch; }
   .bd__intro :global(p) { margin: 0 0 1em; }
   .bd__section { margin: 2.4rem 0 1rem; font-size: clamp(1.5rem, 1.15rem + 1.2vw, 2.1rem); }
-  /* Les comparatifs en lignes réglées : filet mine en tête, filets fins entre les lignes */
-  .bd__list { border-top: 1.5px solid var(--mine); border-bottom: 1px solid var(--filet); }
+  /* Les comparatifs en lignes à vignettes, dans une carte papier arrondie */
+  .bd__list { padding: 0.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
   .bd__list :global(.row:first-child) { border-top: 0; }
-  .bd__side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 2rem; }
-  .bd__box { display: flex; flex-direction: column; padding-top: 0.9rem; border-top: 1.5px solid var(--mine); }
-  .bd__box-title { margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.5em; font-weight: 600; font-size: 1rem; line-height: 1.3; color: var(--mine); }
+  /* Colonne latérale : cartes papier, liens en lignes à filets, flèche en pastille */
+  .bd__side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1.2rem; }
+  .bd__box { display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .bd__box-title { margin: 0 0 0.4rem; display: flex; align-items: center; gap: 0.5em; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; line-height: 1.3; letter-spacing: -0.01em; color: var(--mine); }
   .bd__box-text { margin: 0 0 1rem; font-size: 0.93rem; line-height: 1.55; color: var(--gris); }
   .bd__box .btn { align-self: flex-start; }
-  .bd__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.7rem; padding: 0.65rem 0.3rem; border-bottom: 1px solid var(--filet); text-decoration: none; color: var(--mine); font-weight: 600; font-size: 0.95rem; line-height: 1.35; transition: background-color 0.18s ease; }
-  .bd__link:hover { background: var(--jaune-pale); }
+  .bd__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.7rem; padding: 0.6rem 0; text-decoration: none; color: var(--mine); font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
+  .bd__link + .bd__link { border-top: 1px solid var(--filet); }
   .bd__link span { display: flex; flex-direction: column; }
   .bd__link small { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 400; color: var(--gris); }
+  .bd__link :global(svg:last-child) { width: 28px; height: 28px; padding: 7px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.18s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .bd__link:hover :global(svg:last-child) { transform: translateX(3px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
   @media (max-width: 900px) { .bd__grid { grid-template-columns: 1fr; } .bd__side { position: static; } }
+  @media (max-width: 480px) { .bd__list { padding: 0.2rem 0.9rem; } }
 </style>

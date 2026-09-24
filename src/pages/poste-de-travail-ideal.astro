@@ -28,7 +28,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
 
 // Sol hachuré de l'épure (même trait que l'épure de l'accueil)
 const hachures = Array.from({ length: 42 }, (_, i) => 32 + i * 14);
-// Repères numérotés du schéma : étiquettes carrées en mono, centrées sur (x, y)
+// Repères numérotés du schéma : pastilles rondes lime, chiffres en mono, centrées sur (x, y)
 const reperes = [
   { n: 1, x: 470, y: 150 },
   { n: 2, x: 325, y: 158 },
@@ -80,9 +80,9 @@ const reperes = [
         <!-- marqueurs d'angle 90° -->
         <path d="M 222 240 l 12 0 l 0 -12" class="e-angle" />
         <path d="M 273 250 l 12 0 M 285 250 l 0 12" class="e-angle" />
-        <!-- repères numérotés : étiquettes carrées, chiffres en mono -->
+        <!-- repères numérotés : pastilles rondes lime, chiffres en mono -->
         {reperes.map((r) => (
-          <g class="e-badge"><rect x={r.x - 12} y={r.y - 12} width="24" height="24" /><text x={r.x} y={r.y + 5}>{r.n}</text></g>
+          <g class="e-badge"><circle cx={r.x} cy={r.y} r="12" /><text x={r.x} y={r.y + 5}>{r.n}</text></g>
         ))}
       </svg>
       <figcaption>Profil d'un poste bien réglé. Chaque numéro renvoie au repère correspondant ci-dessous.</figcaption>
@@ -122,7 +122,7 @@ const reperes = [
 <style>
   .poste { padding-top: 2.6rem; padding-bottom: 4.5rem; }
 
-  /* ---- Schéma : trait mine sur le calque, repères en étiquettes carrées ---- */
+  /* ---- Schéma : trait mine sur le calque, repères en pastilles rondes lime (comme les points chauds) ---- */
   .poste__figure { margin: 0 0 2.6rem; }
   .ergo { display: block; width: 100%; height: auto; }
   .ergo .e-floor { stroke: var(--mine); stroke-width: 1.5; }
@@ -135,34 +135,35 @@ const reperes = [
   .ergo circle.e-body { fill: var(--calque); }
   .ergo .e-angle { fill: none; stroke: var(--mine); stroke-width: 1.2; }
   .ergo .e-dash { stroke: var(--gris); stroke-width: 1.2; stroke-dasharray: 5 4; }
-  .ergo .e-badge rect { fill: var(--calque); stroke: var(--mine); stroke-width: 1; }
-  .ergo .e-badge text { fill: var(--mine); font-family: var(--font-mono); font-size: 14px; text-anchor: middle; font-variant-numeric: tabular-nums; }
+  .ergo .e-badge circle { fill: var(--jaune); stroke: var(--calque); stroke-width: 2; }
+  .ergo .e-badge text { fill: var(--sur-jaune); font-family: var(--font-mono); font-size: 14px; font-weight: 700; text-anchor: middle; font-variant-numeric: tabular-nums; }
   .poste__figure figcaption { margin: 0.8rem 0 0; font-size: 0.88rem; line-height: 1.55; color: var(--gris); }
 
-  /* ---- Les 7 repères : lignes réglées, numéro dans la même étiquette carrée que le schéma ---- */
-  .poste__rules { list-style: none; margin: 0 0 3rem; padding: 0; border-top: 1.5px solid var(--mine); }
-  .rule { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0 1rem; padding: 1.1rem 0.2rem 1.2rem; border-bottom: 1px solid var(--filet); }
-  .rule__n { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border: 1px solid var(--mine); font-family: var(--font-mono); font-size: 0.85rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  /* ---- Les 7 repères : une carte papier, une ligne par repère, le numéro sur la même pastille lime que le schéma ---- */
+  .poste__rules { list-style: none; margin: 0 0 3rem; padding: 0.2rem 1.3rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .rule { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0 1rem; padding: 1.1rem 0 1.2rem; }
+  .rule + .rule { border-top: 1px solid var(--filet); }
+  .rule__n { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--jaune); color: var(--sur-jaune); font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
   .rule__body { min-width: 0; }
-  .rule__title { margin: 0 0 0.3rem; font-weight: 600; font-size: 1.05rem; line-height: 1.35; }
+  .rule__title { margin: 0 0 0.3rem; font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.35; letter-spacing: -0.02em; }
   .rule__why { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
   .rule__links { margin: 0.6rem 0 0; display: flex; flex-wrap: wrap; gap: 0.1rem 1.4rem; }
   .rule__links a { display: inline-flex; align-items: center; gap: 0.35em; min-height: 32px; font-weight: 600; font-size: 0.9rem; text-decoration-line: none; }
   .rule__links a:hover { text-decoration-line: underline; }
 
-  /* ---- Passer à l'action : un panneau papier net ---- */
-  .poste__tools { margin: 0 0 3rem; padding: 1.4rem 1.5rem 1.5rem; background: var(--papier); border: 1px solid var(--filet); }
+  /* ---- Passer à l'action : une carte papier arrondie ---- */
+  .poste__tools { margin: 0 0 3rem; padding: 1.4rem 1.5rem 1.5rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
   .poste__tools h2 { margin: 0 0 0.5rem; font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.7rem); }
   .poste__tools p { margin: 0 0 1rem; color: var(--gris); }
   .poste__tools .poste__tools-links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0; }
 
-  /* ---- FAQ : accordéon réglé ---- */
+  /* ---- FAQ : accordéon en cartes papier, signe plus sur pastille lime pâle ---- */
   .poste__faq h2 { margin: 0 0 1rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
-  .poste__faq-item { border-bottom: 1px solid var(--filet); }
-  .poste__faq-item:first-of-type { border-top: 1.5px solid var(--mine); }
-  .poste__faq-item summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 0.2rem; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
+  .poste__faq-item { margin-bottom: 0.6rem; padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .poste__faq-item summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
   .poste__faq-item summary::-webkit-details-marker { display: none; }
-  .poste__faq-item summary::after { content: ''; flex-shrink: 0; width: 14px; height: 14px; margin-left: auto; background: linear-gradient(var(--mine), var(--mine)) center / 100% 1.5px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 1.5px 100% no-repeat; }
-  .poste__faq-item[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 100% 1.5px no-repeat; }
+  .poste__faq-item summary::after { content: ''; flex-shrink: 0; width: 28px; height: 28px; margin-left: auto; border-radius: 50%; background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 2px 12px no-repeat, var(--jaune-pale); }
+  .poste__faq-item[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, var(--jaune-pale); }
   .poste__faq-item p { margin: 0 0 1.1rem; padding-right: 2rem; line-height: 1.65; color: var(--gris); }
+  @media (max-width: 480px) { .poste__rules { padding: 0.2rem 1rem; } }
 </style>

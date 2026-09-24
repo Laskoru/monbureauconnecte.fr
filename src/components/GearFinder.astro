@@ -13,17 +13,17 @@ const tag = siteConfig.amazon.tag;
 </section>
 
 <style>
-  /* Un panneau papier au filet mine ; le résultat reçoit le filet jaune de 4 px */
-  .finder__card { position: relative; max-width: 720px; padding: 1.6rem 1.6rem 1.5rem; background: var(--papier); color: var(--mine); border: 1px solid var(--mine); }
-  .finder__card.is-result { border-top: 4px solid var(--jaune); }
+  /* Carte papier arrondie à ombre douce ; le résultat prend l'anneau lime de « Notre choix » */
+  .finder__card { position: relative; max-width: 720px; padding: 1.6rem 1.6rem 1.5rem; background: var(--papier); color: var(--mine); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .finder__card.is-result { border-color: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale), var(--ombre); }
   .finder__card :global(.prog) { display: flex; gap: 6px; margin-bottom: 1.3rem; }
-  .finder__card :global(.prog i) { height: 3px; flex: 1; background: var(--filet); transition: background-color 0.3s ease; }
-  .finder__card :global(.prog i.on) { background: var(--mine); }
-  .finder__card :global(.q) { margin: 0 0 1.2rem; font-family: var(--font-display); font-stretch: 125%; font-weight: 400; font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.7rem); line-height: 1.12; letter-spacing: -0.015em; }
+  .finder__card :global(.prog i) { height: 6px; flex: 1; border-radius: 3px; background: var(--papier-2); transition: background-color 0.3s ease; }
+  .finder__card :global(.prog i.on) { background: var(--jaune); }
+  .finder__card :global(.q) { margin: 0 0 1.2rem; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.3rem, 1.1rem + 0.6vw, 1.6rem); line-height: 1.12; letter-spacing: -0.03em; }
   .finder__card :global(.opts) { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-  .finder__card :global(.opt) { display: flex; align-items: center; gap: 0.8rem; min-height: 56px; padding: 0.8rem 1rem; text-align: left; border: 1.5px solid var(--mine); border-radius: var(--radius-sm); background: transparent; color: var(--mine); font-family: var(--font-body); font-weight: 600; font-size: 0.98rem; line-height: 1.25; cursor: pointer; transition: background-color 0.18s ease, color 0.18s ease; }
-  .finder__card :global(.opt:hover) { background: var(--jaune-pale); }
-  .finder__card :global(.opt.is-active), .finder__card :global(.opt:active) { background: var(--jaune); color: var(--sur-jaune); }
+  .finder__card :global(.opt) { display: flex; align-items: center; gap: 0.8rem; min-height: 52px; padding: 0.7rem 1.1rem; text-align: left; border: 1px solid var(--filet); border-radius: 999px; background: var(--papier); color: var(--mine); font-family: var(--font-body); font-weight: 600; font-size: 0.98rem; line-height: 1.25; cursor: pointer; transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.25s var(--ease-out); }
+  .finder__card :global(.opt:hover) { border-color: var(--mine); transform: translateY(-2px); }
+  .finder__card :global(.opt.is-active), .finder__card :global(.opt:active) { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
   .finder__card :global(.opt svg) { width: 22px; height: 22px; flex: 0 0 auto; }
   .finder__card :global(.back) { display: inline-flex; align-items: center; gap: 0.4em; min-height: 40px; margin: 1rem 0 0; padding: 0; background: none; border: 0; color: var(--gris); font: 600 0.9rem var(--font-body); cursor: pointer; }
   .finder__card :global(.back:hover) { color: var(--mine); }

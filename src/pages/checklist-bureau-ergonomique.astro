@@ -105,33 +105,34 @@ const sections = [
 <style>
   .checklist { padding-top: 2.6rem; padding-bottom: 4.5rem; }
 
-  /* Progression : le compte en mono, une règle graduée qui se remplit de jaune */
+  /* Progression : le compte en mono, une barre arrondie qui se remplit de lime */
   .checklist__progress { margin: 0 0 2.2rem; font-weight: 600; line-height: 1.5; }
   .checklist__progress .mono { font-weight: 700; }
   .checklist__progress::after {
     content: '';
     display: block;
-    height: 14px;
+    height: 10px;
     margin-top: 0.6rem;
-    color: var(--filet-fort);
-    background:
-      linear-gradient(var(--jaune), var(--jaune)) left 2px / var(--p, 0%) 6px no-repeat,
-      linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat,
-      repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px 5%) left bottom / calc(100% + 1px) 6px no-repeat;
+    border-radius: 5px;
+    background-color: var(--papier-2);
+    background-image: linear-gradient(var(--jaune), var(--jaune));
+    background-size: var(--p, 0%) 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s var(--ease-out);
   }
 
-  /* Chaque rubrique : titre, puis ses points en lignes réglées */
-  .checklist__block { margin: 0 0 3rem; }
-  .checklist__block h2 { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.9rem; font-size: clamp(1.45rem, 1.2rem + 0.8vw, 1.8rem); }
-  .checklist__icon { display: inline-flex; flex-shrink: 0; }
-  .checklist__items { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
-  .checklist__items li { border-bottom: 1px solid var(--filet); }
-  .checklist__items label { position: relative; display: flex; padding: 0.75rem 0.3rem; cursor: pointer; transition: background-color 0.18s ease; }
+  /* Chaque rubrique : une carte papier ; le titre avec son icône sur pastille, puis ses points en lignes à filets */
+  .checklist__block { margin: 0 0 1.4rem; padding: 1.3rem 1.4rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .checklist__block h2 { display: flex; align-items: center; gap: 0.7rem; margin: 0 0 0.6rem; font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem); }
+  .checklist__icon { display: inline-flex; flex-shrink: 0; width: 40px; height: 40px; padding: 10px; border-radius: 50%; background: var(--jaune-pale); color: var(--mine); }
+  .checklist__items { list-style: none; margin: 0; padding: 0; }
+  .checklist__items li + li { border-top: 1px solid var(--filet); }
+  .checklist__items label { position: relative; display: flex; padding: 0.75rem 0.5rem; border-radius: var(--radius-sm); cursor: pointer; transition: background-color 0.18s ease; }
   .checklist__items label:hover { background: var(--jaune-pale); }
-  /* Case à cocher dessinée au trait : carré mine, remplie de jaune une fois cochée */
-  .checklist__items input { position: absolute; left: 0.3rem; top: 0.85rem; width: 20px; height: 20px; margin: 0; opacity: 0; cursor: pointer; }
+  /* Case à cocher : carré arrondi (6 px) au filet mine, remplie de lime avec une coche sombre une fois cochée */
+  .checklist__items input { position: absolute; left: 0.5rem; top: 0.85rem; width: 20px; height: 20px; margin: 0; opacity: 0; cursor: pointer; }
   .checklist__items span { position: relative; padding-left: 2.1rem; line-height: 1.5; }
-  .checklist__items span::before { content: ''; position: absolute; left: 0; top: 0.15em; width: 20px; height: 20px; box-sizing: border-box; border: 1.5px solid var(--mine); border-radius: var(--radius-sm); background: transparent; transition: background-color 0.15s ease; }
+  .checklist__items span::before { content: ''; position: absolute; left: 0; top: 0.15em; width: 20px; height: 20px; box-sizing: border-box; border: 1.5px solid var(--mine); border-radius: 6px; background: var(--papier); transition: background-color 0.15s ease, border-color 0.15s ease; }
   .checklist__items span::after {
     content: '';
     position: absolute;
@@ -144,16 +145,17 @@ const sections = [
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3'%3E%3Cpath d='m5 12 5 5L20 7'/%3E%3C/svg%3E") center / contain no-repeat;
     opacity: 0;
   }
-  .checklist__items input:checked + span::before { background: var(--jaune); }
+  .checklist__items input:checked + span::before { background: var(--jaune); border-color: var(--jaune); }
   .checklist__items input:checked + span::after { opacity: 1; }
   .checklist__items input:focus-visible + span::before { outline: 3px solid var(--jaune); outline-offset: 2px; }
   .checklist__items input:checked + span,
   .checklist__items li.is-done span { color: var(--gris); text-decoration: line-through; text-decoration-color: var(--filet-fort); }
 
-  .checklist__link { margin: 0.9rem 0 0; font-size: 0.92rem; color: var(--gris); }
-  .checklist__cta { margin: 0 0 2rem; padding: 1.5rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .checklist__link { margin: 0.8rem 0 0; font-size: 0.92rem; color: var(--gris); }
+  .checklist__cta { margin: 2.6rem 0 2rem; padding: 1.5rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
   .checklist__cta p { margin: 0; line-height: 1.6; }
   .checklist__share { font-size: 0.9rem; color: var(--gris); }
+  @media (max-width: 480px) { .checklist__block { padding: 1.1rem 1rem; } }
 </style>
 
 <script is:inline>

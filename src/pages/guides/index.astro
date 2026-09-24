@@ -36,7 +36,6 @@ const guideCounts = guides.map((g) => ({
       ))}
     </div>
 
-    <span class="regle gi__regle" aria-hidden="true"></span>
     <div class="gi__tools">
       <h2 class="gi__tools-title">Et pour trancher vite</h2>
       <div class="gi__tools-links">
@@ -49,22 +48,21 @@ const guideCounts = guides.map((g) => ({
 
 <style>
   .gi { padding-top: 2.6rem; padding-bottom: 4.5rem; }
-  /* Les parcours en lignes réglées : le problème en grand, le compte en mono */
-  .gi__list { border-top: 1.5px solid var(--mine); }
-  .gi__row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: 'title count fleche' 'desc count fleche'; align-items: center; gap: 0.45rem 2rem; padding: 1.3rem 0.4rem 1.4rem; border-bottom: 1px solid var(--filet); transition: background-color 0.18s ease; }
-  .gi__row:hover, .gi__row:focus-within { background: var(--jaune-pale); }
-  .gi__title { grid-area: title; margin: 0; font-weight: 300; font-size: clamp(1.45rem, 1rem + 1.5vw, 2.2rem); line-height: 1.1; }
+  /* Les parcours en cartes papier : le problème en grand, le compte en mono, flèche en pastille */
+  .gi__list { display: grid; gap: 1rem; }
+  .gi__row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-areas: 'title count fleche' 'desc count fleche'; align-items: center; gap: 0.45rem 2rem; padding: 1.4rem 1.6rem 1.5rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
+  .gi__row:hover, .gi__row:focus-within { transform: translateY(-4px); box-shadow: var(--ombre-2); }
+  .gi__title { grid-area: title; margin: 0; font-size: clamp(1.25rem, 1rem + 1.1vw, 1.8rem); line-height: 1.1; }
   .gi__title a { color: var(--mine); text-decoration: none; }
   .gi__desc { grid-area: desc; max-width: 70ch; margin: 0; font-size: 0.98rem; line-height: 1.55; color: var(--gris); }
   .gi__count { grid-area: count; margin: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gris); white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .gi__row :global(.gi__fleche) { grid-area: fleche; transition: transform 0.2s var(--ease-out); }
-  .gi__row:hover :global(.gi__fleche) { transform: translateX(6px); }
+  .gi__row :global(.gi__fleche) { grid-area: fleche; width: 44px; height: 44px; padding: 10px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.2s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .gi__row:hover :global(.gi__fleche) { transform: translateX(4px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
 
-  .gi__regle { margin-top: clamp(3rem, 6vw, 4.5rem); }
-  .gi__tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.2rem 2rem; padding-top: 2rem; }
+  .gi__tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.2rem 2rem; margin-top: clamp(3rem, 6vw, 4.5rem); padding-top: 2rem; border-top: 1px solid var(--filet); }
   .gi__tools-title { margin: 0; font-size: clamp(1.6rem, 1.15rem + 1.5vw, 2.4rem); }
   .gi__tools-links { display: flex; flex-wrap: wrap; gap: 0.7rem; }
   @media (max-width: 720px) {
-    .gi__row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'title fleche' 'desc fleche' 'count fleche'; gap: 0.4rem 1rem; }
+    .gi__row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'title fleche' 'desc fleche' 'count fleche'; gap: 0.4rem 1rem; padding: 1.1rem 1.2rem 1.2rem; }
   }
 </style>

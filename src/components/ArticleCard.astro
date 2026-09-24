@@ -59,33 +59,34 @@ const produits = nbProducts > 0 ? `${nbProducts} produit${nbProducts > 1 ? 's' :
 )}
 
 <style>
-  .kick { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.8rem; font-size: 0.85rem; font-weight: 600; color: var(--mine); }
+  .kick { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.8rem; font-size: 0.82rem; font-weight: 700; color: var(--mine); }
   .kick .mono { font-weight: 400; font-size: 0.78rem; color: var(--gris); }
   .meta { margin: 0; }
 
   /* Planche verticale */
-  .pc { position: relative; display: flex; flex-direction: column; gap: 0.55rem; height: 100%; }
-  .pc__media { position: relative; margin-bottom: 0.4rem; }
+  .pc { position: relative; display: flex; flex-direction: column; gap: 0.55rem; height: 100%; padding: 0.8rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
+  .pc:hover { transform: translateY(-5px); box-shadow: var(--ombre-2); }
+  .pc__media { position: relative; margin-bottom: 0.4rem; border-radius: var(--radius); }
   .pc__media img { aspect-ratio: 16 / 10; object-fit: cover; transition: filter 0.3s ease; }
   .pc__ph { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 10; background: var(--papier-2); color: var(--gris); }
-  .pc__title { margin: 0; font-size: 1.15rem; line-height: 1.3; }
+  .pc__title { margin: 0; font-size: 1.02rem; line-height: 1.3; }
   .pc__title a { text-decoration: none; }
   .pc:hover .pc__title a { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.42em; text-underline-offset: -0.18em; }
   .pc__desc { margin: 0; color: var(--gris); font-size: 0.93rem; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-  .pc .meta { margin-top: auto; padding-top: 0.2rem; }
+  .pc .meta { margin-top: auto; padding-top: 0.3rem; }
 
   /* Grande planche horizontale */
-  .feat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 2.5rem; align-items: center; }
+  .feat { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 2rem; align-items: center; padding: 1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-xl); box-shadow: var(--ombre); }
   .feat__media img { aspect-ratio: 4 / 3; object-fit: cover; }
   .feat__body { display: flex; flex-direction: column; gap: 0.9rem; }
-  .feat__title { margin: 0; font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: clamp(1.6rem, 1.1rem + 1.4vw, 2.3rem); line-height: 1.08; letter-spacing: -0.02em; }
+  .feat__title { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.35rem, 1rem + 1.1vw, 1.9rem); line-height: 1.12; letter-spacing: -0.03em; }
   .feat__title a { text-decoration: none; }
   .feat__title a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.3em; text-underline-offset: -0.12em; }
   .feat__desc { margin: 0; color: var(--gris); font-size: 1.02rem; line-height: 1.6; max-width: 52ch; }
 
   /* Ligne compacte */
-  .row { position: relative; display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 1rem; padding: 0.8rem 0; border-top: 1px solid var(--filet); }
-  .row__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--filet); }
+  .row { position: relative; display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 1rem; padding: 0.8rem 0; border-top: 1px solid var(--filet); border-radius: var(--radius); }
+  .row__media img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-sm); }
   .row__body { min-width: 0; }
   .row__cat { font-size: 0.8rem; font-weight: 600; color: var(--gris); }
   .row__title { margin: 0.15rem 0 0.3rem; font-size: 1.02rem; line-height: 1.3; }

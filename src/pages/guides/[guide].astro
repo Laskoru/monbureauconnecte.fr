@@ -70,20 +70,23 @@ const otherGuides = guides.filter((g) => g.slug !== guide.slug);
   .g__intro { font-size: 1.08rem; line-height: 1.7; max-width: 66ch; }
   .g__intro p { margin: 0 0 1em; }
   .g__section { margin: 2.4rem 0 1rem; font-size: clamp(1.5rem, 1.15rem + 1.2vw, 2.1rem); }
-  /* L'ordre de lecture en lignes réglées : le rang en mono, puis le comparatif */
-  .g__steps { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
-  .g__step { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); align-items: center; gap: 0 0.6rem; border-bottom: 1px solid var(--filet); }
-  .g__step-num { padding-left: 0.3rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--gris); font-variant-numeric: tabular-nums; }
+  /* L'ordre de lecture dans une carte papier : le rang sur pastille mono, puis le comparatif en ligne à vignette */
+  .g__steps { list-style: none; margin: 0; padding: 0.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .g__step { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); align-items: center; gap: 0 0.6rem; }
+  .g__step + .g__step { border-top: 1px solid var(--filet); }
+  .g__step-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--papier-2); font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: var(--mine); font-variant-numeric: tabular-nums; }
   .g__step-card { min-width: 0; }
   .g__step :global(.row) { border-top: 0; }
-  /* Colonne latérale : blocs réglés (filet mine en tête), liens en lignes à filets */
-  .g__side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 2rem; }
-  .g__box { display: flex; flex-direction: column; padding-top: 0.9rem; border-top: 1.5px solid var(--mine); }
-  .g__box-title { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.5rem; font-weight: 600; font-size: 1rem; line-height: 1.3; color: var(--mine); }
+  /* Colonne latérale : cartes papier, liens en lignes à filets, flèche en pastille */
+  .g__side { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 1.2rem; }
+  .g__box { display: flex; flex-direction: column; padding: 1.1rem 1.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .g__box-title { display: flex; align-items: center; gap: 0.5em; margin: 0 0 0.4rem; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; line-height: 1.3; letter-spacing: -0.01em; color: var(--mine); }
   .g__box-text { margin: 0 0 1rem; font-size: 0.93rem; line-height: 1.55; color: var(--gris); }
   .g__box .btn { align-self: flex-start; }
-  .g__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.7rem; padding: 0.65rem 0.3rem; border-bottom: 1px solid var(--filet); text-decoration: none; color: var(--mine); font-weight: 600; font-size: 0.95rem; line-height: 1.35; transition: background-color 0.18s ease; }
-  .g__link:hover { background: var(--jaune-pale); }
+  .g__link { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.7rem; padding: 0.6rem 0; text-decoration: none; color: var(--mine); font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
+  .g__link + .g__link { border-top: 1px solid var(--filet); }
+  .g__link :global(svg:last-child) { width: 28px; height: 28px; padding: 7px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.18s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .g__link:hover :global(svg:last-child) { transform: translateX(3px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
   @media (max-width: 960px) { .g__grid { grid-template-columns: 1fr; } .g__side { position: static; } }
-  @media (max-width: 480px) { .g__step { grid-template-columns: 2rem minmax(0, 1fr); } .g__step-num { padding-left: 0.1rem; } }
+  @media (max-width: 480px) { .g__steps { padding: 0.2rem 0.9rem; } .g__step { grid-template-columns: 2.2rem minmax(0, 1fr); } .g__step-num { width: 26px; height: 26px; font-size: 0.75rem; } }
 </style>

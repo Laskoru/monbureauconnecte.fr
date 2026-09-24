@@ -276,59 +276,60 @@ const faqSchema = {
 
 <style>
   .pcguide { padding-top: 2.6rem; padding-bottom: 4.5rem; }
-  .pcguide__note { margin: 0 0 1.2rem; padding: 0.1rem 0 0.1rem 0.9rem; border-left: 1px solid var(--filet-fort); font-size: 0.93rem; line-height: 1.6; color: var(--gris); }
+  .pcguide__note { margin: 0 0 0.8rem; padding: 0.8rem 1rem; background: var(--papier-2); border-radius: var(--radius); font-size: 0.93rem; line-height: 1.6; color: var(--gris); }
   .pcguide__note strong { color: var(--mine); }
   .pcguide h2 { margin: 3.2rem 0 0.5rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
   .pcguide__section-lede { margin: 0 0 1.4rem; line-height: 1.6; color: var(--gris); }
 
   /* ---- Paliers de budget : le cœur de la page ----
-     Quatre fiches cotées l'une sous l'autre (la colonne de lecture fait 700 px) :
-     nom et prix sur la même ligne, la ligne de specs en mono, puis la
-     nomenclature des pièces en lignes réglées. « Notre choix » : filet jaune
-     de 4 px en tête de fiche et libellé mono, comme les fiches produit. */
-  .pcguide__tiers { display: flex; flex-direction: column; gap: 1.6rem; margin: 2rem 0; }
-  .pcguide__tier { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 1.5rem; padding: 1.2rem 1.3rem 0.4rem; background: var(--papier); border: 1px solid var(--filet); }
-  .pcguide__tier--highlight { border-color: var(--mine); border-top: 4px solid var(--jaune); }
-  .pcguide__tier-label { grid-column: 1 / -1; margin: 0 0 0.5rem; font-family: var(--font-mono); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mine); }
-  .pcguide__tier-badge { grid-column: 1; margin: 0; font-weight: 600; font-size: 1.15rem; line-height: 1.3; }
-  .pcguide__tier-price { grid-column: 2; margin: 0; font-family: var(--font-mono); font-size: 1.5rem; line-height: 1.2; white-space: nowrap; font-variant-numeric: tabular-nums; }
+     Quatre cartes papier l'une sous l'autre (la colonne de lecture fait 700 px) :
+     nom et prix sur la même ligne, la ligne de specs en mono, puis la liste
+     des pièces en lignes à filets. « Notre choix » : anneau lime pâle et
+     pilule lime posée sur le bord haut, comme les fiches produit. */
+  .pcguide__tiers { display: flex; flex-direction: column; gap: 1.4rem; margin: 2rem 0; }
+  .pcguide__tier { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 1.5rem; padding: 1.3rem 1.4rem 0.6rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .pcguide__tier--highlight { border-color: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale), var(--ombre); }
+  .pcguide__tier-label { position: absolute; top: 0; right: 1.2rem; transform: translateY(-50%); margin: 0; padding: 0.35rem 0.8rem; font-weight: 700; font-size: 0.78rem; line-height: 1; color: var(--sur-jaune); background: var(--jaune); border-radius: 999px; }
+  .pcguide__tier-badge { grid-column: 1; margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.3; letter-spacing: -0.02em; }
+  .pcguide__tier-price { grid-column: 2; margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; line-height: 1.2; letter-spacing: -0.03em; white-space: nowrap; font-variant-numeric: tabular-nums; }
   .pcguide__tier-spec { grid-column: 1 / -1; margin: 0.7rem 0 0.8rem; font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.55; color: var(--gris); }
-  .pcguide__tier-reasoning { grid-column: 1 / -1; margin: 0 0 1.1rem; font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
-  .pcguide__tier-list { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
+  .pcguide__tier-reasoning { grid-column: 1 / -1; margin: 0 0 0.9rem; font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
+  .pcguide__tier-list { grid-column: 1 / -1; list-style: none; margin: 0; padding: 0.3rem 0 0; border-top: 1px solid var(--filet); }
   .pcguide__tier-list li + li { border-top: 1px solid var(--filet); }
-  .pcguide__tier-list a { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr) auto; align-items: center; gap: 0.3rem 1rem; padding: 0.65rem 0.3rem; color: var(--mine); text-decoration: none; transition: background-color 0.18s ease; }
+  .pcguide__tier-list a { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr) auto; align-items: center; gap: 0.3rem 1rem; padding: 0.65rem 0.5rem; border-radius: var(--radius-sm); color: var(--mine); text-decoration: none; transition: background-color 0.18s ease; }
   .pcguide__tier-list a:hover { background: var(--jaune-pale); }
-  .pcguide__tier-item-label { display: inline-flex; align-items: center; gap: 0.45em; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); }
+  .pcguide__tier-item-label { display: inline-flex; align-items: center; gap: 0.45em; font-weight: 600; font-size: 0.8rem; color: var(--gris); }
   .pcguide__tier-item-name { font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
   .pcguide__tier-list :global(.pcguide__tier-item-arrow) { color: var(--gris); }
+  .pcguide__tier-list a:hover :global(.pcguide__tier-item-arrow) { color: var(--mine); }
   /* Sous 560 px : ligne 1 = étiquette + flèche (courte et fixe, jamais de
      débordement possible) ; ligne 2 = le nom du composant, longueur variable,
      libre de passer à la ligne (cf. le bug de débordement du 17/08/2026 sur
      un motif similaire). */
   @media (max-width: 560px) {
-    .pcguide__tier { padding: 1rem 1rem 0.3rem; }
-    .pcguide__tier-list a { grid-template-columns: minmax(0, 1fr) auto; }
+    .pcguide__tier { padding: 1.1rem 1rem 0.5rem; }
+    .pcguide__tier-list a { grid-template-columns: minmax(0, 1fr) auto; padding: 0.65rem 0.3rem; }
     .pcguide__tier-item-label { grid-column: 1; grid-row: 1; }
     .pcguide__tier-list :global(.pcguide__tier-item-arrow) { grid-column: 2; grid-row: 1; }
     .pcguide__tier-item-name { grid-column: 1 / -1; grid-row: 2; }
   }
 
-  /* ---- Détail par pièce : accordéon réglé ---- */
-  .pcguide__parts { margin: 0 0 1rem; border-top: 1.5px solid var(--mine); }
-  .pcguide__part { border-bottom: 1px solid var(--filet); scroll-margin-top: 5rem; }
-  .pcguide__part summary { display: flex; align-items: center; gap: 0.7rem; padding: 0.95rem 0.2rem; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.35; }
+  /* ---- Détail par pièce : accordéon en cartes papier, signe plus sur pastille lime pâle ---- */
+  .pcguide__parts { display: grid; gap: 0.6rem; margin: 0 0 1rem; }
+  .pcguide__part { padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); scroll-margin-top: 5rem; }
+  .pcguide__part summary { display: flex; align-items: center; gap: 0.7rem; padding: 0.95rem 0; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.35; }
   .pcguide__part summary::-webkit-details-marker { display: none; }
   .pcguide__part summary :global(svg) { flex-shrink: 0; }
-  .pcguide__part summary::after, .pcguide__faq summary::after { content: ''; flex-shrink: 0; width: 14px; height: 14px; margin-left: auto; background: linear-gradient(var(--mine), var(--mine)) center / 100% 1.5px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 1.5px 100% no-repeat; }
-  .pcguide__part[open] > summary::after, .pcguide__faq details[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 100% 1.5px no-repeat; }
+  .pcguide__part summary::after, .pcguide__faq summary::after { content: ''; flex-shrink: 0; width: 28px; height: 28px; margin-left: auto; border-radius: 50%; background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 2px 12px no-repeat, var(--jaune-pale); }
+  .pcguide__part[open] > summary::after, .pcguide__faq details[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, var(--jaune-pale); }
   .pcguide__criteria { list-style: none; margin: 0 0 1.1rem; padding: 0 2rem 0 0; display: flex; flex-direction: column; gap: 0.55rem; font-size: 0.95rem; line-height: 1.6; color: var(--gris); }
-  .pcguide__criteria li { position: relative; padding-left: 1.5em; }
-  .pcguide__criteria li::before { content: ''; position: absolute; left: 0.1em; top: 0.8em; width: 0.7em; height: 1.5px; background: var(--mine); }
+  .pcguide__criteria li { position: relative; padding-left: 1.4em; }
+  .pcguide__criteria li::before { content: ''; position: absolute; left: 0.1em; top: 0.62em; width: 0.5em; height: 0.5em; border-radius: 50%; background: var(--jaune); }
 
-  /* ---- FAQ : accordéon réglé ---- */
-  .pcguide__faq { margin: 0 0 1rem; border-top: 1.5px solid var(--mine); }
-  .pcguide__faq details { border-bottom: 1px solid var(--filet); }
-  .pcguide__faq summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 0.2rem; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
+  /* ---- FAQ : accordéon en cartes papier ---- */
+  .pcguide__faq { display: grid; gap: 0.6rem; margin: 0 0 1rem; }
+  .pcguide__faq details { padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .pcguide__faq summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
   .pcguide__faq summary::-webkit-details-marker { display: none; }
   .pcguide__faq p { margin: 0 0 1.1rem; padding-right: 2rem; line-height: 1.65; color: var(--gris); }
 </style>

@@ -25,13 +25,13 @@ const criteria = [
 </aside>
 
 <style>
-  /* Quatre critères en lignes réglées : filet mine en tête, filets fins entre les lignes */
-  .selmethod { margin: 3rem 0 0.6rem; }
-  .selmethod__head { margin: 0 0 0.8rem; font-weight: 600; font-size: 1.15rem; line-height: 1.3; color: var(--mine); }
-  .selmethod__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1.8rem; border-top: 1.5px solid var(--mine); }
-  .selmethod__item { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.9rem 0.1rem; border-bottom: 1px solid var(--filet); }
-  .selmethod__item :global(svg) { flex: none; margin-top: 0.1rem; color: var(--mine); }
-  .selmethod__title { margin: 0 0 0.2rem; font-weight: 600; font-size: 0.98rem; line-height: 1.35; color: var(--mine); }
+  /* Quatre critères dans une carte papier arrondie, icônes sur pastilles lime pâle */
+  .selmethod { margin: 3rem 0 0.6rem; padding: 1.3rem 1.4rem 1.4rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .selmethod__head { margin: 0 0 1rem; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; line-height: 1.3; letter-spacing: -0.02em; color: var(--mine); }
+  .selmethod__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem 1.6rem; }
+  .selmethod__item { display: flex; gap: 0.8rem; align-items: flex-start; }
+  .selmethod__item :global(svg) { flex: none; width: 38px; height: 38px; padding: 9px; border-radius: 50%; background: var(--jaune-pale); color: var(--mine); }
+  .selmethod__title { margin: 0 0 0.2rem; font-weight: 700; font-size: 0.95rem; line-height: 1.35; color: var(--mine); }
   .selmethod__text { margin: 0; font-size: 0.9rem; line-height: 1.55; color: var(--gris); }
-  @media (max-width: 560px) { .selmethod__grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .selmethod { padding: 1.1rem 1.1rem 1.2rem; } .selmethod__grid { grid-template-columns: 1fr; } }
 </style>

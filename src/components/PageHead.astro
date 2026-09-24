@@ -33,8 +33,7 @@ const n = count ? Number.parseInt(count, 10) : NaN;
       )}
     </div>
   </div>
-  <div class:list={[width === 'narrow' ? 'container' : 'wide']}><span class="regle" aria-hidden="true"></span></div>
-</header>
+  </header>
 
 <style>
   .ph__in { padding-top: 1.4rem; padding-bottom: 2.2rem; }
@@ -42,8 +41,8 @@ const n = count ? Number.parseInt(count, 10) : NaN;
   .ph__text { flex: 1; min-width: 0; }
   .ph__title { margin: 0 0 0.7rem; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.6rem); max-width: 22ch; }
   .ph__lede { margin: 0; font-size: 1.1rem; line-height: 1.6; color: var(--gris); max-width: 64ch; }
-  .ph__count { flex-shrink: 0; margin: 0; display: flex; flex-direction: column; align-items: flex-end; padding-left: 1.2rem; border-left: 1px solid var(--mine); }
-  .ph__num { font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: 3.4rem; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
-  .ph__unit { margin-top: 0.4rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gris); }
+  .ph__count { flex-shrink: 0; margin: 0; display: flex; flex-direction: column; align-items: center; padding: 0.8rem 1.3rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .ph__num { font-family: var(--font-display); font-weight: 900; font-size: 2.6rem; line-height: 0.95; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+  .ph__unit { margin-top: 0.3rem; font-size: 0.8rem; font-weight: 600; color: var(--gris); }
   @media (max-width: 640px) { .ph__row { flex-direction: column; align-items: flex-start; gap: 1.2rem; } .ph__count { flex-direction: row; align-items: baseline; gap: 0.6rem; padding-left: 0.8rem; } .ph__num { font-size: 2.2rem; } }
 </style>

@@ -55,7 +55,7 @@ const links = {
 </script>
 
 <style>
-  /* Boutons carrés au trait, angles vifs ; au survol, l'aplat jaune (comme « Haut de page ») */
+  /* Boutons ronds au filet fin ; au survol, l'aplat lime (comme « Haut de page ») */
   .share {
     display: flex;
     align-items: center;
@@ -66,7 +66,7 @@ const links = {
     border-top: 1px solid var(--filet);
   }
   .share__label {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
     color: var(--mine);
   }
@@ -79,20 +79,20 @@ const links = {
     width: 44px;
     height: 44px;
     padding: 0;
-    border: 1px solid var(--filet-fort);
-    border-radius: var(--radius-sm);
-    background: transparent;
+    border: 1px solid var(--filet);
+    border-radius: 50%;
+    background: var(--papier);
     color: var(--mine);
     cursor: pointer;
-    transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+    transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.25s var(--ease-out);
   }
-  .share__btn:hover { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
+  .share__btn:hover { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); transform: translateY(-2px); }
   .share__copied {
     position: absolute;
     bottom: calc(100% + 6px);
     left: 50%;
     transform: translateX(-50%);
-    padding: 0.25em 0.55em;
+    padding: 0.3em 0.7em;
     background: var(--mine);
     color: var(--sur-mine);
     font-family: var(--font-body);
@@ -100,6 +100,6 @@ const links = {
     font-size: 0.75rem;
     line-height: 1.2;
     white-space: nowrap;
-    border-radius: 0;
+    border-radius: 999px;
   }
 </style>

@@ -52,41 +52,42 @@ const results = guide.options.map((o) => o.result);
 </script>
 
 <style>
-  /* Bloc réglé (filet mine en tête) ; réponses en boutons au trait ; la réponse
-     choisie se remplit de jaune ; le conseil tient dans un panneau papier au
-     filet jaune de 4 px, comme « Notre choix ». */
-  .iguide { margin: 3rem 0; padding-top: 1.1rem; border-top: 1.5px solid var(--mine); }
+  /* Réponses en pilules (la réponse choisie se remplit de lime, texte sombre) ;
+     le conseil tient dans une carte papier arrondie à ombre douce, avec son
+     étiquette en pilule lime. */
+  .iguide { margin: 3rem 0; }
   .iguide__title { margin: 0 0 0.5rem; font-size: clamp(1.4rem, 1.15rem + 0.8vw, 1.8rem); line-height: 1.1; }
   .iguide__intro { margin: 0 0 1rem; font-size: 0.98rem; line-height: 1.6; color: var(--gris); }
-  .iguide__q { margin: 0 0 0.9rem; font-weight: 600; }
+  .iguide__q { margin: 0 0 0.9rem; font-weight: 700; }
   .iguide__options { display: flex; flex-wrap: wrap; gap: 0.6rem; }
   .iguide__opt {
     appearance: none;
     cursor: pointer;
     min-height: 44px;
-    padding: 0.55em 1.05em;
+    padding: 0.55em 1.15em;
     font: inherit;
     font-size: 0.93rem;
     font-weight: 600;
     line-height: 1.25;
     text-align: left;
     color: var(--mine);
-    background: transparent;
-    border: 1.5px solid var(--mine);
-    border-radius: var(--radius-sm);
-    transition: background-color 0.18s ease, color 0.18s ease;
+    background: var(--papier);
+    border: 1px solid var(--filet);
+    border-radius: 999px;
+    transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.25s var(--ease-out);
   }
-  .iguide__opt:hover { background: var(--jaune-pale); }
-  .iguide__opt.is-active { background: var(--jaune); color: var(--sur-jaune); }
+  .iguide__opt:hover { border-color: var(--mine); transform: translateY(-2px); }
+  .iguide__opt.is-active { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
   .iguide__result {
     margin-top: 1.2rem;
-    padding: 1rem 1.2rem 1.1rem;
+    padding: 1.1rem 1.3rem 1.2rem;
     background: var(--papier);
-    border: 1px solid var(--mine);
-    border-top: 4px solid var(--jaune);
+    border: 1px solid var(--filet);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--ombre);
     animation: iguide-in 0.32s var(--ease-out);
   }
-  .iguide__result-badge { display: block; margin-bottom: 0.35rem; font-weight: 600; font-size: 0.85rem; color: var(--mine); }
+  .iguide__result-badge { display: inline-flex; align-items: center; margin-bottom: 0.6rem; padding: 0.35em 0.8em; font-weight: 700; font-size: 0.78rem; line-height: 1; color: var(--sur-jaune); background: var(--jaune); border-radius: 999px; }
   .iguide__result-text { margin: 0; line-height: 1.65; }
   .iguide__result-text :global(strong) { color: var(--mine); }
   @keyframes iguide-in {

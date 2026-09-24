@@ -7,7 +7,6 @@ import { getRating } from '../lib/ratings';
 import { isAvailable, productUrl } from '../lib/availability';
 import { mesuresProduit } from '../lib/mesures';
 import ArticleCard from '../components/ArticleCard.astro';
-import EpurePoste from '../components/EpurePoste.astro';
 import Icon from '../components/Icon.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
@@ -16,30 +15,21 @@ import { budgets } from '../budgets';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const sorted = [...allArticles].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-// Numéro de planche : ordre de publication, stable (01 = le premier comparatif publié)
-const chrono = [...allArticles].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf() || a.slug.localeCompare(b.slug));
-const numero = new Map(chrono.map((a, i) => [a.slug, String(i + 1).padStart(2, '0')]));
 const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
 const published = new Set(allArticles.map((a) => a.slug));
 const total = allArticles.length;
 const nf = new Intl.NumberFormat('fr-FR');
-const dateCourte = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
 const shortTitle = (t: string) => t.split(/\s[—–-]\s/)[0].trim();
+const cote = (r: number) => Math.round(r * 175); // taille de départ : 175 cm
 
-const cote = (r: number) => Math.round(r * 175); // taille de départ : 175 cm, même arrondi que l'épure
+// Photo d'ouverture : la couverture du comparatif de référence
+const heroCover = '/covers/accueil-setup.webp';
 
-// Nomenclature : les comparatifs de référence, un par grand besoin
+// Comparatifs de référence, un par grand besoin
 const refSlugs = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail', 'claviers-mecaniques-silencieux', 'bras-support-ecran-articule', 'webcams-1080p-vs-4k', 'hub-usb-c-station-accueil'];
-const refs = refSlugs.map((s) => bySlug.get(s)).filter((a): a is NonNullable<typeof a> => Boolean(a)).map((a) => ({
-  a,
-  n: a.data.products?.length ?? 0,
-  cover: resolveCoverImage(a.slug, a.data.coverImage),
-  cat: categories.find((c) => c.slug === a.data.category),
-  date: a.data.updatedDate ?? a.data.pubDate,
-  planche: numero.get(a.slug),
-}));
+const refs = refSlugs.map((s) => bySlug.get(s)).filter((a): a is NonNullable<typeof a> => Boolean(a)).slice(0, 6);
 
-// Choix cotés : le premier produit disponible (avec photo) de comparatifs choisis
+// Nos choix : le premier produit disponible (avec photo) des comparatifs de référence
 const picks = refSlugs
   .map((slug) => {
     const article = bySlug.get(slug); if (!article) return null;
@@ -48,10 +38,11 @@ const picks = refSlugs
     return { article, product, image: resolveProductImage(product.asin, product.image)!, rating: getRating(product.asin), mesures: mesuresProduit(product) };
   })
   .filter((x): x is NonNullable<typeof x> => Boolean(x))
-  .slice(0, 4);
+  .slice(0, 6);
 
 // Par problème : libellé court (avant les deux-points)
 const needs = guides.map((g) => ({ ...g, court: g.title.split(/\s:\s/)[0], count: g.articles.filter((s) => published.has(s)).length }));
+const marquee = [...needs.map((n) => n.court), 'Visio', 'Budget'];
 
 // Par budget : trois plages sur une même échelle de prix (0 à 300 €, la dernière ouverte)
 const bornes: Record<string, [number, number, boolean]> = { 'petit-budget': [0, 40, false], equilibre: [50, 150, false], 'setup-complet': [150, 300, true] };
@@ -66,7 +57,7 @@ const latest = sorted.filter((a) => !refSlugs.includes(a.slug)).slice(0, 3);
 
 const tools = [
   { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Plateau, siège et écran selon ta taille.', href: '/calculateur-hauteur-bureau/' },
-  { icon: 'posture', title: 'Le poste de travail idéal', desc: 'Le schéma coté des bons réglages.', href: '/poste-de-travail-ideal/' },
+  { icon: 'posture', title: 'Le poste de travail idéal', desc: 'Le schéma des bons réglages, repère par repère.', href: '/poste-de-travail-ideal/' },
   { icon: 'checklist', title: 'Checklist ergonomie', desc: 'Ce qu’il faut vérifier, point par point.', href: '/checklist-bureau-ergonomique/' },
   { icon: 'cpu', title: 'Guide PC gaming', desc: 'Chaque pièce expliquée, sans jargon.', href: '/guide-pc-gaming/' },
   { icon: 'book', title: 'Lexique du bureau', desc: 'Les mots du matériel, en clair.', href: '/lexique/' },
@@ -81,124 +72,73 @@ const faqs = [
 ];
 ---
 
-<BaseLayout title="Mon Bureau Connecté : ton poste de travail, réglé au millimètre" description={siteConfig.description}>
-  <!-- ═══ OUVERTURE : l'épure du poste, cotée selon ta taille ═══ -->
+<BaseLayout title="Mon Bureau Connecté : ton setup, pièce par pièce" description={siteConfig.description}>
+  <!-- ═══ OUVERTURE : la photo de poste annotée ═══ -->
   <section class="hero" aria-labelledby="hero-titre">
-    <div class="wide hero__grid">
-      <div class="hero__texte">
-        <h1 id="hero-titre" class="hero__titre">Ton poste, réglé au millimètre.</h1>
-        <p class="hero__chapo">Donne ta taille : on calcule les cotes de ton poste, puis on compare le matériel qui les respecte. {total} comparatifs indépendants, avec les vraies notes Amazon, jamais retouchées.</p>
-        <div class="taille">
-          <label class="taille__label" for="taille-nb">Ta taille</label>
-          <div class="taille__champ">
-            <input id="taille-nb" class="taille__nb" type="number" inputmode="numeric" min="140" max="210" step="1" value="175" aria-describedby="taille-aide" />
-            <span class="taille__unite" aria-hidden="true">cm</span>
-          </div>
-          <input id="taille-curseur" class="taille__curseur" type="range" min="140" max="210" step="1" value="175" aria-label="Ta taille en centimètres" />
-          <p id="taille-aide" class="taille__aide">De 140 à 210 cm. Les cotes se recalculent au centimètre près.</p>
-        </div>
-      </div>
-      <figure class="hero__epure">
-        <EpurePoste taille={175} />
-        <dl class="cartouche hero__cartouche">
-          <div><dt>Planche</dt><dd class="mono">00</dd></div>
-          <div><dt>Sujet</dt><dd>Poste assis-debout</dd></div>
-          <div><dt>Échelle</dt><dd>Ta taille</dd></div>
-          <div><dt>Comparatifs</dt><dd class="mono">{total}</dd></div>
-        </dl>
-      </figure>
-      <div class="hero__suite">
-        <dl class="hero__valeurs">
-          <div class="cote-cell"><dt>Assise</dt><dd><b data-ratio="0.25">{cote(0.25)}</b> cm</dd></div>
-          <div class="cote-cell"><dt>Plateau assis</dt><dd><b data-ratio="0.42">{cote(0.42)}</b> cm</dd></div>
-          <div class="cote-cell"><dt>Plateau debout</dt><dd><b data-ratio="0.62">{cote(0.62)}</b> cm</dd></div>
-          <div class="cote-cell"><dt>Haut de l'écran</dt><dd><b data-ratio="0.7">{cote(0.7)}</b> cm</dd></div>
-        </dl>
-        <p class="hero__verdict" id="verdict" aria-live="polite">Un bureau standard (74 cm) te va : règle ta chaise pour garder les coudes à 90°.</p>
+    <img class="hero__bg" src={heroCover} srcset={coverSrcSet(heroCover)} sizes="100vw" width="1600" height="1000" alt="" fetchpriority="high" decoding="async" />
+    <div class="wide hero__in">
+      <div class="hero__txt">
+        <h1 id="hero-titre" class="hero__titre">Ton setup, pièce <span class="hl">par pièce.</span></h1>
+        <p class="hero__lede">Chaise, bureau, écran, clavier : {total} comparatifs sur des critères mesurables, avec les vraies notes Amazon, jamais retouchées. Et des outils gratuits pour tout régler avant d'acheter.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="/articles/bureau-assis-debout-electrique/">Voir les bureaux réglables <Icon name="arrow" size={18} /></a>
-          <a class="hero__lien" href="/calculateur-hauteur-bureau/">Le calculateur complet</a>
+          <a class="btn btn--primary" href="/guides/">Trouver par besoin <Icon name="arrow" size={18} /></a>
+          <a class="btn btn--outline" href="/calculateur-hauteur-bureau/">Régler mon poste</a>
         </div>
+        <form class="taille" onsubmit="return false">
+          <label class="taille__label" for="taille-nb">Ta taille</label>
+          <span class="taille__champ"><input id="taille-nb" class="taille__nb" type="number" inputmode="numeric" min="140" max="210" step="1" value="175" aria-describedby="taille-aide" /><span aria-hidden="true">cm</span></span>
+          <span id="taille-aide" class="taille__aide">les repères sur la photo se recalculent</span>
+        </form>
+        <p class="hero__verdict" id="verdict" aria-live="polite">Un bureau standard (74 cm) te va : règle ta chaise pour garder les coudes à 90°.</p>
+      </div>
+      <div class="hots">
+        <div class="hot h1"><i></i><span><b>Écran</b> haut à hauteur des yeux · <em class="cote-val" data-ratio="0.7">{cote(0.7)}</em> cm</span></div>
+        <div class="hot h2"><i></i><span><b>Bureau</b> assis <em class="cote-val" data-ratio="0.42">{cote(0.42)}</em> cm, debout <em class="cote-val" data-ratio="0.62">{cote(0.62)}</em> cm</span></div>
+        <div class="hot h3"><i></i><span><b>Assise</b> à <em class="cote-val" data-ratio="0.25">{cote(0.25)}</em> cm, coudes à 90°</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ NOMENCLATURE : les comparatifs de référence ═══ -->
-  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
-  <section class="section" aria-labelledby="nomen-titre">
-    <div class="wide">
-      <div class="section__head">
-        <div>
-          <h2 id="nomen-titre" class="section__title">Les comparatifs de référence</h2>
-          <p class="section__lede">Un comparatif par grand besoin : les critères qui comptent, les mesures qui départagent, et notre choix.</p>
-        </div>
-        <a class="section__link" href="/articles/">Les {total} comparatifs <Icon name="arrow" size={16} /></a>
-      </div>
-      <div class="nomen">
-        <ul class="nomen__liste">
-          {refs.map((r, i) => (
-            <li class="nomen__item" data-i={i}>
-              <a class="nomen__lien" href={`/articles/${r.a.slug}/`}>
-                <span class="nomen__no mono" title="Numéro de planche">{r.planche}</span>
-                <span class="nomen__corps">
-                  <span class="nomen__titre">{r.a.data.title}</span>
-                  <span class="nomen__sous"><span>{r.cat?.label}</span><span class="mono">{r.n} produit{r.n > 1 ? 's' : ''}</span><span class="mono">{dateCourte.format(r.date)}</span></span>
-                </span>
-                <Icon name="arrow" size={18} class="nomen__fleche" />
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div class="nomen__vue cadre" aria-hidden="true">
-          {refs.map((r, i) => r.cover && <img class="nomen__img" data-i={i} src={r.cover} srcset={coverSrcSet(r.cover)} sizes="(max-width: 1000px) 1px, 460px" alt="" width="1600" height="1000" loading="lazy" decoding="async" />)}
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ═══ BANDEAU DES BESOINS ═══ -->
+  <div class="marq" aria-hidden="true"><div>{[...marquee, ...marquee].map((m) => <span>{m}</span>)}</div></div>
 
-  <!-- ═══ NOS CHOIX, COTÉS : une feuille de caractéristiques ═══ -->
+  <!-- ═══ NOS CHOIX : le rail des pièces ═══ -->
   {picks.length > 0 && (
-    <>
-      <div class="wide"><span class="regle" aria-hidden="true"></span></div>
-      <section class="section" aria-labelledby="choix-titre">
-        <div class="wide">
-          <div class="section__head">
-            <div>
-              <h2 id="choix-titre" class="section__title">Nos choix, cotés</h2>
-              <p class="section__lede">Le premier choix de nos comparatifs : ses mesures d'abord, puis sa note Amazon réelle. Le prix s'affiche sur la fiche Amazon.</p>
-            </div>
+    <section class="section" aria-labelledby="choix-titre">
+      <div class="wide">
+        <div class="section__head">
+          <div>
+            <h2 id="choix-titre" class="section__title">Nos choix, pièce par pièce</h2>
+            <p class="section__lede">Le premier choix de nos comparatifs de référence : ses mesures, sa vraie note Amazon, et le comparatif complet à un clic.</p>
           </div>
-          <div class="feuille">
-            {picks.map(({ article, product, image, rating, mesures }) => (
-              <article class="feuille__col">
-                <a class="feuille__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
-                <div class="feuille__nom">
-                  <h3><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
-                  <p class="feuille__award">{product.award ?? 'Notre choix'}</p>
-                </div>
-                {mesures.length > 0 ? <ul class="mesures" aria-label="Mesures">{mesures.map((m) => <li>{m}</li>)}</ul> : <p class="feuille__vide">Mesures détaillées dans le comparatif</p>}
-                {rating ? (
-                  <p class="reglette">
-                    <span class="reglette__rule" style={`--p:${Math.round((rating.rating / 5) * 1000) / 10}%`} role="img" aria-label={`Note Amazon : ${rating.rating.toFixed(1).replace('.', ',')} sur 5`}></span>
-                    <span class="reglette__val"><b>{rating.rating.toFixed(1).replace('.', ',')}</b>/5 · {nf.format(rating.count)} avis</span>
-                  </p>
-                ) : <p class="feuille__vide">Note Amazon indisponible</p>}
-                <div class="feuille__cta">
-                  <a class="btn btn--buy btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon <Icon name="external" size={14} /></a>
-                  <a class="feuille__lire" href={`/articles/${article.slug}/`}>Lire le comparatif</a>
-                </div>
-              </article>
-            ))}
-          </div>
-          <p class="feuille__disc">Liens partenaires : en tant que Partenaire Amazon, {siteConfig.name} perçoit une commission sur les achats éligibles, sans surcoût pour toi.</p>
+          <a class="section__link" href="/articles/">Tous les comparatifs <Icon name="arrow" size={16} /></a>
         </div>
-      </section>
-    </>
+      </div>
+      <div class="rail-wrap"><div class="wide rail">
+        {picks.map(({ article, product, image, rating, mesures }) => (
+          <article class="piece">
+            <a class="piece__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
+            <h3 class="piece__nom"><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
+            <p class="piece__mesures mono">{mesures.length > 0 ? mesures.join(' · ') : (product.award ?? 'Notre choix')}</p>
+            {rating ? (
+              <p class="reglette">
+                <span class="reglette__rule" style={`--p:${Math.round((rating.rating / 5) * 1000) / 10}%`} role="img" aria-label={`Note Amazon : ${rating.rating.toFixed(1).replace('.', ',')} sur 5`}></span>
+                <span class="reglette__val"><b>{rating.rating.toFixed(1).replace('.', ',')}</b>/5 · {nf.format(rating.count)} avis</span>
+              </p>
+            ) : <p class="piece__vide">Note Amazon indisponible</p>}
+            <div class="piece__cta">
+              <a class="btn btn--buy btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon <Icon name="external" size={14} /></a>
+              <a class="piece__lire" href={`/articles/${article.slug}/`}>Le comparatif</a>
+            </div>
+          </article>
+        ))}
+      </div></div>
+      <p class="wide rail__disc">Liens partenaires : en tant que Partenaire Amazon, {siteConfig.name} perçoit une commission sur les achats éligibles, sans surcoût pour toi.</p>
+    </section>
   )}
 
   <!-- ═══ PAR PROBLÈME ═══ -->
-  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
-  <section class="section" aria-labelledby="pb-titre">
+  <section class="section section--tight" aria-labelledby="pb-titre">
     <div class="wide">
       <div class="section__head">
         <div>
@@ -209,15 +149,28 @@ const faqs = [
       </div>
       <ul class="pb">
         {needs.map((n) => (
-          <li><a class="pb__lien" href={`/guides/${n.slug}/`}><span class="pb__titre">{n.court}</span><span class="pb__n mono">{n.count} comparatif{n.count > 1 ? 's' : ''}</span><Icon name="arrow" size={24} class="pb__fleche" /></a></li>
+          <li><a class="pb__lien" href={`/guides/${n.slug}/`}><span class="pb__titre">{n.court}</span><span class="pb__n mono">{n.count} comparatif{n.count > 1 ? 's' : ''}</span><span class="pb__fleche" aria-hidden="true"><Icon name="arrow" size={22} /></span></a></li>
         ))}
       </ul>
     </div>
   </section>
 
-  <!-- ═══ PAR BUDGET (règle de prix) + RAYONS ═══ -->
-  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
-  <section class="section" aria-labelledby="budget-titre">
+  <!-- ═══ COMPARATIFS DE RÉFÉRENCE ═══ -->
+  <section class="section section--tight" aria-labelledby="refs-titre">
+    <div class="wide">
+      <div class="section__head">
+        <div>
+          <h2 id="refs-titre" class="section__title">Les comparatifs de référence</h2>
+          <p class="section__lede">Un comparatif par grand besoin : les critères qui comptent, les mesures qui départagent, et notre choix.</p>
+        </div>
+        <a class="section__link" href="/articles/">Les {total} comparatifs <Icon name="arrow" size={16} /></a>
+      </div>
+      <div class="grid3">{refs.map((a, i) => <ArticleCard article={a} eager={i < 3} />)}</div>
+    </div>
+  </section>
+
+  <!-- ═══ PAR BUDGET + RAYONS ═══ -->
+  <section class="section section--tight" aria-labelledby="budget-titre">
     <div class="wide budg">
       <div>
         <h2 id="budget-titre" class="section__title">Combien veux-tu y mettre ?</h2>
@@ -230,39 +183,31 @@ const faqs = [
               <span class="plage__prix mono">{b.range}</span>
             </a>
           ))}
-          <div class="plages__axe" aria-hidden="true">
-            <span class="plages__graduations">{graduations.map((g) => <span style={`--x:${(g / echelle) * 100}%`}>{g === echelle ? `${g} € et +` : `${g} €`}</span>)}</span>
-          </div>
+          <div class="plages__axe" aria-hidden="true"><span class="plages__graduations">{graduations.map((g) => <span style={`--x:${(g / echelle) * 100}%`}>{g === echelle ? `${g} € et +` : `${g} €`}</span>)}</span></div>
         </div>
       </div>
       <div class="rayons">
         <h3 class="rayons__titre">Ou va droit au rayon</h3>
-        <ul>
-          {categoryCounts.map((c) => <li><a href={`/categorie/${c.slug}/`}><Icon name={c.slug} size={20} /><span>{c.label}</span><span class="mono">{c.count}</span></a></li>)}
-        </ul>
+        <ul>{categoryCounts.map((c) => <li><a href={`/categorie/${c.slug}/`}><Icon name={c.slug} size={20} /><span>{c.label}</span><span class="mono">{c.count}</span></a></li>)}</ul>
       </div>
     </div>
   </section>
 
-  <!-- ═══ DERNIÈRES PLANCHES ═══ -->
+  <!-- ═══ FRAÎCHEMENT PUBLIÉS ═══ -->
   {latest.length > 0 && (
-    <>
-      <div class="wide"><span class="regle" aria-hidden="true"></span></div>
-      <section class="section" aria-labelledby="derniers-titre">
-        <div class="wide">
-          <div class="section__head">
-            <h2 id="derniers-titre" class="section__title">Fraîchement publiés</h2>
-            <a class="section__link" href="/articles/">Voir tout <Icon name="arrow" size={16} /></a>
-          </div>
-          <div class="grid3">{latest.map((a) => <ArticleCard article={a} />)}</div>
+    <section class="section section--tight" aria-labelledby="derniers-titre">
+      <div class="wide">
+        <div class="section__head">
+          <h2 id="derniers-titre" class="section__title">Fraîchement publiés</h2>
+          <a class="section__link" href="/articles/">Voir tout <Icon name="arrow" size={16} /></a>
         </div>
-      </section>
-    </>
+        <div class="grid3">{latest.map((a) => <ArticleCard article={a} />)}</div>
+      </div>
+    </section>
   )}
 
-  <!-- ═══ OUTILS : régler avant d'acheter ═══ -->
-  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
-  <section class="section" aria-labelledby="outils-titre">
+  <!-- ═══ OUTILS ═══ -->
+  <section class="section section--tight" aria-labelledby="outils-titre">
     <div class="wide">
       <div class="section__head">
         <div>
@@ -271,18 +216,15 @@ const faqs = [
         </div>
         <a class="section__link" href="/outils/">Tous les outils <Icon name="arrow" size={16} /></a>
       </div>
-      <ul class="outils">
-        {tools.map((t) => <li><a href={t.href}><Icon name={t.icon} size={26} /><span class="outils__titre">{t.title}</span><span class="outils__desc">{t.desc}</span></a></li>)}
-      </ul>
+      <ul class="outils">{tools.map((t) => <li><a href={t.href}><span class="outils__ico"><Icon name={t.icon} size={22} /></span><span class="outils__titre">{t.title}</span><span class="outils__desc">{t.desc}</span></a></li>)}</ul>
     </div>
   </section>
 
   <!-- ═══ MÉTHODE + FAQ ═══ -->
-  <div class="wide"><span class="regle" aria-hidden="true"></span></div>
   <section class="section" aria-labelledby="methode-titre">
     <div class="wide methode">
       <div class="methode__texte">
-        <h2 id="methode-titre" class="section__title">Comment on mesure</h2>
+        <h2 id="methode-titre" class="section__title">Comment on compare</h2>
         <p>Chaque comparatif part d'un usage concret (setup gaming, télétravail, dos fragile) et compare ce qui se vérifie : <strong>plage de réglage, charge admise, niveau sonore, autonomie, compatibilité</strong>. Pas de classement gonflé, pas de « meilleur » universel qui n'existe pas.</p>
         <p>Les notes affichées sont les <strong>vraies notes Amazon</strong>, jamais retouchées, et on regarde le volume d'avis autant que la note. Le site est <strong>100 % indépendant</strong> : on se finance par l'affiliation, et on l'indique toujours.</p>
         <a class="btn btn--outline" href="/a-propos/">Notre méthode en détail</a>
@@ -305,13 +247,12 @@ const faqs = [
 </BaseLayout>
 
 <script is:inline>
-  // Calculateur de l'ouverture : les cotes de l'épure et la liste suivent la taille.
+  // Ta taille : les repères de la photo et le verdict suivent la valeur saisie.
   (function () {
     var nb = document.getElementById('taille-nb');
-    var curseur = document.getElementById('taille-curseur');
     var verdict = document.getElementById('verdict');
-    if (!nb || !curseur) return;
-    var cibles = Array.prototype.slice.call(document.querySelectorAll('[data-ratio]'));
+    if (!nb) return;
+    var cibles = Array.prototype.slice.call(document.querySelectorAll('.cote-val[data-ratio]'));
     var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     function texteVerdict(assis) {
       var d = assis - 74;
@@ -319,182 +260,136 @@ const faqs = [
       if (d < 0) return 'Un bureau standard (74 cm) est ' + (-d) + ' cm trop haut pour toi : monte ta chaise et ajoute un <a href="/articles/repose-pieds-ergonomique-bureau/">repose-pieds</a>, ou passe au <a href="/articles/bureau-assis-debout-electrique/">bureau réglable</a>.';
       return 'Un bureau standard (74 cm) est ' + d + ' cm trop bas pour toi : un <a href="/articles/bureau-assis-debout-electrique/">bureau réglable en hauteur</a> corrige ça.';
     }
-    function rendre(t) {
+    function rendre() {
+      var t = Math.min(210, Math.max(140, parseInt(nb.value, 10) || 175));
       cibles.forEach(function (el) {
         var v = String(Math.round(parseFloat(el.getAttribute('data-ratio')) * t));
         if (el.textContent === v) return;
         el.textContent = v;
-        var g = el.closest('.cote-label, .cote-cell');
-        if (g && !reduit) { g.classList.remove('is-new'); void (g.getBBox ? g.getBBox() : g.offsetWidth); g.classList.add('is-new'); clearTimeout(g._t); g._t = setTimeout(function () { g.classList.remove('is-new'); }, 400); }
+        if (!reduit) { el.classList.remove('is-new'); void el.offsetWidth; el.classList.add('is-new'); clearTimeout(el._t); el._t = setTimeout(function () { el.classList.remove('is-new'); }, 400); }
       });
       if (verdict) verdict.innerHTML = texteVerdict(Math.round(0.42 * t));
     }
-    function sync(val, source) {
-      var t = parseInt(val, 10);
-      if (isNaN(t)) return;
-      var borne = Math.min(210, Math.max(140, t));
-      if (source !== 'nb' || String(borne) === String(t)) nb.value = borne;
-      curseur.value = borne;
-      curseur.style.setProperty('--p', ((borne - 140) / 70) * 100 + '%');
-      rendre(borne);
-    }
-    curseur.addEventListener('input', function () { sync(curseur.value, 'curseur'); });
-    nb.addEventListener('input', function () { sync(nb.value, 'nb'); });
-    nb.addEventListener('blur', function () { sync(nb.value || 175, ''); });
-    sync(175, '');
+    nb.addEventListener('input', rendre);
+    nb.addEventListener('blur', function () { if (!nb.value) nb.value = 175; rendre(); });
   })();
 </script>
 
 <style>
   /* ═══ OUVERTURE ═══ */
-  .hero__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-rows: auto auto; gap: 0 clamp(2rem, 4vw, 4rem); align-items: start; padding-top: clamp(2.2rem, 6vh, 4.5rem); padding-bottom: clamp(2.5rem, 7vh, 5rem); }
-  .hero__titre { margin: 0 0 1.2rem; font-size: clamp(2.4rem, 1rem + 3.4vw, 4rem); line-height: 1.02; letter-spacing: -0.03em; }
-  .hero__chapo { margin: 0 0 2rem; font-size: 1.1rem; line-height: 1.6; color: var(--gris); max-width: 48ch; }
-
-  .taille { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 0.3rem 1.2rem; margin: 0 0 1.4rem; }
-  .taille__label { grid-column: 1 / -1; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gris); }
-  .taille__champ { display: flex; align-items: baseline; gap: 0.4rem; border-bottom: 1.5px solid var(--mine); }
-  .taille__nb { width: 3.4ch; padding: 0; border: 0; background: transparent; color: var(--mine); font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: 3rem; line-height: 1.1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+  .hero { position: relative; overflow: hidden; min-height: 620px; display: flex; align-items: center; background: var(--papier-2); }
+  .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; transform: scale(1.06); animation: respire 18s ease-in-out infinite alternate; }
+  @keyframes respire { to { transform: scale(1) translateX(-1.5%); } }
+  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--calque) 97%, transparent) 0%, color-mix(in srgb, var(--calque) 88%, transparent) 36%, color-mix(in srgb, var(--calque) 12%, transparent) 68%, color-mix(in srgb, var(--calque) 25%, transparent) 100%), linear-gradient(0deg, var(--calque) 0%, transparent 26%); }
+  .hero__in { position: relative; z-index: 2; width: 100%; padding-top: clamp(3rem, 8vh, 6rem); padding-bottom: clamp(3rem, 8vh, 5rem); }
+  .hero__txt { max-width: 560px; }
+  .hero__titre { margin: 0 0 1.2rem; font-size: clamp(2.3rem, 1.2rem + 3.4vw, 4.3rem); line-height: 1; letter-spacing: -0.035em; }
+  .hero__lede { margin: 0; max-width: 44ch; font-size: 1.1rem; line-height: 1.55; color: var(--gris); }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 1.7rem 0 1.4rem; }
+  .taille { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 0.9rem; margin: 0; }
+  .taille__label { font-weight: 700; font-size: 0.95rem; }
+  .taille__champ { display: inline-flex; align-items: baseline; gap: 0.35rem; padding: 0.35rem 0.9rem 0.35rem 1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: 999px; font-family: var(--font-mono); font-size: 0.95rem; color: var(--gris); box-shadow: var(--ombre); }
+  .taille__champ:focus-within { border-color: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale); }
+  .taille__nb { width: 3.2ch; padding: 0; border: 0; background: transparent; color: var(--mine); font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; line-height: 1.2; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
   .taille__nb::-webkit-outer-spin-button, .taille__nb::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
   .taille__nb:focus { outline: none; }
-  .taille__champ:focus-within { border-bottom: 3px solid var(--jaune); margin-bottom: -1.5px; }
-  .taille__unite { font-family: var(--font-mono); font-size: 1rem; color: var(--gris); }
-  .taille__aide { grid-column: 1 / -1; margin: 0.4rem 0 0; font-size: 0.85rem; color: var(--gris); }
+  .taille__aide { font-size: 0.82rem; color: var(--gris); }
+  .hero__verdict { position: relative; margin: 1rem 0 0; max-width: 46ch; font-size: 0.95rem; line-height: 1.5; padding-left: 1.25rem; }
+  .hero__verdict::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 0.55em; height: 0.55em; border-radius: 50%; background: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale); }
+  .hots { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+  .hots .hot { pointer-events: auto; }
+  .hot.h1 { left: 63%; top: 24%; animation-delay: 0.5s; }
+  .hot.h2 { left: 66%; top: 63%; animation-delay: 1.1s; }
+  .hot.h3 { left: auto; right: 7%; top: 82%; flex-direction: row-reverse; animation-delay: 1.7s; }
+  .cote-val { font-style: normal; font-weight: 700; transition: background-color 0.4s var(--ease-out); border-radius: 3px; }
+  .cote-val.is-new { background: var(--jaune); color: var(--sur-jaune); }
 
-  /* Curseur façon règle : graduations, repère long tous les 10 cm, curseur jaune */
-  .taille__curseur { --p: 50%; -webkit-appearance: none; appearance: none; width: 100%; height: 44px; margin: 0; background: transparent; cursor: pointer; color: var(--filet-fort); }
-  .taille__curseur::-webkit-slider-runnable-track { height: 18px; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 7)) left bottom / calc(100% + 1px) 16px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 70)) left bottom / 100% 6px no-repeat, linear-gradient(var(--jaune), var(--jaune)) left 6px / var(--p) 6px no-repeat; }
-  .taille__curseur::-moz-range-track { height: 18px; background: linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 7)) left bottom / calc(100% + 1px) 16px no-repeat, repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 70)) left bottom / 100% 6px no-repeat, linear-gradient(var(--jaune), var(--jaune)) left 6px / var(--p) 6px no-repeat; }
-  .taille__curseur::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 28px; margin-top: -6px; background: var(--mine); border: 3px solid var(--calque); border-radius: 0; }
-  .taille__curseur::-moz-range-thumb { width: 14px; height: 24px; background: var(--mine); border: 3px solid var(--calque); border-radius: 0; }
-  .taille__curseur:focus-visible { outline: 3px solid var(--jaune); outline-offset: 4px; box-shadow: none; }
+  /* ═══ RAIL DES PIÈCES ═══ */
+  .rail-wrap { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding-bottom: 0.6rem; }
+  .rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 1rem; }
+  .piece { display: grid; grid-template-rows: auto auto auto auto 1fr; gap: 0.6rem; padding: 0.9rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); scroll-snap-align: start; transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease; }
+  .piece:hover { transform: translateY(-6px) rotate(-0.4deg); box-shadow: var(--ombre-2); }
+  .piece__media { display: block; padding: 0.9rem; background: var(--image-fond); border: 1px solid var(--filet); border-radius: var(--radius); }
+  .piece__media img { width: 100%; height: 170px; object-fit: contain; display: block; }
+  .piece__nom { margin: 0.3rem 0 0; font-size: 1rem; line-height: 1.25; }
+  .piece__nom a { text-decoration: none; }
+  .piece__nom a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.4em; text-underline-offset: -0.16em; }
+  .piece__mesures { margin: 0; font-size: 0.78rem; color: var(--gris); }
+  .piece__vide { margin: 0; font-size: 0.82rem; color: var(--gris); }
+  .piece .reglette { grid-template-columns: 1fr; }
+  .piece__cta { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; align-self: end; padding-top: 0.3rem; }
+  .piece__lire { font-size: 0.85rem; font-weight: 700; }
+  .rail__disc { margin: 0.6rem auto 0; font-size: 0.8rem; color: var(--gris); }
 
-  .hero__valeurs { display: none; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 1.2rem; border: 1px solid var(--mine); background: var(--papier); }
-  .hero__valeurs > div { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--filet); transition: background-color 0.4s var(--ease-out); }
-  .hero__valeurs > div.is-new { background: var(--jaune); }
-  .hero__valeurs > div.is-new dt, .hero__valeurs > div.is-new dd { color: #15171a; }
-  .hero__valeurs > div:nth-child(odd) { border-right: 1px solid var(--filet); }
-  .hero__valeurs > div:nth-child(n + 3) { border-bottom: 0; }
-  .hero__valeurs dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); }
-  .hero__valeurs dd { margin: 0.1rem 0 0; font-family: var(--font-mono); font-size: 1.05rem; }
-  .hero__valeurs b { font-weight: 700; }
-  .hero__verdict { margin: 0 0 1.6rem; padding-left: 0.9rem; border-left: 1px solid var(--mine); font-size: 0.98rem; line-height: 1.55; max-width: 48ch; }
-  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.4rem; }
-  .hero__lien { font-weight: 600; font-size: 0.95rem; }
-
-  .hero__texte { grid-column: 1; grid-row: 1; }
-  .hero__suite { grid-column: 1; grid-row: 2; }
-  .hero__epure { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
-  .hero__cartouche { align-self: flex-end; width: min(100%, 560px); grid-template-columns: 0.7fr 1.3fr 1fr 1fr; }
-
-  /* ═══ NOMENCLATURE + visionneuse ═══ */
-  .nomen { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; }
-  .nomen__liste { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
-  .nomen__item { border-bottom: 1px solid var(--filet); }
-  .nomen__lien { display: grid; grid-template-columns: 2.6rem minmax(0, 1fr) 1.5rem; align-items: baseline; gap: 0.8rem; padding: 0.95rem 0.4rem; text-decoration: none; color: var(--mine); transition: background-color 0.18s ease; }
-  .nomen__lien:hover, .nomen__lien:focus-visible { background: var(--jaune-pale); }
-  .nomen__no { font-size: 0.8rem; color: var(--gris); }
-  .nomen__titre { font-weight: 600; font-size: 1.05rem; line-height: 1.35; }
-  .nomen__corps { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
-  .nomen__sous { display: flex; flex-wrap: wrap; gap: 0.15rem 1.1rem; font-size: 0.85rem; color: var(--gris); }
-  .nomen__sous .mono { font-size: 0.78rem; white-space: nowrap; }
-  .nomen :global(.nomen__fleche) { align-self: center; transition: transform 0.18s var(--ease-out); }
-  .nomen__lien:hover :global(.nomen__fleche) { transform: translateX(4px); }
-  .nomen__vue { position: sticky; top: 96px; aspect-ratio: 16 / 11; }
-  .nomen__img { position: absolute; top: 9px; left: 9px; width: calc(100% - 18px); height: calc(100% - 18px); object-fit: cover; opacity: 0; transition: opacity 0.3s ease; }
-  .nomen__img[data-i='0'] { opacity: 1; }
-  .nomen:has(.nomen__item:hover, .nomen__item:focus-within) .nomen__img { opacity: 0; }
-  .nomen:has(.nomen__item[data-i='0']:hover, .nomen__item[data-i='0']:focus-within) .nomen__img[data-i='0'],
-  .nomen:has(.nomen__item[data-i='1']:hover, .nomen__item[data-i='1']:focus-within) .nomen__img[data-i='1'],
-  .nomen:has(.nomen__item[data-i='2']:hover, .nomen__item[data-i='2']:focus-within) .nomen__img[data-i='2'],
-  .nomen:has(.nomen__item[data-i='3']:hover, .nomen__item[data-i='3']:focus-within) .nomen__img[data-i='3'],
-  .nomen:has(.nomen__item[data-i='4']:hover, .nomen__item[data-i='4']:focus-within) .nomen__img[data-i='4'],
-  .nomen:has(.nomen__item[data-i='5']:hover, .nomen__item[data-i='5']:focus-within) .nomen__img[data-i='5'],
-  .nomen:has(.nomen__item[data-i='6']:hover, .nomen__item[data-i='6']:focus-within) .nomen__img[data-i='6'],
-  .nomen:has(.nomen__item[data-i='7']:hover, .nomen__item[data-i='7']:focus-within) .nomen__img[data-i='7'] { opacity: 1; }
-
-  /* ═══ FEUILLE DE CARACTÉRISTIQUES ═══ */
-  .feuille { display: grid; grid-template-columns: repeat(4, minmax(230px, 1fr)); grid-template-rows: repeat(5, auto); border-bottom: 1px solid var(--filet); background: var(--papier); overflow-x: auto; scroll-snap-type: x mandatory; }
-  .feuille__col { grid-row: span 5; display: grid; grid-template-rows: subgrid; row-gap: 0.9rem; padding: 1.2rem 1.2rem 1.4rem; border-top: 4px solid var(--jaune); scroll-snap-align: start; }
-  .feuille__col + .feuille__col { border-left: 1px solid var(--filet); }
-  .feuille__media { display: block; aspect-ratio: 1; padding: 1rem; background: var(--image-fond); border: 1px solid var(--filet); }
-  .feuille__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
-  .feuille__nom h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
-  .feuille__nom h3 a { text-decoration: none; }
-  .feuille__nom h3 a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.42em; text-underline-offset: -0.18em; }
-  .feuille__award { margin: 0.35rem 0 0; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gris); }
-  .feuille__vide { margin: 0; font-size: 0.85rem; color: var(--gris); }
-  .feuille .reglette { grid-template-columns: 1fr; }
-  .feuille__cta { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; align-self: end; }
-  .feuille__lire { font-size: 0.88rem; font-weight: 600; }
-  .feuille__disc { margin: 1rem 0 0; font-size: 0.82rem; color: var(--gris); }
-
-  /* ═══ PAR PROBLÈME : la liste en grand ═══ */
-  .pb { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
-  .pb li { border-bottom: 1px solid var(--filet); }
-  .pb__lien { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 1.5rem; padding: 1.1rem 0.4rem; text-decoration: none; color: var(--mine); }
-  .pb__titre { font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: clamp(1.45rem, 1rem + 1.6vw, 2.3rem); line-height: 1.1; letter-spacing: -0.02em; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 0.3em; text-underline-offset: -0.1em; text-decoration-skip-ink: none; transition: text-decoration-color 0.2s ease; }
+  /* ═══ PAR PROBLÈME ═══ */
+  .section--tight { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+  .pb { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+  .pb li { border-top: 1px solid var(--filet); }
+  .pb__lien { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 1rem; padding: 1.05rem 0.2rem; text-decoration: none; color: var(--mine); }
+  .pb__titre { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.15rem, 0.9rem + 0.9vw, 1.55rem); line-height: 1.15; letter-spacing: -0.03em; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 0.32em; text-underline-offset: -0.12em; text-decoration-skip-ink: none; transition: text-decoration-color 0.2s ease; }
   .pb__lien:hover .pb__titre, .pb__lien:focus-visible .pb__titre { text-decoration-color: var(--jaune); }
-  .pb__n { font-size: 0.8rem; color: var(--gris); white-space: nowrap; }
-  .pb :global(.pb__fleche) { transition: transform 0.2s var(--ease-out); }
-  .pb__lien:hover :global(.pb__fleche) { transform: translateX(6px); }
+  .pb__n { font-size: 0.78rem; color: var(--gris); white-space: nowrap; }
+  .pb__fleche { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--papier); border: 1px solid var(--filet); transition: transform 0.25s var(--ease-out), background-color 0.2s ease; }
+  .pb__lien:hover .pb__fleche { transform: translateX(4px); background: var(--jaune); border-color: var(--jaune); }
 
-  /* ═══ PAR BUDGET : trois plages sur une règle de prix ═══ */
+  /* ═══ GRILLES, BUDGET, RAYONS ═══ */
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem 1.5rem; }
   .budg { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: clamp(2rem, 4vw, 4rem); align-items: start; }
-  .plages { border-top: 1.5px solid var(--mine); }
-  .plage { display: grid; grid-template-columns: 11rem minmax(0, 1fr) 11rem; align-items: center; gap: 1.2rem; padding: 1rem 0.4rem; border-bottom: 1px solid var(--filet); text-decoration: none; color: var(--mine); }
-  .plage:hover { background: var(--papier); }
-  .plage__nom { display: flex; flex-direction: column; font-weight: 600; }
-  .plage__n { font-weight: 400; font-size: 0.75rem; color: var(--gris); }
-  .plage__piste { position: relative; height: 22px; color: var(--filet-fort); background: repeating-linear-gradient(90deg, currentColor 0 1px, transparent 1px calc(100% / 6)) left bottom / calc(100% + 1px) 8px no-repeat, linear-gradient(currentColor, currentColor) left bottom / 100% 1px no-repeat; }
-  .plage__barre { position: absolute; left: var(--g); width: var(--l); top: 5px; height: 8px; background: var(--jaune); border-inline: 1.5px solid var(--mine); }
-  .plage__barre--ouverte { border-right: 0; -webkit-mask: linear-gradient(90deg, var(--mine) 88%, transparent); mask: linear-gradient(90deg, var(--mine) 88%, transparent); }
-  .plage__prix { font-size: 0.8rem; color: var(--gris); text-align: right; }
-  .plages__axe { display: grid; grid-template-columns: 11rem minmax(0, 1fr) 11rem; gap: 1.2rem; padding: 0.5rem 0.4rem 0; }
-  .plages__graduations { grid-column: 2; position: relative; height: 1.2rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--gris); }
+  .plages { display: grid; gap: 0.7rem; }
+  .plage { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 10rem; align-items: center; gap: 1.2rem; padding: 0.9rem 1.1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); text-decoration: none; color: var(--mine); transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease; }
+  .plage:hover { transform: translateY(-3px); box-shadow: var(--ombre); }
+  .plage__nom { display: flex; flex-direction: column; font-family: var(--font-display); font-weight: 700; font-size: 0.98rem; }
+  .plage__n { font-family: var(--font-mono); font-weight: 500; font-size: 0.76rem; color: var(--gris); }
+  .plage__piste { position: relative; height: 10px; border-radius: 5px; background: var(--papier-2); }
+  .plage__barre { position: absolute; left: var(--g); width: var(--l); top: 0; height: 10px; border-radius: 5px; background: var(--jaune); }
+  .plage__barre--ouverte { -webkit-mask: linear-gradient(90deg, var(--mine) 80%, transparent); mask: linear-gradient(90deg, var(--mine) 80%, transparent); }
+  .plage__prix { font-size: 0.78rem; color: var(--gris); text-align: right; }
+  .plages__axe { display: grid; grid-template-columns: 10rem minmax(0, 1fr) 10rem; gap: 1.2rem; padding: 0 1.1rem; }
+  .plages__graduations { grid-column: 2; position: relative; height: 1.2rem; font-family: var(--font-mono); font-size: 0.76rem; color: var(--gris); }
   .plages__graduations span { position: absolute; left: var(--x); transform: translateX(-50%); white-space: nowrap; }
   .plages__graduations span:first-child { transform: none; }
   .plages__graduations span:last-child { transform: translateX(-100%); }
+  .rayons__titre { margin: 0.2rem 0 0.9rem; font-size: 1.05rem; }
+  .rayons ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+  .rayons a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.8rem; padding: 0.75rem 1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: 999px; text-decoration: none; color: var(--mine); font-weight: 600; transition: border-color 0.2s ease, transform 0.25s var(--ease-out); }
+  .rayons a:hover { border-color: var(--mine); transform: translateX(3px); }
+  .rayons a .mono { font-size: 0.82rem; color: var(--gris); }
 
-  .rayons__titre { margin: 0.3rem 0 1rem; font-size: 1.1rem; }
-  .rayons ul { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--mine); }
-  .rayons a { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.8rem; padding: 0.85rem 0.3rem; border-bottom: 1px solid var(--filet); text-decoration: none; color: var(--mine); font-weight: 500; }
-  .rayons a:hover { background: var(--jaune-pale); }
-  .rayons a .mono { font-size: 0.85rem; color: var(--gris); }
-
-  /* ═══ Dernières planches, outils, méthode ═══ */
-  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4rem 2rem; }
-  .outils { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1.5px solid var(--mine); border-bottom: 1px solid var(--filet); }
-  .outils li + li { border-left: 1px solid var(--filet); }
-  .outils a { display: flex; flex-direction: column; gap: 0.6rem; height: 100%; padding: 1.3rem 1.1rem 1.5rem; text-decoration: none; color: var(--mine); transition: background-color 0.18s ease; }
-  .outils a:hover { background: var(--papier); }
-  .outils__titre { font-weight: 600; font-size: 1rem; line-height: 1.3; }
-  .outils__desc { font-size: 0.88rem; line-height: 1.5; color: var(--gris); }
+  /* ═══ OUTILS, MÉTHODE, FAQ ═══ */
+  .outils { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+  .outils a { display: flex; flex-direction: column; gap: 0.5rem; height: 100%; padding: 1.1rem 1.1rem 1.3rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); text-decoration: none; color: var(--mine); box-shadow: var(--ombre); transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
+  .outils a:hover { transform: translateY(-5px); box-shadow: var(--ombre-2); }
+  .outils__ico { display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--jaune-pale); color: var(--mine); margin-bottom: 0.3rem; }
+  .outils__titre { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; line-height: 1.3; letter-spacing: -0.02em; }
+  .outils__desc { font-size: 0.86rem; line-height: 1.5; color: var(--gris); }
   .methode { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(2rem, 5vw, 5rem); }
   .methode__texte p { color: var(--gris); line-height: 1.7; max-width: 56ch; }
   .methode__texte strong { color: var(--mine); }
   .methode__texte .btn { margin-top: 0.6rem; }
-  .faq__liste { margin-top: 1rem; border-top: 1.5px solid var(--mine); }
-  .faq__item { border-bottom: 1px solid var(--filet); }
-  .faq__q { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0.2rem; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.35; }
+  .faq__liste { margin-top: 1rem; display: grid; gap: 0.6rem; }
+  .faq__item { background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); padding: 0 1.2rem; }
+  .faq__q { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; cursor: pointer; list-style: none; font-weight: 700; font-size: 1rem; line-height: 1.35; }
   .faq__q::-webkit-details-marker { display: none; }
-  .faq__signe { position: relative; flex-shrink: 0; width: 14px; height: 14px; }
-  .faq__signe::before, .faq__signe::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; background: var(--mine); transition: transform 0.2s var(--ease-out); }
+  .faq__signe { position: relative; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--jaune-pale); }
+  .faq__signe::before, .faq__signe::after { content: ''; position: absolute; left: 8px; right: 8px; top: 50%; height: 2px; background: var(--mine); transition: transform 0.2s var(--ease-out); }
   .faq__signe::after { transform: rotate(90deg); }
   .faq__item[open] .faq__signe::after { transform: rotate(0deg); }
   .faq__a { margin: 0 0 1.1rem; padding-right: 2rem; color: var(--gris); line-height: 1.65; }
 
   /* ═══ Adaptations ═══ */
-  @media (max-width: 1080px) { .outils { grid-template-columns: repeat(3, 1fr); } .outils li:nth-child(4) { border-left: 0; } .outils li:nth-child(n + 4) { border-top: 1px solid var(--filet); } }
-  @media (max-width: 1000px) { .nomen { grid-template-columns: 1fr; } .nomen__vue { display: none; } .budg { grid-template-columns: 1fr; } .grid3 { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 960px) {
-    .hero__grid { grid-template-columns: 1fr; grid-template-rows: none; row-gap: 1.6rem; }
-    .hero__texte, .hero__suite, .hero__epure { grid-column: 1; grid-row: auto; }
-    .hero__valeurs { display: grid; }
-    .hero__cartouche { align-self: stretch; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .hero__cartouche > div:nth-child(2) { border-right: 0; }
-    .hero__cartouche > div:nth-child(n + 3) { border-top: 1px solid var(--filet); }
+  @media (max-width: 1080px) { .outils { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 1000px) { .budg { grid-template-columns: 1fr; } .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) {
+    .hero { min-height: 0; align-items: stretch; }
+    .hero__bg, .hero::after { height: clamp(16rem, 46vh, 24rem); bottom: auto; }
+    .hero__bg { object-position: 80% 50%; transform: none; animation: none; }
+    .hero::after { background: linear-gradient(180deg, color-mix(in srgb, var(--calque) 18%, transparent) 0%, transparent 38%, color-mix(in srgb, var(--calque) 55%, transparent) 72%, var(--calque) 100%); }
+    .hero__in { display: flex; flex-direction: column; gap: 1.2rem; padding-top: clamp(12rem, 37vh, 19rem); }
+    .hots { position: static; display: flex; flex-wrap: wrap; gap: 0.5rem; pointer-events: auto; }
+    .hots .hot { position: static; opacity: 1; animation: none; flex-direction: row; }
+    .hots .hot span { white-space: normal; }
     .methode { grid-template-columns: 1fr; }
+    .pb { grid-template-columns: 1fr; }
   }
   @media (max-width: 700px) {
     .plage { grid-template-columns: 1fr auto; gap: 0.6rem 1rem; }
@@ -503,11 +398,8 @@ const faqs = [
     .plages__axe { grid-template-columns: 1fr; }
     .plages__graduations { grid-column: 1; }
     .outils { grid-template-columns: 1fr 1fr; }
-    .outils li { border-left: 0 !important; border-top: 1px solid var(--filet); }
-    .outils li:nth-child(even) { border-left: 1px solid var(--filet) !important; }
-    .outils li:nth-child(-n + 2) { border-top: 0; }
     .grid3 { grid-template-columns: 1fr; }
     .pb__n { display: none; }
-    .feuille { grid-template-columns: repeat(4, minmax(78%, 1fr)); }
+    .rail { grid-auto-columns: minmax(78%, 1fr); }
   }
 </style>

@@ -53,7 +53,7 @@
 </script>
 
 <style>
-  /* Panneau net posé sur la page : papier, filet mine, angles vifs, aucune ombre.
+  /* Panneau papier arrondi à ombre douce, posé sur la page.
      Hors écran par transform (pas de décalage de mise en page / CLS), il glisse
      quand il faut demander le consentement : entrée ease-out, sortie ease-in. */
   .cookie-banner {
@@ -64,10 +64,12 @@
     z-index: 100;
     max-width: 960px;
     margin: 0 auto;
-    padding: 1rem 1.2rem;
+    padding: 1.1rem 1.3rem;
     background: var(--papier);
     color: var(--mine);
-    border: 1px solid var(--mine);
+    border: 1px solid var(--filet);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--ombre-2);
     transform: translateY(calc(100% + 32px));
     visibility: hidden;
     transition: transform 0.32s ease-in, visibility 0s linear 0.32s;

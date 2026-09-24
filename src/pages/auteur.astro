@@ -50,7 +50,6 @@ const jsonLd = {
         <p class="author__role">Fondateur &amp; rédacteur de {siteConfig.name}</p>
       </div>
     </div>
-    <span class="regle author__regle" aria-hidden="true"></span>
 
     <div class="author__bio">
       <p>
@@ -87,18 +86,17 @@ const jsonLd = {
 <style>
   .author { padding-top: 2.6rem; padding-bottom: 4.5rem; }
   .author__head { display: flex; align-items: center; gap: 1.4rem; }
-  /* Monogramme au trait : un cartouche carré, pas une pastille de couleur */
+  /* Monogramme sur pastille ronde lime pâle, initiales en Unbounded */
   .author__avatar {
     flex-shrink: 0;
     width: 84px; height: 84px;
     display: inline-flex; align-items: center; justify-content: center;
-    background: var(--papier); color: var(--mine); border: 1px solid var(--mine);
-    font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: 2rem; line-height: 1; letter-spacing: -0.03em;
+    background: var(--jaune-pale); color: var(--mine); border-radius: 50%;
+    font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; line-height: 1; letter-spacing: -0.03em;
   }
   .author__head h1 { margin: 0 0 0.3rem; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.4rem); }
   .author__role { margin: 0; font-size: 1.05rem; color: var(--gris); }
-  .author__regle { margin-top: 2rem; }
-  .author__bio { margin-top: 1.8rem; }
+  .author__bio { margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--filet); }
   .author__bio p { color: var(--gris); line-height: 1.75; }
   .author__bio strong { color: var(--mine); }
   .author__links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
@@ -106,6 +104,6 @@ const jsonLd = {
   .article-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2.4rem 2rem; margin-top: 1.6rem; }
   @media (max-width: 520px) {
     .author__head { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .author__avatar { width: 64px; height: 64px; font-size: 1.6rem; }
+    .author__avatar { width: 64px; height: 64px; font-size: 1.3rem; }
   }
 </style>

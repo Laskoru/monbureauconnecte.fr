@@ -18,7 +18,6 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
     <p class="not-found__lede">
       Le lien est peut-être cassé ou la page a été déplacée. Voici comment retrouver ton chemin :
     </p>
-    <span class="regle" aria-hidden="true"></span>
 
     <div class="not-found__categories">
       {categories.map((cat) => (
@@ -45,25 +44,27 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
 
 <style>
   .not-found { padding-top: 2.4rem; padding-bottom: 4.5rem; }
-  /* Le code d'erreur coté comme un chiffre d'épure, à droite du titre */
+  /* Le code d'erreur en grand chiffre Unbounded, dans une carte papier à côté du titre */
   .not-found__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.2rem 2rem; }
   .not-found__title { margin: 0; max-width: 16ch; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.4rem); }
-  .not-found__code { flex-shrink: 0; margin: 0; display: flex; flex-direction: column; align-items: flex-end; padding-left: 1.2rem; border-left: 1px solid var(--mine); }
-  .not-found__num { font-family: var(--font-display); font-stretch: 125%; font-weight: 300; font-size: 3.4rem; line-height: 0.9; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
-  .not-found__unit { margin-top: 0.4rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--gris); }
+  .not-found__code { flex-shrink: 0; margin: 0; display: flex; flex-direction: column; align-items: center; padding: 0.8rem 1.3rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .not-found__num { font-family: var(--font-display); font-weight: 900; font-size: 2.8rem; line-height: 0.95; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+  .not-found__unit { margin-top: 0.3rem; font-size: 0.8rem; font-weight: 600; color: var(--gris); }
   .not-found__lede { margin: 1.2rem 0 2.2rem; max-width: 60ch; font-size: 1.1rem; line-height: 1.6; color: var(--gris); }
   .not-found__categories { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2.2rem 0 0; }
-  .not-found__cat { min-height: 40px; padding: 0.45em 0.85em; font-size: 0.9rem; }
+  .not-found__cat { min-height: 40px; padding: 0.45em 0.95em; font-size: 0.9rem; }
   .not-found__h2 { margin: 3rem 0 0.9rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
-  .not-found__list { list-style: none; margin: 0 0 2.5rem; padding: 0; border-top: 1.5px solid var(--mine); }
-  .not-found__list li { border-bottom: 1px solid var(--filet); }
-  .not-found__list a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 0.3rem; font-weight: 600; line-height: 1.35; color: var(--mine); text-decoration: none; transition: background-color 0.18s ease; }
-  .not-found__list a:hover { background: var(--jaune-pale); }
-  .not-found__list :global(svg) { flex-shrink: 0; transition: transform 0.18s var(--ease-out); }
-  .not-found__list a:hover :global(svg) { transform: translateX(4px); }
+  /* Les derniers comparatifs : une carte papier, une ligne par article, flèche en pastille */
+  .not-found__list { list-style: none; margin: 0 0 2.5rem; padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .not-found__list li + li { border-top: 1px solid var(--filet); }
+  .not-found__list a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 0; font-weight: 600; line-height: 1.35; color: var(--mine); text-decoration: none; }
+  .not-found__list a:hover span { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.35em; text-underline-offset: -0.14em; text-decoration-skip-ink: none; }
+  .not-found__list :global(svg) { flex-shrink: 0; width: 36px; height: 36px; padding: 9px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.18s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .not-found__list a:hover :global(svg) { transform: translateX(4px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
   @media (max-width: 560px) {
     .not-found__head { flex-direction: column; align-items: flex-start; }
-    .not-found__code { flex-direction: row; align-items: baseline; gap: 0.6rem; padding-left: 0.8rem; }
+    .not-found__code { flex-direction: row; align-items: baseline; gap: 0.6rem; padding: 0.6rem 1rem; }
     .not-found__num { font-size: 2.2rem; }
+    .not-found__list { padding: 0 1rem; }
   }
 </style>

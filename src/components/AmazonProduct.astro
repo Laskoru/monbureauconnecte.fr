@@ -84,19 +84,19 @@ const label = featured ? (award && award !== 'Notre choix' ? `Notre choix · ${a
 </article>
 
 <style>
-  .fiche { position: relative; margin: 1.75rem 0; background: var(--papier); border: 1px solid var(--filet); }
-  .fiche--choix { border-color: var(--mine); border-top: 4px solid var(--jaune); }
+  .fiche { position: relative; margin: 1.9rem 0; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .fiche--choix { border-color: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale), var(--ombre); }
   /* Onglet posé sur le filet du haut, comme l'indice de révision d'un plan */
-  .fiche__label { position: absolute; top: 0; right: 1.2rem; transform: translateY(-50%); margin: 0; padding: 0.3rem 0.6rem; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1; letter-spacing: 0.05em; text-transform: uppercase; color: var(--mine); background: var(--papier-2); border: 1px solid var(--mine); }
-  .fiche--choix .fiche__label { top: -2px; color: #15171a; background: var(--jaune); border-color: var(--jaune); font-weight: 700; }
+  .fiche__label { position: absolute; top: 0; right: 1.2rem; transform: translateY(-50%); margin: 0; padding: 0.35rem 0.8rem; font-family: var(--font-body); font-weight: 700; font-size: 0.78rem; line-height: 1; color: var(--mine); background: var(--papier); border: 1px solid var(--filet); border-radius: 999px; }
+  .fiche--choix .fiche__label { color: var(--sur-jaune); background: var(--jaune); border-color: var(--jaune); }
   .fiche__grid { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 1.4rem; padding: 1.1rem 1.2rem 1.3rem; }
-  .fiche__media { display: flex; align-items: center; justify-content: center; align-self: start; aspect-ratio: 1; padding: 0.9rem; background: var(--image-fond); border: 1px solid var(--filet); }
+  .fiche__media { display: flex; align-items: center; justify-content: center; align-self: start; aspect-ratio: 1; padding: 0.9rem; background: var(--image-fond); border: 1px solid var(--filet); border-radius: var(--radius); }
   .fiche__media img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .fiche__body { display: flex; flex-direction: column; gap: 0.8rem; min-width: 0; }
-  .fiche__title { margin: 0; font-family: var(--font-body); font-weight: 600; font-size: 1.15rem; line-height: 1.3; letter-spacing: -0.005em; }
+  .fiche__title { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.3; letter-spacing: -0.02em; }
   .fiche__blurb { margin: 0; color: var(--gris); font-size: 0.95rem; line-height: 1.55; }
   .fiche__pc { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem 1.4rem; }
-  .fiche__col-title { margin: 0 0 0.35rem; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; }
+  .fiche__col-title { margin: 0 0 0.35rem; font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; }
   .fiche__col--pro .fiche__col-title { color: var(--ok); }
   .fiche__col--con .fiche__col-title { color: var(--gene); }
   .fiche__col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.3rem; }
@@ -105,8 +105,8 @@ const label = featured ? (award && award !== 'Notre choix' ? `Notre choix · ${a
   .fiche__col--pro li::before, .fiche__col--pro li::after { background: var(--ok); }
   .fiche__col--pro li::after { transform: rotate(90deg); }
   .fiche__col--con li::before { background: var(--gene); }
-  .fiche__na { margin: 0; padding: 0.6rem 0.8rem; font-size: 0.88rem; line-height: 1.5; color: var(--gris); background: var(--papier-2); border: 1px solid var(--filet); }
-  .fiche__na span { margin-right: 0.4em; font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--erreur); }
+  .fiche__na { margin: 0; padding: 0.6rem 0.9rem; font-size: 0.88rem; line-height: 1.5; color: var(--gris); background: var(--papier-2); border-radius: var(--radius); }
+  .fiche__na span { margin-right: 0.4em; font-weight: 700; font-size: 0.8rem; color: var(--erreur); }
   .fiche__cta { align-self: flex-start; }
   @media (max-width: 600px) {
     .fiche__grid { grid-template-columns: 1fr; }

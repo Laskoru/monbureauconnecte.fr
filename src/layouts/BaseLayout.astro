@@ -118,10 +118,10 @@ const jsonLdBlocks = [organizationSchema, websiteSchema, ...(jsonLd ? (Array.isA
       </script>
     )}
     <!-- Polices auto-hébergées : voir src/styles/fonts.css (préchargement des 2 fichiers principaux) -->
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-normal-300-700-latin.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/instrument-sans-normal-400-700-latin.woff2" crossorigin />
-    <meta name="theme-color" content="#edeeea" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#111214" media="(prefers-color-scheme: dark)" />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/unbounded-normal-500-900-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/onest-normal-400-700-latin.woff2" crossorigin />
+    <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1013" media="(prefers-color-scheme: dark)" />
     <!-- Thème choisi avant le premier affichage (pas de flash) : clé localStorage « theme » -->
     <script is:inline>(function () { try { var t = localStorage.getItem('theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();</script>
 
