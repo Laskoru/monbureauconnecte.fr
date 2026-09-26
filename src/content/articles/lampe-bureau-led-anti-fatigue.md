@@ -2,7 +2,7 @@
 title: "Lampe de bureau LED anti-fatigue : comment bien la choisir"
 description: "Une bonne lampe de bureau réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles LED."
 pubDate: 2026-07-21
-updatedDate: 2026-09-11
+updatedDate: 2026-09-26
 author: "Hugo B."
 pinHook: "Une lumière *qui ménage les yeux*"
 pinSub: "La lampe LED anti-fatigue bien choisie."
@@ -41,6 +41,8 @@ faq:
     answer: "Non : une lampe de bureau seule crée un contraste fort entre la zone éclairée et le reste de la pièce, ce qui fatigue les yeux. Elle doit compléter un éclairage ambiant, pas le remplacer entièrement."
   - question: "Qu'est-ce que le scintillement (flicker) et pourquoi l'éviter ?"
     answer: "Le scintillement est une variation très rapide de l'intensité lumineuse, souvent imperceptible à l'œil nu, présente sur certaines LED bas de gamme. Même invisible, il sollicite les yeux et peut causer une fatigue oculaire diffuse et des maux de tête en fin de journée. Un modèle indiqué « flicker-free » ou « sans scintillement » évite ce problème."
+  - question: "Une lampe de bureau LED chauffe-t-elle ?"
+    answer: "Très peu, comparée à une lampe halogène ou à incandescence : une LED transforme une plus grande part de l'électricité en lumière et n'envoie presque pas de chaleur vers toi. La tête de la lampe peut devenir tiède, car la chaleur est évacuée par l'arrière ; si elle devient brûlante au toucher, c'est anormal et mieux vaut arrêter de l'utiliser."
 ---
 
 ## Pourquoi la qualité de l'éclairage change tout
