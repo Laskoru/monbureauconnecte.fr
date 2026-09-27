@@ -14,7 +14,7 @@ draft: false
 products:
   - asin: "B07W6G822T"
     title: "Logitech Signature M650, clics silencieux, Bluetooth, multi-appareils"
-    blurb: "Clics réduits de plus de 90 % par rapport à une souris classique, autonomie annoncée de deux ans, boutons latéraux personnalisables."
+    blurb: "Bruit de clic réduit de 90 % selon Logitech (par rapport à sa M185), autonomie annoncée de deux ans, boutons latéraux personnalisables."
     pros:
       - "Clics silencieux (−90 %)"
       - "Autonomie annoncée de 2 ans"
@@ -28,13 +28,20 @@ interactiveGuide:
   question: "Ton environnement, c'est…"
   options:
     - label: "Un open space partagé"
-      result: "Oui, clairement : vise des <strong>switches « silent »</strong> annonçant une réduction du bruit (souvent 90 %+). Ce sont surtout tes <strong>voisins</strong> qui entendent tes clics, pas toi."
+      result: "Oui, clairement : vise des <strong>switches « silent »</strong> annonçant une réduction du bruit (90 % chez Logitech). Ce sont surtout tes <strong>voisins</strong> qui entendent tes clics, pas toi."
     - label: "Beaucoup de visioconférences"
       result: "C'est presque prioritaire : le <strong>micro capte le clic</strong> bien plus que ton oreille. Une souris silencieuse assainit nettement l'audio perçu par les autres participants."
     - label: "Un logement partagé / cloisons fines"
       result: "Vaut le coup : privilégie un modèle <strong>réputé pour son silence quasi total</strong>. Et pense au clavier : un clic discret ne sert à rien si les touches claquent."
     - label: "Un bureau fermé, seul"
       result: "Le silence devient secondaire. Regarde plutôt le <strong>confort et l'ergonomie</strong> : si le poignet tire, une <a href='/articles/souris-ergonomique-verticale/'>souris verticale</a> t'apportera davantage."
+sources:
+  - label: "Logitech, « Gamme de souris sans fil Signature M650 »"
+    url: "https://www.logitech.com/fr-fr/products/mice/m650-signature-for-business.html"
+  - label: "Logitech Support, « Caractéristiques techniques - Signature M650 »"
+    url: "https://support.logi.com/hc/fr/articles/4414480412567-Caract%C3%A9ristiques-techniques-Signature-M650"
+  - label: "INRS, « Bruit. Exposition au risque »"
+    url: "https://www.inrs.fr/risques/bruit/exposition-risque.html"
 faq:
   - question: "Une souris silencieuse coûte-t-elle beaucoup plus cher qu'une souris classique ?"
     answer: "Non, l'écart de prix reste limité, souvent quelques euros. La technologie des switches silencieux s'est largement démocratisée et équipe désormais aussi bien des modèles d'entrée de gamme que des références plus haut de gamme."
@@ -50,9 +57,9 @@ Ce n'est pas qu'une question de confort collectif. Dans un logement partagé en 
 
 ## Les critères qui font vraiment la différence
 
-- **Le type de switch** : les switches "silent" intègrent un amortisseur mécanique qui absorbe une partie du bruit à l'impact. Certaines marques annoncent une réduction du bruit de plus de 90 % par rapport à un switch classique, un ordre de grandeur que les avis d'acheteurs confirment globalement, même si le ressenti dépend aussi de l'environnement sonore ambiant.
+- **Le type de switch** : les switches "silent" intègrent un amortisseur mécanique qui absorbe une partie du bruit à l'impact. Logitech, par exemple, annonce un bruit de clic réduit de 90 % par rapport à l'une de ses souris classiques (la M185), même si le ressenti dépend aussi de l'environnement sonore ambiant.
 - **La connectivité** : Bluetooth, récepteur USB dédié (souvent en 2,4 GHz), ou les deux à la fois. Le sans-fil élimine déjà une bonne partie du bruit parasite lié au frottement d'un câble sur le bureau, en plus de libérer un port USB.
-- **L'autonomie et le type de pile** : certains modèles fonctionnent plusieurs années sur une seule pile, d'autres se rechargent par USB toutes les quelques semaines. Aucune des deux approches n'est mauvaise, mais mieux vaut le savoir avant d'acheter pour éviter la mauvaise surprise d'une pile à racheter en urgence.
+- **L'autonomie et le type de pile** : certains modèles tiennent jusqu'à deux ans sur une seule pile, d'autres se rechargent par USB toutes les quelques semaines. Aucune des deux approches n'est mauvaise, mais mieux vaut le savoir avant d'acheter pour éviter la mauvaise surprise d'une pile à racheter en urgence.
 - **La compatibilité multi-appareils** : un vrai atout si tu bascules entre un ordinateur professionnel et un ordinateur personnel dans la même journée. Beaucoup de souris silencieuses modernes permettent de basculer d'un appareil à l'autre par simple pression d'un bouton.
 - **La forme et la prise en main** : une souris silencieuse reste avant tout une souris. Vérifie qu'elle correspond à la taille de ta main et à ton type de préhension (paume, griffe, doigts) avant de te focaliser uniquement sur le critère du bruit.
 - **Le capteur optique** : pour un usage bureautique, la précision d'un capteur d'entrée de gamme suffit largement ; inutile de viser les DPI élevés réservés au gaming compétitif.

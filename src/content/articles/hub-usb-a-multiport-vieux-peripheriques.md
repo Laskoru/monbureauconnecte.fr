@@ -16,6 +16,11 @@ topPick:
   ctaLabel: "Voir les hubs USB Anker sur Amazon"
 coverAlt: "Hub USB noir avec plusieurs ports et interrupteurs, posé sur un bureau"
 draft: false
+sources:
+  - label: "Apple, « Adaptateurs compatibles avec le port Thunderbolt ou USB-C de votre Mac »"
+    url: "https://support.apple.com/fr-fr/102477"
+  - label: "USB-IF, « USB 3.2 »"
+    url: "https://www.usb.org/usb-32-0"
 faq:
   - question: "Pourquoi mon PC récent n'a-t-il plus de ports USB-A classiques ?"
     answer: "Les ordinateurs portables récents, surtout les modèles fins, misent sur le tout USB-C pour gagner en finesse et en polyvalence (charge, vidéo et données par le même port). Le revers de la médaille : les anciens périphériques équipés d'une fiche USB-A rectangulaire (souris, clavier filaire, clé USB, imprimante) ne peuvent plus se brancher directement, d'où le besoin d'un hub ou d'un adaptateur."
@@ -27,7 +32,7 @@ faq:
 
 ## Le problème du tout USB-C sur un PC récent
 
-Changer d'ordinateur portable réserve souvent une mauvaise surprise : les ports **USB-A** rectangulaires, ceux qu'on utilise depuis vingt ans pour brancher souris, clavier filaire ou clé USB, ont disparu au profit de simples ports **USB-C**. Les constructeurs justifient ce choix par la finesse des machines et la polyvalence du USB-C, qui gère à la fois la charge, la vidéo et les données par un connecteur unique. Problème : la quasi-totalité du parc de périphériques encore en circulation (souris filaires, claviers de bureau, clés USB, imprimantes, manettes) utilise toujours la fiche USB-A classique.
+Changer d'ordinateur portable réserve souvent une mauvaise surprise : les ports **USB-A** rectangulaires, ceux qu'on utilise depuis des années pour brancher souris, clavier filaire ou clé USB, ont disparu au profit de simples ports **USB-C**. Les constructeurs justifient ce choix par la finesse des machines et la polyvalence du USB-C, qui gère à la fois la charge, la vidéo et les données par un connecteur unique. Problème : la quasi-totalité du parc de périphériques encore en circulation (souris filaires, claviers de bureau, clés USB, imprimantes, manettes) utilise toujours la fiche USB-A classique.
 
 Racheter tout son matériel juste pour un changement de connecteur n'a aucun sens, surtout quand la souris ou le clavier fonctionnent très bien. Un **hub USB-A multiport** (ou un simple adaptateur USB-C vers USB-A) règle le problème pour quelques euros : il se branche sur l'unique port USB-C du portable et restitue plusieurs ports USB-A classiques, prêts à accueillir l'ancien matériel sans rien changer côté périphérique.
 

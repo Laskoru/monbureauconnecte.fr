@@ -36,6 +36,13 @@ interactiveGuide:
       result: "Vise un TKL <strong>sans fil</strong> et pense au rangement du récepteur et du câble de charge, sinon le gain visuel est perdu. Un format 65 % va encore plus loin si tu n'utilises jamais les touches de navigation."
     - label: "As surtout mal aux poignets"
       result: "Le TKL seul n'y changera pas grand-chose : le sujet est l'<strong>alignement des mains</strong>, pas la largeur. Regarde plutôt le <a href='/articles/clavier-ergonomique-separe/'>clavier ergonomique séparé</a>."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
 faq:
   - question: "Un clavier TKL fait-il vraiment perdre en confort au quotidien ?"
     answer: "Pour la grande majorité des usages bureautiques, non : on perd surtout la saisie rapide de longues séries de chiffres. Si tu utilises un tableur toute la journée avec beaucoup de saisie numérique, un pavé numérique externe séparé reste une meilleure option qu'un clavier complet encombrant."

@@ -36,9 +36,18 @@ products:
       - "Croissance lente"
       - "Toxique en cas d’ingestion (animaux, enfants)"
       - "Craint l’excès d’eau (pourriture)"
+sources:
+  - label: "ADEME, « Plantes et épuration de l'air intérieur »"
+    url: "https://librairie.ademe.fr/air/3299-3311-plantes-et-epuration-de-l-air-interieur.html"
+  - label: "ADEME, « Epuration de l'air intérieur par les plantes - Dossier de presse »"
+    url: "https://librairie.ademe.fr/air/9040-10857-epuration-de-l-air-interieur-par-les-plantes-dossier-de-presse.html"
+  - label: "NASA Technical Reports Server, « Interior Landscape Plants for Indoor Air Pollution Abatement »"
+    url: "https://ntrs.nasa.gov/citations/19930073077"
+  - label: "ASPCA, « Toxic and Non-toxic Plants: Snake Plant »"
+    url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/snake-plant"
 faq:
   - question: "Une plante dépolluante suffit-elle à assainir vraiment l'air d'un bureau ?"
-    answer: "Il faut rester honnête sur ce point : l'effet mesuré d'une seule plante en pot sur la qualité de l'air d'une vraie pièce (par opposition à une chambre expérimentale fermée) est modeste. L'intérêt principal au quotidien tient surtout au confort visuel, à la réduction du stress et à une ambiance de travail plus agréable, des bénéfices bien réels, même si l'effet purement chimique sur l'air reste limité à l'échelle d'un bureau normal."
+    answer: "Il faut rester honnête sur ce point : l'effet mesuré d'une plante en pot sur la qualité de l'air d'une vraie pièce (par opposition à une chambre expérimentale fermée) est très faible. L'intérêt principal au quotidien tient surtout au confort visuel et à une ambiance de travail plus agréable, l'effet purement chimique sur l'air restant limité à l'échelle d'un bureau normal."
   - question: "Quelle plante choisir si le bureau n'a pas de fenêtre ou très peu de lumière ?"
     answer: "La sansevieria est l'un des choix les plus fiables dans ce cas : elle tolère une luminosité faible à moyenne sans dépérir rapidement, contrairement à beaucoup de plantes à fleurs ou à feuillage plus fragile. Une lumière artificielle de bureau standard, allumée plusieurs heures par jour, suffit généralement à son entretien."
   - question: "Combien de temps faut-il consacrer à l'entretien d'une plante de bureau ?"
@@ -47,9 +56,9 @@ faq:
 
 ## Pourquoi une plante change quelque chose sur un poste de travail
 
-Un bureau, qu'il soit à la maison ou en open space, reste un environnement assez minéral : écran, clavier, câbles, surfaces lisses. Une plante verte y apporte un contraste simple mais efficace : une touche de couleur vivante, un point de repos visuel pour les yeux entre deux sessions d'écran, et une présence qui rend l'espace un peu moins austère. Ce n'est pas anodin : plusieurs études sur les environnements de travail associent la présence de végétation à une perception de bien-être plus élevée et à une sensation de fatigue moindre en fin de journée, même si ces effets restent difficiles à isoler précisément.
+Un bureau, qu'il soit à la maison ou en open space, reste un environnement assez minéral : écran, clavier, câbles, surfaces lisses. Une plante verte y apporte un contraste simple mais efficace : une touche de couleur vivante, un point de repos visuel pour les yeux entre deux sessions d'écran, et une présence qui rend l'espace un peu moins austère. Ce n'est pas anodin pour le confort au quotidien, même si l'effet d'une plante sur le bien-être au travail reste difficile à mesurer précisément.
 
-Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NASA menée dans les années 1980 sur des chambres closes et étanches, très différentes d'un bureau réel avec ventilation, portes qui s'ouvrent et volume d'air important. Dans un vrai bureau, l'effet purifiant d'une seule plante en pot sur les polluants intérieurs est réel mais limité en pratique. Ce qui reste vrai et vérifiable, en revanche, c'est le bénéfice sur le cadre de travail : une plante bien choisie demande peu d'entretien, dure des années, et transforme visuellement un poste de travail sans y consacrer de budget ni de temps important.
+Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NASA menée dans les années 1980 sur des chambres closes et étanches, très différentes d'un bureau réel avec ventilation, portes qui s'ouvrent et volume d'air important. Dans un vrai bureau, l'effet purifiant d'une plante en pot sur les polluants intérieurs n'est pas démontré : l'ADEME juge l'argument « plantes dépolluantes » non validé scientifiquement. Ce qui reste vrai et vérifiable, en revanche, c'est le bénéfice sur le cadre de travail : une plante bien choisie demande peu d'entretien, dure des années, et transforme visuellement un poste de travail sans y consacrer de budget ni de temps important.
 
 ## Les critères qui font vraiment la différence
 
@@ -75,7 +84,7 @@ Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NAS
 
 ## Ce qu'une plante de bureau ne remplace pas
 
-Une plante verte améliore le cadre de travail, mais elle ne corrige pas un éclairage de bureau mal réglé, une ventilation insuffisante dans une pièce fermée, ni une position assise inadaptée. Elle vient en complément de ces éléments, pas à leur place. Si l'objectif principal est réellement d'améliorer la qualité de l'air d'un bureau fermé, une bonne aération régulière et, le cas échéant, un purificateur d'air auront un effet plus mesurable qu'un pot de plante isolé.
+Une plante verte améliore le cadre de travail, mais elle ne corrige pas un éclairage de bureau mal réglé, une ventilation insuffisante dans une pièce fermée, ni une position assise inadaptée. Elle vient en complément de ces éléments, pas à leur place. Si l'objectif principal est réellement d'améliorer la qualité de l'air d'un bureau fermé, une bonne aération régulière et la limitation des sources de pollution auront un effet plus mesurable qu'un pot de plante isolé.
 
 Il vaut aussi la peine d'accepter, dès le départ, qu'une plante demande un minimum d'attention même parmi les variétés les plus tolérantes : un arrosage complètement oublié pendant plusieurs mois finit par l'affaiblir. Choisir une espèce adaptée au rythme réel qu'on peut lui consacrer évite la déception d'une plante qui dépérit après quelques semaines seulement.
 

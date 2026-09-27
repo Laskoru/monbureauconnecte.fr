@@ -23,6 +23,11 @@ comparison:
     - ["PC gaming et composants", "Oui, en comparant", "De bonnes offres existent, mais vérifie le prix moyen des semaines précédentes avant de valider"]
     - ["Casques et webcams", "Oui, souvent", "Catégorie régulièrement mise en avant pendant les soldes, remises fréquentes"]
     - ["Petits accessoires (tapis, repose-poignet, rangement câbles)", "Non", "Prix déjà bas toute l'année, remises marginales : achète dès que le besoin est là"]
+sources:
+  - label: "INC, « Promotions et soldes : une différence ? »"
+    url: "https://www.inc-conso.fr/content/promotions-et-soldes-une-difference"
+  - label: "Service Public, « Affichage des prix : règles à respecter »"
+    url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F34344"
 faq:
   - question: "Faut-il vraiment attendre le Black Friday pour acheter une chaise de bureau ?"
     answer: "Si ta chaise actuelle te fait déjà mal au dos, non : le confort au quotidien passe avant une remise de quelques dizaines d'euros. En revanche, si tu peux patienter sans souffrance et sans urgence, la chaise fait partie des catégories les plus souvent en promotion pendant le Black Friday, donc l'attente vaut généralement le coup."
@@ -67,7 +72,7 @@ Autrement dit : le Black Friday sert à économiser sur du matériel que tu peux
 
 Le piège classique : un prix barré très élevé, comparé à un prix « Black Friday » qui, en réalité, ressemble beaucoup au prix normal du produit. Trois réflexes simples permettent d'éviter ce genre de fausse bonne affaire :
 
-1. **Regarde le prix des semaines précédentes**, pas seulement le prix barré du jour J. Si le tarif du Black Friday est proche de ce que tu voyais un mois avant, ce n'est pas une vraie remise.
+1. **Regarde le prix des semaines précédentes**, pas seulement le prix barré du jour J. La loi impose que le prix de référence d'une réduction soit le prix le plus bas pratiqué par le vendeur dans les 30 jours précédents (article L. 112-1-1 du Code de la consommation) : un prix barré plus haut que ce que tu voyais le mois dernier doit t'alerter. Et si le tarif du Black Friday est proche de ce que tu voyais un mois avant, ce n'est pas une vraie remise.
 2. **Compare plusieurs enseignes** plutôt qu'une seule offre isolée : une vraie promo se retrouve généralement chez plusieurs vendeurs à des niveaux proches, une fausse reste souvent isolée.
 3. **Méfie-toi des remises \"trop belles\"** sur un produit tout juste sorti : les références récentes ont rarement une marge suffisante pour justifier une remise énorme dès leur première année.
 
@@ -80,7 +85,7 @@ Quelques réflexes simples pour aborder la période sereinement plutôt que dans
 - **Fais ta liste avant**, pas le jour même. Note les produits qui t'intéressent et leur prix actuel, pour comparer facilement le jour J.
 - **Fixe-toi un budget global** pour éviter l'effet d'entraînement des promos qui s'enchaînent.
 - **Priorise un ou deux postes**, plutôt que de vouloir tout changer d'un coup. Notre [comparatif du coût réel d'un setup gaming complet](/articles/cout-reel-setup-gaming-complet/) aide à voir où concentrer le budget en premier.
-- **Protège ce que tu achètes** : un nouvel écran ou un nouveau PC mérite une bonne multiprise parasurtenseur, pour ne pas perdre le bénéfice de la promo à la première coupure de courant.
+- **Protège ce que tu achètes** : un nouvel écran ou un nouveau PC mérite une bonne multiprise parasurtenseur, pour ne pas perdre le bénéfice de la promo à la première surtension.
 
 ## Cyber Monday : la suite logique du Black Friday
 

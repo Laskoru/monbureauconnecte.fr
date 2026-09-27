@@ -34,6 +34,15 @@ interactiveGuide:
       result: "La résolution n'y changera rien : vise une webcam à bonne <strong>correction de lumière (HDR/exposition auto)</strong>, et surtout ajoute une source lumineuse en face de toi. Une 1080p bien gérée bat une 4K dans le noir."
     - label: "On est plusieurs dans le cadre"
       result: "Priorité au <strong>champ de vision large</strong> (angle élevé) plutôt qu'à la résolution. Une 1080p grand-angle avec cadrage automatique est souvent plus utile qu'une 4K étroite."
+sources:
+  - label: "Zoom, « Enabling HD video for Zoom Meetings »"
+    url: "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0066166"
+  - label: "Microsoft Learn, « Préparer le réseau de votre organisation pour Teams »"
+    url: "https://learn.microsoft.com/fr-fr/microsoftteams/prepare-network"
+  - label: "Logitech, « C920 Technical Specifications »"
+    url: "https://support.logi.com/hc/fr/articles/360023307294-C920-Technical-Specifications"
+  - label: "Assistance Apple, « Appareil photo Continuité : utiliser un iPhone comme webcam pour Mac »"
+    url: "https://support.apple.com/fr-fr/102546"
 faq:
   - question: "1080p ou 4K pour le télétravail ?"
     answer: "Le 1080p suffit largement pour la visioconférence : les plateformes compressent le flux et la différence est peu visible. La 4K a un intérêt pour le streaming, l'enregistrement ou un cadrage recadré, au prix d'un débit plus lourd."

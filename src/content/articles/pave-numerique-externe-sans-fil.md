@@ -34,6 +34,11 @@ products:
       - "Fonctionne à pile"
       - "Dongle USB à ne pas perdre"
       - "Touches un peu légères"
+sources:
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
 faq:
   - question: "À quoi sert un pavé numérique externe ?"
     answer: "Beaucoup d'ordinateurs portables et de claviers compacts (format TKL) n'ont pas de pavé numérique. Or, pour saisir beaucoup de chiffres (comptabilité, tableurs, caisses, saisie de données), le pavé accélère énormément le travail et réduit la fatigue. Un pavé externe sans fil se pose où l'on veut sur le bureau, à droite ou à gauche selon la main, sans encombrer d'un câble."
@@ -66,7 +71,7 @@ Deux écoles : **piles** (souvent AAA, autonomie de plusieurs mois avec veille a
 
 ### Le nombre de touches et l'agencement
 
-Un pavé complet compte en général **19 à 22 touches** (chiffres, opérateurs, Entrée, Verr. Num, parfois Tab et Retour). Plus de touches = plus de fonctions, utile pour la comptabilité. Vérifie que l'agencement correspond à ton usage (certains ajoutent des raccourcis).
+Un pavé complet compte en général **une vingtaine de touches** (chiffres, opérateurs, Entrée, Verr. Num, parfois Tab et Retour). Plus de touches = plus de fonctions, utile pour la comptabilité. Vérifie que l'agencement correspond à ton usage (certains ajoutent des raccourcis).
 
 ### La compacité et la stabilité
 

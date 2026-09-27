@@ -35,6 +35,11 @@ interactiveGuide:
       result: "Passe à un <strong>modèle plus grand et plus puissant</strong>, sur pied, pour un éclairage homogène et flatteur sur la durée. La flexibilité de positionnement devient importante."
     - label: "Mon bureau est déjà bien éclairé de face"
       result: "Le gain sera <strong>faible</strong> : si une fenêtre ou une lampe t'éclaire déjà de face, tu n'as pas forcément besoin d'un ring light. Vérifie plutôt ta <a href='/articles/webcams-1080p-vs-4k/'>webcam</a> et son cadrage."
+sources:
+  - label: "Logitech, « Improving the image quality for Logitech Webcams »"
+    url: "https://support.logi.com/hc/en-us/articles/360023206914-Improving-the-image-quality-for-Logitech-Webcams"
+  - label: "NEEWER, « NEEWER BASICS R06 7\" Desktop Phone Selfie Round LED Light Kit »"
+    url: "https://neewer.com/products/neewer-r06-7-desktop-phone-selfie-light-kit-66605825"
 faq:
   - question: "Une ring light améliore-t-elle vraiment les visios ?"
     answer: "Nettement : un éclairage frontal doux supprime les ombres du visage et donne une image plus nette, surtout dans une pièce mal éclairée. C'est l'accessoire le plus rentable pour paraître à son avantage en visio."

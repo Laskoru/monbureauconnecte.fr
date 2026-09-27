@@ -23,12 +23,21 @@ interactiveGuide:
     - label: "Jouer en 1440p / haut rafraîchissement"
       result: "Compte <strong>1400-1600 €</strong> : carte graphique d'un cran au-dessus (RTX 5070 et +, ou une RTX 4070 si tu la trouves moins chère), CPU plus musclé et 32 Go de RAM. C'est le palier « confort durable » en 1440p."
     - label: "Je préfère l'acheter monté"
-      result: "Un <strong>PC pré-assemblé</strong> est plus simple et garanti d'un bloc, souvent 10-20 % plus cher qu'en montant soi-même. Compare surtout la <strong>carte graphique</strong> et l'alimentation, là où les prébuilts rognent parfois."
+      result: "Un <strong>PC pré-assemblé</strong> est plus simple et garanti d'un bloc, généralement un peu plus cher qu'en montant soi-même. Compare surtout la <strong>carte graphique</strong> et l'alimentation, là où les prébuilts rognent parfois."
+sources:
+  - label: "NVIDIA, « Gamme de cartes graphiques GeForce RTX 5060 »"
+    url: "https://www.nvidia.com/fr-fr/geforce/graphics-cards/50-series/rtx-5060-family/"
+  - label: "AMD, « Chipset AMD Socket AM5 »"
+    url: "https://www.amd.com/fr/products/processors/chipsets/am5.html"
+  - label: "CLEAResult, « What is 80 PLUS® certification program? »"
+    url: "https://www.clearesult.com/80plus/program-details"
+  - label: "Larian Studios, « Baldur's Gate 3 »"
+    url: "https://baldursgate3.game/"
 faq:
   - question: "Quel composant faut-il prioriser pour le gaming ?"
     answer: "La carte graphique (GPU), sans hésiter : c'est elle qui détermine le plus les images par seconde en jeu. Sur un budget serré, mieux vaut une bonne carte graphique avec un processeur milieu de gamme que l'inverse. Le processeur compte surtout pour les jeux très gourmands en CPU (stratégie, simulation) et le très haut rafraîchissement."
   - question: "Vaut-il mieux monter son PC ou l'acheter tout fait ?"
-    answer: "Monter soi-même coûte généralement 10 à 20 % de moins et permet de choisir chaque pièce, mais demande un peu de temps et d'aisance. Acheter un PC pré-assemblé est plus simple, garanti d'un seul tenant, mais il faut vérifier la fiche : certains prébuilts économisent sur l'alimentation ou la carte graphique. Les deux sont de bons choix selon ton envie de mettre les mains dedans."
+    answer: "Monter soi-même coûte généralement moins cher et permet de choisir chaque pièce, mais demande un peu de temps et d'aisance. Acheter un PC pré-assemblé est plus simple, garanti d'un seul tenant, mais il faut vérifier la fiche : certains prébuilts économisent sur l'alimentation ou la carte graphique. Les deux sont de bons choix selon ton envie de mettre les mains dedans."
   - question: "Combien de RAM pour jouer en 2026 ?"
     answer: "16 Go restent un minimum confortable pour la plupart des jeux, mais 32 Go deviennent un bon investissement si tu gardes ta machine plusieurs années, si tu streames, ou si tu jongles avec beaucoup d'onglets et d'applications en fond. Au-delà, l'intérêt est marginal pour un usage purement gaming."
   - question: "Faut-il un SSD NVMe pour le gaming ?"
@@ -61,7 +70,7 @@ Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise 
 
 ### L'alimentation et le boîtier
 
-Deux pièces qu'on néglige à tort. Une **alimentation** fiable, à la bonne puissance et certifiée 80+, protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
+Deux pièces qu'on néglige à tort. Une **alimentation** fiable, à la bonne puissance et certifiée 80+ (un label de rendement énergétique), protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
 
 > 🛒 **Comparer les composants du moment**
 > Les prix des cartes graphiques et des processeurs bougent sans arrêt. Pour voir ce qui est disponible aujourd'hui : [voir les cartes graphiques gaming sur Amazon](https://www.amazon.fr/s?k=carte+graphique+gaming&tag=monbureauconnecte-21).
@@ -84,7 +93,7 @@ Envie d'un détail pièce par pièce avec des liens directs vers chaque composan
 
 C'est la grande question, et il n'y a pas de mauvais choix, juste le tien.
 
-- **Monter soi-même** revient généralement **10 à 20 % moins cher**, et tu choisis chaque pièce. Il faut un peu de temps, deux tutoriels vidéo et de la rigueur, mais rien d'insurmontable aujourd'hui.
+- **Monter soi-même** revient généralement **moins cher**, et tu choisis chaque pièce. Il faut un peu de temps, deux tutoriels vidéo et de la rigueur, mais rien d'insurmontable aujourd'hui.
 - **Acheter un PC pré-assemblé** est plus simple, garanti d'un seul tenant, et te fait gagner du temps. Le piège : certains prébuilts économisent sur des pièces invisibles à première vue (**alimentation** au rabais, **carte graphique** d'un cran en dessous du nom affiché). Compare toujours la fiche détaillée, GPU et alimentation en tête.
 
 ## Ne pas oublier le reste du poste

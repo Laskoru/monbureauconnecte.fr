@@ -35,6 +35,15 @@ interactiveGuide:
       result: "Le vertical reste possible mais l'angle très prononcé peut gêner les gestes fins. Choisis un modèle <strong>45-50°</strong> avec un bon capteur, ou envisage un <strong>trackball</strong> si tu veux zéro déplacement du bras."
     - label: "Petit budget"
       result: "Des verticales à moins de 30 € existent et soulagent déjà bien. Vérifie juste la <strong>taille</strong> et la présence de boutons avant/arrière ; le sans-fil est un confort, pas une obligation."
+sources:
+  - label: "Schmid et al., Applied Ergonomics (2015), « A vertical mouse and ergonomic mouse pads alter wrist position but do not reduce carpal tunnel pressure in patients with carpal tunnel syndrome »"
+    url: "https://research.vu.nl/en/publications/a-vertical-mouse-and-ergonomic-mouse-pads-alter-wrist-position-bu/"
+  - label: "Ameli.fr, « Syndrome du canal carpien : définition, fréquence et causes »"
+    url: "https://www.ameli.fr/assure/sante/themes/syndrome-canal-carpien/comprendre-syndrome-canal-carpien"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "Logitech Support, « MX Vertical - Caractéristiques techniques »"
+    url: "https://support.logi.com/hc/fr/articles/360023303394-MX-Vertical-Caract%C3%A9ristiques-techniques"
 faq:
   - question: "Une souris verticale soulage-t-elle le poignet ?"
     answer: "Oui : en plaçant la main en position poignée de main (pouce vers le haut), elle réduit la torsion de l'avant-bras, souvent responsable des douleurs. Le confort se ressent surtout sur de longues journées."
@@ -46,7 +55,7 @@ faq:
 
 ## Pourquoi passer à une souris verticale
 
-Une souris classique impose au poignet une **rotation en pronation** permanente (paume tournée vers le bureau) plusieurs heures par jour. Sur la durée, cette position favorise les tensions dans l'avant-bras, voire des douleurs plus sérieuses comme la tendinite ou le syndrome du canal carpien. Une souris verticale place la main dans une position proche de la **poignée de main** (pouce vers le haut), ce qui relâche cette rotation et réduit la pression sur le nerf médian et les tendons.
+Une souris classique impose au poignet une **rotation en pronation** permanente (paume tournée vers le bureau) plusieurs heures par jour. Sur la durée, cette position favorise les tensions dans l'avant-bras, voire des douleurs plus sérieuses comme la tendinite ou le syndrome du canal carpien. Une souris verticale place la main dans une position proche de la **poignée de main** (pouce vers le haut), ce qui relâche cette rotation. En revanche, une étude menée auprès de personnes atteintes du syndrome du canal carpien n'a pas mesuré de baisse de pression dans le canal avec une souris verticale : elle change la position du poignet, sans effet démontré sur le nerf.
 
 Ce n'est pas un gadget marketing : c'est un des rares accessoires ergonomiques dont l'effet se ressent souvent **dès les premières semaines**, en particulier pour qui travaille toute la journée à l'écran.
 

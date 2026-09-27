@@ -35,6 +35,13 @@ interactiveGuide:
       result: "Tu peux privilégier le <strong>confort de frappe</strong> avant le silence : des <strong>tactiles bruns silencieux</strong> gardent un léger retour agréable sans trop de bruit. Le silence total devient secondaire."
     - label: "Je découvre le mécanique"
       result: "Commence par un modèle <strong>linéaire silencieux d'entrée/milieu de gamme</strong> : tu goûtes à la frappe mécanique sans te ruiner ni déranger, quitte à affiner tes préférences de switch plus tard."
+sources:
+  - label: "Cherry, « CHERRY MX SILENT RED »"
+    url: "https://www.cherry.de/en-gb/product/mx2a-silent-red"
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
 faq:
   - question: "Un clavier mécanique peut-il être silencieux ?"
     answer: "Oui : les switchs dits silencieux (rouge silent, brun silencieux) et des amortisseurs réduisent nettement le bruit de frappe, tout en gardant le confort mécanique. C'est le bon compromis pour un bureau partagé ou des visios."
@@ -48,7 +55,7 @@ faq:
 
 Un clavier mécanique procure une frappe plus **précise** et plus **agréable** qu'un clavier à membrane : chaque touche a une course franche, un point d'activation net, et une durabilité qui se compte en dizaines de millions de frappes. Le revers, c'est le **bruit** : en open space ou pendant une visio où le micro capte chaque clic, le claquement répété devient vite gênant pour l'entourage. Les modèles à switches **silencieux** gardent l'essentiel du ressenti mécanique tout en réduisant nettement le bruit à l'impact.
 
-« Silencieux » ne veut pas dire « mou ». Un bon switch silent conserve un point d'activation franc (on sait qu'on a tapé) mais amortit le claquement mécanique et le retour de la touche, les deux sources principales de bruit. Le résultat, une fois bien réglé, est un clavier qu'on entend à peine à un mètre, sans rien perdre du plaisir de frappe qui fait tout l'intérêt du mécanique.
+« Silencieux » ne veut pas dire « mou ». Un bon switch silent conserve un point d'activation franc (on sait qu'on a tapé) mais amortit le claquement mécanique et le retour de la touche, les deux sources principales de bruit. Le résultat, une fois bien réglé, est un clavier qu'on entend à peine depuis le bureau voisin, sans rien perdre du plaisir de frappe qui fait tout l'intérêt du mécanique.
 
 ![Clavier mécanique compact posé sur un bureau en bois](/covers/claviers-mecaniques-silencieux-inbody.webp)
 
@@ -87,7 +94,7 @@ Même avec de bons switches, quelques gestes aident : pose le clavier sur un **t
 
 ## Mécanique silencieux ou membrane : le vrai match
 
-Face à un clavier à membrane basique (souvent le plus silencieux par défaut), le mécanique silencieux se justifie-t-il ? Tout dépend de ce que tu cherches. La **membrane** est discrète, légère et bon marché, mais sa frappe est molle, imprécise, et elle s'use : au bout d'un an ou deux d'usage intensif, certaines touches accrochent. Le **mécanique silencieux** conserve le meilleur du mécanique (une course nette, un point d'activation précis, une durabilité qui se compte en dizaines de millions de frappes) tout en ramenant le bruit à un niveau acceptable en environnement partagé. Si tu tapes **beaucoup** et que le confort de frappe compte, l'écart de prix se rentabilise vite en plaisir d'usage et en longévité. Si tu ne tapes qu'occasionnellement et que seul le silence importe, une bonne membrane suffit.
+Face à un clavier à membrane basique (souvent le plus silencieux par défaut), le mécanique silencieux se justifie-t-il ? Tout dépend de ce que tu cherches. La **membrane** est discrète, légère et bon marché, mais sa frappe est molle, imprécise, et elle s'use : avec les années d'usage intensif, certaines touches accrochent. Le **mécanique silencieux** conserve le meilleur du mécanique (une course nette, un point d'activation précis, une durabilité qui se compte en dizaines de millions de frappes) tout en ramenant le bruit à un niveau acceptable en environnement partagé. Si tu tapes **beaucoup** et que le confort de frappe compte, l'écart de prix se rentabilise vite en plaisir d'usage et en longévité. Si tu ne tapes qu'occasionnellement et que seul le silence importe, une bonne membrane suffit.
 
 ## Budget et notre méthode
 

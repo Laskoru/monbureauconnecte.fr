@@ -36,6 +36,11 @@ interactiveGuide:
       result: "Reste sur un <strong>70-80 cm</strong> : en dessous, l'avantage sur un tapis classique devient marginal ; au-dessus, tu te retrouves à l'étroit."
     - label: "Du gaming rapide"
       result: "Une surface <strong>« speed »</strong> plus lisse aide aux mouvements vifs ; pour un usage bureautique, le <strong>tissu standard</strong> tissé (glisse fluide et silencieuse) suffit largement."
+sources:
+  - label: "Logitech G, « Tapis de souris gaming Logitech G840 Extra Large (XL) »"
+    url: "https://www.logitechg.com/fr-fr/shop/p/g840-cloth-xl-gaming-mouse-pad"
+  - label: "Corsair, « Tapis de souris gaming anti-effilochement MM300 - Extended »"
+    url: "https://www.corsair.com/fr/fr/p/mouse-pads/ch-9000108-ww/mm300-anti-fray-cloth-gaming-mouse-pad-extended-ch-9000108-ww"
 faq:
   - question: "À quoi sert un tapis de souris XXL ?"
     answer: "Il couvre toute la zone clavier + souris : surface homogène et confortable, repose-poignet naturel, meilleure glisse. Il protège aussi le bureau et unifie l'esthétique du poste."

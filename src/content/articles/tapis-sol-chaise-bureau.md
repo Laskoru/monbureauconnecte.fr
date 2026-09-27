@@ -35,6 +35,11 @@ interactiveGuide:
       result: "Plus une question de <strong>confort de glisse</strong> et de <strong>silence</strong> que de protection stricte. Un modèle d'entrée de gamme fait le travail."
     - label: "Un sol en location"
       result: "Protège pour l'<strong>état des lieux</strong> : quelques dizaines d'euros de tapis évitent un litige sur un parquet marqué au départ. Vise large et épais."
+sources:
+  - label: "Quick-Step, « Comment nettoyer votre parquet »"
+    url: "https://www.quick-step.fr/fr-fr/parquet/nettoyage"
+  - label: "Service-public.gouv.fr, « Dépôt de garantie dans un bail d'habitation »"
+    url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F31269"
 faq:
   - question: "Un tapis de sol est-il vraiment nécessaire sur un parquet ?"
     answer: "S'il s'agit d'un parquet massif ou vitrifié fragile, oui : les roulettes d'une chaise de bureau, surtout avec des roulettes dures d'origine, finissent par marquer ou rayer la surface au fil des mois. Sur un sol déjà très résistant (carrelage, béton ciré), c'est plus une question de confort de glisse que de protection stricte."

@@ -34,13 +34,22 @@ interactiveGuide:
       result: "Prends une <strong>station d'accueil</strong> avec <strong>Ethernet</strong> (réseau filaire stable) et <strong>100 W de charge</strong> pour alimenter le portable par le même câble. Un seul branchement matin et soir."
     - label: "Je manque juste de ports USB"
       result: "Un petit <strong>hub USB-C multiport</strong> à quelques euros règle le problème. Regarde surtout le nombre de <strong>ports USB-A</strong> (souris, clavier, clés) et la présence d'un lecteur de carte si tu en as l'usage."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "Apple, « Utiliser deux écrans avec votre MacBook Air ou MacBook Pro avec puce M3 »"
+    url: "https://support.apple.com/fr-fr/117373"
+  - label: "Intel, « Technologie Thunderbolt™ : la connexion USB-C la plus rapide, la plus simple et la plus fiable »"
+    url: "https://www.intel.fr/content/www/fr/fr/architecture-and-technology/thunderbolt/overview.html"
+  - label: "HDMI Licensing Administrator, « HDMI FORUM RELEASES VERSION 2.0 OF THE HDMI SPECIFICATION »"
+    url: "https://www.hdmi.org/press/bodydetails/24"
 faq:
   - question: "Quelle différence entre un simple hub et une vraie station d'accueil ?"
     answer: "Un hub ajoute quelques ports supplémentaires (USB, HDMI). Une station d'accueil va plus loin : elle centralise aussi l'alimentation et le réseau filaire, avec un seul câble à brancher et débrancher pour tout connecter d'un coup."
   - question: "Un hub USB-C peut-il faire tourner deux écrans externes en même temps ?"
     answer: "Ça dépend du modèle et de la puce graphique de l'ordinateur portable : certains hubs gèrent bien le double écran, d'autres non. Vérifie explicitement la mention \"dual monitor\" ou \"double écran\" dans la fiche produit avant d'acheter."
   - question: "Les Mac sont-ils compatibles avec le double écran via un hub ?"
-    answer: "Ça dépend de la puce. Les MacBook à puce M1 ou M2 de base ne gèrent qu'un seul écran externe, quel que soit le hub, sauf modèles intégrant la technologie DisplayLink (avec un pilote à installer). Le MacBook Air M3 en gère deux capot fermé, et les MacBook à puce M4 en gèrent deux. Vérifie la fiche technique Apple de ton modèle avant d'acheter. Sur PC Windows, la plupart des machines gèrent le double écran sans souci."
+    answer: "Ça dépend de la puce. Les MacBook à puce M1 ou M2 de base ne gèrent qu'un seul écran externe, quel que soit le hub, sauf modèles intégrant la technologie DisplayLink (avec un pilote à installer). Les MacBook Air et MacBook Pro à puce M3 en gèrent deux capot fermé, et les MacBook à puce M4 en gèrent deux. Vérifie la fiche technique Apple de ton modèle avant d'acheter. Sur PC Windows, la plupart des machines gèrent le double écran sans souci."
 ---
 
 ## Pourquoi un hub ou une station d'accueil change le quotidien

@@ -35,11 +35,18 @@ interactiveGuide:
       result: "La <strong>charge supportée</strong> est le point clé : compare le poids réel de l'écran à la limite du bras, avec de la marge. Confirme un <strong>VESA 100×100</strong> et un ressort assez costaud."
     - label: "Surtout gagner de la place"
       result: "N'importe quel bras libère le plateau (l'écran flotte au-dessus). Vise une <strong>fixation par pince</strong> (sans perçage) compatible avec l'épaisseur de ton bureau, et un <strong>passe-câbles</strong> intégré."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "Ergotron, fiche technique « LX Desk Monitor Arm »"
+    url: "https://media.ergotron.com/reserved/resources/05-lx-all-fur-eo-orig.pdf"
 faq:
   - question: "À quelle hauteur régler son écran ?"
-    answer: "Le haut de l'écran doit arriver au niveau des yeux, à environ un bras de distance, pour garder la nuque droite. Un bras articulé permet ce réglage précis, contrairement à un pied fixe."
+    answer: "Le haut de l'écran doit arriver au niveau des yeux (un peu plus bas si tu portes des verres progressifs), à environ un bras de distance, pour garder la nuque droite. Un bras articulé permet ce réglage précis, contrairement à un pied fixe."
   - question: "Un bras d'écran convient-il à tous les écrans ?"
-    answer: "La plupart des bras acceptent la norme VESA (75x75 ou 100x100 mm) et une plage de taille/poids indiquée (souvent 17 à 32 pouces). Vérifie que ton écran est compatible VESA et que son poids entre dans la fourchette du bras."
+    answer: "La plupart des bras acceptent la norme VESA (75x75 ou 100x100 mm) et une plage de taille/poids indiquée. Vérifie que ton écran est compatible VESA et que son poids entre dans la fourchette du bras."
   - question: "Mon écran n'a pas de trous VESA, que faire ?"
     answer: "Certains écrans grand public (souvent fins ou avec un pied design) n'ont pas de fixation VESA à l'arrière. Il existe des adaptateurs VESA universels (une plaque qui se glisse sous le pied ou se clipse), mais vérifie leur compatibilité avec ton modèle précis avant d'acheter, car ils ne conviennent pas à tous les châssis."
 ---
@@ -70,7 +77,7 @@ Un **ressort à gaz** permet un ajustement fluide d'une seule main : on monte, d
 
 ### La gestion des câbles
 
-Un bras avec **passe-câbles** intégré garde le fil de l'écran discipliné le long du bras : un détail qui fait toute la différence pour un bureau net.
+Un bras avec **passe-câbles** intégré garde le fil de l'écran discipliné le long du bras : un détail qui compte pour garder un bureau net.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les bras supports d'écran articulés sur Amazon](https://www.amazon.fr/s?k=bras+support+ecran+articule&tag=monbureauconnecte-21).
@@ -87,7 +94,7 @@ Pour un seul écran, un bras simple à ressort à gaz suffit largement et coûte
 
 ## L'installer et bien le régler
 
-Le montage prend rarement plus de dix minutes : on fixe la base (pince ou traversante), on visse la platine VESA au dos de l'écran, on clipse le tout. Une fois en place, prends le temps du réglage qui compte vraiment : **haut de l'écran au niveau des yeux** (ou juste en dessous), écran à **une longueur de bras**, légèrement incliné vers l'arrière. C'est ce réglage (impossible avec un socle d'origine) qui justifie l'achat. Pense aussi à passer le câble de l'écran (et éventuellement de l'alimentation) dans le passe-câbles pour finir proprement ; associé à un bon [rangement des câbles](/articles/rangement-cables-bureau/), le résultat transforme l'allure du poste.
+Le montage est rapide : on fixe la base (pince ou traversante), on visse la platine VESA au dos de l'écran, on clipse le tout. Une fois en place, prends le temps du réglage qui compte vraiment : **haut de l'écran au niveau des yeux** (ou juste en dessous), écran à **une longueur de bras**, légèrement incliné vers l'arrière. C'est ce réglage (impossible avec un socle d'origine) qui justifie l'achat. Pense aussi à passer le câble de l'écran (et éventuellement de l'alimentation) dans le passe-câbles pour finir proprement ; associé à un bon [rangement des câbles](/articles/rangement-cables-bureau/), le résultat transforme l'allure du poste.
 
 ## Bras d'écran, rehausseur ou pied d'origine : lequel choisir ?
 

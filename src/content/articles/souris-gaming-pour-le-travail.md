@@ -36,6 +36,11 @@ interactiveGuide:
       result: "La <strong>forme</strong> passe avant les boutons : oriente-toi plutôt vers une <a href='/articles/souris-ergonomique-verticale/'>souris verticale</a> ou un <a href='/articles/trackball-vs-souris-classique-poignet/'>trackball</a>. Le nombre de boutons est secondaire face au confort."
     - label: "Travailles en open space"
       result: "Attention aux <strong>clics sonores</strong> de certaines gaming : vérifie ce point, ou regarde nos <a href='/articles/souris-sans-fil-silencieuse/'>souris silencieuses</a>. Pense aussi à couper le <strong>RGB</strong> (gagne de l'autonomie, ne sert à rien au bureau)."
+sources:
+  - label: "Razer, « Souris de gaming RGB sans fil avancée personnalisable : Razer Basilisk V3 Pro »"
+    url: "https://www.razer.com/fr-fr/gaming-mice/razer-basilisk-v3-pro"
+  - label: "Logitech G, « Souris gaming sans fil G502 X Plus RVB »"
+    url: "https://www.logitechg.com/fr-fr/shop/p/g502-x-plus-wireless-lightforce"
 faq:
   - question: "Une souris gaming a-t-elle un intérêt si je ne joue jamais ?"
     answer: "Oui, largement. Ce qui fait l'intérêt d'une souris gaming au bureau, ce ne sont pas ses performances en jeu mais son nombre de boutons programmables et la qualité de son capteur, deux points où les souris bureautiques classiques restent souvent limitées à deux ou trois boutons."

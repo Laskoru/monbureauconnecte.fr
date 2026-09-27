@@ -35,11 +35,18 @@ interactiveGuide:
       result: "Choisis un modèle <strong>léger</strong>, avec <strong>sangles universelles</strong> qui s'adaptent à des dossiers différents, et une poignée de transport."
     - label: "Chaise gaming / dossier très incurvé"
       result: "Vérifie en priorité la <strong>longueur des sangles</strong> et la souplesse de la fixation : ces dossiers sont plus larges et plus courbés qu'une chaise de bureau classique."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "Ameli.fr, « Mal de dos : le bon traitement, c'est le mouvement ! »"
+    url: "https://www.ameli.fr/assure/sante/themes/lombalgie-aigue/traitement-prevention"
 faq:
   - question: "Un coussin lombaire est-il utile même sur une chaise de bureau récente ?"
     answer: "Oui, dans beaucoup de cas. Le dossier d'une chaise de bureau standard, même correcte, est souvent trop droit ou trop reculé par rapport à la courbure naturelle du bas du dos. Un coussin lombaire vient combler cet espace et maintenir la cambrure, ce qu'un dossier plat ne fait pas toujours, même sur un siège de bonne qualité."
   - question: "Faut-il le porter toute la journée dès le premier jour ?"
-    answer: "Non, mieux vaut une adaptation progressive. Commence par des sessions d'une à deux heures les premiers jours, le temps que le dos s'habitue à ce nouveau soutien, puis augmente la durée. Un maintien trop marqué d'emblée peut créer une gêne inhabituelle plutôt qu'un confort immédiat."
+    answer: "Non, mieux vaut une adaptation progressive. Commence par des sessions courtes les premiers jours, le temps que le dos s'habitue à ce nouveau soutien, puis augmente la durée. Un maintien trop marqué d'emblée peut créer une gêne inhabituelle plutôt qu'un confort immédiat."
   - question: "Coussin lombaire ou chaise ergonomique avec soutien lombaire intégré : que choisir ?"
     answer: "Si tu dois changer de chaise de toute façon, un modèle avec soutien lombaire réglable intégré est plus pratique sur le long terme. Mais si ta chaise actuelle est correcte à part ce point précis, un coussin lombaire coûte nettement moins cher et permet de tester la solution avant d'investir dans un nouveau siège."
 ---

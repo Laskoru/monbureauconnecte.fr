@@ -35,6 +35,11 @@ interactiveGuide:
       result: "Choisis un support <strong>ajouré en aluminium</strong> : l'air circule sous la coque et la dissipation s'améliore nettement par rapport à un usage posé à plat sur la table."
     - label: "Petit budget"
       result: "Même un support simple à une vingtaine d'euros corrige l'essentiel, du moment que tu ajoutes un <strong>clavier externe</strong>. C'est de loin l'investissement ergonomique le plus rentable pour un portable."
+sources:
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
 faq:
   - question: "Un support ordinateur portable suffit-il, ou faut-il aussi un clavier externe ?"
     answer: "Un support seul relève l'écran à hauteur des yeux, mais éloigne aussi le clavier intégré, moins pratique à utiliser en hauteur. Pour un usage prolongé, l'associer à un clavier et une souris externes reste la configuration la plus confortable."
@@ -46,9 +51,9 @@ faq:
 
 ## Pourquoi un support pour ordinateur portable soulage la nuque
 
-Un ordinateur portable posé à plat sur le bureau place l'écran **bien en dessous du niveau des yeux**, ce qui oblige à baisser la tête pendant des heures. Sur la durée, cette position penchée est l'une des causes les plus fréquentes de **douleurs à la nuque et aux épaules** en télétravail (le fameux « cou du portable »). Un support relève l'écran à une hauteur plus proche du regard, ce qui redresse naturellement la posture et soulage la chaîne cervicale.
+Un ordinateur portable posé à plat sur le bureau place l'écran **bien en dessous du niveau des yeux**, ce qui oblige à baisser la tête pendant des heures. Sur la durée, cette position penchée peut provoquer des **douleurs à la nuque et aux épaules** en télétravail (le fameux « cou du portable »). Un support relève l'écran à une hauteur plus proche du regard, ce qui redresse naturellement la posture et soulage la chaîne cervicale.
 
-C'est, avec le clavier externe, l'un des changements les plus rentables qu'on puisse faire sur un poste de travail nomade : quelques dizaines d'euros pour corriger un problème que des millions de personnes subissent sans le savoir, huit heures par jour.
+C'est, avec le clavier externe, l'un des changements les plus rentables qu'on puisse faire sur un poste de travail nomade : quelques dizaines d'euros pour corriger un problème que beaucoup subissent sans le savoir, huit heures par jour.
 
 ![Ordinateur portable surélevé sur un support, avec clavier et souris externes](/covers/support-ordinateur-portable-ergonomique-inbody.webp)
 
@@ -56,7 +61,7 @@ C'est, avec le clavier externe, l'un des changements les plus rentables qu'on pu
 
 C'est le point clé, souvent mal compris. Un support **relève l'écran** (parfait pour la nuque), mais il **éloigne du même coup le clavier intégré**, qui se retrouve trop haut et trop loin pour taper confortablement. Le support seul déplace donc le problème de la nuque vers les épaules et les poignets.
 
-La solution est simple : **support pour l'écran + clavier et souris externes** posés à bonne hauteur sur le bureau. On obtient alors la même ergonomie qu'un poste fixe (écran au niveau des yeux, avant-bras horizontaux) pour un budget dérisoire face à un écran externe. C'est LA configuration à viser dès qu'on travaille plusieurs heures par jour sur un portable.
+La solution est simple : **support pour l'écran + clavier et souris externes** posés à bonne hauteur sur le bureau. On se rapproche alors de l'ergonomie d'un poste fixe (écran à hauteur du regard, avant-bras horizontaux) pour un budget dérisoire face à un écran externe. C'est la configuration minimale à viser dès qu'on travaille plusieurs heures par jour sur un portable ; quand c'est possible, l'INRS privilégie même un écran externe relié à une station d'accueil.
 
 ## Ce qui différencie un bon support
 
@@ -95,7 +100,7 @@ Deux solutions pour remonter l'écran, deux usages. Le **support portable** est 
 
 ## Bien régler la hauteur, éviter les erreurs
 
-Une fois le support en place, le réglage compte autant que l'achat. La règle est la même que pour un écran classique : le **haut de l'écran au niveau des yeux** (ou juste en dessous), à environ une longueur de bras. Sur un portable, cela revient souvent à le surélever plus qu'on ne le croit : monte d'un cran de plus que ton premier réflexe, la tendance naturelle étant de rester trop bas.
+Une fois le support en place, le réglage compte autant que l'achat. La règle est la même que pour un écran classique : le **haut de l'écran juste sous le niveau des yeux**, à environ une longueur de bras. Sur un portable, cela revient souvent à le surélever plus qu'on ne le croit : monte d'un cran de plus que ton premier réflexe, la tendance naturelle étant de rester trop bas.
 
 Trois erreurs reviennent souvent. **Utiliser le support sans clavier externe** : on l'a dit, c'est le piège n°1, qui déplace la tension vers les épaules. **Choisir un support instable** : s'il vibre quand on touche l'écran ou le clavier intégré, on n'osera pas s'appuyer et on s'en méfiera. **Négliger la ventilation** sur un portable qui chauffe : un support plein peut piéger la chaleur, alors qu'un modèle ajouré l'évacue. Enfin, pense à la **connectique** : une fois l'ordinateur surélevé et fermé (ou en écran secondaire), un [hub ou une station d'accueil](/articles/hub-usb-c-station-accueil/) évite de tendre les câbles vers un portable désormais en hauteur.
 

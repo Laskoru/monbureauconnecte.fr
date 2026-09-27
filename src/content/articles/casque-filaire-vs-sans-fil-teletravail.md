@@ -25,6 +25,13 @@ comparison:
     - ["Liberté de mouvement", "Limitée à la longueur du câble", "Totale dans la pièce, voire au-delà avec le Bluetooth"]
     - ["Prix à qualité égale", "Souvent moins cher", "Coût supplémentaire pour l'électronique sans fil et la batterie"]
     - ["Contrainte au quotidien", "Câble qui s'emmêle ou tire sur le bureau", "Recharge à ne pas oublier"]
+sources:
+  - label: "Sony (guide d'aide du WH-CH720N), « Le son saute fréquemment. »"
+    url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000776441.html"
+  - label: "Sony (guide d'aide du WH-CH720N), « Utilisation du câble pour casque fourni »"
+    url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000777142.html"
+  - label: "Bluetooth SIG, « Understanding Bluetooth® range »"
+    url: "https://www.bluetooth.com/learn-about-bluetooth/key-attributes/range/"
 faq:
   - question: "Le sans-fil ajoute-t-il vraiment un délai perceptible en visio ?"
     answer: "Sur les bons casques Bluetooth récents, la latence reste généralement imperceptible pour une réunion classique : la voix des autres participants arrive sans décalage gênant. Le problème peut se voir sur un flux vidéo local mal synchronisé (regarder une vidéo puis parler dessus), mais pour un appel Teams, Zoom ou Meet, l'oreille ne fait pas la différence dans l'immense majorité des cas."

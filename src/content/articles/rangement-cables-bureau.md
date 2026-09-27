@@ -35,6 +35,11 @@ interactiveGuide:
       result: "Une <strong>gaine tressée extensible</strong> rassemble plusieurs câbles en un faisceau souple, plus un ou deux <strong>clips adhésifs</strong> pour tenir un câble isolé (chargeur) sur le bord du bureau."
     - label: "Des câbles qui traversent une zone de passage"
       result: "Là, c'est une question de <strong>sécurité</strong> : une <strong>goulotte de sol</strong> plate évite les chutes. Ne fais pas passer un câble en travers d'un passage sans le protéger."
+sources:
+  - label: "INRS, « Chutes de plain-pied. Mesures de prévention »"
+    url: "https://www.inrs.fr/risques/chutes-de-plain-pied/mesures-de-prevention.html"
+  - label: "INRS, « Risques électriques. Accidents d'origine électrique »"
+    url: "https://www.inrs.fr/risques/electriques/accidents-origine-electrique.html"
 faq:
   - question: "Faut-il percer le bureau pour installer un rangement câbles ?"
     answer: "Non, la plupart des paniers et goulottes récents se fixent par pince ou adhésif renforcé, sans perçage. Le perçage reste une option plus stable mais n'est nécessaire que pour des installations très chargées."

@@ -16,6 +16,13 @@ topPick:
   ctaLabel: "Voir la Wacom Intuos S sur Amazon"
 coverAlt: "Une main tenant un stylet sur une tablette graphique, posée à côté d'un clavier d'ordinateur portable et de feutres de dessin"
 draft: false
+sources:
+  - label: "Wacom, « Wacom Intuos: Creative Pen Tablet »"
+    url: "https://www.wacom.com/fr-fr/products/pen-tablets/wacom-intuos"
+  - label: "XPPen, « Deco 01 V3 »"
+    url: "https://www.xp-pen.fr/product/deco-01-v3.html"
+  - label: "Huion, « Huion Inspiroy H640P - Tablette graphique format compact »"
+    url: "https://www.huion.com/fr/products/inspiroy-h640p"
 faq:
   - question: "Une tablette graphique d'entrée de gamme suffit-elle pour annoter des documents au bureau ?"
     answer: "Largement. Pour annoter des PDF, signer électroniquement ou surligner à la volée pendant une visio, une petite tablette d'entrée de gamme avec une surface active correcte et un stylet à quelques niveaux de pression fait très bien l'affaire. Les fonctions avancées (grande surface, inclinaison du stylet, nombreux boutons) intéressent surtout l'illustration ou la retouche photo poussée, pas un usage bureautique."
@@ -39,7 +46,7 @@ La zone active, c'est la surface de la tablette réellement sensible au stylet. 
 
 ### La sensibilité à la pression du stylet
 
-Le nombre de **niveaux de pression** (souvent 4096 à 8192 sur les modèles d'entrée de gamme) détermine la finesse avec laquelle le trait s'épaissit ou s'affine selon la force appliquée. Pour de la simple annotation, même une sensibilité modeste suffit. Pour du dessin ou de la prise de notes illustrées plus expressives, une sensibilité plus élevée rend le geste plus naturel.
+Le nombre de **niveaux de pression** (souvent 4096 à 16 384 sur les modèles d'entrée de gamme) détermine la finesse avec laquelle le trait s'épaissit ou s'affine selon la force appliquée. Pour de la simple annotation, même une sensibilité modeste suffit. Pour du dessin ou de la prise de notes illustrées plus expressives, une sensibilité plus élevée rend le geste plus naturel.
 
 ### Le stylet : avec ou sans pile, et le nombre de boutons
 
@@ -79,7 +86,7 @@ L'installation se limite en général à brancher la tablette en USB et à laiss
 - **Sur deux écrans, les tracés sont déformés** : le pilote peut étaler la zone active sur l'ensemble des écrans, ce qui étire les proportions et réduit la précision. Assigne la tablette à un seul écran (certains modèles permettent de basculer de l'un à l'autre avec une touche) et, si le pilote le propose, active l'option qui conserve les proportions : un cercle tracé sur la tablette reste alors un cercle à l'écran.
 - **La pression ne répond pas dans un logiciel** : si elle fonctionne ailleurs, ce n'est pas une panne mais un réglage du logiciel ou du pilote. Certains outils, comme le surligneur d'un lecteur PDF, gardent d'ailleurs une épaisseur fixe quelle que soit la pression.
 - **La tablette décroche ou n'est pas reconnue** : teste-la sur un autre port, sans hub ni rallonge entre les deux, et désinstalle le pilote d'une ancienne tablette avant d'installer le nouveau, car deux pilotes de tablette cohabitent mal. Télécharge toujours le pilote sur le site du fabricant.
-- **La pointe accroche ou s'aplatit** : elle s'use avec le temps, c'est normal. Beaucoup de tablettes sont livrées avec des pointes de rechange : jette un œil dans la boîte avant d'en commander.
+- **La pointe accroche ou s'aplatit** : elle s'use avec le temps, c'est normal. Beaucoup de tablettes sont livrées avec des pointes de rechange, parfois rangées dans le stylet lui-même comme sur la Wacom Intuos : vérifie avant d'en commander.
 
 ## Où la placer sur le bureau
 

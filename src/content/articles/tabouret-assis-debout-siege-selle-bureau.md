@@ -36,6 +36,13 @@ products:
       - "Sans dossier (fatigant au début)"
       - "À alterner avec une vraie chaise"
       - "Assise ferme"
+sources:
+  - label: "INRS, « Les postures sédentaires au travail. Définition, effets sur la santé et mesures de prévention »"
+    url: "https://www.inrs.fr/media.html?refINRS=ED%206494"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Utilisation d'un swiss ball comme siège de travail »"
+    url: "https://www.inrs.fr/media.html?refINRS=QR%20139"
 faq:
   - question: "Un tabouret assis-debout convient-il pour toute la journée de travail ?"
     answer: "Non, et ce n'est pas son rôle. L'idée n'est pas de remplacer complètement la chaise de bureau mais d'alterner : quelques sessions d'une heure ou deux dessus, en particulier sur les créneaux où le bureau est relevé en position debout, puis un retour à une assise classique. Utilisé en continu sur huit heures, il devient fatigant (un peu moins sur les modèles pourvus d'un dossier et d'un repose-pieds), mais le principe reste l'alternance."
@@ -47,7 +54,7 @@ faq:
 
 ## Pourquoi alterner les appuis plutôt que rester assis figé
 
-Rester assis sans bouger pendant des heures est l'un des points les plus documentés en ergonomie de bureau : la position statique, même sur une bonne chaise, finit par comprimer les mêmes disques et figer les mêmes muscles toute la journée. Le tabouret assis-debout part d'un principe différent de la chaise classique : au lieu de stabiliser complètement le corps, il encourage de petits mouvements permanents (bascule, rotation, léger rééquilibrage) qui sollicitent en continu les muscles profonds du dos et du tronc.
+Rester assis sans bouger pendant des heures est l'un des points les plus documentés en ergonomie de bureau : la position statique, même sur une bonne chaise, fige les mêmes muscles toute la journée, et l'INRS associe ces postures sédentaires à de nombreuses pathologies. Le tabouret assis-debout part d'un principe différent de la chaise classique : au lieu de stabiliser complètement le corps, il encourage de petits mouvements permanents (bascule, rotation, léger rééquilibrage) qui sollicitent en continu les muscles profonds du dos et du tronc.
 
 Ce n'est pas un gadget réservé aux passionnés d'ergonomie. C'est un complément logique pour qui possède déjà un bureau réglable en hauteur et alterne entre position assise et debout : le tabouret comble l'entre-deux, ce moment où rester debout complètement devient fatigant mais où se rasseoir sur une chaise classique casse la dynamique. Il trouve aussi sa place devant un plan de travail haut fixe, pour des tâches courtes qui ne justifient pas une vraie chaise.
 

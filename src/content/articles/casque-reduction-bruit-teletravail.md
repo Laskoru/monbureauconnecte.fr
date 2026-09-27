@@ -34,9 +34,16 @@ interactiveGuide:
       result: "La priorité passe au <strong>micro</strong> : vise un casque avec micro à réduction de bruit correct. Un modèle avec <strong>micro-perche</strong> reste le plus sûr pour être bien entendu, l'ANC devenant secondaire."
     - label: "Je veux le porter 8 h par jour"
       result: "Le <strong>confort</strong> prime sur tout : casque léger, coussinets qui ne chauffent pas, arceau bien réparti. Vérifie que l'<strong>autonomie annoncée</strong> l'est bien <strong>avec l'ANC activée</strong> : vise 25 h et plus."
+sources:
+  - label: "Sony (guide d'aide du WH-CH720N), « L'effet de la fonction antibruit est insuffisant. »"
+    url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000777134.html"
+  - label: "Sony (guide d'aide du WH-CH720N), « Durée de fonctionnement disponible »"
+    url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000776451.html"
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
 faq:
   - question: "Réduction de bruit active ou passive ?"
-    answer: "La réduction active (ANC) supprime électroniquement les bruits constants (ventilation, circulation), idéale en open space ou à la maison. La passive ne fait qu'isoler physiquement. Pour se concentrer en télétravail, l'ANC apporte un vrai confort."
+    answer: "La réduction active (ANC) atténue électroniquement les bruits constants (ventilation, circulation), idéale en open space ou à la maison. La passive ne fait qu'isoler physiquement. Pour se concentrer en télétravail, l'ANC apporte un vrai confort."
   - question: "Faut-il un micro sur le casque pour les visios ?"
     answer: "Oui, un micro intégré de qualité (avec réduction de bruit) suffit pour des visios claires sans matériel séparé. Un micro-perche ou des micros à formation de faisceau garantissent d'être bien entendu."
   - question: "Casque ou écouteurs intra pour le télétravail ?"

@@ -23,6 +23,11 @@ interactiveGuide:
       result: "Investis dans le <strong>siège</strong> et le <strong>bureau</strong> : ce sont les postes qu'on garde le plus longtemps et qui protègent ton dos. Voir nos <a href='/articles/meilleures-chaises-gaming/'>chaises gaming</a> et le <a href='/articles/bureau-assis-debout-electrique/'>bureau assis-debout</a>."
     - label: "La précision et le ressenti"
       result: "Priorise les <strong>périphériques</strong> : souris, clavier, casque et tapis. Moins chers que le PC, ils changent énormément le ressenti au quotidien pour un budget modéré."
+sources:
+  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "Service Public, « Achat d'un produit : garantie légale de conformité »"
+    url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F11094"
 faq:
   - question: "Le PC représente quelle part du budget d'un setup gaming ?"
     answer: "En général la moitié à deux tiers du total. Sur un setup complet, une fois ajoutés l'écran, les périphériques, le siège et le bureau, la facture dépasse largement le seul prix de la tour. C'est justement l'erreur classique : budgéter le PC en oubliant tout ce qui l'entoure."
@@ -31,7 +36,7 @@ faq:
   - question: "Faut-il tout acheter d'un coup ?"
     answer: "Non, et c'est souvent une mauvaise idée. Mieux vaut investir d'abord dans le PC et un écran corrects, puis compléter progressivement (meilleur siège, périphériques, accessoires) au fil des mois. On étale la dépense et on affine ses choix en fonction de son usage réel."
   - question: "Un setup gaming, c'est rentable sur la durée ?"
-    answer: "Rapporté à sa durée de vie, oui, un setup bien choisi revient à un coût mensuel modeste. Un PC tient facilement 4 à 6 ans avec un petit upgrade à mi-parcours, un bon écran et un bon siège encore plus longtemps. Ce sont les achats bas de gamme qu'on remplace vite qui coûtent cher au final."
+    answer: "Rapporté à sa durée de vie, oui, un setup bien choisi revient à un coût mensuel modeste. Un PC tient facilement plusieurs années avec un petit upgrade à mi-parcours, un bon écran et un bon siège encore plus longtemps. Ce sont les achats bas de gamme qu'on remplace vite qui coûtent cher au final."
 ---
 
 ## Le piège : budgéter le PC, oublier le reste
@@ -82,7 +87,7 @@ Cet étalement a un double avantage : il lisse la dépense, et il t'évite d'ach
 
 ## Le coût réel, ramené à la durée de vie
 
-Un chiffre brut fait peur ; ramené à la **durée de vie**, il devient raisonnable. Un bon PC tient facilement 4 à 6 ans, avec un petit upgrade (carte graphique ou SSD) à mi-parcours pour prolonger sa vie. Un bon écran et un bon siège durent souvent plus longtemps encore, et traversent plusieurs machines. Rapporté au nombre d'heures d'utilisation, un setup bien choisi revient à un **coût mensuel modeste**, bien plus intéressant que d'enchaîner le matériel bas de gamme qu'on remplace tous les ans.
+Un chiffre brut fait peur ; ramené à la **durée de vie**, il devient raisonnable. Un bon PC tient facilement plusieurs années, avec un petit upgrade (carte graphique ou SSD) à mi-parcours pour prolonger sa vie. Un bon écran et un bon siège durent souvent plus longtemps encore, et traversent plusieurs machines. Rapporté au nombre d'heures d'utilisation, un setup bien choisi revient à un **coût mensuel modeste**, bien plus intéressant que d'enchaîner le matériel bas de gamme qu'on remplace tous les ans.
 
 C'est là tout le paradoxe : le vrai gaspillage, ce n'est pas d'investir dans les bons postes, c'est d'économiser sur ceux qui comptent et de devoir tout racheter deux ans plus tard.
 
@@ -90,7 +95,7 @@ C'est là tout le paradoxe : le vrai gaspillage, ce n'est pas d'investir dans le
 
 Pour faire baisser la facture sans sacrifier la qualité, l'**occasion** et le **reconditionné** sont très efficaces, à condition de savoir où. Ils fonctionnent très bien sur les postes **durables et peu sensibles à l'usure** : un **écran** (vérifie l'absence de pixels morts), un **bureau**, parfois un **siège** en bon état, ou des **périphériques** peu utilisés. Sur ces pièces, l'économie par rapport au neuf est souvent nette, sans compromis réel.
 
-À l'inverse, on reste prudent sur les composants internes du PC d'occasion (surtout la carte graphique, qui a pu être fortement sollicitée) et sur l'**alimentation**, qu'on préfère neuve pour la fiabilité et la garantie. Un bon compromis : une base neuve pour ce qui compte, de l'occasion pour l'écran et les à-côtés. C'est souvent ce mélange qui permet de monter un cran de gamme au-dessus de son budget initial, sans rogner sur l'essentiel.
+À l'inverse, on reste prudent sur les composants internes du PC d'occasion (surtout la carte graphique, qui a pu être fortement sollicitée) et sur l'**alimentation**, qu'on préfère neuve pour la fiabilité et la garantie. Pour l'occasion comme pour le reconditionné, achète de préférence chez un professionnel : la garantie légale de conformité de deux ans s'y applique, alors qu'elle ne couvre pas les ventes entre particuliers. Un bon compromis : une base neuve pour ce qui compte, de l'occasion pour l'écran et les à-côtés. C'est souvent ce mélange qui permet de monter un cran de gamme au-dessus de son budget initial, sans rogner sur l'essentiel.
 
 > **L'essentiel à retenir**
 > Un setup gaming complet ne se résume pas au PC : compte aussi l'**écran**, les **périphériques**, le **siège**, le **bureau** et les accessoires, soit souvent **1 500 à 3 000 €** au total, le PC en représentant la moitié à deux tiers. Ne brade jamais l'**alimentation**, le **siège** et l'**écran** ; lève le pied sur l'esthétique et les périphériques d'appoint. Et surtout, **étale la dépense** : deux piliers d'abord (PC + écran), le reste ensuite.

@@ -23,13 +23,18 @@ comparison:
     - ["Bureau d'angle avec étagères intégrées", "Petit espace qui manque de rangement mural", "Profondeur parfois réduite pour poser un grand écran"]
     - ["Table pivotante ou bureau modulable", "Pièce polyvalente, bureau le jour et autre usage le soir", "Moins stable qu'un vrai bureau d'angle fixe"]
     - ["Plateau d'angle sur pieds réglables", "Qui veut une forme sur mesure et un budget serré", "Montage plus long, stabilité qui dépend surtout des pieds choisis"]
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Comment régler son siège quand on travaille sur écran ? »"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/HST/TI-FI-7.pdf"
 faq:
   - question: "Un bureau d'angle prend-il vraiment moins de place qu'un bureau droit ?"
     answer: "Oui, à surface de travail égale. Un bureau d'angle exploite un coin de pièce qui reste souvent inutilisé, alors qu'un bureau droit équivalent occupe tout un pan de mur en ligne. Tu gagnes de la place au sol pour circuler, sans sacrifier la surface disponible pour ton écran et ton clavier."
   - question: "Faut-il forcément deux murs pour installer un bureau d'angle ?"
     answer: "Dans l'idéal oui, car c'est ce qui stabilise les deux côtés du bureau et évite qu'il bouge. Certains modèles à pieds indépendants tiennent debout sans appui mural, mais ils sont moins stables : vérifie ce point avant d'acheter si ton coin de pièce n'a qu'un seul mur disponible."
   - question: "Quelle profondeur choisir pour le retour d'angle ?"
-    answer: "Vise au moins 45 à 50 cm de profondeur sur le petit côté du bureau, sinon un écran ou un clavier y tient mal. Si ce retour sert surtout de rangement d'appoint plutôt que de vraie surface de travail, une profondeur plus réduite reste acceptable."
+    answer: "Si tu comptes y poser ton écran et ton clavier, vise la profondeur que l'INRS recommande pour un poste sur écran : au moins 80 cm, sinon l'écran se retrouve trop près des yeux. Si ce retour sert surtout de rangement d'appoint plutôt que de vraie surface de travail, une profondeur plus réduite reste acceptable."
 ---
 
 ## Pourquoi un bureau d'angle fait gagner de la place dans un petit espace
@@ -55,8 +60,8 @@ Enfin, le **plateau d'angle monté sur des pieds réglables** séduit les bricol
 ## Les critères qui comptent vraiment
 
 - **Les dimensions exactes du coin de pièce** : mesure la longueur des deux murs disponibles avant de regarder les modèles, plutôt que l'inverse. Un bureau trop grand pour l'espace bloque une porte ou un radiateur ; un modèle trop petit laisse de la place perdue dans le coin.
-- **La profondeur du retour d'angle** : vise au moins 45 à 50 cm sur le petit côté si tu veux y poser un écran ou travailler dessus régulièrement. En dessous, ce retour sert plutôt de simple rangement d'appoint.
-- **La hauteur du plateau** : la plupart des bureaux d'angle fixes se situent autour de 72 à 75 cm, une hauteur standard qui convient à la majorité des chaises de bureau. Si tu es petit ou grand, vérifie que ta chaise compense l'écart.
+- **La profondeur** : du côté où tu poses l'écran et le clavier, l'INRS recommande au moins 80 cm, pour garder l'écran à bonne distance des yeux. Un retour d'angle moins profond sert plutôt de simple rangement d'appoint.
+- **La hauteur du plateau** : la plupart des bureaux d'angle fixes se situent autour de 72 à 75 cm, une hauteur standard qui convient à la majorité des chaises de bureau. Si tu es petit ou grand, vérifie que ta chaise compense l'écart (assise remontée et repose-pieds si le plateau est trop haut pour toi).
 - **La stabilité et le mode de fixation** : un bureau d'angle calé contre deux murs est naturellement plus stable qu'un modèle à pieds indépendants. Si tu ne peux pas l'adosser aux deux murs, privilégie un modèle avec des pieds larges et une structure renforcée.
 - **Le rangement intégré** : étagères, tiroir ou support pour l'unité centrale font gagner de la place au sol, un vrai plus dans un petit espace où chaque meuble supplémentaire complique la circulation.
 - **La matière du plateau** : un panneau mélaminé ou stratifié résiste bien à l'usage quotidien et coûte moins cher qu'un plateau en bois massif, largement suffisant pour un usage bureautique classique.
@@ -90,7 +95,7 @@ Un **bureau d'angle basique**, plateau mélaminé et pieds simples, se trouve g�
 Le bureau d'angle exploite un coin de pièce généralement inutilisé pour offrir **autant de surface de travail qu'un grand bureau droit**, sans encombrer le reste de l'espace, à condition de bien le choisir :
 
 - **Les dimensions exactes du coin** : la longueur des deux murs disponibles, mesurée avant de regarder les modèles.
-- **La profondeur du retour d'angle** : au moins 45 à 50 cm pour y poser un écran.
+- **La profondeur** : au moins 80 cm du côté où tu poses l'écran, comme le recommande l'INRS.
 - **La stabilité** : idéalement calé contre deux murs, sinon des pieds larges et une structure renforcée.
 - **Le rangement** : des étagères intégrées si l'espace en manque.
 - **Le budget** : un modèle basique bien dimensionné coûte rarement plus de 120 €, largement suffisant pour un usage bureautique classique en télétravail.

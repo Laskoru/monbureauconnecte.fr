@@ -34,6 +34,13 @@ interactiveGuide:
       result: "La <strong>mémoire de positions</strong> (3-4 hauteurs) devient ta priorité : c'est elle qui rend l'alternance sans effort, donc réelle. Un double moteur ajoute la rapidité qui va avec."
     - label: "Petit budget, je teste l'idée"
       result: "Un <strong>rehausseur posé</strong> sur ton bureau actuel dépanne à petit prix, mais il faut déplacer le matériel à chaque changement. Bien pour tester ; si tu accroches, passe vite à un vrai bureau électrique."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Postures sédentaires : Ce qu'il faut retenir »"
+    url: "https://www.inrs.fr/risques/postures-sedentaires/ce-qu-il-faut-retenir.html"
+  - label: "INRS, « Station debout prolongée : semelles ou tapis anti-fatigue pour prévenir les troubles musculosquelettiques ? »"
+    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/DMT/TI-QR-162/qr162.pdf"
 faq:
   - question: "Un bureau assis-debout est-il vraiment utile ?"
     answer: "Oui : alterner assis et debout réduit la sédentarité et soulage le dos. L'idéal est de changer de position régulièrement plutôt que de rester debout des heures. Un modèle électrique avec mémoire de hauteurs rend l'alternance facile."
@@ -42,7 +49,7 @@ faq:
   - question: "Un ou deux moteurs, quelle différence ?"
     answer: "Deux moteurs (un dans chaque pied) montent plus vite, plus silencieusement et supportent une charge plus lourde, avec beaucoup moins de flottement en position haute. Un seul moteur suffit pour un petit plateau et un budget serré, mais devient vite juste dès qu'on ajoute deux écrans."
   - question: "Combien de temps par jour faut-il rester debout ?"
-    answer: "Il n'y a pas de règle universelle, mais un bon point de départ est d'alterner toutes les 30 à 60 minutes, sans jamais forcer. On vise en général 2 à 4 heures debout réparties sur la journée, en écoutant ses sensations plutôt qu'un chronomètre."
+    answer: "Il n'y a pas de règle universelle, mais un bon point de départ est de changer de position toutes les 30 minutes environ, sans jamais forcer ni rester debout plus de 40 minutes d'affilée. L'INRS conseille surtout de limiter le temps passé assis, idéalement à 5 heures cumulées par jour, en écoutant ses sensations plutôt qu'un chronomètre."
 ---
 
 ## Pourquoi passer à un bureau assis-debout
@@ -53,9 +60,9 @@ L'idée n'est pas de travailler debout toute la journée (ce serait aussi fatiga
 
 ## Ce que l'alternance change vraiment
 
-Quelques minutes debout toutes les heures suffisent à réactiver la circulation et à relâcher les muscles posturaux qui se figent en position assise prolongée. On se surprend aussi à bouger davantage (un pas de côté, un léger déhanché) là où la chaise nous cloue. Beaucoup de gens rapportent surtout une chose : moins de raideur en fin de journée, et un regain d'énergie sur le fameux creux de 14 h-16 h.
+Se lever et bouger quelques minutes, idéalement toutes les 30 minutes comme le conseille l'INRS, aide à réactiver la circulation et à relâcher les muscles posturaux qui se figent en position assise prolongée. On se surprend aussi à bouger davantage (un pas de côté, un léger déhanché) là où la chaise nous cloue. Beaucoup de gens rapportent surtout une chose : moins de raideur en fin de journée, et un regain d'énergie sur le fameux creux de 14 h-16 h.
 
-À l'inverse, rester **trop longtemps debout** crée ses propres douleurs : plante des pieds, genoux, bas du dos. Le bon réflexe est donc de viser l'équilibre, pas le record. Un tapis anti-fatigue sous les pieds et une paire de chaussures correctes aident énormément quand on débute.
+À l'inverse, rester **trop longtemps debout** crée ses propres douleurs : plante des pieds, genoux, bas du dos. Le bon réflexe est donc de viser l'équilibre, pas le record. Un tapis anti-fatigue sous les pieds et une paire de chaussures correctes limitent l'inconfort quand on débute.
 
 ## Les critères qui comptent vraiment
 
@@ -67,7 +74,7 @@ Le critère numéro un. Un **double moteur** (un dans chaque pied) monte plus vi
 
 ### La plage de hauteur
 
-Vise une plage large, de l'ordre de **60 à 125 cm**. Trop souvent, les modèles d'entrée de gamme ne descendent pas assez bas pour une personne petite, ou ne montent pas assez haut pour quelqu'un de grand en position debout. Vérifie que **ta** hauteur assise **et** ta hauteur debout tombent bien dans la plage, sinon le bureau ne sera confortable que dans une seule position, ce qui ruine tout l'intérêt.
+Vise une plage large, de l'ordre de **65 à 125 cm** (celle que la norme NF EN 527-1 prévoit pour un bureau assis-debout). Trop souvent, les modèles d'entrée de gamme ne descendent pas assez bas pour une personne petite, ou ne montent pas assez haut pour quelqu'un de grand en position debout. Vérifie que **ta** hauteur assise **et** ta hauteur debout tombent bien dans la plage, sinon le bureau ne sera confortable que dans une seule position, ce qui ruine tout l'intérêt.
 
 ### La mémoire de positions
 
@@ -79,7 +86,7 @@ Ce capteur arrête le plateau s'il rencontre un obstacle en montant ou en descen
 
 ### La charge et le plateau
 
-Regarde la **charge maximale** annoncée (souvent 70 à 125 kg) et garde de la marge : deux écrans, un bras articulé, un PC posé sur le plateau, ça monte vite. Côté plateau, un **monobloc** est plus rigide et plus net qu'un plateau en deux parties ; les dimensions 120×60 cm sont un bon standard, 140×70 cm si tu veux respirer.
+Regarde la **charge maximale** annoncée (souvent 70 à 125 kg) et garde de la marge : deux écrans, un bras articulé, un PC posé sur le plateau, ça monte vite. Côté plateau, un **monobloc** est plus rigide et plus net qu'un plateau en deux parties ; les dimensions 120×60 cm sont le format le plus courant, mais l'INRS recommande au moins 80 cm de profondeur pour un poste sur écran : vise plus profond si ta pièce le permet.
 
 ![Bureau assis-debout électrique en position haute avec fauteuil ergonomique](/covers/bureau-assis-debout-inbody.webp)
 

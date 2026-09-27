@@ -27,16 +27,25 @@ interactiveGuide:
   question: "Tu travailles surtout…"
   options:
     - label: "Sur écran, en journée"
-      result: "Vise une lumière <strong>neutre (4000-5000 K)</strong>, une <strong>intensité réglable</strong> et surtout un modèle <strong>sans scintillement (flicker-free)</strong>. Oriente le faisceau pour éviter les reflets sur l'écran."
+      result: "Vise une lumière <strong>entre 3000 et 4000 K</strong>, le compromis conseillé par l'INRS pour le travail sur écran, une <strong>intensité réglable</strong> et surtout un modèle <strong>sans scintillement (flicker-free)</strong>. Oriente le faisceau pour éviter les reflets sur l'écran."
     - label: "En soirée, souvent tard"
       result: "Choisis une <strong>température ajustable</strong> pour basculer en <strong>blanc chaud (< 3000 K)</strong> le soir : moins stimulant avant le coucher. Une gradation fine évite l'éblouissement dans une pièce sombre."
     - label: "Sur des couleurs (photo, dessin, couture)"
-      result: "Le critère clé est l'<strong>IRC élevé (> 90)</strong> : il restitue fidèlement les teintes. Ajoute une bonne intensité et une lumière neutre pour juger les couleurs sans les fausser."
+      result: "Le critère clé est un <strong>IRC élevé</strong>, bien au-delà du minimum de 80 retenu pour un éclairage de bureau : il restitue fidèlement les teintes. Ajoute une bonne intensité et une lumière neutre pour juger les couleurs sans les fausser."
     - label: "Sur un grand plan de travail"
       result: "Priorité au <strong>bras articulé</strong> et à un faisceau large : tu positionnes la lumière exactement où il faut. Une <strong>fonction mémoire</strong> est pratique si le poste est partagé."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "Anses, « LED : les recommandations de l'Anses pour limiter l'exposition à la lumière bleue »"
+    url: "https://www.anses.fr/fr/content/led-les-recommandations-de-lanses-pour-limiter-lexposition-la-lumiere-bleue"
+  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
 faq:
   - question: "Quelle température de couleur choisir pour travailler ?"
-    answer: "Une lumière neutre à blanche (4000-5000K) est le meilleur compromis pour lire et travailler sur écran ; le blanc chaud (moins de 3000K) convient mieux en soirée pour limiter la stimulation avant le coucher."
+    answer: "Une lumière entre 3000 et 4000 K est le bon compromis pour travailler sur écran, selon l'INRS ; le blanc chaud (moins de 3000K) convient mieux en soirée pour limiter la stimulation avant le coucher."
   - question: "La lampe LED remplace-t-elle l'éclairage ambiant de la pièce ?"
     answer: "Non : une lampe de bureau seule crée un contraste fort entre la zone éclairée et le reste de la pièce, ce qui fatigue les yeux. Elle doit compléter un éclairage ambiant, pas le remplacer entièrement."
   - question: "Qu'est-ce que le scintillement (flicker) et pourquoi l'éviter ?"
@@ -69,7 +78,7 @@ Le **flicker** est un défaut invisible à l'œil nu sur certaines LED bon march
 
 ### Le bras articulé et l'IRC
 
-Un **bras articulé** oriente précisément la lumière et évite les reflets sur l'écran. Et pour un travail sur les couleurs, un **indice de rendu des couleurs (IRC) supérieur à 90** restitue fidèlement les teintes, crucial en photo, dessin ou couture.
+Un **bras articulé** oriente précisément la lumière et évite les reflets sur l'écran. Et pour un travail sur les couleurs, un **indice de rendu des couleurs (IRC) élevé**, nettement au-dessus du seuil de 80 que l'INRS retient pour un éclairage de bureau, restitue fidèlement les teintes, crucial en photo, dessin ou couture.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les lampes de bureau LED sur Amazon](https://www.amazon.fr/s?k=lampe+de+bureau+led&tag=monbureauconnecte-21).
@@ -84,7 +93,7 @@ La meilleure lampe mal placée éblouit ou crée des reflets. Quelques règles s
 
 ## Comment choisir selon ton usage
 
-Pour un usage bureautique classique, un modèle avec plusieurs **températures de couleur**, une **intensité réglable** et la mention **sans scintillement** couvre largement les besoins. Pour un travail exigeant sur les couleurs, ajoute un **IRC > 90**. Et si ton plan de travail est large, un **bras articulé** généreux évite les zones d'ombre. Inutile de courir après le maximum de lumens : au-delà d'un certain confort, c'est la qualité et le réglage de la lumière qui comptent, pas sa puissance brute.
+Pour un usage bureautique classique, un modèle avec plusieurs **températures de couleur**, une **intensité réglable** et la mention **sans scintillement** couvre largement les besoins. Pour un travail exigeant sur les couleurs, ajoute un **IRC élevé**. Et si ton plan de travail est large, un **bras articulé** généreux évite les zones d'ombre. Inutile de courir après le maximum de lumens : au-delà d'un certain confort, c'est la qualité et le réglage de la lumière qui comptent, pas sa puissance brute.
 
 ## Faut-il s'inquiéter de la « lumière bleue » ?
 
@@ -95,7 +104,7 @@ C'est l'argument marketing du moment. La **lumière bleue** est une composante n
 Inutile de courir après les lumens : pour une lampe de bureau, on n'éclaire qu'une zone de travail à courte distance, et **trop de lumière** dans une pièce par ailleurs sombre est aussi fatigant que pas assez. Un modèle offrant plusieurs niveaux d'intensité couvre tous les cas, du plein jour à la session tardive. Côté budget, on trouve de très bonnes lampes LED réglables (intensité + température + sans scintillement) **entre 25 et 50 €** ; au-delà, on paie surtout le design, un IRC élevé (utile pour les métiers de la couleur) ou des fonctions comme la minuterie et la charge sans fil intégrée. La règle : mieux vaut une lampe **bien réglable à 35 €** qu'une lampe très puissante mais fixe à 20 €. Le confort visuel se joue sur le contrôle de la lumière, pas sur sa quantité brute.
 
 > **L'essentiel à retenir**
-> Une bonne lampe anti-fatigue, c'est une **intensité réglable**, une **température de couleur ajustable** (neutre le jour, chaud le soir) et **zéro scintillement**. Pour les couleurs, vise un **IRC > 90**. Place-la à l'opposé de ta main d'écriture, oriente-la vers le plan de travail, et **garde la lumière ambiante** de la pièce.
+> Une bonne lampe anti-fatigue, c'est une **intensité réglable**, une **température de couleur ajustable** (neutre le jour, chaud le soir) et **zéro scintillement**. Pour les couleurs, vise un **IRC élevé**. Place-la à l'opposé de ta main d'écriture, oriente-la vers le plan de travail, et **garde la lumière ambiante** de la pièce.
 
 ## Les bons réflexes pour ménager tes yeux
 

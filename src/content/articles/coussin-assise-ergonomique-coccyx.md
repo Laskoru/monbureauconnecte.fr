@@ -34,11 +34,18 @@ interactiveGuide:
       result: "Choisis un modèle avec <strong>poignée de transport</strong> et <strong>housse lavable</strong>, plus important que l'épaisseur maximale qui nuit à la portabilité."
     - label: "Pièce chaude / je transpire"
       result: "Un coussin en <strong>gel</strong> ou à <strong>housse respirante</strong> limite l'effet « assise qui chauffe » d'une mousse à mémoire de forme classique sur plusieurs heures."
+sources:
+  - label: "NHS, « Tailbone (coccyx) pain »"
+    url: "https://www.nhs.uk/conditions/tailbone-coccyx-pain/"
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
+    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-131/ed131.pdf"
 faq:
   - question: "Un coussin d'assise ergonomique est-il vraiment utile si ma chaise de bureau est déjà de bonne qualité ?"
     answer: "Oui, les deux se complètent : même une chaise ergonomique haut de gamme utilise une assise standard qui répartit la pression de façon homogène, alors qu'un coussin en U ou en forme de fer à cheval décharge spécifiquement la zone du coccyx. Si tu ressens une gêne localisée après plusieurs heures assis, c'est justement le signe qu'une chaise seule ne suffit pas toujours à résoudre le problème."
   - question: "Combien de temps faut-il pour ressentir une amélioration ?"
-    answer: "Le soulagement de la pression est immédiat dès qu'on s'assoit correctement sur un coussin bien positionné, mais l'adaptation de la posture et la réduction d'une gêne installée depuis des semaines prennent généralement plusieurs jours à quelques semaines d'usage régulier. Si aucune amélioration n'apparaît après trois à quatre semaines, ou si la douleur s'aggrave, mieux vaut consulter un professionnel de santé plutôt que de multiplier les accessoires."
+    answer: "Le soulagement de la pression est immédiat dès qu'on s'assoit correctement sur un coussin bien positionné, mais l'adaptation de la posture et la réduction d'une gêne installée depuis des semaines prennent généralement plusieurs jours à quelques semaines d'usage régulier. Si aucune amélioration n'apparaît après quelques semaines, ou si la douleur s'aggrave, mieux vaut consulter un professionnel de santé plutôt que de multiplier les accessoires."
   - question: "Faut-il choisir un coussin en mousse à mémoire de forme ou en gel ?"
     answer: "La mousse à mémoire de forme épouse la morphologie et reste confortable sur la durée, mais elle chauffe un peu plus en été et perd en soutien avec le temps si la densité est faible. Le gel refroidit davantage et reste ferme plus longtemps, au prix d'un poids et d'un encombrement supérieurs ; certains modèles combinent les deux couches pour cumuler les avantages, à un prix généralement plus élevé."
 ---
@@ -49,15 +56,15 @@ Rester assis six, sept, huit heures par jour concentre une bonne partie du poids
 
 Le coussin d'assise ergonomique répond à un problème précis : décharger le coccyx et redistribuer la pression vers les cuisses et les ischions, sans pour autant changer de chaise. C'est une solution nettement moins chère qu'un nouveau siège ergonomique, et elle a l'avantage de voyager : le même coussin peut suivre son utilisateur du bureau à la voiture, ou d'un poste de travail à un autre en open space.
 
-Ce n'est pas un accessoire réservé aux douleurs déjà installées. Beaucoup l'utilisent en prévention, dès que les journées de télétravail ou de bureau dépassent six heures assises quasi continues. La logique est la même que pour un tapis anti-fatigue en position debout : mieux vaut corriger un point d'appui mal réparti avant qu'il ne devienne une douleur chronique, plutôt que d'attendre que la gêne s'installe pour agir.
+Ce n'est pas un accessoire réservé aux douleurs déjà installées. Beaucoup l'utilisent en prévention, dès que les journées de télétravail ou de bureau se passent assis presque en continu. La logique est la même que pour un tapis anti-fatigue en position debout : mieux vaut corriger un point d'appui mal réparti avant qu'il ne devienne une douleur chronique, plutôt que d'attendre que la gêne s'installe pour agir.
 
 Il faut cependant rester honnête sur ce qu'un coussin peut et ne peut pas faire. Il soulage une pression mécanique et améliore le confort dans la durée, mais il ne corrige pas une mauvaise posture générale (dos vouté, écran mal réglé, chaise à la mauvaise hauteur) ni un problème médical avéré au niveau du coccyx ou du bassin. Dans ce dernier cas, un avis médical reste la première étape, le coussin venant en complément.
 
 ## Les critères qui font vraiment la différence
 
 - **La découpe en U ou en fer à cheval** : c'est la forme la plus efficace pour soulager spécifiquement le coccyx, car elle crée une zone creuse à l'arrière du coussin où le coccyx ne touche aucune surface. Les coussins pleins, sans découpe, répartissent la pression mais ne la retirent pas de cette zone précise.
-- **La densité de la mousse** : une mousse trop molle s'affaisse en quelques semaines et perd son effet de soutien ; une densité plus élevée (souvent annoncée en kg/m³ par les fabricants sérieux) tient mieux dans la durée, même si le coussin paraît un peu plus ferme au premier contact.
-- **L'épaisseur** : en dessous de 5-6 cm, l'effet d'amorti reste limité pour un usage de plusieurs heures ; les modèles plus épais (7-8 cm) offrent un meilleur compromis, à condition de ne pas trop rehausser l'assise sur une chaise déjà réglée pour la hauteur du bureau.
+- **La densité de la mousse** : une mousse trop molle s'affaisse en quelques semaines et perd son effet de soutien ; une densité plus élevée (souvent annoncée en kg/m³ par les fabricants sérieux ; l'INRS retient 55 kg/m³ comme repère pour l'assise d'un siège de travail) tient mieux dans la durée, même si le coussin paraît un peu plus ferme au premier contact.
+- **L'épaisseur** : un coussin trop fin amortit peu sur un usage de plusieurs heures ; un modèle plus épais offre un meilleur compromis, à condition de ne pas trop rehausser l'assise sur une chaise déjà réglée pour la hauteur du bureau : tes pieds doivent toujours reposer à plat sur le sol.
 - **La housse amovible et lavable** : un coussin utilisé quotidiennement s'imprègne vite de transpiration et de poussière ; une housse qui se retire et passe en machine facilite grandement l'entretien par rapport à un modèle à housse fixe.
 - **La base antidérapante** : sans revêtement adapté au dos du coussin, celui-ci glisse sur une assise en tissu ou en cuir dès qu'on bouge, ce qui oblige à le repositionner en permanence dans la journée.
 - **La taille par rapport à l'assise de la chaise** : un coussin trop petit laisse dépasser une partie des cuisses hors de la zone rembourrée, ce qui recrée un point de pression inconfortable sur le bord de l'assise d'origine.
@@ -77,9 +84,9 @@ Il faut cependant rester honnête sur ce qu'un coussin peut et ne peut pas faire
 
 ## Entretien et bons réflexes d'usage
 
-Un coussin ergonomique perd de son efficacité s'il n'est pas entretenu régulièrement, notamment parce que l'humidité et la transpiration accumulées finissent par tasser la mousse plus vite que l'usage seul. Retirer et laver la housse toutes les deux à trois semaines en usage quotidien permet de conserver ses propriétés plus longtemps.
+Un coussin ergonomique perd de son efficacité s'il n'est pas entretenu régulièrement, notamment parce que l'humidité et la transpiration accumulées finissent par tasser la mousse plus vite que l'usage seul. Retirer et laver la housse régulièrement en usage quotidien permet de conserver ses propriétés plus longtemps.
 
-Il vaut aussi mieux ne pas laisser le coussin en plein soleil ou près d'une source de chaleur directe, la mousse à mémoire de forme pouvant se déformer ou perdre en élasticité si elle est exposée trop longtemps à une chaleur excessive. Enfin, même le meilleur coussin ne remplace pas des pauses régulières : se lever et marcher quelques minutes toutes les heures reste le complément le plus efficace pour éviter que la pression, même bien répartie, ne finisse par redevenir inconfortable.
+Il vaut aussi mieux ne pas laisser le coussin en plein soleil ou près d'une source de chaleur directe, la mousse à mémoire de forme pouvant se déformer ou perdre en élasticité si elle est exposée trop longtemps à une chaleur excessive. Enfin, même le meilleur coussin ne remplace pas des pauses régulières : se lever et marcher quelques minutes, idéalement toutes les 30 minutes comme le conseille l'INRS, reste le complément le plus efficace pour éviter que la pression, même bien répartie, ne finisse par redevenir inconfortable.
 
 > **L'essentiel à retenir**
 > Assis des heures, tout le poids se concentre sur les ischions et le coccyx. Le bon coussin **décharge** cette zone grâce à une **découpe en U bien marquée**, une **mousse assez dense** (elle ne s'affaisse pas), une **housse lavable** et une **base antidérapante**. Prends-le à la bonne **taille** (les cuisses ne doivent pas déborder). Il complète une bonne posture ; une douleur qui persiste relève d'un avis médical.

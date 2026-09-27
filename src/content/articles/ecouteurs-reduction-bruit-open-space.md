@@ -25,9 +25,18 @@ comparison:
     - ["Autonomie", "Quelques heures par charge, complétée par le boîtier au fil de la journée", "Plusieurs dizaines d'heures sans recharge"]
     - ["Encombrement / transport", "Minuscule boîtier qui tient dans une poche", "Prend de la place dans un sac"]
     - ["Prix à qualité égale", "Souvent un peu plus cher pour une bonne ANC intra", "Large choix à tous les prix"]
+sources:
+  - label: "Apple, « Choisir les embouts de vos AirPods Pro »"
+    url: "https://support.apple.com/fr-fr/119849"
+  - label: "Apple, « AirPods Pro 2 - Caractéristiques techniques »"
+    url: "https://support.apple.com/fr-fr/111851"
+  - label: "Apple, « Modes Réduction active du bruit et Transparence des AirPods »"
+    url: "https://support.apple.com/fr-fr/108918"
+  - label: "Sony (guide d'aide du WH-CH720N), « L'effet de la fonction antibruit est insuffisant. »"
+    url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000777134.html"
 faq:
   - question: "Les écouteurs intra-auriculaires isolent-ils aussi bien qu'un casque du bruit ?"
-    answer: "Sur l'isolation passive pure, un casque circum-aural englobant toute l'oreille a un léger avantage naturel. Mais côté réduction active (ANC), les meilleurs écouteurs intra-auriculaires récents rivalisent désormais avec de bons casques sur les bruits constants (ventilation, climatisation, brouhaha de fond) : l'écart s'est beaucoup réduit ces dernières années. Le point le plus important reste le choix de la bonne taille d'embout, qui conditionne l'étanchéité acoustique bien plus que la marque ou le prix."
+    answer: "Sur l'isolation passive pure, un casque circum-aural englobant toute l'oreille a un léger avantage naturel. Mais côté réduction active (ANC), les meilleurs écouteurs intra-auriculaires récents rivalisent désormais avec de bons casques sur les bruits constants (ventilation, climatisation) : l'écart s'est beaucoup réduit ces dernières années. Le point le plus important reste le choix de la bonne taille d'embout, qui conditionne l'étanchéité acoustique bien plus que la marque ou le prix."
   - question: "Peut-on porter des écouteurs ANC toute la journée sans gêne ?"
     answer: "Oui, à condition de choisir la bonne taille d'embout et un modèle pensé pour un port prolongé : les embouts en silicone souple ou en mousse à mémoire de forme réduisent la fatigue par rapport aux embouts durs livrés par défaut. Certains utilisateurs ressentent malgré tout une gêne après plusieurs heures continues, notamment liée à la pression de l'ANC lui-même ; faire des pauses régulières ou alterner avec le mode transparence limite ce phénomène."
   - question: "Le micro des écouteurs est-il assez bon pour les visios ?"
@@ -48,7 +57,7 @@ Les deux formats visent le même résultat (couper le bruit ambiant) mais n'y ar
 
 ### L'isolation active vs l'isolation passive (les embouts)
 
-La réduction de bruit active (ANC) supprime électroniquement les bruits constants et basse fréquence : ventilation, climatisation, moteur au loin. Mais avant même l'électronique, l'**isolation passive** obtenue par un embout bien ajusté fait une grande partie du travail : un embout trop petit laisse passer de l'air et du bruit, quelle que soit la qualité de l'ANC derrière. La plupart des bonnes paires livrent plusieurs tailles de silicone, parfois de la mousse à mémoire de forme en option. Cela vaut la peine de tester chaque taille avant de se fier au réglage par défaut.
+La réduction de bruit active (ANC) atténue électroniquement les bruits constants et basse fréquence : ventilation, climatisation, moteur au loin. Mais avant même l'électronique, l'**isolation passive** obtenue par un embout bien ajusté fait une grande partie du travail : un embout trop petit laisse passer de l'air et du bruit, quelle que soit la qualité de l'ANC derrière. La plupart des bonnes paires livrent plusieurs tailles de silicone, parfois de la mousse à mémoire de forme en option. Cela vaut la peine de tester chaque taille avant de se fier au réglage par défaut.
 
 ### L'autonomie et le boîtier de recharge
 
