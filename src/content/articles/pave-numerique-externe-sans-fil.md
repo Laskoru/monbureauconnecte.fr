@@ -24,7 +24,7 @@ interactiveGuide:
       result: "Un modèle <strong>compact et léger</strong>, à piles avec veille auto (longue autonomie), se pose où tu veux. Vérifie juste la présence d'un interrupteur pour préserver la batterie."
 products:
   - asin: "B0F2XXPFMQ"
-    title: "Trust Xalas — Pavé numérique sans fil (récepteur USB 2,4 GHz, 22 touches)"
+    title: "Pavé numérique sans fil Trust Xalas (récepteur USB 2,4 GHz, 22 touches)"
     blurb: "Signé Trust, marque reconnue en périphériques : un pavé compact 22 touches en liaison sans fil 2,4 GHz (dongle USB, plug and play, aucun pilote). Idéal pour compléter un portable ou un clavier compact sans câble. Simple, fiable et abordable."
     pros:
       - "Complète un portable ou un clavier compact"
@@ -36,20 +36,20 @@ products:
       - "Touches un peu légères"
 faq:
   - question: "À quoi sert un pavé numérique externe ?"
-    answer: "Beaucoup d'ordinateurs portables et de claviers compacts (format TKL) n'ont pas de pavé numérique. Or, pour saisir beaucoup de chiffres — comptabilité, tableurs, caisses, saisie de données — le pavé accélère énormément le travail et réduit la fatigue. Un pavé externe sans fil se pose où l'on veut sur le bureau, à droite ou à gauche selon la main, sans encombrer d'un câble."
+    answer: "Beaucoup d'ordinateurs portables et de claviers compacts (format TKL) n'ont pas de pavé numérique. Or, pour saisir beaucoup de chiffres (comptabilité, tableurs, caisses, saisie de données), le pavé accélère énormément le travail et réduit la fatigue. Un pavé externe sans fil se pose où l'on veut sur le bureau, à droite ou à gauche selon la main, sans encombrer d'un câble."
   - question: "Sans fil RF (dongle USB) ou Bluetooth : lequel choisir ?"
     answer: "Le RF 2,4 GHz avec dongle USB est le plus simple : on branche le récepteur, ça marche immédiatement, sans appairage ni pilote, avec une latence quasi nulle. Le Bluetooth évite d'occuper un port USB et permet de coupler tablette ou téléphone, mais demande un appairage et parfois une reconnexion. Pour un usage bureautique fixe, le RF est le plus fiable ; le Bluetooth séduit les setups nomades ou sans port libre."
   - question: "Comment est alimenté un pavé numérique sans fil ?"
-    answer: "Soit par piles (souvent AAA), soit par batterie rechargeable en USB. Les modèles à piles offrent en général une très longue autonomie (plusieurs mois) grâce à une mise en veille automatique ; les rechargeables évitent d'acheter des piles mais demandent une recharge périodique. Vérifiez la présence d'un interrupteur et d'une veille auto pour préserver l'autonomie."
+    answer: "Soit par piles (souvent AAA), soit par batterie rechargeable en USB. Les modèles à piles offrent en général une très longue autonomie (plusieurs mois) grâce à une mise en veille automatique ; les rechargeables évitent d'acheter des piles mais demandent une recharge périodique. Vérifie la présence d'un interrupteur et d'une veille auto pour préserver l'autonomie."
   - question: "Un pavé numérique externe est-il compatible avec tous les ordinateurs ?"
     answer: "Oui, dans la grande majorité des cas : les modèles RF avec dongle USB et les modèles Bluetooth fonctionnent sous Windows, macOS et Linux sans pilote. Attention toutefois à la touche de verrouillage numérique (Verr. Num) sur certains portables, et au fait que quelques modèles ont un agencement de touches pensé pour Windows (la touche « = » ou les fonctions dépendent parfois de l'OS)."
 ---
 
 ## À quoi sert un pavé numérique externe ?
 
-Les **ordinateurs portables** et les **claviers compacts** (format TKL, sans pavé) font gagner de la place… mais quand il s'agit de **saisir beaucoup de chiffres** — tableur, comptabilité, saisie de données, caisse — l'absence de pavé numérique devient vite pénible. Un **pavé externe sans fil** résout le problème : on le pose où l'on veut sur le bureau, sans câble, et la saisie des chiffres redevient rapide et confortable.
+Les **ordinateurs portables** et les **claviers compacts** (format TKL, sans pavé) font gagner de la place… mais quand il s'agit de **saisir beaucoup de chiffres** (tableur, comptabilité, saisie de données, caisse), l'absence de pavé numérique devient vite pénible. Un **pavé externe sans fil** résout le problème : on le pose où l'on veut sur le bureau, sans câble, et la saisie des chiffres redevient rapide et confortable.
 
-Concrètement, la différence de vitesse est spectaculaire. Saisir une colonne de chiffres à une main sur un vrai pavé, sans quitter l'écran des yeux, va bien plus vite que de viser la rangée de chiffres tout en haut du clavier, touche par touche. Pour quiconque manipule des nombres au quotidien, ce n'est pas un gadget mais un **outil de productivité** — au même titre qu'une bonne souris. Et comme il est sans fil, il n'ajoute aucun câble au bureau.
+Concrètement, la différence de vitesse est spectaculaire. Saisir une colonne de chiffres à une main sur un vrai pavé, sans quitter l'écran des yeux, va bien plus vite que de viser la rangée de chiffres tout en haut du clavier, touche par touche. Pour quiconque manipule des nombres au quotidien, ce n'est pas un gadget mais un **outil de productivité**, au même titre qu'une bonne souris. Et comme il est sans fil, il n'ajoute aucun câble au bureau.
 
 ## Les critères qui comptent vraiment
 
@@ -62,7 +62,7 @@ C'est le choix structurant :
 
 ### L'alimentation et l'autonomie
 
-Deux écoles : **piles** (souvent AAA, autonomie de plusieurs mois avec veille auto) ou **batterie rechargeable USB** (pas de piles à acheter, mais recharge périodique). Dans les deux cas, vérifiez la présence d'un **interrupteur** et d'une **mise en veille automatique** qui préserve l'autonomie.
+Deux écoles : **piles** (souvent AAA, autonomie de plusieurs mois avec veille auto) ou **batterie rechargeable USB** (pas de piles à acheter, mais recharge périodique). Dans les deux cas, vérifie la présence d'un **interrupteur** et d'une **mise en veille automatique** qui préserve l'autonomie.
 
 ### Le nombre de touches et l'agencement
 
@@ -83,7 +83,7 @@ La plupart des modèles fonctionnent sous **Windows, macOS et Linux** sans pilot
 
 - **Poste fixe, simplicité maximale** : un modèle **RF 2,4 GHz** avec dongle, plug and play.
 - **Manque de ports USB ou usage nomade** : un modèle **Bluetooth**.
-- **Saisie intensive (compta, data)** : privilégiez un pavé **22 touches** avec bonne course de frappe.
+- **Saisie intensive (compta, data)** : privilégie un pavé **22 touches** avec bonne course de frappe.
 - **Tu alternes droite/gauche** : un modèle **compact et léger**, facile à déplacer.
 
 ## Les idées reçues
@@ -94,9 +94,9 @@ La plupart des modèles fonctionnent sous **Windows, macOS et Linux** sans pilot
 
 ## Bien le placer et l'utiliser au quotidien
 
-Un pavé externe a un avantage qu'un clavier complet n'a pas : tu le poses **où tu veux**. Un droitier le met à droite du clavier, comme sur un clavier complet ; mais un **gaucher** peut le placer à gauche, ce qui libère la main droite pour la souris et évite de tendre le bras par-dessus le clavier — un vrai gain de confort trop souvent ignoré. Sur un bureau étroit, on peut aussi le glisser juste au-dessus du clavier compact quand on saisit, puis le ranger.
+Un pavé externe a un avantage qu'un clavier complet n'a pas : tu le poses **où tu veux**. Un droitier le met à droite du clavier, comme sur un clavier complet ; mais un **gaucher** peut le placer à gauche, ce qui libère la main droite pour la souris et évite de tendre le bras par-dessus le clavier, un vrai gain de confort trop souvent ignoré. Sur un bureau étroit, on peut aussi le glisser juste au-dessus du clavier compact quand on saisit, puis le ranger.
 
-Deux détails techniques valent la peine d'être vérifiés à la première utilisation. Le **Verrouillage numérique (Verr. Num)** : sur certains ordinateurs portables, l'état du Verr. Num est partagé avec le clavier intégré et peut désactiver le pavé externe — une simple pression sur la touche règle généralement le souci. Et l'**agencement** : quelques modèles, pensés d'abord pour un marché anglophone, placent la virgule décimale ou la touche « = » différemment ; un coup d'œil aux touches avant l'achat évite la mauvaise surprise pour qui fait de la comptabilité.
+Deux détails techniques valent la peine d'être vérifiés à la première utilisation. Le **Verrouillage numérique (Verr. Num)** : sur certains ordinateurs portables, l'état du Verr. Num est partagé avec le clavier intégré et peut désactiver le pavé externe. Une simple pression sur la touche règle généralement le souci. Et l'**agencement** : quelques modèles, pensés d'abord pour un marché anglophone, placent la virgule décimale ou la touche « = » différemment ; un coup d'œil aux touches avant l'achat évite la mauvaise surprise pour qui fait de la comptabilité.
 
 ## Pavé numérique externe ou clavier complet ?
 
@@ -107,7 +107,7 @@ La question se pose forcément quand on quitte un clavier complet. Le **clavier 
 
 ## En résumé
 
-Le bon pavé numérique externe sans fil, c'est d'abord un choix de **liaison** — **RF 2,4 GHz** pour la simplicité, **Bluetooth** pour la souplesse — avec une **bonne autonomie**, un **agencement adapté** à ta saisie et un format **compact et stable**. De quoi redonner à un portable ou à un clavier compact toute l'efficacité d'un pavé numérique, sans câble.
+Le bon pavé numérique externe sans fil, c'est d'abord un choix de **liaison** (**RF 2,4 GHz** pour la simplicité, **Bluetooth** pour la souplesse), avec une **bonne autonomie**, un **agencement adapté** à ta saisie et un format **compact et stable**. De quoi redonner à un portable ou à un clavier compact toute l'efficacité d'un pavé numérique, sans câble.
 
 ## Pour aller plus loin
 

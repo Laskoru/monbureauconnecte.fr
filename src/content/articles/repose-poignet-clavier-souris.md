@@ -1,5 +1,5 @@
 ---
-title: "Repose-poignet clavier et souris : lequel choisir en 2026 ?"
+title: "Repose-poignet clavier et souris : lequel choisir ?"
 description: "Tensions au poignet en tapant ou en cliquant ? Notre guide pour bien choisir un repose-poignet clavier et souris efficace, sans se tromper."
 pubDate: 2026-08-23
 updatedDate: 2026-09-11
@@ -25,7 +25,7 @@ interactiveGuide:
       result: "La <strong>mousse à mémoire de forme</strong> épouse la morphologie et reprend moins vite sa forme que le gel sur la durée. Un set clavier + souris assorti est la solution la plus complète."
 products:
   - asin: "B0GXKT85H7"
-    title: "Giecy — Set repose-poignet clavier + souris en gel translucide, antidérapant"
+    title: "Set repose-poignet clavier + souris Giecy en gel translucide, antidérapant"
     blurb: "Le duo complet le plus simple pour commencer : un repose-poignet pour le clavier et un pour la souris, en gel souple à la forme de nuage, avec une base antidérapante."
     pros:
       - "Duo clavier + souris complet"
@@ -44,7 +44,7 @@ faq:
     answer: "Non, et c'est une erreur fréquente : il doit soutenir le poignet dans les pauses, pas servir d'appui constant pendant que les doigts tapent. Un appui permanent pendant la frappe peut au contraire créer une pression continue sur le canal carpien, l'effet inverse de ce qui est recherché."
 ---
 
-## Pourquoi le repose-poignet change la donne au quotidien
+## Pourquoi un repose-poignet soulage les poignets au quotidien
 
 Passer plusieurs heures par jour devant un clavier ou une souris impose aux poignets une position qu'on remarque rarement sur le moment, mais qui pèse lourd sur la durée. Entre deux frappes, la main a naturellement tendance à rester en l'air ou à reposer directement sur le bord dur du bureau, ce qui plie le poignet vers le haut (en extension). Répété plusieurs milliers de fois par jour, ce mouvement fatigue les tendons qui passent par le canal carpien et peut, à terme, favoriser des douleurs chroniques, des fourmillements dans les doigts ou une véritable tendinite.
 
@@ -54,7 +54,7 @@ C'est aussi l'accessoire le plus simple à essayer en premier : contrairement à
 
 ## Les critères qui font vraiment la différence
 
-- **Le matériau** : gel (frais, léger effet massant, bonne tenue dans le temps) ou mousse à mémoire de forme (s'adapte à la morphologie de la main, plus moelleuse). Les deux sont valables ; évite en revanche les modèles en mousse basique bon marché qui s'écrasent et perdent tout soutien après quelques semaines d'usage quotidien.
+- **Le matériau** : gel (frais, léger effet massant) ou mousse à mémoire de forme (s'adapte à la morphologie de la main, plus moelleuse). Les deux sont valables ; évite en revanche les modèles en mousse basique bon marché qui s'écrasent et perdent tout soutien après quelques semaines d'usage quotidien.
 - **La hauteur du repose-poignet** : elle doit correspondre à celle du clavier ou de la souris utilisée. Trop bas, il ne sert à rien ; trop haut, il force le poignet dans l'autre sens (en flexion), ce qui est tout aussi problématique. Un repose-poignet fin (1 à 2 cm) convient à la plupart des claviers plats actuels.
 - **La base antidérapante** : indispensable pour qu'il ne glisse pas à chaque appui, surtout sur un bureau en verre ou en stratifié lisse. Vérifie la présence d'un revêtement en caoutchouc ou silicone sous l'accessoire.
 - **La longueur pour le clavier** : elle doit couvrir toute la largeur du clavier, sans quoi les poignets reposent alternativement sur l'accessoire puis sur le bureau nu selon la zone de frappe utilisée.
@@ -70,7 +70,7 @@ C'est aussi l'accessoire le plus simple à essayer en premier : contrairement à
 
 **Si la gêne se concentre surtout sur la main qui tient la souris** (côté externe du poignet, base du pouce), il peut être plus efficace de se concentrer sur cet accessoire précis plutôt que sur l'ensemble clavier + souris, voire d'envisager directement un changement de souris. Notre comparatif [trackball vs souris classique](/articles/trackball-vs-souris-classique-poignet/) détaille une alternative qui supprime carrément le mouvement répété de la main, pour qui cherche une solution plus radicale qu'un simple repose-poignet.
 
-**Si tu tapes énormément au clavier** (rédaction, développement, saisie de données), la priorité va au repose-poignet clavier en priorité, sur toute la largeur du clavier, avec une hauteur bien ajustée. Dans ce cas, un tapis de souris XXL qui intègre déjà un espace commun pour le clavier peut aussi limiter les changements de texture sous les mains — un point que détaille notre guide du [tapis de souris XXL de bureau](/articles/tapis-souris-xxl-bureau/).
+**Si tu tapes énormément au clavier** (rédaction, développement, saisie de données), la priorité va au repose-poignet clavier en priorité, sur toute la largeur du clavier, avec une hauteur bien ajustée. Dans ce cas, un tapis de souris XXL qui intègre déjà un espace commun pour le clavier peut aussi limiter les changements de texture sous les mains, un point que détaille notre guide du [tapis de souris XXL de bureau](/articles/tapis-souris-xxl-bureau/).
 
 **Si le budget est serré**, ne saute pas cette étape pour autant : les modèles d'entrée de gamme en gel restent efficaces tant que la hauteur est correcte et que la base ne glisse pas. Les versions plus chères apportent surtout un meilleur confort sur la durée et une housse plus qualitative, pas un principe de fonctionnement différent.
 
@@ -79,7 +79,7 @@ C'est aussi l'accessoire le plus simple à essayer en premier : contrairement à
 Un repose-poignet mal placé fait plus de mal que de bien. L'erreur la plus fréquente : **s'appuyer dessus en permanence en tapant**, ce qui bloque le poignet et transfère la tension. Le bon usage, c'est l'inverse : il sert d'appui **au repos**, entre deux frappes, la main restant légèrement flottante pendant la frappe active. Côté hauteur, il doit **aligner** le poignet avec la rangée de touches (ou avec la souris), sans le casser vers le haut ni vers le bas. Un modèle trop épais relève trop le poignet ; trop fin, il ne sert à rien. Prends quelques minutes pour ajuster sa position les premiers jours : c'est ce réglage, plus que le modèle, qui fait la différence.
 
 > **L'essentiel à retenir**
-> Le repose-poignet corrige la position du poignet **au repos**, entre deux frappes ou clics — un vrai complément, mais pas une solution miracle. Choisis-le selon la source de la gêne (**clavier** et/ou **souris**) et ta préférence de matière : **gel** (frais, massant) ou **mousse à mémoire** (épouse mieux, tient dans le temps). Si la douleur persiste, revois d'abord le **réglage global** du poste (hauteur, distance de la souris).
+> Le repose-poignet corrige la position du poignet **au repos**, entre deux frappes ou clics. C'est un vrai complément, mais pas une solution miracle. Choisis-le selon la source de la gêne (**clavier** et/ou **souris**) et ta préférence de matière : **gel** (frais, massant) ou **mousse à mémoire** (épouse mieux, tient dans le temps). Si la douleur persiste, revois d'abord le **réglage global** du poste (hauteur, distance de la souris).
 
 ## Conclusion
 

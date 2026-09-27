@@ -12,7 +12,7 @@ coverAlt: "Personne assise à un bureau, jambes sous la table"
 draft: false
 products:
   - asin: "B097N2DK98"
-    title: "ACROPAQ — 3 hauteurs, inclinaison -30° à +30°"
+    title: "Repose-pieds ACROPAQ, 3 hauteurs, inclinaison -30° à +30°"
     blurb: "Le format le plus complet pour le prix : réglage en hauteur et en inclinaison, surface antidérapante."
     pros:
       - "Réglable en hauteur et en inclinaison"
@@ -40,14 +40,14 @@ faq:
   - question: "Faut-il un modèle avec inclinaison réglable ?"
     answer: "Ce n'est pas indispensable, mais ça permet d'alterner les angles au cours de la journée plutôt que de garder les pieds figés sur une seule position, ce qui est plus confortable sur la durée."
   - question: "Repose-pieds ou régler la hauteur de la chaise ?"
-    answer: "Les deux se complètent. On règle d'abord la chaise pour que les avant-bras soient à la hauteur du bureau (le plus important). Si, à cette hauteur, les pieds ne reposent plus à plat au sol — fréquent pour les petites tailles ou avec un bureau haut — le repose-pieds comble l'écart. C'est donc souvent la conséquence d'un bon réglage de chaise, pas une alternative."
+    answer: "Les deux se complètent. On règle d'abord la chaise pour que les avant-bras soient à la hauteur du bureau (le plus important). Si, à cette hauteur, les pieds ne reposent plus à plat au sol (fréquent pour les petites tailles ou avec un bureau haut), le repose-pieds comble l'écart. C'est donc souvent la conséquence d'un bon réglage de chaise, pas une alternative."
 ---
 
 ## Pourquoi utiliser un repose-pieds
 
-Sur un bureau standard — ou un bureau assis-debout mal réglé — les pieds ne touchent pas toujours le sol de façon stable, surtout pour les personnes de **petite taille** ou quand le plateau est un peu haut. Un repose-pieds compense cet écart et **ramène les cuisses à l'horizontale**, ce qui enlève la pression sur l'arrière des cuisses et soulage le bas du dos.
+Sur un bureau standard (ou un bureau assis-debout mal réglé), les pieds ne touchent pas toujours le sol de façon stable, surtout pour les personnes de **petite taille** ou quand le plateau est un peu haut. Un repose-pieds compense cet écart et **ramène les cuisses à l'horizontale**, ce qui enlève la pression sur l'arrière des cuisses et soulage le bas du dos.
 
-Mais son intérêt le plus sous-estimé est ailleurs : il aide à **casser l'immobilité**. Garder les jambes figées plusieurs heures ralentit la circulation et crée des tensions, bien plus qu'un simple problème de hauteur. Un bon repose-pieds invite à bouger les chevilles, à varier les appuis, à basculer légèrement — autant de micro-mouvements qui font du bien sur une longue journée assise.
+Mais son intérêt le plus sous-estimé est ailleurs : il aide à **casser l'immobilité**. Garder les jambes figées plusieurs heures ralentit la circulation et crée des tensions, bien plus qu'un simple problème de hauteur. Un bon repose-pieds invite à bouger les chevilles, à varier les appuis, à basculer légèrement, autant de micro-mouvements qui font du bien sur une longue journée assise.
 
 ## Pour qui c'est vraiment utile
 
@@ -78,7 +78,7 @@ Une **surface antidérapante** évite que le repose-pieds glisse au moindre mouv
 | **Envie de bouger, longues journées** | Inclinaison / bascule |
 | **Usage occasionnel** | Modèle simple, un seul réglage |
 
-Pour un usage occasionnel ou un poste déjà bien réglé, un modèle simple à un seul réglage de hauteur suffit. Pour des journées longues assises ou une chaise qui ne s'ajuste pas parfaitement à ta morphologie, un modèle avec **plusieurs hauteurs et une inclinaison** apporte un vrai confort — surtout parce qu'il t'invite à varier les appuis sans y penser.
+Pour un usage occasionnel ou un poste déjà bien réglé, un modèle simple à un seul réglage de hauteur suffit. Pour des journées longues assises ou une chaise qui ne s'ajuste pas parfaitement à ta morphologie, un modèle avec **plusieurs hauteurs et une inclinaison** apporte un vrai confort, surtout parce qu'il t'invite à varier les appuis sans y penser.
 
 Côté budget, c'est l'un des accessoires ergonomiques les plus abordables : on trouve de bons modèles réglables **entre 20 et 40 €**, et il n'y a pas grand intérêt à monter plus haut. Ce qui compte, ce n'est pas le prix mais la présence des **bons réglages** (hauteur, idéalement inclinaison) et une **surface stable et antidérapante**. Un repose-pieds bien choisi se garde des années, et se transporte facilement d'un poste à l'autre si tu changes de bureau ou alternes entre le travail et la maison.
 
@@ -92,14 +92,14 @@ Deux produits proches de nom, deux usages opposés. Le **repose-pieds** s'utilis
 
 ## Les fausses bonnes idées
 
-Avant d'acheter, un mot sur les substituts improvisés qu'on voit souvent. Un **carton**, une **pile de livres** ou une **poubelle retournée** peuvent dépanner une journée, mais ils partagent le même défaut : aucun réglage, une surface qui glisse ou s'écrase, et surtout **rien qui invite à bouger** — or c'est le mouvement des jambes qui compte le plus. Ils figent les pieds dans une position unique, ce qui va à l'encontre du but recherché. De même, viser un repose-pieds **trop mou** (un simple coussin) n'apporte pas la stabilité nécessaire : le pied s'enfonce sans appui franc. L'intérêt d'un vrai repose-pieds réglable, c'est justement de combiner **appui stable** et **possibilité de varier l'angle** — deux choses qu'un objet de fortune ne fait pas. Pour quelques dizaines d'euros, autant prendre celui qui fait réellement le travail.
+Avant d'acheter, un mot sur les substituts improvisés qu'on voit souvent. Un **carton**, une **pile de livres** ou une **poubelle retournée** peuvent dépanner une journée, mais ils partagent le même défaut : aucun réglage, une surface qui glisse ou s'écrase, et surtout **rien qui invite à bouger**. Or c'est le mouvement des jambes qui compte le plus. Ils figent les pieds dans une position unique, ce qui va à l'encontre du but recherché. De même, viser un repose-pieds **trop mou** (un simple coussin) n'apporte pas la stabilité nécessaire : le pied s'enfonce sans appui franc. L'intérêt d'un vrai repose-pieds réglable, c'est justement de combiner **appui stable** et **possibilité de varier l'angle**, deux choses qu'un objet de fortune ne fait pas. Pour quelques dizaines d'euros, autant prendre celui qui fait réellement le travail.
 
 > **L'essentiel à retenir**
 > Le repose-pieds sert surtout quand, **chaise bien réglée**, tes pieds ne touchent plus le sol à plat (petite taille, bureau haut). Il ramène les cuisses à l'horizontale **et** t'aide à bouger les jambes contre l'immobilité. Vise un modèle **réglable en hauteur**, si possible **inclinable**, avec une surface antidérapante. Poste déjà parfait ? Le gain sera marginal.
 
 ## Conclusion
 
-Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu coûteux qui corrige un vrai écart de hauteur et, surtout, aide à casser l'immobilité prolongée des jambes — un facteur de fatigue souvent sous-estimé en télétravail comme au bureau. Utile à la bonne place, inutile ailleurs : à toi de voir où tu te situes.
+Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu coûteux qui corrige un vrai écart de hauteur et, surtout, aide à casser l'immobilité prolongée des jambes, un facteur de fatigue souvent sous-estimé en télétravail comme au bureau. Utile à la bonne place, inutile ailleurs : à toi de voir où tu te situes.
 
 ## Pour aller plus loin
 

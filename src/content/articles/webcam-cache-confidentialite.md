@@ -34,7 +34,7 @@ faq:
 
 ## Pourquoi couvrir sa webcam quand elle ne sert pas
 
-La webcam est devenue un point d'entrée permanent vers le salon, la chambre ou le bureau à domicile. Entre les réunions en visio, les cours en ligne et les logiciels qui tournent en arrière-plan, l'objectif reste actif bien plus souvent qu'on ne le pense — et un accès non autorisé (logiciel malveillant, application mal configurée, simple erreur de partage d'écran) peut suffire à transformer cette fenêtre sur le quotidien en fuite de vie privée.
+La webcam est devenue un point d'entrée permanent vers le salon, la chambre ou le bureau à domicile. Entre les réunions en visio, les cours en ligne et les logiciels qui tournent en arrière-plan, l'objectif reste actif bien plus souvent qu'on ne le pense, et un accès non autorisé (logiciel malveillant, application mal configurée, simple erreur de partage d'écran) peut suffire à transformer cette fenêtre sur le quotidien en fuite de vie privée.
 
 Le **cache de confidentialité pour webcam** répond à un principe simple : une protection physique ne dépend d'aucun logiciel et ne peut pas être contournée à distance. Contrairement à un réglage système ou une extension de navigateur, un morceau de plastique qui coulisse devant l'objectif garantit qu'aucune image ne sort, quoi qu'il arrive côté logiciel.
 
@@ -71,7 +71,7 @@ Sur certains écrans, l'objectif de la webcam se trouve à quelques millimètres
 
 L'installation ne demande aucun outil particulier, mais quelques précautions évitent les faux départs :
 
-1. **Nettoyer la zone** avec un chiffon microfibre sec avant de coller quoi que ce soit — la moindre poussière ou trace de gras réduit l'adhérence.
+1. **Nettoyer la zone** avec un chiffon microfibre sec avant de coller quoi que ce soit : la moindre poussière ou trace de gras réduit l'adhérence.
 2. **Repérer précisément l'objectif** de la caméra, souvent identifiable par un petit point noir ou un léger reflet différent du reste de la bordure d'écran.
 3. **Positionner le cache ouvert** avant de coller, pour vérifier que le volet dégage bien tout l'objectif une fois glissé.
 4. **Appuyer fermement quelques secondes** sur toute la surface du cache pour que la colle adhère uniformément, sans bulle d'air.
@@ -79,7 +79,7 @@ L'installation ne demande aucun outil particulier, mais quelques précautions é
 
 ## Le complément gratuit : gérer aussi l'accès logiciel
 
-Le cache physique règle l'essentiel, mais il se combine bien avec un réglage gratuit côté système : Windows, macOS et la plupart des distributions Linux permettent de lister quelles applications ont accédé à la caméra récemment, et de révoquer cet accès pour celles qui n'en ont pas besoin. Ce contrôle logiciel ne remplace pas le cache — un accès autorisé reste un accès possible — mais il réduit le nombre de situations où la webcam s'active sans qu'on s'y attende, en particulier pour les applications de visioconférence installées automatiquement puis oubliées.
+Le cache physique règle l'essentiel, mais il se combine bien avec un réglage gratuit côté système : Windows, macOS et la plupart des distributions Linux permettent de lister quelles applications ont accédé à la caméra récemment, et de révoquer cet accès pour celles qui n'en ont pas besoin. Ce contrôle logiciel ne remplace pas le cache (un accès autorisé reste un accès possible), mais il réduit le nombre de situations où la webcam s'active sans qu'on s'y attende, en particulier pour les applications de visioconférence installées automatiquement puis oubliées.
 
 Pour une visio de meilleure qualité une fois le cache ouvert, le reste du setup compte tout autant : un [éclairage d'appoint pour la visio](/articles/ring-light-eclairage-visio/) évite un rendu trop sombre, et un [micro USB dédié](/articles/micro-usb-visioconference-podcast/) améliore souvent plus la perception des interlocuteurs qu'une meilleure définition d'image.
 
@@ -98,7 +98,7 @@ Pour une visio de meilleure qualité une fois le cache ouvert, le reste du setup
 
 ## Conclusion
 
-Le cache de confidentialité pour webcam fait partie de ces accessoires à quelques euros qui rapportent bien plus que leur prix : une tranquillité d'esprit qui ne dépend d'aucune mise à jour logicielle ni d'aucun réglage système. Entre un cache adhésif universel et une webcam à obturateur intégré, le choix dépend surtout de l'équipement déjà en place — mais dans les deux cas, protéger physiquement l'objectif reste le geste le plus simple et le plus fiable pour garder le contrôle de ce que la caméra montre, et surtout de ce qu'elle ne montre pas.
+Le cache de confidentialité pour webcam fait partie de ces accessoires à quelques euros qui rapportent bien plus que leur prix : une tranquillité d'esprit qui ne dépend d'aucune mise à jour logicielle ni d'aucun réglage système. Entre un cache adhésif universel et une webcam à obturateur intégré, le choix dépend surtout de l'équipement déjà en place, mais dans les deux cas, protéger physiquement l'objectif reste le geste le plus simple et le plus fiable pour garder le contrôle de ce que la caméra montre, et surtout de ce qu'elle ne montre pas.
 
 ## Pour aller plus loin
 

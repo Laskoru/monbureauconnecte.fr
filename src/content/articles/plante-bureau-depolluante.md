@@ -21,12 +21,12 @@ interactiveGuide:
     - label: "Bien éclairé (près d'une fenêtre)"
       result: "Tu as le choix : un <strong>pothos</strong> retombant, un <strong>chlorophytum</strong> ou une petite plante à feuillage. Évite juste le soleil direct brûlant derrière une vitre."
     - label: "J'oublie souvent d'arroser"
-      result: "Prends du <strong>quasi increvable</strong> : sansevieria, ZZ ou une <strong>succulente</strong>. Elles préfèrent qu'on les oublie plutôt que de les noyer — l'excès d'eau est leur seul ennemi."
+      result: "Prends du <strong>quasi increvable</strong> : sansevieria, ZZ ou une <strong>succulente</strong>. Elles préfèrent qu'on les oublie plutôt que de les noyer : l'excès d'eau est leur seul ennemi."
     - label: "Je veux surtout du volume déco"
       result: "Une <strong>grande plante</strong> type dracaena ou kentia habille un coin de bureau et apaise visuellement. Vérifie juste qu'elle a la lumière qu'il lui faut et la place pour grandir."
 products:
   - asin: "B0CFZXBQP8"
-    title: "Sansevieria Laurentii — plante d'intérieur, tolère la faible luminosité"
+    title: "Sansevieria Laurentii, plante d'intérieur tolérant la faible luminosité"
     blurb: "Une des plantes les plus résistantes pour un bureau : elle supporte les oublis d'arrosage et se contente d'un poste éloigné d'une fenêtre, ce qui en fait un bon premier choix."
     pros:
       - "Très résistante, tolère l’oubli d’arrosage"
@@ -38,7 +38,7 @@ products:
       - "Craint l’excès d’eau (pourriture)"
 faq:
   - question: "Une plante dépolluante suffit-elle à assainir vraiment l'air d'un bureau ?"
-    answer: "Il faut rester honnête sur ce point : l'effet mesuré d'une seule plante en pot sur la qualité de l'air d'une vraie pièce (par opposition à une chambre expérimentale fermée) est modeste. L'intérêt principal au quotidien tient surtout au confort visuel, à la réduction du stress et à une ambiance de travail plus agréable — des bénéfices bien réels, même si l'effet purement chimique sur l'air reste limité à l'échelle d'un bureau normal."
+    answer: "Il faut rester honnête sur ce point : l'effet mesuré d'une seule plante en pot sur la qualité de l'air d'une vraie pièce (par opposition à une chambre expérimentale fermée) est modeste. L'intérêt principal au quotidien tient surtout au confort visuel, à la réduction du stress et à une ambiance de travail plus agréable, des bénéfices bien réels, même si l'effet purement chimique sur l'air reste limité à l'échelle d'un bureau normal."
   - question: "Quelle plante choisir si le bureau n'a pas de fenêtre ou très peu de lumière ?"
     answer: "La sansevieria est l'un des choix les plus fiables dans ce cas : elle tolère une luminosité faible à moyenne sans dépérir rapidement, contrairement à beaucoup de plantes à fleurs ou à feuillage plus fragile. Une lumière artificielle de bureau standard, allumée plusieurs heures par jour, suffit généralement à son entretien."
   - question: "Combien de temps faut-il consacrer à l'entretien d'une plante de bureau ?"
@@ -47,7 +47,7 @@ faq:
 
 ## Pourquoi une plante change quelque chose sur un poste de travail
 
-Un bureau, qu'il soit à la maison ou en open space, reste un environnement assez minéral : écran, clavier, câbles, surfaces lisses. Une plante verte y apporte un contraste simple mais efficace — une touche de couleur vivante, un point de repos visuel pour les yeux entre deux sessions d'écran, et une présence qui rend l'espace un peu moins austère. Ce n'est pas anodin : plusieurs études sur les environnements de travail associent la présence de végétation à une perception de bien-être plus élevée et à une sensation de fatigue moindre en fin de journée, même si ces effets restent difficiles à isoler précisément.
+Un bureau, qu'il soit à la maison ou en open space, reste un environnement assez minéral : écran, clavier, câbles, surfaces lisses. Une plante verte y apporte un contraste simple mais efficace : une touche de couleur vivante, un point de repos visuel pour les yeux entre deux sessions d'écran, et une présence qui rend l'espace un peu moins austère. Ce n'est pas anodin : plusieurs études sur les environnements de travail associent la présence de végétation à une perception de bien-être plus élevée et à une sensation de fatigue moindre en fin de journée, même si ces effets restent difficiles à isoler précisément.
 
 Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NASA menée dans les années 1980 sur des chambres closes et étanches, très différentes d'un bureau réel avec ventilation, portes qui s'ouvrent et volume d'air important. Dans un vrai bureau, l'effet purifiant d'une seule plante en pot sur les polluants intérieurs est réel mais limité en pratique. Ce qui reste vrai et vérifiable, en revanche, c'est le bénéfice sur le cadre de travail : une plante bien choisie demande peu d'entretien, dure des années, et transforme visuellement un poste de travail sans y consacrer de budget ni de temps important.
 
@@ -79,16 +79,16 @@ Une plante verte améliore le cadre de travail, mais elle ne corrige pas un écl
 
 Il vaut aussi la peine d'accepter, dès le départ, qu'une plante demande un minimum d'attention même parmi les variétés les plus tolérantes : un arrosage complètement oublié pendant plusieurs mois finit par l'affaiblir. Choisir une espèce adaptée au rythme réel qu'on peut lui consacrer évite la déception d'une plante qui dépérit après quelques semaines seulement.
 
+## Le bon pot et le bon emplacement
+
+Un détail souvent oublié : le **pot** compte autant que la plante. Un cache-pot **sans trou de drainage** retient l'eau au fond et fait pourrir les racines, la première cause de mort des plantes de bureau. Privilégie un pot avec **drainage** et une soucoupe qu'on vide, ou glisse un pot technique perforé dans un joli cache-pot. Côté emplacement, évite de coller la plante contre une vitre en plein soleil (elle grille) ou juste au-dessus d'un radiateur (l'air sec la dessèche). Un coin lumineux mais sans soleil direct, à l'écart des sources de chaleur, convient à la grande majorité des plantes de bureau.
+
 > **L'essentiel à retenir**
-> Soyons honnêtes : une plante seule n'assainit pas vraiment l'air d'une pièce entière. Son vrai bénéfice est le **confort visuel** et une ambiance plus agréable — bien réels. Choisis-la donc selon ta **lumière** et le **temps** que tu peux y consacrer : **sansevieria ou ZZ** dans un coin sombre ou si tu oublies d'arroser, plus de liberté près d'une fenêtre. L'erreur n°1 reste le **trop d'eau**, pas le manque.
+> Soyons honnêtes : une plante seule n'assainit pas vraiment l'air d'une pièce entière. Son vrai bénéfice est le **confort visuel** et une ambiance plus agréable, bien réels. Choisis-la donc selon ta **lumière** et le **temps** que tu peux y consacrer : **sansevieria ou ZZ** dans un coin sombre ou si tu oublies d'arroser, plus de liberté près d'une fenêtre. L'erreur n°1 reste le **trop d'eau**, pas le manque.
 
 ## Conclusion
 
-La plante de bureau dépolluante n'est pas un accessoire miracle pour l'air ambiant, mais c'est un ajout simple, durable et peu coûteux qui améliore réellement le cadre de travail au quotidien. Le choix se joue avant tout sur la tolérance à la lumière disponible sur le poste et sur le temps qu'on peut raisonnablement consacrer à l'arrosage — des variétés comme la sansevieria ou la plante araignée couvrent la grande majorité des situations de bureau, avec un entretien qui reste largement à la portée de qui n'a jamais eu la main verte.
-
-## Le bon pot et le bon emplacement
-
-Un détail souvent oublié : le **pot** compte autant que la plante. Un cache-pot **sans trou de drainage** retient l'eau au fond et fait pourrir les racines — la première cause de mort des plantes de bureau. Privilégie un pot avec **drainage** et une soucoupe qu'on vide, ou glisse un pot technique perforé dans un joli cache-pot. Côté emplacement, évite de coller la plante contre une vitre en plein soleil (elle grille) ou juste au-dessus d'un radiateur (l'air sec la déssèche). Un coin lumineux mais sans soleil direct, à l'écart des sources de chaleur, convient à la grande majorité des plantes de bureau.
+La plante de bureau dépolluante n'est pas un accessoire miracle pour l'air ambiant, mais c'est un ajout simple, durable et peu coûteux qui améliore réellement le cadre de travail au quotidien. Le choix se joue avant tout sur la tolérance à la lumière disponible sur le poste et sur le temps qu'on peut raisonnablement consacrer à l'arrosage : des variétés comme la sansevieria ou la plante araignée couvrent la grande majorité des situations de bureau, avec un entretien qui reste largement à la portée de qui n'a jamais eu la main verte.
 
 ## Pour aller plus loin
 

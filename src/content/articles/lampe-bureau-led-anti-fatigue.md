@@ -12,7 +12,7 @@ coverAlt: "Lampe de bureau à bras articulé sur une table en bois"
 draft: false
 products:
   - asin: "B0D1DLY4H4"
-    title: "SKYLEO — bras pivotant, 5 modes de couleur, 11 niveaux"
+    title: "Lampe SKYLEO à bras pivotant, 5 modes de couleur, 11 niveaux"
     blurb: "Très complet pour le prix : fonction mémoire et minuterie, bras articulé qui couvre bien un plan de travail large."
     pros:
       - "5 teintes, 11 niveaux d’intensité"
@@ -45,7 +45,7 @@ faq:
     answer: "Très peu, comparée à une lampe halogène ou à incandescence : une LED transforme une plus grande part de l'électricité en lumière et n'envoie presque pas de chaleur vers toi. La tête de la lampe peut devenir tiède, car la chaleur est évacuée par l'arrière ; si elle devient brûlante au toucher, c'est anormal et mieux vaut arrêter de l'utiliser."
 ---
 
-## Pourquoi la qualité de l'éclairage change tout
+## Pourquoi la qualité de l'éclairage joue sur la fatigue oculaire
 
 Travailler sous un éclairage trop faible, trop dur ou mal orienté force les yeux à compenser en permanence. Cette **fatigue oculaire** s'accumule au fil de la journée : picotements, yeux secs, maux de tête, difficulté à se concentrer en fin d'après-midi. Une bonne lampe de bureau ne sert pas juste à « voir plus clair » : elle réduit ces efforts de compensation invisibles qui usent la concentration.
 
@@ -69,14 +69,14 @@ Le **flicker** est un défaut invisible à l'œil nu sur certaines LED bon march
 
 ### Le bras articulé et l'IRC
 
-Un **bras articulé** oriente précisément la lumière et évite les reflets sur l'écran. Et pour un travail sur les couleurs, un **indice de rendu des couleurs (IRC) supérieur à 90** restitue fidèlement les teintes — crucial en photo, dessin ou couture.
+Un **bras articulé** oriente précisément la lumière et évite les reflets sur l'écran. Et pour un travail sur les couleurs, un **indice de rendu des couleurs (IRC) supérieur à 90** restitue fidèlement les teintes, crucial en photo, dessin ou couture.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les lampes de bureau LED sur Amazon](https://www.amazon.fr/s?k=lampe+de+bureau+led&tag=monbureauconnecte-21).
 
 ## À poser, à pince ou sur pied ?
 
-Le format compte autant que la lumière. La lampe **à poser** (socle lesté) est la plus simple et stable, mais occupe une place sur le plateau. La lampe **à pince** se fixe sur le bord du bureau ou une étagère et libère toute la surface — idéale sur un petit bureau, à condition d'un rebord accessible. Le modèle **sur pied ou à long bras articulé** couvre un très grand plan de travail et s'écarte quand on n'en a pas besoin. Pense aussi à l'alimentation : certaines lampes intègrent une **prise USB** ou une base à **charge sans fil** pour le téléphone, ce qui libère une prise et un accessoire de plus sur le bureau.
+Le format compte autant que la lumière. La lampe **à poser** (socle lesté) est la plus simple et stable, mais occupe une place sur le plateau. La lampe **à pince** se fixe sur le bord du bureau ou une étagère et libère toute la surface, idéale sur un petit bureau, à condition d'un rebord accessible. Le modèle **sur pied ou à long bras articulé** couvre un très grand plan de travail et s'écarte quand on n'en a pas besoin. Pense aussi à l'alimentation : certaines lampes intègrent une **prise USB** ou une base à **charge sans fil** pour le téléphone, ce qui libère une prise et un accessoire de plus sur le bureau.
 
 ## Bien la placer, un réglage gratuit qui compte
 
@@ -99,7 +99,7 @@ Inutile de courir après les lumens : pour une lampe de bureau, on n'éclaire qu
 
 ## Conclusion
 
-Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers pour un effet réel sur le confort visuel en fin de journée — à condition de privilégier le **réglage** (intensité, température) et l'**absence de scintillement** plutôt que la seule puissance en lumens. Et n'oublie pas qu'une lampe, aussi bonne soit-elle, agit de pair avec le reste : un écran bien positionné, sans reflet de fenêtre, et des pauses régulières pour reposer les yeux comptent tout autant. Bien réglée et bien placée, la lampe fait le reste — tes yeux te remercieront dès la première semaine.
+Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers pour un effet réel sur le confort visuel en fin de journée, à condition de privilégier le **réglage** (intensité, température) et l'**absence de scintillement** plutôt que la seule puissance en lumens. Et n'oublie pas qu'une lampe, aussi bonne soit-elle, agit de pair avec le reste : un écran bien positionné, sans reflet de fenêtre, et des pauses régulières pour reposer les yeux comptent tout autant. Bien réglée et bien placée, la lampe fait le reste : tes yeux te remercieront dès la première semaine.
 
 ## Pour aller plus loin
 

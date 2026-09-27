@@ -1,6 +1,6 @@
 ---
 title: "Clavier ergonomique séparé : à qui s'adresse ce format ?"
-description: "Un clavier en deux parties déroute au début, mais change vraiment la donne pour les poignets. Notre comparatif, le temps d'adaptation, comment choisir."
+description: "Un clavier ergonomique séparé déroute au début, mais soulage vraiment les poignets. Notre comparatif, le temps d'adaptation, comment choisir."
 pubDate: 2026-08-02
 updatedDate: 2026-09-11
 author: "Hugo B."
@@ -12,7 +12,7 @@ coverAlt: "Mains posées sur un clavier d'ordinateur"
 draft: false
 products:
   - asin: "B07W6GVT3X"
-    title: "Logitech ERGO K860 — clavier en deux parties, repose-poignets"
+    title: "Logitech ERGO K860, clavier en deux parties, repose-poignets"
     blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, très bonne prise en main dès les premiers jours."
     pros:
       - "Courbe qui détend les poignets"
@@ -45,7 +45,7 @@ faq:
 
 ## Pourquoi passer à un clavier ergonomique séparé
 
-Un clavier classique oblige les poignets à se tourner légèrement vers l'intérieur (déviation cubitale) pour aligner les mains sur les touches du centre — une position qui n'a rien de naturel sur plusieurs heures de frappe quotidienne. Un clavier ergonomique, **courbé ou scindé en deux parties**, permet de garder les mains et les avant-bras dans un **alignement plus naturel**, ce qui réduit la tension répétée sur les poignets et les tendons.
+Un clavier classique oblige les poignets à se tourner légèrement vers l'intérieur (déviation cubitale) pour aligner les mains sur les touches du centre, une position qui n'a rien de naturel sur plusieurs heures de frappe quotidienne. Un clavier ergonomique, **courbé ou scindé en deux parties**, permet de garder les mains et les avant-bras dans un **alignement plus naturel**, ce qui réduit la tension répétée sur les poignets et les tendons.
 
 Ce format intrigue au premier abord, mais il ne s'adresse pas qu'aux personnes déjà en douleur : c'est aussi un excellent choix **préventif** pour qui tape beaucoup.
 
@@ -55,7 +55,7 @@ Ce format intrigue au premier abord, mais il ne s'adresse pas qu'aux personnes d
 
 ### Le degré de séparation
 
-C'est le grand curseur. On va de la **courbe en une seule pièce** (les deux moitiés sont écartées mais solidaires) aux **deux blocs totalement indépendants** que l'on positionne librement, écartés à la largeur des épaules. Plus la séparation est marquée, plus le poignet est relâché — et plus l'adaptation est longue.
+C'est le grand curseur. On va de la **courbe en une seule pièce** (les deux moitiés sont écartées mais solidaires) aux **deux blocs totalement indépendants** que l'on positionne librement, écartés à la largeur des épaules. Plus la séparation est marquée, plus le poignet est relâché, et plus l'adaptation est longue.
 
 ### Le repose-poignets
 
@@ -84,7 +84,7 @@ Pour découvrir le format sans trop bouleverser ses habitudes, un clavier à cou
 
 ## Réussir l'adaptation (et ne pas abandonner)
 
-La première semaine est la plus délicate : la vitesse chute, on tape à côté, on doute. C'est **normal** et temporaire. Quelques réflexes aident à passer le cap : garde le nouveau clavier **en usage principal** plutôt que d'alterner avec l'ancien (l'alternance rallonge l'adaptation), fais quelques minutes de **dactylo en ligne** par jour pour reprogrammer les automatismes, et règle bien l'**écartement** des deux moitiés (sur un modèle scindé) à la largeur de tes épaules, avant-bras dans l'axe. Au bout de sept à dix jours, la vitesse revient — et le confort du poignet, lui, est là dès le début.
+La première semaine est la plus délicate : la vitesse chute, on tape à côté, on doute. C'est **normal** et temporaire. Quelques réflexes aident à passer le cap : garde le nouveau clavier **en usage principal** plutôt que d'alterner avec l'ancien (l'alternance rallonge l'adaptation), fais quelques minutes de **dactylo en ligne** par jour pour reprogrammer les automatismes, et règle bien l'**écartement** des deux moitiés (sur un modèle scindé) à la largeur de tes épaules, avant-bras dans l'axe. Au bout de sept à dix jours, la vitesse revient, et le confort du poignet, lui, est là dès le début.
 
 ## Penser le poste dans son ensemble
 
@@ -92,9 +92,9 @@ Le clavier ne travaille jamais seul. Pour un vrai bénéfice, il gagne à s'insc
 
 ## Pour qui ce n'est (peut-être) pas utile
 
-Soyons honnêtes : tout le monde n'a pas besoin d'un clavier ergonomique. Si tu tapes **peu** dans la journée, si tu n'as **aucune gêne** et si ton poste est déjà bien réglé, le bénéfice sera marginal et l'adaptation peut agacer pour rien. De même, si tu jongles souvent entre **plusieurs postes** (bureau, portable, salle de réunion), réapprendre un format à chaque fois est contre-productif — mieux vaut alors soigner sa posture et faire des pauses. Le clavier ergo brille surtout pour qui **tape des heures au même poste** et ressent, ou veut prévenir, des tensions au poignet.
+Soyons honnêtes : tout le monde n'a pas besoin d'un clavier ergonomique. Si tu tapes **peu** dans la journée, si tu n'as **aucune gêne** et si ton poste est déjà bien réglé, le bénéfice sera marginal et l'adaptation peut agacer pour rien. De même, si tu jongles souvent entre **plusieurs postes** (bureau, portable, salle de réunion), réapprendre un format à chaque fois est contre-productif : mieux vaut alors soigner sa posture et faire des pauses. Le clavier ergo brille surtout pour qui **tape des heures au même poste** et ressent, ou veut prévenir, des tensions au poignet.
 
-Côté budget, compte environ **40 à 70 €** pour un bon modèle à courbe en une pièce, davantage pour les claviers scindés haut de gamme. Le bénéfice se ressent dès les premiers jours pour le confort, et la vitesse revient sous une à deux semaines : un investissement modéré au regard des années de frappe qu'il accompagne.
+Côté budget, compte environ **40 à 70 €** pour un modèle d'entrée de gamme à courbe en une pièce, davantage pour une référence comme l'ERGO K860 ou pour les claviers scindés haut de gamme. Le bénéfice se ressent dès les premiers jours pour le confort, et la vitesse revient sous une à deux semaines : un investissement modéré au regard des années de frappe qu'il accompagne.
 
 ## Gauchers, petites mains, pavé numérique : les détails qui comptent
 

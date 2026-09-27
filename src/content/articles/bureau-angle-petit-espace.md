@@ -32,7 +32,7 @@ faq:
     answer: "Vise au moins 45 à 50 cm de profondeur sur le petit côté du bureau, sinon un écran ou un clavier y tient mal. Si ce retour sert surtout de rangement d'appoint plutôt que de vraie surface de travail, une profondeur plus réduite reste acceptable."
 ---
 
-## Pourquoi un bureau d'angle change la donne dans un petit espace
+## Pourquoi un bureau d'angle fait gagner de la place dans un petit espace
 
 Dans une chambre d'étudiant, un studio ou un coin de salon récupéré pour le télétravail, chaque mètre carré compte. Un bureau droit classique, même compact, occupe tout un pan de mur en ligne et laisse souvent le coin de la pièce complètement inutilisé. Le bureau d'angle inverse la logique : il vient se loger précisément dans cet espace mort, entre deux murs, là où rien d'autre ne s'installe facilement.
 
@@ -46,7 +46,7 @@ Tous les bureaux d'angle ne se ressemblent pas, et le bon choix dépend surtout 
 
 Le **bureau d'angle fixe en forme de L** reste le format le plus courant : un plateau en deux parties qui se rejoignent à 90°, calé contre deux murs. C'est le plus stable et le plus généreux en surface, mais aussi le plus difficile à déplacer une fois monté.
 
-Le **bureau d'angle avec étagères intégrées** ajoute du rangement vertical au-dessus ou à côté du plan de travail — utile quand le petit espace ne permet pas d'installer une bibliothèque séparée. Vérifie simplement que la profondeur du plateau reste suffisante pour ton matériel, certains modèles compacts sacrifient cette dimension pour gagner en hauteur de rangement.
+Le **bureau d'angle avec étagères intégrées** ajoute du rangement vertical au-dessus ou à côté du plan de travail, utile quand le petit espace ne permet pas d'installer une bibliothèque séparée. Vérifie simplement que la profondeur du plateau reste suffisante pour ton matériel, certains modèles compacts sacrifient cette dimension pour gagner en hauteur de rangement.
 
 La **table pivotante ou le bureau modulable** convient aux pièces qui changent de fonction dans la journée : un plateau qui se range ou qui pivote contre le mur libère l'espace le soir. Pratique, mais moins stable qu'un vrai bureau d'angle fixe, donc plutôt réservé à un usage léger (ordinateur portable seul, sans double écran).
 
@@ -83,7 +83,7 @@ Si ton coin de pièce a la bonne taille et que tu passes plusieurs heures par jo
 
 ## Combien ça coûte
 
-Un **bureau d'angle basique**, plateau mélaminé et pieds simples, se trouve généralement entre **60 et 120 €**. Les modèles avec **étagères intégrées ou rangement additionnel** montent plutôt entre **120 et 220 €**, selon la qualité des matériaux et la marque. Un **bureau d'angle assis-debout électrique** reste le format le plus cher, souvent au-delà de **350 €**, réservé à qui veut vraiment alterner les positions sans compromis sur l'espace. Pour un usage bureautique classique dans un petit espace, un modèle basique bien dimensionné suffit largement — inutile de viser le haut de gamme si le besoin reste simple.
+Un **bureau d'angle basique**, plateau mélaminé et pieds simples, se trouve généralement entre **60 et 120 €**. Les modèles avec **étagères intégrées ou rangement additionnel** montent plutôt entre **120 et 220 €**, selon la qualité des matériaux et la marque. Un **bureau d'angle assis-debout électrique** reste le format le plus cher, souvent au-delà de **350 €**, réservé à qui veut vraiment alterner les positions sans compromis sur l'espace. Pour un usage bureautique classique dans un petit espace, un modèle basique bien dimensionné suffit largement : inutile de viser le haut de gamme si le besoin reste simple.
 
 ## En résumé
 

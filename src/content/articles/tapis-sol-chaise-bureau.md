@@ -13,7 +13,7 @@ coverAlt: "Bureau et chaise sur un parquet, près d'une fenêtre"
 draft: false
 products:
   - asin: "B08PP39PLD"
-    title: "NATRKE — PVC transparent, 76 x 122 cm, sans BPA"
+    title: "Tapis NATRKE en PVC transparent, 76 x 122 cm, sans BPA"
     blurb: "Le format le plus discret : transparent, il se fond dans le décor tout en protégeant efficacement un parquet ou un stratifié."
     pros:
       - "Transparent et discret"
@@ -62,7 +62,7 @@ Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifi
 - **L'épaisseur** : en dessous de 1,2-1,5 mm, un tapis plie facilement et vieillit vite sous le poids répété d'une chaise. Une épaisseur plus généreuse tient mieux dans la durée et reste plus stable au sol.
 - **La transparence ou l'opacité** : un modèle transparent se fond dans n'importe quelle déco, un modèle opaque ou coloré peut au contraire délimiter clairement une zone de travail dans une pièce partagée.
 - **La base antidérapante** : sans revêtement anti-glisse au dos, le tapis se déplace lui-même au fil des mouvements de chaise, ce qui oblige à le repositionner sans arrêt.
-- **La taille par rapport au bureau** : il faut couvrir toute la zone de débattement de la chaise, pas seulement l'espace sous le siège au repos — sous peine de rouler régulièrement hors du tapis.
+- **La taille par rapport au bureau** : il faut couvrir toute la zone de débattement de la chaise, pas seulement l'espace sous le siège au repos, sous peine de rouler régulièrement hors du tapis.
 - **La compatibilité avec le sol existant** : certains modèles sont pensés spécifiquement pour sols durs (parquet, stratifié, carrelage), d'autres pour moquette ; les confondre réduit fortement l'efficacité de la protection ou la fluidité du roulement.
 
 ## Comment choisir selon ton usage
@@ -80,16 +80,16 @@ Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifi
 
 ## Entretien et pose : les erreurs à éviter
 
-Un tapis mal posé perd une bonne partie de son intérêt. Avant l'installation, il vaut mieux dépoussiérer et sécher complètement le sol : la moindre particule coincée sous le tapis peut créer un point de friction qui marque le sol exactement comme une roulette nue. La plupart des modèles en PVC ou vinyle demandent aussi un temps de mise à plat après déballage — ils sont souvent roulés pour l'expédition et gardent une légère courbure les premiers jours, le temps que le matériau se détende.
+Un tapis mal posé perd une bonne partie de son intérêt. Avant l'installation, il vaut mieux dépoussiérer et sécher complètement le sol : la moindre particule coincée sous le tapis peut créer un point de friction qui marque le sol exactement comme une roulette nue. La plupart des modèles en PVC ou vinyle demandent aussi un temps de mise à plat après déballage : ils sont souvent roulés pour l'expédition et gardent une légère courbure les premiers jours, le temps que le matériau se détende.
 
 Côté entretien, un simple passage à l'aspirateur ou un coup de chiffon humide suffit dans la majorité des cas, à condition de ne pas laisser s'accumuler du sable ou des graviers ramenés de l'extérieur, qui agissent comme un abrasif entre le tapis et le sol. Si le tapis commence à se soulever sur les bords ou à glisser malgré sa base antidérapante, c'est souvent le signe qu'il est temps de le remplacer plutôt que d'attendre qu'il n'assure plus vraiment sa fonction de protection.
 
 > **L'essentiel à retenir**
-> Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol — bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC/vinyle), une **épaisseur ≥ 1,5 mm**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
+> Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol, pour bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC/vinyle), une **épaisseur ≥ 1,5 mm**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
 
 ## Conclusion
 
-Le tapis de sol pour chaise de bureau fait partie de ces petits accessoires qu'on regrette de ne pas avoir installés plus tôt, une fois qu'on aperçoit les premières marques sur le parquet. Le choix se résume à peu de critères — matériau adapté au sol, épaisseur suffisante, base qui ne glisse pas — mais les respecter évite des années de frottement inutile sur une surface qui, elle, coûte bien plus cher à réparer qu'à protéger.
+Le tapis de sol pour chaise de bureau fait partie de ces petits accessoires qu'on regrette de ne pas avoir installés plus tôt, une fois qu'on aperçoit les premières marques sur le parquet. Le choix se résume à peu de critères (matériau adapté au sol, épaisseur suffisante, base qui ne glisse pas), mais les respecter évite des années de frottement inutile sur une surface qui, elle, coûte bien plus cher à réparer qu'à protéger.
 
 ## Pour aller plus loin
 

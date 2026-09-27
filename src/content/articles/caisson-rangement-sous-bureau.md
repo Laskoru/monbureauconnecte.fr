@@ -13,7 +13,7 @@ coverAlt: "Espace sous un bureau, jambes et zone de rangement disponible"
 draft: false
 products:
   - asin: "B08VJM5NHB"
-    title: "HOMCOM — caisson à roulettes, tiroir + niche ouverte"
+    title: "Caisson à roulettes HOMCOM, tiroir + niche ouverte"
     blurb: "Un caisson compact avec un tiroir fermé et une niche ouverte pour un accès rapide, monté sur roulettes pour se déplacer facilement sous le bureau."
     pros:
       - "Compact, se glisse sous le bureau"
@@ -48,7 +48,7 @@ faq:
 
 Un plateau de bureau encombré n'est presque jamais un problème de manque de place dans la pièce : c'est un problème de répartition. Stylos, dossiers, chargeurs, câbles et accessoires divers s'accumulent sur la surface de travail simplement parce qu'il n'existe pas d'endroit dédié pour les ranger à portée de main. Le caisson de rangement sous bureau résout ce problème sans prendre un centimètre de surface sur le plateau : tout l'espace utile se trouve sous le bureau, dans une zone souvent laissée vide à part les jambes de l'utilisateur.
 
-C'est une solution particulièrement adaptée au télétravail et aux petits espaces, où il n'est pas toujours possible d'ajouter une armoire ou un meuble de rangement séparé. Le caisson permet de garder à disposition immédiate ce qui sert tous les jours — un carnet, des dossiers en cours, une trousse de bureau — tout en libérant visuellement le plan de travail. Un plateau dégagé n'est pas qu'une question d'esthétique : plusieurs études sur l'ergonomie du poste de travail associent un espace encombré à une charge mentale plus élevée et à une concentration plus difficile à maintenir sur la durée.
+C'est une solution particulièrement adaptée au télétravail et aux petits espaces, où il n'est pas toujours possible d'ajouter une armoire ou un meuble de rangement séparé. Le caisson permet de garder à disposition immédiate ce qui sert tous les jours (un carnet, des dossiers en cours, une trousse de bureau) tout en libérant visuellement le plan de travail. Un plateau dégagé n'est pas qu'une question d'esthétique : plusieurs études sur l'ergonomie du poste de travail associent un espace encombré à une charge mentale plus élevée et à une concentration plus difficile à maintenir sur la durée.
 
 Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantage de rester mobile dans la plupart des modèles à roulettes : il peut suivre un réaménagement du bureau, être partagé entre deux postes en horaires décalés, ou simplement être sorti le temps de nettoyer le sol.
 

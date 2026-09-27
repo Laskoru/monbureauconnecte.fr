@@ -14,8 +14,8 @@ coverAlt: "Clavier compact sans pavé numérique posé sur un bureau, à côté 
 draft: false
 products:
   - asin: "B07W7JHZKR"
-    title: "Logitech MX Keys Mini — clavier compact sans fil, rétroéclairé, AZERTY"
-    blurb: "Un format TKL premium, silencieux et bien construit, pensé pour un usage bureautique intensif au quotidien."
+    title: "Logitech MX Keys Mini, clavier compact sans fil, rétroéclairé, AZERTY"
+    blurb: "Un format compact premium, silencieux et bien construit, pensé pour un usage bureautique intensif au quotidien."
     pros:
       - "Format compact qui rapproche la souris"
       - "Frappe silencieuse et rétroéclairée"
@@ -33,7 +33,7 @@ interactiveGuide:
     - label: "Tapes beaucoup de chiffres"
       result: "Ne te prive pas du pavé : garde un clavier complet, ou prends un TKL <strong>+ un <a href='/articles/pave-numerique-externe-sans-fil/'>pavé numérique externe</a></strong> que tu poses seulement quand tu en as besoin."
     - label: "Veux un bureau minimaliste"
-      result: "Vise un TKL <strong>sans fil</strong> et pense au rangement du récepteur et du câble de charge — sinon le gain visuel est perdu. Un format 65 % va encore plus loin si tu n'utilises jamais les touches de navigation."
+      result: "Vise un TKL <strong>sans fil</strong> et pense au rangement du récepteur et du câble de charge, sinon le gain visuel est perdu. Un format 65 % va encore plus loin si tu n'utilises jamais les touches de navigation."
     - label: "As surtout mal aux poignets"
       result: "Le TKL seul n'y changera pas grand-chose : le sujet est l'<strong>alignement des mains</strong>, pas la largeur. Regarde plutôt le <a href='/articles/clavier-ergonomique-separe/'>clavier ergonomique séparé</a>."
 faq:
@@ -59,7 +59,7 @@ C'est aussi un choix qui a du sens pour qui travaille sur un support d'ordinateu
 - **La présence des touches de navigation** : un vrai TKL garde les flèches, Inser/Suppr, Origine/Fin et Pg préc/suiv à droite des lettres. Un format encore plus réduit (60 % ou 65 %) supprime aussi ces touches, ce qui demande un vrai temps d'adaptation pour qui les utilise souvent.
 - **La connectivité** : filaire, Bluetooth ou récepteur USB. Le sans-fil simplifie le rangement et le nettoyage du bureau, mais vérifie l'autonomie annoncée si tu comptes t'en servir plusieurs heures par jour.
 - **Le type de frappe** : à membrane (plus silencieux et économique) ou mécanique (frappe plus précise, souvent plus bruyante sauf sur les switches dits « silencieux »). Si le bruit en open space ou en visio est un vrai sujet, notre comparatif des [claviers mécaniques silencieux](/articles/claviers-mecaniques-silencieux/) détaille les switches à privilégier.
-- **La disposition AZERTY complète** : certains modèles compacts, pensés d'abord pour un marché anglophone, réorganisent ou suppriment des touches spécifiques au français (accents, touches mortes) — à vérifier avant d'acheter, surtout sur les modèles gaming importés.
+- **La disposition AZERTY complète** : certains modèles compacts, pensés d'abord pour un marché anglophone, réorganisent ou suppriment des touches spécifiques au français (accents, touches mortes). À vérifier avant d'acheter, surtout sur les modèles gaming importés.
 - **La compatibilité multi-appareils** : utile si tu bascules régulièrement entre un ordinateur professionnel et un ordinateur personnel dans la même journée.
 - **La qualité de fabrication du châssis** : un clavier compact repose souvent sur un socle plus fin qu'un clavier complet ; vérifie qu'il ne fléchit pas au centre lors d'une frappe rapide, un défaut fréquent sur les modèles d'entrée de gamme les moins chers.
 
@@ -68,17 +68,17 @@ C'est aussi un choix qui a du sens pour qui travaille sur un support d'ordinateu
 
 ## Comment choisir selon ton usage
 
-Pour un usage bureautique classique — mails, navigateur, traitement de texte, tableur avec peu de saisie numérique — un TKL sans fil à membrane suffit largement et reste le choix le plus économique. L'essentiel du bénéfice (place gagnée pour la souris) est déjà là, sans surcoût lié à la frappe mécanique.
+Pour un usage bureautique classique (mails, navigateur, traitement de texte, tableur avec peu de saisie numérique), un TKL sans fil à membrane suffit largement et reste le choix le plus économique. L'essentiel du bénéfice (place gagnée pour la souris) est déjà là, sans surcoût lié à la frappe mécanique.
 
 Si tu passes plusieurs heures par jour à taper de longs textes, un modèle avec une frappe plus qualitative (mécanique silencieuse ou membrane haut de gamme avec un vrai ressenti tactile) vaut l'investissement supplémentaire : le confort de frappe se ressent directement sur la fatigue en fin de journée.
 
-Pour qui jongle encore régulièrement avec des chiffres — comptabilité, saisie de données répétée — mieux vaut garder un clavier complet ou ajouter un pavé numérique externe sans fil à côté du TKL plutôt que de se priver totalement du bloc numérique : le gain de place ne compense pas la perte de vitesse de saisie dans ce cas précis.
+Pour qui jongle encore régulièrement avec des chiffres (comptabilité, saisie de données répétée), mieux vaut garder un clavier complet ou ajouter un pavé numérique externe sans fil à côté du TKL plutôt que de se priver totalement du bloc numérique : le gain de place ne compense pas la perte de vitesse de saisie dans ce cas précis.
 
 Enfin, si le sujet de fond est surtout la tension dans les poignets plus que la place sur le bureau, le format TKL seul n'y changera pas grand-chose : notre article sur le [clavier ergonomique séparé](/articles/clavier-ergonomique-separe/) traite spécifiquement de cet angle-là, avec des modèles pensés pour l'alignement naturel des mains plutôt que pour le gain d'espace.
 
 ## Ce que tu perds vraiment (et ce que tu ne perds pas)
 
-La seule vraie contrepartie du format TKL est l'absence du pavé numérique lui-même : pas de raccourcis clavier perdus, pas de touches de fonction sacrifiées, pas de compromis sur les flèches de navigation. C'est un point souvent mal compris — beaucoup imaginent à tort qu'un clavier compact impose de réapprendre ses habitudes, alors que la disposition des lettres et des raccourcis reste identique à un clavier complet.
+La seule vraie contrepartie du format TKL est l'absence du pavé numérique lui-même : pas de raccourcis clavier perdus, pas de touches de fonction sacrifiées, pas de compromis sur les flèches de navigation. C'est un point souvent mal compris : beaucoup imaginent à tort qu'un clavier compact impose de réapprendre ses habitudes, alors que la disposition des lettres et des raccourcis reste identique à un clavier complet.
 
 Le seul vrai temps d'adaptation concerne la position de la souris, qui se rapproche mécaniquement du clavier : quelques jours suffisent en général pour s'habituer à cette nouvelle position, avec un gain de confort net une fois l'habitude prise, notamment pour l'épaule qui n'a plus besoin de rester en légère extension toute la journée.
 
@@ -89,7 +89,7 @@ Un clavier compact sans fil n'a d'intérêt que si le reste du bureau suit la m�
 Pense aussi à l'autonomie annoncée si tu optes pour un modèle sans fil : un clavier qui se recharge via USB-C toutes les quelques semaines reste largement gérable, à condition de ne pas attendre la panne totale de batterie pour y penser. Certains modèles conservent en plus quelques heures d'utilisation après une charge très courte, un vrai plus si tu oublies régulièrement de recharger tes périphériques.
 
 > **L'essentiel à retenir**
-> Le TKL supprime **le pavé numérique**, rien d'autre : aucun raccourci ni touche de navigation perdu, la disposition des lettres reste identique. Le vrai gain, c'est la **souris qui se rapproche** dans l'axe de l'épaule. Vérifie la présence des **flèches**, la **disposition AZERTY**, et — si tu saisis des chiffres — ajoute un pavé externe plutôt que de renoncer au format.
+> Le TKL supprime **le pavé numérique**, rien d'autre : aucun raccourci ni touche de navigation perdu, la disposition des lettres reste identique. Le vrai gain, c'est la **souris qui se rapproche** dans l'axe de l'épaule. Vérifie la présence des **flèches**, la **disposition AZERTY**, et, si tu saisis des chiffres, ajoute un pavé externe plutôt que de renoncer au format.
 
 ## Conclusion
 

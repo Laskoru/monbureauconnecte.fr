@@ -1,7 +1,7 @@
 ---
 title: "Tablette graphique d'entrée de gamme : comment bien choisir la sienne"
 seoTitle: "Tablette graphique d'entrée de gamme : bien choisir"
-description: "Annoter, dessiner ou signer des documents au bureau : quels critères pour une tablette graphique d'entrée de gamme, et comment éviter les mauvaises surprises."
+description: "Annoter, dessiner ou signer au bureau : quels critères pour une tablette graphique d'entrée de gamme, et comment éviter les mauvaises surprises."
 pubDate: 2026-09-12
 updatedDate: 2026-09-24
 author: "Hugo B."
@@ -11,7 +11,7 @@ keywords: ["tablette graphique pas cher", "tablette graphique débutant", "table
 category: "peripheriques"
 topPick:
   name: "Wacom Intuos S"
-  blurb: "Le choix sûr pour débuter : format compact, stylet sans pile, 4 touches programmables, et une compatibilité Windows/macOS irréprochable — la marque de référence, au prix d'une entrée de gamme."
+  blurb: "Le choix sûr pour débuter : format compact, stylet sans pile, 4 touches programmables, et une compatibilité Windows/macOS irréprochable. C'est la marque de référence, au prix d'une entrée de gamme."
   url: "https://www.amazon.fr/s?k=wacom+intuos+s&tag=monbureauconnecte-21"
   ctaLabel: "Voir la Wacom Intuos S sur Amazon"
 coverAlt: "Une main tenant un stylet sur une tablette graphique, posée à côté d'un clavier d'ordinateur portable et de feutres de dessin"
@@ -39,7 +39,7 @@ La zone active, c'est la surface de la tablette réellement sensible au stylet. 
 
 ### La sensibilité à la pression du stylet
 
-Le nombre de **niveaux de pression** (souvent 2048 ou 4096 sur les modèles d'entrée de gamme) détermine la finesse avec laquelle le trait s'épaissit ou s'affine selon la force appliquée. Pour de la simple annotation, même une sensibilité modeste suffit. Pour du dessin ou de la prise de notes illustrées plus expressives, une sensibilité plus élevée rend le geste plus naturel.
+Le nombre de **niveaux de pression** (souvent 4096 à 8192 sur les modèles d'entrée de gamme) détermine la finesse avec laquelle le trait s'épaissit ou s'affine selon la force appliquée. Pour de la simple annotation, même une sensibilité modeste suffit. Pour du dessin ou de la prise de notes illustrées plus expressives, une sensibilité plus élevée rend le geste plus naturel.
 
 ### Le stylet : avec ou sans pile, et le nombre de boutons
 
@@ -87,7 +87,7 @@ Pour de l'annotation ponctuelle, la place naturelle de la tablette est celle de 
 
 ## Conclusion
 
-Pour de l'annotation de documents, de la signature ou une première découverte du dessin numérique au bureau, une tablette graphique d'entrée de gamme suffit très largement. L'essentiel est de vérifier une zone active cohérente avec ton écran, un stylet sans pile avec quelques boutons utiles, et une bonne compatibilité avec les logiciels que tu utilises réellement — inutile de payer pour des fonctions professionnelles dont tu ne te serviras pas.
+Pour de l'annotation de documents, de la signature ou une première découverte du dessin numérique au bureau, une tablette graphique d'entrée de gamme suffit très largement. L'essentiel est de vérifier une zone active cohérente avec ton écran, un stylet sans pile avec quelques boutons utiles, et une bonne compatibilité avec les logiciels que tu utilises réellement : inutile de payer pour des fonctions professionnelles dont tu ne te serviras pas.
 
 ## Pour aller plus loin
 

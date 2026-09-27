@@ -14,7 +14,7 @@ coverAlt: "Souris gaming tenue en main devant un écran"
 draft: false
 products:
   - asin: "B0B42XQNMH"
-    title: "Razer Basilisk V3 Pro — souris gaming sans fil, 11 boutons programmables, capteur 30 000 DPI"
+    title: "Razer Basilisk V3 Pro, souris gaming sans fil, 11 boutons programmables, capteur 30 000 DPI"
     blurb: "Onze boutons personnalisables et une molette à défilement libre ou cranté au choix : de quoi automatiser de vraies tâches répétitives, pas seulement des combos de jeu."
     pros:
       - "11 boutons programmables (macros utiles)"
@@ -38,14 +38,14 @@ interactiveGuide:
       result: "Attention aux <strong>clics sonores</strong> de certaines gaming : vérifie ce point, ou regarde nos <a href='/articles/souris-sans-fil-silencieuse/'>souris silencieuses</a>. Pense aussi à couper le <strong>RGB</strong> (gagne de l'autonomie, ne sert à rien au bureau)."
 faq:
   - question: "Une souris gaming a-t-elle un intérêt si je ne joue jamais ?"
-    answer: "Oui, largement. Ce qui fait l'intérêt d'une souris gaming au bureau, ce ne sont pas ses performances en jeu mais son nombre de boutons programmables et la qualité de son capteur — deux points où les souris bureautiques classiques restent souvent limitées à deux ou trois boutons."
+    answer: "Oui, largement. Ce qui fait l'intérêt d'une souris gaming au bureau, ce ne sont pas ses performances en jeu mais son nombre de boutons programmables et la qualité de son capteur, deux points où les souris bureautiques classiques restent souvent limitées à deux ou trois boutons."
   - question: "Faut-il désactiver le RGB pour que la souris tienne plus longtemps en autonomie ?"
     answer: "Sur un modèle sans fil, oui, ça vaut le coup. L'éclairage RGB consomme une part non négligeable de la batterie sur beaucoup de modèles ; l'éteindre via le logiciel du fabricant peut prolonger l'autonomie de plusieurs heures, sans aucun impact sur les fonctions programmables."
 ---
 
 ## Pourquoi une souris gaming peut avoir sa place au bureau
 
-L'idée paraît d'abord bizarre : une souris gaming, conçue pour des réflexes de jeu, semble hors sujet dans un contexte de travail. Mais ce qui distingue vraiment ce type de souris n'a pas grand-chose à voir avec le jeu en lui-même. C'est le nombre de boutons additionnels, tous personnalisables, et la qualité du capteur optique — deux caractéristiques qui se révèlent très utiles pour qui passe sa journée à naviguer entre plusieurs logiciels, remplir des tableurs ou retoucher des documents.
+L'idée paraît d'abord bizarre : une souris gaming, conçue pour des réflexes de jeu, semble hors sujet dans un contexte de travail. Mais ce qui distingue vraiment ce type de souris n'a pas grand-chose à voir avec le jeu en lui-même. C'est le nombre de boutons additionnels, tous personnalisables, et la qualité du capteur optique, deux caractéristiques qui se révèlent très utiles pour qui passe sa journée à naviguer entre plusieurs logiciels, remplir des tableurs ou retoucher des documents.
 
 Une souris bureautique classique propose en général un clic gauche, un clic droit et une molette, parfois deux boutons latéraux basiques pour naviguer en avant/arrière dans un navigateur. Une souris gaming, elle, peut aligner six, huit, parfois plus de dix boutons, chacun assignable à un raccourci clavier, une macro, ou une action précise dans un logiciel. Ce qui était pensé pour enchaîner des combos de jeu devient, au bureau, un moyen de déclencher un copier-coller complexe, changer d'onglet, ou lancer une macro Excel d'un simple clic du pouce.
 
@@ -68,7 +68,7 @@ Le RGB est sans doute le premier réflexe qui vient à l'esprit quand on pense "
 
 Autre idée reçue : un DPI très élevé serait un signe de qualité. En réalité, au-delà d'un certain seuil (largement dépassé même par des souris d'entrée de gamme), l'utilité concrète d'un DPI plus élevé devient marginale pour un usage bureautique. Ce qui compte davantage, c'est la stabilité du suivi et la possibilité de régler ce DPI facilement selon la tâche en cours, pas le chiffre maximal affiché sur la boîte.
 
-Enfin, beaucoup pensent qu'une souris gaming est nécessairement inconfortable pour un usage prolongé, à cause de son esthétique parfois agressive. C'est de moins en moins vrai : plusieurs fabricants proposent désormais des formes ergonomiques pensées pour tenir plusieurs heures sans fatigue, loin des designs uniquement pensés pour la performance brute. Même chose pour le siège : une bonne chaise gaming fait un excellent siège de bureau, à condition de regarder ses réglages avant son look — c'est tout l'objet de notre [comparatif des chaises gaming](/articles/meilleures-chaises-gaming/).
+Enfin, beaucoup pensent qu'une souris gaming est nécessairement inconfortable pour un usage prolongé, à cause de son esthétique parfois agressive. C'est de moins en moins vrai : plusieurs fabricants proposent désormais des formes ergonomiques pensées pour tenir plusieurs heures sans fatigue, loin des designs uniquement pensés pour la performance brute. Même chose pour le siège : une bonne chaise gaming fait un excellent siège de bureau, à condition de regarder ses réglages avant son look. C'est tout l'objet de notre [comparatif des chaises gaming](/articles/meilleures-chaises-gaming/).
 
 ## Comment choisir selon ton usage
 
