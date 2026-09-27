@@ -20,7 +20,7 @@ export const guides: Guide[] = [
     icon: '🏠',
     title: 'Bien s’équiper pour le télétravail',
     description:
-      'Le guide complet pour équiper un poste de télétravail confortable et efficace : bureau, image et son en visio, connectique et éclairage.',
+      'Équiper un poste de télétravail confortable et efficace : bureau, image et son en visio, connectique et éclairage.',
     intro: [
       "Travailler depuis chez soi demande un peu plus qu'un ordinateur portable posé sur la table de la cuisine. Un poste de télétravail bien pensé, c'est moins de fatigue en fin de journée, des visioconférences où l'on vous voit et vous entend clairement, et un espace qui se range en quelques secondes quand la journée est finie.",
       "Ce guide rassemble nos comparatifs les plus utiles pour bâtir un poste complet, étape par étape : de quoi alterner assis et debout, une image et un son nets pour les réunions, la bonne connectique pour tout brancher d'un seul câble, et un éclairage qui ménage les yeux. Pas besoin de tout acheter d'un coup : commence par ce qui te gêne le plus au quotidien.",
@@ -65,7 +65,7 @@ export const guides: Guide[] = [
     description:
       'Poignets, dos, nuque, yeux : le guide des accessoires ergonomiques pour travailler sans douleurs, avec nos critères de choix et nos sélections.',
     intro: [
-      "Passer plusieurs heures par jour au même poste finit par se sentir : tensions dans le bas du dos, poignets endoloris, nuque raide, yeux fatigués en fin d'après-midi. La bonne nouvelle, c'est que la plupart de ces gênes se préviennent avec quelques accessoires bien choisis, sans changer tout son matériel.",
+      "Passer plusieurs heures par jour au même poste finit par se sentir : tensions dans le bas du dos, poignets endoloris, nuque raide, yeux fatigués en fin d'après-midi. Pourtant, la plupart de ces gênes se préviennent avec quelques accessoires bien choisis, sans changer tout son matériel.",
       "Ce guide regroupe nos comparatifs orientés confort et santé au travail. On y aborde la posture (assise, hauteur de bureau, position de l'écran), les points d'appui (poignets, pieds) et la fatigue visuelle. Chaque article part d'un problème concret et propose des solutions à différents budgets.",
     ],
     articles: [
@@ -86,7 +86,7 @@ export const guides: Guide[] = [
       "Bas du dos douloureux en fin de journée ? Le guide des accessoires qui soulagent vraiment : soutien lombaire, assise, bureau assis-debout et bons réglages.",
     intro: [
       "Le mal de dos est la gêne numéro un des postes assis. Après quelques heures, le bas du dos tire, on s'avachit, et la douleur s'installe jour après jour. La cause est presque toujours la même : une assise qui ne soutient pas la courbe naturelle du dos et une position figée trop longtemps.",
-      "Bonne nouvelle : on n'a pas besoin de tout changer. Un bon soutien lombaire, une assise qui répartit la pression, la possibilité d'alterner assis et debout, et surtout de bons réglages de départ suffisent à faire une vraie différence. Ce guide réunit nos comparatifs classés du geste gratuit à l'équipement, à piocher selon ce qui te fait le plus mal.",
+      "Inutile de tout changer. Un bon soutien lombaire, une assise qui répartit la pression, la possibilité d'alterner assis et debout, et surtout de bons réglages de départ suffisent à faire une vraie différence. Ce guide réunit nos comparatifs classés du geste gratuit à l'équipement, à piocher selon ce qui te fait le plus mal.",
     ],
     articles: [
       'bien-regler-chaise-ecran-ergonomie-gratuite',
