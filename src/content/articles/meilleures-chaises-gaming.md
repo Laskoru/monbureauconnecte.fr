@@ -105,7 +105,7 @@ Une bonne chaise gaming se garde plusieurs années si on en prend soin. Dépouss
 > **L'essentiel à retenir**
 > Regarde d'abord le **soutien lombaire réglable** et les **accoudoirs 4D** : ce sont eux qui font tenir le dos sur la durée. Ajoute un **vérin de classe 4**, une **charge** avec de la marge, et un **tissu respirant** si tu y passes tes journées. Le style vient après, et une bonne chaise gaming fait un excellent siège de bureau.
 
-## Conclusion
+## Les chaises à éviter, quel que soit ton usage
 
 Le bon choix dépend surtout du nombre d'heures passées assis par jour et de la priorité donnée au confort lombaire plutôt qu'au style. Dans tous les cas, évite les modèles sans réglages lombaires ni accoudoirs ajustables : ce sont eux qui vieillissent mal et finissent au fond du garage. Un modèle bien choisi et bien réglé, lui, se fait oublier, ce qui est exactement ce qu'on demande à une chaise.
 

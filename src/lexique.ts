@@ -35,7 +35,7 @@ export const lexique: LexiqueEntry[] = [
     term: 'Assise dynamique',
     question: "Que veut dire « assise dynamique » ?",
     answer:
-      "C'est le fait de changer régulièrement de position plutôt que de rester figé. Concrètement : un dossier qui suit les mouvements du dos, une inclinaison libre, ou l'alternance assis/debout dans la journée. L'idée de fond est simple — la meilleure posture est toujours la suivante, aucune position n'est bonne pendant huit heures d'affilée.",
+      "C'est le fait de changer régulièrement de position plutôt que de rester figé. Concrètement : un dossier qui suit les mouvements du dos, une inclinaison libre, ou l'alternance assis/debout dans la journée. L'idée de fond est simple : la meilleure posture est toujours la suivante, aucune position n'est bonne pendant huit heures d'affilée.",
     group: 'Ergonomie & posture',
     related: ['bureau-assis-debout-electrique'],
   },
@@ -51,7 +51,7 @@ export const lexique: LexiqueEntry[] = [
     term: 'Syndrome du canal carpien',
     question: "Le matériel de bureau peut-il causer un syndrome du canal carpien ?",
     answer:
-      "Une souris ou un clavier mal adaptés n'en sont pas la cause unique, mais une position du poignet cassée et répétée toute la journée est un facteur aggravant reconnu. Garder le poignet dans l'axe de l'avant-bras — ce que favorisent une souris verticale ou un clavier séparé — réduit cette contrainte. En cas de fourmillements ou d'engourdissements persistants, il faut consulter, pas empiler les accessoires.",
+      "Une souris ou un clavier mal adaptés n'en sont pas la cause unique, mais une position du poignet cassée et répétée toute la journée est un facteur aggravant reconnu. Garder le poignet dans l'axe de l'avant-bras (ce que favorisent une souris verticale ou un clavier séparé) réduit cette contrainte. En cas de fourmillements ou d'engourdissements persistants, il faut consulter, pas empiler les accessoires.",
     group: 'Ergonomie & posture',
     related: ['souris-ergonomique-verticale', 'clavier-ergonomique-separe'],
   },
@@ -101,7 +101,7 @@ export const lexique: LexiqueEntry[] = [
     term: 'DPI',
     question: 'Que signifie le DPI d\'une souris ?',
     answer:
-      "Le DPI (points par pouce) exprime la sensibilité du capteur : plus il est élevé, plus le curseur parcourt de distance à l'écran pour un même mouvement de la main. Les chiffres marketing très élevés (16 000, 26 000 DPI) n'ont guère d'intérêt pratique — la plupart des gens travaillent confortablement entre 800 et 1 600 DPI. La régularité du capteur compte bien plus que sa valeur maximale.",
+      "Le DPI (points par pouce) exprime la sensibilité du capteur : plus il est élevé, plus le curseur parcourt de distance à l'écran pour un même mouvement de la main. Les chiffres marketing très élevés (16 000, 26 000 DPI) n'ont guère d'intérêt pratique : la plupart des gens travaillent confortablement entre 800 et 1 600 DPI. La régularité du capteur compte bien plus que sa valeur maximale.",
     group: 'Claviers & souris',
     related: ['souris-ergonomique-verticale'],
   },
@@ -109,7 +109,7 @@ export const lexique: LexiqueEntry[] = [
     term: 'Format TKL / 60 %',
     question: "Qu'est-ce qu'un clavier TKL ou 60 % ?",
     answer:
-      "Ces formats décrivent ce qu'on retire d'un clavier complet. Le TKL (tenkeyless) supprime le pavé numérique, ce qui rapproche la souris du corps et soulage l'épaule — un vrai gain ergonomique pour qui n'utilise pas le pavé. Le 60 % va plus loin en retirant aussi les touches de fonction et les flèches, accessibles via une touche de fonction : très compact, mais avec un temps d'adaptation.",
+      "Ces formats décrivent ce qu'on retire d'un clavier complet. Le TKL (tenkeyless) supprime le pavé numérique, ce qui rapproche la souris du corps et soulage l'épaule, un vrai gain ergonomique pour qui n'utilise pas le pavé. Le 60 % va plus loin en retirant aussi les touches de fonction et les flèches, accessibles via une touche de fonction : très compact, mais avec un temps d'adaptation.",
     group: 'Claviers & souris',
     related: ['claviers-mecaniques-silencieux', 'clavier-ergonomique-separe'],
   },
@@ -119,7 +119,7 @@ export const lexique: LexiqueEntry[] = [
     term: 'ANC (réduction de bruit active)',
     question: 'Comment fonctionne la réduction de bruit active ?',
     answer:
-      "Des micros captent le bruit ambiant et le casque émet une onde inverse qui l'annule en grande partie. C'est très efficace sur les bruits graves et continus — ventilation, moteur, brouhaha lointain — beaucoup moins sur les voix proches et les sons brefs. Pour isoler d'un collègue qui parle à côté, l'isolation passive et le confort des coussinets comptent autant que l'ANC.",
+      "Des micros captent le bruit ambiant et le casque émet une onde inverse qui l'annule en grande partie. C'est très efficace sur les bruits graves et continus (ventilation, moteur, brouhaha lointain), beaucoup moins sur les voix proches et les sons brefs. Pour isoler d'un collègue qui parle à côté, l'isolation passive et le confort des coussinets comptent autant que l'ANC.",
     group: 'Son & visio',
     related: ['casque-reduction-bruit-teletravail'],
   },

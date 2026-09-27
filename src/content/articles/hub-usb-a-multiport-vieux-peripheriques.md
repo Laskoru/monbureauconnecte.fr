@@ -76,10 +76,6 @@ Côté installation, le plus simple reste de laisser le hub branché en permanen
 > **L'essentiel à retenir**
 > Un PC récent tout USB-C ne veut pas dire racheter ses périphériques : un **hub USB-A multiport** à quelques euros restitue les ports manquants. Privilégie l'**USB 3.0**, compte large sur le **nombre de ports**, et passe à un hub **alimenté** si tu branches un disque externe ou plusieurs appareils gourmands en même temps.
 
-## Conclusion
-
-Face à un PC récent qui n'a plus que des ports USB-C, le réflexe le plus économique et le plus écologique reste le hub USB-A multiport plutôt que le rachat de matériel encore fonctionnel. Le choix se résume à peu de critères : assez de ports, de l'USB 3.0, et une alimentation externe si l'usage est intensif. De quoi reconnecter en un geste toute une collection de périphériques qui n'avaient rien demandé à devenir obsolètes.
-
 ## Pour aller plus loin
 
 - [Hub USB-C et station d'accueil : lequel choisir ?](/articles/hub-usb-c-station-accueil/)

@@ -97,9 +97,14 @@ Inutile de courir après les lumens : pour une lampe de bureau, on n'éclaire qu
 > **L'essentiel à retenir**
 > Une bonne lampe anti-fatigue, c'est une **intensité réglable**, une **température de couleur ajustable** (neutre le jour, chaud le soir) et **zéro scintillement**. Pour les couleurs, vise un **IRC > 90**. Place-la à l'opposé de ta main d'écriture, oriente-la vers le plan de travail, et **garde la lumière ambiante** de la pièce.
 
-## Conclusion
+## Les bons réflexes pour ménager tes yeux
 
-Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers pour un effet réel sur le confort visuel en fin de journée, à condition de privilégier le **réglage** (intensité, température) et l'**absence de scintillement** plutôt que la seule puissance en lumens. Et n'oublie pas qu'une lampe, aussi bonne soit-elle, agit de pair avec le reste : un écran bien positionné, sans reflet de fenêtre, et des pauses régulières pour reposer les yeux comptent tout autant. Bien réglée et bien placée, la lampe fait le reste : tes yeux te remercieront dès la première semaine.
+Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers pour un effet réel sur le confort visuel en fin de journée, mais elle agit de pair avec le reste du poste :
+
+- **Le réglage avant la puissance** : intensité et température ajustables, zéro scintillement, plutôt que des lumens en plus.
+- **Un écran bien positionné**, sans reflet de fenêtre.
+- **L'éclairage ambiant allumé** : la lampe complète la lumière de la pièce, elle ne la remplace pas.
+- **Des pauses régulières** pour reposer les yeux.
 
 ## Pour aller plus loin
 

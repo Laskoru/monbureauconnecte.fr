@@ -77,6 +77,10 @@ Pour qui bascule vers le sans-fil, quelques précautions évitent les déconvenu
 > **L'essentiel à retenir**
 > Le **filaire** garantit zéro coupure et zéro gestion de batterie, pour un budget souvent mieux investi dans le son. Le **sans-fil** apporte une vraie liberté de mouvement et un confort au long cours, au prix d'une recharge à anticiper. Pour de la visio classique, la **latence** ne doit pas être un critère décisif dans un sens ou dans l'autre.
 
-## Conclusion
+## Le bon casque selon tes journées de travail
 
-Il n'y a pas de réponse universelle entre casque filaire et casque sans fil pour le télétravail : tout dépend de ce que tu fais de tes journées de travail. Réunions sérieuses en continu sans risque de coupure, budget serré ou simple préférence pour la simplicité → le filaire reste un choix solide et sous-estimé. Besoin de bouger, de te lever pendant un appel ou simple envie de confort sans câble → le sans-fil moderne tient largement ses promesses. Beaucoup de télétravailleurs finissent d'ailleurs par posséder les deux, chacun couvrant une situation où l'autre montre ses limites.
+Il n'y a pas de réponse universelle entre casque filaire et casque sans fil pour le télétravail : tout dépend de ce que tu fais de tes journées.
+
+- **Réunions sérieuses en continu sans risque de coupure, budget serré ou préférence pour la simplicité** : le filaire reste un choix solide et sous-estimé.
+- **Besoin de bouger, de te lever pendant un appel, ou simple envie de confort sans câble** : le sans-fil moderne tient largement ses promesses.
+- **Les deux situations dans ta semaine** : beaucoup de télétravailleurs finissent par posséder les deux, chacun couvrant une situation où l'autre montre ses limites.

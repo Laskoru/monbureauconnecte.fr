@@ -97,7 +97,7 @@ Avant d'acheter, un mot sur les substituts improvisés qu'on voit souvent. Un **
 > **L'essentiel à retenir**
 > Le repose-pieds sert surtout quand, **chaise bien réglée**, tes pieds ne touchent plus le sol à plat (petite taille, bureau haut). Il ramène les cuisses à l'horizontale **et** t'aide à bouger les jambes contre l'immobilité. Vise un modèle **réglable en hauteur**, si possible **inclinable**, avec une surface antidérapante. Poste déjà parfait ? Le gain sera marginal.
 
-## Conclusion
+## Alors, utile ou gadget ?
 
 Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu coûteux qui corrige un vrai écart de hauteur et, surtout, aide à casser l'immobilité prolongée des jambes, un facteur de fatigue souvent sous-estimé en télétravail comme au bureau. Utile à la bonne place, inutile ailleurs : à toi de voir où tu te situes.
 

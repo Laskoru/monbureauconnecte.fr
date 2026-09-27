@@ -67,10 +67,10 @@ const sections = [
   title="Checklist : bien régler son poste de travail (ergonomie)"
   description="La checklist complète pour régler son poste de travail et éviter les douleurs : écran, chaise, clavier, lumière et pauses. Gratuite et imprimable."
 >
-  <PageHead eyebrow="Ressource gratuite · imprimable" title="Checklist : bien régler son poste de travail" lede="Un poste mal réglé fatigue le dos, la nuque et les yeux — souvent sans qu'on s'en rende compte. Passe en revue cette checklist en cochant chaque point : c'est la façon la plus simple de repérer ce qui cloche dans ton installation. Tu peux l'imprimer ou la garder sous la main." icon="checklist" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Checklist ergonomie' }]} width="narrow" />
+  <PageHead eyebrow="Ressource gratuite · imprimable" title="Checklist : bien régler son poste de travail" lede="Un poste mal réglé fatigue le dos, la nuque et les yeux, souvent sans qu'on s'en rende compte. Passe en revue cette checklist en cochant chaque point : c'est la façon la plus simple de repérer ce qui cloche dans ton installation. Tu peux l'imprimer ou la garder sous la main." icon="checklist" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Checklist ergonomie' }]} width="narrow" />
   <section class="container checklist">
 
-    <p class="checklist__progress" id="cl-progress" hidden><span class="mono"><span id="cl-count">0</span> / {sections.reduce((n, s) => n + s.items.length, 0)}</span> points cochés — ta progression est mémorisée sur cet appareil.</p>
+    <p class="checklist__progress" id="cl-progress" hidden><span class="mono"><span id="cl-count">0</span> / {sections.reduce((n, s) => n + s.items.length, 0)}</span> points cochés (ta progression est mémorisée sur cet appareil).</p>
 
     {sections.map((section) => (
       <div class="checklist__block">
@@ -95,7 +95,7 @@ const sections = [
     </div>
 
     <p class="checklist__share">
-      Cette checklist t'a été utile ? N'hésite pas à la partager ou à y faire un lien — elle est en accès
+      Cette checklist t'a été utile ? Tu peux la partager ou y faire un lien : elle est en accès
       libre. Une remarque ? Écris-nous à
       <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
     </p>

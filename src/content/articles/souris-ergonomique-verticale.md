@@ -106,10 +106,6 @@ Côté budget, on trouve des modèles corrects **dès 25-35 €**, et les réfé
 > **L'essentiel à retenir**
 > Une souris verticale soulage en supprimant la **torsion du poignet**. Choisis l'**angle** selon ton cas (45-50° pour découvrir, 55-60° si tu as déjà mal), prends une **taille adaptée à ta main**, et laisse-toi **1 à 2 semaines** d'adaptation. C'est l'un des accessoires ergo au meilleur rapport soulagement/prix.
 
-## Conclusion
-
-Une souris verticale n'est pas un gadget parmi d'autres : c'est l'un des rares accessoires dont l'effet sur le confort du poignet se ressent rapidement, surtout pour qui passe plusieurs heures par jour devant un écran. Bien dimensionnée et avec le bon angle, elle se fait oublier, et le poignet aussi.
-
 ## Pour aller plus loin
 
 - [Trackball ou souris classique ?](/articles/trackball-vs-souris-classique-poignet/)

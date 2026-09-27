@@ -103,10 +103,6 @@ Quelques points de vigilance avant de commander. Le **pavé numérique** : beauc
 > **L'essentiel à retenir**
 > Le clavier ergo remet les **poignets droits** et soulage la frappe prolongée. Débute avec une **courbe en une pièce** (adaptation rapide) ; passe à une **vraie séparation** si tu as déjà mal ou si tu tapes des heures. Vérifie le **repose-poignets** et la disposition **AZERTY**. Ce n'est pas un accélérateur de frappe, c'est un confort qui prévient les douleurs.
 
-## Conclusion
-
-Le clavier ergonomique séparé n'est pas réservé aux cas de douleurs avérées : c'est un investissement **préventif** pertinent pour quiconque tape plusieurs heures par jour, avec un vrai ressenti dès les premières semaines. Accepte quelques jours d'adaptation, et tu ne verras plus ton ancien clavier de la même façon.
-
 ## Pour aller plus loin
 
 - [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)

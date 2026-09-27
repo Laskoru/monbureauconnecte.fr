@@ -105,10 +105,6 @@ La question se pose forcément quand on quitte un clavier complet. Le **clavier 
 > **L'essentiel à retenir**
 > Le choix se joue d'abord sur la **liaison** : **RF 2,4 GHz** (dongle) pour la simplicité et la fiabilité d'un poste fixe, **Bluetooth** pour économiser un port ou rester nomade. Ajoute une **bonne autonomie** (piles + veille auto, ou USB rechargeable), un **agencement adapté** à ta saisie et un format **compact et stable**. En bureautique, la latence sans fil est imperceptible.
 
-## En résumé
-
-Le bon pavé numérique externe sans fil, c'est d'abord un choix de **liaison** (**RF 2,4 GHz** pour la simplicité, **Bluetooth** pour la souplesse), avec une **bonne autonomie**, un **agencement adapté** à ta saisie et un format **compact et stable**. De quoi redonner à un portable ou à un clavier compact toute l'efficacité d'un pavé numérique, sans câble.
-
 ## Pour aller plus loin
 
 - [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)

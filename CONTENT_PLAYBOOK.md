@@ -114,7 +114,8 @@ faq:
   - `## Pourquoi [le sujet] compte / change quelque chose`
   - `## Les critères qui font vraiment la différence` (avec une liste à puces)
   - `## Comment choisir selon ton usage` (par budget / par profil)
-  - `## Conclusion`
+  - une fin variée selon le sujet (intertitre propre au sujet comme « Notre choix selon ton budget », checklist, ou paragraphe final sans intertitre) : jamais de `## Conclusion` ni de `## En résumé` systématiques
+- Ponctuation : jamais de tiret long (—) ni de demi-cadratin (–) comme ponctuation ; virgule, deux-points ou parenthèses à la place.
 - Ton : tutoiement, direct, honnête, sans jargon marketing. On assume les
   compromis, on ne survend pas.
 - **Ne jamais inventer** de chiffres précis (prix exacts, scores, %) qu'on ne

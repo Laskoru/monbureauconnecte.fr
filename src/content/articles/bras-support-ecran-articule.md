@@ -98,7 +98,7 @@ Concrètement : si ton pied d'origine monte assez haut et que ça te convient, i
 > **L'essentiel à retenir**
 > Un bras d'écran remonte l'écran **au niveau des yeux** (fini le cou penché) et **libère le plateau**. Avant d'acheter, vérifie deux choses non négociables : le **VESA** (75×75 ou 100×100) et la **charge** face au poids réel de ton écran. Privilégie un **ressort à gaz** (réglage d'une main) et une **fixation par pince** adaptée à ton bureau.
 
-## Conclusion
+## Quel budget pour un bras support d'écran ?
 
 Le bras support écran est l'un des accessoires au meilleur rapport entre le prix et l'amélioration réelle de la posture au quotidien. Bien choisi (VESA et charge vérifiés, ressort à gaz), il corrige d'un coup la hauteur de l'écran et dégage le bureau, deux gains qu'on ne veut plus quitter une fois qu'on y a goûté. Compte une vingtaine d'euros pour un modèle simple correct, un peu plus pour un bras double ou un ressort à gaz haut de gamme : un investissement modeste au regard des années de confort qu'il apporte.
 

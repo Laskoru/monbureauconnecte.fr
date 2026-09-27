@@ -21,7 +21,7 @@ const tiers = [
     price: '≈ 950 €',
     specLine: 'Ryzen 5 5600 (AM4) + RTX 4060 8 Go + 16 Go DDR4 + SSD 500 Go',
     reasoning:
-      "La plateforme AM4, plus ancienne, coûte nettement moins cher que l'AM5/DDR5 actuel — de quoi mettre l'essentiel du budget sur la carte graphique, le poste qui compte vraiment pour les FPS. De quoi jouer confortablement en 1080p sur la plupart des jeux récents.",
+      "La plateforme AM4, plus ancienne, coûte nettement moins cher que l'AM5/DDR5 actuel, de quoi mettre l'essentiel du budget sur la carte graphique, le poste qui compte vraiment pour les FPS. De quoi jouer confortablement en 1080p sur la plupart des jeux récents.",
     parts: [
       { icon: 'cpu', label: 'CPU', name: 'AMD Ryzen 5 5600', search: 'AMD Ryzen 5 5600 AM4' },
       { icon: 'board', label: 'Carte mère', name: 'B550 (AM4, DDR4)', search: 'carte mère B550 AM4 DDR4' },
@@ -116,7 +116,7 @@ const parts = [
     icon: 'ram',
     title: 'La mémoire (RAM)',
     criteria: [
-      'Le type : DDR5 sur toute plateforme AM5/LGA1700 récente, DDR4 sur une plateforme plus ancienne (AM4) — les deux ne sont pas interchangeables, la carte mère impose le format.',
+      'Le type : DDR5 sur toute plateforme AM5/LGA1700 récente, DDR4 sur une plateforme plus ancienne (AM4) ; les deux ne sont pas interchangeables, la carte mère impose le format.',
       '16 Go conviennent pour un usage gaming simple, 32 Go (2x16 Go) évitent d’y revenir dans un an dès qu’on ajoute du stream, du multitâche ou des jeux plus gourmands.',
       'Le kit à 2 barrettes plutôt qu’une seule : la carte mère fonctionne en double canal, ce qui améliore réellement les performances.',
       "La fréquence et le profil XMP/EXPO : vérifie que la vitesse annoncée est bien supportée par la carte mère choisie.",
@@ -129,7 +129,7 @@ const parts = [
     criteria: [
       'La définition visée : une carte d’entrée ou de milieu de gamme couvre bien le 1080p et le 1440p ; le 4K demande une gamme au-dessus.',
       'La mémoire vidéo (VRAM) : 8 Go est le minimum confortable aujourd’hui pour ne pas se retrouver limité dans deux ou trois ans.',
-      "L'encombrement : mesure l'espace disponible dans le boîtier avant d'acheter — certains modèles dépassent 30 cm de long.",
+      "L'encombrement : mesure l'espace disponible dans le boîtier avant d'acheter (certains modèles dépassent 30 cm de long).",
       "L'alimentation nécessaire : chaque fiche produit indique la puissance minimale recommandée ; vérifie que ton alimentation suit.",
     ],
   },
@@ -138,7 +138,7 @@ const parts = [
     icon: 'ssd',
     title: 'Le stockage (SSD)',
     criteria: [
-      "La capacité : 500 Go suffit pour démarrer, 1 To est plus confortable — un jeu récent peut à lui seul dépasser 100 Go.",
+      "La capacité : 500 Go suffit pour démarrer, 1 To est plus confortable (un jeu récent peut à lui seul dépasser 100 Go).",
       "L'interface : NVMe PCIe 4.0 offre déjà des débits très largement suffisants pour jouer ; le PCIe 5.0 profite surtout aux gros transferts de fichiers.",
       "Le format M.2 2280 : le standard quasi universel, vérifie juste qu'il correspond aux ports de la carte mère choisie.",
       'Un dissipateur thermique intégré évite la chauffe sur de longues sessions, surtout dans un boîtier compact.',
@@ -150,9 +150,9 @@ const parts = [
     title: "L'alimentation (PSU)",
     criteria: [
       "La puissance : additionne les besoins du CPU et du GPU, puis prends une marge confortable plutôt que le strict minimum.",
-      'La certification 80+ (Bronze, Gold, Platine) : indique le rendement énergétique — viser au moins Gold à partir du milieu de gamme.',
+      'La certification 80+ (Bronze, Gold, Platine) : indique le rendement énergétique ; viser au moins Gold à partir du milieu de gamme.',
       'Le modulaire : les câbles non utilisés se débranchent entièrement, ce qui facilite le montage et améliore la circulation d’air.',
-      "La marque et la garantie : une alimentation défaillante peut endommager tout le reste — ce n'est pas le poste où économiser au maximum.",
+      "La marque et la garantie : une alimentation défaillante peut endommager tout le reste ; ce n'est pas le poste où économiser au maximum.",
     ],
   },
   {
@@ -182,7 +182,7 @@ const faq = [
   {
     question: 'Pourquoi le palier « 950 € » utilise une plateforme différente (AM4) ?',
     answer:
-      "Parce que c'est ce qui reste le plus rentable à ce budget : les cartes mères et la mémoire DDR4 coûtent nettement moins cher que leurs équivalents DDR5, ce qui laisse plus de budget pour la carte graphique — le poste qui compte le plus pour les performances en jeu. À partir d'environ 1250 €, la plateforme actuelle (AM5, DDR5) devient plus pertinente, notamment pour la marge d'évolution qu'elle offre.",
+      "Parce que c'est ce qui reste le plus rentable à ce budget : les cartes mères et la mémoire DDR4 coûtent nettement moins cher que leurs équivalents DDR5, ce qui laisse plus de budget pour la carte graphique, le poste qui compte le plus pour les performances en jeu. À partir d'environ 1250 €, la plateforme actuelle (AM5, DDR5) devient plus pertinente, notamment pour la marge d'évolution qu'elle offre.",
   },
   {
     question: 'Faut-il un système de refroidissement supplémentaire ?',
@@ -207,17 +207,17 @@ const faqSchema = {
   description="4 configurations PC gaming complètes selon ton budget (950 à 3200 €), avec les critères qui comptent pour bien choisir chaque composant."
   jsonLd={faqSchema}
 >
-  <PageHead eyebrow="Guide d'achat" title="Monter un PC gaming : le guide pièce par pièce" lede="Quatre configurations cohérentes selon ton budget, d'environ 950 € à plus de 3 200 € — choisis ton palier, puis suis les liens pour chaque pièce. Les critères détaillés plus bas expliquent le « pourquoi » si tu veux creuser." icon="cpu" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Guide PC gaming' }]} width="narrow" />
+  <PageHead eyebrow="Guide d'achat" title="Monter un PC gaming : le guide pièce par pièce" lede="Quatre configurations cohérentes selon ton budget, d'environ 950 € à plus de 3 200 € : choisis ton palier, puis suis les liens pour chaque pièce. Les critères détaillés plus bas expliquent le « pourquoi » si tu veux creuser." icon="cpu" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Guide PC gaming' }]} width="narrow" />
   <section class="container pcguide">
     <p class="pcguide__note">
-      Cette page couvre uniquement la tour (les composants internes). Les périphériques — écran,
-      clavier, souris, casque — sont traités dans notre
+      Cette page couvre uniquement la tour (les composants internes). Les périphériques (écran,
+      clavier, souris, casque) sont traités dans notre
       <a href="/guides/setup-gaming/">guide setup gaming</a> séparément.
     </p>
     <p class="pcguide__note">
       <strong>À propos des prix</strong> : la RAM et les SSD traversent une pénurie mondiale de
       mémoire depuis fin 2025, qui a fait grimper leurs tarifs de façon inhabituelle. Les montants
-      ci-dessous reflètent le marché actuel et peuvent encore bouger dans les mois qui viennent —
+      ci-dessous reflètent le marché actuel et peuvent encore bouger dans les mois qui viennent :
       vérifie toujours le prix affiché sur la fiche produit avant d'acheter.
     </p>
 
@@ -248,7 +248,7 @@ const faqSchema = {
 
     <h2>Le détail, pièce par pièce</h2>
     <p class="pcguide__section-lede">
-      Ce qui compte pour bien choisir chaque composant, indépendamment du palier visé — utile si tu
+      Ce qui compte pour bien choisir chaque composant, indépendamment du palier visé, utile si tu
       veux adapter une configuration ou juste comprendre les choix ci-dessus.
     </p>
     <div class="pcguide__parts">

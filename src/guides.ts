@@ -43,9 +43,9 @@ export const guides: Guide[] = [
     description:
       'Chaise, périphériques, écrans et rangement : le guide pour monter un setup gaming agréable sur les longues sessions, sans se ruiner.',
     intro: [
-      "Un bon setup gaming, ce n'est pas qu'une question de puissance : c'est surtout du confort sur la durée. Les longues sessions révèlent vite les mauvais choix — une chaise qui fait mal au dos, des câbles qui s'emmêlent, un écran mal placé qui force la nuque.",
+      "Un bon setup gaming, ce n'est pas qu'une question de puissance : c'est surtout du confort sur la durée. Les longues sessions révèlent vite les mauvais choix : une chaise qui fait mal au dos, des câbles qui s'emmêlent, un écran mal placé qui force la nuque.",
       "On a réuni ici les comparatifs qui comptent pour un poste où l'on passe des heures : de quoi bien s'asseoir, taper et viser, positionner ses écrans, et garder un bureau net. L'objectif : un espace où l'on se sent bien manette ou souris en main, pas seulement une vitrine.",
-      'Ce guide couvre les périphériques autour du PC. Pour la tour elle-même — processeur, carte graphique, RAM et le reste — direction notre <a href="/guide-pc-gaming/">guide PC gaming pièce par pièce</a>, avec des configurations complètes selon le budget.',
+      'Ce guide couvre les périphériques autour du PC. Pour la tour elle-même (processeur, carte graphique, RAM et le reste), direction notre <a href="/guide-pc-gaming/">guide PC gaming pièce par pièce</a>, avec des configurations complètes selon le budget.',
     ],
     articles: [
       'quelle-config-pc-gaming-choisir',
@@ -106,7 +106,7 @@ export const guides: Guide[] = [
       "Poignet qui chauffe, engourdissements, tendinite naissante : le guide des souris, claviers et repose-poignets qui soulagent les mains à l'ordinateur.",
     intro: [
       "Souris et clavier sont sous nos mains toute la journée, et ce sont eux qui déclenchent le plus de troubles musculo-squelettiques : poignet qui chauffe, picotements dans les doigts, avant-bras tendu. Le coupable habituel, c'est une main pliée ou tordue des heures durant dans une position que le corps n'aime pas.",
-      "La solution passe rarement par un seul produit miracle, mais par un geste plus naturel : un poignet droit, une main moins crispée, moins de trajets inutiles. Ce guide compare les formats qui y aident vraiment — souris verticale, trackball, clavier séparé, repose-poignet — avec, pour chacun, à qui il s'adresse et ses limites.",
+      "La solution passe rarement par un seul produit miracle, mais par un geste plus naturel : un poignet droit, une main moins crispée, moins de trajets inutiles. Ce guide compare les formats qui y aident vraiment (souris verticale, trackball, clavier séparé, repose-poignet) avec, pour chacun, à qui il s'adresse et ses limites.",
     ],
     articles: [
       'souris-ergonomique-verticale',
@@ -124,7 +124,7 @@ export const guides: Guide[] = [
       "Bureau étroit et encombré ? Le guide pour libérer le plateau et travailler au calme sur un petit espace : format compact, rangement et gestion des câbles.",
     intro: [
       "Sur un petit bureau, chaque centimètre compte. Un plateau encombré, des câbles qui pendent et un clavier trop large finissent par gêner la souris, la concentration et l'envie de s'y installer. Le problème n'est pas la taille du bureau, mais la façon dont l'espace est occupé.",
-      "L'idée : choisir du matériel qui prend moins de place, sortir le superflu du plateau et discipliner les câbles une bonne fois. Ce guide réunit nos comparatifs orientés gain de place — format compact, rangement sous le bureau, connectique tout-en-un — pour transformer un coin étroit en poste net et agréable.",
+      "L'idée : choisir du matériel qui prend moins de place, sortir le superflu du plateau et discipliner les câbles une bonne fois. Ce guide réunit nos comparatifs orientés gain de place (format compact, rangement sous le bureau, connectique tout-en-un) pour transformer un coin étroit en poste net et agréable.",
     ],
     articles: [
       'chaise-bureau-sans-accoudoirs-petit-espace',

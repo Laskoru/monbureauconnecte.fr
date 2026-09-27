@@ -87,8 +87,6 @@ Les prix couvrent une large fourchette. Un **tabouret basculant simple** se trou
 > **L'essentiel à retenir**
 > Un tabouret assis-debout sert à **alterner les appuis**, pas à remplacer la chaise : quelques créneaux, surtout quand le bureau est en position haute. Le **tabouret dynamique** (assise basculante) est polyvalent ; le **siège selle** ouvre les hanches mais demande de l'adaptation. Vérifie que la **hauteur** couvre ton bureau relevé, et vise une **base stable**. Utilisé en continu 8 h, il fatigue : alterne-le avec ta chaise.
 
-## Conclusion
-
 Le tabouret assis-debout, qu'il prenne la forme d'une assise dynamique nue ou d'un siège haut avec dossier et repose-pieds, répond à un vrai besoin : casser la position statique sans repasser sans arrêt de la position assise à la position debout complète. Le choix se joue surtout sur la plage de hauteur réglable, la stabilité de la base et le type d'assise retenu, plus que sur le prix affiché. Utilisé en alternance avec une vraie chaise de bureau, quelques heures par jour, il apporte un vrai bénéfice de mouvement sans demander un changement complet de poste de travail.
 
 ## Pour aller plus loin

@@ -84,9 +84,14 @@ Il vaut aussi mieux ne pas laisser le coussin en plein soleil ou près d'une sou
 > **L'essentiel à retenir**
 > Assis des heures, tout le poids se concentre sur les ischions et le coccyx. Le bon coussin **décharge** cette zone grâce à une **découpe en U bien marquée**, une **mousse assez dense** (elle ne s'affaisse pas), une **housse lavable** et une **base antidérapante**. Prends-le à la bonne **taille** (les cuisses ne doivent pas déborder). Il complète une bonne posture ; une douleur qui persiste relève d'un avis médical.
 
-## Conclusion
+## Les quatre critères d'un coussin qui dure
 
-Le coussin d'assise ergonomique est un accessoire simple, peu coûteux et facile à tester, qui répond à un problème très concret : la pression excessive sur le coccyx en position assise prolongée. Le choix se résume à quelques critères clairs (découpe en U marquée, densité de mousse suffisante, housse lavable et base antidérapante), mais bien les respecter fait toute la différence entre un coussin qui s'affaisse en quelques semaines et un accessoire qui tient plusieurs années d'usage quotidien.
+Le coussin d'assise ergonomique est un accessoire simple, peu coûteux et facile à tester, qui répond à un problème très concret : la pression excessive sur le coccyx en position assise prolongée. Ces quatre critères font la différence entre un coussin qui s'affaisse en quelques semaines et un accessoire qui tient plusieurs années d'usage quotidien :
+
+- **Une découpe en U bien marquée**, pour que le coccyx ne touche plus aucune surface.
+- **Une mousse assez dense**, qui garde son soutien dans la durée.
+- **Une housse amovible et lavable**, pour un entretien facile.
+- **Une base antidérapante**, pour ne pas avoir à le repositionner sans arrêt.
 
 ## Pour aller plus loin
 

@@ -101,7 +101,3 @@ Quelques erreurs reviennent souvent et valent la peine d'être évitées :
 **La personne passe beaucoup de temps en visioconférence** : un casque ou une webcam de qualité change vraiment son quotidien professionnel, bien plus qu'un accessoire décoratif.
 
 **C'est un gamer, ou un télétravailleur qui joue aussi le soir** : privilégie les accessoires gaming à double usage (souris gaming, tapis XXL, clavier mécanique), qui serviront aussi bien en semaine qu'en session de jeu.
-
-## En résumé
-
-Le meilleur cadeau tech pour un télétravailleur ou un gamer part presque toujours du **budget**, pas de l'objet : un **tapis de souris XXL** ou un **repose-poignet** en dessous de 20 €, une **lampe LED** ou un **coussin lombaire** entre 20 et 60 €, un **casque sans fil** ou un **clavier mécanique silencieux** au-delà de 60 €. Pour un gamer, ces mêmes catégories fonctionnent en version gaming, sans jamais tomber dans le gadget qu'on n'utilise qu'une fois. Mieux vaut un objet simple et vraiment utile qu'un accessoire spectaculaire qui finit dans un tiroir.

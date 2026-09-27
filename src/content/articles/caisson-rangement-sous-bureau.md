@@ -85,7 +85,7 @@ Enfin, un caisson n'a d'intérêt que si son contenu reste trié : la tentation 
 > **L'essentiel à retenir**
 > Avant tout, **mesure la hauteur libre sous ton plateau** : c'est la contrainte n°1. Vise ensuite un bon mélange **tiroir fermé + niche ouverte**, une **structure solide** (elle durera), des **roulettes verrouillables** si tu réorganises souvent, et un **tiroir à serrure** pour des documents sensibles. Place-le du côté de ta main dominante, et garde son contenu **trié** pour ne pas juste déplacer le désordre.
 
-## Conclusion
+## Notre avis
 
 Le caisson de rangement sous bureau est une solution simple pour dégager un plan de travail sans sacrifier l'accès aux objets utilisés au quotidien. L'essentiel se joue sur la compatibilité avec l'espace disponible sous le bureau, la répartition entre tiroirs fermés et niches ouvertes, et la solidité de la structure sur la durée. Bien choisi et bien rangé, il transforme un poste de travail encombré en un espace nettement plus fonctionnel, sans nécessiter de meuble supplémentaire dans la pièce. C'est aussi l'un des rares meubles de rangement qui se garde d'un logement à l'autre : compact et souvent sur roulettes, il suit facilement un déménagement ou un changement de poste, ce qui en fait un achat durable plutôt qu'une dépense ponctuelle.
 

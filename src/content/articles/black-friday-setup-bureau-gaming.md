@@ -94,7 +94,3 @@ Pour les périphériques audio et vidéo, la règle reste la même : compare ava
 
 > 🛒 **Voir les offres bureau et gaming**
 > Pour comparer les références disponibles en ce moment : [voir la sélection setup bureau sur Amazon](https://www.amazon.fr/s?k=accessoires+bureau+black+friday&tag=monbureauconnecte-21).
-
-## En résumé
-
-Le Black Friday vaut vraiment le coup sur les **chaises**, les **écrans**, les **casques/webcams** et, avec un peu de vigilance sur les prix de référence, le **PC gaming**. En revanche, les **petits accessoires** gagnent peu à être repoussés, et un inconfort réel aujourd'hui ne doit jamais attendre une remise de quelques euros. Pour ne pas te faire avoir, compare toujours le prix affiché à celui des semaines précédentes plutôt qu'au seul prix barré du jour J, et prépare ta liste à l'avance pour acheter sereinement plutôt que dans la précipitation.

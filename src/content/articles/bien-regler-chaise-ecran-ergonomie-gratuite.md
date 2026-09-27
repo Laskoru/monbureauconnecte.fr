@@ -86,6 +86,13 @@ Si tu travailles sur un **ordinateur portable** posé à plat sur le bureau, auc
 
 La solution est gratuite ou presque : **surélève l'écran** (une pile de livres, une boîte, ou un [support pour portable](/articles/support-ordinateur-portable-ergonomique/)) pour amener son haut au niveau des yeux, **et** ajoute un **clavier et une souris externes** posés à bonne hauteur. Tu retrouves alors la même ergonomie qu'un poste fixe : regard droit, avant-bras horizontaux. C'est de loin le geste le plus rentable pour qui vit sur un portable, et il ne coûte souvent rien de plus que ce qu'on a déjà dans un tiroir. Sans ça, tous les autres réglages restent bridés par la contrainte de départ.
 
-## En résumé
+## Les réglages à revoir, dans l'ordre
 
-Avant d'acheter quoi que ce soit, règle **dans l'ordre** : hauteur de chaise (pieds à plat, genoux ≈ hanches), profondeur d'assise et dossier, **haut de l'écran au niveau des yeux**, avant-bras horizontaux (coudes ~90°), puis luminosité et reflets. Ces cinq réglages sont **gratuits** et corrigent l'essentiel des tensions. Et par-dessus tout : **bouge** toutes les 30-45 min. Aucune posture parfaite ne remplace le mouvement. Prends dix minutes aujourd'hui pour tout revoir dans cet ordre : c'est probablement le meilleur retour sur investissement possible pour ton confort au travail, et il est entièrement gratuit.
+Avant d'acheter quoi que ce soit, prends dix minutes pour tout revoir dans cet ordre. Ces réglages sont **gratuits**, corrigent l'essentiel des tensions et offrent probablement le meilleur retour sur investissement possible pour ton confort au travail :
+
+- **Hauteur de chaise** : pieds à plat, genoux ≈ hanches.
+- **Profondeur d'assise et dossier** : 2 à 3 doigts entre l'arrière du genou et le bord du siège, dossier qui suit la courbure du bas du dos.
+- **Écran** : son haut au niveau des yeux, à une longueur de bras.
+- **Clavier et souris** : avant-bras horizontaux, coudes à ~90°.
+- **Luminosité et reflets** : écran perpendiculaire aux fenêtres, luminosité proche de celle de la pièce.
+- **Mouvement** : bouge toutes les 30-45 min, aucune posture parfaite ne le remplace.

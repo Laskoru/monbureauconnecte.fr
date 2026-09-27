@@ -96,8 +96,6 @@ Pour une visio de meilleure qualité une fois le cache ouvert, le reste du setup
 > **L'essentiel à retenir**
 > Un cache de webcam physique est la seule protection qui ne dépend d'aucun logiciel. Privilégie un modèle **fin** (compatible fermeture de laptop), une **glissière fluide** et une **colle repositionnable** qui ne marque pas l'écran.
 
-## Conclusion
-
 Le cache de confidentialité pour webcam fait partie de ces accessoires à quelques euros qui rapportent bien plus que leur prix : une tranquillité d'esprit qui ne dépend d'aucune mise à jour logicielle ni d'aucun réglage système. Entre un cache adhésif universel et une webcam à obturateur intégré, le choix dépend surtout de l'équipement déjà en place, mais dans les deux cas, protéger physiquement l'objectif reste le geste le plus simple et le plus fiable pour garder le contrôle de ce que la caméra montre, et surtout de ce qu'elle ne montre pas.
 
 ## Pour aller plus loin

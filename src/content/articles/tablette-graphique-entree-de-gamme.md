@@ -85,9 +85,15 @@ L'installation se limite en général à brancher la tablette en USB et à laiss
 
 Pour de l'annotation ponctuelle, la place naturelle de la tablette est celle de la souris, du côté de ta main dominante : tu passes de l'une à l'autre sans déplacer le clavier. Pour une vraie séance de dessin, installe-la devant toi et décale le clavier, avec l'avant-bras posé sur le bureau plutôt qu'en suspension, pour ne pas fatiguer l'épaule. Si tu es gaucher, vérifie que le pilote propose une orientation pour gaucher : la tablette se retourne et les touches de raccourci changent de côté. Et pense au reste du poste : les [réglages gratuits de la chaise et de l'écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/) comptent autant que la tablette dès que les séances s'allongent.
 
-## Conclusion
+## Les trois points à contrôler sur la fiche
 
-Pour de l'annotation de documents, de la signature ou une première découverte du dessin numérique au bureau, une tablette graphique d'entrée de gamme suffit très largement. L'essentiel est de vérifier une zone active cohérente avec ton écran, un stylet sans pile avec quelques boutons utiles, et une bonne compatibilité avec les logiciels que tu utilises réellement : inutile de payer pour des fonctions professionnelles dont tu ne te serviras pas.
+Pour de l'annotation de documents, de la signature ou une première découverte du dessin numérique au bureau, une tablette graphique d'entrée de gamme suffit très largement. Vérifie simplement :
+
+- **Une zone active cohérente avec ton écran**, un peu plus généreuse si tu dessines régulièrement.
+- **Un stylet sans pile**, avec quelques boutons latéraux utiles (annuler, gomme, clic droit).
+- **Une bonne compatibilité avec les logiciels que tu utilises réellement**, lecteur PDF et suite bureautique compris.
+
+Inutile de payer pour des fonctions professionnelles dont tu ne te serviras pas.
 
 ## Pour aller plus loin
 

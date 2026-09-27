@@ -111,7 +111,7 @@ Quelques réflexes pour ne pas gâcher un bon bureau : règle d'abord ta **haute
 > **L'essentiel à retenir**
 > Le bon bureau assis-debout, c'est **deux moteurs** (stabilité et silence), une **plage de hauteur** qui couvre ta position assise ET debout, une **mémoire** de positions pour que l'alternance reste sans effort, et une **charge** avec de la marge pour tes écrans. Le reste est du confort. Et souviens-toi : le but, c'est d'**alterner**, pas de rester debout des heures.
 
-## Conclusion
+## Notre choix pour télétravailler assis et debout
 
 Le bureau assis-debout n'est pas un gadget : c'est l'un des achats qui a le plus d'impact réel sur le confort en télétravail, à condition de bien dimensionner la **hauteur** et la **stabilité** selon ton setup. Vise un double moteur avec mémoire, garde de la marge sur la charge, et tu auras un poste qui t'accompagne aussi bien assis que debout, année après année.
 

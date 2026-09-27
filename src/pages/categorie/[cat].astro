@@ -40,7 +40,7 @@ const others = categories.filter((c) => c.slug !== cat.slug);
     <div class="cat-grid">
       <div class="cat-main">
         {cat.intro && <div class="cat-intro" set:html={cat.intro} />}
-        {articles.length === 0 && <p class="cat-empty">Aucun guide publié dans cette catégorie pour le moment — les prochains arrivent chaque semaine.</p>}
+        {articles.length === 0 && <p class="cat-empty">Aucun guide publié dans cette catégorie pour le moment, les prochains arrivent chaque semaine.</p>}
         <div class="grid2">
           {articles.map((article, i) => <ArticleCard article={article} eager={i < 2} />)}
         </div>

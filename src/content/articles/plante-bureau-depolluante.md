@@ -86,7 +86,7 @@ Un détail souvent oublié : le **pot** compte autant que la plante. Un cache-po
 > **L'essentiel à retenir**
 > Soyons honnêtes : une plante seule n'assainit pas vraiment l'air d'une pièce entière. Son vrai bénéfice est le **confort visuel** et une ambiance plus agréable, bien réels. Choisis-la donc selon ta **lumière** et le **temps** que tu peux y consacrer : **sansevieria ou ZZ** dans un coin sombre ou si tu oublies d'arroser, plus de liberté près d'une fenêtre. L'erreur n°1 reste le **trop d'eau**, pas le manque.
 
-## Conclusion
+## Ce qu'on en pense
 
 La plante de bureau dépolluante n'est pas un accessoire miracle pour l'air ambiant, mais c'est un ajout simple, durable et peu coûteux qui améliore réellement le cadre de travail au quotidien. Le choix se joue avant tout sur la tolérance à la lumière disponible sur le poste et sur le temps qu'on peut raisonnablement consacrer à l'arrosage : des variétés comme la sansevieria ou la plante araignée couvrent la grande majorité des situations de bureau, avec un entretien qui reste largement à la portée de qui n'a jamais eu la main verte.
 

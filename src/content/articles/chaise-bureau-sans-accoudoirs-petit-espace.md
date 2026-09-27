@@ -90,6 +90,6 @@ Il faut aussi accepter un compromis réel : sans accoudoirs, il n'y a plus d'app
 > **L'essentiel à retenir**
 > Sans accoudoirs, une chaise **se glisse sous le bureau** et libère de la place, l'atout n°1 dans un petit espace. Les accoudoirs ne sont pas indispensables pour taper : priorité au **soutien lombaire** et à la **bonne hauteur d'assise**. Le seul vrai compromis, c'est l'absence d'appui pour les bras pendant les pauses, que des accoudoirs escamotables règlent si tu y tiens.
 
-## Conclusion
+## Faut-il se passer d'accoudoirs dans une petite pièce ?
 
 Une chaise de bureau sans accoudoirs n'est pas un choix par défaut ou un pis-aller : c'est la bonne réponse dès que l'espace disponible sous ou autour du bureau est compté, ou que le plan de travail est trop bas pour accueillir des accoudoirs sans conflit. L'essentiel se joue sur la plage de hauteur réglable et la qualité du soutien lombaire, qui doit compenser l'absence d'appui pour les bras. Dans un espace généreux et pour de longues sessions avec pauses fréquentes, les accoudoirs restent un vrai plus, mais dans une pièce compacte, s'en passer est souvent le choix le plus confortable au quotidien, pas seulement le plus pratique.

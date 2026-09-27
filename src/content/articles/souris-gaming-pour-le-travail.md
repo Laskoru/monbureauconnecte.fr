@@ -83,6 +83,10 @@ Enfin, beaucoup pensent qu'une souris gaming est nécessairement inconfortable p
 > **L'essentiel à retenir**
 > Au bureau, l'intérêt d'une souris gaming n'est ni le RGB ni le DPI maximal, mais ses **boutons programmables** (raccourcis, macros) et la **qualité de son capteur**. Vise 6 à 8 boutons bien placés + un bon logiciel de profils. Si tu as **mal au poignet**, la forme prime : regarde d'abord une verticale ou un trackball.
 
-## Conclusion
+## Ce qu'il faut exiger d'une souris gaming au bureau
 
-Une souris gaming n'a rien d'un gadget hors sujet au bureau, à condition de regarder au-delà du RGB et des chiffres marketing. Ce qui compte vraiment pour un usage professionnel, ce sont les boutons programmables, la qualité du capteur et la possibilité de régler le DPI selon la tâche en cours. Bien choisie et bien configurée, elle peut réellement faire gagner du temps sur des gestes répétitifs, tout en restant confortable sur une journée complète de travail.
+Une souris gaming n'a rien d'un gadget hors sujet au bureau, à condition de regarder au-delà du RGB et des chiffres marketing. Bien choisie et bien configurée, elle fait gagner du temps sur les gestes répétitifs tout en restant confortable sur une journée complète, si elle coche trois cases :
+
+- **Des boutons programmables** bien placés (6 à 8 suffisent pour un usage bureautique), avec un logiciel qui gère plusieurs profils.
+- **Un capteur de qualité**, qui suit sans saccades ni pertes de suivi.
+- **Un DPI réglable à la volée**, pour passer d'un travail de précision à une navigation rapide.

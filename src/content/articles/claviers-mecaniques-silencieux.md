@@ -96,7 +96,7 @@ On trouve des claviers mécaniques silencieux corrects **dès 50-70 €**, et le
 > **L'essentiel à retenir**
 > Le silence d'un mécanique se joue sur le **switch** : vise des **linéaires « silent » (rouges)** en open space, des **tactiles bruns silencieux** si tu veux garder du retour, et fuis les **clicky (bleus)**. Un châssis **bien amorti**, un **tapis** dessous et une frappe pas trop appuyée finissent le travail. Le mot-clé à chercher, c'est **« silent »**.
 
-## Conclusion
+## Silence ou confort de frappe, selon ton bureau
 
 Le bon clavier mécanique silencieux dépend surtout de l'environnement : en open space partagé ou en visio, mise sur la réduction de bruit avant tout, avec de vrais switches « silent » ; en bureau fermé ou en télétravail solo, le confort de frappe peut peser davantage. Bien choisi, il offre le meilleur des deux mondes : le plaisir du mécanique, sans le vacarme. Et si tu hésites encore, souviens-toi que le silence tient d'abord au switch : c'est le seul critère qu'on ne rattrape pas après l'achat, contrairement au tapis, à l'amorti ou à la façon de taper.
 

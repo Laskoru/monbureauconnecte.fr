@@ -85,7 +85,7 @@ Il vaut aussi la peine de vérifier, avant d'ajouter un coussin, que le dossier 
 > **L'essentiel à retenir**
 > La plupart des chaises ont un dossier trop plat qui laisse le bas du dos s'affaisser. Un bon coussin lombaire comble ce creux, à condition d'avoir une **courbure vraiment marquée**, des **sangles** qui l'empêchent de glisser, et une **mousse dense** (adaptée à l'intensité de ta gêne). Adaptation **progressive** les premiers jours. Et souviens-toi : il complète un bon réglage de poste, il ne le remplace pas.
 
-## Conclusion
+## Avant d'investir dans un nouveau siège
 
 Le coussin lombaire pour chaise de bureau est l'un des accessoires les plus rentables pour qui passe de longues heures assis : peu coûteux, simple à installer, et capable de corriger un vrai défaut de conception présent sur la grande majorité des chaises de bureau standard. Le choix se joue sur quelques critères concrets (courbure marquée, fixation par sangles fiable, densité de mousse adaptée à l'intensité de la gêne) plus que sur la marque ou le prix affiché. Bien choisi, il tient plusieurs années et évite d'investir prématurément dans un nouveau siège ergonomique complet.
 

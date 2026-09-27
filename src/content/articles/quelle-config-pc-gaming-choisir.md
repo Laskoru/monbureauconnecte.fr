@@ -94,7 +94,7 @@ Un bon PC dans un mauvais poste, c'est du potentiel gâché. Une fois la config 
 > **L'essentiel à retenir**
 > Priorité absolue à la **carte graphique** : c'est elle qui fait les FPS. Autour, vise un **CPU milieu de gamme**, **16-32 Go** de RAM et un **SSD NVMe**, ni plus ni moins. Choisis le budget selon la définition (1080p vers 800-1000 €, 1440p vers 1500 €). **Monter** coûte moins cher, **acheter monté** est plus simple : les deux sont valables, à condition de vérifier GPU et alimentation.
 
-## Conclusion
+## Les deux pièces à ne jamais brader
 
 Choisir une config PC gaming n'a rien de sorcier une fois la hiérarchie posée : le GPU d'abord, le reste en soutien, et un budget calé sur la définition visée. Que tu montes ta machine ou que tu l'achètes toute faite, garde en tête que la carte graphique et l'alimentation sont les deux pièces à ne jamais brader. Pour aller plus loin, notre [guide PC gaming interactif](/guide-pc-gaming/) te donne des configurations complètes, prêtes à l'emploi, palier par palier.
 

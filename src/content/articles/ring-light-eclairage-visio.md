@@ -96,7 +96,7 @@ Trois pièges reviennent souvent. **Trop de puissance** : un ring light à fond 
 > **L'essentiel à retenir**
 > Le ring light rattrape un **éclairage insuffisant** en posant une lumière douce **face au visage**, plus visible sur l'image qu'un changement de webcam. Vise un modèle **compact**, à **intensité et température réglables**, placé **derrière la webcam**. Règle-le pour éclairer sans surexposer. Déjà bien éclairé de face ? Le gain sera faible.
 
-## Conclusion
+## Notre verdict
 
 Le ring light n'a rien d'un gadget réservé aux créateurs de contenu : dans une pièce mal éclairée, c'est souvent l'accessoire qui a le plus d'impact visible sur la qualité perçue d'une visioconférence, pour un budget très raisonnable. Bien choisi et bien placé, il te fait paraître net et présent, un vrai atout quand l'image compte.
 

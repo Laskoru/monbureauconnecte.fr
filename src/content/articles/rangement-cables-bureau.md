@@ -103,8 +103,6 @@ Le piège, c'est que le rangement se défait au premier nouvel accessoire. Pour 
 > **L'essentiel à retenir**
 > Le cœur du rangement, c'est un **panier sous le bureau** qui avale multiprise et chargeurs. Ajoute une **goulotte** pour les descentes le long d'un pied, une **gaine tressée** pour les câbles mobiles, et une **goulotte de sol** uniquement dans les zones de passage (sécurité). La plupart des solutions se posent **sans perçage**, par pince ou adhésif.
 
-## Conclusion
-
 Le rangement des câbles n'a rien d'un détail cosmétique : un bureau dégagé limite les faux mouvements, facilite le nettoyage et met en valeur tout le reste du matériel. Pour quelques euros et vingt minutes, c'est l'un des gestes les plus rentables pour un poste agréable, et une fois qu'on y a goûté, on ne revient pas au nœud de câbles. Le meilleur moment pour s'y mettre, c'est justement quand on ajoute un accessoire (écran, lampe, dock) : on en profite pour tout remettre au propre d'un coup, plutôt que d'empiler un câble de plus sur le désordre existant.
 
 ## Pour aller plus loin

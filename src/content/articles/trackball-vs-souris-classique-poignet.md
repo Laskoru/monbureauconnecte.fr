@@ -92,6 +92,6 @@ Enfin, ne néglige pas l'ensemble du poste de travail : un trackball bien choisi
 > **L'essentiel à retenir**
 > Le trackball soulage le poignet et l'épaule parce que **la main ne se déplace plus** : seul le pouce ou le doigt bouge. Il gagne aussi de la place (aucune zone de déplacement). En échange : une **adaptation** d'une à deux semaines, et l'effort se reporte sur le pouce. Débute par un **trackball à pouce** (transition douce) ; pour la précision fine, une souris verticale peut rester plus adaptée.
 
-## Conclusion
+## Par quoi commencer si ton poignet te gêne
 
 Le trackball n'est pas un gadget de niche réservé aux graphistes : c'est une alternative sérieuse pour qui cherche à soulager le poignet, à condition d'accepter une courte période d'adaptation et de bien choisir le type de contrôle adapté à son usage. Si l'objectif est de corriger une gêne existante plutôt que de changer complètement de geste, une souris ergonomique verticale peut rester une première étape plus simple avant de sauter le pas.

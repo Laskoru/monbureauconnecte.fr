@@ -77,6 +77,6 @@ Le silence de la souris ne règle qu'une partie du bruit de frappe global d'un p
 > **L'essentiel à retenir**
 > Le clic répété gêne surtout **les autres** (voisins d'open space, participants en visio via le micro). Le critère à ne pas sacrifier, c'est un **switch réellement conçu pour le silence** (« silent »), pas une souris vaguement « discrète ». Connectivité, autonomie et forme s'ajustent ensuite. Et pense au **clavier** : un seul périphérique silencieux ne suffit pas.
 
-## Conclusion
+## Le switch d'abord, le reste s'ajuste
 
 Une souris sans fil silencieuse ne révolutionne pas l'expérience de travail, mais elle règle une gêne réelle et quotidienne, aussi bien pour soi que pour son entourage direct : collègues d'open space, colocataires, ou simplement la personne qui partage la même pièce en visioconférence. Le critère à ne jamais sacrifier reste le switch réellement conçu pour le silence, plutôt qu'une souris simplement présentée comme "discrète" sans données concrètes. Le reste (connectivité, autonomie, forme) s'ajuste ensuite selon tes habitudes de travail.

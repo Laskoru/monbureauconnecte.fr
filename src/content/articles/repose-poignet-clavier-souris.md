@@ -81,6 +81,4 @@ Un repose-poignet mal placé fait plus de mal que de bien. L'erreur la plus fré
 > **L'essentiel à retenir**
 > Le repose-poignet corrige la position du poignet **au repos**, entre deux frappes ou clics. C'est un vrai complément, mais pas une solution miracle. Choisis-le selon la source de la gêne (**clavier** et/ou **souris**) et ta préférence de matière : **gel** (frais, massant) ou **mousse à mémoire** (épouse mieux, tient dans le temps). Si la douleur persiste, revois d'abord le **réglage global** du poste (hauteur, distance de la souris).
 
-## Conclusion
-
 Un repose-poignet ne remplace pas un poste de travail bien réglé dans son ensemble, mais c'est souvent le geste le plus simple et le moins cher pour soulager une tension qui s'installe insidieusement, frappe après frappe, clic après clic. Le bon réflexe : choisir un modèle à la bonne hauteur, avec une base qui ne bouge pas, et l'utiliser comme un appui entre les frappes plutôt que comme un coussin permanent sous le poignet. Si la gêne persiste malgré un repose-poignet bien choisi, ce sera le signal qu'il faut regarder plus largement du côté du clavier, de la souris, ou de la position générale du poste de travail.

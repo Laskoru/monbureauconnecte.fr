@@ -95,7 +95,7 @@ La plupart des webcams s'installent en **plug-and-play**, mais un petit logiciel
 
 Les webcams récentes multiplient les fonctions « intelligentes ». Le **cadrage automatique** (la caméra te suit et te recentre) est pratique si tu bouges ou animes un atelier debout ; inutile si tu restes assis face à l'écran. Les **corrections IA** (retouche de la lumière, flou d'arrière-plan matériel) peuvent aider, mais la plupart des plateformes de visio proposent déjà un flou logiciel gratuit : ne paie pas deux fois pour la même chose.
 
-Quant au **micro intégré**, considère-le comme un dépannage : il est loin de ta bouche et capte la pièce. Si la qualité de ta voix compte, un [micro USB dédié](/articles/micro-usb-visioconference-podcast/) fera bien plus pour être compris qu'une webcam à micro « amélioré ». En résumé, paie pour ce que tu utiliseras vraiment : lumière et cadrage d'abord, gadgets ensuite.
+Quant au **micro intégré**, considère-le comme un dépannage : il est loin de ta bouche et capte la pièce. Si la qualité de ta voix compte, un [micro USB dédié](/articles/micro-usb-visioconference-podcast/) fera bien plus pour être compris qu'une webcam à micro « amélioré ». Paie pour ce que tu utiliseras vraiment : lumière et cadrage d'abord, gadgets ensuite.
 
 ## Et utiliser son téléphone comme webcam ?
 
@@ -104,7 +104,7 @@ C'est une option souvent oubliée : un smartphone récent possède un capteur bi
 > **L'essentiel à retenir**
 > Pour la visio du quotidien, le **1080p suffit** : les plateformes compressent le flux. Ce qui compte vraiment, c'est la **gestion de la lumière**, l'**autofocus** et le **champ de vision**, pas les pixels. Garde la **4K** pour l'enregistrement et les présentations qui zooment sur les détails.
 
-## Conclusion
+## Quelle webcam pour ton télétravail ?
 
 Pour la majorité des télétravailleurs, une bonne **1080p** avec une correction de lumière fiable couvre largement les besoins, et une webcam externe reste un net progrès face à la caméra intégrée d'un portable. La **4K** devient pertinente pour un usage plus exigeant : présentations client récurrentes, enregistrement de contenu, ou setup où l'image doit vraiment impressionner. Dans tous les cas, soigne d'abord ta **lumière** : c'est elle, avant la résolution, qui fait une belle image.
 

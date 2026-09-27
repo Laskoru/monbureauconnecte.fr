@@ -85,7 +85,7 @@ Au-delà de l'apparence, les écouteurs limitent aussi les fuites sonores vers l
 > **L'essentiel à retenir**
 > Les écouteurs à réduction de bruit gagnent sur la **discrétion**, le **confort avec des lunettes** et l'**encombrement** ; le casque garde l'avantage sur l'**autonomie brute** et l'**isolation passive**. Le choix de la bonne **taille d'embout** compte souvent plus que le modèle lui-même.
 
-## Conclusion
+## Ce qui compte plus que la marque
 
 Les écouteurs à réduction de bruit ne remplacent pas totalement le casque, mais ils couvrent très bien un usage que le casque gère mal : rester discret en open space tout en coupant l'essentiel du bruit ambiant, sans y penser entre deux réunions. Le bon choix se joue surtout sur la taille d'embout, l'autonomie avec l'ANC activé et la qualité réelle du micro pour les visios, bien plus que sur la marque affichée sur la boîte.
 

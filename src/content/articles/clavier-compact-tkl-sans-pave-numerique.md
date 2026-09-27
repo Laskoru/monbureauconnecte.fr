@@ -91,6 +91,4 @@ Pense aussi à l'autonomie annoncée si tu optes pour un modèle sans fil : un c
 > **L'essentiel à retenir**
 > Le TKL supprime **le pavé numérique**, rien d'autre : aucun raccourci ni touche de navigation perdu, la disposition des lettres reste identique. Le vrai gain, c'est la **souris qui se rapproche** dans l'axe de l'épaule. Vérifie la présence des **flèches**, la **disposition AZERTY**, et, si tu saisis des chiffres, ajoute un pavé externe plutôt que de renoncer au format.
 
-## Conclusion
-
-Le format TKL est l'un des changements les plus simples à mettre en place pour gagner de la place sur un bureau, sans sacrifier aucune fonction essentielle au quotidien. Vérifie surtout la présence des touches de navigation et la disposition AZERTY complète avant d'acheter, et privilégie le sans-fil si tu veux garder un bureau dégagé de câbles inutiles.
+Avec ces détails réglés, le format TKL est l'un des changements les plus simples à mettre en place pour gagner de la place sur un bureau, sans sacrifier aucune fonction essentielle au quotidien. Vérifie surtout la présence des touches de navigation et la disposition AZERTY complète avant d'acheter, et privilégie le sans-fil si tu veux garder un bureau dégagé de câbles inutiles.

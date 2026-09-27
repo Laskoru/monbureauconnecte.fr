@@ -101,7 +101,7 @@ Question légitime, car un [casque à réduction de bruit](/articles/casque-redu
 > **L'essentiel à retenir**
 > Le micro intégré capte le clavier et la pièce ; un **micro USB** bien placé isole ta voix. En **solo**, choisis un **cardioïde** avec bouton muet ; à **plusieurs**, un **omnidirectionnel** ; pour du **podcast**, un **condensateur** sur bras articulé. Le plus gros gain vient du type de captation et du placement, pas du prix.
 
-## Conclusion
+## En pratique
 
 Un micro USB dédié reste l'un des accessoires les plus rentables pour améliorer la qualité perçue en visioconférence : le gain en clarté est **immédiat**, sans changer le reste du matériel. Choisis surtout le **bon type de captation** pour ton usage, positionne-le près de la bouche, et tu passeras du « désolé, tu peux répéter ? » à une voix nette du premier coup.
 

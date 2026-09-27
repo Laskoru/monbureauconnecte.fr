@@ -95,9 +95,15 @@ Pour faire baisser la facture sans sacrifier la qualité, l'**occasion** et le *
 > **L'essentiel à retenir**
 > Un setup gaming complet ne se résume pas au PC : compte aussi l'**écran**, les **périphériques**, le **siège**, le **bureau** et les accessoires, soit souvent **1 500 à 3 000 €** au total, le PC en représentant la moitié à deux tiers. Ne brade jamais l'**alimentation**, le **siège** et l'**écran** ; lève le pied sur l'esthétique et les périphériques d'appoint. Et surtout, **étale la dépense** : deux piliers d'abord (PC + écran), le reste ensuite.
 
-## Conclusion
+## Trois règles pour répartir ton budget
 
-Savoir combien coûte *vraiment* un setup gaming, c'est déjà éviter la moitié des mauvaises surprises. Le PC donne le tempo, mais c'est l'ensemble (écran, confort, périphériques) qui fait qu'on prend du plaisir à s'installer. Répartis ton budget selon ce qui compte pour toi, protège les postes qui durent, et étale la dépense : tu obtiendras un ensemble cohérent, agréable, et bien plus rentable qu'une accumulation d'achats mal pensés. Pour la partie machine, commence par notre [guide config PC gaming par budget](/articles/quelle-config-pc-gaming-choisir/).
+Savoir combien coûte *vraiment* un setup gaming, c'est déjà éviter la moitié des mauvaises surprises. Pour obtenir un ensemble cohérent, agréable et bien plus rentable qu'une accumulation d'achats mal pensés :
+
+- **Répartis ton budget selon ce qui compte pour toi** : performance en jeu, image, confort ou précision.
+- **Protège les postes qui durent** : l'alimentation, le siège et, si tu joues beaucoup, l'écran ne se bradent pas.
+- **Étale la dépense** : un PC et un écran corrects d'abord, le reste au fil des mois.
+
+Pour la partie machine, commence par notre [guide config PC gaming par budget](/articles/quelle-config-pc-gaming-choisir/).
 
 ## Pour aller plus loin
 

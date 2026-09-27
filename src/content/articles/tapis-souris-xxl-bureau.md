@@ -84,6 +84,10 @@ Le tapis Amazon Basics au format 90 x 43 cm coche les cases essentielles pour un
 > **L'essentiel à retenir**
 > Un tapis XXL **unifie** la zone clavier + souris sur une surface lisse, protège le plateau et met fin aux zones de glisse disparates. L'essentiel : une **taille adaptée** à ton bureau (80-90 cm sur un bureau standard) et une **base antidérapante** fiable. Le **tissu tissé** est le plus polyvalent, avec des **bords cousus** pour durer. Un modèle « gaming » sobre fait parfaitement l'affaire au bureau.
 
-## Conclusion
+## Ce qu'il faut vérifier, et ce qui relève du goût
 
-Un tapis XXL est l'un des accessoires les moins chers pour améliorer concrètement la sensation générale d'un poste de travail : surface uniforme, protection du bureau, et fin des zones de glisse disparates entre clavier et souris. Vérifie surtout la largeur disponible sur ton bureau et la qualité de la base antidérapante avant de choisir : le reste (couleur, finitions) est affaire de goût. C'est typiquement le genre de petit changement dont on ne mesure l'effet qu'une fois adopté : une fois habitué à une surface unique et fluide sous les deux mains, revenir à un clavier posé sur le bois nu paraît vite désagréable.
+Un tapis XXL est l'un des accessoires les moins chers pour améliorer concrètement la sensation générale d'un poste de travail : surface uniforme, protection du bureau, et fin des zones de glisse disparates entre clavier et souris. Avant de choisir :
+
+- **Mesure la largeur disponible** sur ton bureau : un tapis de 80-90 cm convient à un bureau standard de 120-140 cm.
+- **Vérifie la base antidérapante**, qui doit tenir même sur un plateau lisse.
+- **Choisis le reste selon tes goûts** (couleur, finitions) : un modèle « gaming » sobre fait parfaitement l'affaire au bureau.

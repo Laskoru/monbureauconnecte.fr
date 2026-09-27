@@ -87,10 +87,6 @@ Côté entretien, un simple passage à l'aspirateur ou un coup de chiffon humide
 > **L'essentiel à retenir**
 > Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol, pour bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC/vinyle), une **épaisseur ≥ 1,5 mm**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
 
-## Conclusion
-
-Le tapis de sol pour chaise de bureau fait partie de ces petits accessoires qu'on regrette de ne pas avoir installés plus tôt, une fois qu'on aperçoit les premières marques sur le parquet. Le choix se résume à peu de critères (matériau adapté au sol, épaisseur suffisante, base qui ne glisse pas), mais les respecter évite des années de frottement inutile sur une surface qui, elle, coûte bien plus cher à réparer qu'à protéger.
-
 ## Pour aller plus loin
 
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)

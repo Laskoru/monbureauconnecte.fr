@@ -85,9 +85,15 @@ Si ton coin de pièce a la bonne taille et que tu passes plusieurs heures par jo
 
 Un **bureau d'angle basique**, plateau mélaminé et pieds simples, se trouve généralement entre **60 et 120 €**. Les modèles avec **étagères intégrées ou rangement additionnel** montent plutôt entre **120 et 220 €**, selon la qualité des matériaux et la marque. Un **bureau d'angle assis-debout électrique** reste le format le plus cher, souvent au-delà de **350 €**, réservé à qui veut vraiment alterner les positions sans compromis sur l'espace. Pour un usage bureautique classique dans un petit espace, un modèle basique bien dimensionné suffit largement : inutile de viser le haut de gamme si le besoin reste simple.
 
-## En résumé
+## À vérifier avant de commander ton bureau d'angle
 
-Le bureau d'angle exploite un coin de pièce généralement inutilisé pour offrir **autant de surface de travail qu'un grand bureau droit**, sans encombrer le reste de l'espace. Les critères qui comptent : les **dimensions exactes** du coin disponible, une **profondeur d'au moins 45 à 50 cm** sur le retour d'angle, une bonne **stabilité** (idéalement calé contre deux murs) et, si l'espace manque de rangement, des **étagères intégrées**. Un modèle basique bien dimensionné coûte rarement plus de 120 €, largement suffisant pour un usage bureautique classique en télétravail.
+Le bureau d'angle exploite un coin de pièce généralement inutilisé pour offrir **autant de surface de travail qu'un grand bureau droit**, sans encombrer le reste de l'espace, à condition de bien le choisir :
+
+- **Les dimensions exactes du coin** : la longueur des deux murs disponibles, mesurée avant de regarder les modèles.
+- **La profondeur du retour d'angle** : au moins 45 à 50 cm pour y poser un écran.
+- **La stabilité** : idéalement calé contre deux murs, sinon des pieds larges et une structure renforcée.
+- **Le rangement** : des étagères intégrées si l'espace en manque.
+- **Le budget** : un modèle basique bien dimensionné coûte rarement plus de 120 €, largement suffisant pour un usage bureautique classique en télétravail.
 
 ## Pour aller plus loin
 

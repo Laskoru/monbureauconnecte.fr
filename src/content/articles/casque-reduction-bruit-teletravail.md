@@ -101,10 +101,6 @@ Un mot sur les **intras à réduction de bruit** : plus discrets et nomades, ils
 > **L'essentiel à retenir**
 > L'ANC efface surtout les **bruits continus** (ventilation, rue), moins les voix. Choisis selon **ce qui te gêne** : basses fréquences pour un bruit de fond, bon **micro** si tu enchaînes les visios, et surtout un **confort** qui tient 8 h. Vérifie que l'autonomie annoncée l'est **avec l'ANC activée**.
 
-## Conclusion
-
-Le bon casque à réduction de bruit dépend surtout de l'environnement à couper : bruit de fond continu ou brouhaha de conversations. Dans les deux cas, le confort sur plusieurs heures compte autant que la performance de l'ANC elle-même. Bien choisi, c'est l'un des accessoires qui transforment le plus vite une journée de travail, à la maison comme au bureau.
-
 ## Pour aller plus loin
 
 - [Micro USB pour visio et podcast](/articles/micro-usb-visioconference-podcast/)

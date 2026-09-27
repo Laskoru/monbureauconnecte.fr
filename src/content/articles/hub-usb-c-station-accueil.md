@@ -99,7 +99,7 @@ Un dock ne donne son plein confort que si le reste suit. Fixe-le à un endroit s
 > **L'essentiel à retenir**
 > Un **hub** ajoute des ports (nomade, pas cher) ; une **station d'accueil** centralise en plus l'**écran**, l'**Ethernet** et la **charge 100 W** sur un seul câble. Pour deux écrans, vérifie la mention **« double écran »** ET la compatibilité de **ta** machine (sur Mac, ça dépend de la puce). Vise du **4K 60 Hz**, jamais 30 Hz.
 
-## Conclusion
+## Quand passer du hub à la station d'accueil ?
 
 Le bon hub ou la bonne station d'accueil dépend surtout du nombre d'écrans à gérer et de la stabilité réseau recherchée. Au-delà d'un simple écran externe, investir dans une vraie station avec Ethernet et charge 100 W change vraiment le confort au quotidien, à condition de vérifier la compatibilité avant de commander. C'est l'accessoire qui transforme un portable en véritable poste de travail fixe, d'un seul clic de câble.
 
