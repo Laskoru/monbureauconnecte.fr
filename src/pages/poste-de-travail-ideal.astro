@@ -43,6 +43,7 @@ const reperes = [
   title="Le poste de travail idéal : le schéma des bons réglages"
   description={`Le schéma du poste de travail ergonomique parfait : hauteur d'écran, angle des coudes, soutien du dos, pieds à plat… tous les bons réglages en un coup d'œil. ${siteConfig.name}.`}
   jsonLd={jsonLd}
+  search="Outil"
 >
   <PageHead eyebrow="Le guide visuel" title="Le poste de travail idéal" lede="Un poste bien réglé, c'est moins de tensions et plus de concentration, et ça ne coûte souvent rien à ajuster. Voici, en un coup d'œil, les 7 repères qui comptent." icon="posture" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Le poste de travail idéal' }]} width="narrow" />
   <section class="container poste">
@@ -103,7 +104,7 @@ const reperes = [
       ))}
     </ol>
 
-    <aside class="poste__tools">
+    <aside class="poste__tools" data-pagefind-ignore>
       <h2>Passe du schéma à ton poste</h2>
       <p>Deux outils gratuits pour appliquer ces repères chez toi :</p>
       <p class="poste__tools-links">

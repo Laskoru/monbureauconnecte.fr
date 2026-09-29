@@ -114,6 +114,17 @@ existant. Il liste les liens cassés et sort en erreur. À lancer après un buil
 npm run build && npm run check-links
 ```
 
+### Recherche interne (Pagefind)
+
+`npm run build` enchaîne `astro build` et `pagefind --site dist`, qui écrit l'index
+dans `dist/pagefind/`. La page `/recherche/` (noindex, hors sitemap) l'interroge
+et accepte `?q=` (ex. `/recherche/?q=chaise`). Ne sont indexés que les pages qui
+passent la prop `search` à `BaseLayout` (comparatifs, conseils, guides, budgets,
+outils) : leur `<main>` porte `data-pagefind-body`. Les blocs répétés (fil
+d'Ariane, sommaire, partage, auteur, articles liés…) portent `data-pagefind-ignore`.
+En `npm run dev`, l'index n'existe pas : tester la recherche avec
+`npm run build && npm run preview`.
+
 ### Disponibilité des produits (`.github/workflows/availability.yml`)
 
 Le workflow « Disponibilité produits » tourne chaque lundi (et à la demande depuis

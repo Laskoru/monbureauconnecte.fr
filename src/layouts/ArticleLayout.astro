@@ -113,14 +113,15 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
   ogImage={coverImageAbs}
   ogType="article"
   jsonLd={jsonLdArticle}
+  search={products.length > 0 ? 'Comparatif' : 'Conseil'}
   article={{ publishedTime: pubDate.toISOString(), modifiedTime: (updatedDate ?? pubDate).toISOString(), author: author ?? siteConfig.author, section: categoryInfo?.label, tags: keywords }}
 >
   <article class="art">
     <div class="wide art__top">
       <Breadcrumbs items={breadcrumbItems} />
-      <h1 class="art__title">{frenchNbsp(title)}</h1>
+      <h1 class="art__title" data-pagefind-weight="10">{frenchNbsp(title)}</h1>
       <p class="art__lede">{description}</p>
-      <dl class="cartouche art__cartouche">
+      <dl class="cartouche art__cartouche" data-pagefind-ignore>
         <div><dt>Planche</dt><dd class="mono">{planche}/{nbPlanches}</dd></div>
         <div><dt>Rubrique</dt><dd>{categoryInfo ? <a href={`/categorie/${categoryInfo.slug}/`}>{categoryInfo.label}</a> : 'Guide'}</dd></div>
         <div><dt>{updatedDate && updatedDate.getTime() !== pubDate.getTime() ? 'Mis à jour' : 'Publié'}</dt><dd class="mono">{dateCourte.format(updatedDate ?? pubDate)}</dd></div>
@@ -175,7 +176,7 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
         {hasAffiliateLinks && <AffiliateDisclosure />}
 
         {tocHeadings.length > 1 && (
-          <nav class="toc toc--inline" aria-label="Sommaire">
+          <nav class="toc toc--inline" aria-label="Sommaire" data-pagefind-ignore>
             <p class="toc__title">Sommaire</p>
             <ol>{tocHeadings.map((h) => <li data-depth={h.depth}><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
           </nav>
@@ -200,7 +201,7 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
         )}
 
         {sources.length > 0 && (
-          <div class="article-sources">
+          <div class="article-sources" data-pagefind-ignore>
             <h2>Sources et références</h2>
             <p class="article-sources__intro">Les informations de cet article s'appuient sur des sources publiques et reconnues.</p>
             <ul class="article-sources__list">{sources.map((s) => <li><a href={s.url} target="_blank" rel="noopener">{s.label}<Icon name="external" size={14} /></a></li>)}</ul>
@@ -232,7 +233,7 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
         <AuthorBox author={author} />
       </div>
 
-      <aside class="art__rail" aria-label="Navigation dans l'article">
+      <aside class="art__rail" aria-label="Navigation dans l'article" data-pagefind-ignore>
         <div class="art__rail-in">
           {tocHeadings.length > 1 && (
             <nav class="toc toc--rail" aria-label="Sommaire">
@@ -252,7 +253,7 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
     </div>
 
     {relatedArticles.length > 0 && (
-      <section class="art__related">
+      <section class="art__related" data-pagefind-ignore>
         <div class="wide">
           <div class="section__head">
             <h2 class="section__title">À lire aussi{categoryInfo && <> : {categoryInfo.label}</>}</h2>

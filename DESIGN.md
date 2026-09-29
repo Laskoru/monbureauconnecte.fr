@@ -174,3 +174,4 @@ Cartes 16 px, tuiles image 12 px, puces et boutons en pilules, points chauds ron
 | 2026-09-24 | Thème sombre conservé en option | Le Studio sombre (maquette A) sert de thème nuit |
 | 2026-09-29 | Jauge de note Amazon masquée (`amazon.showRatings: false`) | Contrat Partenaires : notes affichables seulement via l'API officielle |
 | 2026-09-29 | Bandeau cookies compact, deux boutons identiques ; cibles ≥ 24 px | Mobile : le bandeau masquait l'ouverture ; CNIL et WCAG 2.2 AA |
+| 2026-09-29 | Recherche interne (Pagefind) : loupe de 44 px dans l'en-tête, boutons ronds de l'en-tête passés de 42 à 44 px, nom du site sur deux lignes sous 430 px | Trois boutons de 44 px tiennent à 360 px sans défilement horizontal ; résultats en cartes, mot trouvé surligné lime |

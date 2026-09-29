@@ -42,11 +42,15 @@ const menus = [
             </li>
           ))}
           <li class="hdr__menu"><a href="/articles/" aria-current={path === '/articles/' ? 'page' : undefined}>Comparatifs</a></li>
+          <li class="hdr__menu hdr__menu--search"><a href="/recherche/" aria-current={path === '/recherche/' ? 'page' : undefined}><Icon name="search" size={18} /> Rechercher</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="hdr__actions">
+      <a class="hdr__icon-btn" href="/recherche/" aria-label="Rechercher sur le site" title="Rechercher">
+        <Icon name="search" size={20} />
+      </a>
       <button type="button" class="hdr__icon-btn theme-btn" id="theme-toggle" aria-label="Passer en thème sombre">
         <Icon name="moon" size={20} class="i-moon" />
         <Icon name="sun" size={20} class="i-sun" />
@@ -111,8 +115,9 @@ const menus = [
   .hdr__drop a :global(svg) { flex-shrink: 0; color: var(--gris); }
 
   .hdr__actions { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
-  .hdr__icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; padding: 0; border: 1px solid var(--filet); border-radius: 50%; background: transparent; color: var(--mine); cursor: pointer; transition: border-color 0.18s ease, background-color 0.18s ease; }
+  .hdr__icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--filet); border-radius: 50%; background: transparent; color: var(--mine); cursor: pointer; transition: border-color 0.18s ease, background-color 0.18s ease; }
   .hdr__icon-btn:hover { border-color: var(--mine); background: var(--papier); }
+  .hdr__menu--search { display: none; }
   .theme-btn :global(.i-sun) { display: none; }
   :global(:root[data-theme='dark']) .theme-btn :global(.i-sun) { display: block; }
   :global(:root[data-theme='dark']) .theme-btn :global(.i-moon) { display: none; }
@@ -136,10 +141,13 @@ const menus = [
     .hdr__menus { flex-direction: column; padding: 0.4rem 0 0.8rem; max-height: calc(100vh - 60px); overflow: auto; }
     .hdr__menu > a { min-height: 48px; padding: 0 var(--gutter); font-size: 1rem; font-weight: 600; box-shadow: none; }
     .hdr__menu > a[aria-current='page'] { box-shadow: inset 0 -3px 0 var(--jaune); }
+    .hdr__menu--search { display: block; }
+    .hdr__menu--search > a { gap: 0.6rem; }
     :global(.hdr__chev) { display: none; }
     .hdr__drop { position: static; opacity: 1; visibility: visible; transform: none; border: 0; background: transparent; padding: 0 calc(var(--gutter) - 0.7rem) 0.5rem; min-width: 0; }
     .hdr__drop a { padding: 0.5rem 0.7rem; font-size: 0.95rem; }
   }
-  @media (max-width: 430px) { .hdr__name { font-size: 0.88rem; } .hdr__actions { gap: 0.4rem; } }
+  /* Petits écrans : trois boutons de 44 px à droite (recherche, thème, menu), le nom passe sur deux lignes. */
+  @media (max-width: 430px) { .hdr__logo { flex-shrink: 1; min-width: 0; } .hdr__name { font-size: 0.88rem; white-space: normal; line-height: 1.08; } .hdr__actions { gap: 0.4rem; } }
   @media (max-width: 360px) { .hdr__name { font-size: 0.8rem; } }
 </style>
