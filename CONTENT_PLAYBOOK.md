@@ -1,7 +1,7 @@
 # Playbook de création d'article — Mon Bureau Connecté
 
 Ce document décrit comment rédiger un nouvel article pour ce site. Il est suivi
-par la routine automatique quotidienne **et** peut être utilisé à la main.
+par la routine automatique hebdomadaire **et** peut être utilisé à la main.
 
 ## Objectif d'une exécution
 
@@ -33,7 +33,7 @@ jamais devenir obsolète, contrairement à une fiche produit précise.
 
 ### Pourquoi un seul article (et pas plus)
 
-Le site publie **délibérément peu : 3 articles par semaine maximum**. La
+Le site publie **délibérément peu : 1 article par semaine maximum**. La
 fréquence de publication n'est pas un critère de classement Google, et un
 volume élevé sur un domaine récent relève au contraire du « scaled content
 abuse » que Google sanctionne depuis 2024.
@@ -42,6 +42,26 @@ La consigne est donc claire : **prends tout le temps nécessaire pour un seul
 article vraiment bon** — recherche produit sérieuse, angle utile, conseils
 concrets — plutôt que d'en produire plusieurs corrects. Un article de plus ne
 fera jamais gagner de positions ; un article médiocre peut en faire perdre.
+
+## Rythme et preuves d'expérience
+
+- **1 article par semaine maximum.** Si la semaine n'offre pas de sujet solide,
+  on ne publie pas.
+- **Mettre à jour vaut mieux que publier moyen.** Rafraîchir un comparatif
+  existant (produit épuisé remplacé, sources revérifiées, FAQ complétée,
+  `updatedDate` du jour) rapporte plus qu'un nouvel article quelconque.
+- **Ce que Hugo peut ajouter à la main** pour montrer une expérience réelle
+  (Google la valorise, les lecteurs aussi) :
+  - des photos de son propre poste ou du produit chez lui (pas d'image de
+    fabricant présentée comme la sienne) ;
+  - des mesures faites lui-même, avec l'unité et l'outil : hauteur de plateau
+    au mètre ruban, bruit au sonomètre du téléphone, autonomie réelle notée ;
+  - un court retour d'usage daté : combien de temps, ce qui a surpris, ce qui
+    gêne encore ;
+  - une mise à jour quand l'avis change après quelques semaines d'usage.
+- **Jamais de vécu inventé.** Une routine n'écrit jamais « j'ai testé »,
+  « chez moi » ni une mesure qu'Hugo n'a pas faite. Sans matière réelle,
+  l'article reste un comparatif sur fiches techniques et sources, et le dit.
 
 ## Étapes
 
