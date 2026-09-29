@@ -1,9 +1,9 @@
 ---
 title: "Plante de bureau dépolluante : laquelle choisir pour un poste de travail"
 seoTitle: "Plante de bureau dépolluante : laquelle choisir"
-description: "Quelle plante dépolluante installer sur un bureau, selon la lumière disponible et le temps qu'on peut consacrer à son entretien."
+description: "Quelle plante de bureau dépolluante choisir selon la lumière disponible et le temps que tu peux consacrer à son entretien sur ton poste de travail."
 pubDate: 2026-08-16
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Un bureau *plus sain*, plus agréable"
 pinSub: "La plante dépolluante idéale."
@@ -56,7 +56,7 @@ faq:
 
 ## Pourquoi une plante change quelque chose sur un poste de travail
 
-Un bureau, qu'il soit à la maison ou en open space, reste un environnement assez minéral : écran, clavier, câbles, surfaces lisses. Une plante verte y apporte un contraste simple mais efficace : une touche de couleur vivante, un point de repos visuel pour les yeux entre deux sessions d'écran, et une présence qui rend l'espace un peu moins austère. Ce n'est pas anodin pour le confort au quotidien, même si l'effet d'une plante sur le bien-être au travail reste difficile à mesurer précisément.
+Un bureau, qu'il soit à la maison ou en open space, reste un environnement assez minéral : écran, clavier, câbles, surfaces lisses. Une plante de bureau dépolluante (ou simplement verte) y apporte un contraste simple mais efficace : une touche de couleur vivante, un point de repos visuel pour les yeux entre deux sessions d'écran, et une présence qui rend l'espace un peu moins austère. Ce n'est pas anodin pour le confort au quotidien, même si l'effet d'une plante sur le bien-être au travail reste difficile à mesurer précisément.
 
 Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NASA menée dans les années 1980 sur des chambres closes et étanches, très différentes d'un bureau réel avec ventilation, portes qui s'ouvrent et volume d'air important. Dans un vrai bureau, l'effet purifiant d'une plante en pot sur les polluants intérieurs n'est pas démontré : l'ADEME juge l'argument « plantes dépolluantes » non validé scientifiquement. Ce qui reste vrai et vérifiable, en revanche, c'est le bénéfice sur le cadre de travail : une plante bien choisie demande peu d'entretien, dure des années, et transforme visuellement un poste de travail sans y consacrer de budget ni de temps important.
 
@@ -82,7 +82,7 @@ Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NAS
 
 **Pour un open space partagé** : privilégier une variété qui ne nécessite pas de taille régulière ni d'attention visible de la part des collègues, pour éviter qu'elle ne devienne une contrainte collective mal assumée.
 
-## Ce qu'une plante de bureau ne remplace pas
+## Ce qu'une plante de bureau dépolluante ne remplace pas
 
 Une plante verte améliore le cadre de travail, mais elle ne corrige pas un éclairage de bureau mal réglé, une ventilation insuffisante dans une pièce fermée, ni une position assise inadaptée. Elle vient en complément de ces éléments, pas à leur place. Si l'objectif principal est réellement d'améliorer la qualité de l'air d'un bureau fermé, une bonne aération régulière et la limitation des sources de pollution auront un effet plus mesurable qu'un pot de plante isolé.
 

@@ -1,9 +1,9 @@
 ---
 title: "Clavier compact TKL : gagner de la place pour la souris sur un petit bureau"
-seoTitle: "Clavier compact TKL : gagner de la place pour la souris"
-description: "Le format TKL, sans pavé numérique, libère de l'espace pour la souris. Nos critères pour bien choisir et notre sélection pour le bureau."
+seoTitle: "Clavier TKL compact : gagner de la place pour la souris"
+description: "Le clavier TKL, sans pavé numérique, libère de l'espace pour la souris. Nos critères pour bien le choisir et notre sélection pour le bureau."
 pubDate: 2026-08-24
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Plus de place pour *la souris*"
 pinSub: "Le clavier compact TKL, bien choisi."
@@ -50,9 +50,9 @@ faq:
     answer: "Oui, les touches de fonction, flèches et touches de navigation (Inser, Suppr, Origine, Fin, Pg préc/suiv) restent présentes sur un vrai TKL. Seul le bloc numérique à droite disparaît, ce qui ne change rien aux raccourcis standards de Windows, macOS ou des logiciels courants."
 ---
 
-## Pourquoi le format TKL change quelque chose
+## Pourquoi un clavier TKL change quelque chose
 
-TKL veut dire « Tenkeyless », littéralement « sans les dix touches » : c'est le nom donné aux claviers qui suppriment le pavé numérique situé à droite d'un clavier complet, tout en gardant les touches de fonction, les flèches et les touches de navigation. Sur un bureau standard, ce bloc numérique occupe pourtant une bande de plusieurs centimètres qui ne sert à rien si tu ne tapes pas de longues séries de chiffres au quotidien.
+TKL veut dire « Tenkeyless », littéralement « sans les dix touches » : un clavier TKL supprime le pavé numérique situé à droite d'un clavier complet, tout en gardant les touches de fonction, les flèches et les touches de navigation. Sur un bureau standard, ce bloc numérique occupe pourtant une bande de plusieurs centimètres qui ne sert à rien si tu ne tapes pas de longues séries de chiffres au quotidien.
 
 Le résultat concret d'un passage au TKL est simple : la souris se retrouve plus proche du clavier, dans l'axe naturel de l'épaule plutôt que décalée sur le côté. Ce détail compte plus qu'il n'y paraît, en particulier sur une surface de bureau étendue où l'objectif est justement d'unifier toute la zone de frappe et de déplacement : un clavier compact laisse davantage de marge de manœuvre à la souris sans avoir à tendre le bras.
 

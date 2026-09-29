@@ -1,9 +1,9 @@
 ---
 title: "Souris gaming au bureau : DPI et boutons programmables au quotidien"
-seoTitle: "Souris gaming au bureau : DPI et boutons au quotidien"
-description: "Utiliser une souris gaming pour travailler ? DPI réglable, boutons programmables et macros : notre guide pour bien choisir, loin des clichés du RGB."
+seoTitle: "Souris gaming pour le travail : DPI et boutons utiles"
+description: "Une souris gaming pour le travail ? DPI réglable, boutons programmables et macros : notre guide pour bien la choisir, loin des clichés du RGB."
 pubDate: 2026-08-26
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Des raccourcis *sous le pouce*"
 pinSub: "La souris gaming qui accélère ta journée de travail."
@@ -48,9 +48,9 @@ faq:
     answer: "Sur un modèle sans fil, oui, ça vaut le coup. L'éclairage RGB consomme une part non négligeable de la batterie sur beaucoup de modèles ; l'éteindre via le logiciel du fabricant peut prolonger l'autonomie de plusieurs heures, sans aucun impact sur les fonctions programmables."
 ---
 
-## Pourquoi une souris gaming peut avoir sa place au bureau
+## Une souris gaming pour le travail : pourquoi elle a sa place au bureau
 
-L'idée paraît d'abord bizarre : une souris gaming, conçue pour des réflexes de jeu, semble hors sujet dans un contexte de travail. Mais ce qui distingue vraiment ce type de souris n'a pas grand-chose à voir avec le jeu en lui-même. C'est le nombre de boutons additionnels, tous personnalisables, et la qualité du capteur optique, deux caractéristiques qui se révèlent très utiles pour qui passe sa journée à naviguer entre plusieurs logiciels, remplir des tableurs ou retoucher des documents.
+L'idée paraît d'abord bizarre : une souris gaming pour le travail, alors qu'elle est conçue pour des réflexes de jeu, semble hors sujet. Mais ce qui distingue vraiment ce type de souris n'a pas grand-chose à voir avec le jeu en lui-même. C'est le nombre de boutons additionnels, tous personnalisables, et la qualité du capteur optique, deux caractéristiques qui se révèlent très utiles pour qui passe sa journée à naviguer entre plusieurs logiciels, remplir des tableurs ou retoucher des documents.
 
 Une souris bureautique classique propose en général un clic gauche, un clic droit et une molette, parfois deux boutons latéraux basiques pour naviguer en avant/arrière dans un navigateur. Une souris gaming, elle, peut aligner six, huit, parfois plus de dix boutons, chacun assignable à un raccourci clavier, une macro, ou une action précise dans un logiciel. Ce qui était pensé pour enchaîner des combos de jeu devient, au bureau, un moyen de déclencher un copier-coller complexe, changer d'onglet, ou lancer une macro Excel d'un simple clic du pouce.
 

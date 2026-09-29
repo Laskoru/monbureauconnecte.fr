@@ -1,8 +1,9 @@
 ---
 title: "Pavé numérique externe sans fil : comment bien le choisir"
-description: "Ton portable n'a pas de pavé numérique ? Un pavé externe sans fil accélère la saisie de chiffres. Les critères (RF ou Bluetooth, autonomie) et notre choix."
+seoTitle: "Pavé numérique sans fil : comment bien le choisir"
+description: "Pas de pavé sur ton portable ? Un pavé numérique sans fil accélère la saisie de chiffres. Les critères (RF ou Bluetooth, autonomie) et notre choix."
 pubDate: 2026-08-31
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 keywords: ["pavé numérique sans fil", "pavé numérique externe", "clavier numérique sans fil", "quel pavé numérique choisir"]
 category: "peripheriques"
@@ -50,9 +51,9 @@ faq:
     answer: "Oui, dans la grande majorité des cas : les modèles RF avec dongle USB et les modèles Bluetooth fonctionnent sous Windows, macOS et Linux sans pilote. Attention toutefois à la touche de verrouillage numérique (Verr. Num) sur certains portables, et au fait que quelques modèles ont un agencement de touches pensé pour Windows (la touche « = » ou les fonctions dépendent parfois de l'OS)."
 ---
 
-## À quoi sert un pavé numérique externe ?
+## À quoi sert un pavé numérique sans fil ?
 
-Les **ordinateurs portables** et les **claviers compacts** (format TKL, sans pavé) font gagner de la place… mais quand il s'agit de **saisir beaucoup de chiffres** (tableur, comptabilité, saisie de données, caisse), l'absence de pavé numérique devient vite pénible. Un **pavé externe sans fil** résout le problème : on le pose où l'on veut sur le bureau, sans câble, et la saisie des chiffres redevient rapide et confortable.
+Les **ordinateurs portables** et les **claviers compacts** (format TKL, sans pavé) font gagner de la place… mais quand il s'agit de **saisir beaucoup de chiffres** (tableur, comptabilité, saisie de données, caisse), l'absence de pavé numérique devient vite pénible. Un **pavé numérique sans fil** résout le problème : on le pose où l'on veut sur le bureau, sans câble, et la saisie des chiffres redevient rapide et confortable.
 
 Concrètement, la différence de vitesse est spectaculaire. Saisir une colonne de chiffres à une main sur un vrai pavé, sans quitter l'écran des yeux, va bien plus vite que de viser la rangée de chiffres tout en haut du clavier, touche par touche. Pour quiconque manipule des nombres au quotidien, ce n'est pas un gadget mais un **outil de productivité**, au même titre qu'une bonne souris. Et comme il est sans fil, il n'ajoute aucun câble au bureau.
 

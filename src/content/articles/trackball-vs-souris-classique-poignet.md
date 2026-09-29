@@ -1,9 +1,9 @@
 ---
 title: "Trackball vs souris classique : lequel choisir pour le poignet ?"
-seoTitle: "Trackball ou souris classique : lequel pour le poignet ?"
+seoTitle: "Trackball vs souris classique : lequel pour le poignet ?"
 description: "Douleurs au poignet avec une souris classique ? Notre comparatif trackball vs souris pour choisir selon ton usage, sans se tromper d'accessoire."
 pubDate: 2026-08-21
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Soulager le poignet, *autrement*"
 pinSub: "Trackball ou souris : le comparatif."
@@ -54,7 +54,7 @@ faq:
 
 ## Trackball vs souris : ce qui change pour le poignet
 
-Une souris classique demande de déplacer toute la main, l'avant-bras suivant plus ou moins le mouvement, à longueur de journée. Sur une journée de travail, cette répétition sollicite en continu les tendons du poignet et peut favoriser des tensions, voire une tendinite à la longue. Le trackball inverse le principe : le boîtier reste fixe sur le bureau, et c'est le pouce, l'index ou plusieurs doigts (selon le modèle) qui font rouler une boule pour déplacer le curseur. La main, elle, ne bouge quasiment plus.
+Dans le match trackball vs souris, tout part d'un constat : une souris classique demande de déplacer toute la main, l'avant-bras suivant plus ou moins le mouvement, à longueur de journée. Sur une journée de travail, cette répétition sollicite en continu les tendons du poignet et peut favoriser des tensions, voire une tendinite à la longue. Le trackball inverse le principe : le boîtier reste fixe sur le bureau, et c'est le pouce, l'index ou plusieurs doigts (selon le modèle) qui font rouler une boule pour déplacer le curseur. La main, elle, ne bouge quasiment plus.
 
 Le résultat concret : moins de fatigue dans l'avant-bras en fin de journée, un besoin d'espace sur le bureau nettement réduit (plus la peine de dégager une zone pour glisser la souris), et un geste qui reste précis même sur un petit plan de travail. C'est aussi une bonne option pour qui a déjà mal au poignet et cherche une alternative franche plutôt qu'un simple ajustement, comme peut l'être notre comparatif des [souris ergonomiques verticales](/articles/souris-ergonomique-verticale/), qui corrige la rotation du poignet sans supprimer le mouvement de la main.
 

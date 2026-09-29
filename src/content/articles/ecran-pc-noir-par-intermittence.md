@@ -1,6 +1,7 @@
 ---
 title: "Écran PC qui devient noir par intermittence : le diagnostic"
-description: "Ton écran PC qui devient noir par intermittence ? Câble, veille, pilote graphique ou fréquence d'affichage : la méthode pour trouver la cause exacte."
+seoTitle: "Écran PC noir par intermittence : le diagnostic"
+description: "Écran PC noir par intermittence ? Câble, veille, pilote graphique ou fréquence d'affichage : la méthode pour trouver la cause exacte, étape par étape."
 pubDate: 2026-09-29
 updatedDate: 2026-09-29
 author: "Hugo B."
@@ -26,9 +27,9 @@ sources:
     url: "https://support.microsoft.com/fr-fr/windows/r%C3%A9soudre-les-probl%C3%A8mes-de-connexions-de-moniteurs-externes-sous-windows-5b46f4a4-9634-06bb-7622-f960facdfd49"
 ---
 
-Un écran PC qui devient noir par intermittence vient presque toujours de l'une de ces cinq causes : un câble ou un port vidéo mal fixé, un pilote graphique qui se réinitialise, un réglage de mise en veille trop agressif, une fréquence d'affichage mal réglée, ou plus rarement l'écran ou la carte graphique eux-mêmes. La méthode ci-dessous permet de les tester dans l'ordre, du plus simple au plus rare, pour isoler la cause sans changer de pièce au hasard.
+Un écran PC noir par intermittence, qui s'éteint puis revient, vient presque toujours de l'une de ces cinq causes : un câble ou un port vidéo mal fixé, un pilote graphique qui se réinitialise, un réglage de mise en veille trop agressif, une fréquence d'affichage mal réglée, ou plus rarement l'écran ou la carte graphique eux-mêmes. La méthode ci-dessous permet de les tester dans l'ordre, du plus simple au plus rare, pour isoler la cause sans changer de pièce au hasard.
 
-## Écran PC qui devient noir par intermittence : les cinq causes à tester
+## Écran PC noir par intermittence : les cinq causes à tester
 
 Avant de remplacer quoi que ce soit, il vaut mieux savoir à quel moment le noir apparaît : pendant un jeu, juste après une veille, en changeant de fenêtre, ou sans logique apparente. Ce détail oriente directement vers l'une des causes suivantes, à tester dans cet ordre :
 

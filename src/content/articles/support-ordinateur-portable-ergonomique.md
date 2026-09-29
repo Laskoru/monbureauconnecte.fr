@@ -1,9 +1,9 @@
 ---
 title: "Support ordinateur portable ergonomique : pourquoi c'est presque indispensable"
 seoTitle: "Support ordinateur portable ergonomique : indispensable ?"
-description: "Travailler sur un portable posé à plat fatigue vite la nuque. Nos critères de choix, le duo gagnant avec un clavier externe, et notre sélection."
+description: "Un portable posé à plat fatigue vite la nuque. Nos critères pour choisir un support d'ordinateur portable ergonomique, avec clavier externe."
 pubDate: 2026-07-30
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "L'écran *à hauteur des yeux*"
 pinSub: "Le support portable presque indispensable."
@@ -49,9 +49,9 @@ faq:
     answer: "Un support fixe (souvent en aluminium massif) est plus stable et offre parfois plus de réglages, idéal pour un poste qui ne bouge pas. Un support pliable est plus léger et se range dans un sac, parfait pour alterner entre plusieurs lieux de travail. Le bon choix dépend surtout de la fréquence à laquelle tu déplaces ton installation."
 ---
 
-## Pourquoi un support pour ordinateur portable soulage la nuque
+## Pourquoi un support d'ordinateur portable ergonomique soulage la nuque
 
-Un ordinateur portable posé à plat sur le bureau place l'écran **bien en dessous du niveau des yeux**, ce qui oblige à baisser la tête pendant des heures. Sur la durée, cette position penchée peut provoquer des **douleurs à la nuque et aux épaules** en télétravail (le fameux « cou du portable »). Un support relève l'écran à une hauteur plus proche du regard, ce qui redresse naturellement la posture et soulage la chaîne cervicale.
+Un ordinateur portable posé à plat sur le bureau place l'écran **bien en dessous du niveau des yeux**, ce qui oblige à baisser la tête pendant des heures. Sur la durée, cette position penchée peut provoquer des **douleurs à la nuque et aux épaules** en télétravail (le fameux « cou du portable »), ce qu'un support d'ordinateur portable ergonomique aide à éviter. Il relève l'écran à une hauteur plus proche du regard, ce qui redresse naturellement la posture et soulage la chaîne cervicale.
 
 C'est, avec le clavier externe, l'un des changements les plus rentables qu'on puisse faire sur un poste de travail nomade : quelques dizaines d'euros pour corriger un problème que beaucoup subissent sans le savoir, huit heures par jour.
 

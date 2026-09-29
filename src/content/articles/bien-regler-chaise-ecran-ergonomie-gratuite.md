@@ -1,13 +1,13 @@
 ---
 title: "Bien régler sa chaise et son écran : les réglages ergonomiques qui ne coûtent rien"
-seoTitle: "Régler sa chaise et son écran : l'ergonomie gratuite"
-description: "Avant d'acheter le moindre accessoire, ces réglages gratuits de la chaise, de l'écran et du clavier corrigent déjà une bonne part des douleurs."
+seoTitle: "Bien régler sa chaise de bureau et son écran"
+description: "Bien régler sa chaise de bureau, l'écran et le clavier ne coûte rien et corrige déjà une bonne part des douleurs, avant d'acheter le moindre accessoire."
 pubDate: 2026-09-06
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Une meilleure posture, *sans rien acheter*"
 pinSub: "Les réglages ergonomiques gratuits, en 10 minutes."
-keywords: ["ergonomie bureau gratuit", "bien régler sa chaise de bureau", "hauteur écran ergonomie", "posture télétravail"]
+keywords: ["bien régler sa chaise de bureau", "ergonomie bureau gratuit", "hauteur écran ergonomie", "posture télétravail"]
 category: "mobilier"
 coverImage: "/covers/bien-regler-chaise-ecran-ergonomie-gratuite-inbody.webp"
 coverAlt: "Bureau assis-debout et chaise ergonomique face à une baie vitrée"
@@ -38,9 +38,9 @@ sources:
     url: "https://www.inrs.fr/risques/travail-ecran/reglementation-normes.html"
 ---
 
-## Le réglage compte plus que l'équipement
+## Bien régler sa chaise de bureau compte plus que l'équipement
 
-Avant d'envisager un nouvel accessoire, la plupart des inconforts au bureau se corrigent avec ce qu'on a déjà : une chaise, un écran, un clavier. Le problème n'est presque jamais le matériel lui-même, mais son réglage : une chaise correcte mal ajustée fait plus mal qu'une chaise simple bien positionnée. Voici les réglages gratuits à vérifier, dans l'ordre où ils comptent le plus.
+Avant d'envisager un nouvel accessoire, la plupart des inconforts au bureau se corrigent avec ce qu'on a déjà : une chaise, un écran, un clavier. Le problème n'est presque jamais le matériel lui-même, mais son réglage : bien régler sa chaise de bureau et son écran suffit souvent, car une chaise correcte mal ajustée fait plus mal qu'une chaise simple bien positionnée. Voici les réglages gratuits à vérifier, dans l'ordre où ils comptent le plus.
 
 ## 1. La hauteur de la chaise
 

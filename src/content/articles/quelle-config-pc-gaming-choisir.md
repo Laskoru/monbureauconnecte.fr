@@ -1,9 +1,9 @@
 ---
 title: "Quelle config PC gaming choisir ? Le guide par budget"
 seoTitle: "Config PC gaming : laquelle choisir selon ton budget"
-description: "Monter ou acheter son PC gaming : par quoi commencer, quels composants prioriser et quelle config viser selon ton budget (800, 1000 ou 1500 €)."
+description: "Monter ou acheter son PC gaming : par quoi commencer, quels composants prioriser et quelle config PC gaming viser selon ton budget (800, 1000 ou 1500 €)."
 pubDate: 2026-09-12
-updatedDate: 2026-09-12
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "La bonne config gaming, *selon ton budget*"
 pinSub: "Par où commencer, quoi prioriser."
@@ -46,7 +46,7 @@ faq:
 
 ## Par où commencer : la carte graphique, toujours
 
-Avant de plonger dans les références, une règle simple guide tout le reste : **pour le jeu, la carte graphique (GPU) est le composant le plus important**. C'est elle qui produit l'essentiel des images par seconde. Sur un budget donné, il vaut presque toujours mieux mettre le paquet sur le GPU et prendre un processeur milieu de gamme, plutôt que l'inverse.
+Avant de plonger dans les références d'une config PC gaming, une règle simple guide tout le reste : **pour le jeu, la carte graphique (GPU) est le composant le plus important**. C'est elle qui produit l'essentiel des images par seconde. Sur un budget donné, il vaut presque toujours mieux mettre le paquet sur le GPU et prendre un processeur milieu de gamme, plutôt que l'inverse.
 
 Le reste des composants a un rôle de **support** : le processeur alimente la carte graphique en données, la RAM et le SSD fluidifient l'ensemble, l'alimentation et le boîtier assurent la fiabilité. Bien dimensionnés, ils ne brident pas le GPU ; surdimensionnés, ils gaspillent du budget qui aurait mieux servi ailleurs. Garde cette hiérarchie en tête, et la moitié des mauvais choix disparaît.
 
@@ -75,7 +75,7 @@ Deux pièces qu'on néglige à tort. Une **alimentation** fiable, à la bonne pu
 > 🛒 **Comparer les composants du moment**
 > Les prix des cartes graphiques et des processeurs bougent sans arrêt. Pour voir ce qui est disponible aujourd'hui : [voir les cartes graphiques gaming sur Amazon](https://www.amazon.fr/s?k=carte+graphique+gaming&tag=monbureauconnecte-21).
 
-## Quelle config selon ton budget
+## Quelle config PC gaming selon ton budget
 
 Voici les grands paliers. Ils bougent avec les prix, mais la **logique** reste stable : on ajuste le GPU et la plateforme, le reste suit.
 
