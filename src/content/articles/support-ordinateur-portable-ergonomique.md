@@ -117,3 +117,4 @@ Associé à un clavier et une souris externes, un support ordinateur portable tr
 - [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)
 - [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
+- [Écran PC qui devient noir par intermittence : le diagnostic](/articles/ecran-pc-noir-par-intermittence/)

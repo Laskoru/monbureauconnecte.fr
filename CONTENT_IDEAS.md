@@ -12,7 +12,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 
 Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répondent vraiment. Vérifié le 26/09/2026 : aucun article publié ne les traite déjà. Garde la requête principale dans le titre, la description et un titre ##.
 
-- [ ] Écran PC qui devient noir par intermittence : le diagnostic pas à pas (câble, mise en veille, pilote, fréquence, écran ou carte graphique) — requête « écran pc qui devient noir par intermittence » — peripheriques (conseil, sans produit)
+- [x] Écran PC qui devient noir par intermittence : le diagnostic pas à pas (câble, mise en veille, pilote, fréquence, écran ou carte graphique) — requête « écran pc qui devient noir par intermittence » — peripheriques (conseil, sans produit)
 - [ ] Casque micro qui ne fonctionne pas sur PC : les réglages à vérifier (prise jack combinée, confidentialité Windows, périphérique par défaut, USB ou Bluetooth) — requête « casque micro ne fonctionne pas sur pc » — audio-visio (conseil, lien Amazon léger)
 - [ ] Souris sans fil : faut-il l'éteindre ? Veille automatique, autonomie réelle, piles ou batterie — requête « souris sans fil faut il l'éteindre » — peripheriques (conseil, sans produit)
 - [ ] Chaise de bureau qui descend toute seule ou ne remonte plus : vérin, levier, que faire et comment changer le vérin — requêtes « chaise de bureau qui descend toute seule », « chaise de bureau ne remonte plus » — mobilier (conseil, lien de recherche vérin)
