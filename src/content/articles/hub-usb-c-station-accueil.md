@@ -1,8 +1,9 @@
 ---
 title: "Hub USB-C et station d'accueil : lequel choisir ?"
+seoTitle: "Station d'accueil USB-C ou hub : lequel choisir ?"
 description: "Multi-écrans, Ethernet, charge : comment choisir un hub ou une station d'accueil USB-C pour le télétravail, et éviter les pièges de compatibilité."
 pubDate: 2026-07-27
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Tout brancher *d'un seul câble*"
 pinSub: "Le hub USB-C / station idéal."
@@ -54,13 +55,13 @@ faq:
 
 ## Pourquoi un hub ou une station d'accueil change le quotidien
 
-Un ordinateur portable moderne propose souvent seulement **2 à 3 ports USB-C**, ce qui oblige à débrancher et rebrancher en permanence écran, clavier filaire ou clé USB. Un hub ou une station d'accueil **centralise** tous ces branchements : un seul câble à connecter le matin pour retrouver écran externe, réseau filaire et charge, un seul à débrancher le soir. Pour qui pose et reprend son portable chaque jour, c'est le genre d'accessoire qu'on ne remarque plus… parce qu'il fait disparaître une corvée quotidienne.
+Un ordinateur portable moderne propose souvent seulement **2 à 3 ports USB-C**, ce qui oblige à débrancher et rebrancher en permanence écran, clavier filaire ou clé USB. Un hub ou une station d'accueil USB-C **centralise** tous ces branchements : un seul câble à connecter le matin pour retrouver écran externe, réseau filaire et charge, un seul à débrancher le soir. Pour qui pose et reprend son portable chaque jour, c'est le genre d'accessoire qu'on ne remarque plus… parce qu'il fait disparaître une corvée quotidienne.
 
 Au-delà du confort, il y a aussi un enjeu de **fiabilité**. Brancher et débrancher sans cesse les mêmes ports finit par les user, et multiplier les câbles directement sur le portable fragilise ses prises. Un dock joue le rôle d'intermédiaire : c'est lui qui encaisse les manipulations quotidiennes, pendant que le portable ne voit qu'un seul câble propre. Sur la durée, c'est autant de sérénité pour un matériel souvent coûteux.
 
 ![Hub USB multiport à plusieurs ports posé sur un bureau](/covers/hub-usb-c-station-accueil-inbody.webp)
 
-## Hub ou station d'accueil : ce n'est pas la même chose
+## Hub ou station d'accueil USB-C : ce n'est pas la même chose
 
 Le vocabulaire est flou, mais la distinction est réelle. Un **hub** est un petit multiprise de ports : il ajoute quelques USB-A, une sortie HDMI, parfois un lecteur de carte, souvent alimenté par le port du portable lui-même. Léger, nomade, économique. Une **station d'accueil (dock)** va plus loin : elle a sa **propre alimentation**, gère plusieurs écrans, un port **Ethernet**, et recharge le portable, le tout via un unique câble. Plus chère et sédentaire, mais imbattable pour un poste fixe complet.
 

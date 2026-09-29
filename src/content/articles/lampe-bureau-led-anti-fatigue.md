@@ -1,8 +1,8 @@
 ---
 title: "Lampe de bureau LED anti-fatigue : comment bien la choisir"
-description: "Une bonne lampe de bureau réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles LED."
+description: "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles."
 pubDate: 2026-07-21
-updatedDate: 2026-09-26
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Une lumière *qui ménage les yeux*"
 pinSub: "La lampe LED anti-fatigue bien choisie."
@@ -56,7 +56,7 @@ faq:
 
 ## Pourquoi la qualité de l'éclairage joue sur la fatigue oculaire
 
-Travailler sous un éclairage trop faible, trop dur ou mal orienté force les yeux à compenser en permanence. Cette **fatigue oculaire** s'accumule au fil de la journée : picotements, yeux secs, maux de tête, difficulté à se concentrer en fin d'après-midi. Une bonne lampe de bureau ne sert pas juste à « voir plus clair » : elle réduit ces efforts de compensation invisibles qui usent la concentration.
+Travailler sous un éclairage trop faible, trop dur ou mal orienté force les yeux à compenser en permanence, un effort qu'une bonne lampe de bureau LED peut réduire. Cette **fatigue oculaire** s'accumule au fil de la journée : picotements, yeux secs, maux de tête, difficulté à se concentrer en fin d'après-midi. Elle ne sert pas juste à « voir plus clair » : elle réduit ces efforts de compensation invisibles qui usent la concentration.
 
 Le passage à la LED a rendu ces lampes plus fines, moins chaudes et bien plus réglables. Mais toutes ne se valent pas, et deux modèles au même prix peuvent offrir un confort visuel très différent selon quelques critères précis.
 
@@ -91,7 +91,7 @@ Le format compte autant que la lumière. La lampe **à poser** (socle lesté) es
 
 La meilleure lampe mal placée éblouit ou crée des reflets. Quelques règles simples : positionne-la **du côté opposé à ta main d'écriture** (à gauche pour un droitier) pour ne pas travailler dans l'ombre de ta main ; oriente le faisceau **vers le plan de travail**, jamais vers l'écran ni vers les yeux ; et surtout, **garde l'éclairage ambiant** de la pièce allumé. Une lampe de bureau seule dans une pièce sombre crée un contraste violent entre la zone éclairée et le reste, ce qui fatigue les yeux au lieu de les soulager. La lampe **complète** l'éclairage général, elle ne le remplace pas.
 
-## Comment choisir selon ton usage
+## Quelle lampe de bureau LED selon ton usage
 
 Pour un usage bureautique classique, un modèle avec plusieurs **températures de couleur**, une **intensité réglable** et la mention **sans scintillement** couvre largement les besoins. Pour un travail exigeant sur les couleurs, ajoute un **IRC élevé**. Et si ton plan de travail est large, un **bras articulé** généreux évite les zones d'ombre. Inutile de courir après le maximum de lumens : au-delà d'un certain confort, c'est la qualité et le réglage de la lumière qui comptent, pas sa puissance brute.
 

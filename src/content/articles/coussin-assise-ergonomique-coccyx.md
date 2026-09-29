@@ -2,7 +2,7 @@
 title: "Coussin d'assise ergonomique : soulager le coccyx au bureau"
 description: "Comment choisir un coussin d'assise ergonomique pour soulager le coccyx et le bas du dos en position assise prolongée au bureau."
 pubDate: 2026-08-16
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Rester assis *sans douleur*"
 pinSub: "Le coussin qui soulage le coccyx."
@@ -52,7 +52,7 @@ faq:
 
 ## Pourquoi un coussin d'assise ergonomique change quelque chose
 
-Rester assis six, sept, huit heures par jour concentre une bonne partie du poids du corps sur une toute petite surface : les ischions et, juste derrière, le coccyx. Sur une assise plate et peu rembourrée, cette pression ne se répartit pas naturellement : elle se concentre sur ces points d'appui, ce qui finit par créer une gêne sourde en fin de journée, voire une douleur plus nette chez les personnes déjà sensibles à cette zone (suite à une chute, une grossesse récente, ou simplement une morphologie plus fine sans graisse de protection naturelle).
+Rester assis six, sept, huit heures par jour concentre une bonne partie du poids du corps sur une toute petite surface : les ischions et, juste derrière, le coccyx. Sur une assise plate et peu rembourrée, sans coussin d'assise ergonomique, cette pression ne se répartit pas naturellement : elle se concentre sur ces points d'appui, ce qui finit par créer une gêne sourde en fin de journée, voire une douleur plus nette chez les personnes déjà sensibles à cette zone (suite à une chute, une grossesse récente, ou simplement une morphologie plus fine sans graisse de protection naturelle).
 
 Le coussin d'assise ergonomique répond à un problème précis : décharger le coccyx et redistribuer la pression vers les cuisses et les ischions, sans pour autant changer de chaise. C'est une solution nettement moins chère qu'un nouveau siège ergonomique, et elle a l'avantage de voyager : le même coussin peut suivre son utilisateur du bureau à la voiture, ou d'un poste de travail à un autre en open space.
 

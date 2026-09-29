@@ -1,8 +1,8 @@
 ---
 title: "Black Friday setup bureau : quoi acheter maintenant"
-description: "Chaise, écran, PC gaming ou accessoires : ce qu'il vaut mieux attendre pour le Black Friday, et ce que tu peux acheter dès maintenant sans regret."
+description: "Black Friday setup bureau : chaise, écran, PC gaming ou accessoires, ce qu'il vaut mieux attendre et ce que tu peux acheter dès maintenant sans regret."
 pubDate: 2026-09-24
-updatedDate: 2026-09-24
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Le Black Friday, *sans te faire avoir*"
 pinSub: "Ce qu'il faut attendre, ce qu'il faut acheter maintenant."
@@ -37,9 +37,9 @@ faq:
     answer: "C'est plus variable : les périphériques (souris, clavier, casque) et les écrans affichent souvent des remises franches et lisibles. Sur un PC complet ou une carte graphique, les offres existent mais méritent une vérification plus poussée du prix moyen récent, car les configurations changent souvent d'une semaine à l'autre."
 ---
 
-## Le Black Friday, une bonne affaire… parfois
+## Le Black Friday pour un setup de bureau : une bonne affaire… parfois
 
-Chaque année, le même réflexe revient : tout repousser à fin novembre en espérant une remise miracle. Le problème, c'est que **toutes les catégories ne se valent pas** face au Black Friday. Certaines affichent de vraies économies chaque année ; d'autres restent à peu près au même prix toute l'année, avec juste une étiquette rouge en plus pour faire illusion.
+Chaque année, le même réflexe revient : tout repousser au Black Friday pour son setup de bureau, en espérant une remise miracle fin novembre. Le problème, c'est que **toutes les catégories ne se valent pas** face au Black Friday. Certaines affichent de vraies économies chaque année ; d'autres restent à peu près au même prix toute l'année, avec juste une étiquette rouge en plus pour faire illusion.
 
 Ce guide sépare les deux : ce qu'il vaut mieux **attendre** pour ton setup bureau ou gaming, et ce que tu peux **acheter dès maintenant**, sans regret ni faux espoir d'économie.
 

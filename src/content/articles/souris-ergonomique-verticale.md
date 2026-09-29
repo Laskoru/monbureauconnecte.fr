@@ -1,9 +1,9 @@
 ---
 title: "Souris ergonomique verticale : notre sélection contre les douleurs au poignet"
 seoTitle: "Souris ergonomique verticale : notre sélection"
-description: "Tendinite, canal carpien, douleurs au poignet : notre comparatif des meilleures souris verticales pour le bureau, et comment bien choisir l'angle."
+description: "Tendinite, canal carpien, douleurs au poignet : notre comparatif des meilleures souris ergonomiques verticales pour le bureau, et comment choisir l'angle."
 pubDate: 2026-08-12
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Dire adieu *aux douleurs* du poignet"
 pinSub: "La souris verticale, bien choisie."
@@ -53,9 +53,9 @@ faq:
     answer: "La verticale corrige l'angle du poignet tout en gardant un déplacement classique de la main ; le trackball, lui, supprime le déplacement du bras (on ne bouge que le pouce ou l'index). Si ta gêne vient de la torsion du poignet, la verticale ; si elle vient des mouvements d'épaule ou d'un manque de place, le trackball."
 ---
 
-## Pourquoi passer à une souris verticale
+## Pourquoi passer à une souris ergonomique verticale
 
-Une souris classique impose au poignet une **rotation en pronation** permanente (paume tournée vers le bureau) plusieurs heures par jour. Sur la durée, cette position favorise les tensions dans l'avant-bras, voire des douleurs plus sérieuses comme la tendinite ou le syndrome du canal carpien. Une souris verticale place la main dans une position proche de la **poignée de main** (pouce vers le haut), ce qui relâche cette rotation. En revanche, une étude menée auprès de personnes atteintes du syndrome du canal carpien n'a pas mesuré de baisse de pression dans le canal avec une souris verticale : elle change la position du poignet, sans effet démontré sur le nerf.
+Une souris classique impose au poignet une **rotation en pronation** permanente (paume tournée vers le bureau) plusieurs heures par jour. Sur la durée, cette position favorise les tensions dans l'avant-bras, voire des douleurs plus sérieuses comme la tendinite ou le syndrome du canal carpien, d'où l'intérêt d'une souris ergonomique verticale. Elle place la main dans une position proche de la **poignée de main** (pouce vers le haut), ce qui relâche cette rotation. En revanche, une étude menée auprès de personnes atteintes du syndrome du canal carpien n'a pas mesuré de baisse de pression dans le canal avec une souris verticale : elle change la position du poignet, sans effet démontré sur le nerf.
 
 Ce n'est pas un gadget marketing : c'est un des rares accessoires ergonomiques dont l'effet se ressent souvent **dès les premières semaines**, en particulier pour qui travaille toute la journée à l'écran.
 

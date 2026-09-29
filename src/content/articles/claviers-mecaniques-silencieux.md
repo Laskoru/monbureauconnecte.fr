@@ -3,7 +3,7 @@ title: "Quel clavier mécanique silencieux pour l'open space et la visio ?"
 seoTitle: "Clavier mécanique silencieux pour l'open space et la visio"
 description: "Notre sélection de claviers mécaniques silencieux pour taper sans déranger en open space ou en visio : quels switches, quel format, les pièges."
 pubDate: 2026-08-07
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "La frappe mécanique, *en silence*"
 pinSub: "Les claviers silencieux pour l'open space."
@@ -53,7 +53,7 @@ faq:
 
 ## Pourquoi un clavier mécanique silencieux
 
-Un clavier mécanique procure une frappe plus **précise** et plus **agréable** qu'un clavier à membrane : chaque touche a une course franche, un point d'activation net, et une durabilité qui se compte en dizaines de millions de frappes. Le revers, c'est le **bruit** : en open space ou pendant une visio où le micro capte chaque clic, le claquement répété devient vite gênant pour l'entourage. Les modèles à switches **silencieux** gardent l'essentiel du ressenti mécanique tout en réduisant nettement le bruit à l'impact.
+Un clavier mécanique procure une frappe plus **précise** et plus **agréable** qu'un clavier à membrane : chaque touche a une course franche, un point d'activation net, et une durabilité qui se compte en dizaines de millions de frappes. Le revers, c'est le **bruit**, d'où l'intérêt d'un clavier mécanique silencieux : en open space ou pendant une visio où le micro capte chaque clic, le claquement répété devient vite gênant pour l'entourage. Les modèles à switches **silencieux** gardent l'essentiel du ressenti mécanique tout en réduisant nettement le bruit à l'impact.
 
 « Silencieux » ne veut pas dire « mou ». Un bon switch silent conserve un point d'activation franc (on sait qu'on a tapé) mais amortit le claquement mécanique et le retour de la touche, les deux sources principales de bruit. Le résultat, une fois bien réglé, est un clavier qu'on entend à peine depuis le bureau voisin, sans rien perdre du plaisir de frappe qui fait tout l'intérêt du mécanique.
 

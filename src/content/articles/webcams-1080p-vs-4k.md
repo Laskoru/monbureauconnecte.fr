@@ -1,8 +1,9 @@
 ---
 title: "Webcams 1080p vs 4K : laquelle choisir ?"
-description: "Webcam 4K ou 1080p pour le télétravail ? Notre comparatif, ce qui compte vraiment au-delà de la résolution, et nos recommandations."
+seoTitle: "Webcam pour le télétravail : 1080p ou 4K ?"
+description: "Quelle webcam pour le télétravail, 1080p ou 4K ? Notre comparatif, ce qui compte vraiment au-delà de la résolution, et nos recommandations."
 pubDate: 2026-08-10
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "1080p ou 4K ? *Le bon choix*"
 pinSub: "Webcams comparées pour la visio."
@@ -54,7 +55,7 @@ faq:
 
 ## Le 1080p suffit-il vraiment ?
 
-Pour l'immense majorité des visioconférences (Teams, Zoom, Google Meet), le **Full HD 1080p reste largement suffisant** : ces plateformes compressent de toute façon le flux vidéo, ce qui réduit l'écart visible entre 1080p et 4K pour l'interlocuteur en face. Autrement dit, tu peux filmer en 4K, ton collègue verra souvent une image ramenée en dessous. La vraie différence de qualité se joue **ailleurs** que dans le nombre de pixels.
+Pour l'immense majorité des visioconférences (Teams, Zoom, Google Meet), le **Full HD 1080p reste largement suffisant** : ces plateformes compressent de toute façon le flux vidéo, ce qui réduit l'écart visible entre 1080p et 4K pour l'interlocuteur en face. Autrement dit, même si ta webcam de télétravail filme en 4K, ton collègue verra souvent une image ramenée en dessous. La vraie différence de qualité se joue **ailleurs** que dans le nombre de pixels.
 
 ![Personne en visioconférence vue par sa webcam](/covers/webcams-1080p-vs-4k-inbody.webp)
 

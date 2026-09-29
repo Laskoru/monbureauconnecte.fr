@@ -1,8 +1,8 @@
 ---
 title: "Bureau d'angle pour petit espace : comment bien choisir"
-description: "Comment choisir un bureau d'angle pour optimiser un coin de pièce en télétravail : formes, dimensions, rangement intégré et budget à prévoir."
+description: "Comment choisir un bureau d'angle pour petit espace et exploiter un coin de pièce en télétravail : formes, dimensions, rangement intégré et budget."
 pubDate: 2026-09-25
-updatedDate: 2026-09-25
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Un vrai bureau, *dans un coin*"
 pinSub: "Le bureau d'angle bien choisi pour petit espace."
@@ -37,9 +37,9 @@ faq:
     answer: "Si tu comptes y poser ton écran et ton clavier, vise la profondeur que l'INRS recommande pour un poste sur écran : au moins 80 cm, sinon l'écran se retrouve trop près des yeux. Si ce retour sert surtout de rangement d'appoint plutôt que de vraie surface de travail, une profondeur plus réduite reste acceptable."
 ---
 
-## Pourquoi un bureau d'angle fait gagner de la place dans un petit espace
+## Bureau d'angle en petit espace : pourquoi il fait gagner de la place
 
-Dans une chambre d'étudiant, un studio ou un coin de salon récupéré pour le télétravail, chaque mètre carré compte. Un bureau droit classique, même compact, occupe tout un pan de mur en ligne et laisse souvent le coin de la pièce complètement inutilisé. Le bureau d'angle inverse la logique : il vient se loger précisément dans cet espace mort, entre deux murs, là où rien d'autre ne s'installe facilement.
+Dans une chambre d'étudiant, un studio ou un coin de salon récupéré pour le télétravail, chaque mètre carré compte, et un bureau d'angle en petit espace aide à n'en perdre aucun. Un bureau droit classique, même compact, occupe tout un pan de mur en ligne et laisse souvent le coin de la pièce complètement inutilisé. Le bureau d'angle inverse la logique : il vient se loger précisément dans cet espace mort, entre deux murs, là où rien d'autre ne s'installe facilement.
 
 Le résultat, c'est une **surface de travail équivalente à un grand bureau droit**, sans empiéter sur le reste de la pièce. Tu gardes de la place pour circuler, pour poser un lit ou un canapé, sans avoir l'impression que le bureau avale tout l'espace disponible.
 

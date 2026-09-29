@@ -3,7 +3,7 @@ title: "Hub USB-A multiport : rebrancher ses vieux périphériques sur un PC ré
 seoTitle: "Hub USB-A multiport : rebrancher ses vieux périphériques"
 description: "Plus de port USB-A sur ton PC récent ? Le hub USB-A multiport permet de rebrancher souris, clavier et clés USB sans rien racheter. Comment le choisir."
 pubDate: 2026-09-13
-updatedDate: 2026-09-13
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Rebrancher *tous tes vieux périphériques*"
 pinSub: "Le hub USB-A qui règle le problème d'un coup."
@@ -32,11 +32,11 @@ faq:
 
 ## Le problème du tout USB-C sur un PC récent
 
-Changer d'ordinateur portable réserve souvent une mauvaise surprise : les ports **USB-A** rectangulaires, ceux qu'on utilise depuis des années pour brancher souris, clavier filaire ou clé USB, ont disparu au profit de simples ports **USB-C**. Les constructeurs justifient ce choix par la finesse des machines et la polyvalence du USB-C, qui gère à la fois la charge, la vidéo et les données par un connecteur unique. Problème : la quasi-totalité du parc de périphériques encore en circulation (souris filaires, claviers de bureau, clés USB, imprimantes, manettes) utilise toujours la fiche USB-A classique.
+Changer d'ordinateur portable réserve souvent une mauvaise surprise : les ports **USB-A** rectangulaires, ceux qu'on utilise depuis des années pour brancher souris, clavier filaire ou clé USB, ont disparu au profit de simples ports **USB-C**, et c'est là qu'un hub USB-A multiport devient utile. Les constructeurs justifient ce choix par la finesse des machines et la polyvalence du USB-C, qui gère à la fois la charge, la vidéo et les données par un connecteur unique. Problème : la quasi-totalité du parc de périphériques encore en circulation (souris filaires, claviers de bureau, clés USB, imprimantes, manettes) utilise toujours la fiche USB-A classique.
 
 Racheter tout son matériel juste pour un changement de connecteur n'a aucun sens, surtout quand la souris ou le clavier fonctionnent très bien. Un **hub USB-A multiport** (ou un simple adaptateur USB-C vers USB-A) règle le problème pour quelques euros : il se branche sur l'unique port USB-C du portable et restitue plusieurs ports USB-A classiques, prêts à accueillir l'ancien matériel sans rien changer côté périphérique.
 
-## Hub simple ou adaptateur : ce qu'il faut comprendre
+## Hub USB-A multiport ou adaptateur : ce qu'il faut comprendre
 
 Deux formats répondent au même besoin, mais pas dans les mêmes situations.
 

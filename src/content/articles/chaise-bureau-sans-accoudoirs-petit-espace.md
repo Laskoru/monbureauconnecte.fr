@@ -1,9 +1,9 @@
 ---
 title: "Chaise de bureau sans accoudoirs : le bon choix pour un petit espace"
 seoTitle: "Chaise de bureau sans accoudoirs pour un petit espace"
-description: "Pourquoi une chaise sans accoudoirs se glisse mieux sous un bureau bas ou étroit, et comment en choisir une sans sacrifier le confort."
+description: "Pourquoi une chaise de bureau sans accoudoirs se glisse mieux sous un plateau bas ou étroit, et comment en choisir une sans sacrifier le confort."
 pubDate: 2026-08-17
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "La chaise qui *se glisse partout*"
 pinSub: "Sans accoudoirs, pour les petits espaces."
@@ -52,7 +52,7 @@ faq:
 
 ## Pourquoi une chaise de bureau sans accoudoirs convient à un petit espace
 
-Une chaise de bureau classique avec accoudoirs 4D déborde facilement de plusieurs centimètres de chaque côté de l'assise. Dans un studio, une chambre transformée en bureau ou un coin de salon, cet encombrement supplémentaire se paie deux fois : la chaise ne se glisse plus complètement sous le plateau une fois le travail terminé, et elle accroche le passage dès qu'on circule autour. Une chaise sans accoudoirs règle les deux problèmes d'un coup : elle se range plus près du bureau et libère un vrai couloir de circulation.
+Une chaise de bureau classique avec accoudoirs 4D déborde facilement de plusieurs centimètres de chaque côté de l'assise, un encombrement qu'une chaise de bureau sans accoudoirs n'a pas. Dans un studio, une chambre transformée en bureau ou un coin de salon, cet encombrement supplémentaire se paie deux fois : la chaise ne se glisse plus complètement sous le plateau une fois le travail terminé, et elle accroche le passage dès qu'on circule autour. Sans accoudoirs, la chaise règle les deux problèmes d'un coup : elle se range plus près du bureau et libère un vrai couloir de circulation.
 
 L'autre avantage, moins évident, concerne les bureaux bas ou les tables standard non réglables. Sur un plateau fixe standard (autour de 74 cm de haut), des accoudoirs mal réglés viennent souvent buter contre le rebord de la table avant que l'assise n'atteigne la bonne hauteur pour les épaules. Sans accoudoirs, ce conflit disparaît purement et simplement : la chaise se règle sur la hauteur qui convient au dos, sans contrainte mécanique liée au bureau.
 

@@ -3,7 +3,7 @@ title: "Bras support écran articulé : comment bien le choisir pour ton bureau"
 seoTitle: "Bras support écran articulé : comment bien le choisir"
 description: "Un bon bras support écran libère de la place et améliore la posture. Nos critères (VESA, charge, ressort à gaz) et notre sélection, 1 ou 2 écrans."
 pubDate: 2026-08-15
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "L'écran *à la bonne hauteur*, enfin"
 pinSub: "Le bras articulé qui libère le bureau."
@@ -53,7 +53,7 @@ faq:
 
 ## Pourquoi installer un bras support écran
 
-Un écran posé sur son socle d'origine impose une hauteur et une distance qu'on ajuste rarement correctement : on finit par se pencher en avant ou à tendre le cou pour compenser, des heures durant. Un **bras articulé** permet de régler précisément la **hauteur**, l'**inclinaison** et la **distance** de l'écran par rapport aux yeux : un réglage clé pour limiter les tensions cervicales, celles qui donnent mal à la nuque en fin de journée.
+Un écran posé sur son socle d'origine impose une hauteur et une distance qu'on ajuste rarement correctement : on finit par se pencher en avant ou à tendre le cou pour compenser, des heures durant. Un **bras support écran** articulé permet de régler précisément la **hauteur**, l'**inclinaison** et la **distance** de l'écran par rapport aux yeux : un réglage clé pour limiter les tensions cervicales, celles qui donnent mal à la nuque en fin de journée.
 
 L'autre bénéfice est spatial : en libérant le socle du plateau, le bras récupère toute la surface sous l'écran. De quoi glisser un clavier, des documents, ou simplement respirer sur un petit bureau. C'est un de ces accessoires dont on ne mesure l'intérêt qu'une fois installé.
 

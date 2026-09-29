@@ -1,9 +1,9 @@
 ---
 title: "Tapis de sol pour chaise de bureau : protéger le parquet efficacement"
 seoTitle: "Tapis de sol pour chaise de bureau : protéger le parquet"
-description: "Comment choisir un tapis de protection pour rouler sans forcer et éviter les rayures sur parquet ou stratifié, sans se ruiner."
+description: "Comment choisir un tapis de sol pour chaise de bureau qui laisse rouler sans forcer et évite les rayures sur parquet ou stratifié, sans se ruiner."
 pubDate: 2026-08-15
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Le parquet *protégé*, la chaise qui roule"
 pinSub: "Le tapis de sol bien choisi."
@@ -49,9 +49,9 @@ faq:
     answer: "Un tapis en PVC ou vinyle de qualité correcte tient plusieurs années dans les deux cas ; la transparence est surtout un choix esthétique pour ne pas casser la déco du sol, pas un compromis sur la solidité si l'épaisseur annoncée est suffisante (1,5 mm ou plus)."
 ---
 
-## Pourquoi un tapis de sol change vraiment quelque chose
+## Pourquoi un tapis de sol pour chaise de bureau change quelque chose
 
-Une chaise de bureau à roulettes, ça bouge. Des dizaines de fois par jour, on recule pour se lever, on pivote pour attraper un dossier, on avance pour se rapprocher de l'écran. Chaque mouvement fait rouler de petites roues dures sur une surface qui, elle, ne bouge pas. Sur un parquet massif, un stratifié ou même un carrelage verni, cette friction répétée finit par laisser des traces : micro-rayures, ternissement de la finition, voire marques plus profondes si le sol est fragile ou déjà ancien.
+Une chaise de bureau à roulettes, ça bouge : sans tapis de sol pour chaise de bureau, c'est le parquet qui encaisse. Des dizaines de fois par jour, on recule pour se lever, on pivote pour attraper un dossier, on avance pour se rapprocher de l'écran. Chaque mouvement fait rouler de petites roues dures sur une surface qui, elle, ne bouge pas. Sur un parquet massif, un stratifié ou même un carrelage verni, cette friction répétée finit par laisser des traces : micro-rayures, ternissement de la finition, voire marques plus profondes si le sol est fragile ou déjà ancien.
 
 Le problème n'est pas seulement esthétique. Une zone de sol abîmée sous un bureau perd de la valeur, surtout en location où l'état des lieux de sortie peut être source de litige avec le propriétaire. Un tapis de protection évite ce cercle vicieux : il encaisse le frottement à la place du sol, et il se remplace pour une fraction du prix d'une réparation de parquet.
 

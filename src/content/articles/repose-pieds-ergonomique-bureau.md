@@ -1,8 +1,8 @@
 ---
 title: "Repose-pieds ergonomique de bureau : utile ou gadget ?"
-description: "Un repose-pieds améliore-t-il vraiment la posture au bureau ? Ce qu'il change vraiment, nos critères de choix et notre sélection de modèles réglables."
+description: "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et notre sélection de modèles réglables."
 pubDate: 2026-07-18
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Les jambes *soulagées* toute la journée"
 pinSub: "Repose-pieds : utile ou gadget ?"
@@ -50,9 +50,9 @@ faq:
     answer: "Les deux se complètent. On règle d'abord la chaise pour que les avant-bras soient à la hauteur du bureau (le plus important). Si, à cette hauteur, les pieds ne reposent plus à plat au sol (fréquent pour les petites tailles ou avec un bureau haut), le repose-pieds comble l'écart. C'est donc souvent la conséquence d'un bon réglage de chaise, pas une alternative."
 ---
 
-## Pourquoi utiliser un repose-pieds
+## Pourquoi utiliser un repose-pieds ergonomique
 
-Sur un bureau standard (ou un bureau assis-debout mal réglé), les pieds ne touchent pas toujours le sol de façon stable, surtout pour les personnes de **petite taille** ou quand le plateau est un peu haut. Un repose-pieds compense cet écart et **ramène les cuisses à l'horizontale**, ce qui enlève la pression sur l'arrière des cuisses et soulage le bas du dos.
+Sur un bureau standard (ou un bureau assis-debout mal réglé), les pieds ne touchent pas toujours le sol de façon stable, surtout pour les personnes de **petite taille** ou quand le plateau est un peu haut. Un repose-pieds ergonomique compense cet écart et **ramène les cuisses à l'horizontale**, ce qui enlève la pression sur l'arrière des cuisses et soulage le bas du dos.
 
 Mais son intérêt le plus sous-estimé est ailleurs : il aide à **casser l'immobilité**. Garder les jambes figées plusieurs heures ralentit la circulation et crée des tensions, bien plus qu'un simple problème de hauteur. Un bon repose-pieds invite à bouger les chevilles, à varier les appuis, à basculer légèrement, autant de micro-mouvements qui font du bien sur une longue journée assise.
 

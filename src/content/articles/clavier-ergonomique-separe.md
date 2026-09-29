@@ -2,7 +2,7 @@
 title: "Clavier ergonomique séparé : à qui s'adresse ce format ?"
 description: "Un clavier ergonomique séparé déroute au début, mais soulage vraiment les poignets. Notre comparatif, le temps d'adaptation, comment choisir."
 pubDate: 2026-08-02
-updatedDate: 2026-09-11
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Taper *sans forcer* sur les poignets"
 pinSub: "Le clavier ergonomique séparé décrypté."
@@ -52,7 +52,7 @@ faq:
 
 ## Pourquoi passer à un clavier ergonomique séparé
 
-Un clavier classique oblige les poignets à se tourner légèrement vers l'intérieur (déviation cubitale) pour aligner les mains sur les touches du centre, une position qui n'a rien de naturel sur plusieurs heures de frappe quotidienne. Un clavier ergonomique, **courbé ou scindé en deux parties**, permet de garder les mains et les avant-bras dans un **alignement plus naturel**, ce qui réduit la tension répétée sur les poignets et les tendons.
+Un clavier classique oblige les poignets à se tourner légèrement vers l'intérieur (déviation cubitale) pour aligner les mains sur les touches du centre, une position qui n'a rien de naturel sur plusieurs heures de frappe quotidienne. Un clavier ergonomique séparé, **scindé en deux parties** (ou simplement courbé), permet de garder les mains et les avant-bras dans un **alignement plus naturel**, ce qui réduit la tension répétée sur les poignets et les tendons.
 
 Ce format intrigue au premier abord, mais il ne s'adresse pas qu'aux personnes déjà en douleur : c'est aussi un choix **préventif** intéressant pour qui tape beaucoup.
 

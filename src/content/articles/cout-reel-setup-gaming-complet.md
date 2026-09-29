@@ -1,8 +1,9 @@
 ---
 title: "Combien coûte vraiment un setup gaming complet ?"
+seoTitle: "Coût d'un setup gaming complet : combien prévoir"
 description: "Le PC n'est que la moitié de la facture. Le vrai coût d'un setup gaming complet : écran, périphériques, siège, bureau, et où économiser."
 pubDate: 2026-09-12
-updatedDate: 2026-09-12
+updatedDate: 2026-09-29
 author: "Hugo B."
 pinHook: "Le *vrai* prix d'un setup gaming"
 pinSub: "Poste par poste, sans mauvaise surprise."
@@ -41,13 +42,13 @@ faq:
 
 ## Le piège : budgéter le PC, oublier le reste
 
-C'est l'erreur numéro un quand on se lance : on calcule le prix de la **tour**, on valide… et on découvre que la facture réelle est bien plus élevée. Car un setup gaming, ce n'est pas qu'un PC : c'est un **écran**, des **périphériques**, un **siège**, un **bureau** et une poignée d'accessoires. Mis bout à bout, tout cela pèse souvent autant que la machine elle-même.
+C'est l'erreur numéro un quand on se lance : on calcule le prix de la **tour**, on valide… et on découvre que la facture réelle est bien plus élevée. Car le coût d'un setup gaming ne se limite pas au PC : il faut compter un **écran**, des **périphériques**, un **siège**, un **bureau** et une poignée d'accessoires. Mis bout à bout, tout cela pèse souvent autant que la machine elle-même.
 
 Heureusement, on n'est pas obligé de tout acheter d'un coup, ni au même niveau de gamme. L'important, c'est de **connaître les postes** pour répartir son budget en connaissance de cause, plutôt que de se retrouver à court pour la chaise après avoir tout mis dans la carte graphique.
 
 ![Setup gaming complet : écran, tour RGB, clavier et souris](/covers/cout-reel-setup-gaming-complet.webp)
 
-## Le vrai coût, poste par poste
+## Le vrai coût d'un setup gaming, poste par poste
 
 Voici les grands postes d'un setup complet, avec des fourchettes indicatives (2026) pour un ensemble **milieu de gamme**, le niveau où le rapport qualité/prix est le meilleur.
 
