@@ -8,7 +8,7 @@ pinHook: "Ton écran devient noir *sans prévenir* ?"
 pinSub: "Le diagnostic étape par étape, du câble à la carte graphique."
 keywords: ["écran pc noir par intermittence", "écran qui devient noir puis revient", "écran noir mise en veille", "pilote graphique écran noir"]
 category: "peripheriques"
-coverAlt: "Écran d'ordinateur plat resté noir sur un bureau, plan rapproché en faible profondeur de champ"
+coverAlt: "Écran d'ordinateur allumé sur un paysage de montagne enneigée, clavier et souris lumineux, mur éclairé en violet"
 draft: false
 faq:
   - question: "Pourquoi mon écran devient-il noir puis revient tout seul ?"
