@@ -44,6 +44,15 @@ for A in "${ASINS[@]}"; do
     break
   fi
 
+  # Page vide, erreur ou blocage sans captcha (fréquent depuis un serveur) : sans
+  # fiche produit lisible, on ne conclut rien et l'ASIN garde son relevé précédent.
+  if ! echo "$html" | grep -qE 'id="productTitle"|id="add-to-cart-button"' \
+     && ! echo "$html" | grep -qiE '<title>[^<]*(Page introuvable|Page Not Found)'; then
+    echo "?? illisible  $A  (page non reconnue, relevé précédent conservé)"
+    sleep 2
+    continue
+  fi
+
   fichiers=$(grep -rl "$A" "$ART" 2>/dev/null | xargs -r -n1 basename | tr '\n' ' ')
 
   # Bouton d'achat = seul signal fiable

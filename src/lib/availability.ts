@@ -8,16 +8,27 @@ interface Entry {
 
 /**
  * Un produit est considéré comme achetable SAUF si le dernier relevé dit le
- * contraire (fichier src/data/availability.json, mis à jour chaque jour par
- * scripts/check-availability.sh).
+ * contraire (fichier src/data/availability.json, mis à jour chaque semaine par
+ * scripts/check-availability.sh via .github/workflows/availability.yml).
  *
  * Le doute profite au lien produit : un ASIN encore jamais relevé pointe vers
  * sa fiche, qui reste le lien le plus rentable. Seule une indisponibilité
  * CONSTATÉE fait basculer vers la recherche.
+ *
+ * Fraîcheur : un relevé de plus de MAX_AGE_DAYS jours (ou sans date) ne dit plus
+ * rien de l'état du stock ; il est traité comme un ASIN jamais relevé.
  */
+const MAX_AGE_DAYS = 30;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+function isFresh(checked: string, now = Date.now()): boolean {
+  const t = Date.parse(`${checked}T00:00:00Z`);
+  return Number.isFinite(t) && now - t <= MAX_AGE_DAYS * DAY_MS;
+}
+
 export function isAvailable(asin: string): boolean {
   const entry = (availability as Record<string, Entry>)[asin];
-  if (!entry) return true;
+  if (!entry || !isFresh(entry.checked)) return true;
   return entry.available !== false;
 }
 
