@@ -40,6 +40,65 @@ function rehypeStripLeadingEmoji() {
   return (tree) => visit(tree);
 }
 
+// Images écrites dans le markdown (![alt](/covers/…)) : sans width/height, le navigateur ne
+// réserve pas leur place et la page saute au chargement (CLS). Pour chaque <img> locale
+// (src commençant par /, fichier dans public/), on lit ses dimensions réelles avec sharp au
+// build. On ajoute aussi loading="lazy" et decoding="async" quand ils manquent, sauf pour la
+// première image de la page : elle ne l'est que si l'article n'a pas de couverture (sinon la
+// couverture, rendue par le layout, passe avant tout le corps). Les images distantes gardent
+// leur src, reçoivent lazy/async, et sont signalées au build : leurs dimensions ne sont pas
+// connues sans réseau, mieux vaut les rapatrier dans public/.
+const imageSizeCache = new Map();
+async function localImageSize(src) {
+  const rel = decodeURIComponent(src.split(/[?#]/)[0]);
+  const file = path.join(process.cwd(), 'public', rel);
+  if (!file.startsWith(path.join(process.cwd(), 'public') + path.sep)) return null;
+  if (!imageSizeCache.has(file)) {
+    imageSizeCache.set(file, (async () => {
+      try {
+        const { default: sharp } = await import('sharp');
+        const { width, height, orientation } = await sharp(file).metadata();
+        if (!width || !height) return null;
+        return orientation >= 5 ? { width: height, height: width } : { width, height };
+      } catch { return null; }
+    })());
+  }
+  return imageSizeCache.get(file);
+}
+function hasCover(file) {
+  const fm = file.data?.astro?.frontmatter ?? {};
+  const slug = path.basename(String(file.path ?? ''), '.md');
+  return Boolean(fm.coverImage) || ['jpg', 'jpeg', 'png', 'webp', 'avif']
+    .some((ext) => fs.existsSync(path.join(process.cwd(), 'public', 'covers', `${slug}.${ext}`)));
+}
+function rehypeImageSize() {
+  return async (tree, file) => {
+    const imgs = [];
+    const visit = (node) => {
+      if (node.type === 'element' && node.tagName === 'img') imgs.push(node);
+      for (const child of node.children ?? []) visit(child);
+    };
+    visit(tree);
+    const firstOnPage = !hasCover(file) ? imgs[0] : undefined;
+    for (const img of imgs) {
+      const p = img.properties ?? (img.properties = {});
+      const src = String(p.src ?? '');
+      if (src.startsWith('/') && !src.startsWith('//')) {
+        if (p.width == null || p.height == null) {
+          const size = await localImageSize(src);
+          if (size) { p.width = size.width; p.height = size.height; }
+          else console.warn(`[rehype-image-size] ${file.path ? path.basename(file.path) : ''} : dimensions illisibles pour ${src}`);
+        }
+      } else if (/^(https?:)?\/\//i.test(src) && (p.width == null || p.height == null)) {
+        console.warn(`[rehype-image-size] ${file.path ? path.basename(file.path) : ''} : image distante sans dimensions (${src.slice(0, 60)}…), à rapatrier dans public/`);
+      }
+      if (img === firstOnPage) continue;
+      if (p.loading == null) p.loading = 'lazy';
+      if (p.decoding == null) p.decoding = 'async';
+    }
+  };
+}
+
 // IDs des titres identiques à Astro 4 : depuis Astro 6, un titre finissant par « ? » ou « : »
 // garde un tiret final dans son id (#quel-budget-). On calcule les ids comme Astro puis on
 // retire ce tiret, pour que les ancres déjà partagées (sommaire, liens externes) restent valides.
@@ -98,7 +157,7 @@ export default defineConfig({
   })],
   // Astro 7 : on garde le pipeline remark/rehype (unified) pour conserver nos plugins rehype
   // et un rendu Markdown identique à Astro 4.
-  markdown: { processor: unified({ rehypePlugins: [rehypeAmazonLinks, rehypeStripLeadingEmoji, rehypeHeadingIdsAstro4] }) },
+  markdown: { processor: unified({ rehypePlugins: [rehypeAmazonLinks, rehypeStripLeadingEmoji, rehypeImageSize, rehypeHeadingIdsAstro4] }) },
   // Astro 7 compresse par défaut à la manière de JSX (espaces entre éléments inline supprimés) :
   // on garde la compression HTML d'Astro 4, qui préserve ces espaces.
   compressHTML: true,
