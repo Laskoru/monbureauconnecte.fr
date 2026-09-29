@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../siteConfig';
 ---
 
-<BaseLayout title="Politique de confidentialité" description="Politique de confidentialité, cookies et mesure d'audience du site.">
+<BaseLayout title="Politique de confidentialité" description={`Données personnelles sur ${siteConfig.name} : cookies de mesure d'audience Google Analytics déposés seulement après accord, liens Amazon, droits RGPD.`}>
   <section class="container legal">
     <h1>Politique de confidentialité</h1>
 

@@ -4,17 +4,16 @@
 // d'audience (Google Analytics, voir BaseLayout.astro) n'est chargé.
 ---
 
-<div id="cookie-banner" class="cookie-banner" aria-hidden="true">
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookies" aria-hidden="true">
   <div class="cookie-banner__inner">
     <p>
-      Ce site utilise des cookies de <strong>mesure d'audience</strong> (Google Analytics)
-      pour comprendre comment il est consulté et l'améliorer. Ils ne sont déposés que si
-      vous acceptez. Voir notre
-      <a href="/politique-de-confidentialite/">politique de confidentialité</a>.
+      On mesure l'audience (Google Analytics) seulement si tu l'acceptes.
+      <a href="/politique-de-confidentialite/">Politique de confidentialité</a>
     </p>
+    <!-- Refuser et Accepter : même style, même taille (CNIL : refuser aussi simple qu'accepter). -->
     <div class="cookie-banner__actions">
-      <button id="cookie-refuse" type="button" class="btn btn--outline btn--sm">Refuser</button>
-      <button id="cookie-accept" type="button" class="btn btn--primary btn--sm">Accepter</button>
+      <button id="cookie-refuse" type="button" class="btn btn--outline btn--sm cookie-banner__btn">Refuser</button>
+      <button id="cookie-accept" type="button" class="btn btn--outline btn--sm cookie-banner__btn">Accepter</button>
     </div>
   </div>
 </div>
@@ -83,11 +82,17 @@
     align-items: center;
     justify-content: space-between;
   }
-  .cookie-banner p { flex: 1 1 420px; min-width: 0; max-width: 640px; margin: 0; font-size: 0.9rem; line-height: 1.55; }
+  .cookie-banner p { flex: 1 1 420px; min-width: 0; max-width: 640px; margin: 0; font-size: 0.9rem; line-height: 1.5; }
+  .cookie-banner p a { white-space: nowrap; }
   .cookie-banner__actions { display: flex; gap: 0.6rem; flex-shrink: 0; }
+  /* Deux boutons papier à filet noir, identiques : aucun choix mis en avant. */
+  .cookie-banner__btn { min-width: 7.5rem; border-color: var(--mine); }
+  /* Mobile : bandeau compact (≈ 110 px à 390 px) qui ne masque plus l'ouverture. */
   @media (max-width: 480px) {
-    .cookie-banner { padding: 0.9rem 1rem 1rem; }
-    .cookie-banner__actions { width: 100%; }
-    .cookie-banner__actions .btn { flex: 1; }
+    .cookie-banner { left: 8px; right: 8px; bottom: 8px; padding: 0.7rem 0.8rem 0.8rem; border-radius: var(--radius); }
+    .cookie-banner__inner { gap: 0.55rem; }
+    .cookie-banner p { flex-basis: 100%; font-size: 0.84rem; line-height: 1.4; }
+    .cookie-banner__actions { width: 100%; gap: 0.5rem; }
+    .cookie-banner__actions .btn { flex: 1 1 0; min-width: 0; min-height: 44px; }
   }
 </style>
