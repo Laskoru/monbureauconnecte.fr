@@ -1,0 +1,46 @@
+# Disponibilité produits : chaque lundi, vérifie que les produits cités dans les articles
+# sont toujours achetables sur amazon.fr (scripts/check-availability.sh) et met à jour
+# src/data/availability.json. Le site s'en sert au build : un produit en rupture bascule
+# vers une recherche Amazon et ne porte jamais « Notre choix » (src/lib/availability.ts).
+# Si Amazon bloque (captcha, page illisible), le script garde les relevés précédents :
+# le fichier n'est jamais cassé. Un commit n'est créé que si le fichier change.
+name: Disponibilité produits
+
+on:
+  schedule:
+    - cron: '23 3 * * 1' # le lundi, vers 5 h à Paris en été, 4 h en hiver
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: availability
+  cancel-in-progress: false
+
+jobs:
+  releve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Relevé de disponibilité
+        # 40 = plafond de produits vérifiés par passage (au-delà, Amazon renvoie un captcha).
+        run: bash scripts/check-availability.sh . 40
+      - name: Contrôle du fichier
+        run: node -e "JSON.parse(require('fs').readFileSync('src/data/availability.json','utf8'))"
+      - name: Commit et push si le relevé a changé
+        run: |
+          git add src/data/availability.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement de disponibilité."
+            exit 0
+          fi
+          git -c user.name=Laskoru -c user.email=hugo_burel@hotmail.com commit -m "Disponibilité produits : relevé hebdomadaire"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 10
+          done
+          exit 1

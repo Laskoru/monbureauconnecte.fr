@@ -5,7 +5,9 @@ Articles en Markdown, SEO intégré, bandeau cookies RGPD, emplacements AdSense.
 
 ## 1. Installation locale
 
-Prérequis : Node.js 18+ installé sur ta machine.
+Prérequis : Node.js 22 (22.12 ou plus) installé sur ta machine. Le site tourne sur
+Astro 7 ; `package.json` déclare `"engines": { "node": "22.x" }`, ce qui fait aussi
+choisir Node 22 à Vercel.
 
 ```bash
 npm install
@@ -42,7 +44,8 @@ Contenu en Markdown ici.
 ```
 
 La page est générée automatiquement à l'URL `/articles/nom-du-fichier`.
-Aucune autre action nécessaire.
+Aucune autre action nécessaire. Le schéma du frontmatter est défini dans
+`src/content.config.ts` (Content Layer d'Astro, loader `glob()`).
 
 ## 4. Mettre en ligne (GitHub + Vercel)
 
@@ -94,3 +97,41 @@ visiteur — c'est fait pour être conforme RGPD par défaut.
 4. Remplace le contenu d'exemple dans `src/content/articles/` par les
    vrais articles du nouveau site.
 5. Crée un nouveau repo GitHub + un nouveau projet Vercel, comme à l'étape 4.
+
+## 8. Vérifications automatiques et données produit
+
+### Build et liens internes (`.github/workflows/ci.yml`)
+
+À chaque push (toutes branches) et pull request, le workflow « Build » installe
+les dépendances (Node 22), lance `npm run build` puis `npm run check-links`.
+
+`npm run check-links` (`scripts/check-links.mjs`, sans dépendance) parcourt les
+pages HTML de `dist/` et vérifie que chaque lien interne (`href`, `src`, `srcset`
+commençant par `/`, hors `<script>`, ancres et paramètres) pointe vers un fichier
+existant. Il liste les liens cassés et sort en erreur. À lancer après un build :
+
+```bash
+npm run build && npm run check-links
+```
+
+### Disponibilité des produits (`.github/workflows/availability.yml`)
+
+Le workflow « Disponibilité produits » tourne chaque lundi (et à la demande depuis
+l'onglet Actions). Il lance `bash scripts/check-availability.sh . 40`, qui met à
+jour `src/data/availability.json`, puis commit et pousse sur `main` seulement si le
+fichier a changé. Si Amazon bloque (captcha, page illisible), les relevés
+précédents sont conservés.
+
+Au build, un produit relevé indisponible bascule vers une recherche Amazon et ne
+porte jamais « Notre choix ». Un relevé de plus de 30 jours est ignoré (le produit
+est traité comme jamais relevé : lien vers sa fiche).
+
+### Notes Amazon : `amazon.showRatings`
+
+Dans `src/siteConfig.ts`, `amazon.showRatings` est à `false` : aucune note ni aucun
+nombre d'avis Amazon n'est affiché. Le contrat Partenaires n'autorise l'affichage
+des notes que s'il vient de l'API officielle (Product Advertising API / Creators
+API), pas d'un relevé des pages produit. `scripts/fetch-ratings.sh` s'arrête donc
+avec un message tant que le flag est à `false` (on peut forcer avec
+`FORCE_RATINGS=1`). `src/data/amazon-ratings.json` est conservé ; ne repasse le flag
+à `true` que lorsque ce fichier est alimenté par l'API officielle.

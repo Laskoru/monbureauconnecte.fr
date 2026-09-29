@@ -6,7 +6,7 @@ import Icon from '../../components/Icon.astro';
 import { siteConfig } from '../../siteConfig';
 import { budgets } from '../../budgets';
 
-const published = new Set((await getCollection('articles', ({ data }) => !data.draft)).map((a) => a.slug));
+const published = new Set((await getCollection('articles', ({ data }) => !data.draft)).map((a) => a.id));
 const budgetCounts = budgets.map((b) => ({
   ...b,
   count: b.articles.filter((slug) => published.has(slug)).length,

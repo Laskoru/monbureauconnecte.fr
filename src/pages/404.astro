@@ -32,7 +32,7 @@ const latest = (await getCollection('articles', ({ data }) => !data.draft))
         <h2 class="not-found__h2">Derniers comparatifs</h2>
         <ul class="not-found__list">
           {latest.map((article) => (
-            <li><a href={`/articles/${article.slug}/`}><span>{article.data.title}</span><Icon name="arrow" size={18} /></a></li>
+            <li><a href={`/articles/${article.id}/`}><span>{article.data.title}</span><Icon name="arrow" size={18} /></a></li>
           ))}
         </ul>
       </>

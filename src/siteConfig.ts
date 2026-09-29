@@ -26,6 +26,13 @@ export const siteConfig = {
   amazon: {
     enabled: true,
     tag: 'monbureauconnecte-21',
+    // Affichage des notes et du nombre d'avis Amazon (réglette « 4,5/5 · 1 234 avis »).
+    // Désactivé : ces chiffres étaient relevés en aspirant les pages Amazon
+    // (scripts/fetch-ratings.sh), ce que le contrat Partenaires n'autorise pas. Il ne
+    // permet d'afficher les notes que via l'API officielle. Ne repasse à true que le
+    // jour où src/data/amazon-ratings.json est alimenté par la Product Advertising API
+    // (ou la Creators API) d'Amazon.
+    showRatings: false,
   },
 
   // Email de contact public (mentions légales, confidentialité, contact)

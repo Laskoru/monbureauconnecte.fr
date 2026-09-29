@@ -1,0 +1,28 @@
+# Build : à chaque push (toutes branches) et pull request, vérifie que le site se construit
+# et qu'aucun lien interne n'est cassé dans dist/ (scripts/check-links.mjs).
+name: Build
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Liens internes
+        run: npm run check-links

@@ -15,12 +15,12 @@ interface Props {
 }
 
 const { article, variant = 'default', eager = false } = Astro.props;
-const cover = resolveCoverImage(article.slug, article.data.coverImage);
+const cover = resolveCoverImage(article.id, article.data.coverImage);
 const cat = categories.find((c) => c.slug === article.data.category);
 const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), { day: 'numeric', month: 'short', year: 'numeric' });
 const date = article.data.updatedDate ?? article.data.pubDate;
 const readingMinutes = Math.max(1, Math.round(article.body.trim().split(/\s+/).length / 200));
-const href = `/articles/${article.slug}/`;
+const href = `/articles/${article.id}/`;
 const nbProducts = article.data.products?.length ?? 0;
 const produits = nbProducts > 0 ? `${nbProducts} produit${nbProducts > 1 ? 's' : ''}` : null;
 ---

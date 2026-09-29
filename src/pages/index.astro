@@ -15,8 +15,8 @@ import { budgets } from '../budgets';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const sorted = [...allArticles].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
-const published = new Set(allArticles.map((a) => a.slug));
+const bySlug = new Map(allArticles.map((a) => [a.id, a]));
+const published = new Set(allArticles.map((a) => a.id));
 const total = allArticles.length;
 const nf = new Intl.NumberFormat('fr-FR');
 const shortTitle = (t: string) => t.split(/\s[—–-]\s/)[0].trim();
@@ -53,7 +53,7 @@ const budgetRows = budgets.map((b) => {
 });
 const graduations = [0, 100, 200, 300];
 const categoryCounts = categories.map((c) => ({ ...c, count: allArticles.filter((x) => x.data.category === c.slug).length }));
-const latest = sorted.filter((a) => !refSlugs.includes(a.slug)).slice(0, 3);
+const latest = sorted.filter((a) => !refSlugs.includes(a.id)).slice(0, 3);
 
 const tools = [
   { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Plateau, siège et écran selon ta taille.', href: '/calculateur-hauteur-bureau/' },
@@ -66,7 +66,7 @@ const tools = [
 const faqs = [
   { q: 'Vos comparatifs sont-ils sponsorisés ?', a: "Non. Aucune marque ne paie pour figurer ou être mieux classée. On se rémunère uniquement via les liens affiliés : si tu achètes après avoir cliqué, on touche une petite commission, sans surcoût pour toi. Ça ne change ni nos choix, ni nos critiques." },
   { q: 'Comment choisissez-vous les produits recommandés ?', a: "On part toujours d'un usage concret (mal de dos, petit bureau, visio…) et on compare des critères vérifiables : plage de réglage, charge admise, niveau sonore, autonomie. On assume les compromis de chaque modèle plutôt que de gonfler un classement." },
-  { q: 'D’où viennent les notes affichées ?', a: "La note et le nombre d'avis proviennent directement de la fiche Amazon du produit, relevés automatiquement et réactualisés régulièrement. Nous n'écrivons aucun avis client : ce sont ceux, réels, laissés par les acheteurs." },
+  { q: 'Sur quoi reposent vos recommandations ?', a: "Sur des critères mesurables relevés dans les fiches techniques et les notices des fabricants (plage de réglage, charge admise, niveau sonore, autonomie), recoupés avec des sources vérifiées citées en bas de chaque article. Chaque produit a ses limites écrites noir sur blanc. Nous n'écrivons aucun avis client et n'affichons pas de note d'étoiles." },
   { q: 'À quelle fréquence les articles sont-ils mis à jour ?', a: "Régulièrement. Les modèles conseillés et les prix évoluent vite : on révise les comparatifs pour qu'ils restent d'actualité, et la date de dernière mise à jour est indiquée en haut de chaque article." },
   { q: "C'est quoi, un « lien affilié Amazon » ?", a: "C'est un lien qui indique à Amazon que tu viens de chez nous. Si tu achètes, Amazon nous reverse une petite commission, et le prix reste exactement le même pour toi. C'est ce qui finance le site et nous permet de rester indépendants." },
 ];
@@ -79,7 +79,7 @@ const faqs = [
     <div class="wide hero__in">
       <div class="hero__txt">
         <h1 id="hero-titre" class="hero__titre">Ton setup, pièce <span class="hl">par pièce.</span></h1>
-        <p class="hero__lede">Chaise, bureau, écran, clavier : {total} comparatifs sur des critères mesurables, avec les vraies notes Amazon, jamais retouchées. Et des outils gratuits pour tout régler avant d'acheter.</p>
+        <p class="hero__lede">Chaise, bureau, écran, clavier : {total} comparatifs sur des critères mesurables, avec les limites de chaque modèle écrites noir sur blanc. Et des outils gratuits pour tout régler avant d'acheter.</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="/guides/">Trouver par besoin <Icon name="arrow" size={18} /></a>
           <a class="btn btn--outline" href="/calculateur-hauteur-bureau/">Régler mon poste</a>
@@ -109,7 +109,7 @@ const faqs = [
         <div class="section__head">
           <div>
             <h2 id="choix-titre" class="section__title">Nos choix, pièce par pièce</h2>
-            <p class="section__lede">Le premier choix de nos comparatifs de référence : ses mesures, sa vraie note Amazon, et le comparatif complet à un clic.</p>
+            <p class="section__lede">Le premier choix de nos comparatifs de référence : ses mesures, ce qui peut gêner, et le comparatif complet à un clic.</p>
           </div>
           <a class="section__link" href="/articles/">Tous les comparatifs <Icon name="arrow" size={16} /></a>
         </div>
@@ -117,18 +117,18 @@ const faqs = [
       <div class="rail-wrap"><div class="wide rail">
         {picks.map(({ article, product, image, rating, mesures }) => (
           <article class="piece">
-            <a class="piece__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
-            <h3 class="piece__nom"><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
+            <a class="piece__media" href={`/articles/${article.id}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
+            <h3 class="piece__nom"><a href={`/articles/${article.id}/`}>{shortTitle(product.title)}</a></h3>
             <p class="piece__mesures mono">{mesures.length > 0 ? mesures.join(' · ') : (product.award ?? 'Notre choix')}</p>
             {rating ? (
               <p class="reglette">
                 <span class="reglette__rule" style={`--p:${Math.round((rating.rating / 5) * 1000) / 10}%`} role="img" aria-label={`Note Amazon : ${rating.rating.toFixed(1).replace('.', ',')} sur 5`}></span>
                 <span class="reglette__val"><b>{rating.rating.toFixed(1).replace('.', ',')}</b>/5 · {nf.format(rating.count)} avis</span>
               </p>
-            ) : <p class="piece__vide">Note Amazon indisponible</p>}
+            ) : null}
             <div class="piece__cta">
               <a class="btn btn--buy btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon <Icon name="external" size={14} /></a>
-              <a class="piece__lire" href={`/articles/${article.slug}/`}>Le comparatif</a>
+              <a class="piece__lire" href={`/articles/${article.id}/`}>Le comparatif</a>
             </div>
           </article>
         ))}
@@ -226,7 +226,7 @@ const faqs = [
       <div class="methode__texte">
         <h2 id="methode-titre" class="section__title">Comment on compare</h2>
         <p>Chaque comparatif part d'un usage concret (setup gaming, télétravail, dos fragile) et compare ce qui se vérifie : <strong>plage de réglage, charge admise, niveau sonore, autonomie, compatibilité</strong>. Pas de classement gonflé, pas de « meilleur » universel qui n'existe pas.</p>
-        <p>Les notes affichées sont les <strong>vraies notes Amazon</strong>, jamais retouchées, et on regarde le volume d'avis autant que la note. Le site est <strong>100 % indépendant</strong> : on se finance par l'affiliation, et on l'indique toujours.</p>
+        <p>Chaque produit a <strong>ses limites écrites noir sur blanc</strong>, et chaque comparatif cite ses <strong>sources vérifiées</strong> (fabricants, organismes de santé au travail). Le site est <strong>100 % indépendant</strong> : on se finance par l'affiliation, et on l'indique toujours.</p>
         <a class="btn btn--outline" href="/a-propos/">Notre méthode en détail</a>
       </div>
       <div class="faq">
@@ -316,7 +316,6 @@ const faqs = [
   .piece__nom a { text-decoration: none; }
   .piece__nom a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.4em; text-underline-offset: -0.16em; }
   .piece__mesures { margin: 0; font-size: 0.78rem; color: var(--gris); }
-  .piece__vide { margin: 0; font-size: 0.82rem; color: var(--gris); }
   .piece .reglette { grid-template-columns: 1fr; }
   .piece__cta { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; align-self: end; padding-top: 0.3rem; }
   .piece__lire { font-size: 0.85rem; font-weight: 700; }

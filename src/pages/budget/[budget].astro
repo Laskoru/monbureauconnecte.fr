@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { budget } = Astro.props;
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
-const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
+const bySlug = new Map(allArticles.map((a) => [a.id, a]));
 const articles = budget.articles.map((slug) => bySlug.get(slug)).filter((a) => a !== undefined);
 const others = budgets.filter((b) => b.slug !== budget.slug);
 ---

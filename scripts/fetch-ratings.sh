@@ -21,6 +21,16 @@
 set -u
 REPO="${1:-.}"
 LIMIT="${2:-12}"
+
+# GARDE — contrat Partenaires Amazon : les notes et nombres d'avis ne peuvent être
+# affichés que s'ils viennent de l'API officielle (Product Advertising API / Creators
+# API), pas d'un relevé des pages produit. L'affichage est coupé par
+# siteConfig.amazon.showRatings = false ; ce relevé l'est aussi, sauf FORCE_RATINGS=1.
+if [ "${FORCE_RATINGS:-}" != "1" ] && ! grep -qE '^[[:space:]]*showRatings:[[:space:]]*true' "$REPO/src/siteConfig.ts" 2>/dev/null; then
+  echo "fetch-ratings.sh désactivé : siteConfig.amazon.showRatings est à false (pas d'API officielle Amazon)."
+  echo "Les notes ne sont plus affichées sur le site. Pour lancer quand même le relevé : FORCE_RATINGS=1 bash scripts/fetch-ratings.sh"
+  exit 0
+fi
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 TODAY=$(date +%Y-%m-%d)
 OUT="$REPO/src/data/amazon-ratings.json"
