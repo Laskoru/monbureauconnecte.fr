@@ -1,8 +1,39 @@
+<!--
+Ordre revu le 2026-09-29 pour la fin d'année. La routine prend la première ligne « - [ ] » :
+1. saison d'octobre à décembre (froid, jours courts, cadeaux ; le Black Friday est déjà publié) ;
+2. pc-gaming, la catégorie la plus maigre (2 articles publiés) ;
+3. dépannage (questions « ça ne marche pas » très cherchées) ;
+4. le reste, dans l'ordre d'origine.
+Les idées cochées restent dans leurs sections d'origine, plus bas.
+-->
 # Backlog de sujets d'articles
 
 La routine quotidienne prend la première idée non cochée, écrit l'article en
 brouillon, puis coche l'idée. Ajoute librement de nouvelles idées en bas.
 Format : `- [ ] Sujet — angle — catégorie`.
+
+## Saison hiver et fêtes : à publier d'octobre à décembre
+
+- [ ] Chauffage d'appoint sous le bureau : lequel choisir pour le télétravail — pieds froids en hiver, consommation et sécurité — mobilier
+- [ ] Lampe de luminothérapie au bureau : utile en hiver ? — jours courts, intensité en lux, distance et durée d'exposition — mobilier
+- [ ] Chauffe-tasse USB pour le bureau — garder son café chaud en réunion — mobilier
+- [ ] Lampe à pince pour bureau — gagner de la place — mobilier
+- [ ] Filtre anti-lumière bleue pour écran — réduire la fatigue visuelle en soirée — audio-visio
+- [ ] Comment réduire les reflets sur son écran — dalle mate, éclairage, orientation — audio-visio
+
+## PC gaming : renforcer la catégorie la plus maigre
+
+- [ ] PC gaming à 800 € : quelle configuration — composants, priorités et limites à ce budget — pc-gaming
+- [ ] Écran 144 Hz ou 240 Hz : ce qui change vraiment — fluidité perçue, carte graphique nécessaire, jeux concernés — pc-gaming
+- [ ] Onduleur pour PC gaming ou télétravail : utile ou pas — protéger son matériel et son travail — pc-gaming
+- [ ] Combien de temps garder son PC gaming avant de le renouveler — durée de vie, upgrades, signes d'usure — pc-gaming
+
+## Dépannage : questions « ça ne marche pas »
+
+- [ ] Chaise de bureau qui descend toute seule ou ne remonte plus : vérin, levier, que faire et comment changer le vérin — requêtes « chaise de bureau qui descend toute seule », « chaise de bureau ne remonte plus » — mobilier (conseil, lien de recherche vérin)
+- [ ] Casque micro qui ne fonctionne pas sur PC : les réglages à vérifier (prise jack combinée, confidentialité Windows, périphérique par défaut, USB ou Bluetooth) — requête « casque micro ne fonctionne pas sur pc » — audio-visio (conseil, lien Amazon léger)
+- [ ] Webcam qui s'allume toute seule : trouver l'application en cause et écarter un piratage (Windows, Mac) — requête « pourquoi ma webcam s'allume toute seule » — audio-visio (conseil, sans produit)
+- [ ] Souris sans fil : faut-il l'éteindre ? Veille automatique, autonomie réelle, piles ou batterie — requête « souris sans fil faut il l'éteindre » — peripheriques (conseil, sans produit)
 
 ## 🎁 Saison — priorité : à publier avant mi-octobre (indexés pour Noël / Black Friday)
 - [x] Idées cadeaux pour un télétravailleur ou un gamer : sélection par budget (Noël 2026) — guide cadeaux utile, sans gadgets — peripheriques
@@ -13,12 +44,8 @@ Format : `- [ ] Sujet — angle — catégorie`.
 Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répondent vraiment. Vérifié le 26/09/2026 : aucun article publié ne les traite déjà. Garde la requête principale dans le titre, la description et un titre ##.
 
 - [x] Écran PC qui devient noir par intermittence : le diagnostic pas à pas (câble, mise en veille, pilote, fréquence, écran ou carte graphique) — requête « écran pc qui devient noir par intermittence » — peripheriques (conseil, sans produit)
-- [ ] Casque micro qui ne fonctionne pas sur PC : les réglages à vérifier (prise jack combinée, confidentialité Windows, périphérique par défaut, USB ou Bluetooth) — requête « casque micro ne fonctionne pas sur pc » — audio-visio (conseil, lien Amazon léger)
-- [ ] Souris sans fil : faut-il l'éteindre ? Veille automatique, autonomie réelle, piles ou batterie — requête « souris sans fil faut il l'éteindre » — peripheriques (conseil, sans produit)
-- [ ] Chaise de bureau qui descend toute seule ou ne remonte plus : vérin, levier, que faire et comment changer le vérin — requêtes « chaise de bureau qui descend toute seule », « chaise de bureau ne remonte plus » — mobilier (conseil, lien de recherche vérin)
 - [ ] Fauteuil de bureau ergonomique sans roulettes : les assises fixes qui soulagent le dos — requête « fauteuil de bureau ergonomique mal de dos sans roulettes » — mobilier (comparatif)
 - [ ] Double écran avec un ordinateur portable : écran portable USB-C, extension clipsable ou moniteur, et comment passer d'un écran à l'autre — requêtes « double écran pour ordinateur portable », « double écran faire passer de l'un à l'autre » — peripheriques (guide et comparatif)
-- [ ] Webcam qui s'allume toute seule : trouver l'application en cause et écarter un piratage (Windows, Mac) — requête « pourquoi ma webcam s'allume toute seule » — audio-visio (conseil, sans produit)
 - [ ] Bureau pour ordinateur et imprimante : les modèles avec tablette et rangement — requête « bureau pour ordinateur et imprimante » — mobilier (comparatif)
 
 ## Mobilier & Confort
@@ -54,7 +81,6 @@ Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répo
 - [ ] Support / trépied pour webcam externe — cadrer correctement en visio — audio-visio
 - [ ] Casque à conduction osseuse pour le bureau — garder une oreille sur son environnement — audio-visio
 - [ ] Webcam 2K : le bon compromis entre 1080p et 4K — audio-visio
-- [ ] Filtre anti-lumière bleue pour écran — réduire la fatigue visuelle en soirée — audio-visio
 
 ## Divers / transversal
 
@@ -62,7 +88,6 @@ Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répo
 - [ ] Chargeur USB-C multiport de bureau — recharger tous ses appareils d'un coup — peripheriques
 - [ ] Onduleur (UPS) pour le télétravail — ne rien perdre en cas de coupure — peripheriques
 - [ ] Kit de nettoyage écran et clavier — entretenir son matériel sans l'abîmer — mobilier
-- [ ] Chauffe-tasse USB pour le bureau — garder son café chaud en réunion — mobilier
 
 ## Conseils (sans produit — secours si captcha Amazon bloque l'article du jour)
 
@@ -79,7 +104,6 @@ tag catégorie imposé (choisir mobilier/peripheriques/audio-visio selon le suje
 
 ## Ajouts (réserve)
 
-- [ ] Lampe à pince pour bureau — gagner de la place — mobilier
 - [ ] Panneau acoustique de bureau — réduire l'écho en visio — mobilier
 - [ ] Rehausseur d'écran avec rangement — mobilier
 - [ ] Chargeur à induction de bureau — peripheriques
@@ -93,7 +117,4 @@ tag catégorie imposé (choisir mobilier/peripheriques/audio-visio selon le suje
 ## 🔎 Longue traîne (audit SEO du 22/09/2026)
 
 - [ ] Quel bureau pour un petit studio ou une chambre d'étudiant — compact, pliant, escamotable : les bons formats — mobilier
-- [ ] Comment réduire les reflets sur son écran — dalle mate, éclairage, orientation — audio-visio
-- [ ] Onduleur pour PC gaming ou télétravail : utile ou pas — protéger son matériel et son travail — pc-gaming
 - [ ] Quelle chaise de bureau pour un grand gabarit ou une forte charge — charge admise, largeur d'assise, réglages — mobilier
-- [ ] Combien de temps garder son PC gaming avant de le renouveler — durée de vie, upgrades, signes d'usure — pc-gaming
