@@ -305,9 +305,10 @@ const faqs = [
   .cote-val.is-new { background: var(--jaune); color: var(--sur-jaune); }
 
   /* ═══ RAIL DES PIÈCES ═══ */
-  .rail-wrap { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; padding-bottom: 0.6rem; }
-  .rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 1fr); gap: 1rem; }
-  .piece { display: grid; grid-template-rows: auto auto auto auto 1fr; gap: 0.6rem; padding: 0.9rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); scroll-snap-align: start; transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease; }
+  /* Grille qui passe à la ligne : jamais de défilement horizontal (demande d'Hugo, 29/09/2026). */
+  .rail-wrap { padding-bottom: 0.6rem; }
+  .rail { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+  .piece { display: grid; grid-template-rows: auto auto auto auto 1fr; gap: 0.6rem; padding: 0.9rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease; }
   .piece:hover { transform: translateY(-6px) rotate(-0.4deg); box-shadow: var(--ombre-2); }
   .piece__media { display: block; padding: 0.9rem; background: var(--image-fond); border: 1px solid var(--filet); border-radius: var(--radius); }
   .piece__media img { width: 100%; height: 170px; object-fit: contain; display: block; }
@@ -378,7 +379,7 @@ const faqs = [
 
   /* ═══ Adaptations ═══ */
   @media (max-width: 1080px) { .outils { grid-template-columns: repeat(3, 1fr); } }
-  @media (max-width: 1000px) { .budg { grid-template-columns: 1fr; } .grid3 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 1000px) { .budg { grid-template-columns: 1fr; } .grid3 { grid-template-columns: repeat(2, 1fr); } .rail { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 900px) {
     .hero { min-height: 0; align-items: stretch; }
     .hero__bg, .hero::after { height: clamp(16rem, 46vh, 24rem); bottom: auto; }
@@ -400,6 +401,13 @@ const faqs = [
     .outils { grid-template-columns: 1fr 1fr; }
     .grid3 { grid-template-columns: 1fr; }
     .pb__n { display: none; }
-    .rail { grid-auto-columns: minmax(78%, 1fr); }
+    /* Mobile : une pièce par ligne, en carte horizontale (photo à gauche) pour rester compact. */
+    .rail { grid-template-columns: 1fr; }
+    .piece { grid-template-columns: 96px minmax(0, 1fr); grid-template-rows: none; column-gap: 0.9rem; row-gap: 0.35rem; align-items: start; }
+    .piece__media { grid-row: 1 / span 4; padding: 0.45rem; }
+    .piece__media img { height: 80px; }
+    .piece__nom, .piece__mesures, .piece .reglette, .piece__vide, .piece__cta { grid-column: 2; }
+    .piece__nom { margin: 0; }
+    .piece__cta { flex-wrap: wrap; justify-content: flex-start; gap: 0.5rem 1rem; }
   }
 </style>
