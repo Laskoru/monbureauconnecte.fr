@@ -97,7 +97,7 @@ components:
 ## Overview
 
 **Creative North Star :** « ton setup, pièce par pièce ». Le site se regarde comme une vidéo de présentation de poste : une grande photo réelle, des points chauds qui révèlent chaque réglage avec sa mesure, et des produits présentés comme les pièces d'un setup.
-**Product context :** comparateur indépendant français « problème → solution » pour télétravailleurs, joueurs et étudiants : 38 comparatifs, 5 outils de réglage, affiliation Amazon avec les vraies notes, jamais retouchées.
+**Product context :** comparateur indépendant français « problème → solution » pour télétravailleurs, joueurs et étudiants : 38 comparatifs, 5 outils de réglage, affiliation Amazon sur critères mesurables, limites écrites noir sur blanc et sources vérifiées (notes Amazon non affichées, voir `amazon.showRatings`).
 **Mode per surface :** accueil = Persuade ; comparatifs, guides et pages fixes = Read ; outils = Operate.
 **Reference sites :** makerstations.io, bestdesksetups.com, bureau-ajustable.fr, rtings.com.
 **Key characteristics :**
@@ -136,13 +136,15 @@ Cartes 16 px, tuiles image 12 px, puces et boutons en pilules, points chauds ron
 ## Components
 
 - **Point chaud** : pastille lime pulsante + étiquette mono sur papier translucide ; le mot-clé sur lime. Apparition décalée (0,5 / 1,1 / 1,7 s), 400 ms de surlignage quand une valeur change.
-- **Carte produit** : tuile blanche, nom en Unbounded 700, ligne de mesures mono, jauge lime de la note (barre arrondie) avec note et nombre d'avis, bouton d'achat lime.
+- **Carte produit** : tuile blanche, nom en Unbounded 700, ligne de mesures mono, bouton d'achat lime. La jauge lime de la note (barre arrondie, note et nombre d'avis) n'apparaît que si `siteConfig.amazon.showRatings` est à true, c'est-à-dire avec des notes issues de l'API officielle Amazon ; sinon rien, sans espace réservé.
 - **Onglet « Notre choix »** : pilule lime posée sur le bord haut de la fiche.
 - **Boutons** : action lime pleine (texte noir), survol noir ; secondaire papier à filet, survol filet noir ; achat lime ; désactivé 40 %.
 - **Champ** : pilule papier à filet, focus lime.
 - **Tableau comparatif** : conteneur arrondi, en-tête sur papier-2, colonne du choix sur lime pâle.
 - **Navigation** : liens noirs, page active soulignée lime ; menus en panneaux arrondis à ombre.
 - **Bandeau défilant** : besoins en Unbounded 700 séparés d'étoiles lime.
+- **Bandeau cookies** : panneau papier arrondi en bas d'écran, une phrase courte (tutoiement) avec le lien vers la politique de confidentialité, puis Refuser et Accepter identiques (papier à filet noir, même taille : refuser aussi simple qu'accepter, exigence CNIL). Sous 480 px : marges de 8 px, boutons côte à côte en 44 px, hauteur totale ≈ 116 px à 390 px pour ne jamais masquer le bouton principal de l'ouverture.
+- **Cibles tactiles** : tout lien ou bouton hors du fil du texte fait au moins 24 × 24 px (WCAG 2.2, 2.5.8), 44 px pour les boutons ; on l'obtient par `min-height` et `display: flex/inline-flex; align-items: center`, sans changer l'aspect.
 - **États** : vide (message + lien vers les guides) ; épuisé (bascule recherche Amazon, libellé rouge) ; pas de squelette animé.
 
 ## Do's and Don'ts
@@ -170,3 +172,5 @@ Cartes 16 px, tuiles image 12 px, puces et boutons en pilules, points chauds ron
 | 2026-09-24 | Direction « Studio » choisie sur maquettes, version claire A2 | Hugo trouvait Épure trop sage ; a retenu Studio mais refusé le fond sombre |
 | 2026-09-24 | Lime #C6F135 comme seul accent | Distinct des 7 sites frères ; jamais en texte sur clair |
 | 2026-09-24 | Thème sombre conservé en option | Le Studio sombre (maquette A) sert de thème nuit |
+| 2026-09-29 | Jauge de note Amazon masquée (`amazon.showRatings: false`) | Contrat Partenaires : notes affichables seulement via l'API officielle |
+| 2026-09-29 | Bandeau cookies compact, deux boutons identiques ; cibles ≥ 24 px | Mobile : le bandeau masquait l'ouverture ; CNIL et WCAG 2.2 AA |
