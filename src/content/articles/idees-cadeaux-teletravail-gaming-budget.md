@@ -18,10 +18,15 @@ topPick:
 comparison:
   columns: ["Budget", "Idées cadeaux", "Pour qui"]
   rows:
-    - ["Moins de 20 €", "Tapis de souris XXL, repose-poignet, plante de bureau dépolluante", "Petit geste sympa, sans risque"]
+    - ["Moins de 20 €", "Tapis de souris XXL, repose-poignet, plante de bureau", "Petit geste sympa, sans risque"]
     - ["20 à 60 €", "Lampe LED anti-fatigue, coussin lombaire, souris sans fil silencieuse", "Cadeau utile au quotidien"]
     - ["60 à 150 €", "Casque sans fil premium, clavier mécanique silencieux, webcam avec cache", "Un vrai plaisir à offrir à un proche"]
     - ["Spécial gamer", "Tapis de souris XXL gaming, souris gaming, clavier mécanique silencieux", "Setup gaming ou usage mixte bureau/jeu"]
+sources:
+  - label: "ADEME, « Plantes et épuration de l'air intérieur »"
+    url: "https://librairie.ademe.fr/air/3299-plantes-et-epuration-de-l-air-interieur.html"
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
 faq:
   - question: "Quel est le cadeau le plus sûr pour un télétravailleur que je connais mal ?"
     answer: "Vise un accessoire qui améliore le confort sans imposer de choix personnel fort : un tapis de souris XXL, un repose-poignet ou une lampe de bureau conviennent à peu près à tous les setups. Évite les objets très spécifiques (souris à la forme particulière, clavier avec disposition inhabituelle) si tu ne connais pas ses habitudes précises."
@@ -43,7 +48,7 @@ La meilleure stratégie, c'est de partir du **budget** plutôt que de l'objet en
 
 - Un **[tapis de souris XXL](/articles/tapis-souris-xxl-bureau/)** : il protège le bureau, agrandit la zone de frappe et convient à peu près à tous les usages, du travail de bureau au jeu occasionnel.
 - Un **repose-poignet pour clavier ou souris**, pour soulager les tensions sans rien changer au matériel existant.
-- Une **plante de bureau dépolluante**, un cadeau plus original qui améliore aussi l'ambiance du poste de travail.
+- Une **plante de bureau**, un cadeau plus original qui améliore l'ambiance du poste de travail (son effet dépolluant, en revanche, n'est pas validé scientifiquement selon l'ADEME).
 
 Ces trois options ont un point commun : elles s'adaptent à presque n'importe quel bureau, sans avoir besoin de connaître les préférences précises de la personne.
 
@@ -101,7 +106,3 @@ Quelques erreurs reviennent souvent et valent la peine d'être évitées :
 **La personne passe beaucoup de temps en visioconférence** : un casque ou une webcam de qualité change vraiment son quotidien professionnel, bien plus qu'un accessoire décoratif.
 
 **C'est un gamer, ou un télétravailleur qui joue aussi le soir** : privilégie les accessoires gaming à double usage (souris gaming, tapis XXL, clavier mécanique), qui serviront aussi bien en semaine qu'en session de jeu.
-
-## En résumé
-
-Le meilleur cadeau tech pour un télétravailleur ou un gamer part presque toujours du **budget**, pas de l'objet : un **tapis de souris XXL** ou un **repose-poignet** en dessous de 20 €, une **lampe LED** ou un **coussin lombaire** entre 20 et 60 €, un **casque sans fil** ou un **clavier mécanique silencieux** au-delà de 60 €. Pour un gamer, ces mêmes catégories fonctionnent en version gaming, sans jamais tomber dans le gadget qu'on n'utilise qu'une fois. Mieux vaut un objet simple et vraiment utile qu'un accessoire spectaculaire qui finit dans un tiroir.

@@ -18,7 +18,7 @@ const articles = budget.articles.map((slug) => bySlug.get(slug)).filter((a) => a
 const others = budgets.filter((b) => b.slug !== budget.slug);
 ---
 
-<BaseLayout title={`${budget.label} — ${budget.tagline}`} description={budget.description}>
+<BaseLayout title={`${budget.label} | ${budget.tagline}`} description={budget.description}>
   <PageHead
     eyebrow={`Par budget · ${budget.range}`}
     title={budget.label}

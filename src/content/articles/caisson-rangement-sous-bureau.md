@@ -13,7 +13,7 @@ coverAlt: "Espace sous un bureau, jambes et zone de rangement disponible"
 draft: false
 products:
   - asin: "B08VJM5NHB"
-    title: "HOMCOM — caisson à roulettes, tiroir + niche ouverte"
+    title: "Caisson à roulettes HOMCOM, tiroir + niche ouverte"
     blurb: "Un caisson compact avec un tiroir fermé et une niche ouverte pour un accès rapide, monté sur roulettes pour se déplacer facilement sous le bureau."
     pros:
       - "Compact, se glisse sous le bureau"
@@ -35,9 +35,16 @@ interactiveGuide:
       result: "Les <strong>roulettes verrouillables</strong> deviennent presque indispensables : on déplace le caisson d'un bureau à l'autre, on le sort pour nettoyer, sans le vider."
     - label: "Un espace vraiment réduit"
       result: "Cherche un modèle <strong>étroit et haut</strong> plutôt que large, ou une version <strong>sans roulettes</strong> qui se glisse dans un renfoncement précis sans jeu. Attention aux bureaux assis-debout à pied central."
+sources:
+  - label: "INRS, « Travail sur écran : Prévention des risques »"
+    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
+  - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
+    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-131/ed131.pdf"
 faq:
   - question: "Un caisson de rangement sous bureau, est-ce compatible avec tous les bureaux ?"
-    answer: "Pas systématiquement. Il faut vérifier la hauteur disponible sous le plateau (souvent entre 60 et 70 cm) et l'espace libre une fois les jambes du bureau et les pieds de l'utilisateur pris en compte. Un bureau assis-debout électrique avec des jambes centrales très rapprochées peut par exemple limiter les emplacements possibles."
+    answer: "Pas systématiquement. Il faut vérifier la hauteur disponible sous le plateau (un bureau fixe standard mesure environ 74 cm de haut, épaisseur du plateau comprise) et l'espace libre une fois les jambes du bureau et les pieds de l'utilisateur pris en compte. Un bureau assis-debout électrique avec des jambes centrales très rapprochées peut par exemple limiter les emplacements possibles."
   - question: "Faut-il privilégier un modèle avec ou sans roulettes ?"
     answer: "Les roulettes apportent de la flexibilité : on peut sortir le caisson pour passer l'aspirateur, le déplacer d'un poste à l'autre, ou l'utiliser comme accoudoir mobile à côté du bureau. En contrepartie, un modèle fixe est souvent un peu plus stable et moins cher. Le choix dépend surtout de la fréquence à laquelle l'espace de travail est réorganisé."
   - question: "Un caisson de rangement remplace-t-il une armoire de bureau classique ?"
@@ -48,7 +55,7 @@ faq:
 
 Un plateau de bureau encombré n'est presque jamais un problème de manque de place dans la pièce : c'est un problème de répartition. Stylos, dossiers, chargeurs, câbles et accessoires divers s'accumulent sur la surface de travail simplement parce qu'il n'existe pas d'endroit dédié pour les ranger à portée de main. Le caisson de rangement sous bureau résout ce problème sans prendre un centimètre de surface sur le plateau : tout l'espace utile se trouve sous le bureau, dans une zone souvent laissée vide à part les jambes de l'utilisateur.
 
-C'est une solution particulièrement adaptée au télétravail et aux petits espaces, où il n'est pas toujours possible d'ajouter une armoire ou un meuble de rangement séparé. Le caisson permet de garder à disposition immédiate ce qui sert tous les jours — un carnet, des dossiers en cours, une trousse de bureau — tout en libérant visuellement le plan de travail. Un plateau dégagé n'est pas qu'une question d'esthétique : plusieurs études sur l'ergonomie du poste de travail associent un espace encombré à une charge mentale plus élevée et à une concentration plus difficile à maintenir sur la durée.
+C'est une solution particulièrement adaptée au télétravail et aux petits espaces, où il n'est pas toujours possible d'ajouter une armoire ou un meuble de rangement séparé. Le caisson permet de garder à disposition immédiate ce qui sert tous les jours (un carnet, des dossiers en cours, une trousse de bureau) tout en libérant visuellement le plan de travail. Un plateau dégagé n'est pas qu'une question d'esthétique : l'INRS rappelle qu'il faut garder devant le clavier assez de place pour poser les mains et les avant-bras.
 
 Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantage de rester mobile dans la plupart des modèles à roulettes : il peut suivre un réaménagement du bureau, être partagé entre deux postes en horaires décalés, ou simplement être sorti le temps de nettoyer le sol.
 
@@ -56,7 +63,7 @@ Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantag
 
 ## Les critères qui font vraiment la différence
 
-- **La hauteur et les dimensions** : la contrainte numéro un est la hauteur libre sous le plateau, qui doit permettre à la fois le passage des jambes et le caisson sans les gêner. Mesurer cet espace avant l'achat évite la déconvenue d'un caisson trop haut ou trop large.
+- **La hauteur et les dimensions** : la contrainte numéro un est la hauteur libre sous le plateau, qui doit permettre à la fois le passage des jambes et le caisson sans les gêner (l'INRS prévoit pour les jambes un espace d'environ 65 cm de haut et 60 cm de profondeur sous le plan de travail). Mesurer cet espace avant l'achat évite la déconvenue d'un caisson trop haut ou trop large.
 - **Le nombre et le type de compartiments** : un tiroir fermé protège mieux les documents sensibles et la poussière, une niche ouverte permet un accès plus rapide pour ce qu'on utilise en continu dans la journée. Les meilleurs modèles combinent les deux.
 - **La présence de roulettes verrouillables** : des roulettes qui se bloquent évitent que le caisson ne glisse pendant qu'on l'utilise comme point d'appui ou qu'on y pose un objet lourd.
 - **La solidité de la structure** : un caisson en panneaux de particules bas de gamme peut se voiler avec le temps, surtout en cas d'humidité ; les structures avec renforts métalliques ou panneaux plus épais tiennent mieux dans la durée.
@@ -85,7 +92,7 @@ Enfin, un caisson n'a d'intérêt que si son contenu reste trié : la tentation 
 > **L'essentiel à retenir**
 > Avant tout, **mesure la hauteur libre sous ton plateau** : c'est la contrainte n°1. Vise ensuite un bon mélange **tiroir fermé + niche ouverte**, une **structure solide** (elle durera), des **roulettes verrouillables** si tu réorganises souvent, et un **tiroir à serrure** pour des documents sensibles. Place-le du côté de ta main dominante, et garde son contenu **trié** pour ne pas juste déplacer le désordre.
 
-## Conclusion
+## Notre avis
 
 Le caisson de rangement sous bureau est une solution simple pour dégager un plan de travail sans sacrifier l'accès aux objets utilisés au quotidien. L'essentiel se joue sur la compatibilité avec l'espace disponible sous le bureau, la répartition entre tiroirs fermés et niches ouvertes, et la solidité de la structure sur la durée. Bien choisi et bien rangé, il transforme un poste de travail encombré en un espace nettement plus fonctionnel, sans nécessiter de meuble supplémentaire dans la pièce. C'est aussi l'un des rares meubles de rangement qui se garde d'un logement à l'autre : compact et souvent sur roulettes, il suit facilement un déménagement ou un changement de poste, ce qui en fait un achat durable plutôt qu'une dépense ponctuelle.
 

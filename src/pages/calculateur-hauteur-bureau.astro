@@ -67,7 +67,7 @@ const appSchema = {
   description="Entre ta taille : ce calculateur gratuit donne la hauteur idéale de ton bureau assis et debout, de ton siège et de ton écran, et te dit si ton bureau est trop haut."
   jsonLd={[appSchema, faqSchema]}
 >
-  <PageHead eyebrow="Outil gratuit · sans inscription" title="Quelle est la bonne hauteur pour ton bureau ?" lede="La quasi-totalité des bureaux vendus en France mesurent 74 cm — une hauteur pensée pour une personne d'environ 1,78 m. Si tu ne fais pas cette taille, ton poste est probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs." icon="ruler" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Calculateur de hauteur de bureau' }]} width="narrow" />
+  <PageHead eyebrow="Outil gratuit · sans inscription" title="Quelle est la bonne hauteur pour ton bureau ?" lede="La quasi-totalité des bureaux vendus en France mesurent 74 cm, une hauteur pensée pour une personne d'environ 1,78 m. Si tu ne fais pas cette taille, ton poste est probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs." icon="ruler" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Calculateur de hauteur de bureau' }]} width="narrow" />
   <section class="container calc">
 
     <!-- ---------- Outil ---------- -->
@@ -88,17 +88,17 @@ const appSchema = {
         <div class="calc__result">
           <p class="calc__result-label">Plateau du bureau <em>assis</em></p>
           <p class="calc__result-value"><span data-out="plateauAssis">73</span> cm</p>
-          <p class="calc__result-hint"><span data-range="plateauAssis">71 – 75</span> cm</p>
+          <p class="calc__result-hint"><span data-range="plateauAssis">71–75</span> cm</p>
         </div>
         <div class="calc__result">
           <p class="calc__result-label">Plateau du bureau <em>debout</em></p>
           <p class="calc__result-value"><span data-out="plateauDebout">109</span> cm</p>
-          <p class="calc__result-hint"><span data-range="plateauDebout">107 – 111</span> cm</p>
+          <p class="calc__result-hint"><span data-range="plateauDebout">107–111</span> cm</p>
         </div>
         <div class="calc__result">
           <p class="calc__result-label">Assise du siège</p>
           <p class="calc__result-value"><span data-out="assise">44</span> cm</p>
-          <p class="calc__result-hint"><span data-range="assise">42 – 46</span> cm</p>
+          <p class="calc__result-hint"><span data-range="assise">42–46</span> cm</p>
         </div>
         <div class="calc__result">
           <p class="calc__result-label">Haut de l'écran</p>
@@ -174,7 +174,7 @@ const appSchema = {
     </div>
 
     <p class="calc__share">
-      Cet outil est en accès libre&nbsp;: n'hésite pas à le partager ou à y faire un lien. Une
+      Cet outil est en accès libre&nbsp;: tu peux le partager ou y faire un lien. Une
       remarque, une erreur à signaler&nbsp;? Écris-nous à
       <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
     </p>
@@ -206,7 +206,7 @@ const appSchema = {
       });
       ranges.forEach(function (el) {
         var k = el.getAttribute('data-range');
-        el.textContent = v[k] - 2 + ' – ' + (v[k] + 2);
+        el.textContent = v[k] - 2 + '–' + (v[k] + 2);
       });
 
       // Comparaison avec le bureau standard du commerce
@@ -224,7 +224,7 @@ const appSchema = {
         verdict.className = 'calc__verdict calc__verdict--warn';
       } else {
         msg =
-          'Bonne nouvelle&nbsp;: un bureau standard (74 cm) ' +
+          'Un bureau standard (74 cm) ' +
           (ecart === 0
             ? 'correspond <strong>exactement</strong> à ta taille.'
             : 'te convient, à <strong>' + Math.abs(ecart) + ' cm près</strong>.') +

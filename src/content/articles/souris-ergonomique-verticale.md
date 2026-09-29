@@ -13,7 +13,7 @@ coverAlt: "Main tenant une souris d'ordinateur sans fil"
 draft: false
 products:
   - asin: "B07FNHV4MW"
-    title: "Logitech MX Vertical — sans fil, 4000 PPP, multi-appareils"
+    title: "Logitech MX Vertical, sans fil, 4000 PPP, multi-appareils"
     blurb: "La référence du genre : angle à 57° qui réduit vraiment la pronation du poignet, autonomie de plusieurs semaines, compatible PC/Mac."
     pros:
       - "Angle 57° qui réduit la pronation du poignet"
@@ -35,6 +35,15 @@ interactiveGuide:
       result: "Le vertical reste possible mais l'angle très prononcé peut gêner les gestes fins. Choisis un modèle <strong>45-50°</strong> avec un bon capteur, ou envisage un <strong>trackball</strong> si tu veux zéro déplacement du bras."
     - label: "Petit budget"
       result: "Des verticales à moins de 30 € existent et soulagent déjà bien. Vérifie juste la <strong>taille</strong> et la présence de boutons avant/arrière ; le sans-fil est un confort, pas une obligation."
+sources:
+  - label: "Schmid et al., Applied Ergonomics (2015), « A vertical mouse and ergonomic mouse pads alter wrist position but do not reduce carpal tunnel pressure in patients with carpal tunnel syndrome »"
+    url: "https://research.vu.nl/en/publications/a-vertical-mouse-and-ergonomic-mouse-pads-alter-wrist-position-bu/"
+  - label: "Ameli.fr, « Syndrome du canal carpien : définition, fréquence et causes »"
+    url: "https://www.ameli.fr/assure/sante/themes/syndrome-canal-carpien/comprendre-syndrome-canal-carpien"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "Logitech Support, « MX Vertical - Caractéristiques techniques »"
+    url: "https://support.logi.com/hc/fr/articles/360023303394-MX-Vertical-Caract%C3%A9ristiques-techniques"
 faq:
   - question: "Une souris verticale soulage-t-elle le poignet ?"
     answer: "Oui : en plaçant la main en position poignée de main (pouce vers le haut), elle réduit la torsion de l'avant-bras, souvent responsable des douleurs. Le confort se ressent surtout sur de longues journées."
@@ -46,7 +55,7 @@ faq:
 
 ## Pourquoi passer à une souris verticale
 
-Une souris classique impose au poignet une **rotation en pronation** permanente — paume tournée vers le bureau — plusieurs heures par jour. Sur la durée, cette position favorise les tensions dans l'avant-bras, voire des douleurs plus sérieuses comme la tendinite ou le syndrome du canal carpien. Une souris verticale place la main dans une position proche de la **poignée de main** (pouce vers le haut), ce qui relâche cette rotation et réduit la pression sur le nerf médian et les tendons.
+Une souris classique impose au poignet une **rotation en pronation** permanente (paume tournée vers le bureau) plusieurs heures par jour. Sur la durée, cette position favorise les tensions dans l'avant-bras, voire des douleurs plus sérieuses comme la tendinite ou le syndrome du canal carpien. Une souris verticale place la main dans une position proche de la **poignée de main** (pouce vers le haut), ce qui relâche cette rotation. En revanche, une étude menée auprès de personnes atteintes du syndrome du canal carpien n'a pas mesuré de baisse de pression dans le canal avec une souris verticale : elle change la position du poignet, sans effet démontré sur le nerf.
 
 Ce n'est pas un gadget marketing : c'est un des rares accessoires ergonomiques dont l'effet se ressent souvent **dès les premières semaines**, en particulier pour qui travaille toute la journée à l'écran.
 
@@ -56,7 +65,7 @@ Ce n'est pas un gadget marketing : c'est un des rares accessoires ergonomiques d
 
 ### L'angle d'inclinaison
 
-C'est le cœur du sujet. Les modèles vont d'environ **45° à 60°**. Plus l'angle est prononcé, plus le poignet est relâché — mais plus l'adaptation est longue et plus la précision fine demande de l'habitude. Un angle **modéré (45-50°)** est idéal pour découvrir le format ; un angle **marqué (55-60°)** apporte un soulagement plus net si des douleurs sont déjà installées.
+C'est le cœur du sujet. Les modèles vont d'environ **45° à 60°**. Plus l'angle est prononcé, plus le poignet est relâché, mais plus l'adaptation est longue et plus la précision fine demande de l'habitude. Un angle **modéré (45-50°)** est idéal pour découvrir le format ; un angle **marqué (55-60°)** apporte un soulagement plus net si des douleurs sont déjà installées.
 
 ### La taille et la prise en main
 
@@ -64,7 +73,7 @@ Une souris trop grande pour une petite main (ou l'inverse) **annule une partie d
 
 ### Les boutons et le capteur
 
-Des **boutons programmables** (avant/arrière, copier-coller) évitent de changer de prise pour des actions courantes. Un **capteur** avec PPP (DPI) réglables aide à trouver le bon compromis entre précision et amplitude de mouvement — utile pour limiter les déplacements du bras.
+Des **boutons programmables** (avant/arrière, copier-coller) évitent de changer de prise pour des actions courantes. Un **capteur** avec PPP (DPI) réglables aide à trouver le bon compromis entre précision et amplitude de mouvement, utile pour limiter les déplacements du bras.
 
 ### La connectivité
 
@@ -81,7 +90,7 @@ Le **sans-fil** (Bluetooth ou récepteur USB) supprime un câble qui tire sur le
 | **Douleurs déjà présentes** | 55-60° | Relâchement maximal du poignet |
 | **Gestes fins fréquents** | 45-50° + bon capteur | Compromis précision / confort |
 
-La transition demande quelques jours, le temps que la main retrouve ses repères. Ne juge pas ton achat au premier après-midi : c'est au bout d'une à deux semaines que l'on sent vraiment la différence — et qu'on ne veut généralement plus revenir en arrière.
+La transition demande quelques jours, le temps que la main retrouve ses repères. Ne juge pas ton achat au premier après-midi : c'est au bout d'une à deux semaines que l'on sent vraiment la différence, et qu'on ne veut généralement plus revenir en arrière.
 
 ## Verticale, trackball ou souris sculptée : comment se décider
 
@@ -99,16 +108,12 @@ Le passage au vertical se joue sur quelques jours, et un peu de méthode évite 
 
 ## Ce qu'une souris verticale ne fait pas
 
-Pour éviter les déceptions, autant être clair sur ses limites. Une souris verticale **ne soigne pas** une tendinite ou un canal carpien déjà installés : elle réduit un facteur aggravant, mais une douleur persistante relève d'un avis médical, pas d'un accessoire. Elle ne dispense pas non plus des **bonnes habitudes** : faire des pauses, varier les positions, garder le coude près du corps et l'écran à bonne hauteur comptent autant que le matériel. Enfin, elle n'améliore pas la **précision** : au mieux, on retrouve son niveau d'avant après adaptation. Son rôle est ciblé — supprimer la torsion du poignet — et c'est déjà beaucoup pour qui souffre de cette gêne précise.
+Pour éviter les déceptions, autant être clair sur ses limites. Une souris verticale **ne soigne pas** une tendinite ou un canal carpien déjà installés : elle réduit un facteur aggravant, mais une douleur persistante relève d'un avis médical, pas d'un accessoire. Elle ne dispense pas non plus des **bonnes habitudes** : faire des pauses, varier les positions, garder le coude près du corps et l'écran à bonne hauteur comptent autant que le matériel. Enfin, elle n'améliore pas la **précision** : au mieux, on retrouve son niveau d'avant après adaptation. Son rôle est ciblé (supprimer la torsion du poignet), et c'est déjà beaucoup pour qui souffre de cette gêne précise.
 
 Côté budget, on trouve des modèles corrects **dès 25-35 €**, et les références haut de gamme sans fil multi-appareils tournent autour de 80-100 €. Inutile de viser le plus cher : l'essentiel est la taille et l'angle, pas le nombre de fonctions.
 
 > **L'essentiel à retenir**
 > Une souris verticale soulage en supprimant la **torsion du poignet**. Choisis l'**angle** selon ton cas (45-50° pour découvrir, 55-60° si tu as déjà mal), prends une **taille adaptée à ta main**, et laisse-toi **1 à 2 semaines** d'adaptation. C'est l'un des accessoires ergo au meilleur rapport soulagement/prix.
-
-## Conclusion
-
-Une souris verticale n'est pas un gadget parmi d'autres : c'est l'un des rares accessoires dont l'effet sur le confort du poignet se ressent rapidement, surtout pour qui passe plusieurs heures par jour devant un écran. Bien dimensionnée et avec le bon angle, elle se fait oublier — et le poignet aussi.
 
 ## Pour aller plus loin
 

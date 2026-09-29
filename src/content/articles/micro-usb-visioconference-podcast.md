@@ -12,7 +12,7 @@ coverAlt: "Microphone USB avec pied sur un bureau"
 draft: false
 products:
   - asin: "B08NDB5NWP"
-    title: "TONOR TM20 — micro de conférence, bouton muet"
+    title: "TONOR TM20, micro de conférence, bouton muet"
     blurb: "Pensé pour les réunions : capte la voix à 360° autour du micro, avec un bouton muet accessible, idéal pour Zoom ou Teams."
     pros:
       - "Capte la voix à 360°"
@@ -31,9 +31,16 @@ interactiveGuide:
     - label: "Des réunions à plusieurs autour du micro"
       result: "Là, un micro <strong>omnidirectionnel / de conférence</strong> (captation 360°) prend tout son sens : il capte plusieurs voix autour de la table sans que chacun se penche dessus."
     - label: "Du podcast / de la voix off"
-      result: "Vise un <strong>micro à condensateur</strong> cardioïde, monté sur un <strong>bras articulé</strong> et, si possible, avec filtre anti-pop. Le rendu et les nuances comptent alors autant que la praticité."
+      result: "Vise un <strong>micro à condensateur</strong> cardioïde (ou un <strong>dynamique</strong> si la pièce résonne), monté sur un <strong>bras articulé</strong> et, si possible, avec filtre anti-pop. Le rendu et les nuances comptent alors autant que la praticité."
     - label: "Je veux juste mieux qu'un micro de portable"
       result: "N'importe quel micro USB <strong>cardioïde</strong> plug-and-play à petit prix fera déjà un bond énorme : il isole ta voix du clavier et de la pièce. Positionne-le près de la bouche, pas au fond du bureau."
+sources:
+  - label: "Shure, « Microphone Directionality and Polar Pattern Basics »"
+    url: "https://www.shure.com/en-US/insights/microphone-directionality-polar-pattern-basics"
+  - label: "Shure, « Choosing a Microphone for Podcasting »"
+    url: "https://www.shure.com/en-US/insights/choosing-a-microphone-for-podcasting"
+  - label: "TONOR, « TONOR TM20 USB Conference Microphone »"
+    url: "https://www.tonormic.com/products/tonor-tm20-usb-conference-microphone"
 faq:
   - question: "Un micro USB est-il vraiment meilleur que le micro intégré d'un ordinateur portable ?"
     answer: "Dans la grande majorité des cas oui, nettement : le micro intégré capte aussi le bruit du clavier et de la pièce, alors qu'un micro USB dédié, bien positionné, isole mieux la voix et réduit le bruit de fond perçu par les autres participants."
@@ -45,7 +52,7 @@ faq:
 
 ## Pourquoi ne pas se contenter du micro intégré
 
-Le micro intégré d'un ordinateur portable est placé près du clavier et de l'écran : il capte à la fois les **bruits de frappe** et l'ambiance de la pièce. En visioconférence, c'est souvent ce qui rend un interlocuteur difficile à comprendre, même avec une bonne connexion. Un micro USB dédié, **même d'entrée de gamme**, améliore nettement la clarté perçue par les autres participants — c'est l'un des upgrades les plus rentables d'un poste de télétravail.
+Le micro intégré d'un ordinateur portable est placé près du clavier et de l'écran : il capte à la fois les **bruits de frappe** et l'ambiance de la pièce. En visioconférence, c'est souvent ce qui rend un interlocuteur difficile à comprendre, même avec une bonne connexion. Un micro USB dédié, **même d'entrée de gamme**, améliore nettement la clarté perçue par les autres participants : c'est l'un des upgrades les plus rentables d'un poste de télétravail.
 
 ![Micros de podcast sur bras articulés et casques sur un bureau](/covers/micro-usb-visioconference-podcast-inbody.webp)
 
@@ -65,7 +72,7 @@ Un micro trop bas oblige à se pencher ; un **bras articulé** le positionne pr�
 
 ### La qualité pour l'enregistrement
 
-Si l'usage dépasse la simple visio (**podcast**, voix off, streaming), un **micro à condensateur** capte plus de nuances qu'un micro pensé uniquement pour la voix en réunion. En contrepartie, il est plus sensible à l'acoustique de la pièce — un filtre anti-pop et un environnement pas trop réverbérant aident.
+Si l'usage dépasse la simple visio (**podcast**, voix off, streaming), un **micro à condensateur** capte plus de nuances qu'un micro pensé uniquement pour la voix en réunion. En contrepartie, il est plus sensible à l'acoustique de la pièce ; un filtre anti-pop et un environnement pas trop réverbérant aident. Dans une pièce non traitée qui résonne, un micro **dynamique**, moins sensible, capte moins ces défauts.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les micros USB sur Amazon](https://www.amazon.fr/s?k=micro+usb&tag=monbureauconnecte-21).
@@ -76,34 +83,34 @@ Si l'usage dépasse la simple visio (**podcast**, voix off, streaming), un **mic
 | --- | --- | --- |
 | **Visio en solo** | Cardioïde | Bouton muet physique |
 | **Réunion à plusieurs** | Omnidirectionnel / conférence | Captation 360° |
-| **Podcast / voix off** | Condensateur cardioïde | Bras articulé + anti-pop |
-
-## Conclusion
-
-Un micro USB dédié reste l'un des accessoires les plus rentables pour améliorer la qualité perçue en visioconférence : le gain en clarté est **immédiat**, sans changer le reste du matériel. Choisis surtout le **bon type de captation** pour ton usage, positionne-le près de la bouche, et tu passeras du « désolé, tu peux répéter ? » à une voix nette du premier coup.
+| **Podcast / voix off** | Condensateur cardioïde (dynamique si la pièce résonne) | Bras articulé + anti-pop |
 
 ## Bien le placer et régler la pièce
 
 Le meilleur micro mal placé déçoit. Vise une distance d'environ **une à deux largeurs de main** entre ta bouche et le micro, légèrement décalé sur le côté pour éviter les « pops » des consonnes (p, b, t). Un **filtre anti-pop** (la petite bonnette ou grille) règle ce problème pour quelques euros. Côté logiciel, baisse un peu le **gain d'entrée** si ta voix sature, et active la **réduction de bruit** de la plateforme (Teams, Zoom) ou du logiciel du micro.
 
-L'autre moitié du résultat tient à la **pièce**. Une salle vide et carrelée renvoie l'écho ; quelques éléments qui absorbent le son — rideaux, tapis, bibliothèque, canapé — suffisent souvent à assainir la voix, sans traitement acoustique coûteux. Éloigne aussi le micro des sources de bruit constant (ventilateur du PC, climatisation).
+L'autre moitié du résultat tient à la **pièce**. Une salle vide et carrelée renvoie l'écho ; quelques éléments qui absorbent le son (rideaux, tapis, bibliothèque, canapé) suffisent souvent à assainir la voix, sans traitement acoustique coûteux. Éloigne aussi le micro des sources de bruit constant (ventilateur du PC, climatisation).
 
 ## USB ou XLR : rester simple
 
-Pour la visio et le podcast débutant, l'**USB** est le bon choix : on branche, ça marche, sans matériel supplémentaire. Le **XLR** (le connecteur des micros « pro ») offre plus d'évolutivité et de qualité, mais impose une **interface audio** ou une table de mixage — un budget et une complexité rarement justifiés tant qu'on n'enregistre pas sérieusement. En clair : commence en USB, tu ne changeras de camp que si tu deviens exigeant sur l'enregistrement.
+Pour la visio et le podcast débutant, l'**USB** est le bon choix : on branche, ça marche, sans matériel supplémentaire. Le **XLR** (le connecteur des micros « pro ») offre plus d'évolutivité et de qualité, mais impose une **interface audio** ou une table de mixage, un budget et une complexité rarement justifiés tant qu'on n'enregistre pas sérieusement. En clair : commence en USB, tu ne changeras de camp que si tu deviens exigeant sur l'enregistrement.
 
 ## Trois erreurs qui gâchent le son
 
-La première, la plus fréquente : **poser le micro trop loin**, au fond du bureau. Résultat, il capte autant la pièce que la voix — l'inverse du but recherché. Rapproche-le. La deuxième : **choisir un omnidirectionnel pour un usage solo**. Ce type capte à 360° et laisse entrer tout le bruit ambiant ; en solo, le cardioïde est presque toujours meilleur. La troisième : **oublier le bouton muet** et se battre avec le raccourci logiciel en pleine réunion — un mute physique change le quotidien.
+La première, la plus fréquente : **poser le micro trop loin**, au fond du bureau. Résultat, il capte autant la pièce que la voix, l'inverse du but recherché. Rapproche-le. La deuxième : **choisir un omnidirectionnel pour un usage solo**. Ce type capte à 360° et laisse entrer tout le bruit ambiant ; en solo, le cardioïde est presque toujours meilleur. La troisième : **oublier le bouton muet** et se battre avec le raccourci logiciel en pleine réunion. Un mute physique change le quotidien.
 
 Un dernier point souvent négligé : le **support**. Un micro posé directement sur le bureau transmet les vibrations (frappe au clavier, tasse qu'on repose). Un petit **pied découplé** ou un **bras articulé** avec suspension élimine ces bruits sourds et positionne le micro à la bonne hauteur sans encombrer le plan de travail.
 
 ## Micro USB ou casque-micro : lequel choisir ?
 
-Question légitime, car un [casque à réduction de bruit](/articles/casque-reduction-bruit-teletravail/) avec micro fait aussi le travail. Les deux visent des priorités différentes. Le **casque-micro** est imbattable en **mobilité** et en environnement bruyant : le micro suit ta bouche, capte peu la pièce, et tu entends aussi tes interlocuteurs au calme — idéal en open space ou pour enchaîner les appels. Le **micro USB** posé sur le bureau donne une voix plus **naturelle et pleine** (on n'a rien sur la tête), et devient indispensable dès qu'on enregistre du contenu. Beaucoup de télétravailleurs finissent d'ailleurs avec les deux : le casque pour les réunions, le micro USB pour les enregistrements et les visios importantes où l'on veut sonner au mieux.
+Question légitime, car un [casque à réduction de bruit](/articles/casque-reduction-bruit-teletravail/) avec micro fait aussi le travail. Les deux visent des priorités différentes. Le **casque-micro** est imbattable en **mobilité** et en environnement bruyant : le micro suit ta bouche, capte peu la pièce, et tu entends aussi tes interlocuteurs au calme, idéal en open space ou pour enchaîner les appels. Le **micro USB** posé sur le bureau donne une voix plus **naturelle et pleine** (on n'a rien sur la tête), et devient indispensable dès qu'on enregistre du contenu. Beaucoup de télétravailleurs finissent d'ailleurs avec les deux : le casque pour les réunions, le micro USB pour les enregistrements et les visios importantes où l'on veut sonner au mieux.
 
 > **L'essentiel à retenir**
-> Le micro intégré capte le clavier et la pièce ; un **micro USB** bien placé isole ta voix. En **solo**, choisis un **cardioïde** avec bouton muet ; à **plusieurs**, un **omnidirectionnel** ; pour du **podcast**, un **condensateur** sur bras articulé. Le plus gros gain vient du type de captation et du placement, pas du prix.
+> Le micro intégré capte le clavier et la pièce ; un **micro USB** bien placé isole ta voix. En **solo**, choisis un **cardioïde** avec bouton muet ; à **plusieurs**, un **omnidirectionnel** ; pour du **podcast**, un **condensateur** (ou un **dynamique** si la pièce résonne) sur bras articulé. Le plus gros gain vient du type de captation et du placement, pas du prix.
+
+## En pratique
+
+Un micro USB dédié reste l'un des accessoires les plus rentables pour améliorer la qualité perçue en visioconférence : le gain en clarté est **immédiat**, sans changer le reste du matériel. Choisis surtout le **bon type de captation** pour ton usage, positionne-le près de la bouche, et tu passeras du « désolé, tu peux répéter ? » à une voix nette du premier coup.
 
 ## Pour aller plus loin
 

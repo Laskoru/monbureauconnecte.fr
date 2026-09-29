@@ -21,20 +21,29 @@ comparison:
   rows:
     - ["Prix", "Quelques euros, souvent vendu en lot de plusieurs", "Prix de la webcam elle-même"]
     - ["Compatibilité", "S'adapte à presque tout écran : laptop, moniteur, tablette", "Dépend du modèle de webcam choisi à l'achat"]
-    - ["Épaisseur ajoutée", "Très fine (moins d'1 mm), n'empêche pas de fermer un laptop", "Aucune, l'obturateur est intégré au boîtier"]
+    - ["Épaisseur ajoutée", "Très fine, mais au-delà de 0,1 mm Apple conseille de la retirer avant de fermer un MacBook", "Aucune, l'obturateur est intégré au boîtier"]
     - ["Le plus adapté pour", "Une webcam intégrée déjà en place, petit budget", "L'achat d'une nouvelle webcam externe"]
+sources:
+  - label: "Assistance Apple, « Assurez-vous de ne pas fermer votre MacBook, MacBook Air ou MacBook Pro en laissant un cache sur la caméra »"
+    url: "https://support.apple.com/fr-fr/102177"
+  - label: "Cybermalveillance.gouv.fr, « Chantage à la webcam ou à l'ordinateur prétendus piratés, que faire ? »"
+    url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/chantage-a-lordinateur-ou-a-la-webcam-pretendus-pirates"
+  - label: "Microsoft, « Gérer les autorisations des applications pour une caméra dans Windows »"
+    url: "https://support.microsoft.com/fr-fr/windows/privacy/manage-app-permissions-for-a-camera-in-windows"
+  - label: "USENIX Security 2014, « iSeeYou: Disabling the MacBook Webcam Indicator LED »"
+    url: "https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/brocker"
 faq:
   - question: "Un cache de webcam abîme-t-il l'écran ou la caméra en le retirant ?"
-    answer: "Un cache adhésif de qualité, conçu pour cet usage, utilise une colle repositionnable qui ne laisse pas de trace et se retire proprement, même après plusieurs mois. Le point de vigilance concerne surtout les dalles très fines ou tactiles : mieux vaut choisir un modèle fin (moins d'1 mm) pour ne pas gêner la fermeture du laptop, et éviter de le déplacer trop souvent pour préserver l'adhésif."
+    answer: "Un cache adhésif de qualité, conçu pour cet usage, utilise une colle repositionnable qui ne laisse pas de trace et se retire proprement, même après plusieurs mois. Le point de vigilance concerne surtout la fermeture du laptop : sur un MacBook, Apple déconseille de refermer l'écran sur un cache de plus de 0,1 mm, qui risque d'abîmer la dalle. Mieux vaut donc choisir le modèle le plus fin possible, et éviter de le déplacer trop souvent pour préserver l'adhésif."
   - question: "La LED d'activité de la webcam ne suffit-elle pas déjà à savoir si elle filme ?"
-    answer: "En théorie, la LED s'allume dès que le capteur est actif. En pratique, plusieurs cas contournent cette garantie : un logiciel malveillant peut désactiver la LED sur certains modèles bas de gamme, et une application légitime peut activer la caméra sans que l'utilisateur s'en aperçoive immédiatement (fenêtre en arrière-plan, notification manquée). Le cache physique reste la seule protection qui ne dépend d'aucun logiciel."
+    answer: "En théorie, la LED s'allume dès que le capteur est actif. En pratique, plusieurs cas contournent cette garantie : un logiciel malveillant peut désactiver la LED sur certains modèles (des chercheurs l'ont démontré sur d'anciens MacBook), et une application légitime peut activer la caméra sans que l'utilisateur s'en aperçoive immédiatement (fenêtre en arrière-plan, notification manquée). Le cache physique reste la seule protection qui ne dépend d'aucun logiciel."
   - question: "Faut-il un cache différent pour une webcam externe et une webcam intégrée à l'écran ?"
     answer: "Non, le même cache adhésif coulissant convient aux deux cas : il suffit qu'il soit assez fin et que sa largeur couvre l'objectif sans déborder sur le micro ou le capteur de luminosité, souvent placés à proximité. Pour une webcam externe, certains modèles récents intègrent directement un obturateur mécanique, ce qui rend le cache adhésif inutile."
 ---
 
 ## Pourquoi couvrir sa webcam quand elle ne sert pas
 
-La webcam est devenue un point d'entrée permanent vers le salon, la chambre ou le bureau à domicile. Entre les réunions en visio, les cours en ligne et les logiciels qui tournent en arrière-plan, l'objectif reste actif bien plus souvent qu'on ne le pense — et un accès non autorisé (logiciel malveillant, application mal configurée, simple erreur de partage d'écran) peut suffire à transformer cette fenêtre sur le quotidien en fuite de vie privée.
+La webcam est devenue un point d'entrée permanent vers le salon, la chambre ou le bureau à domicile. Entre les réunions en visio, les cours en ligne et les logiciels qui tournent en arrière-plan, l'objectif reste actif bien plus souvent qu'on ne le pense, et un accès non autorisé (logiciel malveillant, application mal configurée, simple erreur de partage d'écran) peut suffire à transformer cette fenêtre sur le quotidien en fuite de vie privée.
 
 Le **cache de confidentialité pour webcam** répond à un principe simple : une protection physique ne dépend d'aucun logiciel et ne peut pas être contournée à distance. Contrairement à un réglage système ou une extension de navigateur, un morceau de plastique qui coulisse devant l'objectif garantit qu'aucune image ne sort, quoi qu'il arrive côté logiciel.
 
@@ -50,7 +59,7 @@ La **webcam externe à obturateur intégré** part d'un autre principe : plutôt
 
 ### L'épaisseur du cache
 
-Sur un laptop, le cache se retrouve coincé entre l'écran et le clavier à chaque fermeture. Un modèle trop épais finit par marquer la dalle ou empêcher une fermeture complète, ce qui abîme la charnière à la longue. Les caches conçus pour cet usage restent sous le millimètre d'épaisseur, une donnée à vérifier avant d'acheter plutôt qu'à découvrir après réception.
+Sur un laptop, le cache se retrouve coincé entre l'écran et le clavier à chaque fermeture. Un modèle trop épais peut abîmer la dalle ou empêcher une fermeture complète. Sur ses MacBook, Apple fixe la limite à 0,1 mm, l'épaisseur d'une feuille de papier, et demande de retirer tout cache plus épais avant de refermer l'écran : une donnée à vérifier avant d'acheter plutôt qu'à découvrir après réception.
 
 ### La glissière et sa fluidité
 
@@ -71,15 +80,15 @@ Sur certains écrans, l'objectif de la webcam se trouve à quelques millimètres
 
 L'installation ne demande aucun outil particulier, mais quelques précautions évitent les faux départs :
 
-1. **Nettoyer la zone** avec un chiffon microfibre sec avant de coller quoi que ce soit — la moindre poussière ou trace de gras réduit l'adhérence.
+1. **Nettoyer la zone** avec un chiffon microfibre sec avant de coller quoi que ce soit : la moindre poussière ou trace de gras réduit l'adhérence.
 2. **Repérer précisément l'objectif** de la caméra, souvent identifiable par un petit point noir ou un léger reflet différent du reste de la bordure d'écran.
 3. **Positionner le cache ouvert** avant de coller, pour vérifier que le volet dégage bien tout l'objectif une fois glissé.
 4. **Appuyer fermement quelques secondes** sur toute la surface du cache pour que la colle adhère uniformément, sans bulle d'air.
-5. **Tester la fermeture du laptop**, s'il s'agit d'un ordinateur portable, avant de considérer l'installation terminée.
+5. **Vérifier l'épaisseur avant de refermer le laptop**, s'il s'agit d'un ordinateur portable : au-delà de 0,1 mm sur un MacBook, retire le cache avant chaque fermeture.
 
 ## Le complément gratuit : gérer aussi l'accès logiciel
 
-Le cache physique règle l'essentiel, mais il se combine bien avec un réglage gratuit côté système : Windows, macOS et la plupart des distributions Linux permettent de lister quelles applications ont accédé à la caméra récemment, et de révoquer cet accès pour celles qui n'en ont pas besoin. Ce contrôle logiciel ne remplace pas le cache — un accès autorisé reste un accès possible — mais il réduit le nombre de situations où la webcam s'active sans qu'on s'y attende, en particulier pour les applications de visioconférence installées automatiquement puis oubliées.
+Le cache physique règle l'essentiel, mais il se combine bien avec un réglage gratuit côté système : Windows et macOS permettent de choisir quelles applications ont accès à la caméra, et de révoquer cet accès pour celles qui n'en ont pas besoin (sous Windows, les logiciels de bureau classiques se gèrent en bloc, par un seul interrupteur). Ce contrôle logiciel ne remplace pas le cache (un accès autorisé reste un accès possible), mais il réduit le nombre de situations où la webcam s'active sans qu'on s'y attende, en particulier pour les applications de visioconférence installées automatiquement puis oubliées.
 
 Pour une visio de meilleure qualité une fois le cache ouvert, le reste du setup compte tout autant : un [éclairage d'appoint pour la visio](/articles/ring-light-eclairage-visio/) évite un rendu trop sombre, et un [micro USB dédié](/articles/micro-usb-visioconference-podcast/) améliore souvent plus la perception des interlocuteurs qu'une meilleure définition d'image.
 
@@ -94,11 +103,9 @@ Pour une visio de meilleure qualité une fois le cache ouvert, le reste du setup
 - **Poste partagé ou salle de réunion équipée d'une webcam fixe** : un cache bien visible sert aussi de rappel collectif que la caméra peut être fermée entre deux visios.
 
 > **L'essentiel à retenir**
-> Un cache de webcam physique est la seule protection qui ne dépend d'aucun logiciel. Privilégie un modèle **fin** (compatible fermeture de laptop), une **glissière fluide** et une **colle repositionnable** qui ne marque pas l'écran.
+> Un cache de webcam physique est la seule protection qui ne dépend d'aucun logiciel. Privilégie un modèle **très fin** (0,1 mm au plus pour refermer un MacBook dessus), une **glissière fluide** et une **colle repositionnable** qui ne marque pas l'écran.
 
-## Conclusion
-
-Le cache de confidentialité pour webcam fait partie de ces accessoires à quelques euros qui rapportent bien plus que leur prix : une tranquillité d'esprit qui ne dépend d'aucune mise à jour logicielle ni d'aucun réglage système. Entre un cache adhésif universel et une webcam à obturateur intégré, le choix dépend surtout de l'équipement déjà en place — mais dans les deux cas, protéger physiquement l'objectif reste le geste le plus simple et le plus fiable pour garder le contrôle de ce que la caméra montre, et surtout de ce qu'elle ne montre pas.
+Le cache de confidentialité pour webcam fait partie de ces accessoires à quelques euros qui rapportent bien plus que leur prix : une tranquillité d'esprit qui ne dépend d'aucune mise à jour logicielle ni d'aucun réglage système. Entre un cache adhésif universel et une webcam à obturateur intégré, le choix dépend surtout de l'équipement déjà en place, mais dans les deux cas, protéger physiquement l'objectif reste le geste le plus simple et le plus fiable pour garder le contrôle de ce que la caméra montre, et surtout de ce qu'elle ne montre pas.
 
 ## Pour aller plus loin
 

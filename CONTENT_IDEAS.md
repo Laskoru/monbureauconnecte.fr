@@ -6,7 +6,20 @@ Format : `- [ ] Sujet — angle — catégorie`.
 
 ## 🎁 Saison — priorité : à publier avant mi-octobre (indexés pour Noël / Black Friday)
 - [x] Idées cadeaux pour un télétravailleur ou un gamer : sélection par budget (Noël 2026) — guide cadeaux utile, sans gadgets — peripheriques
-- [ ] Black Friday setup bureau & gaming : ce qu'il faut attendre, ce qu'il faut acheter maintenant — guide d'achat malin — mobilier
+- [x] Black Friday setup bureau & gaming : ce qu'il faut attendre, ce qu'il faut acheter maintenant — guide d'achat malin — mobilier
+
+## 🎯 Priorité : questions souvent cherchées et peu couvertes (recherche de mots-clés du 26/09/2026)
+
+Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répondent vraiment. Vérifié le 26/09/2026 : aucun article publié ne les traite déjà. Garde la requête principale dans le titre, la description et un titre ##.
+
+- [x] Écran PC qui devient noir par intermittence : le diagnostic pas à pas (câble, mise en veille, pilote, fréquence, écran ou carte graphique) — requête « écran pc qui devient noir par intermittence » — peripheriques (conseil, sans produit)
+- [ ] Casque micro qui ne fonctionne pas sur PC : les réglages à vérifier (prise jack combinée, confidentialité Windows, périphérique par défaut, USB ou Bluetooth) — requête « casque micro ne fonctionne pas sur pc » — audio-visio (conseil, lien Amazon léger)
+- [ ] Souris sans fil : faut-il l'éteindre ? Veille automatique, autonomie réelle, piles ou batterie — requête « souris sans fil faut il l'éteindre » — peripheriques (conseil, sans produit)
+- [ ] Chaise de bureau qui descend toute seule ou ne remonte plus : vérin, levier, que faire et comment changer le vérin — requêtes « chaise de bureau qui descend toute seule », « chaise de bureau ne remonte plus » — mobilier (conseil, lien de recherche vérin)
+- [ ] Fauteuil de bureau ergonomique sans roulettes : les assises fixes qui soulagent le dos — requête « fauteuil de bureau ergonomique mal de dos sans roulettes » — mobilier (comparatif)
+- [ ] Double écran avec un ordinateur portable : écran portable USB-C, extension clipsable ou moniteur, et comment passer d'un écran à l'autre — requêtes « double écran pour ordinateur portable », « double écran faire passer de l'un à l'autre » — peripheriques (guide et comparatif)
+- [ ] Webcam qui s'allume toute seule : trouver l'application en cause et écarter un piratage (Windows, Mac) — requête « pourquoi ma webcam s'allume toute seule » — audio-visio (conseil, sans produit)
+- [ ] Bureau pour ordinateur et imprimante : les modèles avec tablette et rangement — requête « bureau pour ordinateur et imprimante » — mobilier (comparatif)
 
 ## Mobilier & Confort
 
@@ -17,7 +30,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 - [x] Tabouret assis-debout (siège selle) — alterner les appuis sur un bureau haut — mobilier
 - [x] Plante de bureau dépolluante — améliorer l'air et le confort visuel — mobilier
 - [x] Chaise de bureau sans accoudoirs — pour les petits espaces et les bureaux bas — mobilier
-- [ ] Bureau d'angle pour petit espace — optimiser un coin de pièce en télétravail — mobilier
+- [x] Bureau d'angle pour petit espace — optimiser un coin de pièce en télétravail — mobilier
 
 ## Périphériques
 

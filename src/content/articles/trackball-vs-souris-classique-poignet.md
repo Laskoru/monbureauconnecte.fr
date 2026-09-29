@@ -1,5 +1,5 @@
 ---
-title: "Trackball vs souris classique en 2026 : lequel choisir pour le poignet ?"
+title: "Trackball vs souris classique : lequel choisir pour le poignet ?"
 seoTitle: "Trackball ou souris classique : lequel pour le poignet ?"
 description: "Douleurs au poignet avec une souris classique ? Notre comparatif trackball vs souris pour choisir selon ton usage, sans se tromper d'accessoire."
 pubDate: 2026-08-21
@@ -26,7 +26,7 @@ interactiveGuide:
       result: "Commence par un <strong>trackball à pouce</strong> (type Logitech ERGO M575) : c'est la transition la plus douce depuis une souris, on garde une forme de main familière."
 products:
   - asin: "B0DB5DMDW3"
-    title: "Logitech ERGO M575S — trackball sans fil, contrôle au pouce, Bluetooth"
+    title: "Logitech ERGO M575S, trackball sans fil, contrôle au pouce, Bluetooth"
     blurb: "Le trackball le plus simple pour passer le cap : forme contournée qui repose la main, autonomie de plusieurs mois, compatible PC et Mac."
     pros:
       - "Le poignet ne bouge plus (bille au pouce)"
@@ -36,6 +36,13 @@ products:
       - "Temps d’adaptation réel"
       - "Bille à nettoyer de temps en temps"
       - "Moins précis pour le graphisme fin"
+sources:
+  - label: "Logitech, « Souris trackball sans fil ERGO M575S »"
+    url: "https://www.logitech.com/fr-fr/shop/p/ergo-m575s-wireless-trackball"
+  - label: "INRS, « Troubles musculosquelettiques (TMS). Ce qu'il faut retenir »"
+    url: "https://www.inrs.fr/risques/tms-troubles-musculosquelettiques/ce-qu-il-faut-retenir.html"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
+    url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
 faq:
   - question: "Un trackball est-il vraiment plus ergonomique qu'une souris classique ?"
     answer: "Oui pour le poignet et l'avant-bras : comme la main ne bouge plus pour déplacer le pointeur, il n'y a plus de glissement répété ni d'extension du bras. En revanche, l'effort se déplace vers le pouce ou les doigts selon le modèle, ce qui demande une vraie période d'adaptation."
@@ -45,9 +52,9 @@ faq:
     answer: "Certains modèles à contrôle au pouce fonctionnent bien pour des jeux de stratégie ou de gestion, mais un trackball reste peu adapté aux jeux qui demandent des mouvements rapides et larges, comme les FPS. Pour un usage mixte bureau et gaming exigeant, une souris classique ergonomique reste plus polyvalente."
 ---
 
-## Pourquoi le trackball change la donne pour le poignet
+## Trackball vs souris : ce qui change pour le poignet
 
-Une souris classique demande de déplacer toute la main, l'avant-bras suivant plus ou moins le mouvement, plusieurs centaines de fois par heure. Sur une journée de travail, cette répétition sollicite en continu les tendons du poignet et peut favoriser des tensions, voire une tendinite à la longue. Le trackball inverse le principe : le boîtier reste fixe sur le bureau, et c'est le pouce, l'index ou plusieurs doigts (selon le modèle) qui font rouler une boule pour déplacer le curseur. La main, elle, ne bouge quasiment plus.
+Une souris classique demande de déplacer toute la main, l'avant-bras suivant plus ou moins le mouvement, à longueur de journée. Sur une journée de travail, cette répétition sollicite en continu les tendons du poignet et peut favoriser des tensions, voire une tendinite à la longue. Le trackball inverse le principe : le boîtier reste fixe sur le bureau, et c'est le pouce, l'index ou plusieurs doigts (selon le modèle) qui font rouler une boule pour déplacer le curseur. La main, elle, ne bouge quasiment plus.
 
 Le résultat concret : moins de fatigue dans l'avant-bras en fin de journée, un besoin d'espace sur le bureau nettement réduit (plus la peine de dégager une zone pour glisser la souris), et un geste qui reste précis même sur un petit plan de travail. C'est aussi une bonne option pour qui a déjà mal au poignet et cherche une alternative franche plutôt qu'un simple ajustement, comme peut l'être notre comparatif des [souris ergonomiques verticales](/articles/souris-ergonomique-verticale/), qui corrige la rotation du poignet sans supprimer le mouvement de la main.
 
@@ -90,8 +97,8 @@ Côté entretien, un coup de chiffon sec régulier sur la boule et sur les capte
 Enfin, ne néglige pas l'ensemble du poste de travail : un trackball bien choisi ne compense pas une chaise mal réglée ou un écran trop bas, qui restent des causes fréquentes de tensions au poignet et à la nuque par ricochet. L'accessoire fait sa part, mais il s'inscrit dans un ensemble.
 
 > **L'essentiel à retenir**
-> Le trackball soulage le poignet et l'épaule parce que **la main ne se déplace plus** — seul le pouce ou le doigt bouge. Il gagne aussi de la place (aucune zone de déplacement). En échange : une **adaptation** d'une à deux semaines, et l'effort se reporte sur le pouce. Débute par un **trackball à pouce** (transition douce) ; pour la précision fine, une souris verticale peut rester plus adaptée.
+> Le trackball soulage le poignet et l'épaule parce que **la main ne se déplace plus** : seul le pouce ou le doigt bouge. Il gagne aussi de la place (aucune zone de déplacement). En échange : une **adaptation** d'une à deux semaines, et l'effort se reporte sur le pouce. Débute par un **trackball à pouce** (transition douce) ; pour la précision fine, une souris verticale peut rester plus adaptée.
 
-## Conclusion
+## Par quoi commencer si ton poignet te gêne
 
-Le trackball n'est pas un gadget de niche réservé aux graphistes : c'est une alternative sérieuse pour qui cherche à soulager le poignet sans faire de compromis sur la précision, à condition d'accepter une courte période d'adaptation et de bien choisir le type de contrôle adapté à son usage. Si l'objectif est de corriger une gêne existante plutôt que de changer complètement de geste, une souris ergonomique verticale peut rester une première étape plus simple avant de sauter le pas.
+Le trackball n'est pas un gadget de niche réservé aux graphistes : c'est une alternative sérieuse pour qui cherche à soulager le poignet, à condition d'accepter une courte période d'adaptation et de bien choisir le type de contrôle adapté à son usage. Si l'objectif est de corriger une gêne existante plutôt que de changer complètement de geste, une souris ergonomique verticale peut rester une première étape plus simple avant de sauter le pas.

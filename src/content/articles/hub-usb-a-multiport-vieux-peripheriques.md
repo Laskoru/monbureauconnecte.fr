@@ -1,7 +1,7 @@
 ---
 title: "Hub USB-A multiport : rebrancher ses vieux périphériques sur un PC récent"
 seoTitle: "Hub USB-A multiport : rebrancher ses vieux périphériques"
-description: "Plus un seul port USB-A sur ton PC récent ? Le hub USB-A multiport permet de rebrancher souris, clavier et clés USB sans rien racheter. Comment bien le choisir."
+description: "Plus de port USB-A sur ton PC récent ? Le hub USB-A multiport permet de rebrancher souris, clavier et clés USB sans rien racheter. Comment le choisir."
 pubDate: 2026-09-13
 updatedDate: 2026-09-13
 author: "Hugo B."
@@ -16,9 +16,14 @@ topPick:
   ctaLabel: "Voir les hubs USB Anker sur Amazon"
 coverAlt: "Hub USB noir avec plusieurs ports et interrupteurs, posé sur un bureau"
 draft: false
+sources:
+  - label: "Apple, « Adaptateurs compatibles avec le port Thunderbolt ou USB-C de votre Mac »"
+    url: "https://support.apple.com/fr-fr/102477"
+  - label: "USB-IF, « USB 3.2 »"
+    url: "https://www.usb.org/usb-32-0"
 faq:
   - question: "Pourquoi mon PC récent n'a-t-il plus de ports USB-A classiques ?"
-    answer: "Les ordinateurs portables récents, surtout les modèles fins, misent sur le tout USB-C pour gagner en épaisseur et en polyvalence (charge, vidéo et données par le même port). Le revers de la médaille : les anciens périphériques équipés d'une fiche USB-A rectangulaire (souris, clavier filaire, clé USB, imprimante) ne peuvent plus se brancher directement, d'où le besoin d'un hub ou d'un adaptateur."
+    answer: "Les ordinateurs portables récents, surtout les modèles fins, misent sur le tout USB-C pour gagner en finesse et en polyvalence (charge, vidéo et données par le même port). Le revers de la médaille : les anciens périphériques équipés d'une fiche USB-A rectangulaire (souris, clavier filaire, clé USB, imprimante) ne peuvent plus se brancher directement, d'où le besoin d'un hub ou d'un adaptateur."
   - question: "Un hub USB-A alimente-t-il correctement une clé USB ou un disque externe ?"
     answer: "Pour une clé USB ou une souris, un hub non alimenté (sans bloc secteur, qui puise l'énergie du port USB-C du PC) suffit largement. Pour un disque dur externe 2,5 pouces ou plusieurs périphériques gourmands branchés en même temps, mieux vaut un hub avec sa propre alimentation externe, car le port USB-C d'un portable ne délivre qu'une puissance limitée à répartir entre tous les appareils connectés."
   - question: "Un hub USB-A ralentit-il le transfert de données ?"
@@ -27,7 +32,7 @@ faq:
 
 ## Le problème du tout USB-C sur un PC récent
 
-Changer d'ordinateur portable réserve souvent une mauvaise surprise : les ports **USB-A** rectangulaires, ceux qu'on utilise depuis vingt ans pour brancher souris, clavier filaire ou clé USB, ont disparu au profit de simples ports **USB-C**. Les constructeurs justifient ce choix par la finesse des machines et la polyvalence du USB-C, qui gère à la fois la charge, la vidéo et les données par un connecteur unique. Problème : la quasi-totalité du parc de périphériques encore en circulation — souris filaires, claviers de bureau, clés USB, imprimantes, manettes — utilise toujours la fiche USB-A classique.
+Changer d'ordinateur portable réserve souvent une mauvaise surprise : les ports **USB-A** rectangulaires, ceux qu'on utilise depuis des années pour brancher souris, clavier filaire ou clé USB, ont disparu au profit de simples ports **USB-C**. Les constructeurs justifient ce choix par la finesse des machines et la polyvalence du USB-C, qui gère à la fois la charge, la vidéo et les données par un connecteur unique. Problème : la quasi-totalité du parc de périphériques encore en circulation (souris filaires, claviers de bureau, clés USB, imprimantes, manettes) utilise toujours la fiche USB-A classique.
 
 Racheter tout son matériel juste pour un changement de connecteur n'a aucun sens, surtout quand la souris ou le clavier fonctionnent très bien. Un **hub USB-A multiport** (ou un simple adaptateur USB-C vers USB-A) règle le problème pour quelques euros : il se branche sur l'unique port USB-C du portable et restitue plusieurs ports USB-A classiques, prêts à accueillir l'ancien matériel sans rien changer côté périphérique.
 
@@ -65,7 +70,7 @@ Vérifie le connecteur d'entrée : la plupart des hubs récents se branchent en 
 - **Disque dur externe ou plusieurs périphériques gourmands** : privilégie un hub avec **alimentation externe** pour éviter les coupures.
 - **Besoin ponctuel de lecteur de carte SD** : certains hubs combinent ports USB-A et lecteur de carte, pratique pour qui utilise encore un appareil photo.
 
-Si le besoin dépasse largement quelques ports USB-A — écran externe en plus, réseau filaire, charge du portable par le même câble — la solution la plus confortable n'est plus le simple hub mais une vraie [station d'accueil USB-C](/articles/hub-usb-c-station-accueil/), qui centralise tout en un seul branchement.
+Si le besoin dépasse largement quelques ports USB-A (écran externe en plus, réseau filaire, charge du portable par le même câble), la solution la plus confortable n'est plus le simple hub mais une vraie [station d'accueil USB-C](/articles/hub-usb-c-station-accueil/), qui centralise tout en un seul branchement.
 
 ## Un accessoire discret mais qui évite du gâchis
 
@@ -75,10 +80,6 @@ Côté installation, le plus simple reste de laisser le hub branché en permanen
 
 > **L'essentiel à retenir**
 > Un PC récent tout USB-C ne veut pas dire racheter ses périphériques : un **hub USB-A multiport** à quelques euros restitue les ports manquants. Privilégie l'**USB 3.0**, compte large sur le **nombre de ports**, et passe à un hub **alimenté** si tu branches un disque externe ou plusieurs appareils gourmands en même temps.
-
-## Conclusion
-
-Face à un PC récent qui n'a plus que des ports USB-C, le réflexe le plus économique et le plus écologique reste le hub USB-A multiport plutôt que le rachat de matériel encore fonctionnel. Le choix se résume à peu de critères : assez de ports, de l'USB 3.0, et une alimentation externe si l'usage est intensif. De quoi reconnecter en un geste toute une collection de périphériques qui n'avaient rien demandé à devenir obsolètes.
 
 ## Pour aller plus loin
 

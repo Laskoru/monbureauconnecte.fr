@@ -1,6 +1,7 @@
 ---
-title: "Quelle config PC gaming choisir en 2026 ? Le guide par budget"
-description: "Monter ou acheter son PC gaming sans se tromper : par quoi commencer, quels composants prioriser et quelle config viser selon ton budget (800, 1000 ou 1500 €)."
+title: "Quelle config PC gaming choisir ? Le guide par budget"
+seoTitle: "Config PC gaming : laquelle choisir selon ton budget"
+description: "Monter ou acheter son PC gaming : par quoi commencer, quels composants prioriser et quelle config viser selon ton budget (800, 1000 ou 1500 €)."
 pubDate: 2026-09-12
 updatedDate: 2026-09-12
 author: "Hugo B."
@@ -16,18 +17,27 @@ interactiveGuide:
   question: "Ton objectif principal, c'est…"
   options:
     - label: "Jouer en 1080p sans me ruiner"
-      result: "Vise <strong>800-900 €</strong> sur plateforme AM4 (moins chère) : l'essentiel du budget part dans la <strong>carte graphique</strong> (type RTX 4060). De quoi jouer confortablement en 1080p sur la plupart des jeux récents."
+      result: "Vise <strong>800-900 €</strong> sur plateforme AM4 (moins chère) : l'essentiel du budget part dans la <strong>carte graphique</strong> (type RTX 5060, ou une RTX 4060 si tu la trouves moins chère). De quoi jouer confortablement en 1080p sur la plupart des jeux récents."
     - label: "1080p avec de la marge pour l'avenir"
       result: "Autour de <strong>1000-1100 €</strong> sur plateforme actuelle (AM5, DDR5) : même carte graphique, mais une base récente qui te laisse <strong>upgrader le processeur</strong> dans quelques années sans tout changer."
     - label: "Jouer en 1440p / haut rafraîchissement"
-      result: "Compte <strong>1400-1600 €</strong> : carte graphique d'un cran au-dessus (RTX 4070 et +), CPU plus musclé et 32 Go de RAM. C'est le palier « confort durable » en 1440p."
+      result: "Compte <strong>1400-1600 €</strong> : carte graphique d'un cran au-dessus (RTX 5070 et +, ou une RTX 4070 si tu la trouves moins chère), CPU plus musclé et 32 Go de RAM. C'est le palier « confort durable » en 1440p."
     - label: "Je préfère l'acheter monté"
-      result: "Un <strong>PC pré-assemblé</strong> est plus simple et garanti d'un bloc, souvent 10-20 % plus cher qu'en montant soi-même. Compare surtout la <strong>carte graphique</strong> et l'alimentation, là où les prébuilts rognent parfois."
+      result: "Un <strong>PC pré-assemblé</strong> est plus simple et garanti d'un bloc, généralement un peu plus cher qu'en montant soi-même. Compare surtout la <strong>carte graphique</strong> et l'alimentation, là où les prébuilts rognent parfois."
+sources:
+  - label: "NVIDIA, « Gamme de cartes graphiques GeForce RTX 5060 »"
+    url: "https://www.nvidia.com/fr-fr/geforce/graphics-cards/50-series/rtx-5060-family/"
+  - label: "AMD, « Chipset AMD Socket AM5 »"
+    url: "https://www.amd.com/fr/products/processors/chipsets/am5.html"
+  - label: "CLEAResult, « What is 80 PLUS® certification program? »"
+    url: "https://www.clearesult.com/80plus/program-details"
+  - label: "Larian Studios, « Baldur's Gate 3 »"
+    url: "https://baldursgate3.game/"
 faq:
   - question: "Quel composant faut-il prioriser pour le gaming ?"
     answer: "La carte graphique (GPU), sans hésiter : c'est elle qui détermine le plus les images par seconde en jeu. Sur un budget serré, mieux vaut une bonne carte graphique avec un processeur milieu de gamme que l'inverse. Le processeur compte surtout pour les jeux très gourmands en CPU (stratégie, simulation) et le très haut rafraîchissement."
   - question: "Vaut-il mieux monter son PC ou l'acheter tout fait ?"
-    answer: "Monter soi-même coûte généralement 10 à 20 % de moins et permet de choisir chaque pièce, mais demande un peu de temps et d'aisance. Acheter un PC pré-assemblé est plus simple, garanti d'un seul tenant, mais il faut vérifier la fiche : certains prébuilts économisent sur l'alimentation ou la carte graphique. Les deux sont de bons choix selon ton envie de mettre les mains dedans."
+    answer: "Monter soi-même coûte généralement moins cher et permet de choisir chaque pièce, mais demande un peu de temps et d'aisance. Acheter un PC pré-assemblé est plus simple, garanti d'un seul tenant, mais il faut vérifier la fiche : certains prébuilts économisent sur l'alimentation ou la carte graphique. Les deux sont de bons choix selon ton envie de mettre les mains dedans."
   - question: "Combien de RAM pour jouer en 2026 ?"
     answer: "16 Go restent un minimum confortable pour la plupart des jeux, mais 32 Go deviennent un bon investissement si tu gardes ta machine plusieurs années, si tu streames, ou si tu jongles avec beaucoup d'onglets et d'applications en fond. Au-delà, l'intérêt est marginal pour un usage purement gaming."
   - question: "Faut-il un SSD NVMe pour le gaming ?"
@@ -56,11 +66,11 @@ Le cœur du sujet. C'est ici que doit partir la plus grosse part du budget. Rep�
 
 ### Le stockage (SSD)
 
-Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise **500 Go à 1 To** — les jeux récents pèsent lourd (50 à 150 Go pièce), et un disque plein se traîne.
+Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise **500 Go à 1 To** : les jeux récents pèsent lourd (50 à 150 Go pièce), et un disque plein se traîne.
 
 ### L'alimentation et le boîtier
 
-Deux pièces qu'on néglige à tort. Une **alimentation** fiable, à la bonne puissance et certifiée 80+, protège tous les autres composants — ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
+Deux pièces qu'on néglige à tort. Une **alimentation** fiable, à la bonne puissance et certifiée 80+ (un label de rendement énergétique), protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
 
 > 🛒 **Comparer les composants du moment**
 > Les prix des cartes graphiques et des processeurs bougent sans arrêt. Pour voir ce qui est disponible aujourd'hui : [voir les cartes graphiques gaming sur Amazon](https://www.amazon.fr/s?k=carte+graphique+gaming&tag=monbureauconnecte-21).
@@ -71,9 +81,9 @@ Voici les grands paliers. Ils bougent avec les prix, mais la **logique** reste s
 
 | Budget | Ce que tu vises | Idée de config |
 | --- | --- | --- |
-| **~800-900 €** | 1080p, plateforme économique | Ryzen 5 (AM4) + RTX 4060 + 16 Go + SSD 500 Go |
-| **~1000-1100 €** | 1080p + marge d'évolution | Ryzen 5 (AM5, DDR5) + RTX 4060 + 16-32 Go |
-| **~1400-1600 €** | 1440p / haut rafraîchissement | Ryzen 7 + RTX 4070 (et +) + 32 Go + SSD 1 To |
+| **~800-900 €** | 1080p, plateforme économique | Ryzen 5 (AM4) + RTX 5060 (ou 4060) + 16 Go + SSD 500 Go |
+| **~1000-1100 €** | 1080p + marge d'évolution | Ryzen 5 (AM5, DDR5) + RTX 5060 (ou 4060) + 16-32 Go |
+| **~1400-1600 €** | 1440p / haut rafraîchissement | Ryzen 7 + RTX 5070 ou 4070 (et +) + 32 Go + SSD 1 To |
 
 Pour un premier PC, le palier **800-900 €** offre le meilleur rapport plaisir/prix : sur la plateforme AM4 (plus ancienne, donc moins chère), tout le budget se concentre sur la carte graphique. Le palier **1000 €** bascule sur la plateforme actuelle : un peu plus cher, mais tu pourras changer de processeur dans quelques années sans remplacer la carte mère et la RAM. Au-delà, on gagne en définition et en confort sur la durée.
 
@@ -81,9 +91,9 @@ Envie d'un détail pièce par pièce avec des liens directs vers chaque composan
 
 ## Monter soi-même ou acheter un PC tout fait ?
 
-C'est la grande question, et il n'y a pas de mauvais choix — juste le tien.
+C'est la grande question, et il n'y a pas de mauvais choix, juste le tien.
 
-- **Monter soi-même** revient généralement **10 à 20 % moins cher**, et tu choisis chaque pièce. Il faut un peu de temps, deux tutoriels vidéo et de la rigueur, mais rien d'insurmontable aujourd'hui.
+- **Monter soi-même** revient généralement **moins cher**, et tu choisis chaque pièce. Il faut un peu de temps, deux tutoriels vidéo et de la rigueur, mais rien d'insurmontable aujourd'hui.
 - **Acheter un PC pré-assemblé** est plus simple, garanti d'un seul tenant, et te fait gagner du temps. Le piège : certains prébuilts économisent sur des pièces invisibles à première vue (**alimentation** au rabais, **carte graphique** d'un cran en dessous du nom affiché). Compare toujours la fiche détaillée, GPU et alimentation en tête.
 
 ## Ne pas oublier le reste du poste
@@ -91,9 +101,9 @@ C'est la grande question, et il n'y a pas de mauvais choix — juste le tien.
 Un bon PC dans un mauvais poste, c'est du potentiel gâché. Une fois la config choisie, pense à ce qui te met **face** à la machine : un [écran adapté](/guides/setup-gaming/), une [chaise gaming](/articles/meilleures-chaises-gaming/) qui tient sur les longues sessions, une [souris gaming](/articles/souris-gaming-pour-le-travail/) précise, et un [casque](/articles/casque-reduction-bruit-teletravail/) pour l'immersion. C'est souvent là que se joue le vrai confort de jeu, autant que dans les images par seconde.
 
 > **L'essentiel à retenir**
-> Priorité absolue à la **carte graphique** : c'est elle qui fait les FPS. Autour, vise un **CPU milieu de gamme**, **16-32 Go** de RAM et un **SSD NVMe** — ni plus ni moins. Choisis le budget selon la définition (1080p vers 800-1000 €, 1440p vers 1500 €). **Monter** coûte moins cher, **acheter monté** est plus simple : les deux sont valables, à condition de vérifier GPU et alimentation.
+> Priorité absolue à la **carte graphique** : c'est elle qui fait les FPS. Autour, vise un **CPU milieu de gamme**, **16-32 Go** de RAM et un **SSD NVMe**, ni plus ni moins. Choisis le budget selon la définition (1080p vers 800-1000 €, 1440p vers 1500 €). **Monter** coûte moins cher, **acheter monté** est plus simple : les deux sont valables, à condition de vérifier GPU et alimentation.
 
-## Conclusion
+## Les deux pièces à ne jamais brader
 
 Choisir une config PC gaming n'a rien de sorcier une fois la hiérarchie posée : le GPU d'abord, le reste en soutien, et un budget calé sur la définition visée. Que tu montes ta machine ou que tu l'achètes toute faite, garde en tête que la carte graphique et l'alimentation sont les deux pièces à ne jamais brader. Pour aller plus loin, notre [guide PC gaming interactif](/guide-pc-gaming/) te donne des configurations complètes, prêtes à l'emploi, palier par palier.
 
