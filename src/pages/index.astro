@@ -15,8 +15,8 @@ import { budgets } from '../budgets';
 
 const allArticles = await getCollection('articles', ({ data }) => !data.draft);
 const sorted = [...allArticles].sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const bySlug = new Map(allArticles.map((a) => [a.slug, a]));
-const published = new Set(allArticles.map((a) => a.slug));
+const bySlug = new Map(allArticles.map((a) => [a.id, a]));
+const published = new Set(allArticles.map((a) => a.id));
 const total = allArticles.length;
 const nf = new Intl.NumberFormat('fr-FR');
 const shortTitle = (t: string) => t.split(/\s[—–-]\s/)[0].trim();
@@ -53,7 +53,7 @@ const budgetRows = budgets.map((b) => {
 });
 const graduations = [0, 100, 200, 300];
 const categoryCounts = categories.map((c) => ({ ...c, count: allArticles.filter((x) => x.data.category === c.slug).length }));
-const latest = sorted.filter((a) => !refSlugs.includes(a.slug)).slice(0, 3);
+const latest = sorted.filter((a) => !refSlugs.includes(a.id)).slice(0, 3);
 
 const tools = [
   { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Plateau, siège et écran selon ta taille.', href: '/calculateur-hauteur-bureau/' },
@@ -117,8 +117,8 @@ const faqs = [
       <div class="rail-wrap"><div class="wide rail">
         {picks.map(({ article, product, image, rating, mesures }) => (
           <article class="piece">
-            <a class="piece__media" href={`/articles/${article.slug}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
-            <h3 class="piece__nom"><a href={`/articles/${article.slug}/`}>{shortTitle(product.title)}</a></h3>
+            <a class="piece__media" href={`/articles/${article.id}/`} tabindex="-1" aria-hidden="true"><img src={image} alt="" loading="lazy" decoding="async" width="400" height="400" /></a>
+            <h3 class="piece__nom"><a href={`/articles/${article.id}/`}>{shortTitle(product.title)}</a></h3>
             <p class="piece__mesures mono">{mesures.length > 0 ? mesures.join(' · ') : (product.award ?? 'Notre choix')}</p>
             {rating ? (
               <p class="reglette">
@@ -128,7 +128,7 @@ const faqs = [
             ) : null}
             <div class="piece__cta">
               <a class="btn btn--buy btn--sm" href={productUrl(product.asin)} target="_blank" rel="nofollow sponsored noopener">Voir sur Amazon <Icon name="external" size={14} /></a>
-              <a class="piece__lire" href={`/articles/${article.slug}/`}>Le comparatif</a>
+              <a class="piece__lire" href={`/articles/${article.id}/`}>Le comparatif</a>
             </div>
           </article>
         ))}

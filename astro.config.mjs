@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { unified, rehypeHeadingIds } from '@astrojs/markdown-remark';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -37,6 +38,20 @@ function rehypeStripLeadingEmoji() {
     for (const child of node.children ?? []) visit(child);
   };
   return (tree) => visit(tree);
+}
+
+// IDs des titres identiques à Astro 4 : depuis Astro 6, un titre finissant par « ? » ou « : »
+// garde un tiret final dans son id (#quel-budget-). On calcule les ids comme Astro puis on
+// retire ce tiret, pour que les ancres déjà partagées (sommaire, liens externes) restent valides.
+function rehypeHeadingIdsAstro4() {
+  const astroIds = rehypeHeadingIds();
+  const visit = (node) => {
+    if (node.type === 'element' && /^h[1-6]$/.test(node.tagName) && typeof node.properties?.id === 'string') {
+      node.properties.id = node.properties.id.replace(/-$/, '');
+    }
+    for (const child of node.children ?? []) visit(child);
+  };
+  return (tree, file) => { astroIds(tree, file); visit(tree); };
 }
 
 // ---- Sitemap : dates réelles (lastmod) + pages vides exclues ---------------------------
@@ -81,5 +96,10 @@ export default defineConfig({
       return item;
     },
   })],
-  markdown: { rehypePlugins: [rehypeAmazonLinks, rehypeStripLeadingEmoji] },
+  // Astro 7 : on garde le pipeline remark/rehype (unified) pour conserver nos plugins rehype
+  // et un rendu Markdown identique à Astro 4.
+  markdown: { processor: unified({ rehypePlugins: [rehypeAmazonLinks, rehypeStripLeadingEmoji, rehypeHeadingIdsAstro4] }) },
+  // Astro 7 compresse par défaut à la manière de JSX (espaces entre éléments inline supprimés) :
+  // on garde la compression HTML d'Astro 4, qui préserve ces espaces.
+  compressHTML: true,
 });

@@ -79,12 +79,12 @@ const choiceMesures = choice ? mesuresProduit(choice.p) : [];
 const choicePct = choice?.rating ? Math.round((choice.rating.rating / 5) * 1000) / 10 : 0;
 // Cartouche : numéro de planche (ordre de publication), rubrique, révision, mesures
 const tousLesArticles = await getCollection('articles', (a) => !a.data.draft);
-const ordre = [...tousLesArticles].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf() || a.slug.localeCompare(b.slug));
-const planche = String(ordre.findIndex((a) => a.slug === slug) + 1).padStart(2, '0');
+const ordre = [...tousLesArticles].sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf() || a.id.localeCompare(b.id));
+const planche = String(ordre.findIndex((a) => a.id === slug) + 1).padStart(2, '0');
 const nbPlanches = String(ordre.length).padStart(2, '0');
 const dateCourte = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
 const categoryInfo = categories.find((c) => c.slug === category);
-const relatedArticles = (await getCollection('articles', (a) => !a.data.draft && a.data.category === category && a.slug !== slug))
+const relatedArticles = (await getCollection('articles', (a) => !a.data.draft && a.data.category === category && a.id !== slug))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
 
 const dateFormatter = new Intl.DateTimeFormat(siteConfig.locale.replace('_', '-'), { year: 'numeric', month: 'long', day: 'numeric' });
