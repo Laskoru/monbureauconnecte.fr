@@ -135,3 +135,40 @@ API), pas d'un relevé des pages produit. `scripts/fetch-ratings.sh` s'arrête d
 avec un message tant que le flag est à `false` (on peut forcer avec
 `FORCE_RATINGS=1`). `src/data/amazon-ratings.json` est conservé ; ne repasse le flag
 à `true` que lorsque ce fichier est alimenté par l'API officielle.
+
+### IndexNow (`.github/workflows/indexnow.yml`)
+
+IndexNow prévient Bing (et les autres moteurs du protocole : Yandex, Seznam,
+Naver…) qu'une page a changé, pour qu'elle soit recrawlée sans attendre. Google
+ne l'utilise pas : pour lui, le sitemap et ses `lastmod` suffisent.
+
+La clé est publique : c'est le fichier `public/<clé>.txt` (32 caractères
+hexadécimaux, contenu = la clé), servi à la racine du site. Aucun secret à
+configurer.
+
+Le workflow « IndexNow » tourne à chaque push sur `main` qui touche
+`src/content/**`, et à la demande depuis l'onglet Actions (champ optionnel :
+URLs séparées par des espaces). Il liste les articles modifiés par le push
+(`git diff` des `src/content/articles/*.md` entre `github.event.before` et
+`HEAD`, brouillons exclus) plus l'accueil, attend que Vercel ait déployé (une
+minute, puis la première URL est sondée jusqu'à répondre 200, 10 minutes au
+plus) et lance `scripts/indexnow.mjs`. Toutes les étapes sont en
+`continue-on-error` : un refus d'IndexNow ne bloque jamais rien.
+
+À la main :
+
+```bash
+node scripts/indexnow.mjs --list                  # URLs qui seraient envoyées
+node scripts/indexnow.mjs --dry-run               # requête affichée, rien n'est envoyé
+node scripts/indexnow.mjs https://www.monbureauconnecte.fr/articles/<slug>/
+```
+
+### Audit des mots-clés (`scripts/audit-keywords.mjs`)
+
+`node scripts/audit-keywords.mjs` vérifie, pour chaque article publié, que le
+premier mot-clé (`keywords[0]`) apparaît dans la balise `<title>` (`seoTitle`
+ou `title`, 60 caractères au plus), dans une description de 120 à 155
+caractères, dans la première ou la deuxième phrase du corps et dans au moins
+un intertitre `##`/`###`. La forme naturelle est acceptée (accords, pluriels,
+accents, « pour le », « d'un »…). Il sort en erreur s'il reste un manque ;
+`--json` donne l'état brut.

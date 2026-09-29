@@ -1,0 +1,72 @@
+# IndexNow : après un push sur main qui touche le contenu, attend que Vercel ait déployé
+# puis signale les articles modifiés (et l'accueil) à api.indexnow.org
+# (scripts/indexnow.mjs). Aucun secret : la clé est publique, dans public/<clé>.txt.
+# Ce workflow ne doit jamais rien bloquer : chaque étape réseau est en continue-on-error.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/**'
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URLs à envoyer, séparées par des espaces (vide : articles du dernier commit + accueil)"
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: URLs à signaler
+        id: urls
+        env:
+          INDEXNOW_BEFORE: ${{ github.event.before }}
+          INPUT_URLS: ${{ github.event.inputs.urls }}
+        run: |
+          # shellcheck disable=SC2086
+          node scripts/indexnow.mjs --list $INPUT_URLS > urls.txt
+          cat urls.txt
+          echo "first=$(head -n 1 urls.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Attendre le déploiement (10 min max)
+        if: steps.urls.outputs.first != ''
+        continue-on-error: true
+        env:
+          FIRST_URL: ${{ steps.urls.outputs.first }}
+        run: |
+          # Une page déjà en ligne répond 200 avant le nouveau déploiement : on laisse d'abord
+          # une minute à Vercel, puis on sonde jusqu'au 200, dans la limite de 10 minutes.
+          sleep 60
+          while [ "$SECONDS" -lt 600 ]; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$FIRST_URL" || true)
+            echo "$FIRST_URL → $code (${SECONDS} s)"
+            if [ "$code" = "200" ]; then exit 0; fi
+            sleep 15
+          done
+          echo "Pas de 200 après 10 minutes : envoi quand même."
+
+      - name: Envoyer à IndexNow
+        if: steps.urls.outputs.first != ''
+        continue-on-error: true
+        run: |
+          # shellcheck disable=SC2046
+          node scripts/indexnow.mjs $(cat urls.txt)
