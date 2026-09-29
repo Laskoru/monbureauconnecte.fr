@@ -30,7 +30,7 @@ const affiliateUrl = available ? productUrl(asin) : searchUrl(search || fallback
 const resolvedImage = resolveProductImage(asin, image);
 
 // « Coté avant d'être noté » : d'abord les mesures écrites du produit, puis la
-// vraie note Amazon (récupérée par le process local, jamais inventée).
+// note Amazon, seulement si siteConfig.amazon.showRatings l'autorise (sinon rien).
 const mesures = mesuresProduit({ title, pros, blurb });
 const rating = getRating(asin);
 const nf = new Intl.NumberFormat('fr-FR');

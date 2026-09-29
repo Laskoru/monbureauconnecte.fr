@@ -1,4 +1,5 @@
 import ratings from '../data/amazon-ratings.json';
+import { siteConfig } from '../siteConfig';
 
 export interface Rating {
   rating: number; // note moyenne sur 5 (ex. 4.5)
@@ -10,8 +11,11 @@ export interface Rating {
  * Renvoie la note Amazon réelle d'un produit si elle a été récupérée
  * (fichier src/data/amazon-ratings.json, maintenu par le process local).
  * Ces données sont factuelles : on n'invente jamais de note.
+ * Renvoie toujours null tant que siteConfig.amazon.showRatings est à false
+ * (contrat Partenaires : notes affichables seulement via l'API officielle).
  */
 export function getRating(asin: string): Rating | null {
+  if (!siteConfig.amazon.showRatings) return null;
   const all = ratings as Record<string, Rating>;
   const r = all[asin];
   if (!r || typeof r.rating !== 'number' || typeof r.count !== 'number') return null;

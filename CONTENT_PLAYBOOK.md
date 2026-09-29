@@ -23,7 +23,8 @@ site, tu n'as rien à écrire pour eux) :
    `keywords[0]` — un lien de recherche, jamais mort, pour qui veut comparer
    lui-même les modèles du moment.
 3. Le bloc « Notre choix » : le produit unique du frontmatter, avec son image,
-   sa note réelle et son prix.
+   ses mesures, ses points forts et ce qui peut gêner (la note Amazon n'est plus
+   affichée : `siteConfig.amazon.showRatings` est à false, voir README).
 
 Pourquoi un seul produit et pas deux : un ASIN unique divise par deux le risque
 de rupture de stock, élimine le problème d'écart de prix entre deux produits,
