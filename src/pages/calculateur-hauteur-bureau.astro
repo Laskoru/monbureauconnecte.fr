@@ -17,6 +17,12 @@ const RATIOS = {
 // Hauteur d'un bureau fixe standard vendu dans le commerce (norme de fait).
 const BUREAU_STANDARD = 74;
 
+// Valeurs affichées avant le script (et sans JavaScript) : même calcul que le script, pour la
+// taille par défaut, pour que les cartes ne contredisent jamais l'épure.
+const TAILLE_DEFAUT = 175;
+const cm = (k: keyof typeof RATIOS) => Math.round(RATIOS[k] * TAILLE_DEFAUT);
+const plage = (k: keyof typeof RATIOS) => `${cm(k) - 2}–${cm(k) + 2}`;
+
 const faq = [
   {
     question: 'Ces hauteurs conviennent-elles à tout le monde ?',
@@ -68,7 +74,7 @@ const appSchema = {
   jsonLd={[appSchema, faqSchema]}
   search="Outil"
 >
-  <PageHead eyebrow="Outil gratuit · sans inscription" title="Quelle est la bonne hauteur pour ton bureau ?" lede="La quasi-totalité des bureaux vendus en France mesurent 74 cm, une hauteur pensée pour une personne d'environ 1,78 m. Si tu ne fais pas cette taille, ton poste est probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs." icon="ruler" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Calculateur de hauteur de bureau' }]} width="narrow" />
+  <PageHead eyebrow="Outil gratuit · sans inscription" title="Quelle est la bonne hauteur pour ton bureau ?" lede="La quasi-totalité des bureaux vendus en France mesurent 74 cm, une hauteur idéale pour une personne d'environ 1,75 m. Si tu ne fais pas cette taille, ton poste est probablement mal réglé sans que tu le saches. Entre ta taille pour obtenir tes hauteurs." icon="ruler" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Calculateur de hauteur de bureau' }]} width="narrow" />
   <section class="container calc">
 
     <!-- ---------- Outil ---------- -->
@@ -76,10 +82,10 @@ const appSchema = {
       <div class="calc__field">
         <label for="taille">Ta taille</label>
         <div class="calc__inputs">
-          <input type="range" id="taille-range" min="140" max="210" value="175" step="1"
+          <input type="range" id="taille-range" min="140" max="210" value={TAILLE_DEFAUT} step="1"
                  aria-label="Ta taille en centimètres (curseur)" />
           <div class="calc__number">
-            <input type="number" id="taille" min="140" max="210" value="175" step="1" inputmode="numeric" />
+            <input type="number" id="taille" min="140" max="210" value={TAILLE_DEFAUT} step="1" inputmode="numeric" />
             <span>cm</span>
           </div>
         </div>
@@ -88,22 +94,22 @@ const appSchema = {
       <div class="calc__results" id="results">
         <div class="calc__result">
           <p class="calc__result-label">Plateau du bureau <em>assis</em></p>
-          <p class="calc__result-value"><span data-out="plateauAssis">73</span> cm</p>
-          <p class="calc__result-hint"><span data-range="plateauAssis">71–75</span> cm</p>
+          <p class="calc__result-value"><span data-out="plateauAssis">{cm('plateauAssis')}</span> cm</p>
+          <p class="calc__result-hint"><span data-range="plateauAssis">{plage('plateauAssis')}</span> cm</p>
         </div>
         <div class="calc__result">
           <p class="calc__result-label">Plateau du bureau <em>debout</em></p>
-          <p class="calc__result-value"><span data-out="plateauDebout">109</span> cm</p>
-          <p class="calc__result-hint"><span data-range="plateauDebout">107–111</span> cm</p>
+          <p class="calc__result-value"><span data-out="plateauDebout">{cm('plateauDebout')}</span> cm</p>
+          <p class="calc__result-hint"><span data-range="plateauDebout">{plage('plateauDebout')}</span> cm</p>
         </div>
         <div class="calc__result">
           <p class="calc__result-label">Assise du siège</p>
-          <p class="calc__result-value"><span data-out="assise">44</span> cm</p>
-          <p class="calc__result-hint"><span data-range="assise">42–46</span> cm</p>
+          <p class="calc__result-value"><span data-out="assise">{cm('assise')}</span> cm</p>
+          <p class="calc__result-hint"><span data-range="assise">{plage('assise')}</span> cm</p>
         </div>
         <div class="calc__result">
           <p class="calc__result-label">Haut de l'écran</p>
-          <p class="calc__result-value"><span data-out="yeux">123</span> cm</p>
+          <p class="calc__result-value"><span data-out="yeux">{cm('yeux')}</span> cm</p>
           <p class="calc__result-hint">au niveau des yeux, du sol</p>
         </div>
       </div>
@@ -113,7 +119,7 @@ const appSchema = {
 
     <!-- ---------- Schéma : l'épure cotée suit la taille saisie ---------- -->
     <figure class="calc__figure">
-      <EpurePoste taille={175} />
+      <EpurePoste taille={TAILLE_DEFAUT} />
       <figcaption>
         Les trois hauteurs se mesurent toujours <strong>depuis le sol</strong>, plateau et assise
         compris.
