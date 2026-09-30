@@ -7,7 +7,7 @@
 export const siteConfig = {
   // Identité
   name: 'Mon Bureau Connecté',
-  tagline: 'Des accessoires bureau, gaming et télétravail testés et comparés',
+  tagline: 'Des accessoires bureau, gaming et télétravail comparés sur des critères mesurables',
   description:
     "Mon Bureau Connecté aide à choisir le bon matériel pour son poste de travail : gaming, bureau ergonomique et télétravail, comparatifs et conseils d'achat.",
   lang: 'fr',
@@ -56,7 +56,8 @@ export const siteConfig = {
   //   (et reprise dans le schéma Person). Vide = rien de plus qu'aujourd'hui.
   // authorPhoto : chemin de la photo dans public/ ; vide = '/auteur/hugo.webp'.
   //   La photo ne s'affiche que si le fichier existe au build (voir README).
-  authorBio: '',
+  authorBio:
+    "Je suis Hugo, l'éditeur de Mon Bureau Connecté. Je ne teste pas les produits moi-même : j'aide à choisir son matériel sur des critères mesurables (plage de réglage, charge admise, niveau sonore) plutôt que sur le marketing, à partir des fiches techniques, et je vérifie les recommandations d'ergonomie auprès de sources officielles, citées en bas de chaque article. Les limites de chaque modèle sont écrites.",
   authorPhoto: '',
 
   // Code de vérification Google Search Console (méthode "balise HTML").

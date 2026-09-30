@@ -64,7 +64,7 @@ C'est le critère de fond. Un micro **cardioïde** capte surtout ce qui est **en
 
 ### Le bouton muet physique
 
-Un **bouton muet** sur le micro est plus rapide et plus fiable qu'un raccourci logiciel cherché en pleine réunion. Détail, mais on l'apprécie tous les jours.
+Un **bouton muet** sur le micro est plus rapide et plus fiable qu'un raccourci logiciel cherché en pleine réunion. Détail, mais il sert à chaque réunion.
 
 ### Le bras ou le pied
 

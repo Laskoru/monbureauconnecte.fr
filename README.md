@@ -224,7 +224,7 @@ Pour mettre une vraie photo :
    `npx sharp-cli -i photo.jpg -o public/auteur/hugo.webp resize 800 800`
    (ou n'importe quel éditeur d'image).
 2. Dépose-la dans `public/auteur/hugo.webp`. Au build suivant, elle remplace le
-   monogramme (ronde, alt « Hugo B., fondateur de Mon Bureau Connecté ») et
+   monogramme (ronde, alt « Hugo B., éditeur de Mon Bureau Connecté ») et
    s'ajoute au schéma `Person` (champ `image`). Sans fichier, la page reste telle quelle.
 3. Optionnel, dans `src/siteConfig.ts` :
    - `authorPhoto` : un autre chemin dans `public/` (ex. `'/auteur/portrait.webp'`) ;
