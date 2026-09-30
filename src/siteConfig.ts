@@ -56,8 +56,7 @@ export const siteConfig = {
   //   (et reprise dans le schéma Person). Vide = rien de plus qu'aujourd'hui.
   // authorPhoto : chemin de la photo dans public/ ; vide = '/auteur/hugo.webp'.
   //   La photo ne s'affiche que si le fichier existe au build (voir README).
-  authorBio:
-    "Je suis Hugo, l'éditeur de Mon Bureau Connecté. Je ne teste pas les produits moi-même : j'aide à choisir son matériel sur des critères mesurables (plage de réglage, charge admise, niveau sonore) plutôt que sur le marketing, à partir des fiches techniques, et je vérifie les recommandations d'ergonomie auprès de sources officielles, citées en bas de chaque article. Les limites de chaque modèle sont écrites.",
+  authorBio: '',
   authorPhoto: '',
 
   // Code de vérification Google Search Console (méthode "balise HTML").
