@@ -213,3 +213,21 @@ source que la page `/checklist-bureau-ergonomique/`) :
 npm i --no-save playwright   # Playwright n'est pas une dépendance du site
 npm run lead-magnet          # CHROMIUM_PATH=/chemin/chromium pour un Chromium déjà installé
 ```
+
+## 10. Page auteur
+
+La page `/auteur/` affiche un monogramme (« HB ») tant qu'aucune photo n'existe.
+Pour mettre une vraie photo :
+
+1. Prépare une photo **carrée, 800 × 800 px, au format WebP** (visage bien cadré,
+   fond calme ; environ 50 à 100 Ko). Exemple avec sharp :
+   `npx sharp-cli -i photo.jpg -o public/auteur/hugo.webp resize 800 800`
+   (ou n'importe quel éditeur d'image).
+2. Dépose-la dans `public/auteur/hugo.webp`. Au build suivant, elle remplace le
+   monogramme (ronde, alt « Hugo B., fondateur de Mon Bureau Connecté ») et
+   s'ajoute au schéma `Person` (champ `image`). Sans fichier, la page reste telle quelle.
+3. Optionnel, dans `src/siteConfig.ts` :
+   - `authorPhoto` : un autre chemin dans `public/` (ex. `'/auteur/portrait.webp'`) ;
+   - `authorBio` : une courte présentation (une ou deux phrases), écrite par toi,
+     affichée sous ton nom et reprise dans le schéma `Person` (`description`).
+     Laisse `''` pour ne rien afficher de plus.

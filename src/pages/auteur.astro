@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { siteConfig } from '../siteConfig';
+import fs from 'node:fs';
+import path from 'node:path';
 
 const personSameAs = [siteConfig.social?.pinterest, siteConfig.social?.flipboard].filter(Boolean);
 const authorName = siteConfig.author; // "Hugo B."
@@ -20,6 +22,11 @@ const initials = authorName
   .slice(0, 2)
   .toUpperCase();
 
+// Photo : affichée seulement si le fichier existe dans public/ au moment du build.
+const photoSrc = siteConfig.authorPhoto || '/auteur/hugo.webp';
+const photo = fs.existsSync(path.join(process.cwd(), 'public', photoSrc.replace(/^\/+/, ''))) ? photoSrc : '';
+const bio = siteConfig.authorBio.trim();
+
 // Données structurées : page profil + personne rattachée à l'organisation.
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -29,6 +36,8 @@ const jsonLd = {
     '@id': `${siteUrl}/auteur/#person`,
     name: authorName,
     url: `${siteUrl}/auteur/`,
+    ...(photo ? { image: new URL(photo, siteUrl).toString() } : {}),
+    ...(bio ? { description: bio } : {}),
     ...(personSameAs.length ? { sameAs: personSameAs } : {}),
     jobTitle: 'Fondateur et rédacteur',
     worksFor: { '@id': `${siteUrl}/#organization` },
@@ -44,10 +53,15 @@ const jsonLd = {
 >
   <section class="container author">
     <div class="author__head">
-      <div class="author__avatar" aria-hidden="true">{initials}</div>
+      {photo ? (
+        <img class="author__photo" src={photo} alt={`${authorName}, fondateur de ${siteConfig.name}`} width="800" height="800" fetchpriority="high" decoding="async" />
+      ) : (
+        <div class="author__avatar" aria-hidden="true">{initials}</div>
+      )}
       <div>
         <h1>{authorName}</h1>
         <p class="author__role">Fondateur &amp; rédacteur de {siteConfig.name}</p>
+        {bio && <p class="author__short">{bio}</p>}
       </div>
     </div>
 
@@ -94,6 +108,9 @@ const jsonLd = {
     background: var(--jaune-pale); color: var(--mine); border-radius: 50%;
     font-family: var(--font-display); font-weight: 800; font-size: 1.7rem; line-height: 1; letter-spacing: -0.03em;
   }
+  /* Photo : ronde comme le monogramme, sur tuile blanche à filet et ombre douce */
+  .author__photo { flex-shrink: 0; width: 132px; height: 132px; object-fit: cover; border-radius: 50%; border: 4px solid var(--papier); box-shadow: 0 0 0 1px var(--filet), var(--ombre); background: var(--papier-2); }
+  .author__short { margin: 0.6rem 0 0; max-width: 60ch; line-height: 1.6; }
   .author__head h1 { margin: 0 0 0.3rem; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.4rem); }
   .author__role { margin: 0; font-size: 1.05rem; color: var(--gris); }
   .author__bio { margin-top: 2rem; padding-top: 1.6rem; border-top: 1px solid var(--filet); }
@@ -105,5 +122,6 @@ const jsonLd = {
   @media (max-width: 520px) {
     .author__head { flex-direction: column; align-items: flex-start; gap: 1rem; }
     .author__avatar { width: 64px; height: 64px; font-size: 1.3rem; }
+    .author__photo { width: 104px; height: 104px; }
   }
 </style>

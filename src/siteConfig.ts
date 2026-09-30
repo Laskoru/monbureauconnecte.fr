@@ -51,6 +51,13 @@ export const siteConfig = {
 
   // Auteur par défaut affiché sur les articles
   author: 'Hugo B.',
+  // Page /auteur/ (optionnel, vides par défaut) :
+  // authorBio : une courte présentation écrite par Hugo, affichée sous son nom
+  //   (et reprise dans le schéma Person). Vide = rien de plus qu'aujourd'hui.
+  // authorPhoto : chemin de la photo dans public/ ; vide = '/auteur/hugo.webp'.
+  //   La photo ne s'affiche que si le fichier existe au build (voir README).
+  authorBio: '',
+  authorPhoto: '',
 
   // Code de vérification Google Search Console (méthode "balise HTML").
   // C'est la valeur après "google-site-verification=". Laisse vide si inutile.
