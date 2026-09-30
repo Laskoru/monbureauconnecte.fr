@@ -24,12 +24,12 @@ const n = count ? Number.parseInt(count, 10) : NaN;
     {crumbs && <Breadcrumbs items={crumbs} />}
     <div class="ph__row">
       <div class="ph__text">
-        <h1 class="ph__title">{frenchNbsp(title)}</h1>
+        <h1 class="ph__title" data-pagefind-weight="10">{frenchNbsp(title)}</h1>
         {lede && <p class="ph__lede">{lede}</p>}
         <slot />
       </div>
       {count && (
-        <p class="ph__count"><span class="ph__num">{count}</span><span class="ph__unit">{Number.isNaN(n) || n > 1 ? 'comparatifs' : 'comparatif'}</span></p>
+        <p class="ph__count" data-pagefind-ignore><span class="ph__num">{count}</span><span class="ph__unit">{Number.isNaN(n) || n > 1 ? 'comparatifs' : 'comparatif'}</span></p>
       )}
     </div>
   </div>

@@ -15,11 +15,14 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   /** Page à ne pas indexer (ex. catégorie vide) : noindex + follow. */
   noindex?: boolean;
+  /** Page indexée par la recherche interne (Pagefind) : son <main> devient le corps indexé,
+   *  la valeur sert d'étiquette de type dans les résultats (« Comparatif », « Guide »…). */
+  search?: string;
   /** Métadonnées Open Graph « article » (Rich Pins Pinterest, Facebook, Discover). */
   article?: { publishedTime: string; modifiedTime?: string; author?: string; section?: string; tags?: string[] };
 }
 
-const { title, description = siteConfig.description, ogImage, ogType = 'website', jsonLd, noindex = false, article } = Astro.props;
+const { title, description = siteConfig.description, ogImage, ogType = 'website', jsonLd, noindex = false, article, search } = Astro.props;
 // Meta description : Google coupe vers 160 caractères ; on coupe nous-mêmes en fin de mot plutôt que lui au milieu.
 const metaDescription = description.length > 160 ? description.slice(0, 157).replace(/\s+\S*$/, '') + '…' : description;
 // Suffixe « | Nom du site » seulement si le titre complet tient en 60 caractères :
@@ -179,7 +182,7 @@ const jsonLdBlocks = [organizationSchema, websiteSchema, ...(jsonLd ? (Array.isA
   </head>
   <body>
     <Header />
-    <main>
+    <main data-pagefind-body={search ? '' : undefined} data-pagefind-meta={search ? `type:${search}` : undefined}>
       <slot />
     </main>
     <Footer />

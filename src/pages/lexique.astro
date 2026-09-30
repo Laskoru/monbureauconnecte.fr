@@ -40,11 +40,11 @@ const faqSchema = {
 const description = `Lexique du bureau et du télétravail : VESA, DPI, ANC, Power Delivery, switchs… ${lexique.length} termes expliqués simplement.`;
 ---
 
-<BaseLayout title="Lexique du bureau : tous les termes expliqués" description={description} jsonLd={faqSchema}>
+<BaseLayout title="Lexique du bureau : tous les termes expliqués" description={description} jsonLd={faqSchema} search="Outil">
   <PageHead eyebrow="Vocabulaire" title="Lexique du bureau et du télétravail" lede={`VESA, DPI, ANC, Power Delivery, switch tactile… Le vocabulaire technique est souvent le premier obstacle quand on cherche à s’équiper. Voici ${lexique.length} termes expliqués en clair, sans jargon marketing, avec un lien vers le comparatif concerné quand il existe.`} icon="book" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: 'Lexique' }]} width="narrow" />
   <section class="container lexique">
 
-    <nav class="lexique__toc" aria-label="Sommaire du lexique">
+    <nav class="lexique__toc" aria-label="Sommaire du lexique" data-pagefind-ignore>
       {groups.map((g) => (
         <a href={`#${g.id}`}>{g.group}</a>
       ))}

@@ -18,7 +18,7 @@ const articles = budget.articles.map((slug) => bySlug.get(slug)).filter((a) => a
 const others = budgets.filter((b) => b.slug !== budget.slug);
 ---
 
-<BaseLayout title={`${budget.label} | ${budget.tagline}`} description={budget.description}>
+<BaseLayout title={`${budget.label} | ${budget.tagline}`} description={budget.description} search="Budget">
   <PageHead
     eyebrow={`Par budget · ${budget.range}`}
     title={budget.label}
@@ -34,12 +34,12 @@ const others = budgets.filter((b) => b.slug !== budget.slug);
         <div class="bd__intro">
           {budget.intro.map((p) => <p set:html={p} />)}
         </div>
-        <h2 class="bd__section">Les comparatifs de cette enveloppe</h2>
-        <div class="bd__list">
+        <h2 class="bd__section" data-pagefind-ignore>Les comparatifs de cette enveloppe</h2>
+        <div class="bd__list" data-pagefind-ignore>
           {articles.map((article) => <ArticleCard article={article} variant="row" />)}
         </div>
       </div>
-      <aside class="bd__side">
+      <aside class="bd__side" data-pagefind-ignore>
         <div class="bd__box">
           <p class="bd__box-title"><Icon name="euro" size={16} /> Autres budgets</p>
           {others.map((b) => (
