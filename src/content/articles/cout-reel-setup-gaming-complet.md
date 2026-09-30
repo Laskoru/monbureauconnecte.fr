@@ -1,7 +1,7 @@
 ---
 title: "Combien coûte vraiment un setup gaming complet ?"
-seoTitle: "Coût d'un setup gaming complet : combien prévoir"
-description: "Le PC n'est que la moitié de la facture. Le vrai coût d'un setup gaming complet : écran, périphériques, siège, bureau, et où économiser."
+seoTitle: "Combien coûte un setup gaming complet ? Le vrai budget"
+description: "Combien coûte un setup gaming complet ? PC, écran, périphériques, siège et bureau : le vrai budget poste par poste, et où économiser sans regret."
 pubDate: 2026-09-12
 updatedDate: 2026-09-29
 author: "Hugo B."

@@ -1,7 +1,7 @@
 ---
 title: "Hub USB-C et station d'accueil : lequel choisir ?"
-seoTitle: "Station d'accueil USB-C ou hub : lequel choisir ?"
-description: "Multi-écrans, Ethernet, charge : comment choisir un hub ou une station d'accueil USB-C pour le télétravail, et éviter les pièges de compatibilité."
+seoTitle: "Hub USB-C ou station d'accueil : lequel choisir ?"
+description: "Hub USB-C ou station d'accueil ? La vraie différence (écrans, Ethernet, charge), le bon choix selon ton setup et le piège de compatibilité à éviter."
 pubDate: 2026-07-27
 updatedDate: 2026-09-29
 author: "Hugo B."

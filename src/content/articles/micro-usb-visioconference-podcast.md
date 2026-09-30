@@ -1,6 +1,6 @@
 ---
 title: "Micro USB pour visioconférence et podcast : lequel choisir ?"
-description: "Le micro intégré ne suffit pas toujours. Comment choisir un micro USB pour la visioconférence ou l'enregistrement : captation, bouton muet, bras."
+description: "Micro USB pour la visioconférence ou le podcast : captation, bouton muet, bras, filtre anti-pop. Les critères qui comptent pour être enfin bien entendu."
 pubDate: 2026-08-05
 updatedDate: 2026-09-29
 author: "Hugo B."
