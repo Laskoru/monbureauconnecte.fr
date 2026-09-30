@@ -115,3 +115,4 @@ Le bras support écran est l'un des accessoires au meilleur rapport entre le pri
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
 - [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

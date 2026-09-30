@@ -115,3 +115,4 @@ Quelques points de vigilance avant de commander. Le **pavé numérique** : beauc
 - [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)
 - [Souris ergonomique verticale](/articles/souris-ergonomique-verticale/)
 - [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

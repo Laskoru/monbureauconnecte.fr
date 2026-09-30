@@ -118,3 +118,4 @@ Associé à un clavier et une souris externes, un support ordinateur portable tr
 - [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [Écran PC qui devient noir par intermittence : le diagnostic](/articles/ecran-pc-noir-par-intermittence/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

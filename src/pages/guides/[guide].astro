@@ -5,6 +5,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import PageHead from '../../components/PageHead.astro';
 import Icon from '../../components/Icon.astro';
 import { guides } from '../../guides';
+import { createMarkdownProcessor } from '@astrojs/markdown-remark';
 
 export async function getStaticPaths() {
   return guides.map((guide) => ({ params: { guide: guide.slug }, props: { guide } }));
@@ -17,9 +18,24 @@ const bySlug = new Map(allArticles.map((a) => [a.id, a]));
 // On respecte l'ordre défini dans guides.ts, en ignorant les slugs absents.
 const articles = guide.articles.map((slug) => bySlug.get(slug)).filter((a) => a !== undefined);
 const otherGuides = guides.filter((g) => g.slug !== guide.slug);
+
+// Page pilier : corps Markdown rendu au build, sommaire tiré de ses ## et ###.
+// Même règle d'ancre que les articles : pas de tiret final (titre en « ? » ou « : »).
+let bodyHtml = '';
+let toc: { depth: number; slug: string; text: string }[] = [];
+if (guide.body) {
+  const md = await createMarkdownProcessor();
+  const { code, metadata } = await md.render(guide.body);
+  bodyHtml = code.replace(/ id="([^"]*?)-"/g, ' id="$1"');
+  toc = metadata.headings.filter((h) => h.depth === 2 || h.depth === 3).map((h) => ({ ...h, slug: h.slug.replace(/-$/, '') }));
+}
+const faq = guide.faq ?? [];
+const faqSchema = faq.length > 0
+  ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })) }
+  : undefined;
 ---
 
-<BaseLayout title={guide.title} description={guide.description} noindex={articles.length === 0} search={articles.length > 0 ? 'Guide' : undefined}>
+<BaseLayout title={guide.seoTitle ?? guide.title} description={guide.description} jsonLd={faqSchema} noindex={articles.length === 0} search={articles.length > 0 ? 'Guide' : undefined}>
   <PageHead
     eyebrow="Guide par besoin"
     title={guide.title}
@@ -36,7 +52,27 @@ const otherGuides = guides.filter((g) => g.slug !== guide.slug);
           {guide.intro.map((p) => <p set:html={p} />)}
         </div>
 
-        <h2 class="g__section" data-pagefind-ignore>Les comparatifs à lire</h2>
+        {toc.length > 1 && (
+          <nav class="g__toc" aria-label="Sommaire" data-pagefind-ignore>
+            <p class="g__toc-title">Sommaire</p>
+            <ol>
+              {toc.map((h) => <li data-depth={h.depth}><a href={`#${h.slug}`}>{h.text}</a></li>)}
+              {faq.length > 0 && <li data-depth="2"><a href="#questions-frequentes">Questions fréquentes</a></li>}
+              <li data-depth="2"><a href="#les-comparatifs-a-lire">Les comparatifs à lire</a></li>
+            </ol>
+          </nav>
+        )}
+
+        {bodyHtml && <div class="g__body" set:html={bodyHtml} />}
+
+        {faq.length > 0 && (
+          <div class="g__faq">
+            <h2 class="g__section" id="questions-frequentes">Questions fréquentes</h2>
+            {faq.map((f) => <details class="g__faq-item"><summary><span>{f.question}</span><span class="g__faq-signe" aria-hidden="true"></span></summary><p>{f.answer}</p></details>)}
+          </div>
+        )}
+
+        <h2 class="g__section" id="les-comparatifs-a-lire" data-pagefind-ignore>Les comparatifs à lire</h2>
         <ol class="g__steps" data-pagefind-ignore>
           {articles.map((article, i) => (
             <li class="g__step">
@@ -87,6 +123,32 @@ const otherGuides = guides.filter((g) => g.slug !== guide.slug);
   .g__link + .g__link { border-top: 1px solid var(--filet); }
   .g__link :global(svg:last-child) { width: 28px; height: 28px; padding: 7px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.18s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
   .g__link:hover :global(svg:last-child) { transform: translateX(3px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
+  /* Page pilier : sommaire en carte papier, corps de lecture comme un article, FAQ en accordéon */
+  .g__toc { margin: 0.6rem 0 2rem; padding: 1rem 1.2rem 1.1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .g__toc-title { margin: 0 0 0.4rem; font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+  .g__toc ol { list-style: none; margin: 0; padding: 0; }
+  .g__toc li[data-depth='3'] { padding-left: 1.1rem; font-size: 0.93rem; }
+  .g__toc a { display: flex; align-items: center; min-height: 36px; padding: 0.2rem 0; line-height: 1.35; text-decoration: none; }
+  .g__toc a:hover { text-decoration: underline; text-decoration-color: var(--jaune); text-decoration-thickness: 0.35em; text-underline-offset: -0.14em; }
+  .g__body { max-width: 70ch; font-size: 1.0625rem; line-height: 1.75; }
+  .g__body :global(p) { margin: 0 0 1.25em; }
+  .g__body :global(h2) { margin: 2.4em 0 0.7em; scroll-margin-top: 5.5rem; font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.75rem); line-height: 1.15; }
+  .g__body :global(h3) { margin-top: 2em; scroll-margin-top: 5.5rem; font-size: 1.2rem; }
+  .g__body :global(a) { font-weight: 500; }
+  .g__body :global(ul) { list-style: none; padding-left: 0; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: 0.5em; }
+  .g__body :global(ul li) { position: relative; padding-left: 1.5em; }
+  .g__body :global(ul li::before) { content: ''; position: absolute; left: 0.15em; top: 0.72em; width: 0.5em; height: 0.5em; border-radius: 50%; background: var(--jaune); }
+  .g__body :global(ol) { padding-left: 1.7em; margin: 0 0 1.4em; display: flex; flex-direction: column; gap: 0.55em; }
+  .g__body :global(ol li::marker) { font-family: var(--font-mono); font-size: 0.85em; color: var(--gris); }
+  #questions-frequentes, #les-comparatifs-a-lire { scroll-margin-top: 5.5rem; }
+  .g__faq-item { margin-bottom: 0.6rem; padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .g__faq-item summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 44px; cursor: pointer; padding: 1rem 0.2rem; font-weight: 600; font-size: 1.05rem; line-height: 1.35; list-style: none; }
+  .g__faq-item summary::-webkit-details-marker { display: none; }
+  .g__faq-signe { position: relative; flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--jaune-pale); }
+  .g__faq-signe::before, .g__faq-signe::after { content: ''; position: absolute; left: 8px; right: 8px; top: 50%; height: 2px; background: var(--mine); transition: transform 0.2s var(--ease-out); }
+  .g__faq-signe::after { transform: rotate(90deg); }
+  .g__faq-item[open] .g__faq-signe::after { transform: rotate(0deg); }
+  .g__faq-item p { margin: 0 0 1.1rem; padding-right: 2rem; color: var(--gris); line-height: 1.65; }
   @media (max-width: 960px) { .g__grid { grid-template-columns: 1fr; } .g__side { position: static; } }
   @media (max-width: 480px) { .g__steps { padding: 0.2rem 0.9rem; } .g__step { grid-template-columns: 2.2rem minmax(0, 1fr); } .g__step-num { width: 26px; height: 26px; font-size: 0.75rem; } }
 </style>

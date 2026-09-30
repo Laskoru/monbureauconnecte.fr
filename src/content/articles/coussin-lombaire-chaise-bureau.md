@@ -101,3 +101,4 @@ Le coussin lombaire pour chaise de bureau est l'un des accessoires les plus rent
 - [Coussin d'assise ergonomique (coccyx)](/articles/coussin-assise-ergonomique-coccyx/)
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
 - [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

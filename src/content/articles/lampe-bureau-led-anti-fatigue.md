@@ -120,3 +120,4 @@ Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers po
 - [Bras support d'écran articulé](/articles/bras-support-ecran-articule/)
 - [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

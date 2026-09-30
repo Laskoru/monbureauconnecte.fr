@@ -129,3 +129,4 @@ Le bureau assis-debout n'est pas un gadget : c'est l'un des achats qui a le plus
 - [Tapis de sol pour chaise de bureau](/articles/tapis-sol-chaise-bureau/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [Bureau d'angle pour petit espace : comment bien choisir](/articles/bureau-angle-petit-espace/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

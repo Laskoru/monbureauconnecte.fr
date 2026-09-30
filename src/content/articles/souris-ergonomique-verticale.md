@@ -121,3 +121,4 @@ Côté budget, on trouve des modèles corrects **dès 25-35 €**, et les réfé
 - [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)
 - [Souris sans fil silencieuse](/articles/souris-sans-fil-silencieuse/)
 - [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
