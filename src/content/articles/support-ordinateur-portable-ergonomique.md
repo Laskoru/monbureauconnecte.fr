@@ -100,7 +100,7 @@ Deux solutions pour remonter l'écran, deux usages. Le **support portable** est 
 
 ## Bien régler la hauteur, éviter les erreurs
 
-Une fois le support en place, le réglage compte autant que l'achat. La règle est la même que pour un écran classique : le **haut de l'écran juste sous le niveau des yeux**, à environ une longueur de bras. Sur un portable, cela revient souvent à le surélever plus qu'on ne le croit : monte d'un cran de plus que ton premier réflexe, la tendance naturelle étant de rester trop bas.
+Une fois le support en place, le réglage compte autant que l'achat. La règle est la même que pour un écran classique : le **haut de l'écran juste sous le niveau des yeux**, à environ une longueur de bras. Sur un portable, cela revient souvent à le surélever plus qu'on ne le croit : monte d'un cran de plus que ton premier réflexe, la tendance naturelle étant de rester trop bas. Si tu branches un moniteur externe, le [calculateur de taille d'écran et de distance](/calculateur-taille-ecran/) t'indique où le placer selon sa taille.
 
 Trois erreurs reviennent souvent. **Utiliser le support sans clavier externe** : on l'a dit, c'est le piège n°1, qui déplace la tension vers les épaules. **Choisir un support instable** : s'il vibre quand on touche l'écran ou le clavier intégré, on n'osera pas s'appuyer et on s'en méfiera. **Négliger la ventilation** sur un portable qui chauffe : un support plein peut piéger la chaleur, alors qu'un modèle ajouré l'évacue. Enfin, pense à la **connectique** : une fois l'ordinateur surélevé et fermé (ou en écran secondaire), un [hub ou une station d'accueil](/articles/hub-usb-c-station-accueil/) évite de tendre les câbles vers un portable désormais en hauteur.
 

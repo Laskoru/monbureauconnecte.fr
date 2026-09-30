@@ -7,6 +7,7 @@ import { siteConfig } from '../siteConfig';
 // Outils gratuits — l'aimant à liens de Mon Bureau Connecté.
 const tools = [
   { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Trouve la hauteur idéale de ton bureau (assis et assis-debout), de ton siège et de ton écran selon ta taille, en un instant.', href: '/calculateur-hauteur-bureau/', cta: 'Ouvrir le calculateur' },
+  { icon: 'monitor', title: "Taille d'écran et distance de vision", desc: "Dimensions réelles, densité de pixels, distance et hauteur conseillées pour ton écran, ou les diagonales qui tiennent sur ton bureau.", href: '/calculateur-taille-ecran/', cta: 'Calculer mon écran' },
   { icon: 'posture', title: 'Le poste de travail idéal', desc: "Le schéma coté des bons réglages : hauteur d'écran, angle des coudes, soutien du dos, pieds à plat, tout en un coup d'œil.", href: '/poste-de-travail-ideal/', cta: 'Voir le schéma' },
   { icon: 'checklist', title: 'Checklist ergonomie du poste', desc: 'Règle ton poste comme il faut : écran, siège, clavier, souris, lumière et pauses. La checklist complète, cochable et mémorisée.', href: '/checklist-bureau-ergonomique/', cta: 'Voir la checklist' },
   { icon: 'cpu', title: 'Guide PC gaming pièce par pièce', desc: '4 configurations complètes selon ton budget, du premier PC au haut de gamme, avec les critères de chaque composant.', href: '/guide-pc-gaming/', cta: 'Composer mon PC' },
@@ -15,7 +16,7 @@ const tools = [
 ];
 ---
 
-<BaseLayout title="Outils gratuits" description={`Des outils gratuits pour équiper et régler ton poste de travail : calculateur de hauteur de bureau, schéma du poste idéal, checklist ergonomie, guide de montage PC, lexique. ${siteConfig.name}.`}>
+<BaseLayout title="Outils gratuits" description={`Des outils gratuits pour équiper et régler ton poste de travail : calculateur de hauteur de bureau, taille d'écran, schéma du poste idéal, checklist ergonomie, guide de montage PC, lexique. ${siteConfig.name}.`}>
   <PageHead
     eyebrow="100 % gratuit · sans inscription"
     title="Outils gratuits"

@@ -93,7 +93,7 @@ Une webcam **4K** a un vrai intérêt dans deux cas : les **présentations** où
 
 Une webcam moyenne bien installée rend mieux qu'une 4K mal placée. Trois réglages font l'essentiel du résultat :
 
-- **La hauteur** : place la caméra **à hauteur des yeux**, pas en contre-plongée. Une webcam externe posée sur l'écran (ou sur un petit trépied) évite l'angle « plongée sur le menton » des caméras de portable.
+- **La hauteur** : place la caméra **à hauteur des yeux**, pas en contre-plongée. Une webcam externe posée sur l'écran (ou sur un petit trépied) évite l'angle « plongée sur le menton » des caméras de portable. Comme la webcam suit la hauteur de l'écran, commence par placer celui-ci correctement : notre [calculateur de taille d'écran et de distance](/calculateur-taille-ecran/) donne la distance et la hauteur conseillées pour le tien.
 - **La lumière** : la source principale doit venir **de face**, pas de derrière. Une fenêtre ou une lampe devant toi éclaire le visage ; une fenêtre dans le dos te transforme en silhouette. Une [ring light](/articles/ring-light-eclairage-visio/) règle le problème dans une pièce sombre.
 - **Le fond** : un arrière-plan dégagé et pas trop lumineux aide la webcam à bien t'exposer.
 

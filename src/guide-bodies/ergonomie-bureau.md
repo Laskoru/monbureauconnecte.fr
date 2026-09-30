@@ -32,7 +32,7 @@ Un [bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/) 
 
 ## L'écran : hauteur, distance et reflets
 
-C'est souvent le réglage qui soulage le plus vite la nuque. Le **haut de l'écran** doit arriver à **hauteur des yeux, ou juste en dessous**, jamais plus bas : regarder vers le bas en permanence tire sur les muscles du cou. L'écran se place **bien en face de toi**, à environ **une longueur de bras (50 à 70 cm)**, légèrement incliné vers l'arrière.
+C'est souvent le réglage qui soulage le plus vite la nuque. Le **haut de l'écran** doit arriver à **hauteur des yeux, ou juste en dessous**, jamais plus bas : regarder vers le bas en permanence tire sur les muscles du cou. L'écran se place **bien en face de toi**, à environ **une longueur de bras (50 à 70 cm)**, légèrement incliné vers l'arrière. Le [calculateur de taille d'écran](/calculateur-taille-ecran/) précise la distance selon la taille et la définition de ton écran, et les diagonales qui tiennent sur ton bureau.
 
 Pour les reflets, place l'écran **perpendiculaire aux fenêtres**, jamais face à elles ni dos à elles, et règle sa luminosité proche de celle de la pièce. Le schéma du [poste de travail idéal](/poste-de-travail-ideal/) résume ces repères en un coup d'œil.
 

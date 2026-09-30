@@ -1,0 +1,531 @@
+---
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../siteConfig';
+
+// ── Règles (sources en bas de page) ─────────────────────────────────────────────
+// INRS, travail sur écran : distance œil-écran de 50 à 70 cm (une longueur de bras),
+// haut de l'écran au niveau des yeux (plus bas avec des verres progressifs).
+// INRS, brochure ED 924 : distance optimale = 170 × la hauteur des majuscules affichées ;
+// en dessous de 50 cm, la fatigue visuelle augmente.
+const DIST_MIN = 50;
+const DIST_MAX = 70;
+const K_INRS = 170;
+// Texte de référence : 16 px (taille par défaut des navigateurs) à 100 % d'affichage ;
+// hauteur des majuscules ≈ 0,7 fois la taille de la police (polices d'interface courantes).
+const TEXTE_PX = 16;
+const CAP_RATIO = 0.7;
+const ECHELLES = [100, 125, 150, 175, 200];
+
+// Définitions courantes par format (pixels réels : les dimensions se calculent sur ce ratio exact).
+const FORMATS = {
+  '16:9': [
+    { id: '1080p', label: '1080p (Full HD, 1920 × 1080)', w: 1920, h: 1080 },
+    { id: '1440p', label: '1440p (QHD, 2560 × 1440)', w: 2560, h: 1440 },
+    { id: '4k', label: '4K (UHD, 3840 × 2160)', w: 3840, h: 2160 },
+    { id: '5k', label: '5K (5120 × 2880)', w: 5120, h: 2880 },
+  ],
+  '16:10': [
+    { id: 'wuxga', label: 'WUXGA (1920 × 1200)', w: 1920, h: 1200 },
+    { id: 'wqxga', label: 'WQXGA (2560 × 1600)', w: 2560, h: 1600 },
+    { id: 'wquxga', label: 'WQUXGA (3840 × 2400)', w: 3840, h: 2400 },
+  ],
+  '21:9': [
+    { id: 'uwfhd', label: 'UWFHD (2560 × 1080)', w: 2560, h: 1080 },
+    { id: 'uwqhd', label: 'UWQHD (3440 × 1440)', w: 3440, h: 1440 },
+    { id: '5k2k', label: '5K2K (5120 × 2160)', w: 5120, h: 2160 },
+  ],
+};
+
+// Mode « j'ai tant de place » : formats courants pour chaque usage.
+const USAGES = {
+  bureautique: {
+    label: 'Bureautique',
+    note: "Pour du texte toute la journée, la netteté compte plus que la taille : une densité plus élevée permet d'agrandir l'affichage sans perdre de place utile.",
+    ecrans: [
+      { d: 24, w: 1920, h: 1080, nom: '24 pouces 1080p' },
+      { d: 24, w: 1920, h: 1200, nom: '24 pouces 16:10 (1920 × 1200)' },
+      { d: 27, w: 2560, h: 1440, nom: '27 pouces 1440p' },
+      { d: 27, w: 3840, h: 2160, nom: '27 pouces 4K' },
+      { d: 32, w: 3840, h: 2160, nom: '32 pouces 4K' },
+    ],
+    lien: { href: '/articles/bien-regler-chaise-ecran-ergonomie-gratuite/', label: 'Bien régler sa chaise et son écran' },
+  },
+  gaming: {
+    label: 'Gaming',
+    note: 'Plus la définition monte, plus la carte graphique doit suivre : il faut monter d’un cran pour du 1440p fluide, et bien plus pour la 4K (voir notre guide de configuration).',
+    ecrans: [
+      { d: 24, w: 1920, h: 1080, nom: '24 pouces 1080p' },
+      { d: 27, w: 2560, h: 1440, nom: '27 pouces 1440p' },
+      { d: 32, w: 2560, h: 1440, nom: '32 pouces 1440p' },
+      { d: 34, w: 3440, h: 1440, nom: '34 pouces 21:9 (3440 × 1440)' },
+    ],
+    lien: { href: '/articles/quelle-config-pc-gaming-choisir/', label: 'Quelle config PC gaming choisir' },
+  },
+  montage: {
+    label: 'Montage, photo',
+    note: "Plus de pixels, c'est plus de place pour la timeline et les palettes, et une image affichée avec plus de détail.",
+    ecrans: [
+      { d: 27, w: 2560, h: 1440, nom: '27 pouces 1440p' },
+      { d: 27, w: 3840, h: 2160, nom: '27 pouces 4K' },
+      { d: 32, w: 3840, h: 2160, nom: '32 pouces 4K' },
+      { d: 34, w: 3440, h: 1440, nom: '34 pouces 21:9 (3440 × 1440)' },
+    ],
+    lien: { href: '/articles/lampe-bureau-led-anti-fatigue/', label: 'Lampe de bureau et reflets' },
+  },
+};
+
+const AMAZON_TAG = siteConfig.amazon.tag;
+
+const faq = [
+  {
+    question: 'À quelle distance placer son écran ?',
+    answer:
+      "L'INRS retient une distance œil-écran de 50 à 70 cm, soit environ une longueur de bras, à adapter à la taille et à la résolution de l'écran. En dessous de 50 cm, la fatigue visuelle augmente. Si le texte est trop petit à cette distance, agrandis l'affichage plutôt que d'approcher l'écran.",
+  },
+  {
+    question: "À quelle hauteur mettre le haut de l'écran ?",
+    answer:
+      "Au niveau des yeux, selon l'INRS, et un peu plus bas si tu portes des verres progressifs. Le regard descend alors naturellement vers le centre de l'écran, sans lever le menton.",
+  },
+  {
+    question: "Quelle taille d'écran pour un bureau de 60 cm de profondeur ?",
+    answer:
+      "Tout dépend de la place prise par le pied de l'écran. Avec 15 cm de recul, il reste environ 45 cm entre tes yeux et la dalle, sous les 50 cm conseillés : un bras articulé, qui rapproche la dalle du fond du bureau, ou un bureau plus profond (l'INRS recommande au moins 80 cm) règle le problème. Le calculateur fait le compte pour ta profondeur.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+};
+
+const appSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: "Calculateur de taille d'écran et de distance de vision",
+  applicationCategory: 'UtilityApplication',
+  operatingSystem: 'Tout navigateur',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+  description:
+    "Calcule les dimensions réelles d'un écran, sa densité de pixels, la distance de vision conseillée et la hauteur de l'écran, ou les diagonales adaptées à la profondeur de ton bureau.",
+};
+---
+
+<BaseLayout
+  title="Quelle taille d'écran ? Calculateur de distance écran"
+  description="Quelle taille d'écran pour ton bureau ? Ce calculateur gratuit donne dimensions, densité de pixels, distance de vision conseillée et hauteur de l'écran."
+  jsonLd={[appSchema, faqSchema]}
+  search="Outil"
+>
+  <PageHead eyebrow="Outil gratuit · sans inscription" title="Quelle taille d'écran pour ton bureau ?" lede="Entre ton écran pour connaître ses dimensions réelles, sa netteté et la distance où le placer, ou pars de la profondeur de ton bureau pour savoir quelles diagonales y tiennent. Les règles de distance et de hauteur viennent de l'INRS." icon="monitor" crumbs={[{ label: 'Accueil', href: '/' }, { label: 'Outils', href: '/outils/' }, { label: "Calculateur de taille d'écran" }]} width="narrow" />
+
+  <section class="container scr">
+    <div class="scr__tool">
+      <fieldset class="scr__modes">
+        <legend>Ton point de départ</legend>
+        <label class="scr__mode"><input type="radio" name="mode" value="ecran" checked /> <span>J'ai un écran</span></label>
+        <label class="scr__mode"><input type="radio" name="mode" value="place" /> <span>J'ai tant de place</span></label>
+      </fieldset>
+
+      <!-- ── Mode 1 : j'ai un écran ── -->
+      <div class="scr__panel" id="panel-ecran">
+        <div class="scr__fields">
+          <div class="scr__field">
+            <label for="diag">Diagonale</label>
+            <div class="scr__num"><input type="number" id="diag" min="10" max="65" step="0.1" value="27" inputmode="decimal" /><span>pouces</span></div>
+          </div>
+          <div class="scr__field">
+            <label for="format">Format</label>
+            <select id="format" class="scr__select">
+              {Object.keys(FORMATS).map((f) => <option value={f} selected={f === '16:9'}>{f}{f === '21:9' ? ' (ultralarge)' : ''}</option>)}
+            </select>
+          </div>
+          <div class="scr__field scr__field--wide">
+            <label for="def">Définition</label>
+            <select id="def" class="scr__select">
+              {FORMATS['16:9'].map((d) => <option value={d.id} selected={d.id === '1440p'}>{d.label}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div class="scr__results" aria-live="polite">
+          <div class="scr__result">
+            <p class="scr__result-label">Dimensions de la dalle</p>
+            <p class="scr__result-value"><span data-out="lxh">59,8 × 33,6</span> cm</p>
+            <p class="scr__result-hint">largeur × hauteur</p>
+          </div>
+          <div class="scr__result">
+            <p class="scr__result-label">Densité de pixels</p>
+            <p class="scr__result-value"><span data-out="ppi">109</span> PPI</p>
+            <p class="scr__result-hint"><span data-out="pitch">0,233</span> mm par pixel</p>
+          </div>
+          <div class="scr__result">
+            <p class="scr__result-label">Distance conseillée</p>
+            <p class="scr__result-value"><span data-out="dist">56</span> cm</p>
+            <p class="scr__result-hint">affichage à <span data-out="echelle">125</span> %</p>
+          </div>
+          <div class="scr__result">
+            <p class="scr__result-label">Haut de l'écran</p>
+            <p class="scr__result-value"><span>0</span> cm</p>
+            <p class="scr__result-hint">sous les yeux : au même niveau</p>
+          </div>
+        </div>
+
+        <p class="scr__verdict" id="verdict-ecran" role="status"></p>
+
+        <div class="scr__table-wrap">
+          <table class="scr__table">
+            <caption>Distance où le texte a la taille idéale, selon la mise à l'échelle de l'affichage</caption>
+            <thead><tr><th scope="col">Affichage</th><th scope="col">Majuscules</th><th scope="col">Distance idéale</th></tr></thead>
+            <tbody id="scale-rows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── Mode 2 : j'ai tant de place ── -->
+      <div class="scr__panel" id="panel-place" hidden>
+        <div class="scr__fields">
+          <div class="scr__field">
+            <label for="prof">Profondeur du bureau</label>
+            <div class="scr__num"><input type="number" id="prof" min="40" max="140" step="1" value="70" inputmode="numeric" /><span>cm</span></div>
+          </div>
+          <div class="scr__field">
+            <label for="recul">Recul de la dalle</label>
+            <div class="scr__num"><input type="number" id="recul" min="0" max="60" step="1" value="15" inputmode="numeric" aria-describedby="recul-aide" /><span>cm</span></div>
+          </div>
+          <div class="scr__field scr__field--wide">
+            <label for="usage">Usage</label>
+            <select id="usage" class="scr__select">
+              {Object.entries(USAGES).map(([k, u]) => <option value={k}>{u.label}</option>)}
+            </select>
+          </div>
+        </div>
+        <p class="scr__aide" id="recul-aide">Le recul, c'est la distance entre le fond du bureau et l'écran, pied et câbles compris : mesure-le. Sur un bras articulé, il tombe souvent près de 0. On suppose tes yeux à l'aplomb du bord avant du bureau.</p>
+
+        <div class="scr__results scr__results--2" aria-live="polite">
+          <div class="scr__result">
+            <p class="scr__result-label">Distance yeux-écran possible</p>
+            <p class="scr__result-value"><span data-out2="dmax">55</span> cm</p>
+            <p class="scr__result-hint">profondeur − recul</p>
+          </div>
+          <div class="scr__result">
+            <p class="scr__result-label">Distance de calcul</p>
+            <p class="scr__result-value"><span data-out2="dcalc">55</span> cm</p>
+            <p class="scr__result-hint">plafonnée à 70 cm</p>
+          </div>
+        </div>
+        <p class="scr__verdict" id="verdict-place" role="status"></p>
+        <ul class="scr__cands" id="cands" aria-label="Écrans courants pour cet usage"></ul>
+        <p class="scr__note" id="usage-note"></p>
+      </div>
+
+      <div class="scr__after" id="amazon-ecran">
+        <a class="btn btn--buy scr__amazon" id="amazon" href={`https://www.amazon.fr/s?k=${encodeURIComponent('écran 27 pouces 1440p')}&tag=${AMAZON_TAG}`} target="_blank" rel="nofollow sponsored noopener">Voir « <span id="amazon-q">écran 27 pouces 1440p</span> » sur Amazon <Icon name="external" size={16} /></a>
+      </div>
+      <p class="scr__disclose">Liens de recherche Amazon affiliés : ils ne changent rien au prix, et nous touchons une petite commission en cas d'achat.</p>
+    </div>
+
+    <h2>Placer l'écran une fois choisi</h2>
+    <div class="scr__links">
+      <a class="scr__link" href="/articles/bras-support-ecran-articule/">
+        <strong>Bras d'écran articulé</strong>
+        <span>Règle hauteur, recul et inclinaison au centimètre, et rend de la profondeur au bureau.</span>
+        <Icon name="arrow" size={18} />
+      </a>
+      <a class="scr__link" href="/articles/bien-regler-chaise-ecran-ergonomie-gratuite/">
+        <strong>Régler chaise et écran</strong>
+        <span>Les réglages gratuits, dans l'ordre où ils comptent : hauteur, distance, reflets.</span>
+        <Icon name="arrow" size={18} />
+      </a>
+      <a class="scr__link" href="/calculateur-hauteur-bureau/">
+        <strong>Hauteur de bureau</strong>
+        <span>Ta taille donne la hauteur du plateau, du siège et du haut de l'écran depuis le sol.</span>
+        <Icon name="arrow" size={18} />
+      </a>
+      <a class="scr__link" id="usage-link" href="/articles/support-ordinateur-portable-ergonomique/">
+        <strong>Support pour portable</strong>
+        <span>Si ton écran principal est celui du portable : le remonter au niveau des yeux.</span>
+        <Icon name="arrow" size={18} />
+      </a>
+    </div>
+
+    <h2>Comment on calcule</h2>
+    <p><strong>Les dimensions</strong> viennent de la géométrie : la diagonale <em>d</em> et les pixels de la dalle (<em>L</em> × <em>H</em>) suffisent. La largeur vaut <em>d</em> × <em>L</em> / √(<em>L</em>² + <em>H</em>²), la hauteur <em>d</em> × <em>H</em> / √(<em>L</em>² + <em>H</em>²), en pouces, puis × 2,54 pour les centimètres. On part des pixels réels plutôt que du nom du format : un « 21:9 » en 3440 × 1440 est en fait en 43:18.</p>
+    <p><strong>La densité (PPI, pixels par pouce)</strong> vaut √(<em>L</em>² + <em>H</em>²) / <em>d</em>. Un pixel mesure donc 25,4 / PPI millimètres.</p>
+    <p><strong>La distance conseillée</strong> combine deux repères de l'INRS : une distance œil-écran de <strong>50 à 70 cm</strong>, à adapter à la taille et à la résolution de l'écran, et une distance optimale égale à <strong>170 fois la hauteur des majuscules</strong> affichées. Pour estimer cette hauteur, on prend un texte de {TEXTE_PX} px (la taille par défaut des navigateurs) dont les majuscules font environ {CAP_RATIO.toString().replace('.', ',')} fois la taille de la police, multiplié par la mise à l'échelle de l'affichage (100 %, 125 %…). Le calculateur retient la plus petite mise à l'échelle qui place cette distance idéale entre 50 et 70 cm. C'est une estimation : tes polices et tes réglages changent un peu le résultat, ton confort de lecture reste le juge.</p>
+    <p><strong>La hauteur</strong> suit l'INRS : le haut de l'écran au niveau des yeux, un peu plus bas avec des verres progressifs. Le centre de l'écran se trouve alors une demi-hauteur de dalle sous tes yeux ; l'angle du regard vaut arctan(demi-hauteur / distance).</p>
+    <p><strong>Le mode « j'ai tant de place »</strong> part de la distance disponible (profondeur du bureau moins le recul de la dalle), plafonnée à 70 cm puisqu'on peut toujours avancer l'écran, puis cherche pour chaque écran courant la mise à l'échelle qui donne des majuscules de la bonne taille à cette distance. L'angle indiqué est la largeur de la dalle vue depuis tes yeux, 2 × arctan(demi-largeur / distance) : plus il est grand, plus tu tournes la tête pour en voir les bords. Un écran est jugé adapté si cette mise à l'échelle tombe entre 100 % et 200 % environ : en dessous, texte et pixels sont trop gros pour la distance ; au-delà, l'écran est si fin qu'il faudrait tout agrandir.</p>
+
+    <div class="scr__sources" data-pagefind-ignore>
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://www.inrs.fr/risques/travail-ecran/prevention-risques.html" target="_blank" rel="noopener">Travail sur écran : prévention des risques (INRS)</a> : distance œil-écran de 50 à 70 cm, haut de l'écran au niveau des yeux, plus bas avec des verres progressifs.</li>
+        <li><a href="https://www.inrs.fr/media.html?refINRS=ED%20924" target="_blank" rel="noopener">Écrans de visualisation, santé et ergonomie, brochure ED 924 (INRS)</a> : distance optimale égale à 170 fois la hauteur des majuscules ; fatigue visuelle accrue en dessous de 50 cm.</li>
+        <li><a href="/articles/bureau-assis-debout-electrique/">Bureau assis-debout électrique</a> : l'INRS recommande au moins 80 cm de profondeur de plateau pour un poste sur écran.</li>
+      </ul>
+    </div>
+
+    <h2>Questions fréquentes</h2>
+    <div class="scr__faq">
+      {faq.map((f) => (
+        <details>
+          <summary>{f.question}</summary>
+          <p>{f.answer}</p>
+        </details>
+      ))}
+    </div>
+
+    <p class="scr__share">
+      Cet outil est en accès libre : tu peux le partager ou y faire un lien. Une remarque, une erreur à
+      signaler ? Écris-nous à <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+    </p>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ FORMATS, USAGES, DIST_MIN, DIST_MAX, K_INRS, TEXTE_PX, CAP_RATIO, ECHELLES, AMAZON_TAG }}>
+  (function () {
+    var $ = function (id) { return document.getElementById(id); };
+    var nf1 = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    var nf3 = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+    var r0 = function (x) { return String(Math.round(x)); };
+
+    // Géométrie pure
+    function geo(diag, w, h) {
+      var px = Math.sqrt(w * w + h * h);
+      return { largeur: (diag * w / px) * 2.54, hauteur: (diag * h / px) * 2.54, ppi: px / diag };
+    }
+    // Hauteur des majuscules (mm) et distance idéale INRS (cm) pour une mise à l'échelle donnée
+    function capMm(ppi, echelle) { return (TEXTE_PX * CAP_RATIO * (echelle / 100) / ppi) * 25.4; }
+    function distIdeale(ppi, echelle) { return (K_INRS * capMm(ppi, echelle)) / 10; }
+
+    function setAmazon(q) {
+      $('amazon').href = 'https://www.amazon.fr/s?k=' + encodeURIComponent(q) + '&tag=' + AMAZON_TAG;
+      $('amazon-q').textContent = q;
+    }
+
+    // ── Mode 1 ──
+    var diagEl = $('diag'), formatEl = $('format'), defEl = $('def');
+    function fillDefs() {
+      var list = FORMATS[formatEl.value], keep = defEl.value, found = false;
+      defEl.innerHTML = '';
+      list.forEach(function (d, i) {
+        var o = document.createElement('option');
+        o.value = d.id; o.textContent = d.label;
+        if (d.id === keep) { o.selected = true; found = true; }
+        defEl.appendChild(o);
+      });
+      if (!found) defEl.selectedIndex = Math.min(1, list.length - 1);
+    }
+    function renderEcran() {
+      var diag = parseFloat(String(diagEl.value).replace(',', '.'));
+      if (!(diag >= 10 && diag <= 65)) return;
+      var def = FORMATS[formatEl.value].find(function (d) { return d.id === defEl.value; });
+      var g = geo(diag, def.w, def.h);
+
+      // Plus petite mise à l'échelle dont la distance idéale tombe dans 50-70 cm ;
+      // sinon, celle qui s'en approche le plus, et on borne la distance à la plage INRS.
+      var choix = null, meilleur = null, ecartMin = Infinity;
+      var rows = ECHELLES.map(function (e) {
+        var d = distIdeale(g.ppi, e);
+        var dedans = d >= DIST_MIN && d <= DIST_MAX;
+        if (dedans && !choix) choix = { e: e, d: d };
+        var ecart = d < DIST_MIN ? DIST_MIN - d : d > DIST_MAX ? d - DIST_MAX : 0;
+        if (ecart < ecartMin) { ecartMin = ecart; meilleur = { e: e, d: d }; }
+        return { e: e, cap: capMm(g.ppi, e), d: d, dedans: dedans };
+      });
+      var retenu = choix || meilleur;
+      var dist = Math.min(DIST_MAX, Math.max(DIST_MIN, retenu.d));
+
+      document.querySelector('[data-out="lxh"]').textContent = nf1.format(g.largeur) + ' × ' + nf1.format(g.hauteur);
+      document.querySelector('[data-out="ppi"]').textContent = r0(g.ppi);
+      document.querySelector('[data-out="pitch"]').textContent = nf3.format(25.4 / g.ppi);
+      document.querySelector('[data-out="dist"]').textContent = r0(dist);
+      document.querySelector('[data-out="echelle"]').textContent = retenu.e;
+
+      $('scale-rows').innerHTML = rows.map(function (r) {
+        return '<tr' + (r.e === retenu.e ? ' class="is-choice"' : '') + '><th scope="row">' + r.e + ' %</th><td>' + nf1.format(r.cap) + ' mm</td><td>' + r0(r.d) + ' cm' + (r.dedans ? ' <span class="scr__ok">dans la plage</span>' : '') + '</td></tr>';
+      }).join('');
+
+      var centre = g.hauteur / 2;
+      var angle = Math.atan(centre / dist) * 180 / Math.PI;
+      var msg = 'Place l\'écran à <strong>' + r0(dist) + ' cm</strong> de tes yeux, affichage à <strong>' + retenu.e + ' %</strong>. ' +
+        'Haut de la dalle au niveau des yeux : son centre est alors <strong>' + nf1.format(centre) + ' cm plus bas</strong> que tes yeux (regard incliné d\'environ ' + r0(angle) + '°), le bas à ' + nf1.format(g.hauteur) + ' cm.';
+      if (!choix) {
+        msg += retenu.d > DIST_MAX
+          ? ' Même à 100 %, le texte est gros pour cette distance : la dalle est peu dense pour sa taille.'
+          : ' Même à 200 %, le texte reste petit : agrandis encore l\'affichage ou le zoom des applications.';
+      }
+      $('verdict-ecran').innerHTML = msg;
+      setAmazon('écran ' + (Math.round(diag * 10) / 10).toString().replace('.', ',') + ' pouces ' + (def.id.length <= 5 && /\d/.test(def.id) ? def.id.toUpperCase().replace('P', 'p') : def.w + 'x' + def.h));
+    }
+
+    // ── Mode 2 ──
+    var profEl = $('prof'), reculEl = $('recul'), usageEl = $('usage');
+    function renderPlace() {
+      var prof = parseFloat(profEl.value), recul = parseFloat(reculEl.value);
+      if (!(prof >= 40 && prof <= 140) || !(recul >= 0 && recul <= 60)) return;
+      var dmax = prof - recul;
+      // Distance de calcul : la distance possible, plafonnée à 70 cm (on peut avancer l'écran).
+      var d = Math.max(1, Math.min(dmax, DIST_MAX));
+      document.querySelector('[data-out2="dmax"]').textContent = r0(dmax);
+      document.querySelector('[data-out2="dcalc"]').textContent = r0(d);
+
+      var v = $('verdict-place');
+      if (dmax < DIST_MIN) {
+        v.className = 'scr__verdict scr__verdict--warn';
+        v.innerHTML = 'Il ne reste que <strong>' + r0(dmax) + ' cm</strong> : c\'est sous les 50 cm conseillés par l\'INRS, en dessous desquels la fatigue visuelle augmente. Un bras articulé (recul proche de 0) ou un bureau plus profond (l\'INRS recommande au moins 80 cm) règle le problème. Écrans calculés pour ' + r0(d) + ' cm :';
+      } else if (dmax > DIST_MAX) {
+        v.className = 'scr__verdict scr__verdict--ok';
+        v.innerHTML = 'Tu as de la marge : <strong>' + r0(dmax) + ' cm</strong> possibles. Avance l\'écran pour rester vers <strong>70 cm</strong>, la limite haute conseillée. Écrans calculés pour 70 cm :';
+      } else {
+        v.className = 'scr__verdict scr__verdict--ok';
+        v.innerHTML = '<strong>' + r0(dmax) + ' cm</strong> : tu es dans la plage de 50 à 70 cm conseillée par l\'INRS. Écrans calculés pour cette distance :';
+      }
+
+      var u = USAGES[usageEl.value];
+      $('cands').innerHTML = u.ecrans.map(function (s) {
+        var g = geo(s.d, s.w, s.h);
+        var besoin = (d / distIdeale(g.ppi, 100)) * 100; // mise à l'échelle nécessaire, en %
+        var palier = ECHELLES.reduce(function (a, b) { return Math.abs(b - besoin) < Math.abs(a - besoin) ? b : a; });
+        var angle = 2 * Math.atan(g.largeur / 2 / d) * 180 / Math.PI;
+        var etat, cls, lien = '';
+        if (besoin < 93) { etat = 'peu dense pour ' + r0(d) + ' cm : pixels plus visibles, texte plus gros que nécessaire'; cls = 'is-bof'; }
+        else if (besoin > 210) { etat = 'trop fin : il faudrait agrandir au-delà de 200 %'; cls = 'is-bof'; }
+        else {
+          etat = 'adapté, affichage à ' + palier + ' %'; cls = 'is-ok';
+          var q = 'écran ' + s.nom.replace(/ \(.*\)$/, '').replace(' 21:9', ' ultrawide');
+          lien = '<a class="scr__cand-amz" href="https://www.amazon.fr/s?k=' + encodeURIComponent(q) + '&tag=' + AMAZON_TAG + '" target="_blank" rel="nofollow sponsored noopener">Voir « ' + q + ' » sur Amazon</a>';
+        }
+        return '<li class="' + cls + '"><span class="scr__cand-nom">' + s.nom + '</span><span class="scr__cand-mes">' + nf1.format(g.largeur) + ' × ' + nf1.format(g.hauteur) + ' cm · ' + r0(g.ppi) + ' PPI · ' + r0(angle) + '° de largeur vue à ' + r0(d) + ' cm</span><span class="scr__cand-etat">' + etat + '</span>' + lien + '</li>';
+      }).join('');
+      $('usage-note').textContent = u.note;
+      var ul = $('usage-link');
+      ul.href = u.lien.href;
+      ul.querySelector('strong').textContent = u.lien.label;
+      ul.querySelector('span').textContent = 'Pour aller plus loin sur ton usage.';
+    }
+
+    // ── Bascule de mode ──
+    function mode() {
+      var m = document.querySelector('input[name="mode"]:checked').value;
+      $('panel-ecran').hidden = m !== 'ecran';
+      $('panel-place').hidden = m !== 'place';
+      $('amazon-ecran').hidden = m !== 'ecran'; // en mode « place », chaque écran adapté a son lien
+      if (m === 'ecran') renderEcran(); else renderPlace();
+    }
+    document.querySelectorAll('input[name="mode"]').forEach(function (r) { r.addEventListener('change', mode); });
+    formatEl.addEventListener('change', function () { fillDefs(); renderEcran(); });
+    [diagEl, defEl].forEach(function (el) { el.addEventListener('input', renderEcran); el.addEventListener('change', renderEcran); });
+    [profEl, reculEl, usageEl].forEach(function (el) { el.addEventListener('input', renderPlace); el.addEventListener('change', renderPlace); });
+    mode();
+  })();
+</script>
+
+<style>
+  .scr { padding-top: 2.6rem; padding-bottom: 4.5rem; }
+  .scr h2 { margin: 3.2rem 0 0.8rem; font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); }
+  .scr__tool { margin: 0 0 2.6rem; }
+
+  /* Bascule de mode : deux pilules, la choisie en lime */
+  .scr__modes { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.6rem; padding: 0; border: 0; }
+  .scr__modes legend { margin: 0 0 0.6rem; padding: 0; font-weight: 700; font-size: 0.95rem; }
+  .scr__mode { position: relative; }
+  .scr__mode input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .scr__mode span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.2rem; font-weight: 700; font-size: 0.95rem; background: var(--papier); border: 1.5px solid var(--filet); border-radius: 999px; cursor: pointer; transition: background-color 0.18s ease, border-color 0.18s ease; }
+  .scr__mode input:hover + span { border-color: var(--mine); }
+  .scr__mode input:checked + span { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
+  .scr__mode input:focus-visible + span { outline: 3px solid var(--jaune); outline-offset: 3px; box-shadow: 0 0 0 2px var(--mine); }
+
+  /* Champs : pilules papier à filet ; valeur en Unbounded, unité en mono */
+  .scr__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1.2rem; }
+  .scr__field { display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
+  .scr__field--wide { grid-column: 1 / -1; }
+  .scr__field label { font-weight: 700; font-size: 0.95rem; }
+  .scr__num { display: inline-flex; align-items: baseline; gap: 0.35rem; min-height: 48px; padding: 0.35rem 1.1rem 0.35rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: 999px; box-shadow: var(--ombre); transition: border-color 0.18s ease, box-shadow 0.18s ease; }
+  .scr__num:focus-within { border-color: var(--jaune); box-shadow: 0 0 0 3px var(--jaune-pale); }
+  .scr__num input { width: 100%; min-width: 0; padding: 0; border: 0; background: transparent; color: var(--mine); font-family: var(--font-display); font-weight: 800; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+  .scr__num input::-webkit-outer-spin-button, .scr__num input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .scr__num input:focus { outline: none; box-shadow: none; }
+  .scr__num span { flex-shrink: 0; font-family: var(--font-mono); font-size: 0.9rem; color: var(--gris); }
+  .scr__select { width: 100%; min-height: 48px; padding: 0 2.6rem 0 1.2rem; font: inherit; font-size: 1rem; color: var(--mine); background: var(--papier) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235e6168' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 1rem center / 18px; border: 1px solid var(--filet); border-radius: 999px; box-shadow: var(--ombre); -webkit-appearance: none; appearance: none; cursor: pointer; }
+  .scr__select:focus-visible { border-color: var(--jaune); }
+  .scr__aide { margin: 0.8rem 0 0; font-size: 0.88rem; line-height: 1.55; color: var(--gris); }
+
+  /* Résultats : cartes papier, valeur en Unbounded 800, unité et détail en mono */
+  .scr__results { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; margin: 1.8rem 0 0; }
+  .scr__results--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .scr__result { min-width: 0; padding: 0.9rem 1rem 1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .scr__result-label { margin: 0; font-weight: 600; font-size: 0.82rem; line-height: 1.35; color: var(--gris); }
+  .scr__result-value { margin: 0.5rem 0 0.25rem; font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.1; color: var(--gris); font-variant-numeric: tabular-nums; }
+  .scr__result-value span { font-family: var(--font-display); font-weight: 800; font-size: 1.75rem; letter-spacing: -0.03em; color: var(--mine); }
+  .scr__result-hint { margin: 0; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.4; color: var(--gris); font-variant-numeric: tabular-nums; }
+
+  .scr__verdict { margin: 1.4rem 0 0; padding: 0.9rem 1.1rem; background: var(--papier-2); border-radius: var(--radius); font-size: 1rem; line-height: 1.6; }
+  .scr__verdict:empty { display: none; }
+  .scr__verdict :global(strong) { padding: 0 0.2em; border-radius: 4px; background: var(--jaune-pale); }
+  .scr__verdict--warn :global(strong) { background: var(--jaune); color: var(--sur-jaune); }
+
+  /* Tableau des mises à l'échelle : conteneur arrondi, en-tête papier-2, ligne retenue sur lime pâle */
+  .scr__table-wrap { margin: 1.2rem 0 0; overflow-x: auto; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .scr__table { width: 100%; border-collapse: collapse; font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+  .scr__table caption { padding: 0.8rem 1rem 0.2rem; text-align: left; font-size: 0.85rem; color: var(--gris); }
+  .scr__table th, .scr__table td { padding: 0.6rem 1rem; text-align: left; border-top: 1px solid var(--filet); }
+  .scr__table thead th { font-size: 0.8rem; color: var(--gris); background: var(--papier-2); }
+  .scr__table td { font-family: var(--font-mono); }
+  .scr__table :global(tr.is-choice) { background: var(--jaune-pale); }
+  .scr__table :global(.scr__ok) { margin-left: 0.4em; font-family: var(--font-body); font-size: 0.78rem; font-weight: 600; color: var(--ok); }
+
+  /* Écrans candidats : une carte, une ligne par écran, pastille selon l'état */
+  .scr__cands { list-style: none; margin: 1rem 0 0; padding: 0.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .scr__cands :global(li) { position: relative; display: grid; gap: 0.15rem; padding: 0.8rem 0 0.8rem 1.4rem; }
+  .scr__cands :global(li + li) { border-top: 1px solid var(--filet); }
+  .scr__cands :global(li::before) { content: ''; position: absolute; left: 0; top: 1.25rem; width: 0.6em; height: 0.6em; border-radius: 50%; background: var(--filet-fort); }
+  .scr__cands :global(li.is-ok::before) { background: var(--jaune); box-shadow: 0 0 0 1px var(--mine); }
+  .scr__cands :global(.scr__cand-nom) { font-weight: 700; }
+  .scr__cands :global(.scr__cand-mes) { font-family: var(--font-mono); font-size: 0.82rem; color: var(--gris); }
+  .scr__cands :global(.scr__cand-etat) { font-size: 0.92rem; }
+  .scr__cands :global(li.is-ok .scr__cand-etat) { color: var(--ok); font-weight: 600; }
+  .scr__cands :global(li.is-bof .scr__cand-etat) { color: var(--gene); }
+  .scr__cands :global(.scr__cand-amz) { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; font-size: 0.9rem; font-weight: 600; }
+  .scr__note { margin: 1rem 0 0; font-size: 0.93rem; line-height: 1.6; color: var(--gris); }
+
+  .scr__after { margin: 1.6rem 0 0; }
+  .scr__after[hidden] { display: none; }
+  .scr__amazon { max-width: 100%; white-space: normal; text-align: center; }
+  .scr__disclose { margin: 0.6rem 0 0; font-size: 0.82rem; color: var(--gris); }
+
+  /* Liens : cartes papier, flèche en pastille (comme le calculateur de hauteur) */
+  .scr__links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .scr__link { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto 1fr; align-items: start; gap: 0.35rem 1rem; padding: 1.1rem 1.2rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); color: var(--mine); text-decoration: none; transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease; }
+  .scr__link:hover { transform: translateY(-4px); box-shadow: var(--ombre-2); }
+  .scr__link strong { font-family: var(--font-display); font-weight: 700; font-size: 1rem; line-height: 1.3; letter-spacing: -0.02em; }
+  .scr__link span { grid-column: 1; font-size: 0.92rem; line-height: 1.5; color: var(--gris); }
+  .scr__link :global(svg) { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 36px; height: 36px; padding: 9px; border-radius: 50%; border: 1px solid var(--filet); transition: transform 0.18s var(--ease-out), background-color 0.18s ease, border-color 0.18s ease; }
+  .scr__link:hover :global(svg) { transform: translateX(4px); background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }
+
+  .scr__sources { margin-top: 2.6rem; padding: 0.2rem 1.4rem 1rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .scr__sources h2 { margin: 1rem 0 0.6rem; font-size: 1.1rem; }
+  .scr__sources ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.93rem; line-height: 1.55; }
+
+  .scr__faq { display: grid; gap: 0.6rem; }
+  .scr__faq details { padding: 0 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+  .scr__faq summary { display: flex; align-items: center; gap: 1rem; min-height: 44px; padding: 1rem 0; cursor: pointer; list-style: none; font-weight: 600; font-size: 1.02rem; line-height: 1.4; }
+  .scr__faq summary::-webkit-details-marker { display: none; }
+  .scr__faq summary::after { content: ''; flex-shrink: 0; width: 28px; height: 28px; margin-left: auto; border-radius: 50%; background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, linear-gradient(var(--mine), var(--mine)) center / 2px 12px no-repeat, var(--jaune-pale); }
+  .scr__faq details[open] > summary::after { background: linear-gradient(var(--mine), var(--mine)) center / 12px 2px no-repeat, var(--jaune-pale); }
+  .scr__faq p { margin: 0 0 1.1rem; padding-right: 2rem; line-height: 1.65; color: var(--gris); }
+  .scr__share { margin-top: 2.6rem; font-size: 0.9rem; color: var(--gris); }
+
+  @media (max-width: 640px) {
+    .scr__results { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+    .scr__result { padding: 0.8rem 0.85rem 0.9rem; }
+    .scr__result-value span { font-size: 1.45rem; }
+    .scr__links { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 400px) {
+    .scr__fields { grid-template-columns: 1fr; }
+  }
+</style>
