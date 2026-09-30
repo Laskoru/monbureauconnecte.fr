@@ -1,0 +1,129 @@
+---
+// Encart newsletter (Brevo) avec le cadeau : la checklist ergonomie en PDF.
+// N'affiche RIEN tant que siteConfig.newsletter.actionUrl est vide (voir README,
+// « Activer la newsletter »). Envoi en JavaScript vers l'URL d'action du formulaire
+// Brevo ; un champ piège invisible (email_address_check) écarte les robots.
+// Deux variantes : « card » en fin d'article, « band » sur l'accueil.
+import { siteConfig } from '../siteConfig';
+import Icon from './Icon.astro';
+
+interface Props { variant?: 'card' | 'band' }
+const { variant = 'card' } = Astro.props;
+const { actionUrl } = siteConfig.newsletter;
+const emailField = siteConfig.newsletter.emailField || 'EMAIL';
+const pdf = '/ressources/checklist-ergonomie-poste-de-travail.pdf';
+const uid = `nl-${variant}`;
+---
+
+{actionUrl && (
+  <aside class:list={['nl', `nl--${variant}`]} aria-labelledby={`${uid}-titre`} data-pagefind-ignore="all">
+    <div class="nl__in">
+      <img class="nl__thumb" src="/ressources/checklist-ergonomie-poste-de-travail.png" alt="" width="600" height="849" loading="lazy" decoding="async" />
+      <div class="nl__text">
+        <p class="nl__title" id={`${uid}-titre`}>La checklist ergonomie du poste, en PDF</p>
+        <p class="nl__lede">20 points à cocher pour régler écran, chaise, clavier, lumière et pauses. Elle est offerte quand tu t'inscris, avec nos nouveaux guides.</p>
+
+        <form class="nl__form" action={actionUrl} method="post" data-action={actionUrl} data-field={emailField} novalidate>
+          <label class="nl__label" for={`${uid}-email`}>Ton adresse e-mail</label>
+          <div class="nl__row">
+            <input class="nl__input" id={`${uid}-email`} type="email" name={emailField} autocomplete="email" inputmode="email" required placeholder="prenom@exemple.fr" />
+            <button class="btn btn--primary nl__btn" type="submit">Recevoir la checklist</button>
+          </div>
+          <input type="hidden" name="locale" value="fr" />
+          <div class="nl__trap" aria-hidden="true">
+            <label for={`${uid}-check`}>Ne pas remplir</label>
+            <input id={`${uid}-check`} type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" />
+          </div>
+          <p class="nl__legal">Gratuit, sans spam, désinscription en 1 clic. <a href="/politique-de-confidentialite/#newsletter">Données et confidentialité</a></p>
+          <p class="nl__msg" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="nl__ok" hidden tabindex="-1">
+          <p class="nl__ok-title"><Icon name="check" size={20} /> C'est noté, merci !</p>
+          <p>Confirme ton inscription avec le lien reçu par e-mail. En attendant, la checklist est là :</p>
+          <a class="btn btn--primary" href={pdf} download>Télécharger la checklist (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+)}
+
+<script>
+  // Envoi sans quitter la page. Brevo répond par une redirection (lue en « opaqueredirect »
+  // avec redirect: 'manual') ou une réponse opaque (status 0) : les deux valent succès.
+  document.querySelectorAll<HTMLFormElement>('.nl__form').forEach((form) => {
+    const box = form.closest('.nl');
+    const ok = box?.querySelector<HTMLElement>('.nl__ok');
+    const msg = form.querySelector<HTMLElement>('.nl__msg');
+    const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    const email = form.querySelector<HTMLInputElement>('input[type="email"]');
+    const trap = form.querySelector<HTMLInputElement>('input[name="email_address_check"]');
+    const field = form.dataset.field || 'EMAIL';
+
+    const success = () => {
+      form.hidden = true;
+      if (ok) { ok.hidden = false; ok.focus(); }
+    };
+    const fail = (text: string) => {
+      if (msg) { msg.textContent = text; msg.classList.add('is-error'); }
+      if (btn) { btn.disabled = false; btn.textContent = 'Recevoir la checklist'; }
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (msg) { msg.textContent = ''; msg.classList.remove('is-error'); }
+      // Champ piège rempli : c'est un robot, on affiche le succès sans rien envoyer.
+      if (trap && trap.value) { success(); return; }
+      if (!email || !email.value || !email.checkValidity()) {
+        fail('Vérifie ton adresse e-mail : elle semble incomplète.');
+        email?.focus();
+        return;
+      }
+      if (btn) { btn.disabled = true; btn.textContent = 'Envoi…'; }
+      const data = new FormData();
+      data.append(field, email.value.trim());
+      data.append('email_address_check', '');
+      data.append('locale', 'fr');
+      try {
+        const res = await fetch(form.dataset.action || form.action, { method: 'POST', body: data, redirect: 'manual' });
+        if (res.ok || res.type === 'opaqueredirect' || res.status === 0) success();
+        else fail("L'inscription n'a pas abouti. Réessaie dans un instant.");
+      } catch {
+        fail("L'inscription n'a pas abouti (connexion ?). Réessaie dans un instant.");
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Carte papier (fin d'article) ou bande papier-2 pleine largeur (accueil) ; bouton lime, champ pilule */
+  .nl { margin: 3rem 0 0; }
+  .nl__in { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 1.4rem; align-items: start; padding: 1.4rem 1.4rem 1.3rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); box-shadow: var(--ombre); }
+  .nl--band { margin: 0; padding: clamp(1.5rem, 3vw, 2.5rem) var(--gutter); }
+  .nl--band .nl__in { max-width: var(--wide-width); margin: 0 auto; grid-template-columns: 150px minmax(0, 1fr); gap: 2rem; padding: 1.8rem clamp(1.2rem, 3vw, 2.4rem); background: var(--papier-2); border: 0; box-shadow: none; border-radius: var(--radius-xl); }
+  .nl__thumb { display: block; width: 100%; height: auto; border: 1px solid var(--filet); border-radius: var(--radius-sm); box-shadow: var(--ombre); background: #fff; }
+  .nl__text { min-width: 0; }
+  .nl__title { margin: 0 0 0.4rem; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem); line-height: 1.15; letter-spacing: -0.03em; }
+  .nl__lede { margin: 0 0 1rem; color: var(--gris); line-height: 1.55; }
+  .nl__label { display: block; margin: 0 0 0.4rem; font-weight: 600; font-size: 0.85rem; }
+  .nl__row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .nl__input { flex: 1 1 220px; min-width: 0; min-height: 48px; padding: 0 1.1rem; font: inherit; font-size: 1rem; color: var(--mine); background: var(--papier); border: 1px solid var(--filet-fort); border-radius: 999px; transition: border-color 0.18s ease, box-shadow 0.18s ease; }
+  .nl__input::placeholder { color: var(--gris); opacity: 1; }
+  .nl__input:focus { outline: none; border-color: var(--mine); box-shadow: 0 0 0 3px var(--jaune); }
+  .nl__btn { flex: 0 0 auto; }
+  .nl__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .nl__legal { margin: 0.7rem 0 0; font-size: 0.85rem; color: var(--gris); }
+  .nl__legal a { display: inline-flex; align-items: center; min-height: 24px; color: var(--gris); }
+  .nl__msg { margin: 0.5rem 0 0; font-size: 0.92rem; font-weight: 600; }
+  .nl__msg:empty { display: none; }
+  .nl__msg.is-error { color: var(--erreur); }
+  .nl__ok p { margin: 0 0 0.9rem; color: var(--gris); line-height: 1.55; }
+  .nl__ok .nl__ok-title { display: flex; align-items: center; gap: 0.5rem; margin: 0 0 0.4rem; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--mine); }
+  .nl__ok .nl__ok-title :global(svg) { width: 28px; height: 28px; padding: 5px; border-radius: 50%; background: var(--jaune); color: var(--sur-jaune); }
+  .nl__ok:focus { outline: none; }
+  @media (max-width: 560px) {
+    .nl__in, .nl--band .nl__in { grid-template-columns: 1fr; gap: 1rem; padding: 1.2rem 1.1rem; }
+    .nl__thumb { width: 96px; }
+    .nl__btn { width: 100%; }
+  }
+</style>

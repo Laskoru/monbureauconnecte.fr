@@ -183,3 +183,51 @@ caractères, dans la première ou la deuxième phrase du corps et dans au moins
 un intertitre `##`/`###`. La forme naturelle est acceptée (accords, pluriels,
 accents, « pour le », « d'un »…). Il sort en erreur s'il reste un manque ;
 `--json` donne l'état brut.
+
+## 9. Activer la newsletter
+
+Le composant `src/components/Newsletter.astro` affiche un encart d'inscription en fin
+d'article (carte, avant les articles liés) et sur l'accueil (bande). **Tant que
+`siteConfig.newsletter.actionUrl` est vide, rien ne s'affiche.** Le cadeau
+d'inscription est la checklist ergonomie en PDF (`public/ressources/`).
+
+1. Sur [Brevo](https://www.brevo.com) : Contacts → Formulaires → créer un formulaire
+   d'inscription, avec **double opt-in** (e-mail de confirmation) et un seul champ,
+   l'e-mail (`EMAIL`). Rattache-le à la liste de ton choix.
+2. Dans le code d'intégration HTML fourni par Brevo, copie l'URL de l'attribut
+   `action` du `<form>` : elle a la forme `https://xxxx.sibforms.com/serve/...`.
+3. Colle-la dans `src/siteConfig.ts` : `newsletter: { actionUrl: 'https://xxxx.sibforms.com/serve/...', emailField: 'EMAIL' }`.
+   Si ton formulaire nomme le champ e-mail autrement, change `emailField`.
+4. Commit et push : l'encart apparaît au prochain déploiement.
+
+Le formulaire est envoyé en JavaScript (`fetch`, `redirect: 'manual'`) avec les champs
+`EMAIL`, `email_address_check` (champ piège anti-robots, laissé vide) et `locale=fr`.
+En cas de succès, il est remplacé par un message de confirmation et un lien de
+téléchargement direct du PDF. La section « Newsletter » de la politique de
+confidentialité décrit déjà ce traitement (Brevo comme sous-traitant).
+
+Le PDF et sa vignette se régénèrent depuis `src/data/checklist-ergonomie.json` (la même
+source que la page `/checklist-bureau-ergonomique/`) :
+
+```bash
+npm i --no-save playwright   # Playwright n'est pas une dépendance du site
+npm run lead-magnet          # CHROMIUM_PATH=/chemin/chromium pour un Chromium déjà installé
+```
+
+## 10. Page auteur
+
+La page `/auteur/` affiche un monogramme (« HB ») tant qu'aucune photo n'existe.
+Pour mettre une vraie photo :
+
+1. Prépare une photo **carrée, 800 × 800 px, au format WebP** (visage bien cadré,
+   fond calme ; environ 50 à 100 Ko). Exemple avec sharp :
+   `npx sharp-cli -i photo.jpg -o public/auteur/hugo.webp resize 800 800`
+   (ou n'importe quel éditeur d'image).
+2. Dépose-la dans `public/auteur/hugo.webp`. Au build suivant, elle remplace le
+   monogramme (ronde, alt « Hugo B., éditeur de Mon Bureau Connecté ») et
+   s'ajoute au schéma `Person` (champ `image`). Sans fichier, la page reste telle quelle.
+3. Optionnel, dans `src/siteConfig.ts` :
+   - `authorPhoto` : un autre chemin dans `public/` (ex. `'/auteur/portrait.webp'`) ;
+   - `authorBio` : une courte présentation (une ou deux phrases), écrite par toi,
+     affichée sous ton nom et reprise dans le schéma `Person` (`description`).
+     Laisse `''` pour ne rien afficher de plus.

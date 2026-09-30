@@ -94,7 +94,7 @@ Pour un seul écran, un bras simple à ressort à gaz suffit largement et coûte
 
 ## L'installer et bien le régler
 
-Le montage est rapide : on fixe la base (pince ou traversante), on visse la platine VESA au dos de l'écran, on clipse le tout. Une fois en place, prends le temps du réglage qui compte vraiment : **haut de l'écran au niveau des yeux** (ou juste en dessous), écran à **une longueur de bras**, légèrement incliné vers l'arrière. C'est ce réglage (impossible avec un socle d'origine) qui justifie l'achat. Pense aussi à passer le câble de l'écran (et éventuellement de l'alimentation) dans le passe-câbles pour finir proprement ; associé à un bon [rangement des câbles](/articles/rangement-cables-bureau/), le résultat transforme l'allure du poste.
+Le montage est rapide : on fixe la base (pince ou traversante), on visse la platine VESA au dos de l'écran, on clipse le tout. Une fois en place, prends le temps du réglage qui compte vraiment : **haut de l'écran au niveau des yeux** (ou juste en dessous), écran à **une longueur de bras**, légèrement incliné vers l'arrière. Pour trouver la distance exacte selon la taille et la définition de ta dalle, le [calculateur de taille d'écran](/calculateur-taille-ecran/) fait le compte. C'est ce réglage (impossible avec un socle d'origine) qui justifie l'achat. Pense aussi à passer le câble de l'écran (et éventuellement de l'alimentation) dans le passe-câbles pour finir proprement ; associé à un bon [rangement des câbles](/articles/rangement-cables-bureau/), le résultat transforme l'allure du poste.
 
 ## Bras d'écran, rehausseur ou pied d'origine : lequel choisir ?
 
@@ -115,3 +115,4 @@ Le bras support écran est l'un des accessoires au meilleur rapport entre le pri
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
 - [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

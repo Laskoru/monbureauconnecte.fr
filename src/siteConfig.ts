@@ -7,7 +7,7 @@
 export const siteConfig = {
   // Identité
   name: 'Mon Bureau Connecté',
-  tagline: 'Des accessoires bureau, gaming et télétravail testés et comparés',
+  tagline: 'Des accessoires bureau, gaming et télétravail comparés sur des critères mesurables',
   description:
     "Mon Bureau Connecté aide à choisir le bon matériel pour son poste de travail : gaming, bureau ergonomique et télétravail, comparatifs et conseils d'achat.",
   lang: 'fr',
@@ -51,6 +51,13 @@ export const siteConfig = {
 
   // Auteur par défaut affiché sur les articles
   author: 'Hugo B.',
+  // Page /auteur/ (optionnel, vides par défaut) :
+  // authorBio : une courte présentation écrite par Hugo, affichée sous son nom
+  //   (et reprise dans le schéma Person). Vide = rien de plus qu'aujourd'hui.
+  // authorPhoto : chemin de la photo dans public/ ; vide = '/auteur/hugo.webp'.
+  //   La photo ne s'affiche que si le fichier existe au build (voir README).
+  authorBio: '',
+  authorPhoto: '',
 
   // Code de vérification Google Search Console (méthode "balise HTML").
   // C'est la valeur après "google-site-verification=". Laisse vide si inutile.
@@ -73,8 +80,10 @@ export const siteConfig = {
     cta: 'Voir les outils',
   },
 
-  // Newsletter : colle ici l'URL du formulaire de ton service (Brevo/Mailchimp).
-  newsletter: { actionUrl: '' },
+  // Newsletter (Brevo) : colle ici l'URL d'action de ton formulaire Brevo
+  // (https://xxxx.sibforms.com/serve/...). Vide = aucun encart affiché. Voir README.
+  // emailField : nom du champ e-mail attendu par le formulaire (EMAIL chez Brevo).
+  newsletter: { actionUrl: '', emailField: 'EMAIL' },
 };
 
 export type SiteConfig = typeof siteConfig;

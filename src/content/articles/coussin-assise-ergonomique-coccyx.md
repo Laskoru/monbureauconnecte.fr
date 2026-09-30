@@ -105,3 +105,4 @@ Le coussin d'assise ergonomique est un accessoire simple, peu coûteux et facile
 - [Coussin lombaire pour chaise de bureau](/articles/coussin-lombaire-chaise-bureau/)
 - [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

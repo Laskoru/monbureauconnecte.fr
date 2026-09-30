@@ -79,7 +79,7 @@ La mention de transparence évite de se faire bannir et inspire confiance.
 
 ### d) Bio de profil (Pinterest / X / LinkedIn)
 > Comparatifs & conseils pour équiper son poste de travail : bureau, gaming,
-> télétravail. On teste les critères qui comptent vraiment. 👉 monbureauconnecte.fr
+> télétravail. Des critères mesurables, des limites écrites. 👉 monbureauconnecte.fr
 
 ---
 
@@ -89,7 +89,7 @@ Les gens lient vers des ressources utiles, pas vers des pages « achète ça ».
 - La **checklist ergonomie** (/checklist-bureau-ergonomique) est faite pour ça :
   partage-la et propose-la comme référence dans tes réponses.
 - Les **pages guides** (/guides) regroupent des articles → bonnes pages à citer.
-- Idée future : un contenu chiffré/original (petit sondage, retour d'expérience)
+- Idée future : un contenu chiffré/original (petit sondage auprès des lecteurs)
   que d'autres voudront reprendre.
 
 ---

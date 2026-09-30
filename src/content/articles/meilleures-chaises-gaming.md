@@ -123,3 +123,4 @@ Le bon choix dépend surtout du nombre d'heures passées assis par jour et de la
 - [Souris gaming pour le travail](/articles/souris-gaming-pour-le-travail/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [Black Friday setup bureau : quoi acheter maintenant](/articles/black-friday-setup-bureau-gaming/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

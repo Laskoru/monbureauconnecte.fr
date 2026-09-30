@@ -4,6 +4,12 @@
 //
 // Pour ajouter un guide : ajoute une entrée ici avec ses paragraphes d'intro
 // et la liste des slugs d'articles à mettre en avant. La page se génère seule.
+//
+// Page pilier (optionnel) : un corps éditorial en Markdown (`body`, fichier de
+// src/guide-bodies/ importé en ?raw) rendu avec son sommaire, une FAQ (`faq`,
+// aussi en FAQPage JSON-LD) et une balise <title> courte (`seoTitle`).
+
+import ergonomieBureauBody from './guide-bodies/ergonomie-bureau.md?raw';
 
 export interface Guide {
   slug: string;
@@ -12,6 +18,9 @@ export interface Guide {
   description: string; // méta-description SEO
   intro: string[]; // paragraphes affichés en haut du guide
   articles: string[]; // slugs d'articles à regrouper (dans l'ordre souhaité)
+  seoTitle?: string; // balise <title> (≤ 60 caractères) quand le H1 est plus long
+  body?: string; // corps Markdown de la page pilier (## et ###), rendu après l'intro
+  faq?: { question: string; answer: string }[];
 }
 
 export const guides: Guide[] = [
@@ -61,21 +70,54 @@ export const guides: Guide[] = [
   {
     slug: 'ergonomie-bureau',
     icon: '💪',
-    title: 'Éviter les douleurs au bureau : le guide ergonomie',
+    title: "L'ergonomie au bureau : le guide complet",
+    seoTitle: "L'ergonomie au bureau : régler son poste sans douleur",
     description:
-      'Poignets, dos, nuque, yeux : le guide des accessoires ergonomiques pour travailler sans douleurs, avec nos critères de choix et nos sélections.',
+      "L'ergonomie au bureau en un guide : chaise, hauteur du bureau, écran, clavier, souris, lumière et pauses. Les bons réglages, puis le matériel utile.",
     intro: [
-      "Passer plusieurs heures par jour au même poste finit par se sentir : tensions dans le bas du dos, poignets endoloris, nuque raide, yeux fatigués en fin d'après-midi. Pourtant, la plupart de ces gênes se préviennent avec quelques accessoires bien choisis, sans changer tout son matériel.",
-      "Ce guide regroupe nos comparatifs orientés confort et santé au travail. On y aborde la posture (assise, hauteur de bureau, position de l'écran), les points d'appui (poignets, pieds) et la fatigue visuelle. Chaque article part d'un problème concret et propose des solutions à différents budgets.",
+      "L'ergonomie au bureau, c'est l'art de régler ton poste pour qu'il s'adapte à toi, et pas l'inverse. Passer plusieurs heures par jour au même endroit finit par se sentir : bas du dos qui tire, poignets endoloris, nuque raide, yeux fatigués en fin d'après-midi. La plupart de ces gênes se préviennent avec de bons réglages, puis, seulement si besoin, avec un accessoire bien choisi.",
+      "Ce guide fait le tour du sujet, élément par élément : la chaise, la hauteur du bureau, l'écran, le clavier et la souris, la lumière, les pauses. Chaque partie résume l'essentiel et renvoie vers l'article ou l'outil qui détaille le point, avec ses sources.",
+    ],
+    body: ergonomieBureauBody,
+    faq: [
+      {
+        question: "Par quoi commencer pour améliorer l'ergonomie de mon bureau ?",
+        answer:
+          "Par les réglages gratuits, dans cet ordre : l'écran (haut au niveau des yeux, à une longueur de bras), le clavier et la souris (avant-bras horizontaux, coudes à environ 90°), puis la chaise (pieds à plat, 2 à 3 doigts entre l'arrière du genou et le bord du siège). Un accessoire ne vient qu'ensuite, pour combler un écart précis.",
+      },
+      {
+        question: 'Quelle est la bonne hauteur de bureau ?',
+        answer:
+          "Celle qui met tes avant-bras à l'horizontale, coudes à environ 90°, épaules relâchées. Les bureaux du commerce mesurent presque tous 74 cm, une hauteur pensée pour une personne d'environ 1,78 m. Notre calculateur de hauteur de bureau donne ton repère à partir de ta taille, en position assise et debout.",
+      },
+      {
+        question: "À quelle distance et à quelle hauteur placer l'écran ?",
+        answer:
+          "À environ une longueur de bras, soit 50 à 70 cm des yeux, bien en face de toi. Le haut de l'écran arrive à hauteur des yeux ou juste en dessous, jamais plus bas, et l'écran se place perpendiculaire aux fenêtres pour éviter les reflets.",
+      },
+      {
+        question: 'Faut-il un bureau assis-debout pour être bien installé ?',
+        answer:
+          "Non. Un bureau fixe bien réglé corrige déjà l'essentiel des problèmes de posture. Le bureau assis-debout apporte un plus : il rend l'alternance facile. Le but n'est pas de rester debout, mais de changer de position souvent ; l'INRS conseille de se lever et de bouger quelques minutes, idéalement toutes les 30 minutes.",
+      },
     ],
     articles: [
+      'bien-regler-chaise-ecran-ergonomie-gratuite',
       'meilleures-chaises-gaming',
+      'coussin-lombaire-chaise-bureau',
+      'coussin-assise-ergonomique-coccyx',
+      'chaise-bureau-sans-accoudoirs-petit-espace',
+      'tabouret-assis-debout-siege-selle-bureau',
       'bureau-assis-debout-electrique',
-      'souris-ergonomique-verticale',
-      'clavier-ergonomique-separe',
       'repose-pieds-ergonomique-bureau',
       'bras-support-ecran-articule',
       'support-ordinateur-portable-ergonomique',
+      'clavier-compact-tkl-sans-pave-numerique',
+      'souris-ergonomique-verticale',
+      'trackball-vs-souris-classique-poignet',
+      'clavier-ergonomique-separe',
+      'repose-poignet-clavier-souris',
+      'lampe-bureau-led-anti-fatigue',
     ],
   },
   {

@@ -16,6 +16,7 @@ import { isAvailable, productUrl } from '../lib/availability';
 import AmazonSearchCTA from '../components/AmazonSearchCTA.astro';
 import InteractiveGuide from '../components/InteractiveGuide.astro';
 import Icon from '../components/Icon.astro';
+import Newsletter from '../components/Newsletter.astro';
 import { frenchNbsp } from '../lib/typo';
 import { mesuresProduit } from '../lib/mesures';
 
@@ -231,6 +232,8 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
         )}
 
         <AuthorBox author={author} />
+
+        <Newsletter variant="card" />
       </div>
 
       <aside class="art__rail" aria-label="Navigation dans l'article" data-pagefind-ignore>

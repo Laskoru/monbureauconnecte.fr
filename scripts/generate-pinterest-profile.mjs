@@ -11,7 +11,7 @@ const OUT_DIR = path.join(ROOT, 'pinterest-export');
 const ACCENT = '#4c8dff';
 const SIGNAL = '#f5a53b';
 const SITE_NAME = 'Mon Bureau Connecté';
-const TAGLINE = 'Bureau, gaming & télétravail testés et comparés';
+const TAGLINE = 'Bureau, gaming & télétravail comparés';
 
 // Photo utilisée pour la couverture — même photo desk-setup que l'article
 // "bras-support-ecran-articule", déjà validée visuellement.

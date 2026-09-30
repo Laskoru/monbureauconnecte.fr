@@ -7,6 +7,7 @@ import { getRating } from '../lib/ratings';
 import { isAvailable, productUrl } from '../lib/availability';
 import { mesuresProduit } from '../lib/mesures';
 import ArticleCard from '../components/ArticleCard.astro';
+import Newsletter from '../components/Newsletter.astro';
 import Icon from '../components/Icon.astro';
 import { siteConfig } from '../siteConfig';
 import { categories } from '../categories';
@@ -222,6 +223,9 @@ const faqs = [
       <ul class="outils">{tools.map((t) => <li><a href={t.href}><span class="outils__ico"><Icon name={t.icon} size={22} /></span><span class="outils__titre">{t.title}</span><span class="outils__desc">{t.desc}</span></a></li>)}</ul>
     </div>
   </section>
+
+  <!-- ═══ NEWSLETTER (affichée seulement si siteConfig.newsletter.actionUrl est renseigné) ═══ -->
+  <Newsletter variant="band" />
 
   <!-- ═══ MÉTHODE + FAQ ═══ -->
   <section class="section" aria-labelledby="methode-titre">

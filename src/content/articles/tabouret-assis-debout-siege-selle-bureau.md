@@ -101,3 +101,4 @@ Le tabouret assis-debout, qu'il prenne la forme d'une assise dynamique nue ou d'
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
 - [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

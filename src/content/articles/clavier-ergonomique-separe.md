@@ -13,11 +13,11 @@ draft: false
 products:
   - asin: "B07W6GVT3X"
     title: "Logitech ERGO K860, clavier en deux parties, repose-poignets"
-    blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, très bonne prise en main dès les premiers jours."
+    blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, et une seule pièce pour une transition plus douce vers le format ergonomique."
     pros:
       - "Courbe qui détend les poignets"
       - "Repose-poignets rembourré"
-      - "Bonne prise en main rapide"
+      - "Une seule pièce, transition plus douce"
     cons:
       - "Encombrant sur le bureau"
       - "Temps d’adaptation les premiers jours"
@@ -115,3 +115,4 @@ Quelques points de vigilance avant de commander. Le **pavé numérique** : beauc
 - [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)
 - [Souris ergonomique verticale](/articles/souris-ergonomique-verticale/)
 - [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

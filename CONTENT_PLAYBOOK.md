@@ -43,25 +43,20 @@ article vraiment bon** — recherche produit sérieuse, angle utile, conseils
 concrets — plutôt que d'en produire plusieurs corrects. Un article de plus ne
 fera jamais gagner de positions ; un article médiocre peut en faire perdre.
 
-## Rythme et preuves d'expérience
+## Rythme et honnêteté
 
 - **1 article par semaine maximum.** Si la semaine n'offre pas de sujet solide,
   on ne publie pas.
 - **Mettre à jour vaut mieux que publier moyen.** Rafraîchir un comparatif
   existant (produit épuisé remplacé, sources revérifiées, FAQ complétée,
   `updatedDate` du jour) rapporte plus qu'un nouvel article quelconque.
-- **Ce que Hugo peut ajouter à la main** pour montrer une expérience réelle
-  (Google la valorise, les lecteurs aussi) :
-  - des photos de son propre poste ou du produit chez lui (pas d'image de
-    fabricant présentée comme la sienne) ;
-  - des mesures faites lui-même, avec l'unité et l'outil : hauteur de plateau
-    au mètre ruban, bruit au sonomètre du téléphone, autonomie réelle notée ;
-  - un court retour d'usage daté : combien de temps, ce qui a surpris, ce qui
-    gêne encore ;
-  - une mise à jour quand l'avis change après quelques semaines d'usage.
-- **Jamais de vécu inventé.** Une routine n'écrit jamais « j'ai testé »,
-  « chez moi » ni une mesure qu'Hugo n'a pas faite. Sans matière réelle,
-  l'article reste un comparatif sur fiches techniques et sources, et le dit.
+- **Hugo ne teste pas les produits lui-même.** La valeur d'un article vient
+  des mesures des fiches techniques mises côte à côte (plage de réglage, charge
+  admise, niveau sonore, autonomie), des sources officielles citées (INRS,
+  ameli…), des limites écrites pour chaque modèle et des corrections signalées.
+- **Jamais de vécu inventé.** Aucun texte n'écrit « j'ai testé », « chez moi »,
+  « à l'usage, on a constaté » ni une mesure faite à la main. L'article reste
+  un comparatif sur fiches techniques et sources, et le dit.
 
 ## Étapes
 

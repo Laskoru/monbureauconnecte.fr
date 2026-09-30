@@ -1,6 +1,6 @@
 ---
 title: "Souris sans fil silencieuse : laquelle choisir ?"
-description: "Clics qui claquent en open space ? Notre guide pour choisir une souris sans fil silencieuse, sans sacrifier ni la précision ni le confort en main."
+description: "Souris sans fil silencieuse : clics silencieux, Bluetooth ou dongle, autonomie. Comment choisir une souris qui ne claque plus en open space."
 pubDate: 2026-08-19
 updatedDate: 2026-09-29
 author: "Hugo B."

@@ -56,7 +56,7 @@ L'assise doit soutenir la majorité de la cuisse sans comprimer l'arrière du ge
 
 ## 3. La hauteur et la distance de l'écran
 
-Le haut de l'écran doit arriver **à hauteur des yeux, ou juste en dessous**, jamais plus bas : regarder vers le bas en permanence tire sur les muscles de la nuque toute la journée. La distance idéale se situe entre 50 et 70 cm, à peu près une longueur de bras.
+Le haut de l'écran doit arriver **à hauteur des yeux, ou juste en dessous**, jamais plus bas : regarder vers le bas en permanence tire sur les muscles de la nuque toute la journée. La distance idéale se situe entre 50 et 70 cm, à peu près une longueur de bras ; le bon point dans cette plage dépend de la taille et de la définition de l'écran, et notre [calculateur de taille d'écran](/calculateur-taille-ecran/) te le donne.
 
 **Comment vérifier :** assis normalement, les yeux doivent se poser naturellement sur le haut de l'écran sans incliner la tête. Un écran trop bas se corrige avec des livres empilés ou un [support pour ordinateur portable](/articles/support-ordinateur-portable-ergonomique/) en attendant un vrai rehausseur.
 

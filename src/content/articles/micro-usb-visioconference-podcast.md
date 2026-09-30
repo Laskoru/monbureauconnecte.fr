@@ -1,6 +1,6 @@
 ---
 title: "Micro USB pour visioconférence et podcast : lequel choisir ?"
-description: "Le micro intégré ne suffit pas toujours. Comment choisir un micro USB pour la visioconférence ou l'enregistrement : captation, bouton muet, bras."
+description: "Micro USB pour la visioconférence ou le podcast : captation, bouton muet, bras, filtre anti-pop. Les critères qui comptent pour être enfin bien entendu."
 pubDate: 2026-08-05
 updatedDate: 2026-09-29
 author: "Hugo B."
@@ -64,7 +64,7 @@ C'est le critère de fond. Un micro **cardioïde** capte surtout ce qui est **en
 
 ### Le bouton muet physique
 
-Un **bouton muet** sur le micro est plus rapide et plus fiable qu'un raccourci logiciel cherché en pleine réunion. Détail, mais on l'apprécie tous les jours.
+Un **bouton muet** sur le micro est plus rapide et plus fiable qu'un raccourci logiciel cherché en pleine réunion. Détail, mais il sert à chaque réunion.
 
 ### Le bras ou le pied
 

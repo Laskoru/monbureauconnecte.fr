@@ -113,3 +113,4 @@ Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu co
 - [Coussin d'assise ergonomique (coccyx)](/articles/coussin-assise-ergonomique-coccyx/)
 - [Tabouret assis-debout / siège selle](/articles/tabouret-assis-debout-siege-selle-bureau/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
+- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)

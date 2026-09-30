@@ -3,64 +3,10 @@ import PageHead from '../components/PageHead.astro';
 import Icon from '../components/Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../siteConfig';
+import checklist from '../data/checklist-ergonomie.json';
 
-const sections = [
-  {
-    icon: 'monitor',
-    title: 'L’écran',
-    items: [
-      'Le haut de l’écran est à hauteur des yeux (ou légèrement en dessous).',
-      'L’écran est à environ une longueur de bras (50 à 70 cm).',
-      'L’écran est légèrement incliné vers l’arrière (10 à 20°).',
-      'Il est bien en face de toi, pas de côté, pour éviter de tourner la nuque.',
-    ],
-    link: { href: '/articles/bras-support-ecran-articule/', label: 'Bras support écran' },
-  },
-  {
-    icon: 'chair',
-    title: 'La chaise et le dos',
-    items: [
-      'Tes pieds reposent à plat sur le sol (ou sur un repose-pieds).',
-      'Genoux à environ 90°, cuisses parallèles au sol.',
-      'Le bas du dos est soutenu par un appui lombaire.',
-      'Les hanches sont légèrement plus hautes que les genoux (~90-100°).',
-    ],
-    link: { href: '/categorie/mobilier/', label: 'Chaises & mobilier' },
-  },
-  {
-    icon: 'keyboard',
-    title: 'Le clavier et la souris',
-    items: [
-      'Coudes proches du corps, pliés à environ 90°.',
-      'Avant-bras parallèles au sol, épaules relâchées.',
-      'Poignets droits, jamais cassés vers le haut ou le bas.',
-      'Clavier et souris proches l’un de l’autre, à portée sans tendre le bras.',
-    ],
-    link: { href: '/articles/souris-ergonomique-verticale/', label: 'Souris ergonomique' },
-  },
-  {
-    icon: 'lamp',
-    title: 'La lumière',
-    items: [
-      'Aucun reflet du plafonnier ou d’une fenêtre sur l’écran.',
-      'La lumière naturelle arrive de côté, pas de face ni de dos.',
-      'Une lampe de bureau complète l’éclairage ambiant en fin de journée.',
-      'La luminosité de l’écran est proche de celle de la pièce.',
-    ],
-    link: { href: '/articles/lampe-bureau-led-anti-fatigue/', label: 'Lampe de bureau' },
-  },
-  {
-    icon: 'clock',
-    title: 'Les pauses et le mouvement',
-    items: [
-      'Règle du 20-20-20 : toutes les 20 min, regarde à 6 m pendant 20 s.',
-      'Tu te lèves quelques minutes au moins une fois par heure.',
-      'Tu alternes position assise et debout dans la journée si possible.',
-      'Tu changes régulièrement de posture plutôt que de rester figé.',
-    ],
-    link: { href: '/articles/bureau-assis-debout-electrique/', label: 'Bureau assis-debout' },
-  },
-];
+// Points de la checklist : partagés avec le PDF imprimable (scripts/generate-lead-magnet.mjs).
+const sections = checklist;
 ---
 
 <BaseLayout
