@@ -73,8 +73,10 @@ export const siteConfig = {
     cta: 'Voir les outils',
   },
 
-  // Newsletter : colle ici l'URL du formulaire de ton service (Brevo/Mailchimp).
-  newsletter: { actionUrl: '' },
+  // Newsletter (Brevo) : colle ici l'URL d'action de ton formulaire Brevo
+  // (https://xxxx.sibforms.com/serve/...). Vide = aucun encart affiché. Voir README.
+  // emailField : nom du champ e-mail attendu par le formulaire (EMAIL chez Brevo).
+  newsletter: { actionUrl: '', emailField: 'EMAIL' },
 };
 
 export type SiteConfig = typeof siteConfig;
