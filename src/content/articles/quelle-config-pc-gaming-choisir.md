@@ -94,7 +94,7 @@ Envie d'un détail pièce par pièce avec des liens directs vers chaque composan
 C'est la grande question, et il n'y a pas de mauvais choix, juste le tien.
 
 - **Monter soi-même** revient généralement **moins cher**, et tu choisis chaque pièce. Il faut un peu de temps, deux tutoriels vidéo et de la rigueur, mais rien d'insurmontable aujourd'hui.
-- **Acheter un PC pré-assemblé** est plus simple, garanti d'un seul tenant, et te fait gagner du temps. Le piège : certains prébuilts économisent sur des pièces invisibles à première vue (**alimentation** au rabais, **carte graphique** d'un cran en dessous du nom affiché). Compare toujours la fiche détaillée, GPU et alimentation en tête.
+- **Acheter un PC pré-assemblé** est plus simple, garanti d'un seul tenant, et te fait gagner du temps. Le piège : certains prébuilts économisent sur des pièces invisibles à première vue (**alimentation** au rabais, **carte graphique** d'un cran en dessous du nom affiché). Compare toujours la fiche détaillée, GPU et alimentation en tête. Même vigilance pendant les promotions de fin d'année : notre article [Black Friday setup bureau : quoi acheter maintenant](/articles/black-friday-setup-bureau-gaming/) explique comment vérifier qu'une remise sur un PC ou une carte graphique est réelle.
 
 ## Ne pas oublier le reste du poste
 

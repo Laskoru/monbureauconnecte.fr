@@ -84,7 +84,7 @@ Tous les postes ne se valent pas dans le temps. Pour bien répartir, sépare ce 
 
 Rien n'oblige à tout acheter le même mois, et c'est souvent contre-productif. La méthode qui marche : investir d'abord dans les **deux piliers** (un PC correct + un écran correct), qui conditionnent tout le reste. Puis compléter **progressivement**, au rythme de ton budget et de tes besoins réels : un meilleur siège quand le dos réclame, de vrais périphériques quand l'entrée de gamme montre ses limites, les accessoires en dernier.
 
-Cet étalement a un double avantage : il lisse la dépense, et il t'évite d'acheter à l'aveugle. Après quelques semaines d'usage, tu sais exactement ce qui te gêne et où mettre les prochains euros, bien mieux qu'en cochant une liste d'un coup le premier jour.
+Cet étalement a un double avantage : il lisse la dépense, et il t'évite d'acheter à l'aveugle. Après quelques semaines d'usage, tu sais exactement ce qui te gêne et où mettre les prochains euros, bien mieux qu'en cochant une liste d'un coup le premier jour. Si l'un de ces achats tombe en fin d'année, notre article sur le [Black Friday pour un setup bureau ou gaming](/articles/black-friday-setup-bureau-gaming/) indique quels postes gagnent à attendre et lesquels n'y gagnent presque rien.
 
 ## Le coût réel, ramené à la durée de vie
 

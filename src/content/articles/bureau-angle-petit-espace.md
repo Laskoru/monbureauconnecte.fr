@@ -51,7 +51,7 @@ Tous les bureaux d'angle ne se ressemblent pas, et le bon choix dépend surtout 
 
 Le **bureau d'angle fixe en forme de L** reste le format le plus courant : un plateau en deux parties qui se rejoignent à 90°, calé contre deux murs. C'est le plus stable et le plus généreux en surface, mais aussi le plus difficile à déplacer une fois monté.
 
-Le **bureau d'angle avec étagères intégrées** ajoute du rangement vertical au-dessus ou à côté du plan de travail, utile quand le petit espace ne permet pas d'installer une bibliothèque séparée. Vérifie simplement que la profondeur du plateau reste suffisante pour ton matériel, certains modèles compacts sacrifient cette dimension pour gagner en hauteur de rangement.
+Le **bureau d'angle avec étagères intégrées** ajoute du rangement vertical au-dessus ou à côté du plan de travail, utile quand le petit espace ne permet pas d'installer une bibliothèque séparée. Vérifie simplement que la profondeur du plateau reste suffisante pour ton matériel, certains modèles compacts sacrifient cette dimension pour gagner en hauteur de rangement. Une étagère accueille aussi volontiers une [plante de bureau peu exigeante](/articles/plante-bureau-depolluante/), qui égaie le coin sans prendre de place sur le plateau.
 
 La **table pivotante ou le bureau modulable** convient aux pièces qui changent de fonction dans la journée : un plateau qui se range ou qui pivote contre le mur libère l'espace le soir. Pratique, mais moins stable qu'un vrai bureau d'angle fixe, donc plutôt réservé à un usage léger (ordinateur portable seul, sans double écran).
 

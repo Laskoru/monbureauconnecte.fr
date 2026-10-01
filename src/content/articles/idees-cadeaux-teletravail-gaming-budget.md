@@ -48,7 +48,7 @@ La meilleure stratégie, c'est de partir du **budget** plutôt que de l'objet en
 
 - Un **[tapis de souris XXL](/articles/tapis-souris-xxl-bureau/)** : il protège le bureau, agrandit la zone de frappe et convient à peu près à tous les usages, du travail de bureau au jeu occasionnel.
 - Un **repose-poignet pour clavier ou souris**, pour soulager les tensions sans rien changer au matériel existant.
-- Une **plante de bureau**, un cadeau plus original qui améliore l'ambiance du poste de travail (son effet dépolluant, en revanche, n'est pas validé scientifiquement selon l'ADEME).
+- Une **[plante de bureau](/articles/plante-bureau-depolluante/)**, un cadeau plus original qui améliore l'ambiance du poste de travail (son effet dépolluant, en revanche, n'est pas validé scientifiquement selon l'ADEME).
 
 Ces trois options ont un point commun : elles s'adaptent à presque n'importe quel bureau, sans avoir besoin de connaître les préférences précises de la personne.
 
@@ -71,7 +71,7 @@ Ici, le cadeau devient le genre d'objet qu'on hésite parfois à s'acheter soi-m
 
 - Un **[casque sans fil](/articles/casque-filaire-vs-sans-fil-teletravail/)** confortable avec un bon micro, pour libérer la personne du câble pendant ses appels.
 - Un **clavier mécanique silencieux**, qui combine le plaisir de frappe des claviers mécaniques et une discrétion compatible avec l'open space ou le télétravail en appartement.
-- Une **webcam avec cache de confidentialité** et une bonne qualité d'image, pour des visioconférences nettement plus nettes qu'avec la caméra intégrée d'un ordinateur portable.
+- Une **webcam avec [cache de confidentialité](/articles/webcam-cache-confidentialite/)** et une bonne qualité d'image, pour des visioconférences nettement plus nettes qu'avec la caméra intégrée d'un ordinateur portable.
 
 Ces cadeaux demandent un peu plus d'attention aux préférences de la personne (filaire ou sans fil pour le casque, disposition du clavier), mais restent des valeurs sûres si tu connais un minimum ses habitudes de travail.
 
@@ -96,6 +96,7 @@ Quelques erreurs reviennent souvent et valent la peine d'être évitées :
 - **Le doublon** : avant d'offrir une souris ou un casque, vérifie discrètement si la personne n'a pas déjà un modèle récent qu'elle apprécie.
 - **La taille ou la connectique inadaptée** : un tapis de souris trop petit pour le bureau de la personne, ou un accessoire USB-A alors que son ordinateur ne propose que de l'USB-C, gâche l'effet du cadeau.
 - **Le produit trop technique** : un clavier avec une disposition ergonomique très particulière peut dérouter quelqu'un qui n'a jamais essayé ce type de matériel. Réserve ces choix aux personnes qui en ont explicitement exprimé l'envie.
+- **Le faux prix barré** : si tu achètes pendant les promotions de fin d'année, compare au prix des semaines précédentes plutôt qu'au prix barré du jour. Notre article [Black Friday setup bureau](/articles/black-friday-setup-bureau-gaming/) détaille comment repérer une vraie remise et ce qui vaut la peine d'attendre.
 
 ## Idées cadeaux télétravail : comment choisir selon la personne
 
