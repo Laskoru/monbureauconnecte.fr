@@ -5,6 +5,9 @@ Ordre revu le 2026-09-29 pour la fin d'année. La routine prend la première lig
 3. dépannage (questions « ça ne marche pas » très cherchées) ;
 4. le reste, dans l'ordre d'origine.
 Les idées cochées restent dans leurs sections d'origine, plus bas.
+Rappel (voir CONTENT_PLAYBOOK.md, « Liens entrants ») : chaque nouvel article reçoit un lien
+depuis au moins 2 articles existants pertinents (phrase naturelle) ; vérifier avant de committer
+qu'il n'est pas orphelin.
 -->
 # Backlog de sujets d'articles
 

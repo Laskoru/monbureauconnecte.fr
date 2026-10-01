@@ -99,7 +99,7 @@ Une webcam moyenne bien installée rend mieux qu'une 4K mal placée. Trois régl
 
 ## Réglages, fixation et confidentialité
 
-La plupart des webcams s'installent en **plug-and-play**, mais un petit logiciel constructeur permet souvent d'ajuster l'exposition, la balance des blancs ou le champ de vision, cinq minutes qui améliorent nettement le rendu. Vérifie la **fixation** : une pince universelle tient sur la majorité des écrans, et un pas de vis standard permet de la monter sur un trépied si besoin. Côté **confidentialité**, un modèle avec **cache d'objectif** intégré (ou un simple cache adhésif) évite de se demander si la caméra est active, un détail rassurant quand la webcam reste branchée en permanence.
+La plupart des webcams s'installent en **plug-and-play**, mais un petit logiciel constructeur permet souvent d'ajuster l'exposition, la balance des blancs ou le champ de vision, cinq minutes qui améliorent nettement le rendu. Vérifie la **fixation** : une pince universelle tient sur la majorité des écrans, et un pas de vis standard permet de la monter sur un trépied si besoin. Côté **confidentialité**, un modèle avec **cache d'objectif** intégré (ou un simple [cache adhésif de confidentialité](/articles/webcam-cache-confidentialite/)) évite de se demander si la caméra est active, un détail rassurant quand la webcam reste branchée en permanence.
 
 ## Cadrage automatique, IA et micro : utiles ou gadgets ?
 

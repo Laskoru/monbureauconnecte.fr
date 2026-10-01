@@ -54,7 +54,26 @@ const budgetRows = budgets.map((b) => {
 });
 const graduations = [0, 100, 200, 300];
 const categoryCounts = categories.map((c) => ({ ...c, count: allArticles.filter((x) => x.data.category === c.slug).length }));
-const latest = sorted.filter((a) => !refSlugs.includes(a.id)).slice(0, 3);
+// De saison : mise en avant automatique selon la date du build (heure de Paris).
+// Black Friday du 25/10 au 01/12, cadeaux de fin d'année du 01/11 au 24/12 ; hors période, rien.
+const jourDuBuild = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Paris', month: '2-digit', day: '2-digit' }).format(new Date()); // « MM-JJ »
+const saisons = [
+  { slug: 'black-friday-setup-bureau-gaming', du: '10-25', au: '12-01' },
+  { slug: 'idees-cadeaux-teletravail-gaming-budget', du: '11-01', au: '12-24' },
+];
+const deSaison = saisons
+  .filter((s) => jourDuBuild >= s.du && jourDuBuild <= s.au)
+  .map((s) => bySlug.get(s.slug))
+  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+const saisonIds = new Set(deSaison.map((a) => a.id));
+const blackFriday = saisonIds.has('black-friday-setup-bureau-gaming');
+const cadeaux = saisonIds.has('idees-cadeaux-teletravail-gaming-budget');
+const saisonLede = blackFriday && cadeaux
+  ? "Black Friday et cadeaux de fin d'année : ce qui vaut la peine d'attendre, et des idées utiles classées par budget."
+  : blackFriday
+    ? "Le Black Friday approche : ce qui vaut la peine d'attendre, et ce qui n'y gagne presque rien."
+    : "Les fêtes approchent : des idées cadeaux utiles pour le bureau et le jeu, classées par budget.";
+const latest = sorted.filter((a) => !refSlugs.includes(a.id) && !saisonIds.has(a.id)).slice(0, 3);
 
 const tools = [
   { icon: 'ruler', title: 'Calculateur de hauteur de bureau', desc: 'Plateau, siège et écran selon ta taille.', href: '/calculateur-hauteur-bureau/' },
@@ -196,6 +215,21 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <!-- ═══ DE SAISON (Black Friday, fêtes) : absent hors période ═══ -->
+  {deSaison.length > 0 && (
+    <section class="section section--tight" aria-labelledby="saison-titre">
+      <div class="wide">
+        <div class="section__head">
+          <div>
+            <h2 id="saison-titre" class="section__title">En ce moment</h2>
+            <p class="section__lede">{saisonLede}</p>
+          </div>
+        </div>
+        <div class="grid3">{deSaison.map((a) => <ArticleCard article={a} />)}</div>
+      </div>
+    </section>
+  )}
 
   <!-- ═══ FRAÎCHEMENT PUBLIÉS ═══ -->
   {latest.length > 0 && (

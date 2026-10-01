@@ -69,7 +69,7 @@ Avant de trancher, il vaut la peine de comprendre ce qui différencie réellemen
 
 **Pour un usage mixte bureau et gaming**, la question de la latence redevient plus sensible : un casque filaire élimine tout risque de décalage perceptible sur des jeux qui demandent une réactivité fine, là où même une faible latence Bluetooth peut se remarquer. Si le reste de ta [config gaming](/articles/quelle-config-pc-gaming-choisir/) vise déjà la réactivité maximale, autant garder cette logique jusqu'au casque. Pour de la bureautique et de la visio pure, cette différence disparaît largement.
 
-Si ta priorité principale est de **couper le bruit ambiant** plutôt que le câble, la question filaire/sans-fil devient secondaire face à la réduction de bruit active : notre guide sur le [casque à réduction de bruit pour le télétravail](/articles/casque-reduction-bruit-teletravail/) détaille ce critère en particulier, disponible dans les deux formats.
+Si ta priorité principale est de **couper le bruit ambiant** plutôt que le câble, la question filaire/sans-fil devient secondaire face à la réduction de bruit active : notre guide sur le [casque à réduction de bruit pour le télétravail](/articles/casque-reduction-bruit-teletravail/) détaille ce critère en particulier, disponible dans les deux formats. Et si c'est le casque lui-même qui te gêne (branches de lunettes comprimées, envie de discrétion au bureau), des [écouteurs intra-auriculaires à réduction de bruit](/articles/ecouteurs-reduction-bruit-open-space/) coupent aussi le bruit de fond, dans un format qui se voit à peine.
 
 ## Le cas particulier de la qualité du micro et de l'appel
 

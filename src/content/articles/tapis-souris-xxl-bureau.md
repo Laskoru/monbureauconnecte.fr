@@ -52,7 +52,7 @@ faq:
 
 Un tapis de souris classique couvre à peine la zone de déplacement de la souris, ce qui laisse le clavier directement sur le bois ou le stratifié du bureau, là où un tapis de souris XXL couvre les deux. Résultat : une texture différente entre les deux zones, un clavier qui glisse légèrement à chaque frappe énergique, et une impression de bureau « en pièces détachées ». Un tapis XXL (généralement entre 80 et 100 cm de large) règle ce problème en unifiant toute la zone de travail sur une seule surface lisse et stable.
 
-L'intérêt dépasse le simple confort de glisse. Un grand tapis protège aussi le plateau du bureau contre les rayures laissées par le frottement répété du clavier et les taches (café, encre) qui marquent durablement certains bois clairs ou stratifiés. Pour qui aime réorganiser régulièrement son poste (décaler le clavier, ajouter une tablette graphique, poser un carnet), la surface continue évite d'avoir à jongler entre plusieurs tapis.
+L'intérêt dépasse le simple confort de glisse. Un grand tapis protège aussi le plateau du bureau contre les rayures laissées par le frottement répété du clavier et les taches (café, encre) qui marquent durablement certains bois clairs ou stratifiés. Pour qui aime réorganiser régulièrement son poste (décaler le clavier, ajouter une [tablette graphique](/articles/tablette-graphique-entree-de-gamme/), poser un carnet), la surface continue évite d'avoir à jongler entre plusieurs tapis.
 
 ## Les critères qui font vraiment la différence
 
@@ -68,7 +68,7 @@ L'intérêt dépasse le simple confort de glisse. Un grand tapis protège aussi 
 
 ## Bureautique ou gaming : un même produit convient aux deux
 
-Contrairement à ce que le vocabulaire marketing laisse penser, un tapis XXL « gaming » fonctionne tout aussi bien pour un usage bureautique pur : la seule différence tient généralement à l'esthétique (finitions RGB, imprimés) plutôt qu'à la fonction. Si l'objectif est simplement d'unifier la zone clavier-souris, un modèle sobre en noir ou gris reste le choix le plus durable visuellement, en particulier sur un [bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/) où le tapis doit rester en place malgré les changements de hauteur répétés.
+Contrairement à ce que le vocabulaire marketing laisse penser, un tapis XXL « gaming » fonctionne tout aussi bien pour un usage bureautique pur : la seule différence tient généralement à l'esthétique (finitions RGB, imprimés) plutôt qu'à la fonction. Si l'objectif est simplement d'unifier la zone clavier-souris, un modèle sobre en noir ou gris reste le choix le plus durable visuellement, en particulier sur un [bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/) où le tapis doit rester en place malgré les changements de hauteur répétés. Ce double usage en fait aussi un cadeau sans risque pour quelqu'un qui télétravaille la semaine et joue le soir, comme le montrent nos [idées cadeaux bureau et gaming par budget](/articles/idees-cadeaux-teletravail-gaming-budget/).
 
 Pour les setups avec [hub USB-C et station d'accueil](/articles/hub-usb-c-station-accueil/), pense à vérifier que le tapis ne recouvre pas les ports ou les câbles qui doivent rester accessibles sur les bords du bureau : certains modèles très larges (100 cm et plus) empiètent sur ces zones selon la disposition du poste.
 

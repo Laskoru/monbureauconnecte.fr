@@ -65,6 +65,7 @@ export const guides: Guide[] = [
       'bras-support-ecran-articule',
       'rangement-cables-bureau',
       'tapis-souris-xxl-bureau',
+      'black-friday-setup-bureau-gaming',
     ],
   },
   {
