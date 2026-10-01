@@ -67,7 +67,9 @@ fera jamais gagner de positions ; un article médiocre peut en faire perdre.
    format ci-dessous. Le slug est en kebab-case, sans accents, descriptif
    (ex. `tapis-souris-xxl-bureau.md`).
 3. **Vérifier les produits Amazon** (voir la règle critique plus bas).
-4. **Mailler en interne** : lier 2 à 3 articles existants (voir plus bas).
+4. **Mailler en interne, dans les deux sens** : lier 2 à 3 articles existants
+   depuis le nouvel article, ET ajouter un lien vers lui dans au moins 2 articles
+   existants pertinents (voir plus bas).
 5. **Renseigner l'indication de couverture** (voir règle images).
 6. **Commiter et pousser** sur `main`.
 
@@ -85,6 +87,22 @@ Si le problème vient surtout de l'assise, notre comparatif des
 C'est l'un des rares leviers SEO entièrement sous notre contrôle : il fait
 circuler l'autorité entre les pages et aide Google à comprendre la structure
 thématique du site.
+
+### Liens entrants : aucun article orphelin
+
+Les liens sortants ne suffisent pas : un article que rien ne lie est difficile
+à découvrir pour Google comme pour le lecteur. Règle pour chaque nouvel article :
+
+- **Au moins 2 articles existants pertinents** (même sujet ou besoin voisin)
+  reçoivent un lien vers le nouvel article (`/articles/<slug>/`), inséré dans une
+  phrase naturelle et utile, au bon endroit du texte. Pas de bloc « À lire
+  aussi » ajouté en vrac, pas d'ancre répétée à l'identique : une ancre
+  descriptive, variée d'un article à l'autre. Si un guide de `src/guides.ts`
+  couvre le sujet, ajoute aussi le slug à sa liste `articles`.
+- Ne modifie pas `updatedDate` d'un article pour un simple ajout de lien.
+- **Avant de commiter**, vérifie que le nouvel article n'est pas orphelin :
+  `grep -l "/articles/<slug>/" src/content/articles/*.md` doit lister au moins
+  2 fichiers en plus du sien.
 
 ## Titre : inclure l'année quand c'est un format « meilleur/lequel choisir »
 
