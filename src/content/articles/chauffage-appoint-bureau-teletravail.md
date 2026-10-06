@@ -8,7 +8,6 @@ pinHook: "Finis les *pieds gelés* au bureau"
 pinSub: "Le bon chauffage d'appoint pour ton coin télétravail."
 keywords: ["chauffage d'appoint bureau télétravail", "chauffage d'appoint sous le bureau", "chauffe-pieds bureau"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1740847262528-a29f09775256?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8cG9ydGFibGUlMjBoZWF0ZXIlMjBkZXNrJTIwd2ludGVyfGVufDB8MHx8fDE3OTEyNjM4Mzl8Mg&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Gros plan sur le panneau de commande d'un chauffage d'appoint électrique posé au sol"
 draft: false
 topPick:
