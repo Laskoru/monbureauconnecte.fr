@@ -114,3 +114,4 @@ Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu co
 - [Tabouret assis-debout / siège selle](/articles/tabouret-assis-debout-siege-selle-bureau/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Chauffage d'appoint bureau télétravail : lequel choisir](/articles/chauffage-appoint-bureau-teletravail/)
