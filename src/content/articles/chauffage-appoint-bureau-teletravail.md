@@ -8,7 +8,7 @@ pinHook: "Finis les *pieds gelés* au bureau"
 pinSub: "Le bon chauffage d'appoint pour ton coin télétravail."
 keywords: ["chauffage d'appoint bureau télétravail", "chauffage d'appoint sous le bureau", "chauffe-pieds bureau"]
 category: "mobilier"
-coverAlt: "Gros plan sur le panneau de commande d'un chauffage d'appoint électrique posé au sol"
+coverAlt: "Gros plan sur le panneau de commande d'un chauffage d'appoint électrique noir, avec ses deux boutons rotatifs"
 draft: false
 topPick:
   name: "Panneau radiant 500 à 600 W"
