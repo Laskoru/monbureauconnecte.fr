@@ -119,7 +119,7 @@
   },
   {
    "date": "2026-10-26",
-   "order": 0,
+   "order": 1,
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-idees-cadeaux-teletravail-gaming-budget-v6",
    "title": "Idées cadeaux télétravail et gaming : le guide par budget",
@@ -279,7 +279,7 @@
   },
   {
    "date": "2026-12-20",
-   "order": 0,
+   "order": 1,
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-coussin-assise-ergonomique-coccyx-v5",
    "title": "Coussin d'assise ergonomique : soulager le coccyx au bureau",
@@ -289,7 +289,7 @@
   },
   {
    "date": "2026-12-22",
-   "order": 0,
+   "order": 1,
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-coussin-lombaire-chaise-bureau-v6",
    "title": "Coussin lombaire pour chaise de bureau : soulager le bas du dos à petit prix",
@@ -423,7 +423,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-meilleures-chaises-gaming-v5",
    "title": "Quelle chaise gaming choisir ? Notre comparatif",
-   "description": "Notre sélection des meilleures chaises gaming pour les longues sessions, de l'économique au haut de gamme ergonomique : critères, réglages, pièges. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Quelle chaise gaming choisir pour les longues sessions ? Soutien lombaire, accoudoirs 4D, vérin, revêtement : les critères, les réglages et les pièges. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/meilleures-chaises-gaming-v5.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/meilleures-chaises-gaming/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v5"
   },
@@ -463,7 +463,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-lampe-bureau-led-anti-fatigue-v5",
    "title": "Lampe de bureau LED anti-fatigue : comment bien la choisir",
-   "description": "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et un modèle qui les coche. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/lampe-bureau-led-anti-fatigue-v5.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/lampe-bureau-led-anti-fatigue/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v5"
   },
@@ -473,7 +473,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-repose-pieds-ergonomique-bureau-v4",
    "title": "Repose-pieds ergonomique de bureau : utile ou gadget ?",
-   "description": "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et notre sélection de modèles réglables. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et un modèle réglable conseillé. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/repose-pieds-ergonomique-bureau-v4.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/repose-pieds-ergonomique-bureau/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v4"
   },
@@ -893,7 +893,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-meilleures-chaises-gaming-v6",
    "title": "Quelle chaise gaming choisir ? Notre comparatif",
-   "description": "Notre sélection des meilleures chaises gaming pour les longues sessions, de l'économique au haut de gamme ergonomique : critères, réglages, pièges. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Quelle chaise gaming choisir pour les longues sessions ? Soutien lombaire, accoudoirs 4D, vérin, revêtement : les critères, les réglages et les pièges. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/meilleures-chaises-gaming-v6.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/meilleures-chaises-gaming/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v6"
   },
@@ -933,7 +933,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-lampe-bureau-led-anti-fatigue-v6",
    "title": "Lampe de bureau LED anti-fatigue : comment bien la choisir",
-   "description": "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et un modèle qui les coche. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/lampe-bureau-led-anti-fatigue-v6.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/lampe-bureau-led-anti-fatigue/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v6"
   },
@@ -943,7 +943,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-repose-pieds-ergonomique-bureau-v5",
    "title": "Repose-pieds ergonomique de bureau : utile ou gadget ?",
-   "description": "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et notre sélection de modèles réglables. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et un modèle réglable conseillé. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/repose-pieds-ergonomique-bureau-v5.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/repose-pieds-ergonomique-bureau/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v5"
   },
@@ -1363,7 +1363,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-meilleures-chaises-gaming-v4",
    "title": "Quelle chaise gaming choisir ? Notre comparatif",
-   "description": "Notre sélection des meilleures chaises gaming pour les longues sessions, de l'économique au haut de gamme ergonomique : critères, réglages, pièges. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Quelle chaise gaming choisir pour les longues sessions ? Soutien lombaire, accoudoirs 4D, vérin, revêtement : les critères, les réglages et les pièges. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/meilleures-chaises-gaming-v4.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/meilleures-chaises-gaming/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v4"
   },
@@ -1403,7 +1403,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-lampe-bureau-led-anti-fatigue-v4",
    "title": "Lampe de bureau LED anti-fatigue : comment bien la choisir",
-   "description": "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et un modèle qui les coche. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/lampe-bureau-led-anti-fatigue-v4.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/lampe-bureau-led-anti-fatigue/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v4"
   },
@@ -1413,7 +1413,7 @@
    "feed": "bureau-teletravail",
    "guid": "monbureauconnecte-repose-pieds-ergonomique-bureau-v6",
    "title": "Repose-pieds ergonomique de bureau : utile ou gadget ?",
-   "description": "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et notre sélection de modèles réglables. 👉 Le guide complet sur Mon Bureau Connecté.",
+   "description": "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et un modèle réglable conseillé. 👉 Le guide complet sur Mon Bureau Connecté.",
    "image": "https://www.monbureauconnecte.fr/pins/repose-pieds-ergonomique-bureau-v6.jpg",
    "link": "https://www.monbureauconnecte.fr/articles/repose-pieds-ergonomique-bureau/?utm_source=pinterest&utm_medium=social&utm_campaign=epingles-v3&utm_content=v6"
   }
