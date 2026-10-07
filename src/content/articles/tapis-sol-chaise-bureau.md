@@ -12,17 +12,17 @@ category: "mobilier"
 coverAlt: "Bureau et chaise sur un parquet, près d'une fenêtre"
 draft: false
 products:
-  - asin: "B08PP39PLD"
-    title: "Tapis NATRKE en PVC transparent, 76 x 122 cm, sans BPA"
-    blurb: "Le format le plus discret : transparent, il se fond dans le décor tout en protégeant efficacement un parquet ou un stratifié."
+  - asin: "B0027CKZ1S"
+    title: "Floortex Ultimat II, tapis polycarbonate transparent 120 x 90 cm, sols durs"
+    blurb: "Le tapis Ultimat de Floortex, en polycarbonate : transparent, sans PVC ni plastifiant, prévu pour parquet, stratifié, carrelage et pierre, et donné par le fabricant comme résistant au gondolage."
     pros:
-      - "Transparent et discret"
-      - "Protège parquet et stratifié"
-      - "Sans BPA"
+      - "Polycarbonate transparent, discret sur un parquet"
+      - "Sans PVC ni plastifiant"
+      - "Ne gondole pas et ne se fend pas en usage normal, selon Floortex"
     cons:
-      - "Peut marquer un sol fragile à la longue"
-      - "Se corne aux angles au déballage"
-      - "Format unique (mesurer avant)"
+      - "Plus cher qu'un tapis en PVC"
+      - "Format 120 x 90 cm : mesure ta zone de roulement avant"
+      - "Version pour sols durs, pas pour la moquette"
 interactiveGuide:
   title: "Quel tapis de sol pour ton sol ?"
   question: "Ta chaise roule sur…"
@@ -40,6 +40,8 @@ sources:
     url: "https://www.quick-step.fr/fr-fr/parquet/nettoyage"
   - label: "Service-public.gouv.fr, « Dépôt de garantie dans un bail d'habitation »"
     url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F31269"
+  - label: "Floortex, « Chair Mats »"
+    url: "https://www.floortex.com/usa-chair-mats"
 faq:
   - question: "Un tapis de sol est-il vraiment nécessaire sur un parquet ?"
     answer: "S'il s'agit d'un parquet massif ou vitrifié fragile, oui : les roulettes d'une chaise de bureau, surtout avec des roulettes dures d'origine, finissent par marquer ou rayer la surface au fil des mois. Sur un sol déjà très résistant (carrelage, béton ciré), c'est plus une question de confort de glisse que de protection stricte."
@@ -63,7 +65,7 @@ Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifi
 
 ## Les critères qui font vraiment la différence
 
-- **Le matériau** : le PVC et le vinyle sont les standards pour les sols durs, avec un bon compromis glisse/durabilité. Les tapis en polyester à poils courts existent aussi, mais sont surtout pensés pour la moquette, pas pour protéger un parquet.
+- **Le matériau** : le PVC et le vinyle sont les standards pour les sols durs, avec un bon compromis glisse/durabilité. Le polycarbonate, plus rigide et sans plastifiant, coûte plus cher mais garde mieux sa forme. Les tapis en polyester à poils courts existent aussi, mais sont surtout pensés pour la moquette, pas pour protéger un parquet.
 - **L'épaisseur** : un tapis trop fin plie facilement et se déforme sous le poids répété d'une chaise. Une épaisseur plus généreuse tient mieux dans la durée et reste plus stable au sol : compare l'épaisseur annoncée d'un modèle à l'autre.
 - **La transparence ou l'opacité** : un modèle transparent se fond dans n'importe quelle déco, un modèle opaque ou coloré peut au contraire délimiter clairement une zone de travail dans une pièce partagée.
 - **La base antidérapante** : sans revêtement anti-glisse au dos, le tapis se déplace lui-même au fil des mouvements de chaise, ce qui oblige à le repositionner sans arrêt.
@@ -90,7 +92,7 @@ Un tapis mal posé perd une bonne partie de son intérêt. Avant l'installation,
 Côté entretien, un simple passage à l'aspirateur ou un coup de chiffon humide suffit dans la majorité des cas, à condition de ne pas laisser s'accumuler du sable ou des graviers ramenés de l'extérieur, qui agissent comme un abrasif entre le tapis et le sol. Si le tapis commence à se soulever sur les bords ou à glisser malgré sa base antidérapante, c'est souvent le signe qu'il est temps de le remplacer plutôt que d'attendre qu'il n'assure plus vraiment sa fonction de protection.
 
 > **L'essentiel à retenir**
-> Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol, pour bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC/vinyle), une **épaisseur suffisante**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
+> Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol, pour bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC, vinyle ou polycarbonate), une **épaisseur suffisante**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
 
 ## Pour aller plus loin
 

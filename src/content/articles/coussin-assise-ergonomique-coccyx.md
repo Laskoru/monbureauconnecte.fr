@@ -11,17 +11,17 @@ category: "mobilier"
 coverAlt: "Personne assise sur une chaise de bureau"
 draft: false
 products:
-  - asin: "B08QR8Z769"
-    title: "Coussin Feagar, mousse à mémoire de forme, housse lavable"
-    blurb: "Un coussin polyvalent (bureau, voiture) qui répartit la pression et soulage le coccyx, avec une housse déhoussable et lavable."
+  - asin: "B0DX718LJF"
+    title: "Fellowes Breyta, coussin d'assise incliné avec découpe coccyx"
+    blurb: "Un coussin incliné qui aide à placer le bassin, avec une découpe pour le coccyx sous la housse, une base antidérapante et une poignée pour l'emporter, garanti 5 ans."
     pros:
-      - "Soulage la pression sur le coccyx"
-      - "Polyvalent (bureau, voiture)"
-      - "Housse déhoussable et lavable"
+      - "Découpe pour le coccyx qui soulage la base de la colonne"
+      - "Base antidérapante et poignée de transport"
+      - "Évalué par FIRA International, garantie de 5 ans"
     cons:
-      - "Rehausse l’assise (régler la chaise)"
-      - "La mousse se tasse avec les années"
-      - "Housse à laver régulièrement"
+      - "9 cm d'épaisseur : il faut remonter ou régler la chaise"
+      - "Découpe intégrée sous la housse, pas un U ouvert"
+      - "Plus cher qu'un coussin d'entrée de gamme"
 interactiveGuide:
   title: "Quel coussin d'assise pour toi ?"
   question: "Ton besoin, c'est…"
@@ -41,6 +41,8 @@ sources:
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-131.pdf"
+  - label: "Fellowes, « Coussin d'assise incliné Breyta™ »"
+    url: "https://www.fellowes.com/fr/fr/catalog/workspace-ergonomics/ergonomic-accessories/details/back-and-lumbar-supports/FT-100119849"
 faq:
   - question: "Un coussin d'assise ergonomique est-il vraiment utile si ma chaise de bureau est déjà de bonne qualité ?"
     answer: "Oui, les deux se complètent : même une chaise ergonomique haut de gamme utilise une assise standard qui répartit la pression de façon homogène, alors qu'un coussin en U ou en forme de fer à cheval décharge spécifiquement la zone du coccyx. Si tu ressens une gêne localisée après plusieurs heures assis, c'est justement le signe qu'une chaise seule ne suffit pas toujours à résoudre le problème."

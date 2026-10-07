@@ -2,7 +2,7 @@
 title: "Micro USB pour visioconférence et podcast : lequel choisir ?"
 description: "Micro USB pour la visioconférence ou le podcast : captation, bouton muet, bras, filtre anti-pop. Les critères qui comptent pour être enfin bien entendu."
 pubDate: 2026-08-05
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Une voix *claire et pro* en visio"
 pinSub: "Le micro USB bien choisi."
@@ -11,17 +11,17 @@ category: "audio-visio"
 coverAlt: "Microphone USB avec pied sur un bureau"
 draft: false
 products:
-  - asin: "B08NDB5NWP"
-    title: "TONOR TM20, micro de conférence, bouton muet"
-    blurb: "Pensé pour les réunions : capte la voix à 360° autour du micro, avec un bouton muet accessible, idéal pour Zoom ou Teams."
+  - asin: "B01LY6Z2M6"
+    title: "Logitech G Blue Yeti, micro USB à condensateur, 4 directivités"
+    blurb: "Un seul micro pour les trois usages : cardioïde pour la visio en solo, omnidirectionnel pour une réunion autour de la table, et une capsule à condensateur pour débuter le podcast, avec bouton de sourdine sur le corps."
     pros:
-      - "Capte la voix à 360°"
-      - "Bouton muet accessible"
-      - "Plug-and-play pour Zoom/Teams"
+      - "4 directivités : cardioïde, omnidirectionnelle, bidirectionnelle, stéréo"
+      - "Bouton de sourdine instantanée et molette de gain"
+      - "Sortie casque pour s'écouter sans latence"
     cons:
-      - "Capte aussi les bruits de la pièce"
-      - "Qualité « réunion » plus que « podcast pro »"
-      - "Pied fixe, non orientable"
+      - "1,4 kg avec son pied : il prend de la place sur le bureau"
+      - "Condensateur sensible : il capte la pièce si on le place loin"
+      - "Plus cher qu'un micro de conférence d'entrée de gamme"
 interactiveGuide:
   title: "Quel micro USB pour toi ?"
   question: "Ton usage principal, c'est…"
@@ -39,8 +39,8 @@ sources:
     url: "https://www.shure.com/en-US/insights/microphone-directionality-polar-pattern-basics"
   - label: "Shure, « Choosing a Microphone for Podcasting »"
     url: "https://www.shure.com/en-US/insights/choosing-a-microphone-for-podcasting"
-  - label: "TONOR, « TONOR TM20 USB Conference Microphone »"
-    url: "https://www.tonormic.com/products/tonor-tm20-usb-conference-microphone"
+  - label: "Logitech G, « Microphone USB multi-diagramme Logitech Yeti avec Blue VO!CE »"
+    url: "https://www.logitechg.com/fr-fr/products/streaming-gear/yeti-premium-usb-microphone.html"
 faq:
   - question: "Un micro USB est-il vraiment meilleur que le micro intégré d'un ordinateur portable ?"
     answer: "Dans la grande majorité des cas oui, nettement : le micro intégré capte aussi le bruit du clavier et de la pièce, alors qu'un micro USB dédié, bien positionné, isole mieux la voix et réduit le bruit de fond perçu par les autres participants."

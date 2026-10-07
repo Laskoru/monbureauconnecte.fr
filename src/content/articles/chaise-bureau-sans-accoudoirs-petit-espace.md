@@ -24,18 +24,11 @@ interactiveGuide:
       result: "L'essentiel n'est pas les accoudoirs mais le <strong>soutien lombaire</strong> et la bonne hauteur d'assise. Une chaise sans accoudoirs avec un bon dossier fait le travail ; ajoute un <a href='/articles/coussin-lombaire-chaise-bureau/'>coussin lombaire</a> au besoin."
     - label: "Je fais beaucoup de pauses/lecture"
       result: "C'est le seul vrai compromis : sans accoudoirs, pas d'appui pour relâcher les bras entre deux tâches. Si tu y tiens, regarde plutôt une chaise à <strong>accoudoirs escamotables</strong> ou rentrants."
-products:
-  - asin: "B0DCFWWGD6"
-    title: "Chaise compacte en maille sans accoudoirs, hauteur réglable, dossier bas"
-    blurb: "Le choix le plus simple : assise et dossier en maille respirante, soutien lombaire en Y, rotation à 360° et hauteur réglable de 42 à 54 cm pour s'adapter à un bureau standard."
-    pros:
-      - "Se glisse entièrement sous le bureau"
-      - "Maille respirante, rotation 360°"
-      - "Hauteur réglable 42-54 cm"
-    cons:
-      - "Sans accoudoirs (pas au goût de tous)"
-      - "Dossier bas : peu de soutien haut du dos"
-      - "Assise ferme"
+topPick:
+  name: "SONGMICS OBN37, chaise de bureau en maille à accoudoirs relevables"
+  blurb: "Le compromis pour une petite pièce : accoudoirs qu'on relève pour glisser la chaise sous le bureau, hauteur d'assise réglable de 46 à 54 cm, dossier en S avec soutien lombaire réglable, et une charge annoncée de 120 kg."
+  url: "https://www.amazon.fr/s?k=SONGMICS+OBN37+chaise+bureau+accoudoirs+relevables&tag=monbureauconnecte-21"
+  ctaLabel: "Voir la SONGMICS OBN37 sur Amazon"
 sources:
   - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
@@ -43,6 +36,8 @@ sources:
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-131.pdf"
   - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
+  - label: "SONGMICS, « Chaise de bureau ergonomique maille moderne noir »"
+    url: "https://www.songmics.fr/products/songmics-chaise-de-bureau-avec-accoudoirs-rabattables-obn37"
 faq:
   - question: "Une chaise sans accoudoirs est-elle vraiment moins confortable ?"
     answer: "Pas nécessairement. Les accoudoirs aident surtout à relâcher les épaules pendant les pauses ou la lecture, mais ils ne sont pas indispensables pour taper au clavier : une bonne hauteur d'assise et un dossier qui soutient le bas du dos comptent davantage au quotidien. Le vrai compromis, c'est l'absence de point d'appui pour les bras entre deux tâches."
@@ -74,7 +69,7 @@ Ce choix n'est pas réservé aux petits espaces à tout prix : il convient aussi
 
 ## Comment choisir selon ton usage
 
-**Pour un bureau dans une chambre ou un studio** : privilégier le modèle le plus compact possible, quitte à perdre un peu de rembourrage, si le gain de place conditionne l'organisation de la pièce. La chaise compacte en maille coche cette case : elle se range vraiment sous le bureau une fois le travail terminé.
+**Pour un bureau dans une chambre ou un studio** : privilégier le modèle le plus compact possible, quitte à perdre un peu de rembourrage, si le gain de place conditionne l'organisation de la pièce. Une chaise à accoudoirs relevables comme la SONGMICS OBN37 coche aussi cette case : accoudoirs relevés, elle se range sous le bureau une fois le travail terminé.
 
 **Pour des journées de télétravail complètes** : le soutien lombaire prime sur la compacité pure. Une chaise sans accoudoirs mais avec un renfort dans le bas du dos évite la fatigue qui s'installe après plusieurs heures, là où un modèle purement minimaliste montre vite ses limites. Si le bas du dos reste un point sensible malgré ce choix, notre article sur le [coussin lombaire pour chaise de bureau](/articles/coussin-lombaire-chaise-bureau/) détaille comment ajouter un soutien complémentaire à petit prix, sans changer de chaise.
 

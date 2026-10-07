@@ -12,17 +12,17 @@ category: "mobilier"
 coverAlt: "Personne assise sur une chaise de bureau, dos calé contre le dossier"
 draft: false
 products:
-  - asin: "B086W5MYRD"
-    title: "Coussin lombaire SUPA MODERN, mousse à mémoire de forme, sangles réglables"
-    blurb: "Un coussin lombaire polyvalent (bureau, voiture) avec des sangles ajustables de 12 à 26 cm pour bien le fixer au dossier, et une housse respirante amovible."
+  - asin: "B01LYVANK9"
+    title: "Fellowes Premium Professional Series 8041801, support dorsal à mémoire de forme"
+    blurb: "Un support lombaire en trois sections de mousse à mémoire de forme, tenu au dossier par une sangle réglable à attache triangulaire, accrédité par la FIRA et garanti 5 ans."
     pros:
-      - "Soutient le bas du dos"
-      - "Sangles réglables (12-26 cm)"
-      - "Housse respirante amovible"
+      - "3 sections en mousse à mémoire de forme pour le bas du dos"
+      - "Attache triangulaire Tri-Tachment et sangle réglable : il reste en place"
+      - "Protection antimicrobienne Microban, garantie de 5 ans"
     cons:
-      - "Position à ajuster selon la chaise"
-      - "Peut glisser sur certains dossiers"
-      - "Avance un peu l’assise"
+      - "Format 37,5 x 36,5 cm : vérifie la largeur du dossier"
+      - "5,5 cm d'épaisseur : réduit un peu la profondeur d'assise utile"
+      - "Plus cher qu'un coussin lombaire basique"
 interactiveGuide:
   title: "Quel coussin lombaire pour toi ?"
   question: "Ta situation, c'est…"
@@ -42,6 +42,8 @@ sources:
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
   - label: "Ameli.fr, « Mal de dos : le bon traitement, c'est le mouvement ! »"
     url: "https://www.ameli.fr/assure/sante/themes/lombalgie-aigue/traitement-prevention"
+  - label: "Fellowes, « Support dorsal Premium Professional Series™ »"
+    url: "https://www.fellowes.com/fr/fr/catalog/workspace-ergonomics/ergonomic-accessories/details/back-and-lumbar-supports/FT-8041801"
 faq:
   - question: "Un coussin lombaire est-il utile même sur une chaise de bureau récente ?"
     answer: "Oui, dans beaucoup de cas. Le dossier d'une chaise de bureau standard, même correcte, est souvent trop droit ou trop reculé par rapport à la courbure naturelle du bas du dos. Un coussin lombaire vient combler cet espace et maintenir la cambrure, ce qu'un dossier plat ne fait pas toujours, même sur un siège de bonne qualité."

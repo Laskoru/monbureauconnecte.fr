@@ -11,17 +11,17 @@ category: "mobilier"
 coverAlt: "Lampe de bureau à bras articulé sur une table en bois"
 draft: false
 products:
-  - asin: "B0D1DLY4H4"
-    title: "Lampe SKYLEO à bras pivotant, 5 modes de couleur, 11 niveaux"
-    blurb: "Très complet pour le prix : fonction mémoire et minuterie, bras articulé qui couvre bien un plan de travail large."
+  - asin: "B0DBHNYP8N"
+    title: "Xiaomi LED Desk Lamp 2, tête de 60 cm, IRC Ra95"
+    blurb: "Une lampe à longue tête horizontale de 60 cm qui éclaire tout le plateau, avec température de couleur et intensité réglables au doigt, un IRC de Ra95 et un scintillement dans la limite de la norme IEEE 1789 selon Xiaomi."
     pros:
-      - "5 teintes, 11 niveaux d’intensité"
-      - "Fonction mémoire et minuterie"
-      - "Bras articulé couvrant un large plan"
+      - "Température de couleur et intensité réglables par curseurs tactiles"
+      - "IRC Ra95 : couleurs fidèles"
+      - "Tête de 60 cm qui couvre un grand bureau, ordinateur portable dessous"
     cons:
-      - "Pince selon l’épaisseur du bureau"
-      - "Commande tactile sensible"
-      - "Alimentation par câble USB"
+      - "Pas de bras articulé : le bras ne bascule que sur 25°, d'avant en arrière"
+      - "Branchée sur secteur, pas de batterie"
+      - "Commande vocale seulement avec Alexa ou l'Assistant Google"
 interactiveGuide:
   title: "Quelle lampe de bureau pour toi ?"
   question: "Tu travailles surtout…"

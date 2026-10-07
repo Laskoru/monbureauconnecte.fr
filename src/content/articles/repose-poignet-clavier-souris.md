@@ -24,17 +24,27 @@ interactiveGuide:
     - label: "Je veux le meilleur confort durable"
       result: "La <strong>mousse à mémoire de forme</strong> épouse la morphologie et reprend moins vite sa forme que le gel sur la durée. Un set clavier + souris assorti est la solution la plus complète."
 products:
-  - asin: "B0GXKT85H7"
-    title: "Set repose-poignet clavier + souris Giecy en gel translucide, antidérapant"
-    blurb: "Le duo complet le plus simple pour commencer : un repose-poignet pour le clavier et un pour la souris, en gel souple à la forme de nuage, avec une base antidérapante."
+  - asin: "B000WLFK70"
+    title: "Fellowes Gel Crystal 9112201, repose-poignets clavier, noir"
+    blurb: "Le repose-poignets clavier en gel transparent de Fellowes : 47 cm de long pour couvrir un clavier complet, 1,6 cm de haut, garanti 5 ans par le fabricant."
     pros:
-      - "Duo clavier + souris complet"
-      - "Gel souple qui épouse le poignet"
-      - "Base antidérapante"
+      - "Surface en gel souple qui soutient le poignet au repos"
+      - "47 cm de long, adapté à un clavier complet"
+      - "Garantie limitée de 5 ans"
     cons:
-      - "Le gel peut se déformer à la longue"
-      - "Housse non lavable"
-      - "Hauteur fixe (pas pour tous les claviers)"
+      - "Vendu seul : le tapis souris assorti s'achète à part"
+      - "Hauteur fixe de 1,6 cm, sans réglage"
+      - "Trop long pour un clavier compact sans pavé numérique"
+  - asin: "B0012315XU"
+    title: "Fellowes Gel Crystal 9112101, tapis de souris repose-poignet, noir"
+    blurb: "Le tapis souris assorti, pour former un set clavier + souris : surface en polyuréthane pensée pour les souris optiques et appui-poignet en gel."
+    pros:
+      - "Complète le repose-poignets clavier de la même gamme"
+      - "Surface adaptée aux souris optiques"
+      - "Garantie limitée de 5 ans"
+    cons:
+      - "Format 20 x 23 cm, un peu juste pour les grands gestes de souris"
+      - "Appui en gel à hauteur fixe"
 sources:
   - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
@@ -42,6 +52,8 @@ sources:
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
   - label: "Ameli.fr, « Syndrome du canal carpien : définition, fréquence et causes »"
     url: "https://www.ameli.fr/assure/sante/themes/syndrome-canal-carpien/comprendre-syndrome-canal-carpien"
+  - label: "Fellowes, « Repose-poignets clavier Gel Crystal™ Noir »"
+    url: "https://www.fellowes.com/fr/fr/catalog/workspace-ergonomics/ergonomic-accessories/details/wrist-rests/FT-9112201"
 faq:
   - question: "Un repose-poignet suffit-il à lui seul contre les douleurs au poignet ?"
     answer: "Non, c'est un complément utile mais pas une solution miracle. Il corrige surtout la position du poignet à l'arrêt, entre deux frappes. Si la douleur vient d'un mauvais réglage global du poste (hauteur du bureau, position de la souris trop éloignée), il faudra aussi revoir ces éléments pour un vrai soulagement durable."

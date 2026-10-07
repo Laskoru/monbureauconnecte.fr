@@ -12,17 +12,17 @@ category: "peripheriques"
 coverAlt: "Ordinateur portable posé sur un bureau en bois"
 draft: false
 products:
-  - asin: "B0BFQKMFRW"
-    title: "Support aluminium ergonomique BESIGN LS03S"
-    blurb: "Support en aluminium à hauteur fixe : il remonte l'écran d'un coup, sans réglage à faire, sur une base stable."
+  - asin: "B000OOYECC"
+    title: "Rain Design mStand, support aluminium pour ordinateur portable, argent"
+    blurb: "Un support taillé d'une seule pièce d'aluminium : il remonte l'écran de 15 cm sans aucun réglage, sert de dissipateur de chaleur et laisse de la place dessous pour ranger le clavier."
     pros:
-      - "Remonte l’écran à hauteur des yeux"
-      - "Base stable en aluminium"
-      - "Aucun réglage à faire"
+      - "Une seule pièce d'aluminium, très stable"
+      - "Écran remonté de 15 cm, sans réglage à faire"
+      - "Passe-câbles à l'arrière et place pour ranger le clavier"
     cons:
-      - "Impose un clavier externe"
-      - "Angle fixe (pas de réglage fin)"
-      - "Peu adapté aux très grands portables"
+      - "Impose un clavier et une souris externes"
+      - "Hauteur et inclinaison fixes"
+      - "1,46 kg : pas fait pour être transporté"
 interactiveGuide:
   title: "Quel support portable pour toi ?"
   question: "Comment utilises-tu ton portable ?"
@@ -40,6 +40,8 @@ sources:
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Travail sur écran. Risques pour la santé »"
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
+  - label: "Rain Design, « mStand - Designed to Uplift »"
+    url: "https://raindesigninc.com/products/mstand"
 faq:
   - question: "Un support ordinateur portable suffit-il, ou faut-il aussi un clavier externe ?"
     answer: "Un support seul relève l'écran à hauteur des yeux, mais éloigne aussi le clavier intégré, moins pratique à utiliser en hauteur. Pour un usage prolongé, l'associer à un clavier et une souris externes reste la configuration la plus confortable."
