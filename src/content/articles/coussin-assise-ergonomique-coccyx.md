@@ -2,7 +2,7 @@
 title: "Coussin d'assise ergonomique : soulager le coccyx au bureau"
 description: "Comment choisir un coussin d'assise ergonomique pour soulager le coccyx et le bas du dos en position assise prolongée au bureau."
 pubDate: 2026-08-16
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Rester assis *sans douleur*"
 pinSub: "Le coussin qui soulage le coccyx."
@@ -37,28 +37,28 @@ interactiveGuide:
 sources:
   - label: "NHS, « Tailbone (coccyx) pain »"
     url: "https://www.nhs.uk/conditions/tailbone-coccyx-pain/"
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
-    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-131/ed131.pdf"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-131.pdf"
 faq:
   - question: "Un coussin d'assise ergonomique est-il vraiment utile si ma chaise de bureau est déjà de bonne qualité ?"
     answer: "Oui, les deux se complètent : même une chaise ergonomique haut de gamme utilise une assise standard qui répartit la pression de façon homogène, alors qu'un coussin en U ou en forme de fer à cheval décharge spécifiquement la zone du coccyx. Si tu ressens une gêne localisée après plusieurs heures assis, c'est justement le signe qu'une chaise seule ne suffit pas toujours à résoudre le problème."
   - question: "Combien de temps faut-il pour ressentir une amélioration ?"
     answer: "Le soulagement de la pression est immédiat dès qu'on s'assoit correctement sur un coussin bien positionné, mais l'adaptation de la posture et la réduction d'une gêne installée depuis des semaines prennent généralement plusieurs jours à quelques semaines d'usage régulier. Si aucune amélioration n'apparaît après quelques semaines, ou si la douleur s'aggrave, mieux vaut consulter un professionnel de santé plutôt que de multiplier les accessoires."
   - question: "Faut-il choisir un coussin en mousse à mémoire de forme ou en gel ?"
-    answer: "La mousse à mémoire de forme épouse la morphologie et reste confortable sur la durée, mais elle chauffe un peu plus en été et perd en soutien avec le temps si la densité est faible. Le gel refroidit davantage et reste ferme plus longtemps, au prix d'un poids et d'un encombrement supérieurs ; certains modèles combinent les deux couches pour cumuler les avantages, à un prix généralement plus élevé."
+    answer: "La mousse à mémoire de forme épouse la morphologie et reste confortable sur la durée, mais elle chauffe un peu plus en été et perd en soutien avec le temps si la densité est faible. Le gel donne une sensation plus fraîche au contact, au prix d'un poids souvent supérieur ; certains modèles combinent les deux couches."
 ---
 
 ## Pourquoi un coussin d'assise ergonomique change quelque chose
 
-Rester assis six, sept, huit heures par jour concentre une bonne partie du poids du corps sur une toute petite surface : les ischions et, juste derrière, le coccyx. Sur une assise plate et peu rembourrée, sans coussin d'assise ergonomique, cette pression ne se répartit pas naturellement : elle se concentre sur ces points d'appui, ce qui finit par créer une gêne sourde en fin de journée, voire une douleur plus nette chez les personnes déjà sensibles à cette zone (suite à une chute, une grossesse récente, ou simplement une morphologie plus fine sans graisse de protection naturelle).
+Rester assis six, sept, huit heures par jour concentre une bonne partie du poids du corps sur une toute petite surface : les ischions et, juste derrière, le coccyx. Sur une assise plate et peu rembourrée, sans coussin d'assise ergonomique, cette pression ne se répartit pas naturellement : elle se concentre sur ces points d'appui, ce qui finit par créer une gêne sourde en fin de journée, voire une douleur plus nette chez les personnes déjà sensibles à cette zone. Le NHS cite parmi les causes fréquentes une chute sur le coccyx, la grossesse et l'accouchement, la position assise prolongée et une mauvaise posture.
 
 Le coussin d'assise ergonomique répond à un problème précis : décharger le coccyx et redistribuer la pression vers les cuisses et les ischions, sans pour autant changer de chaise. C'est une solution nettement moins chère qu'un nouveau siège ergonomique, et elle a l'avantage de voyager : le même coussin peut suivre son utilisateur du bureau à la voiture, ou d'un poste de travail à un autre en open space.
 
-Ce n'est pas un accessoire réservé aux douleurs déjà installées. Beaucoup l'utilisent en prévention, dès que les journées de télétravail ou de bureau se passent assis presque en continu. La logique est la même que pour un tapis anti-fatigue en position debout : mieux vaut corriger un point d'appui mal réparti avant qu'il ne devienne une douleur chronique, plutôt que d'attendre que la gêne s'installe pour agir.
+Ce n'est pas un accessoire réservé aux douleurs déjà installées. On peut aussi l'utiliser en prévention, dès que les journées de télétravail ou de bureau se passent assis presque en continu. La logique est la même que pour un tapis anti-fatigue en position debout : mieux vaut corriger un point d'appui mal réparti avant qu'il ne devienne une douleur chronique, plutôt que d'attendre que la gêne s'installe pour agir.
 
-Il faut cependant rester honnête sur ce qu'un coussin peut et ne peut pas faire. Il soulage une pression mécanique et améliore le confort dans la durée, mais il ne corrige pas une mauvaise posture générale (dos vouté, écran mal réglé, chaise à la mauvaise hauteur) ni un problème médical avéré au niveau du coccyx ou du bassin. Dans ce dernier cas, un avis médical reste la première étape, le coussin venant en complément.
+Un coussin a ses limites. Il soulage une pression mécanique et améliore le confort dans la durée, mais il ne corrige pas une mauvaise posture générale (dos vouté, écran mal réglé, chaise à la mauvaise hauteur) ni un problème médical avéré au niveau du coccyx ou du bassin. Dans ce dernier cas, un avis médical reste la première étape, le coussin venant en complément ; le NHS conseille d'ailleurs de consulter si la douleur ne s'améliore pas après quelques semaines.
 
 ## Les critères qui font vraiment la différence
 
@@ -77,7 +77,7 @@ Il faut cependant rester honnête sur ce qu'un coussin peut et ne peut pas faire
 
 **Pour un usage nomade (bureau, voiture, déplacements)** : chercher un modèle avec poignée de transport intégrée et housse facilement lavable, plus important dans ce cas que l'épaisseur maximale, qui peut nuire à la portabilité.
 
-**Pour les fortes chaleurs ou une pièce mal ventilée** : un coussin en gel ou à housse respirante limite l'effet "assise qui chauffe" que peut donner une mousse à mémoire de forme classique sur plusieurs heures d'affilée.
+**Pour les fortes chaleurs ou une pièce mal ventilée** : un coussin en gel ou à housse respirante limite l'effet « assise qui chauffe » que peut donner une mousse à mémoire de forme classique sur plusieurs heures d'affilée.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les coussins d'assise ergonomiques sur Amazon](https://www.amazon.fr/s?k=coussin+assise+ergonomique+coccyx&tag=monbureauconnecte-21).
@@ -105,4 +105,4 @@ Le coussin d'assise ergonomique est un accessoire simple, peu coûteux et facile
 - [Coussin lombaire pour chaise de bureau](/articles/coussin-lombaire-chaise-bureau/)
 - [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Le guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

@@ -2,7 +2,7 @@
 title: "Casque à réduction de bruit pour le télétravail"
 description: "Choisir un casque à réduction de bruit pour le télétravail ou l'open space : efficacité de l'ANC, confort, autonomie, micro. Nos critères et nos choix."
 pubDate: 2026-08-14
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le calme, *même en open space*"
 pinSub: "Le casque anti-bruit pour le télétravail."
@@ -39,8 +39,8 @@ sources:
     url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000777134.html"
   - label: "Sony (guide d'aide du WH-CH720N), « Durée de fonctionnement disponible »"
     url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000776451.html"
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
-    url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
+  - label: "Sony (guide d'aide du WH-CH720N), « Utilisation du câble pour casque fourni »"
+    url: "https://helpguide.sony.net/mdr/2966/v1/fr/contents/TP1000777142.html"
 faq:
   - question: "Réduction de bruit active ou passive ?"
     answer: "La réduction active (ANC) atténue électroniquement les bruits constants (ventilation, circulation), idéale en open space ou à la maison. La passive ne fait qu'isoler physiquement. Pour se concentrer en télétravail, l'ANC apporte un vrai confort."
@@ -95,9 +95,9 @@ Ce sont deux choses différentes, souvent mélangées dans les fiches produit. L
 
 ## Filaire, Bluetooth et confort au quotidien
 
-Pour les **visios**, la question de la latence se pose : en Bluetooth, un léger décalage son/image est possible selon le casque et la plateforme. La plupart des modèles récents gèrent bien la voix, mais si tu veux zéro latence, un mode **filaire** (jack ou USB) reste la valeur sûre, pratique aussi quand la batterie est à plat. Beaucoup de casques permettent les deux : Bluetooth pour la mobilité, câble en secours.
+Pour les **visios**, la question de la latence se pose : en Bluetooth, un léger décalage son/image est possible selon le casque et la plateforme. La plupart des modèles récents gèrent bien la voix, mais si tu veux zéro latence, un mode **filaire** (jack ou USB) reste la valeur sûre, pratique aussi quand la batterie est à plat. Beaucoup de casques permettent les deux : Bluetooth pour la mobilité, câble en secours. Vérifie seulement que le micro reste actif en filaire : avec le câble fourni du Sony WH-CH720N, Sony indique qu'il faut parler dans le micro du téléphone.
 
-Côté confort sur 8 heures, surveille le **poids**, la pression de l'arceau et la matière des coussinets (le similicuir chauffe plus que le tissu). Pense à **nettoyer les coussinets** régulièrement ; sur les bons modèles, ils sont remplaçables, ce qui prolonge la vie du casque de plusieurs années. Enfin, le **mode transparence**, qui laisse entrer les sons extérieurs d'une pression, est très pratique pour répondre à quelqu'un ou entendre une sonnette sans retirer le casque.
+Côté confort sur 8 heures, surveille le **poids**, la pression de l'arceau et la matière des coussinets (le similicuir chauffe plus que le tissu). Pense à **nettoyer les coussinets** régulièrement ; sur les bons modèles, ils sont remplaçables, ce qui prolonge la vie du casque. Enfin, le **mode transparence**, qui laisse entrer les sons extérieurs d'une pression, est très pratique pour répondre à quelqu'un ou entendre une sonnette sans retirer le casque.
 
 ## Trois erreurs fréquentes à l'achat
 

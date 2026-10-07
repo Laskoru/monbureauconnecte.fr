@@ -3,7 +3,7 @@ title: "Souris gaming au bureau : DPI et boutons programmables au quotidien"
 seoTitle: "Souris gaming pour le travail : DPI et boutons utiles"
 description: "Une souris gaming pour le travail ? DPI réglable, boutons programmables et macros : notre guide pour bien la choisir, loin des clichés du RGB."
 pubDate: 2026-08-26
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Des raccourcis *sous le pouce*"
 pinSub: "La souris gaming qui accélère ta journée de travail."
@@ -45,7 +45,7 @@ faq:
   - question: "Une souris gaming a-t-elle un intérêt si je ne joue jamais ?"
     answer: "Oui, largement. Ce qui fait l'intérêt d'une souris gaming au bureau, ce ne sont pas ses performances en jeu mais son nombre de boutons programmables et la qualité de son capteur, deux points où les souris bureautiques classiques restent souvent limitées à deux ou trois boutons."
   - question: "Faut-il désactiver le RGB pour que la souris tienne plus longtemps en autonomie ?"
-    answer: "Sur un modèle sans fil, oui, ça vaut le coup. L'éclairage RGB consomme une part non négligeable de la batterie sur beaucoup de modèles ; l'éteindre via le logiciel du fabricant peut prolonger l'autonomie de plusieurs heures, sans aucun impact sur les fonctions programmables."
+    answer: "Sur un modèle sans fil, oui, ça vaut le coup. L'éclairage pèse lourd sur la batterie : pour sa G502 X Plus, Logitech annonce 130 heures d'autonomie éclairage coupé, contre 37 heures avec le RVB activé. L'éteindre via le logiciel du fabricant ne change rien aux fonctions programmables."
 ---
 
 ## Une souris gaming pour le travail : pourquoi elle a sa place au bureau
@@ -69,7 +69,7 @@ Une souris bureautique classique propose en général un clic gauche, un clic dr
 
 ## Les idées reçues à laisser de côté
 
-Le RGB est sans doute le premier réflexe qui vient à l'esprit quand on pense "souris gaming", et c'est aussi le critère le moins utile au bureau. Un éclairage coloré n'apporte rien à la productivité ; la plupart des modèles permettent de le désactiver entièrement via le logiciel, ce qui a même l'avantage de préserver l'autonomie sur un modèle sans fil.
+Le RGB est sans doute le premier réflexe qui vient à l'esprit quand on pense "souris gaming", et c'est aussi le critère le moins utile au bureau. Un éclairage coloré n'apporte rien à la productivité ; la plupart des modèles permettent de le désactiver entièrement via le logiciel, ce qui a même l'avantage de préserver l'autonomie sur un modèle sans fil (Logitech annonce 130 heures sans éclairage pour sa G502 X Plus, 37 heures avec).
 
 Autre idée reçue : un DPI très élevé serait un signe de qualité. En réalité, au-delà d'un certain seuil (largement dépassé même par des souris d'entrée de gamme), l'utilité concrète d'un DPI plus élevé devient marginale pour un usage bureautique. Ce qui compte davantage, c'est la stabilité du suivi et la possibilité de régler ce DPI facilement selon la tâche en cours, pas le chiffre maximal affiché sur la boîte.
 

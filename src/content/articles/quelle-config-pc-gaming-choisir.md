@@ -46,7 +46,7 @@ faq:
 
 ## Par où commencer : la carte graphique, toujours
 
-Avant de plonger dans les références d'une config PC gaming, une règle simple guide tout le reste : **pour le jeu, la carte graphique (GPU) est le composant le plus important**. C'est elle qui produit l'essentiel des images par seconde. Sur un budget donné, il vaut presque toujours mieux mettre le paquet sur le GPU et prendre un processeur milieu de gamme, plutôt que l'inverse.
+Avant d'entrer dans les références d'une config PC gaming, une règle simple guide tout le reste : **pour le jeu, la carte graphique (GPU) est le composant le plus important**. C'est elle qui produit l'essentiel des images par seconde. Sur un budget donné, il vaut presque toujours mieux mettre le paquet sur le GPU et prendre un processeur milieu de gamme, plutôt que l'inverse.
 
 Le reste des composants a un rôle de **support** : le processeur alimente la carte graphique en données, la RAM et le SSD fluidifient l'ensemble, l'alimentation et le boîtier assurent la fiabilité. Bien dimensionnés, ils ne brident pas le GPU ; surdimensionnés, ils gaspillent du budget qui aurait mieux servi ailleurs. Garde cette hiérarchie en tête, et la moitié des mauvais choix disparaît.
 
@@ -66,7 +66,7 @@ Le cœur du sujet. C'est ici que doit partir la plus grosse part du budget. Rep�
 
 ### Le stockage (SSD)
 
-Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise **500 Go à 1 To** : les jeux récents pèsent lourd (50 à 150 Go pièce), et un disque plein se traîne.
+Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise **500 Go à 1 To** : les jeux récents pèsent lourd (50 à 150 Go pièce ; Larian demande 150 Go d'espace libre pour Baldur's Gate 3), et un disque plein se traîne.
 
 ### L'alimentation et le boîtier
 

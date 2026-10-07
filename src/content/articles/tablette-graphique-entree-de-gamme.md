@@ -3,7 +3,7 @@ title: "Tablette graphique d'entrée de gamme : comment bien choisir la sienne"
 seoTitle: "Tablette graphique pas chère : comment bien la choisir"
 description: "Annoter, dessiner ou signer au bureau : les critères pour choisir une tablette graphique pas chère et éviter les mauvaises surprises."
 pubDate: 2026-09-12
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Dessiner et annoter au bureau, *sans se ruiner*"
 pinSub: "Les critères pour bien choisir une tablette graphique d'entrée de gamme."
@@ -11,7 +11,7 @@ keywords: ["tablette graphique pas cher", "tablette graphique débutant", "table
 category: "peripheriques"
 topPick:
   name: "Wacom Intuos S"
-  blurb: "Le choix sûr pour débuter : format compact, stylet sans pile, 4 touches programmables, et une compatibilité Windows/macOS irréprochable. C'est la marque de référence, au prix d'une entrée de gamme."
+  blurb: "Le choix sûr pour débuter : format compact, stylet sans pile à 4096 niveaux de pression, 4 touches programmables, compatible Windows, macOS, ChromeOS et Android. La marque de référence, au prix d'une entrée de gamme."
   url: "https://www.amazon.fr/s?k=wacom+intuos+s&tag=monbureauconnecte-21"
   ctaLabel: "Voir la Wacom Intuos S sur Amazon"
 coverAlt: "Une main tenant un stylet sur une tablette graphique, posée à côté d'un clavier d'ordinateur portable et de feutres de dessin"
@@ -69,7 +69,7 @@ Certains modèles ajoutent des **touches programmables directement sur le bord d
 
 - **Annotation de documents et signature occasionnelle** : un format compact avec une sensibilité de base suffit largement, inutile de viser plus.
 - **Initiation au dessin numérique ou à la retouche photo légère** : privilégie une zone active un peu plus grande et une sensibilité à la pression plus fine, pour progresser sans être bridé par le matériel.
-- **Usage intensif en illustration** : au-delà de l'entrée de gamme, mieux vaut se tourner vers des modèles plus avancés (zone active large, inclinaison du stylet détectée), qui sortent du cadre de cet article.
+- **Usage intensif en illustration** : au-delà de l'entrée de gamme, mieux vaut se tourner vers des modèles plus avancés (grande zone active, voire écran intégré), qui sortent du cadre de cette sélection.
 
 ## Les idées reçues à écarter
 

@@ -2,7 +2,7 @@
 title: "Bureau assis-debout électrique : lequel choisir ?"
 description: "Choisir son bureau assis-debout électrique pour le télétravail : moteurs, plage de hauteur, stabilité, budget. Nos critères et nos modèles fiables."
 pubDate: 2026-08-04
-updatedDate: 2026-09-11
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Travailler *debout ou assis*, en un geste"
 pinSub: "Le bureau électrique bien choisi."
@@ -12,35 +12,35 @@ coverAlt: "Personne travaillant debout à un bureau réglable en hauteur"
 draft: false
 products:
   - asin: "B0DQ8FGRTV"
-    title: "FLEXISPOT 120x60 cm, double moteur, plateau monobloc, mémoire de hauteur"
-    blurb: "Le double moteur monte plus vite et plus silencieusement qu'un simple moteur, et encaisse jusqu'à 100 kg : c'est le choix à faire si le bureau porte deux écrans et bouge plusieurs fois par jour."
+    title: "FLEXISPOT 120x60 cm, double moteur, 4 mémoires de hauteur"
+    blurb: "Le double moteur monte plus vite et plus silencieusement qu'un simple moteur, et la marque annonce 100 kg de charge dynamique : c'est le choix à faire si le bureau porte deux écrans et bouge plusieurs fois par jour."
     pros:
       - "Double moteur : montée rapide et silencieuse"
-      - "Mémoire de hauteur, jusqu’à 100 kg"
+      - "4 mémoires de hauteur, anti-collision"
       - "Passage assis/debout en quelques secondes"
     cons:
       - "Investissement conséquent"
       - "Assemblage long et lourd"
-      - "Plateau parfois à acheter à part"
+      - "Hauteur de 70 à 119 cm : juste pour les très grands gabarits debout"
 interactiveGuide:
   title: "Quel bureau assis-debout pour toi ?"
   question: "Ton poste, c'est plutôt…"
   options:
     - label: "1 écran, budget serré"
-      result: "Un <strong>simple moteur</strong> suffit largement. Concentre-toi sur une <strong>plage de hauteur</strong> qui couvre ta position assise ET debout (≈ 65-125 cm), et si possible une mémoire de position. Inutile de surpayer la stabilité pour un petit plateau léger."
+      result: "Un <strong>simple moteur</strong> suffit largement. Concentre-toi sur une <strong>plage de hauteur</strong> qui couvre ta position assise ET debout, et si possible une mémoire de position. Inutile de surpayer la stabilité pour un petit plateau léger."
     - label: "2 écrans / matériel lourd"
-      result: "Prends un <strong>double moteur</strong> : il monte plus vite, plus silencieusement, et surtout <strong>ne flotte pas</strong> en position haute. Vérifie une charge max d'au moins 100 kg et un plateau monobloc rigide."
+      result: "Prends un <strong>double moteur</strong> : il monte plus vite, plus silencieusement, et surtout <strong>ne flotte pas</strong> en position haute. Vérifie la charge maximale annoncée, avec de la marge, et un plateau monobloc rigide."
     - label: "Je change de position souvent"
       result: "La <strong>mémoire de positions</strong> (3-4 hauteurs) devient ta priorité : c'est elle qui rend l'alternance sans effort, donc réelle. Un double moteur ajoute la rapidité qui va avec."
     - label: "Petit budget, je teste l'idée"
       result: "Un <strong>rehausseur posé</strong> sur ton bureau actuel dépanne à petit prix, mais il faut déplacer le matériel à chaque changement. Bien pour tester ; si tu accroches, passe vite à un vrai bureau électrique."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
-  - label: "INRS, « Postures sédentaires : Ce qu'il faut retenir »"
+  - label: "INRS, « Postures sédentaires. Ce qu'il faut retenir »"
     url: "https://www.inrs.fr/risques/postures-sedentaires/ce-qu-il-faut-retenir.html"
   - label: "INRS, « Station debout prolongée : semelles ou tapis anti-fatigue pour prévenir les troubles musculosquelettiques ? »"
-    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/DMT/TI-QR-162/qr162.pdf"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/DMT/TI-QR-162.pdf"
 faq:
   - question: "Un bureau assis-debout est-il vraiment utile ?"
     answer: "Oui : alterner assis et debout réduit la sédentarité et soulage le dos. L'idéal est de changer de position régulièrement plutôt que de rester debout des heures. Un modèle électrique avec mémoire de hauteurs rend l'alternance facile."
@@ -49,7 +49,7 @@ faq:
   - question: "Un ou deux moteurs, quelle différence ?"
     answer: "Deux moteurs (un dans chaque pied) montent plus vite, plus silencieusement et supportent une charge plus lourde, avec beaucoup moins de flottement en position haute. Un seul moteur suffit pour un petit plateau et un budget serré, mais devient vite juste dès qu'on ajoute deux écrans."
   - question: "Combien de temps par jour faut-il rester debout ?"
-    answer: "Il n'y a pas de règle universelle, mais un bon point de départ est de changer de position toutes les 30 minutes environ, sans jamais forcer ni rester debout plus de 40 minutes d'affilée. L'INRS conseille surtout de limiter le temps passé assis, idéalement à 5 heures cumulées par jour, en écoutant ses sensations plutôt qu'un chronomètre."
+    answer: "Il n'y a pas de règle universelle, mais un bon point de départ est de changer de position toutes les 30 minutes environ, sans rester debout plus de 40 minutes d'affilée, limite proposée par des chercheurs cités par l'INRS. L'INRS conseille surtout de limiter le temps passé assis, idéalement à 5 heures cumulées par jour, en écoutant ses sensations plutôt qu'un chronomètre."
 ---
 
 ## Pourquoi passer à un bureau assis-debout
@@ -60,13 +60,13 @@ L'idée n'est pas de travailler debout toute la journée (ce serait aussi fatiga
 
 ## Ce que l'alternance change vraiment
 
-Se lever et bouger quelques minutes, idéalement toutes les 30 minutes comme le conseille l'INRS, aide à réactiver la circulation et à relâcher les muscles posturaux qui se figent en position assise prolongée. On se surprend aussi à bouger davantage (un pas de côté, un léger déhanché) là où la chaise nous cloue. Beaucoup de gens rapportent surtout une chose : moins de raideur en fin de journée, et un regain d'énergie sur le fameux creux de 14 h-16 h.
+Se lever et bouger quelques minutes, idéalement toutes les 30 minutes comme le conseille l'INRS, aide à réactiver la circulation et à relâcher les muscles posturaux qui se figent en position assise prolongée. Debout, on bouge aussi davantage (un pas de côté, un appui qui change) là où la chaise nous cloue.
 
 À l'inverse, rester **trop longtemps debout** crée ses propres douleurs : plante des pieds, genoux, bas du dos. Le bon réflexe est donc de viser l'équilibre, pas le record. Un tapis anti-fatigue sous les pieds et une paire de chaussures correctes limitent l'inconfort quand on débute.
 
 ## Les critères qui comptent vraiment
 
-C'est là que se joue la différence entre un bureau qu'on adore et un bureau qui prend la poussière en position basse. Voici ce qu'il faut regarder, par ordre d'importance.
+C'est là que se joue la différence entre un bureau qu'on adore et un bureau qui prend la poussière en position basse. Les critères suivent, par ordre d'importance.
 
 ### Un ou deux moteurs
 
@@ -74,11 +74,11 @@ Le critère numéro un. Un **double moteur** (un dans chaque pied) monte plus vi
 
 ### La plage de hauteur
 
-Vise une plage large, de l'ordre de **65 à 125 cm** (celle que la norme NF EN 527-1 prévoit pour un bureau assis-debout). Trop souvent, les modèles d'entrée de gamme ne descendent pas assez bas pour une personne petite, ou ne montent pas assez haut pour quelqu'un de grand en position debout. Vérifie que **ta** hauteur assise **et** ta hauteur debout tombent bien dans la plage, sinon le bureau ne sera confortable que dans une seule position, ce qui ruine tout l'intérêt.
+Vise une **plage large**, et compare-la à tes propres mesures : notre [calculateur de hauteur de bureau](/calculateur-hauteur-bureau/) te donne ta hauteur assise et debout. Trop souvent, les modèles d'entrée de gamme ne descendent pas assez bas pour une personne petite, ou ne montent pas assez haut pour quelqu'un de grand en position debout. Vérifie que **ta** hauteur assise **et** ta hauteur debout tombent bien dans la plage, sinon le bureau ne sera confortable que dans une seule position, ce qui ruine tout l'intérêt.
 
 ### La mémoire de positions
 
-Un panneau avec **mémoire** (généralement 3 à 4 hauteurs enregistrées) transforme l'usage : une pression, le bureau rejoint exactement ta position debout ou assise. Sans mémoire, il faut viser à la main à chaque changement, et on finit par ne plus bouger. Pour un poste partagé à deux, la mémoire multiple est un vrai plus.
+Un panneau avec **mémoire** (généralement 3 à 4 hauteurs enregistrées) transforme l'usage : une pression, le bureau rejoint exactement ta position debout ou assise. Sans mémoire, il faut viser à la main à chaque changement, et on finit par ne plus bouger. Pour un poste partagé à deux, la mémoire multiple devient très utile.
 
 ### L'anti-collision
 
@@ -86,7 +86,7 @@ Ce capteur arrête le plateau s'il rencontre un obstacle en montant ou en descen
 
 ### La charge et le plateau
 
-Regarde la **charge maximale** annoncée (souvent 70 à 125 kg) et garde de la marge : deux écrans, un bras articulé, un PC posé sur le plateau, ça monte vite. Côté plateau, un **monobloc** est plus rigide et plus net qu'un plateau en deux parties ; les dimensions 120×60 cm sont le format le plus courant, mais l'INRS recommande au moins 80 cm de profondeur pour un poste sur écran : vise plus profond si ta pièce le permet.
+Regarde la **charge maximale** annoncée (de préférence la charge dynamique, celle que le moteur soulève) et garde de la marge : deux écrans, un bras articulé, un PC posé sur le plateau, ça monte vite. Côté plateau, un **monobloc** est plus rigide et plus net qu'un plateau en deux parties ; les dimensions 120×60 cm sont le format le plus courant, mais l'INRS recommande au moins 80 cm de profondeur pour un poste sur écran : vise plus profond si ta pièce le permet.
 
 ![Bureau assis-debout électrique en position haute avec fauteuil ergonomique](/covers/bureau-assis-debout-inbody.webp)
 
@@ -113,7 +113,7 @@ Le rehausseur (ou « convertisseur ») posé sur un bureau classique dépanne à
 
 ## Bien l'installer, éviter les erreurs
 
-Quelques réflexes pour ne pas gâcher un bon bureau : règle d'abord ta **hauteur assise** correctement (coudes à ~90°, écran à hauteur des yeux) avant de mémoriser les positions ; passe les câbles dans une **goulotte ou un chemin de câbles** pour qu'ils suivent le mouvement sans se tendre ni s'accrocher ; et pense à la **hauteur du plafond incliné** ou d'une étagère basse avant d'activer la montée automatique. Un bureau bien réglé au départ, c'est un bureau qu'on utilise vraiment dans ses deux positions.
+Quelques réflexes pour ne pas gâcher un bon bureau : règle d'abord ta **hauteur assise** correctement (coudes à 90° ou un peu plus, haut de l'écran à hauteur des yeux) avant de mémoriser les positions ; passe les câbles dans une **goulotte ou un chemin de câbles** pour qu'ils suivent le mouvement sans se tendre ni s'accrocher ; et pense à la **hauteur du plafond incliné** ou d'une étagère basse avant d'activer la montée automatique. Un bureau bien réglé au départ, c'est un bureau qu'on utilise vraiment dans ses deux positions.
 
 > **L'essentiel à retenir**
 > Le bon bureau assis-debout, c'est **deux moteurs** (stabilité et silence), une **plage de hauteur** qui couvre ta position assise ET debout, une **mémoire** de positions pour que l'alternance reste sans effort, et une **charge** avec de la marge pour tes écrans. Le reste est du confort. Et souviens-toi : le but, c'est d'**alterner**, pas de rester debout des heures.
@@ -129,4 +129,4 @@ Le bureau assis-debout n'est pas un gadget : c'est l'un des achats qui a le plus
 - [Tapis de sol pour chaise de bureau](/articles/tapis-sol-chaise-bureau/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [Bureau d'angle pour petit espace : comment bien choisir](/articles/bureau-angle-petit-espace/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Le guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

@@ -3,7 +3,7 @@ title: "Tapis de souris XXL pour le bureau : lequel choisir pour clavier et sour
 seoTitle: "Tapis de souris XXL pour le bureau : lequel choisir"
 description: "Un tapis de souris XXL unifie clavier et souris sur une seule surface fluide. Nos critères et notre sélection pour un bureau télétravail ou gaming."
 pubDate: 2026-08-18
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Clavier *et* souris, une seule surface"
 pinSub: "Le tapis XXL qui habille le bureau."
@@ -39,13 +39,15 @@ interactiveGuide:
 sources:
   - label: "Logitech G, « Tapis de souris gaming Logitech G840 Extra Large (XL) »"
     url: "https://www.logitechg.com/fr-fr/shop/p/g840-cloth-xl-gaming-mouse-pad"
+  - label: "Logitech Support, « Cleaning the Logitech Desk Mat / Mouse Pad »"
+    url: "https://support.logi.com/hc/en-001/articles/4405623490071-Cleaning-the-Logitech-Desk-Mat-Mouse-Pad"
   - label: "Corsair, « Tapis de souris gaming anti-effilochement MM300 - Extended »"
     url: "https://www.corsair.com/fr/fr/p/mouse-pads/ch-9000108-ww/mm300-anti-fray-cloth-gaming-mouse-pad-extended-ch-9000108-ww"
 faq:
   - question: "À quoi sert un tapis de souris XXL ?"
     answer: "Il couvre toute la zone clavier + souris : surface homogène et confortable, repose-poignet naturel, meilleure glisse. Il protège aussi le bureau et unifie l'esthétique du poste."
   - question: "Comment nettoyer un grand tapis de souris ?"
-    answer: "La plupart des modèles en tissu se nettoient à l'eau tiède savonneuse, à la main, puis séchage à plat à l'air libre. Évite le sèche-linge, qui déforme la base en caoutchouc."
+    answer: "Logitech conseille pour ses tapis en tissu un chiffon doux légèrement humidifié, avec un peu de savon pour les taches, puis un rinçage au chiffon humide et un séchage à plat. Pas de lave-linge ni de sèche-linge, et ni javel ni solvant. Suis toujours la notice de ton modèle."
 ---
 
 ## Pourquoi passer à un tapis de souris XXL
@@ -59,9 +61,9 @@ L'intérêt dépasse le simple confort de glisse. Un grand tapis protège aussi 
 - **La taille exacte** : mesure la largeur disponible sur le bureau avant d'acheter. Un tapis de 90 cm laisse généralement de la place pour un support téléphone ou une tasse à côté du clavier ; en dessous de 70 cm, l'avantage par rapport à un tapis classique devient marginal.
 - **La base antidérapante** : en caoutchouc naturel de préférence, elle doit empêcher tout glissement même lors de mouvements rapides, un point à ne pas négliger sur un bureau en verre ou en stratifié très lisse.
 - **La surface** : tissu tissé pour une glisse fluide et silencieuse (le choix le plus polyvalent), ou surface « speed » plus lisse pour les usages gaming rapides. Pour un usage bureautique classique, le tissu standard suffit largement.
-- **L'épaisseur** : entre 2 et 4 mm en général. Plus épais améliore le confort au poignet mais peut légèrement déstabiliser un clavier mécanique haut ; reste dans cette fourchette pour un bon compromis.
-- **Les bords cousus** : ils évitent l'effilochage du tissu dans le temps, surtout avec un usage quotidien intensif, un détail qui prolonge nettement la durée de vie du tapis.
-- **L'entretien** : privilégie une surface lavable en machine ou à l'éponge humide ; un tapis qui accumule les miettes et les traces de café sans pouvoir être nettoyé perd vite son intérêt.
+- **L'épaisseur** : quelques millimètres suffisent (3 mm pour le Logitech G840 XL, par exemple). Plus épais améliore le confort au poignet mais peut légèrement déstabiliser un clavier mécanique haut.
+- **Les bords cousus** : ils évitent l'effilochage du tissu dans le temps (c'est l'argument du Corsair MM300, par exemple), surtout avec un usage quotidien intensif.
+- **L'entretien** : privilégie une surface qui se nettoie facilement au chiffon humide ; un tapis qui accumule les miettes et les traces de café sans pouvoir être nettoyé perd vite son intérêt.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les tapis de souris XXL sur Amazon](https://www.amazon.fr/s?k=tapis+de+souris+xxl&tag=monbureauconnecte-21).
@@ -80,7 +82,7 @@ Sur un bureau standard de 120-140 cm de large, un tapis de 80-90 cm laisse une m
 
 Un tapis XXL neuf arrive souvent **roulé** dans son emballage : laisse-le se mettre à plat un jour ou deux (ou pose des livres aux coins) avant de juger sa tenue, le temps que le matériau se détende. Vérifie que la **base** repose bien sur toute la surface, sans plis, surtout sur un bureau en verre ou très lisse où un coin qui se soulève peut gêner la souris.
 
-Côté entretien, la plupart des modèles en tissu se nettoient à la **main, à l'eau tiède savonneuse**, puis sèchent **à plat à l'air libre** (jamais au sèche-linge, qui déforme la base en caoutchouc). Un passage régulier pour retirer miettes et poussière évite que la surface ne devienne rugueuse sous la souris. Un tapis à **bords cousus** vieillit nettement mieux : sans cette finition, le tissu s'effiloche sur les tranches au fil des mois. Bien entretenu, un bon tapis XXL se garde plusieurs années sans perdre sa glisse.
+Côté entretien, Logitech recommande pour ses tapis en tissu un **chiffon doux légèrement humide**, un peu de savon sur les taches, un rinçage au chiffon puis un séchage **à plat** (ni lave-linge, ni sèche-linge). Un passage régulier pour retirer miettes et poussière évite que la surface ne devienne rugueuse sous la souris. Un tapis à **bords cousus** vieillit mieux : sans cette finition, le tissu peut s'effilocher sur les tranches au fil des mois.
 
 ## Notre choix
 

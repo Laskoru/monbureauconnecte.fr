@@ -2,7 +2,7 @@
 title: "Clavier ergonomique séparé : à qui s'adresse ce format ?"
 description: "Un clavier ergonomique séparé déroute au début, mais soulage vraiment les poignets. Notre comparatif, le temps d'adaptation, comment choisir."
 pubDate: 2026-08-02
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Taper *sans forcer* sur les poignets"
 pinSub: "Le clavier ergonomique séparé décrypté."
@@ -12,14 +12,14 @@ coverAlt: "Mains posées sur un clavier d'ordinateur"
 draft: false
 products:
   - asin: "B07W6GVT3X"
-    title: "Logitech ERGO K860, clavier en deux parties, repose-poignets"
+    title: "Logitech ERGO K860, clavier incurvé en deux parties d'un seul tenant, repose-poignets"
     blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, et une seule pièce pour une transition plus douce vers le format ergonomique."
     pros:
       - "Courbe qui détend les poignets"
       - "Repose-poignets rembourré"
       - "Une seule pièce, transition plus douce"
     cons:
-      - "Encombrant sur le bureau"
+      - "Pavé numérique intégré : large, éloigne la souris"
       - "Temps d’adaptation les premiers jours"
       - "Pas de rétroéclairage"
 interactiveGuide:
@@ -37,9 +37,9 @@ interactiveGuide:
 sources:
   - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
-  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
 faq:
   - question: "Un clavier ergonomique séparé demande-t-il un temps d'adaptation ?"
@@ -74,7 +74,7 @@ Certains modèles déplacent des touches usuelles (**Entrée**, **Retour arrièr
 
 ### La connectivité
 
-Sans-fil ou filaire selon la préférence, sans impact réel sur l'ergonomie elle-même. Le sans-fil libère le bureau ; le filaire évite la question des piles ou de la recharge.
+Sans-fil ou filaire selon la préférence, sans impact réel sur l'ergonomie elle-même. Le sans-fil libère le bureau (l'ERGO K860, par exemple, fonctionne sur piles et se couple à trois appareils) ; le filaire évite la question des piles ou de la recharge.
 
 > 🛒 **Comparer les modèles du moment**
 > Les références et les prix bougent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les claviers ergonomiques sur Amazon](https://www.amazon.fr/s?k=clavier+ergonomique&tag=monbureauconnecte-21).
@@ -95,13 +95,13 @@ Les premiers jours sont les plus délicats : la vitesse chute, on tape à côté
 
 ## Penser le poste dans son ensemble
 
-Le clavier ne travaille jamais seul. Pour un vrai bénéfice, il gagne à s'inscrire dans un poste cohérent : une **souris** placée juste à côté (un [clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/) rapproche la souris et soulage l'épaule), une **hauteur de bureau** qui garde les coudes à 90°, et si besoin un [repose-poignet](/articles/repose-poignet-clavier-souris/) pour la souris. Côté touches, le débat **mécanique ou membrane** compte moins que l'ergonomie : les deux existent en format ergonomique, la mécanique offrant un retour plus franc et une meilleure durée de vie, la membrane un fonctionnement plus silencieux et moins cher. Choisis selon ta sensibilité au bruit et au toucher, pas l'inverse.
+Le clavier ne travaille jamais seul. Pour un vrai bénéfice, il gagne à s'inscrire dans un poste cohérent : une **souris** placée juste à côté (un [clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/) rapproche la souris et soulage l'épaule), une **hauteur de bureau** qui garde les coudes à 90° ou un peu plus, et si besoin un [repose-poignet](/articles/repose-poignet-clavier-souris/) pour la souris. Côté touches, le débat **mécanique ou membrane** compte moins que l'ergonomie : les deux existent en format ergonomique, la mécanique offrant un retour plus franc et une meilleure durée de vie, la membrane un fonctionnement plus silencieux et moins cher. Choisis selon ta sensibilité au bruit et au toucher, pas l'inverse.
 
 ## Pour qui ce n'est (peut-être) pas utile
 
-Soyons honnêtes : tout le monde n'a pas besoin d'un clavier ergonomique. Si tu tapes **peu** dans la journée, si tu n'as **aucune gêne** et si ton poste est déjà bien réglé, le bénéfice sera marginal et l'adaptation peut agacer pour rien. De même, si tu jongles souvent entre **plusieurs postes** (bureau, portable, salle de réunion), réapprendre un format à chaque fois est contre-productif : mieux vaut alors soigner sa posture et faire des pauses. Le clavier ergo brille surtout pour qui **tape des heures au même poste** et ressent, ou veut prévenir, des tensions au poignet.
+Tout le monde n'a pas besoin d'un clavier ergonomique. Si tu tapes **peu** dans la journée, si tu n'as **aucune gêne** et si ton poste est déjà bien réglé, le bénéfice sera marginal et l'adaptation peut agacer pour rien. De même, si tu jongles souvent entre **plusieurs postes** (bureau, portable, salle de réunion), réapprendre un format à chaque fois est contre-productif : mieux vaut alors soigner sa posture et faire des pauses. Le clavier ergo brille surtout pour qui **tape des heures au même poste** et ressent, ou veut prévenir, des tensions au poignet.
 
-Côté budget, compte environ **40 à 70 €** pour un modèle d'entrée de gamme à courbe en une pièce, davantage pour une référence comme l'ERGO K860 ou pour les claviers scindés haut de gamme. Le bénéfice se ressent dès les premiers jours pour le confort, et la vitesse revient avec un peu de pratique : un investissement modéré au regard des années de frappe qu'il accompagne.
+Côté budget, un modèle d'entrée de gamme à courbe en une pièce coûte nettement moins qu'une référence comme l'ERGO K860 ou qu'un clavier scindé haut de gamme ; les prix bougent souvent, compare ceux du moment. Le bénéfice se ressent dès les premiers jours pour le confort, et la vitesse revient avec un peu de pratique : un investissement modéré au regard des années de frappe qu'il accompagne.
 
 ## Gauchers, petites mains, pavé numérique : les détails qui comptent
 
@@ -115,4 +115,4 @@ Quelques points de vigilance avant de commander. Le **pavé numérique** : beauc
 - [Repose-poignet clavier et souris](/articles/repose-poignet-clavier-souris/)
 - [Souris ergonomique verticale](/articles/souris-ergonomique-verticale/)
 - [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Le guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

@@ -3,7 +3,7 @@ title: "Caisson de rangement sous bureau : libérer le plateau sans encombrer"
 seoTitle: "Caisson de rangement sous bureau : bien le choisir"
 description: "Caisson de rangement sous bureau : roulettes ou fixe, tiroirs, serrure, hauteur sous le plateau. Les critères pour bien le choisir et libérer ton bureau."
 pubDate: 2026-08-16
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Un plateau *enfin dégagé*"
 pinSub: "Le caisson qui range tout, discret."
@@ -13,16 +13,16 @@ coverAlt: "Espace sous un bureau, jambes et zone de rangement disponible"
 draft: false
 products:
   - asin: "B08VJM5NHB"
-    title: "Caisson à roulettes HOMCOM, tiroir + niche ouverte"
-    blurb: "Un caisson compact avec un tiroir fermé et une niche ouverte pour un accès rapide, monté sur roulettes pour se déplacer facilement sous le bureau."
+    title: "Caisson à roulettes HOMCOM, tiroir, niche et placard"
+    blurb: "Un caisson compact avec un tiroir, une niche ouverte et un placard, monté sur quatre roulettes pivotantes dont deux avec frein."
     pros:
       - "Compact, se glisse sous le bureau"
-      - "Tiroir fermé + niche à accès rapide"
-      - "Roulettes pour le déplacer facilement"
+      - "Tiroir, niche à accès rapide et placard"
+      - "Roulettes dont deux à frein"
     cons:
       - "Capacité limitée (petit caisson)"
       - "Tiroir sans serrure"
-      - "Roulettes basiques"
+      - "Panneaux de particules, à protéger de l’humidité"
 interactiveGuide:
   title: "Quel caisson pour ton bureau ?"
   question: "Ta priorité, c'est…"
@@ -36,22 +36,22 @@ interactiveGuide:
     - label: "Un espace vraiment réduit"
       result: "Cherche un modèle <strong>étroit et haut</strong> plutôt que large, ou une version <strong>sans roulettes</strong> qui se glisse dans un renfoncement précis sans jeu. Attention aux bureaux assis-debout à pied central."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
   - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
-    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-131/ed131.pdf"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-131.pdf"
 faq:
   - question: "Un caisson de rangement sous bureau, est-ce compatible avec tous les bureaux ?"
-    answer: "Pas systématiquement. Il faut vérifier la hauteur disponible sous le plateau (un bureau fixe standard mesure environ 74 cm de haut, épaisseur du plateau comprise) et l'espace libre une fois les jambes du bureau et les pieds de l'utilisateur pris en compte. Un bureau assis-debout électrique avec des jambes centrales très rapprochées peut par exemple limiter les emplacements possibles."
+    answer: "Pas systématiquement. Il faut vérifier la hauteur disponible sous le plateau (l'INRS indique qu'une table de hauteur fixe mesure environ 72 cm) et l'espace libre une fois les jambes du bureau et les pieds de l'utilisateur pris en compte. Un bureau assis-debout électrique avec des jambes centrales très rapprochées peut par exemple limiter les emplacements possibles."
   - question: "Faut-il privilégier un modèle avec ou sans roulettes ?"
     answer: "Les roulettes apportent de la flexibilité : on peut sortir le caisson pour passer l'aspirateur, le déplacer d'un poste à l'autre, ou l'utiliser comme accoudoir mobile à côté du bureau. En contrepartie, un modèle fixe est souvent un peu plus stable et moins cher. Le choix dépend surtout de la fréquence à laquelle l'espace de travail est réorganisé."
   - question: "Un caisson de rangement remplace-t-il une armoire de bureau classique ?"
     answer: "Non, ce n'est pas son rôle. Le caisson sous bureau est pensé pour les objets utilisés régulièrement (dossiers en cours, fournitures courantes, chargeurs), pas pour un archivage de long terme. Pour stocker des documents rarement consultés ou de gros volumes, une armoire ou un meuble de rangement séparé reste plus adapté."
 ---
 
-## Pourquoi un caisson de rangement sous bureau change le quotidien
+## Ce qu'un caisson de rangement sous bureau apporte au quotidien
 
 Un plateau de bureau encombré n'est presque jamais un problème de manque de place dans la pièce : c'est un problème de répartition, et un caisson de rangement sous bureau le règle souvent. Stylos, dossiers, chargeurs, câbles et accessoires divers s'accumulent sur la surface de travail simplement parce qu'il n'existe pas d'endroit dédié pour les ranger à portée de main. Le caisson résout ce problème sans prendre un centimètre de surface sur le plateau : tout l'espace utile se trouve sous le bureau, dans une zone souvent laissée vide à part les jambes de l'utilisateur.
 
@@ -63,7 +63,7 @@ Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantag
 
 ## Les critères qui font vraiment la différence
 
-- **La hauteur et les dimensions** : la contrainte numéro un est la hauteur libre sous le plateau, qui doit permettre à la fois le passage des jambes et le caisson sans les gêner (l'INRS prévoit pour les jambes un espace d'environ 65 cm de haut et 60 cm de profondeur sous le plan de travail). Mesurer cet espace avant l'achat évite la déconvenue d'un caisson trop haut ou trop large.
+- **La hauteur et les dimensions** : la contrainte numéro un est la hauteur libre sous le plateau, qui doit permettre à la fois le passage des jambes et le caisson sans les gêner (l'INRS prévoit pour les jambes un gabarit de 65 cm de haut et 60 cm de profondeur sous le plan de travail). Mesurer cet espace avant l'achat évite la déconvenue d'un caisson trop haut ou trop large.
 - **Le nombre et le type de compartiments** : un tiroir fermé protège mieux les documents sensibles et la poussière, une niche ouverte permet un accès plus rapide pour ce qu'on utilise en continu dans la journée. Les meilleurs modèles combinent les deux.
 - **La présence de roulettes verrouillables** : des roulettes qui se bloquent évitent que le caisson ne glisse pendant qu'on l'utilise comme point d'appui ou qu'on y pose un objet lourd.
 - **La solidité de la structure** : un caisson en panneaux de particules bas de gamme peut se voiler avec le temps, surtout en cas d'humidité ; les structures avec renforts métalliques ou panneaux plus épais tiennent mieux dans la durée.

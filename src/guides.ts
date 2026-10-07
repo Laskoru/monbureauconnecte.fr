@@ -71,7 +71,7 @@ export const guides: Guide[] = [
   {
     slug: 'ergonomie-bureau',
     icon: '💪',
-    title: "L'ergonomie au bureau : le guide complet",
+    title: "L'ergonomie au bureau : régler son poste pas à pas",
     seoTitle: "L'ergonomie au bureau : régler son poste sans douleur",
     description:
       "L'ergonomie au bureau en un guide : chaise, hauteur du bureau, écran, clavier, souris, lumière et pauses. Les bons réglages, puis le matériel utile.",

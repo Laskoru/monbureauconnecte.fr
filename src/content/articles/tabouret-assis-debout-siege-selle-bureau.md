@@ -3,7 +3,7 @@ title: "Tabouret assis-debout (siège selle) : bien choisir pour un bureau haut"
 seoTitle: "Tabouret assis-debout (siège selle) : bien choisir"
 description: "Comment choisir un tabouret assis-debout ou un siège selle pour varier les appuis derrière un bureau haut, sans fatigue ni mauvaise surprise."
 pubDate: 2026-08-16
-updatedDate: 2026-09-11
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Bouger *en travaillant*"
 pinSub: "Le tabouret assis-debout bien choisi."
@@ -27,10 +27,10 @@ interactiveGuide:
 products:
   - asin: "B0CM936YRY"
     title: "Tabouret dynamique SONGMICS OSC008B01, hauteur réglable, base large"
-    blurb: "Un tabouret complet à assise basculante à 360°, avec une hauteur réglable qui couvre aussi bien un bureau standard qu'un bureau assis-debout relevé."
+    blurb: "Un tabouret à assise basculante à 360°, réglable de 58 à 83 cm : une hauteur de perche, pensée pour un bureau assis-debout relevé ou un plan de travail haut, pas pour un bureau standard."
     pros:
       - "Assise basculante qui sollicite le dos"
-      - "Hauteur large (bureau standard ou relevé)"
+      - "Réglable de 58 à 83 cm (bureau relevé)"
       - "Base large stable"
     cons:
       - "Sans dossier (fatigant au début)"
@@ -54,7 +54,7 @@ faq:
 
 ## Pourquoi alterner les appuis plutôt que rester assis figé
 
-Rester assis sans bouger pendant des heures est l'un des points les plus documentés en ergonomie de bureau : la position statique, même sur une bonne chaise, fige les mêmes muscles toute la journée, et l'INRS associe ces postures sédentaires à de nombreuses pathologies. Le tabouret assis-debout part d'un principe différent de la chaise classique : au lieu de stabiliser complètement le corps, il encourage de petits mouvements permanents (bascule, rotation, léger rééquilibrage) qui sollicitent en continu les muscles profonds du dos et du tronc.
+Rester assis sans bouger pendant des heures est l'un des points les plus documentés en ergonomie de bureau : la position statique, même sur une bonne chaise, fige les mêmes muscles toute la journée, et l'INRS associe ces postures sédentaires à de nombreuses pathologies. Le tabouret assis-debout part d'un principe différent de la chaise classique : au lieu de stabiliser complètement le corps, il encourage de petits mouvements permanents (bascule, rotation, léger rééquilibrage) qui sollicitent davantage les muscles qu'une assise stable. Dans son analyse des assises instables comme le swiss ball, l'INRS note ce gain de sollicitation, mais aussi qu'un usage prolongé peut entraîner fatigue ou inconfort musculaire, et qu'il faut s'y mettre progressivement, en alternance avec d'autres postures.
 
 Ce n'est pas un gadget réservé aux passionnés d'ergonomie. C'est un complément logique pour qui possède déjà un bureau réglable en hauteur et alterne entre position assise et debout : le tabouret comble l'entre-deux, ce moment où rester debout complètement devient fatigant mais où se rasseoir sur une chaise classique casse la dynamique. Il trouve aussi sa place devant un plan de travail haut fixe, pour des tâches courtes qui ne justifient pas une vraie chaise.
 
@@ -89,7 +89,7 @@ Il vaut aussi la peine de vérifier, avant d'acheter, la hauteur du bureau utili
 
 ## Combien ça coûte
 
-Les prix couvrent une large fourchette. Un **tabouret basculant simple** se trouve autour de **40 à 80 €**, largement suffisant pour de l'appoint. Un **tabouret dynamique** complet, avec hauteur généreuse, base large et parfois dossier ou repose-pieds, tourne plutôt entre **80 et 150 €**. Les **sièges selle** ergonomiques de qualité montent souvent plus haut. Le bon repère : inutile de viser le plus cher si tu ne t'en sers qu'une ou deux heures par jour en complément d'une bonne chaise. C'est justement là que le tabouret prend tout son sens, pas en remplacement.
+Les prix couvrent une large fourchette. Un **tabouret basculant simple** reste le plus abordable, largement suffisant pour de l'appoint. Un **tabouret dynamique** complet, avec hauteur généreuse, base large et parfois dossier ou repose-pieds, coûte davantage, et les **sièges selle** ergonomiques de qualité montent encore plus haut. Le bon repère : inutile de viser le plus cher si tu ne t'en sers qu'une ou deux heures par jour en complément d'une bonne chaise. C'est justement là que le tabouret prend tout son sens, pas en remplacement.
 
 > **L'essentiel à retenir**
 > Un tabouret assis-debout sert à **alterner les appuis**, pas à remplacer la chaise : quelques créneaux, surtout quand le bureau est en position haute. Le **tabouret dynamique** (assise basculante) est polyvalent ; le **siège selle** ouvre les hanches mais demande de l'adaptation. Vérifie que la **hauteur** couvre ton bureau relevé, et vise une **base stable**. Utilisé en continu 8 h, il fatigue : alterne-le avec ta chaise.
@@ -101,4 +101,4 @@ Le tabouret assis-debout, qu'il prenne la forme d'une assise dynamique nue ou d'
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
 - [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [L'ergonomie au bureau](/guides/ergonomie-bureau/)

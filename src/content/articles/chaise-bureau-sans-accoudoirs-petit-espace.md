@@ -3,7 +3,7 @@ title: "Chaise de bureau sans accoudoirs : le bon choix pour un petit espace"
 seoTitle: "Chaise de bureau sans accoudoirs pour un petit espace"
 description: "Pourquoi une chaise de bureau sans accoudoirs se glisse mieux sous un plateau bas ou étroit, et comment en choisir une sans sacrifier le confort."
 pubDate: 2026-08-17
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "La chaise qui *se glisse partout*"
 pinSub: "Sans accoudoirs, pour les petits espaces."
@@ -27,7 +27,7 @@ interactiveGuide:
 products:
   - asin: "B0DCFWWGD6"
     title: "Chaise compacte en maille sans accoudoirs, hauteur réglable, dossier bas"
-    blurb: "Le choix le plus simple : assise en mousse dense, maille respirante, rotation à 360° et hauteur réglable de 42 à 54 cm pour s'adapter à un bureau standard."
+    blurb: "Le choix le plus simple : assise et dossier en maille respirante, soutien lombaire en Y, rotation à 360° et hauteur réglable de 42 à 54 cm pour s'adapter à un bureau standard."
     pros:
       - "Se glisse entièrement sous le bureau"
       - "Maille respirante, rotation 360°"
@@ -37,10 +37,12 @@ products:
       - "Dossier bas : peu de soutien haut du dos"
       - "Assise ferme"
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
-    url: "https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-131/ed131.pdf"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-131.pdf"
+  - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
 faq:
   - question: "Une chaise sans accoudoirs est-elle vraiment moins confortable ?"
     answer: "Pas nécessairement. Les accoudoirs aident surtout à relâcher les épaules pendant les pauses ou la lecture, mais ils ne sont pas indispensables pour taper au clavier : une bonne hauteur d'assise et un dossier qui soutient le bas du dos comptent davantage au quotidien. Le vrai compromis, c'est l'absence de point d'appui pour les bras entre deux tâches."
@@ -54,13 +56,13 @@ faq:
 
 Une chaise de bureau classique avec accoudoirs 4D déborde facilement de plusieurs centimètres de chaque côté de l'assise, un encombrement qu'une chaise de bureau sans accoudoirs n'a pas. Dans un studio, une chambre transformée en bureau ou un coin de salon, cet encombrement supplémentaire se paie deux fois : la chaise ne se glisse plus complètement sous le plateau une fois le travail terminé, et elle accroche le passage dès qu'on circule autour. Sans accoudoirs, la chaise règle les deux problèmes d'un coup : elle se range plus près du bureau et libère un vrai couloir de circulation.
 
-L'autre avantage, moins évident, concerne les bureaux bas ou les tables standard non réglables. Sur un plateau fixe standard (autour de 74 cm de haut), des accoudoirs mal réglés viennent souvent buter contre le rebord de la table avant que l'assise n'atteigne la bonne hauteur pour les épaules. Sans accoudoirs, ce conflit disparaît purement et simplement : la chaise se règle sur la hauteur qui convient au dos, sans contrainte mécanique liée au bureau.
+L'autre avantage, moins évident, concerne les bureaux bas ou les tables standard non réglables. Sur un plateau fixe standard (environ 72 cm de haut selon l'INRS), des accoudoirs mal réglés viennent souvent buter contre le rebord de la table avant que l'assise n'atteigne la bonne hauteur pour les épaules. Sans accoudoirs, ce conflit disparaît purement et simplement : la chaise se règle sur la hauteur qui convient au dos, sans contrainte mécanique liée au bureau.
 
 Ce choix n'est pas réservé aux petits espaces à tout prix : il convient aussi à qui alterne beaucoup entre le clavier et d'autres tâches manuelles sur le bureau (dessin, écriture, montage), où des accoudoirs fixes gênent plus qu'ils n'aident.
 
 ## Les critères qui font vraiment la différence
 
-- **La plage de hauteur réglable** : plus elle est large, plus la chaise s'adapte à un bureau fixe standard et à une table plus haute. Une chaise coincée entre 42 et 47 cm ne conviendra pas à tout le monde (l'INRS donne comme repère une hauteur d'assise comprise entre 37 et 53,5 cm).
+- **La plage de hauteur réglable** : plus elle est large, plus la chaise s'adapte à un bureau fixe standard et à une table plus haute. Une chaise coincée entre 42 et 47 cm ne conviendra pas à tout le monde (l'INRS donne comme repère une hauteur d'assise comprise entre 37 et 53,5 cm pour un siège de bureau classique).
 - **Le soutien lombaire** : sans accoudoirs pour relâcher les épaules, le dossier doit compenser. Un renfort ou une cambrure au niveau des reins fait une vraie différence sur une journée complète.
 - **La respirabilité de l'assise et du dossier** : une maille aérée évite l'effet moite d'un revêtement synthétique, en particulier dans une pièce peu ventilée ou en été.
 - **La stabilité du piètement** : sur une base à 5 branches classique, vérifier le diamètre des roulettes et leur compatibilité avec le type de sol (dures pour moquette, souples pour parquet ou carrelage).
@@ -82,7 +84,7 @@ Ce choix n'est pas réservé aux petits espaces à tout prix : il convient aussi
 
 ## Le budget : un écart de prix qui reste modéré
 
-Contrairement aux chaises gaming ou aux modèles ergonomiques haut de gamme, les chaises sans accoudoirs se situent presque toutes dans une fourchette de prix resserrée, généralement sous la barre des 100 €. La différence entre un modèle basique et un modèle avec support lombaire tient rarement à un écart de prix important, mais plutôt à quelques détails de conception : densité de la mousse, qualité des roulettes, présence ou non d'un renfort dans le dossier. Ce n'est donc pas un segment où il faut arbitrer entre un premier prix et un modèle nettement plus cher : les deux profils décrits plus haut jouent dans la même catégorie budgétaire, et le choix se fait surtout sur l'usage réel, pas sur le portefeuille.
+Contrairement aux chaises gaming ou aux modèles ergonomiques haut de gamme, les chaises sans accoudoirs se situent presque toutes dans une fourchette de prix resserrée, dans le bas du marché. La différence entre un modèle basique et un modèle avec support lombaire tient rarement à un écart de prix important, mais plutôt à quelques détails de conception : densité de la mousse, qualité des roulettes, présence ou non d'un renfort dans le dossier. Ce n'est donc pas un segment où il faut arbitrer entre un premier prix et un modèle nettement plus cher : les deux profils décrits plus haut jouent dans la même catégorie budgétaire, et le choix se fait surtout sur l'usage réel, pas sur le portefeuille.
 
 Un point à vérifier malgré tout avant de comparer deux références : le mode de livraison. Beaucoup de ces chaises compactes arrivent en kit avec un montage simple (rapide, sans outil spécifique au-delà de ce qui est fourni), mais quelques modèles d'entrée de gamme livrent une notice peu détaillée. Un rapide coup d'œil aux avis récents sur la facilité de montage évite une mauvaise surprise à réception.
 
@@ -97,4 +99,4 @@ Il faut aussi accepter un compromis réel : sans accoudoirs, il n'y a plus d'app
 
 ## Faut-il se passer d'accoudoirs dans une petite pièce ?
 
-Une chaise de bureau sans accoudoirs n'est pas un choix par défaut ou un pis-aller : c'est la bonne réponse dès que l'espace disponible sous ou autour du bureau est compté, ou que le plan de travail est trop bas pour accueillir des accoudoirs sans conflit. L'essentiel se joue sur la plage de hauteur réglable et la qualité du soutien lombaire, qui doit compenser l'absence d'appui pour les bras. Dans un espace généreux et pour de longues sessions avec pauses fréquentes, les accoudoirs restent un vrai plus, mais dans une pièce compacte, s'en passer est souvent le choix le plus confortable au quotidien, pas seulement le plus pratique.
+Une chaise de bureau sans accoudoirs n'est pas un choix par défaut ou un pis-aller : c'est la bonne réponse dès que l'espace disponible sous ou autour du bureau est compté, ou que le plan de travail est trop bas pour accueillir des accoudoirs sans conflit. L'essentiel se joue sur la plage de hauteur réglable et la qualité du soutien lombaire, qui doit compenser l'absence d'appui pour les bras. Dans un espace généreux et pour de longues sessions avec pauses fréquentes, les accoudoirs gardent leur intérêt, mais dans une pièce compacte, s'en passer est souvent le choix le plus confortable au quotidien, pas seulement le plus pratique.

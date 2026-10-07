@@ -45,7 +45,7 @@ faq:
 
 La webcam est devenue un point d'entrée permanent vers le salon, la chambre ou le bureau à domicile, et un cache webcam de confidentialité reste la protection la plus simple. Entre les réunions en visio, les cours en ligne et les logiciels qui tournent en arrière-plan, l'objectif reste actif bien plus souvent qu'on ne le pense, et un accès non autorisé (logiciel malveillant, application mal configurée, simple erreur de partage d'écran) peut suffire à transformer cette fenêtre sur le quotidien en fuite de vie privée.
 
-Le **cache de confidentialité pour webcam** répond à un principe simple : une protection physique ne dépend d'aucun logiciel et ne peut pas être contournée à distance. Contrairement à un réglage système ou une extension de navigateur, un morceau de plastique qui coulisse devant l'objectif garantit qu'aucune image ne sort, quoi qu'il arrive côté logiciel.
+Le **cache de confidentialité pour webcam** répond à un principe simple : une protection physique ne dépend d'aucun logiciel et ne peut pas être contournée à distance. Contrairement à un réglage système ou une extension de navigateur, un morceau de plastique qui coulisse devant l'objectif garantit qu'aucune image ne sort, quoi qu'il arrive côté logiciel. Cybermalveillance.gouv.fr, le dispositif national d'assistance aux victimes, conseille d'ailleurs de masquer la webcam quand on ne s'en sert pas, un simple ruban adhésif opaque pouvant suffire.
 
 ## Cache adhésif universel ou webcam à obturateur intégré
 

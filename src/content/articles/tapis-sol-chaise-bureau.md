@@ -3,7 +3,7 @@ title: "Tapis de sol pour chaise de bureau : protéger le parquet efficacement"
 seoTitle: "Tapis de sol pour chaise de bureau : protéger le parquet"
 description: "Comment choisir un tapis de sol pour chaise de bureau qui laisse rouler sans forcer et évite les rayures sur parquet ou stratifié, sans se ruiner."
 pubDate: 2026-08-15
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le parquet *protégé*, la chaise qui roule"
 pinSub: "Le tapis de sol bien choisi."
@@ -28,13 +28,13 @@ interactiveGuide:
   question: "Ta chaise roule sur…"
   options:
     - label: "Un parquet massif ou verni fragile"
-      result: "Protection <strong>indispensable</strong> : vise un tapis <strong>épais (≥ 1,5 mm)</strong> et une taille <strong>généreuse</strong> qui couvre toute la zone de roulement. Ne laisse aucune portion exposée."
+      result: "Protection <strong>indispensable</strong> : vise un tapis <strong>épais et rigide</strong> et une taille <strong>généreuse</strong> qui couvre toute la zone de roulement. Ne laisse aucune portion exposée."
     - label: "Un stratifié récent"
       result: "En <strong>préventif</strong>, un <strong>PVC transparent standard</strong> (≈ 75×120 cm) suffit et reste discret. Le stratifié « résistant » garde une finition qui s'use aussi avec le temps."
     - label: "Du carrelage ou du béton"
       result: "Plus une question de <strong>confort de glisse</strong> et de <strong>silence</strong> que de protection stricte. Un modèle d'entrée de gamme fait le travail."
     - label: "Un sol en location"
-      result: "Protège pour l'<strong>état des lieux</strong> : quelques dizaines d'euros de tapis évitent un litige sur un parquet marqué au départ. Vise large et épais."
+      result: "Protège pour l'<strong>état des lieux</strong> : un parquet marqué par les roulettes peut être retenu sur le dépôt de garantie si l'état des lieux d'entrée le montrait intact. Vise large et épais."
 sources:
   - label: "Quick-Step, « Comment nettoyer votre parquet »"
     url: "https://www.quick-step.fr/fr-fr/parquet/nettoyage"
@@ -46,25 +46,25 @@ faq:
   - question: "Faut-il changer les roulettes de sa chaise plutôt que d'acheter un tapis ?"
     answer: "Les deux se complètent plutôt qu'ils ne s'excluent : des roulettes souples adaptées au sol dur réduisent déjà une bonne partie du risque, mais un tapis protège aussi contre les taches, les chocs de pieds de chaise et l'usure générale, ce que des roulettes seules ne font pas."
   - question: "Un tapis transparent est-il aussi durable qu'un tapis opaque ?"
-    answer: "Un tapis en PVC ou vinyle de qualité correcte tient plusieurs années dans les deux cas ; la transparence est surtout un choix esthétique pour ne pas casser la déco du sol, pas un compromis sur la solidité si l'épaisseur annoncée est suffisante (1,5 mm ou plus)."
+    answer: "La transparence est surtout un choix esthétique pour ne pas casser la déco du sol. La durée de vie dépend avant tout du matériau et de l'épaisseur annoncée, pas de la couleur : à épaisseur égale, compare plutôt la rigidité et la qualité du dos antidérapant."
 ---
 
 ## Pourquoi un tapis de sol pour chaise de bureau change quelque chose
 
 Une chaise de bureau à roulettes, ça bouge : sans tapis de sol pour chaise de bureau, c'est le parquet qui encaisse. Des dizaines de fois par jour, on recule pour se lever, on pivote pour attraper un dossier, on avance pour se rapprocher de l'écran. Chaque mouvement fait rouler de petites roues dures sur une surface qui, elle, ne bouge pas. Sur un parquet massif, un stratifié ou même un carrelage verni, cette friction répétée finit par laisser des traces : micro-rayures, ternissement de la finition, voire marques plus profondes si le sol est fragile ou déjà ancien.
 
-Le problème n'est pas seulement esthétique. Une zone de sol abîmée sous un bureau perd de la valeur, surtout en location où l'état des lieux de sortie peut être source de litige avec le propriétaire. Un tapis de protection évite ce cercle vicieux : il encaisse le frottement à la place du sol, et il se remplace pour une fraction du prix d'une réparation de parquet.
+Le problème n'est pas seulement esthétique. Une zone de sol abîmée sous un bureau perd de la valeur, surtout en location : le propriétaire peut retenir sur le dépôt de garantie les frais liés aux dégradations, justifiées par les états des lieux d'entrée et de sortie. Un tapis de protection évite ce cercle vicieux : il encaisse le frottement à la place du sol, et il se remplace pour une fraction du prix d'une réparation de parquet.
 
 Il y a aussi un bénéfice de confort qu'on sous-estime souvent : sur certains sols durs, rouler directement en chaise demande plus d'effort et génère un bruit sec et répétitif à chaque déplacement. Un tapis lisse et adapté rend le roulement plus fluide et plus silencieux, ce qui compte particulièrement en appartement ou en open space partagé.
 
-Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifié récent, présenté comme résistant à l'usage, garde une couche de finition en surface qui s'use avec le temps et les frottements répétés. Une fois cette couche entamée, l'humidité et la poussière s'infiltrent plus facilement, et le sol vieillit plus vite qu'il ne le devrait. Anticiper avec un tapis coûte quelques dizaines d'euros ; poncer et revernir une zone de parquet coûte largement plus, sans compter le temps d'immobilisation de la pièce.
+Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifié récent, présenté comme résistant à l'usage, garde une couche de finition en surface qui s'use avec le temps et les frottements répétés. Une fois cette couche entamée, l'humidité et la poussière s'infiltrent plus facilement, et le sol vieillit plus vite qu'il ne le devrait. Anticiper avec un tapis coûte bien moins cher que poncer et revernir une zone de parquet, sans compter le temps d'immobilisation de la pièce. Quick-Step, fabricant de parquets, conseille d'ailleurs des sièges à roulettes souples et un tapis adapté.
 
 ![Roulette de chaise de bureau sur un sol à protéger](/covers/tapis-sol-chaise-bureau-inbody.webp)
 
 ## Les critères qui font vraiment la différence
 
 - **Le matériau** : le PVC et le vinyle sont les standards pour les sols durs, avec un bon compromis glisse/durabilité. Les tapis en polyester à poils courts existent aussi, mais sont surtout pensés pour la moquette, pas pour protéger un parquet.
-- **L'épaisseur** : en dessous de 1,2-1,5 mm, un tapis plie facilement et vieillit vite sous le poids répété d'une chaise. Une épaisseur plus généreuse tient mieux dans la durée et reste plus stable au sol.
+- **L'épaisseur** : un tapis trop fin plie facilement et se déforme sous le poids répété d'une chaise. Une épaisseur plus généreuse tient mieux dans la durée et reste plus stable au sol : compare l'épaisseur annoncée d'un modèle à l'autre.
 - **La transparence ou l'opacité** : un modèle transparent se fond dans n'importe quelle déco, un modèle opaque ou coloré peut au contraire délimiter clairement une zone de travail dans une pièce partagée.
 - **La base antidérapante** : sans revêtement anti-glisse au dos, le tapis se déplace lui-même au fil des mouvements de chaise, ce qui oblige à le repositionner sans arrêt.
 - **La taille par rapport au bureau** : il faut couvrir toute la zone de débattement de la chaise, pas seulement l'espace sous le siège au repos, sous peine de rouler régulièrement hors du tapis.
@@ -90,7 +90,7 @@ Un tapis mal posé perd une bonne partie de son intérêt. Avant l'installation,
 Côté entretien, un simple passage à l'aspirateur ou un coup de chiffon humide suffit dans la majorité des cas, à condition de ne pas laisser s'accumuler du sable ou des graviers ramenés de l'extérieur, qui agissent comme un abrasif entre le tapis et le sol. Si le tapis commence à se soulever sur les bords ou à glisser malgré sa base antidérapante, c'est souvent le signe qu'il est temps de le remplacer plutôt que d'attendre qu'il n'assure plus vraiment sa fonction de protection.
 
 > **L'essentiel à retenir**
-> Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol, pour bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC/vinyle), une **épaisseur ≥ 1,5 mm**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
+> Les roulettes d'une chaise finissent par marquer un **parquet** ou un **stratifié**. Un tapis encaisse le frottement à la place du sol, pour bien moins cher qu'une réparation. Choisis un **matériau adapté au sol dur** (PVC/vinyle), une **épaisseur suffisante**, une **base antidérapante**, et surtout une **taille qui couvre toute la zone de roulement**. Sur carrelage/béton, c'est surtout du confort de glisse.
 
 ## Pour aller plus loin
 

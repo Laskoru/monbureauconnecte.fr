@@ -3,7 +3,7 @@ title: "Bien régler sa chaise et son écran : les réglages ergonomiques qui ne
 seoTitle: "Bien régler sa chaise de bureau et son écran"
 description: "Bien régler sa chaise de bureau, l'écran et le clavier ne coûte rien et corrige déjà une bonne part des douleurs, avant d'acheter le moindre accessoire."
 pubDate: 2026-09-06
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Une meilleure posture, *sans rien acheter*"
 pinSub: "Les réglages ergonomiques gratuits, en 10 minutes."
@@ -17,34 +17,34 @@ interactiveGuide:
   question: "Ta gêne principale, c'est…"
   options:
     - label: "La nuque / le cou"
-      result: "Le plus souvent, l'<strong>écran est trop bas</strong>. Remonte-le pour que son <strong>haut arrive au niveau des yeux</strong>, à une longueur de bras. En attendant un rehausseur : une pile de livres ou un <a href='/articles/support-ordinateur-portable-ergonomique/'>support portable</a>."
+      result: "Le plus souvent, l'<strong>écran est trop bas</strong>. Remonte-le pour que son <strong>haut arrive au niveau des yeux</strong>, à 50-70 cm environ. En attendant un rehausseur : une pile de livres ou un <a href='/articles/support-ordinateur-portable-ergonomique/'>support portable</a>."
     - label: "Le bas du dos"
       result: "Regarde la <strong>hauteur d'assise</strong> (pieds à plat, genoux ≈ hanches) et le <strong>soutien du dossier</strong> dans le creux du dos. S'il reste plat, un <a href='/articles/coussin-lombaire-chaise-bureau/'>coussin lombaire</a> aide, mais commence par les réglages gratuits."
     - label: "Les épaules"
-      result: "Presque toujours le <strong>clavier/souris trop hauts ou trop loin</strong>. Baisse-les (ou remonte la chaise) pour garder les <strong>avant-bras horizontaux, coudes à ~90°</strong>, proches du corps, sans hausser les épaules."
+      result: "Presque toujours le <strong>clavier/souris trop hauts ou trop loin</strong>. Baisse-les (ou remonte la chaise) pour garder les <strong>avant-bras posés, coudes à 90° ou un peu plus ouverts</strong>, proches du corps, sans hausser les épaules."
     - label: "Les yeux (fatigue, maux de tête)"
-      result: "Question de <strong>lumière et de reflets</strong> : place l'écran <strong>perpendiculaire aux fenêtres</strong>, jamais face à elles, et règle la luminosité proche de celle de la pièce. Fais des pauses regard au loin toutes les 20 min."
+      result: "Question de <strong>lumière et de reflets</strong> : place l'écran <strong>perpendiculaire aux fenêtres</strong>, jamais face à elles ni dos à elles, et règle la luminosité proche de celle de la pièce. Quitte régulièrement l'écran des yeux pour regarder au loin."
 faq:
   - question: "Faut-il forcément un bureau assis-debout pour bien travailler ?"
     answer: "Non, ce n'est pas indispensable. Un bureau fixe bien réglé, avec une chaise à la bonne hauteur et un écran positionné correctement, corrige déjà la majorité des problèmes de posture. Le bureau assis-debout apporte un bénéfice supplémentaire (alterner les positions), mais ce n'est pas un prérequis pour travailler confortablement."
   - question: "Pourquoi ai-je mal aux épaules alors que ma chaise est réglée correctement ?"
-    answer: "La cause la plus fréquente n'est pas la chaise mais la position du clavier et de la souris : s'ils sont trop hauts ou trop loin, les épaules restent en tension toute la journée pour les atteindre. Vérifie que tes avant-bras sont horizontaux et proches du corps, coudes pliés à environ 90 degrés, sans avoir à lever les épaules pour atteindre le clavier."
+    answer: "La cause la plus fréquente n'est pas la chaise mais la position du clavier et de la souris : s'ils sont trop hauts ou trop loin, les épaules restent en tension toute la journée pour les atteindre. Vérifie que tes avant-bras reposent sur le bureau, coudes proches du corps, coudes pliés à 90 degrés ou un peu plus, sans avoir à lever les épaules pour atteindre le clavier."
   - question: "À quelle fréquence faut-il changer de position dans la journée ?"
-    answer: "Une règle simple et largement recommandée consiste à bouger au moins un peu toutes les 30 à 45 minutes : se lever quelques secondes, changer l'inclinaison du dossier, marcher jusqu'à la cuisine. Rester rigoureusement immobile dans la posture « parfaite » toute la journée n'est pas plus sain qu'une mauvaise posture occasionnelle : c'est l'absence totale de mouvement qui pose problème."
+    answer: "L'INRS conseille des pauses actives, idéalement toutes les 30 minutes : se lever quelques secondes, changer l'inclinaison du dossier, marcher jusqu'à la cuisine. Rester rigoureusement immobile dans la posture « parfaite » toute la journée n'est pas plus sain qu'une mauvaise posture occasionnelle : c'est l'absence totale de mouvement qui pose problème."
 sources:
-  - label: "Travail sur écran : prévention des risques (INRS)"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
-  - label: "Travail sur écran : réglementation et normes (INRS)"
+  - label: "INRS, « Travail sur écran. Réglementation et normes »"
     url: "https://www.inrs.fr/risques/travail-ecran/reglementation-normes.html"
 ---
 
 ## Bien régler sa chaise de bureau compte plus que l'équipement
 
-Avant d'envisager un nouvel accessoire, la plupart des inconforts au bureau se corrigent avec ce qu'on a déjà : une chaise, un écran, un clavier. Le problème n'est presque jamais le matériel lui-même, mais son réglage : bien régler sa chaise de bureau et son écran suffit souvent, car une chaise correcte mal ajustée fait plus mal qu'une chaise simple bien positionnée. Voici les réglages gratuits à vérifier, dans l'ordre où ils comptent le plus.
+Avant d'envisager un nouvel accessoire, la plupart des inconforts au bureau se corrigent avec ce qu'on a déjà : une chaise, un écran, un clavier. Le problème n'est presque jamais le matériel lui-même, mais son réglage : bien régler sa chaise de bureau et son écran suffit souvent, car une chaise correcte mal ajustée fait plus mal qu'une chaise simple bien positionnée. Les réglages gratuits à vérifier suivent, dans l'ordre où ils comptent le plus.
 
 ## 1. La hauteur de la chaise
 
-Assis, les pieds doivent reposer **à plat au sol**, genoux à peu près à la même hauteur que les hanches, voire légèrement plus bas. Une chaise trop haute fait pendre les pieds dans le vide et reporte le poids sur l'arrière des cuisses ; trop basse, elle remonte les genoux au-dessus des hanches et cambre le bas du dos de façon excessive.
+Assis, les pieds doivent reposer **à plat au sol**, cuisses horizontales ou hanches très légèrement plus hautes que les genoux, genoux pliés à angle droit ou un peu plus ouverts. Une chaise trop haute fait pendre les pieds dans le vide et reporte le poids sur l'arrière des cuisses ; trop basse, elle remonte les genoux au-dessus des hanches et cambre le bas du dos de façon excessive.
 
 **Comment vérifier :** assis, pieds à plat au sol, tes genoux doivent arriver à peu près à hauteur des hanches, ou un peu plus bas. Si tes pieds pendent ou si tes genoux remontent au-dessus des hanches, ajuste la hauteur.
 
@@ -52,17 +52,17 @@ Assis, les pieds doivent reposer **à plat au sol**, genoux à peu près à la m
 
 L'assise doit soutenir la majorité de la cuisse sans comprimer l'arrière du genou. Le dossier, lui, doit accompagner la légère courbure naturelle du bas du dos plutôt que de le laisser s'affaisser (voir notre article sur le [coussin lombaire](/articles/coussin-lombaire-chaise-bureau/) si le dossier reste plat malgré les réglages).
 
-**Comment vérifier :** assis au fond de l'assise, dos contre le dossier, il doit rester environ 2 à 3 doigts d'espace entre l'arrière du genou et le bord du siège.
+**Comment vérifier :** assis au fond de l'assise, dos contre le dossier, l'arrière du genou ne doit pas être comprimé par le bord du siège : il doit rester un petit espace libre.
 
 ## 3. La hauteur et la distance de l'écran
 
-Le haut de l'écran doit arriver **à hauteur des yeux, ou juste en dessous**, jamais plus bas : regarder vers le bas en permanence tire sur les muscles de la nuque toute la journée. La distance idéale se situe entre 50 et 70 cm, à peu près une longueur de bras ; le bon point dans cette plage dépend de la taille et de la définition de l'écran, et notre [calculateur de taille d'écran](/calculateur-taille-ecran/) te le donne.
+Le haut de l'écran doit arriver **à hauteur des yeux** (un peu plus bas si tu portes des verres progressifs), pas nettement en dessous : regarder vers le bas en permanence tire sur les muscles de la nuque toute la journée. L'INRS situe la distance œil-écran entre 50 et 70 cm en général ; le bon point dans cette plage dépend de la taille et de la définition de l'écran, et notre [calculateur de taille d'écran](/calculateur-taille-ecran/) te le donne.
 
 **Comment vérifier :** assis normalement, les yeux doivent se poser naturellement sur le haut de l'écran sans incliner la tête. Un écran trop bas se corrige avec des livres empilés ou un [support pour ordinateur portable](/articles/support-ordinateur-portable-ergonomique/) en attendant un vrai rehausseur.
 
 ## 4. La position du clavier et de la souris
 
-Les avant-bras doivent rester **horizontaux**, coudes pliés à environ 90 degrés, proches du corps plutôt qu'écartés. Un clavier trop haut ou trop loin oblige à lever les épaules ou à tendre les bras en permanence, une tension qui s'accumule sans qu'on s'en rende compte sur le moment.
+Les avant-bras reposent sur le plan de travail, mains dans leur prolongement, coudes **proches du corps** et pliés à angle droit ou un peu plus (l'INRS donne 90 à 135°), épaules relâchées. Un clavier trop haut ou trop loin oblige à lever les épaules ou à tendre les bras en permanence, une tension qui s'accumule sans qu'on s'en rende compte sur le moment.
 
 **Comment vérifier :** les poignets doivent rester droits en tapant, ni cassés vers le haut ni vers le bas. Si ce n'est pas le cas, un [repose-poignet](/articles/repose-poignet-clavier-souris/) ou un simple ajustement de la hauteur de la chaise corrige souvent le problème sans changer de matériel.
 
@@ -70,11 +70,11 @@ Les avant-bras doivent rester **horizontaux**, coudes pliés à environ 90 degr�
 
 Un écran trop lumineux dans une pièce sombre, ou à l'inverse un reflet de fenêtre en plein sur l'écran, fatigue les yeux et pousse à se pencher en avant pour mieux voir, une mauvaise posture qui n'a rien à voir avec la chaise.
 
-**Comment vérifier :** positionne l'écran perpendiculaire aux fenêtres (jamais face à face), et règle la luminosité de l'écran pour qu'elle soit proche de celle de la pièce environnante, ni éblouissante ni trop sombre.
+**Comment vérifier :** positionne l'écran perpendiculaire aux fenêtres et, si possible, à plus de 1,50 m d'elles, comme le recommande l'INRS, puis règle la luminosité de l'écran pour qu'elle soit proche de celle de la pièce environnante, ni éblouissante ni trop sombre.
 
 ## Ce qui ne se règle pas : le mouvement
 
-Aucun réglage, aussi parfait soit-il, ne compense une position figée pendant huit heures. Le corps est fait pour bouger : se lever quelques instants toutes les 30 à 45 minutes, changer l'inclinaison du dossier, marcher un peu, fait plus pour le confort à long terme que le dernier centimètre de réglage parfait de la chaise.
+Aucun réglage, aussi parfait soit-il, ne compense une position figée pendant huit heures. Le corps est fait pour bouger : se lever quelques instants, idéalement toutes les 30 minutes selon l'INRS, changer l'inclinaison du dossier, marcher un peu, fait plus pour le confort à long terme que le dernier centimètre de réglage parfait de la chaise.
 
 ## Quand passer à l'accessoire
 
@@ -82,17 +82,17 @@ Une fois ces réglages gratuits en place, certains inconforts précis peuvent ju
 
 ## Le cas du portable : le piège ergonomique n°1
 
-Si tu travailles sur un **ordinateur portable** posé à plat sur le bureau, aucun réglage ne te sauvera : l'écran et le clavier sont solidaires, donc tu ne peux pas avoir **à la fois** l'écran au niveau des yeux **et** les mains à bonne hauteur. Baisser l'écran pour taper courbe la nuque ; le remonter éloigne le clavier. C'est le compromis perdant sur lequel des millions de gens travaillent sans le savoir.
+Si tu travailles sur un **ordinateur portable** posé à plat sur le bureau, aucun réglage ne te sauvera : l'écran et le clavier sont solidaires, donc tu ne peux pas avoir **à la fois** l'écran au niveau des yeux **et** les mains à bonne hauteur. Baisser l'écran pour taper courbe la nuque ; le remonter éloigne le clavier. C'est un compromis perdant, très courant sans qu'on s'en aperçoive.
 
-La solution est gratuite ou presque : **surélève l'écran** (une pile de livres, une boîte, ou un [support pour portable](/articles/support-ordinateur-portable-ergonomique/)) pour amener son haut au niveau des yeux, **et** ajoute un **clavier et une souris externes** posés à bonne hauteur. Tu retrouves alors la même ergonomie qu'un poste fixe : regard droit, avant-bras horizontaux. C'est de loin le geste le plus rentable pour qui vit sur un portable, et il ne coûte souvent rien de plus que ce qu'on a déjà dans un tiroir. Sans ça, tous les autres réglages restent bridés par la contrainte de départ.
+La solution est gratuite ou presque : **surélève l'écran** (une pile de livres, une boîte, ou un [support pour portable](/articles/support-ordinateur-portable-ergonomique/)) pour amener son haut au niveau des yeux, **et** ajoute un **clavier et une souris externes** posés à bonne hauteur. Tu retrouves alors la même ergonomie qu'un poste fixe : regard droit, avant-bras posés. C'est de loin le geste le plus rentable pour qui vit sur un portable, et il ne coûte souvent rien de plus que ce qu'on a déjà dans un tiroir. Sans ça, tous les autres réglages restent bridés par la contrainte de départ.
 
 ## Les réglages à revoir, dans l'ordre
 
 Avant d'acheter quoi que ce soit, prends dix minutes pour tout revoir dans cet ordre. Ces réglages sont **gratuits**, corrigent l'essentiel des tensions et offrent probablement le meilleur retour sur investissement possible pour ton confort au travail :
 
-- **Hauteur de chaise** : pieds à plat, genoux ≈ hanches.
-- **Profondeur d'assise et dossier** : 2 à 3 doigts entre l'arrière du genou et le bord du siège, dossier qui suit la courbure du bas du dos.
-- **Écran** : son haut au niveau des yeux, à une longueur de bras.
-- **Clavier et souris** : avant-bras horizontaux, coudes à ~90°.
+- **Hauteur de chaise** : pieds à plat, cuisses horizontales.
+- **Profondeur d'assise et dossier** : arrière du genou libre, dossier qui suit la courbure du bas du dos.
+- **Écran** : son haut au niveau des yeux, à 50-70 cm.
+- **Clavier et souris** : avant-bras posés, coudes à 90° ou un peu plus.
 - **Luminosité et reflets** : écran perpendiculaire aux fenêtres, luminosité proche de celle de la pièce.
-- **Mouvement** : bouge toutes les 30-45 min, aucune posture parfaite ne le remplace.
+- **Mouvement** : bouge idéalement toutes les 30 min, aucune posture parfaite ne le remplace.

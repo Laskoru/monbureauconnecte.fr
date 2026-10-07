@@ -2,7 +2,7 @@
 title: "Souris sans fil silencieuse : laquelle choisir ?"
 description: "Souris sans fil silencieuse : clics silencieux, Bluetooth ou dongle, autonomie. Comment choisir une souris qui ne claque plus en open space."
 pubDate: 2026-08-19
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Des clics *discrets*, partout"
 pinSub: "La souris silencieuse idéale."
@@ -13,8 +13,8 @@ coverAlt: "Souris sans fil posée sur un bureau clair, vue de trois quarts"
 draft: false
 products:
   - asin: "B07W6G822T"
-    title: "Logitech Signature M650, clics silencieux, Bluetooth, multi-appareils"
-    blurb: "Bruit de clic réduit de 90 % selon Logitech (par rapport à sa M185), autonomie annoncée de deux ans, boutons latéraux personnalisables."
+    title: "Logitech Signature M650, clics silencieux, Bluetooth ou récepteur Logi Bolt"
+    blurb: "Bruit de clic réduit de 90 % selon Logitech (par rapport à sa M185), jusqu'à 24 mois sur une pile AA avec le récepteur Logi Bolt (20 mois en Bluetooth), boutons latéraux personnalisables."
     pros:
       - "Clics silencieux (−90 %)"
       - "Autonomie annoncée de 2 ans"
@@ -44,14 +44,14 @@ sources:
     url: "https://www.inrs.fr/risques/bruit/exposition-risque.html"
 faq:
   - question: "Une souris silencieuse coûte-t-elle beaucoup plus cher qu'une souris classique ?"
-    answer: "Non, l'écart de prix reste limité, souvent quelques euros. La technologie des switches silencieux s'est largement démocratisée et équipe désormais aussi bien des modèles d'entrée de gamme que des références plus haut de gamme."
+    answer: "Pas forcément. Les switches silencieux se sont largement diffusés et équipent aussi bien des modèles d'entrée de gamme que des références plus haut de gamme. Compare simplement deux modèles de même niveau, avec et sans clic silencieux, au moment de l'achat."
   - question: "Le silence des clics affecte-t-il la précision de la souris ?"
     answer: "Pas directement. Le switch silencieux change la sensation et le bruit du clic, pas le capteur optique qui gère le suivi du curseur. Une souris silencieuse peut être tout aussi précise qu'une souris classique du même niveau de gamme."
 ---
 
 ## Pourquoi le bruit de clic devient un vrai problème au bureau
 
-Pourquoi une souris sans fil silencieuse ? Un clic de souris classique ne dérange personne isolément. Multiplié par plusieurs centaines par heure, dans un open space où plusieurs personnes travaillent côte à côte, il devient un bruit de fond constant, surtout perceptible pour les voisins directs, qui l'entendent bien plus que la personne qui clique. Le problème s'aggrave nettement en visioconférence : un micro d'ordinateur portable ou un micro-casque d'entrée de gamme capte très bien le claquement sec d'un clic gauche répété, ce qui parasite l'audio pour tous les participants de la réunion.
+Pourquoi une souris sans fil silencieuse ? Un clic de souris classique ne dérange personne isolément. Répété toute la journée, dans un open space où plusieurs personnes travaillent côte à côte, il devient un bruit de fond constant, surtout perceptible pour les voisins directs, qui l'entendent bien plus que la personne qui clique. Le problème s'aggrave nettement en visioconférence : un micro d'ordinateur portable ou un micro-casque d'entrée de gamme capte très bien le claquement sec d'un clic gauche répété, ce qui parasite l'audio pour tous les participants de la réunion. L'INRS le rappelle : en bureau, les niveaux sonores ne menacent pas l'audition, mais les bruits non désirés, équipements de bureau compris, perturbent les tâches qui demandent de la concentration et peuvent entraîner stress et fatigue.
 
 Ce n'est pas qu'une question de confort collectif. Dans un logement partagé en télétravail, une chambre convertie en bureau à côté d'une pièce où quelqu'un dort ou travaille en visio, ou même un salon ouvert sur un coin bureau, le bruit de clic peut devenir une vraie source de friction au quotidien. Les fabricants ont répondu à cette demande avec des switches spécifiquement conçus pour réduire ce bruit, sans pour autant sacrifier la sensation de clic : un vrai retour tactile reste nécessaire pour qu'on sache qu'on a bien cliqué.
 
@@ -59,7 +59,7 @@ Ce n'est pas qu'une question de confort collectif. Dans un logement partagé en 
 
 - **Le type de switch** : les switches "silent" intègrent un amortisseur mécanique qui absorbe une partie du bruit à l'impact. Logitech, par exemple, annonce un bruit de clic réduit de 90 % par rapport à l'une de ses souris classiques (la M185), même si le ressenti dépend aussi de l'environnement sonore ambiant.
 - **La connectivité** : Bluetooth, récepteur USB dédié (souvent en 2,4 GHz), ou les deux à la fois. Le sans-fil élimine déjà une bonne partie du bruit parasite lié au frottement d'un câble sur le bureau, en plus de libérer un port USB.
-- **L'autonomie et le type de pile** : certains modèles tiennent jusqu'à deux ans sur une seule pile, d'autres se rechargent par USB toutes les quelques semaines. Aucune des deux approches n'est mauvaise, mais mieux vaut le savoir avant d'acheter pour éviter la mauvaise surprise d'une pile à racheter en urgence.
+- **L'autonomie et le type de pile** : certains modèles tiennent jusqu'à deux ans sur une seule pile (24 mois annoncés pour la M650 avec son récepteur), d'autres se rechargent par USB toutes les quelques semaines. Aucune des deux approches n'est mauvaise, mais mieux vaut le savoir avant d'acheter pour éviter la mauvaise surprise d'une pile à racheter en urgence.
 - **La compatibilité multi-appareils** : un vrai atout si tu bascules entre un ordinateur professionnel et un ordinateur personnel dans la même journée. Beaucoup de souris silencieuses modernes permettent de basculer d'un appareil à l'autre par simple pression d'un bouton.
 - **La forme et la prise en main** : une souris silencieuse reste avant tout une souris. Vérifie qu'elle correspond à la taille de ta main et à ton type de préhension (paume, griffe, doigts) avant de te focaliser uniquement sur le critère du bruit.
 - **Le capteur optique** : pour un usage bureautique, la précision d'un capteur d'entrée de gamme suffit largement ; inutile de viser les DPI élevés réservés au gaming compétitif.

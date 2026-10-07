@@ -3,7 +3,7 @@ title: "Bras support écran articulé : comment bien le choisir pour ton bureau"
 seoTitle: "Bras support écran articulé : comment bien le choisir"
 description: "Un bon bras support écran libère de la place et améliore la posture. Nos critères (VESA, charge, ressort à gaz) et notre sélection, 1 ou 2 écrans."
 pubDate: 2026-08-15
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "L'écran *à la bonne hauteur*, enfin"
 pinSub: "Le bras articulé qui libère le bureau."
@@ -21,7 +21,7 @@ products:
       - "Compatible 13 à 32 pouces (jusqu’à 9 kg)"
     cons:
       - "Un seul écran (modèle simple)"
-      - "Pince limite sur un bureau à bord épais"
+      - "Pince réservée aux plateaux de 1,5 à 9 cm d’épaisseur"
       - "Réglages fermes à ajuster au montage"
 interactiveGuide:
   title: "Quel bras d'écran pour toi ?"
@@ -36,15 +36,15 @@ interactiveGuide:
     - label: "Surtout gagner de la place"
       result: "N'importe quel bras libère le plateau (l'écran flotte au-dessus). Vise une <strong>fixation par pince</strong> (sans perçage) compatible avec l'épaisseur de ton bureau, et un <strong>passe-câbles</strong> intégré."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
-  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
-  - label: "Ergotron, fiche technique « LX Desk Monitor Arm »"
-    url: "https://media.ergotron.com/reserved/resources/05-lx-all-fur-eo-orig.pdf"
+  - label: "HUANUO, « HUANUO SS6 Single Monitor Arm Mount »"
+    url: "https://www.huanuo.com/products/single-monitor-arm-mount-ss6"
 faq:
   - question: "À quelle hauteur régler son écran ?"
-    answer: "Le haut de l'écran doit arriver au niveau des yeux (un peu plus bas si tu portes des verres progressifs), à environ un bras de distance, pour garder la nuque droite. Un bras articulé permet ce réglage précis, contrairement à un pied fixe."
+    answer: "Le haut de l'écran doit arriver au niveau des yeux (un peu plus bas si tu portes des verres progressifs), à 50 à 70 cm environ, pour garder la nuque droite. Un bras articulé permet ce réglage précis, contrairement à un pied fixe."
   - question: "Un bras d'écran convient-il à tous les écrans ?"
     answer: "La plupart des bras acceptent la norme VESA (75x75 ou 100x100 mm) et une plage de taille/poids indiquée. Vérifie que ton écran est compatible VESA et que son poids entre dans la fourchette du bras."
   - question: "Mon écran n'a pas de trous VESA, que faire ?"
@@ -55,7 +55,7 @@ faq:
 
 Un écran posé sur son socle d'origine impose une hauteur et une distance qu'on ajuste rarement correctement : on finit par se pencher en avant ou à tendre le cou pour compenser, des heures durant. Un **bras support écran** articulé permet de régler précisément la **hauteur**, l'**inclinaison** et la **distance** de l'écran par rapport aux yeux : un réglage clé pour limiter les tensions cervicales, celles qui donnent mal à la nuque en fin de journée.
 
-L'autre bénéfice est spatial : en libérant le socle du plateau, le bras récupère toute la surface sous l'écran. De quoi glisser un clavier, des documents, ou simplement respirer sur un petit bureau. C'est un de ces accessoires dont on ne mesure l'intérêt qu'une fois installé.
+L'autre bénéfice est spatial : en libérant le socle du plateau, le bras récupère toute la surface sous l'écran. De quoi glisser un clavier, des documents, ou simplement respirer sur un petit bureau.
 
 ## Les critères à vérifier avant d'acheter
 
@@ -94,7 +94,7 @@ Pour un seul écran, un bras simple à ressort à gaz suffit largement et coûte
 
 ## L'installer et bien le régler
 
-Le montage est rapide : on fixe la base (pince ou traversante), on visse la platine VESA au dos de l'écran, on clipse le tout. Une fois en place, prends le temps du réglage qui compte vraiment : **haut de l'écran au niveau des yeux** (ou juste en dessous), écran à **une longueur de bras**, légèrement incliné vers l'arrière. Pour trouver la distance exacte selon la taille et la définition de ta dalle, le [calculateur de taille d'écran](/calculateur-taille-ecran/) fait le compte. C'est ce réglage (impossible avec un socle d'origine) qui justifie l'achat. Pense aussi à passer le câble de l'écran (et éventuellement de l'alimentation) dans le passe-câbles pour finir proprement ; associé à un bon [rangement des câbles](/articles/rangement-cables-bureau/), le résultat transforme l'allure du poste.
+Le montage est rapide : on fixe la base (pince ou traversante), on visse la platine VESA au dos de l'écran, on clipse le tout. Une fois en place, prends le temps du réglage qui compte vraiment : **haut de l'écran au niveau des yeux** (un peu plus bas avec des verres progressifs), écran à **50 à 70 cm** des yeux, distance que l'INRS adapte à la taille et à la résolution de l'écran. Pour trouver la distance exacte selon la taille et la définition de ta dalle, le [calculateur de taille d'écran](/calculateur-taille-ecran/) fait le compte. C'est ce réglage (impossible avec un socle d'origine) qui justifie l'achat. Pense aussi à passer le câble de l'écran (et éventuellement de l'alimentation) dans le passe-câbles pour finir proprement ; associé à un bon [rangement des câbles](/articles/rangement-cables-bureau/), le résultat transforme l'allure du poste.
 
 ## Bras d'écran, rehausseur ou pied d'origine : lequel choisir ?
 
@@ -107,7 +107,7 @@ Concrètement : si ton pied d'origine monte assez haut et que ça te convient, i
 
 ## Quel budget pour un bras support d'écran ?
 
-Le bras support écran est l'un des accessoires au meilleur rapport entre le prix et l'amélioration réelle de la posture au quotidien. Bien choisi (VESA et charge vérifiés, ressort à gaz), il corrige d'un coup la hauteur de l'écran et dégage le bureau, deux gains qu'on ne veut plus quitter une fois qu'on y a goûté. Compte une vingtaine d'euros pour un modèle simple correct, un peu plus pour un bras double ou un ressort à gaz haut de gamme : un investissement modeste au regard des années de confort qu'il apporte.
+Le bras support écran est l'un des accessoires au meilleur rapport entre le prix et l'amélioration réelle de la posture au quotidien. Bien choisi (VESA et charge vérifiés, ressort à gaz), il corrige d'un coup la hauteur de l'écran et dégage le bureau, deux gains qu'on ne veut plus quitter une fois qu'on y a goûté. Un bras simple coûte nettement moins qu'un bras double ou qu'un modèle renforcé pour écran lourd : compare les prix du moment plutôt que de te fier à un tarif figé.
 
 ## Pour aller plus loin
 
@@ -115,4 +115,4 @@ Le bras support écran est l'un des accessoires au meilleur rapport entre le pri
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
 - [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Le guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

@@ -52,7 +52,7 @@ Un détail compte plus qu'on ne le croit : la largeur du clavier. Le pavé numé
 
 Choisis selon l'origine de la gêne :
 
-- **La torsion du poignet te fait mal** : la [souris ergonomique verticale](/articles/souris-ergonomique-verticale/) remet la main en position de poignée de main. Un angle de 45 à 50° suffit pour découvrir le format, 55 à 60° si la douleur est déjà installée, et compte une à deux semaines d'adaptation. Elle change la position du poignet, sans effet démontré sur le canal carpien.
+- **La torsion du poignet te fait mal** : la [souris ergonomique verticale](/articles/souris-ergonomique-verticale/) remet la main en position de poignée de main. Prévois un temps d'adaptation. Elle change la position du poignet, sans effet démontré sur le canal carpien.
 - **L'épaule fatigue ou la place manque** : le [trackball](/articles/trackball-vs-souris-classique-poignet/) supprime le déplacement du bras, seul le pouce ou l'index bouge.
 - **Les poignets se tordent en tapant** (déviation cubitale, mains tournées pour s'aligner sur le clavier) : le [clavier ergonomique séparé](/articles/clavier-ergonomique-separe/) garde les avant-bras dans l'axe. Commence par une courbe en une pièce, l'adaptation est plus courte.
 

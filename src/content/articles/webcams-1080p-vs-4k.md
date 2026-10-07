@@ -55,7 +55,7 @@ faq:
 
 ## Le 1080p suffit-il vraiment ?
 
-Pour l'immense majorité des visioconférences (Teams, Zoom, Google Meet), le **Full HD 1080p reste largement suffisant** : ces plateformes compressent de toute façon le flux vidéo, ce qui réduit l'écart visible entre 1080p et 4K pour l'interlocuteur en face. Autrement dit, même si ta webcam de télétravail filme en 4K, ton collègue verra souvent une image ramenée en dessous. La vraie différence de qualité se joue **ailleurs** que dans le nombre de pixels.
+Pour l'immense majorité des visioconférences (Teams, Zoom, Google Meet), le **Full HD 1080p reste largement suffisant** : ces plateformes compressent de toute façon le flux vidéo, ce qui réduit l'écart visible entre 1080p et 4K pour l'interlocuteur en face. Autrement dit, même si ta webcam de télétravail filme en 4K, ton collègue verra souvent une image ramenée en dessous : Teams plafonne à 1080p, et Zoom envoie en 720p sur ses offres payantes, le 1080p étant réservé aux comptes Business et Enterprise et activé sur demande. La vraie différence de qualité se joue **ailleurs** que dans le nombre de pixels.
 
 ![Personne en visioconférence vue par sa webcam](/covers/webcams-1080p-vs-4k-inbody.webp)
 

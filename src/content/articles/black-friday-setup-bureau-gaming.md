@@ -2,7 +2,7 @@
 title: "Black Friday setup bureau : quoi acheter maintenant"
 description: "Black Friday setup bureau : chaise, écran, PC gaming ou accessoires, ce qu'il vaut mieux attendre et ce que tu peux acheter dès maintenant sans regret."
 pubDate: 2026-09-24
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le Black Friday, *sans te faire avoir*"
 pinSub: "Ce qu'il faut attendre, ce qu'il faut acheter maintenant."
@@ -12,21 +12,21 @@ coverAlt: "Bureau en bois avec deux écrans à fond de feuillage, tour de PC éc
 draft: false
 topPick:
   name: "Multiprise parasurtenseur"
-  blurb: "Avant de craquer sur un écran ou un PC gaming neuf pendant le Black Friday, protège-le : une parasurtenseur coûte trois fois rien face au prix d'un appareil à remplacer après une surtension."
+  blurb: "Avant de craquer sur un écran ou un PC gaming neuf pendant le Black Friday, protège-le : une multiprise parasurtenseur coûte trois fois rien face au prix d'un appareil à remplacer après une surtension."
   url: "https://www.amazon.fr/s?k=multiprise+parasurtenseur&tag=monbureauconnecte-21"
   ctaLabel: "Voir les multiprises parasurtenseur sur Amazon"
 comparison:
   columns: ["Catégorie", "Attendre le Black Friday ?", "Pourquoi"]
   rows:
-    - ["Chaises de bureau et gaming", "Oui", "Grosses remises chaque année sur de larges gammes, du modèle basique au haut de gamme"]
-    - ["Écrans", "Oui", "Catégorie très concurrentielle : les remises sur les références récentes sont souvent réelles"]
+    - ["Chaises de bureau et gaming", "Oui", "Catégorie souvent remisée sur de larges gammes, du modèle basique au haut de gamme"]
+    - ["Écrans", "Oui", "Catégorie très concurrentielle, mais vérifie le prix de référence sur 30 jours"]
     - ["PC gaming et composants", "Oui, en comparant", "De bonnes offres existent, mais vérifie le prix moyen des semaines précédentes avant de valider"]
     - ["Casques et webcams", "Oui, souvent", "Catégorie régulièrement mise en avant pendant les soldes, remises fréquentes"]
     - ["Petits accessoires (tapis, repose-poignet, rangement câbles)", "Non", "Prix déjà bas toute l'année, remises marginales : achète dès que le besoin est là"]
 sources:
   - label: "INC, « Promotions et soldes : une différence ? »"
     url: "https://www.inc-conso.fr/content/promotions-et-soldes-une-difference"
-  - label: "Service Public, « Affichage des prix : règles à respecter »"
+  - label: "Service-Public.fr, « Affichage des prix : règles à respecter »"
     url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F34344"
 faq:
   - question: "Faut-il vraiment attendre le Black Friday pour acheter une chaise de bureau ?"
@@ -74,7 +74,7 @@ Le piège classique : un prix barré très élevé, comparé à un prix « Black
 
 1. **Regarde le prix des semaines précédentes**, pas seulement le prix barré du jour J. La loi impose que le prix de référence d'une réduction soit le prix le plus bas pratiqué par le vendeur dans les 30 jours précédents (article L. 112-1-1 du Code de la consommation) : un prix barré plus haut que ce que tu voyais le mois dernier doit t'alerter. Et si le tarif du Black Friday est proche de ce que tu voyais un mois avant, ce n'est pas une vraie remise.
 2. **Compare plusieurs enseignes** plutôt qu'une seule offre isolée : une vraie promo se retrouve généralement chez plusieurs vendeurs à des niveaux proches, une fausse reste souvent isolée.
-3. **Méfie-toi des remises \"trop belles\"** sur un produit tout juste sorti : les références récentes ont rarement une marge suffisante pour justifier une remise énorme dès leur première année.
+3. **Méfie-toi des remises « trop belles »** sur un produit tout juste sorti : vérifie d'abord à quel prix il s'est réellement vendu depuis sa sortie, car le prix de lancement sert souvent de prix barré.
 
 Ce petit travail de vérification prend deux minutes et évite de payer le prix normal en croyant faire une affaire.
 
@@ -90,9 +90,9 @@ Quelques réflexes simples pour aborder la période sereinement plutôt que dans
 
 ## Cyber Monday : la suite logique du Black Friday
 
-Le Black Friday n'est plus un jour isolé : il ouvre désormais une période qui s'étend souvent jusqu'au Cyber Monday, le lundi suivant. Dans les faits, les niveaux de remise restent proches d'un jour à l'autre, mais le Cyber Monday se concentre davantage sur l'**électronique et l'informatique** (écrans, PC, périphériques) que sur le mobilier.
+Le Black Friday n'est plus un jour isolé : il ouvre désormais une période qui s'étend souvent jusqu'au Cyber Monday, le lundi suivant. Les offres changent d'un jour à l'autre, et le Cyber Monday met surtout en avant l'**électronique et l'informatique** (écrans, PC, périphériques).
 
-Deux conséquences pratiques : si tu vises surtout un écran ou un PC gaming, rien ne t'oblige à te précipiter le vendredi, le Cyber Monday peut proposer une offre équivalente, voire meilleure sur certaines références. En revanche, si ton objectif est une chaise ou un meuble, ne compte pas forcément sur un rebond au Cyber Monday : le mobilier est généralement mieux servi pendant le Black Friday lui-même.
+Deux conséquences pratiques : si tu vises surtout un écran ou un PC gaming, rien ne t'oblige à te précipiter le vendredi, le Cyber Monday peut proposer une offre équivalente sur certaines références. Pour une chaise ou un meuble, ne compte pas forcément sur un rebond ce lundi-là : si l'offre du vendredi est bonne au regard du prix des 30 derniers jours, prends-la.
 
 ## Webcam, casque : la même logique s'applique
 

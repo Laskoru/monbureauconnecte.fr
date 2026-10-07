@@ -2,7 +2,7 @@
 title: "Idées cadeaux télétravail et gaming : le guide par budget"
 description: "Petit, moyen ou gros budget : nos idées cadeaux télétravail et gaming vraiment utiles, pour un télétravailleur ou un gamer, sans gadgets inutiles."
 pubDate: 2026-09-22
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le bon cadeau *sans te tromper de budget*"
 pinSub: "Idées cadeaux bureau et gaming, classées par budget."
@@ -18,18 +18,18 @@ topPick:
 comparison:
   columns: ["Budget", "Idées cadeaux", "Pour qui"]
   rows:
-    - ["Moins de 20 €", "Tapis de souris XXL, repose-poignet, plante de bureau", "Petit geste sympa, sans risque"]
+    - ["Moins de 20 €", "Tapis de souris XXL, support pour ordinateur portable, plante de bureau", "Petit geste sympa, sans risque"]
     - ["20 à 60 €", "Lampe LED anti-fatigue, coussin lombaire, souris sans fil silencieuse", "Cadeau utile au quotidien"]
     - ["60 à 150 €", "Casque sans fil premium, clavier mécanique silencieux, webcam avec cache", "Un vrai plaisir à offrir à un proche"]
     - ["Spécial gamer", "Tapis de souris XXL gaming, souris gaming, clavier mécanique silencieux", "Setup gaming ou usage mixte bureau/jeu"]
 sources:
   - label: "ADEME, « Plantes et épuration de l'air intérieur »"
     url: "https://librairie.ademe.fr/air/3299-plantes-et-epuration-de-l-air-interieur.html"
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
 faq:
   - question: "Quel est le cadeau le plus sûr pour un télétravailleur que je connais mal ?"
-    answer: "Vise un accessoire qui améliore le confort sans imposer de choix personnel fort : un tapis de souris XXL, un repose-poignet ou une lampe de bureau conviennent à peu près à tous les setups. Évite les objets très spécifiques (souris à la forme particulière, clavier avec disposition inhabituelle) si tu ne connais pas ses habitudes précises."
+    answer: "Vise un accessoire qui améliore le confort sans imposer de choix personnel fort : un tapis de souris XXL, un support pour ordinateur portable ou une lampe de bureau conviennent à peu près à tous les setups. Évite les objets très spécifiques (souris à la forme particulière, clavier avec disposition inhabituelle) si tu ne connais pas ses habitudes précises."
   - question: "Comment savoir si un cadeau gaming plaira aussi à quelqu'un qui télétravaille juste ?"
     answer: "Beaucoup d'accessoires gaming fonctionnent très bien en usage bureautique : un tapis de souris XXL gaming reste avant tout un grand tapis, un clavier mécanique silencieux tape aussi bien un mail qu'un raccourci de jeu. Les seuls produits vraiment réservés au gaming pur sont ceux avec des fonctions très spécifiques (macros complexes, DPI extrêmes) qui ne servent à rien en bureautique classique."
   - question: "Faut-il éviter les cadeaux tech si on ne connaît pas la marque de matériel déjà utilisée ?"
@@ -47,7 +47,7 @@ La meilleure stratégie, c'est de partir du **budget** plutôt que de l'objet en
 À ce niveau de prix, vise l'utile et le sans-risque plutôt que l'objet spectaculaire :
 
 - Un **[tapis de souris XXL](/articles/tapis-souris-xxl-bureau/)** : il protège le bureau, agrandit la zone de frappe et convient à peu près à tous les usages, du travail de bureau au jeu occasionnel.
-- Un **repose-poignet pour clavier ou souris**, pour soulager les tensions sans rien changer au matériel existant.
+- Un **[support pour ordinateur portable](/articles/support-ordinateur-portable-ergonomique/)** pliable, pour remonter l'écran à hauteur des yeux comme le conseille l'INRS (avec un clavier et une souris externes).
 - Une **[plante de bureau](/articles/plante-bureau-depolluante/)**, un cadeau plus original qui améliore l'ambiance du poste de travail (son effet dépolluant, en revanche, n'est pas validé scientifiquement selon l'ADEME).
 
 Ces trois options ont un point commun : elles s'adaptent à presque n'importe quel bureau, sans avoir besoin de connaître les préférences précises de la personne.
@@ -100,9 +100,9 @@ Quelques erreurs reviennent souvent et valent la peine d'être évitées :
 
 ## Idées cadeaux télétravail : comment choisir selon la personne
 
-**Tu ne connais pas bien ses habitudes de travail** : reste sur les valeurs sûres à petit ou moyen budget (tapis de souris, repose-poignet, lampe de bureau). Ce sont des accessoires qui s'intègrent à n'importe quel setup sans risque de doublon gênant.
+**Tu ne connais pas bien ses habitudes de travail** : reste sur les valeurs sûres à petit ou moyen budget (tapis de souris, support pour ordinateur portable, lampe de bureau). Ce sont des accessoires qui s'intègrent à n'importe quel setup sans risque de doublon gênant.
 
-**C'est un proche qui se plaint de son dos ou de ses poignets** : oriente-toi vers le confort physique plutôt que vers la performance (coussin lombaire, repose-poignet), quitte à rester sur un budget plus modeste mais très ciblé.
+**C'est un proche qui se plaint de son dos ou de ses poignets** : oriente-toi vers le confort physique plutôt que vers la performance (coussin lombaire, [souris verticale](/articles/souris-ergonomique-verticale/)), avec un cadeau très ciblé. Le repose-poignet est un faux ami : l'INRS estime qu'un repose-paume n'est pas justifié sur un poste bien réglé.
 
 **La personne passe beaucoup de temps en visioconférence** : un casque ou une webcam de qualité change vraiment son quotidien professionnel, bien plus qu'un accessoire décoratif.
 

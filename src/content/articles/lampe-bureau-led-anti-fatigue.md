@@ -1,8 +1,8 @@
 ---
 title: "Lampe de bureau LED anti-fatigue : comment bien la choisir"
-description: "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et notre sélection de modèles."
+description: "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et un modèle qui les coche."
 pubDate: 2026-07-21
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Une lumière *qui ménage les yeux*"
 pinSub: "La lampe LED anti-fatigue bien choisie."
@@ -35,11 +35,11 @@ interactiveGuide:
     - label: "Sur un grand plan de travail"
       result: "Priorité au <strong>bras articulé</strong> et à un faisceau large : tu positionnes la lumière exactement où il faut. Une <strong>fonction mémoire</strong> est pratique si le poste est partagé."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "Anses, « LED : les recommandations de l'Anses pour limiter l'exposition à la lumière bleue »"
     url: "https://www.anses.fr/fr/content/led-les-recommandations-de-lanses-pour-limiter-lexposition-la-lumiere-bleue"
-  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
   - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
@@ -97,7 +97,7 @@ Pour un usage bureautique classique, un modèle avec plusieurs **températures d
 
 ## Faut-il s'inquiéter de la « lumière bleue » ?
 
-C'est l'argument marketing du moment. La **lumière bleue** est une composante naturelle de la lumière du jour ; le soir, un excès de lumière froide (riche en bleu) peut retarder l'endormissement en freinant la production de mélatonine. Mais côté **fatigue oculaire en journée**, son rôle est très exagéré par les fiches produit : ce qui fatigue vraiment les yeux au travail, c'est un **éclairage mal dosé**, le **scintillement** et les **reflets**, bien plus que la teinte bleue en elle-même. La bonne réponse n'est donc pas une lampe « anti-lumière bleue » gadget, mais une lampe à **température ajustable** : lumière neutre le jour pour rester alerte, blanc chaud le soir pour préparer le repos. C'est exactement ce que fait une bonne lampe réglable, sans filtre miracle.
+C'est l'argument marketing du moment. La **lumière bleue** est une composante naturelle de la lumière du jour ; le soir, un excès de lumière froide (riche en bleu) peut retarder l'endormissement en freinant la production de mélatonine. Côté rétine, l'Anses confirme la toxicité de la lumière bleue, mais l'INRS précise que les LED des éclairages de bureau et des écrans émettent très peu et sont classées sans risque (groupe 0). Et côté **fatigue oculaire en journée**, son rôle est très exagéré par les fiches produit : ce qui fatigue vraiment les yeux au travail, c'est un **éclairage mal dosé**, le **scintillement** et les **reflets**, bien plus que la teinte bleue en elle-même. La bonne réponse n'est donc pas une lampe « anti-lumière bleue » gadget, mais une lampe à **température ajustable** : lumière neutre le jour pour rester alerte, blanc chaud le soir pour préparer le repos. C'est exactement ce que fait une bonne lampe réglable, sans filtre miracle.
 
 ## Combien de lumens, quel budget ?
 
@@ -120,4 +120,4 @@ Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers po
 - [Bras support d'écran articulé](/articles/bras-support-ecran-articule/)
 - [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

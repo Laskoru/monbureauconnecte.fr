@@ -2,7 +2,7 @@
 title: "Bureau d'angle pour petit espace : comment bien choisir"
 description: "Comment choisir un bureau d'angle pour petit espace et exploiter un coin de pièce en télétravail : formes, dimensions, rangement intégré et budget."
 pubDate: 2026-09-25
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Un vrai bureau, *dans un coin*"
 pinSub: "Le bureau d'angle bien choisi pour petit espace."
@@ -24,10 +24,12 @@ comparison:
     - ["Table pivotante ou bureau modulable", "Pièce polyvalente, bureau le jour et autre usage le soir", "Moins stable qu'un vrai bureau d'angle fixe"]
     - ["Plateau d'angle sur pieds réglables", "Qui veut une forme sur mesure et un budget serré", "Montage plus long, stabilité qui dépend surtout des pieds choisis"]
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Comment régler son siège quand on travaille sur écran ? »"
     url: "https://www.inrs.fr/dam/inrs/CataloguePapier/HST/TI-FI-7.pdf"
+  - label: "INRS, « Écrans de visualisation. Santé et ergonomie » (ED 924)"
+    url: "https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-924.pdf"
 faq:
   - question: "Un bureau d'angle prend-il vraiment moins de place qu'un bureau droit ?"
     answer: "Oui, à surface de travail égale. Un bureau d'angle exploite un coin de pièce qui reste souvent inutilisé, alors qu'un bureau droit équivalent occupe tout un pan de mur en ligne. Tu gagnes de la place au sol pour circuler, sans sacrifier la surface disponible pour ton écran et ton clavier."
@@ -61,10 +63,10 @@ Enfin, le **plateau d'angle monté sur des pieds réglables** séduit les bricol
 
 - **Les dimensions exactes du coin de pièce** : mesure la longueur des deux murs disponibles avant de regarder les modèles, plutôt que l'inverse. Un bureau trop grand pour l'espace bloque une porte ou un radiateur ; un modèle trop petit laisse de la place perdue dans le coin.
 - **La profondeur** : du côté où tu poses l'écran et le clavier, l'INRS recommande au moins 80 cm, pour garder l'écran à bonne distance des yeux. Un retour d'angle moins profond sert plutôt de simple rangement d'appoint.
-- **La hauteur du plateau** : la plupart des bureaux d'angle fixes se situent autour de 72 à 75 cm, une hauteur standard qui convient à la majorité des chaises de bureau. Si tu es petit ou grand, vérifie que ta chaise compense l'écart (assise remontée et repose-pieds si le plateau est trop haut pour toi).
+- **La hauteur du plateau** : un bureau fixe mesure en général environ 72 cm de haut selon l'INRS, une hauteur pensée pour une taille moyenne. Si tu es petit ou grand, vérifie que ta chaise compense l'écart (assise remontée et repose-pieds si le plateau est trop haut pour toi) ; notre [calculateur de hauteur de bureau](/calculateur-hauteur-bureau/) te donne la bonne valeur pour ta taille.
 - **La stabilité et le mode de fixation** : un bureau d'angle calé contre deux murs est naturellement plus stable qu'un modèle à pieds indépendants. Si tu ne peux pas l'adosser aux deux murs, privilégie un modèle avec des pieds larges et une structure renforcée.
-- **Le rangement intégré** : étagères, tiroir ou support pour l'unité centrale font gagner de la place au sol, un vrai plus dans un petit espace où chaque meuble supplémentaire complique la circulation.
-- **La matière du plateau** : un panneau mélaminé ou stratifié résiste bien à l'usage quotidien et coûte moins cher qu'un plateau en bois massif, largement suffisant pour un usage bureautique classique.
+- **Le rangement intégré** : étagères, tiroir ou support pour l'unité centrale font gagner de la place au sol, précieux dans un petit espace où chaque meuble supplémentaire complique la circulation.
+- **La matière du plateau** : un panneau mélaminé ou stratifié résiste bien à l'usage quotidien et coûte moins cher qu'un plateau en bois massif ; il suffit largement pour un usage bureautique classique.
 
 > 🛒 **Comparer les modèles du moment**
 > Les dimensions et les références varient beaucoup d'un fabricant à l'autre : [voir les bureaux d'angle sur Amazon](https://www.amazon.fr/s?k=bureau+d%27angle&tag=monbureauconnecte-21).
@@ -88,7 +90,7 @@ Si ton coin de pièce a la bonne taille et que tu passes plusieurs heures par jo
 
 ## Combien ça coûte
 
-Un **bureau d'angle basique**, plateau mélaminé et pieds simples, se trouve généralement entre **60 et 120 €**. Les modèles avec **étagères intégrées ou rangement additionnel** montent plutôt entre **120 et 220 €**, selon la qualité des matériaux et la marque. Un **bureau d'angle assis-debout électrique** reste le format le plus cher, souvent au-delà de **350 €**, réservé à qui veut vraiment alterner les positions sans compromis sur l'espace. Pour un usage bureautique classique dans un petit espace, un modèle basique bien dimensionné suffit largement : inutile de viser le haut de gamme si le besoin reste simple.
+Un **bureau d'angle basique**, plateau mélaminé et pieds simples, reste le moins cher. Les modèles avec **étagères intégrées ou rangement additionnel** coûtent plus, selon la qualité des matériaux et la marque. Un **bureau d'angle assis-debout électrique** est le format le plus cher, à réserver à qui veut vraiment alterner les positions sans compromis sur l'espace. Les prix bougent souvent : compare les tarifs du moment plutôt que de te fier à une fourchette figée. Pour un usage bureautique classique dans un petit espace, un modèle basique bien dimensionné suffit largement : inutile de viser le haut de gamme si le besoin reste simple.
 
 ## À vérifier avant de commander ton bureau d'angle
 
@@ -98,7 +100,7 @@ Le bureau d'angle exploite un coin de pièce généralement inutilisé pour offr
 - **La profondeur** : au moins 80 cm du côté où tu poses l'écran, comme le recommande l'INRS.
 - **La stabilité** : idéalement calé contre deux murs, sinon des pieds larges et une structure renforcée.
 - **Le rangement** : des étagères intégrées si l'espace en manque.
-- **Le budget** : un modèle basique bien dimensionné coûte rarement plus de 120 €, largement suffisant pour un usage bureautique classique en télétravail.
+- **Le budget** : un modèle basique bien dimensionné suffit largement pour un usage bureautique classique en télétravail.
 
 ## Pour aller plus loin
 

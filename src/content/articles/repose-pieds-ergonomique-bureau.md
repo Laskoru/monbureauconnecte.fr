@@ -1,8 +1,8 @@
 ---
 title: "Repose-pieds ergonomique de bureau : utile ou gadget ?"
-description: "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et notre sélection de modèles réglables."
+description: "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et un modèle réglable conseillé."
 pubDate: 2026-07-18
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Les jambes *soulagées* toute la journée"
 pinSub: "Repose-pieds : utile ou gadget ?"
@@ -17,7 +17,7 @@ products:
     pros:
       - "Réglable en hauteur et en inclinaison"
       - "Surface antidérapante"
-      - "Soulage jambes et bas du dos"
+      - "3 hauteurs (10, 14 et 17 cm), surface à picots"
     cons:
       - "Surface un peu petite pour de grands pieds"
       - "Plastique d’entrée de gamme"
@@ -52,13 +52,13 @@ faq:
 
 ## Pourquoi utiliser un repose-pieds ergonomique
 
-Sur un bureau standard (ou un bureau assis-debout mal réglé), les pieds ne touchent pas toujours le sol de façon stable, surtout pour les personnes de **petite taille** ou quand le plateau est un peu haut. Un repose-pieds ergonomique compense cet écart et **ramène les cuisses à l'horizontale**, ce qui enlève la pression sur l'arrière des cuisses et soulage le bas du dos.
+Sur un bureau standard (ou un bureau assis-debout mal réglé), les pieds ne touchent pas toujours le sol de façon stable, surtout pour les personnes de **petite taille** ou quand le plateau est un peu haut. Un repose-pieds ergonomique compense cet écart et **ramène les cuisses à l'horizontale**, ce qui enlève la pression sur l'arrière des cuisses et des genoux. L'INRS le prévoit noir sur blanc : si les pieds ne reposent pas au sol une fois le siège réglé, un repose-pieds doit être proposé, et le Code du travail impose d'en fournir un au salarié qui le demande (article R. 4542-9).
 
 Mais son intérêt le plus sous-estimé est ailleurs : il aide à **casser l'immobilité**. Garder les jambes figées plusieurs heures ralentit la circulation et crée des tensions, bien plus qu'un simple problème de hauteur. Un bon repose-pieds invite à bouger les chevilles, à varier les appuis, à basculer légèrement, autant de micro-mouvements qui font du bien sur une longue journée assise.
 
 ## Pour qui c'est vraiment utile
 
-Certains profils tirent un bénéfice bien plus net d'un repose-pieds que la moyenne. Les **personnes de petite taille** en premier lieu : sur un bureau standard non réglable, leurs pieds pendent presque toujours, et le repose-pieds est alors la solution la plus simple. Les personnes aux **jambes lourdes** ou sujettes aux **gonflements** en fin de journée y gagnent aussi, car varier l'angle des chevilles et légèrement surélever les pieds aide la circulation. Pendant une **grossesse**, qui favorise les jambes lourdes, il peut apporter un soulagement appréciable. À l'inverse, quelqu'un de grand avec un bureau bien dimensionné et une chaise réglable n'en ressentira quasiment pas le besoin. D'où l'intérêt de partir de **sa** morphologie et de son poste, plutôt que d'acheter par principe.
+Certains profils tirent un bénéfice bien plus net d'un repose-pieds que la moyenne. Les **personnes de petite taille** en premier lieu : sur un bureau standard non réglable, leurs pieds pendent presque toujours, et le repose-pieds est alors la solution la plus simple. Les personnes aux **jambes lourdes** ou sujettes aux **gonflements** en fin de journée y gagnent aussi : Ameli rappelle que les flexions du pied actionnent la pompe musculaire du mollet, qui aide le sang à remonter vers le cœur, et un repose-pieds inclinable invite justement à ce mouvement. Pendant une **grossesse**, qui favorise les jambes lourdes, il peut apporter un soulagement appréciable. À l'inverse, quelqu'un de grand avec un bureau bien dimensionné et une chaise réglable n'en ressentira quasiment pas le besoin. D'où l'intérêt de partir de **sa** morphologie et de son poste, plutôt que d'acheter par principe.
 
 ## Ce qui différencie un bon modèle
 
@@ -113,5 +113,5 @@ Le repose-pieds n'est pas un gadget marketing : c'est un petit accessoire peu co
 - [Coussin d'assise ergonomique (coccyx)](/articles/coussin-assise-ergonomique-coccyx/)
 - [Tabouret assis-debout / siège selle](/articles/tabouret-assis-debout-siege-selle-bureau/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)
 - [Chauffage d'appoint bureau télétravail : lequel choisir](/articles/chauffage-appoint-bureau-teletravail/)

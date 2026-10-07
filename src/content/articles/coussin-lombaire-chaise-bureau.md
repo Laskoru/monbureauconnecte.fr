@@ -3,7 +3,7 @@ title: "Coussin lombaire pour chaise de bureau : soulager le bas du dos à petit
 seoTitle: "Coussin lombaire pour chaise de bureau : soulager le dos"
 description: "Comment choisir un coussin lombaire pour chaise de bureau afin de corriger le soutien du bas du dos sans changer de siège."
 pubDate: 2026-08-16
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le bas du dos *enfin soutenu*"
 pinSub: "Le coussin lombaire à petit prix."
@@ -36,9 +36,9 @@ interactiveGuide:
     - label: "Chaise gaming / dossier très incurvé"
       result: "Vérifie en priorité la <strong>longueur des sangles</strong> et la souplesse de la fixation : ces dossiers sont plus larges et plus courbés qu'une chaise de bureau classique."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
-  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
   - label: "Ameli.fr, « Mal de dos : le bon traitement, c'est le mouvement ! »"
     url: "https://www.ameli.fr/assure/sante/themes/lombalgie-aigue/traitement-prevention"
@@ -53,7 +53,7 @@ faq:
 
 ## Pourquoi le bas du dos souffre autant en position assise
 
-Le bas du dos (la région lombaire) est censé garder une légère courbure vers l'avant, même assis, et c'est elle que soutient un coussin lombaire pour chaise de bureau. Le problème, c'est que la plupart des chaises de bureau (y compris des modèles au premier abord confortables) ont un dossier plat ou légèrement incurvé vers l'arrière, ce qui pousse le dos à s'affaisser en position assise prolongée. Cette perte de courbure naturelle, appelée souvent "dos rond", concentre la pression sur les disques intervertébraux du bas du dos au lieu de la répartir sur l'ensemble de la colonne.
+Le bas du dos (la région lombaire) est censé garder une légère courbure vers l'avant, même assis, et c'est elle que soutient un coussin lombaire pour chaise de bureau. Le problème, c'est que la plupart des chaises de bureau (y compris des modèles au premier abord confortables) ont un dossier plat ou légèrement incurvé vers l'arrière, ce qui pousse le dos à s'affaisser en position assise prolongée. Cette perte de courbure naturelle, souvent appelée "dos rond", s'ajoute à la posture assise prolongée qui, selon l'INRS, peut générer des contraintes sur les disques intervertébraux et réduire l'activité des muscles du dos, deux facteurs de lombalgie.
 
 Sur quelques minutes, ce n'est pas un problème. Sur sept ou huit heures par jour, cinq jours par semaine, c'est une autre histoire : la tension chronique dans cette zone finit par créer des douleurs sourdes en fin de journée, parfois des raideurs le matin, et dans les cas plus marqués une gêne qui irradie vers les fessiers ou les cuisses. Le coussin lombaire répond directement à ce problème : il vient combler l'espace entre le bas du dos et le dossier, pour maintenir la cambrure naturelle plutôt que de la laisser s'effondrer.
 
@@ -101,4 +101,4 @@ Le coussin lombaire pour chaise de bureau est l'un des accessoires les plus rent
 - [Coussin d'assise ergonomique (coccyx)](/articles/coussin-assise-ergonomique-coccyx/)
 - [Meilleures chaises gaming](/articles/meilleures-chaises-gaming/)
 - [Repose-pieds ergonomique](/articles/repose-pieds-ergonomique-bureau/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

@@ -3,7 +3,7 @@ title: "Combien coûte vraiment un setup gaming complet ?"
 seoTitle: "Combien coûte un setup gaming complet ? Le vrai budget"
 description: "Combien coûte un setup gaming complet ? PC, écran, périphériques, siège et bureau : le vrai budget poste par poste, et où économiser sans regret."
 pubDate: 2026-09-12
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le *vrai* prix d'un setup gaming"
 pinSub: "Poste par poste, sans mauvaise surprise."
@@ -25,13 +25,13 @@ interactiveGuide:
     - label: "La précision et le ressenti"
       result: "Priorise les <strong>périphériques</strong> : souris, clavier, casque et tapis. Moins chers que le PC, ils changent énormément le ressenti au quotidien pour un budget modéré."
 sources:
-  - label: "INRS, « Travail sur écran : Risques pour la santé »"
+  - label: "INRS, « Travail sur écran. Risques pour la santé »"
     url: "https://www.inrs.fr/risques/travail-ecran/risques-sante.html"
   - label: "Service Public, « Achat d'un produit : garantie légale de conformité »"
     url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F11094"
 faq:
   - question: "Le PC représente quelle part du budget d'un setup gaming ?"
-    answer: "En général la moitié à deux tiers du total. Sur un setup complet, une fois ajoutés l'écran, les périphériques, le siège et le bureau, la facture dépasse largement le seul prix de la tour. C'est justement l'erreur classique : budgéter le PC en oubliant tout ce qui l'entoure."
+    answer: "En général autour de la moitié du total, un peu plus sur un petit budget. Sur un setup complet, une fois ajoutés l'écran, les périphériques, le siège et le bureau, la facture dépasse largement le seul prix de la tour. C'est justement l'erreur classique : budgéter le PC en oubliant tout ce qui l'entoure."
   - question: "Sur quoi peut-on économiser sans le regretter ?"
     answer: "Sur l'esthétique pure (RGB, boîtier tape-à-l'œil) et sur les périphériques d'appoint, qu'on peut prendre en entrée de gamme au début puis améliorer. En revanche, on évite d'économiser sur l'alimentation du PC, sur le siège (le dos paie l'addition) et sur l'écran si l'on joue beaucoup, car ce sont des postes qu'on garde des années."
   - question: "Faut-il tout acheter d'un coup ?"
@@ -62,7 +62,7 @@ Voici les grands postes d'un setup complet, avec des fourchettes indicatives (20
 | **Bureau** | 100 à 400 € | La base : hauteur, place, posture |
 | **Accessoires** | 30 à 150 € | Tapis XXL, rangement câbles, éclairage |
 
-Fais le total et l'ordre de grandeur devient clair : un setup gaming complet et cohérent se chiffre souvent **entre 1 500 et 3 000 €** selon l'ambition. Le PC en représente la moitié à deux tiers ; le reste, c'est tout ce qui te met dans de bonnes conditions pour en profiter.
+Fais le total et l'ordre de grandeur devient clair : un setup gaming complet et cohérent se chiffre souvent **entre 1 500 et 3 000 €** selon l'ambition. Le PC en représente environ la moitié (de 47 à 61 % selon les fourchettes du tableau) ; le reste, c'est tout ce qui te met dans de bonnes conditions pour en profiter.
 
 ## Où investir, où économiser
 
@@ -99,7 +99,7 @@ Pour faire baisser la facture sans sacrifier la qualité, l'**occasion** et le *
 À l'inverse, on reste prudent sur les composants internes du PC d'occasion (surtout la carte graphique, qui a pu être fortement sollicitée) et sur l'**alimentation**, qu'on préfère neuve pour la fiabilité et la garantie. Pour l'occasion comme pour le reconditionné, achète de préférence chez un professionnel : la garantie légale de conformité de deux ans s'y applique, alors qu'elle ne couvre pas les ventes entre particuliers. Un bon compromis : une base neuve pour ce qui compte, de l'occasion pour l'écran et les à-côtés. C'est souvent ce mélange qui permet de monter un cran de gamme au-dessus de son budget initial, sans rogner sur l'essentiel.
 
 > **L'essentiel à retenir**
-> Un setup gaming complet ne se résume pas au PC : compte aussi l'**écran**, les **périphériques**, le **siège**, le **bureau** et les accessoires, soit souvent **1 500 à 3 000 €** au total, le PC en représentant la moitié à deux tiers. Ne brade jamais l'**alimentation**, le **siège** et l'**écran** ; lève le pied sur l'esthétique et les périphériques d'appoint. Et surtout, **étale la dépense** : deux piliers d'abord (PC + écran), le reste ensuite.
+> Un setup gaming complet ne se résume pas au PC : compte aussi l'**écran**, les **périphériques**, le **siège**, le **bureau** et les accessoires, soit souvent **1 500 à 3 000 €** au total, le PC en représentant environ la moitié. Ne brade jamais l'**alimentation**, le **siège** et l'**écran** ; lève le pied sur l'esthétique et les périphériques d'appoint. Et surtout, **étale la dépense** : deux piliers d'abord (PC + écran), le reste ensuite.
 
 ## Trois règles pour répartir ton budget
 

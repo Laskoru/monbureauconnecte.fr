@@ -3,16 +3,16 @@ title: "Hub USB-A multiport : rebrancher ses vieux périphériques sur un PC ré
 seoTitle: "Hub USB-A multiport : rebrancher ses vieux périphériques"
 description: "Plus de port USB-A sur ton PC récent ? Le hub USB-A multiport permet de rebrancher souris, clavier et clés USB sans rien racheter. Comment le choisir."
 pubDate: 2026-09-13
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Rebrancher *tous tes vieux périphériques*"
 pinSub: "Le hub USB-A qui règle le problème d'un coup."
 keywords: ["hub usb-a multiport", "adaptateur usb-c vers usb-a", "brancher usb-a sur usb-c", "hub usb-a pas cher"]
 category: "peripheriques"
 topPick:
-  name: "Hub USB 3.0 multiport Anker (4 ports)"
-  blurb: "La référence fiable et compacte : quatre ports USB-A 3.0, reconnu sans pilote sous Windows et macOS, et un câble assez long pour le laisser branché en permanence."
-  url: "https://www.amazon.fr/s?k=anker+hub+usb+3.0+4+ports&tag=monbureauconnecte-21"
+  name: "Hub USB-C vers 4 ports USB-A 3.0 Anker"
+  blurb: "Une valeur sûre et compacte : une entrée USB-C, quatre ports USB-A à 5 Gbps, et un fonctionnement plug and play, sans pilote ni logiciel à installer."
+  url: "https://www.amazon.fr/s?k=anker+hub+usb-c+4+ports+usb+3.0&tag=monbureauconnecte-21"
   ctaLabel: "Voir les hubs USB Anker sur Amazon"
 coverAlt: "Hub USB noir avec plusieurs ports et interrupteurs, posé sur un bureau"
 draft: false
@@ -21,6 +21,8 @@ sources:
     url: "https://support.apple.com/fr-fr/102477"
   - label: "USB-IF, « USB 3.2 »"
     url: "https://www.usb.org/usb-32-0"
+  - label: "Anker, « 4 Port USB-C Hub »"
+    url: "https://www.anker.com/collections/4-port-usb-c-hub"
 faq:
   - question: "Pourquoi mon PC récent n'a-t-il plus de ports USB-A classiques ?"
     answer: "Les ordinateurs portables récents, surtout les modèles fins, misent sur le tout USB-C pour gagner en finesse et en polyvalence (charge, vidéo et données par le même port). Le revers de la médaille : les anciens périphériques équipés d'une fiche USB-A rectangulaire (souris, clavier filaire, clé USB, imprimante) ne peuvent plus se brancher directement, d'où le besoin d'un hub ou d'un adaptateur."

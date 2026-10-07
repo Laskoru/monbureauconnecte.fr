@@ -3,26 +3,26 @@ title: "Hub USB-C et station d'accueil : lequel choisir ?"
 seoTitle: "Hub USB-C ou station d'accueil : lequel choisir ?"
 description: "Hub USB-C ou station d'accueil ? La vraie différence (écrans, Ethernet, charge), le bon choix selon ton setup et le piège de compatibilité à éviter."
 pubDate: 2026-07-27
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Tout brancher *d'un seul câble*"
 pinSub: "Le hub USB-C / station idéal."
-keywords: ["station d'accueil usb-c", "hub usb-c télétravail", "dock usb-c ordinateur portable", "hub usb-c 2026"]
+keywords: ["hub usb-c ou station d'accueil", "station d'accueil usb-c", "hub usb-c télétravail", "dock usb-c ordinateur portable", "hub usb-c 2026"]
 category: "peripheriques"
 coverAlt: "Ordinateur portable connecté à un moniteur externe sur un bureau"
 draft: false
 products:
   - asin: "B0CV9TX1V3"
-    title: "Station d'accueil 10-en-1 Kensington"
-    blurb: "Marque reconnue en accessoires professionnels : 3 sorties vidéo, 100W de charge, fiable pour un usage quotidien intensif."
+    title: "Station d'accueil USB-C 10-en-1 Kensington SD4842P"
+    blurb: "Marque reconnue en accessoires professionnels : jusqu'à 3 écrans en 1080p à 120 Hz (ou un seul en 8K à 30 Hz), 100 W de charge, Ethernet Gigabit et 5 ports USB à 10 Gbit/s. Kensington la donne compatible Windows uniquement."
     pros:
-      - "3 sorties vidéo, charge 100 W"
-      - "Marque pro reconnue, fiable"
+      - "3 sorties vidéo (1 DisplayPort, 2 HDMI), charge 100 W"
+      - "Ethernet Gigabit, garantie 3 ans"
       - "Un seul câble vers le portable"
     cons:
       - "Tarif au-dessus des hubs génériques"
-      - "Peut chauffer en usage intensif"
-      - "Compatibilité écran à vérifier selon le portable"
+      - "En triple écran, limitée au 1080p"
+      - "Windows uniquement selon Kensington, pas pour un Mac"
 interactiveGuide:
   title: "Hub simple ou station d'accueil : de quoi as-tu besoin ?"
   question: "Ton poste, c'est…"
@@ -36,14 +36,14 @@ interactiveGuide:
     - label: "Je manque juste de ports USB"
       result: "Un petit <strong>hub USB-C multiport</strong> à quelques euros règle le problème. Regarde surtout le nombre de <strong>ports USB-A</strong> (souris, clavier, clés) et la présence d'un lecteur de carte si tu en as l'usage."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "Apple, « Utiliser deux écrans avec votre MacBook Air ou MacBook Pro avec puce M3 »"
     url: "https://support.apple.com/fr-fr/117373"
   - label: "Intel, « Technologie Thunderbolt™ : la connexion USB-C la plus rapide, la plus simple et la plus fiable »"
     url: "https://www.intel.fr/content/www/fr/fr/architecture-and-technology/thunderbolt/overview.html"
-  - label: "HDMI Licensing Administrator, « HDMI FORUM RELEASES VERSION 2.0 OF THE HDMI SPECIFICATION »"
-    url: "https://www.hdmi.org/press/bodydetails/24"
+  - label: "Kensington, « Station d’accueil sans pilote SD4842P USB-C de 10 Gbit/s pour trois moniteurs avec 100 W PD »"
+    url: "https://www.kensington.com/fr-ca/p/produits/connectivity/stations-pour-ordinateurs-portables-et-accessoires-usb/station-daccueil-sans-pilotesd4842p-usbc-de-10gbits-pour-trois-moniteurs-avec-100w-pd/"
 faq:
   - question: "Quelle différence entre un simple hub et une vraie station d'accueil ?"
     answer: "Un hub ajoute quelques ports supplémentaires (USB, HDMI). Une station d'accueil va plus loin : elle centralise aussi l'alimentation et le réseau filaire, avec un seul câble à brancher et débrancher pour tout connecter d'un coup."
@@ -55,13 +55,13 @@ faq:
 
 ## Pourquoi un hub ou une station d'accueil change le quotidien
 
-Un ordinateur portable moderne propose souvent seulement **2 à 3 ports USB-C**, ce qui oblige à débrancher et rebrancher en permanence écran, clavier filaire ou clé USB. Un hub ou une station d'accueil USB-C **centralise** tous ces branchements : un seul câble à connecter le matin pour retrouver écran externe, réseau filaire et charge, un seul à débrancher le soir. Pour qui pose et reprend son portable chaque jour, c'est le genre d'accessoire qu'on ne remarque plus… parce qu'il fait disparaître une corvée quotidienne.
+Hub USB-C ou station d'accueil : les deux règlent le même problème, celui d'un ordinateur portable moderne qui ne propose souvent que **deux ou trois ports USB-C**, ce qui oblige à débrancher et rebrancher en permanence écran, clavier filaire ou clé USB. Un hub ou une station d'accueil USB-C **centralise** tous ces branchements : un seul câble à connecter le matin pour retrouver écran externe, réseau filaire et charge, un seul à débrancher le soir. Pour qui pose et reprend son portable chaque jour, c'est le genre d'accessoire qu'on ne remarque plus… parce qu'il fait disparaître une corvée quotidienne. L'INRS le recommande d'ailleurs pour le travail sur portable : relier l'ordinateur à une station d'accueil avec écran, clavier et souris externes permet de retrouver un poste aussi bien réglé qu'un ordinateur fixe.
 
 Au-delà du confort, il y a aussi un enjeu de **fiabilité**. Brancher et débrancher sans cesse les mêmes ports finit par les user, et multiplier les câbles directement sur le portable fragilise ses prises. Un dock joue le rôle d'intermédiaire : c'est lui qui encaisse les manipulations quotidiennes, pendant que le portable ne voit qu'un seul câble propre. Sur la durée, c'est autant de sérénité pour un matériel souvent coûteux.
 
 ![Hub USB multiport à plusieurs ports posé sur un bureau](/covers/hub-usb-c-station-accueil-inbody.webp)
 
-## Hub ou station d'accueil USB-C : ce n'est pas la même chose
+## Hub USB-C ou station d'accueil : ce n'est pas la même chose
 
 Le vocabulaire est flou, mais la distinction est réelle. Un **hub** est un petit multiprise de ports : il ajoute quelques USB-A, une sortie HDMI, parfois un lecteur de carte, souvent alimenté par le port du portable lui-même. Léger, nomade, économique. Une **station d'accueil (dock)** va plus loin : elle a sa **propre alimentation**, gère plusieurs écrans, un port **Ethernet**, et recharge le portable, le tout via un unique câble. Plus chère et sédentaire, mais imbattable pour un poste fixe complet.
 
@@ -69,7 +69,7 @@ Le vocabulaire est flou, mais la distinction est réelle. Un **hub** est un peti
 
 ### Les sorties vidéo
 
-Regarde le **type** (HDMI, DisplayPort) et surtout la **résolution/fréquence** supportée : le **4K à 60 Hz** est le standard confortable ; certains hubs bas de gamme plafonnent à 4K **30 Hz**, ce qui donne une sensation de saccade désagréable au quotidien. Pour deux écrans, vérifie la mention explicite « double écran ».
+Regarde le **type** (HDMI, DisplayPort) et surtout la **résolution/fréquence** supportée : le **4K à 60 Hz** est le standard confortable ; certains hubs bas de gamme plafonnent à 4K **30 Hz**, ce qui donne une sensation de saccade désagréable au quotidien. Lis aussi la ligne en petits caractères : une station annoncée « trois écrans » peut se limiter au 1080p dans cette configuration. Pour deux écrans, vérifie la mention explicite « double écran ».
 
 ### La puissance de charge (Power Delivery)
 
@@ -100,7 +100,7 @@ Le plus grand facteur de déception n'est pas la qualité du hub, mais un **prob
 
 ## Thunderbolt ou USB-C : faut-il payer plus ?
 
-Sur les fiches, on croise à la fois de l'« USB-C » et du « Thunderbolt » (3 ou 4). **Thunderbolt** est une norme plus rapide et plus capable, qui gère plus facilement deux écrans haute définition et de très gros débits, mais les docks Thunderbolt sont plus chers et n'ont d'intérêt que si **ton ordinateur** possède lui-même un port Thunderbolt (repérable au petit éclair à côté de la prise). Sur une machine sans Thunderbolt, un dock Thunderbolt fonctionnera en mode USB-C dégradé, sans le bénéfice payé. En clair : pour un usage bureautique classique avec un ou deux écrans en 4K 60 Hz, un bon dock **USB-C** suffit ; réserve le **Thunderbolt** aux besoins lourds (création, gros transferts) sur une machine compatible.
+Sur les fiches, on croise à la fois de l'« USB-C » et du « Thunderbolt » (3 ou 4). **Thunderbolt** est une norme plus rapide et plus capable, qui gère plus facilement deux écrans haute définition et de très gros débits, mais les docks Thunderbolt sont plus chers et n'ont d'intérêt que si **ton ordinateur** possède lui-même un port Thunderbolt (repérable au petit éclair à côté de la prise). Intel conçoit les produits Thunderbolt pour rester compatibles avec l'USB, mais sur une machine sans Thunderbolt, le dock se contente des capacités du port USB-C de l'ordinateur : tu paies une bande passante (40 Gbit/s en Thunderbolt 4) dont tu ne profites pas. En clair : pour un usage bureautique classique avec un ou deux écrans en 4K 60 Hz, un bon dock **USB-C** suffit ; réserve le **Thunderbolt** aux besoins lourds (création, gros transferts) sur une machine compatible.
 
 ## Installer et organiser son poste autour du dock
 
@@ -111,7 +111,7 @@ Un dock ne donne son plein confort que si le reste suit. Fixe-le à un endroit s
 
 ## Quand passer du hub à la station d'accueil ?
 
-Le bon hub ou la bonne station d'accueil dépend surtout du nombre d'écrans à gérer et de la stabilité réseau recherchée. Au-delà d'un simple écran externe, investir dans une vraie station avec Ethernet et charge 100 W change vraiment le confort au quotidien, à condition de vérifier la compatibilité avant de commander. C'est l'accessoire qui transforme un portable en véritable poste de travail fixe, d'un seul clic de câble.
+Le bon hub ou la bonne station d'accueil dépend surtout du nombre d'écrans à gérer et de la stabilité réseau recherchée. Au-delà d'un simple écran externe, investir dans une vraie station avec Ethernet et charge 100 W change vraiment le confort au quotidien, à condition de vérifier la compatibilité avant de commander. C'est l'accessoire qui transforme un portable en vrai poste de travail fixe, d'un seul clic de câble.
 
 ## Pour aller plus loin
 

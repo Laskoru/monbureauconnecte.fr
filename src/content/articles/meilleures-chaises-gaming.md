@@ -1,8 +1,8 @@
 ---
 title: "Quelle chaise gaming choisir ? Notre comparatif"
-description: "Notre sélection des meilleures chaises gaming pour les longues sessions, de l'économique au haut de gamme ergonomique : critères, réglages, pièges."
+description: "Quelle chaise gaming choisir pour les longues sessions ? Soutien lombaire, accoudoirs 4D, vérin, revêtement : les critères, les réglages et les pièges."
 pubDate: 2026-08-01
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Le confort *des heures durant*"
 pinSub: "Les meilleures chaises gaming comparées."
@@ -12,14 +12,14 @@ coverAlt: "Setup gaming avec fauteuil en cuir noir et gris"
 draft: false
 products:
   - asin: "B081396NSX"
-    title: "SONGMICS OBG73BRV1, Noir/Rouge, accoudoirs 4D, charge 150 kg"
-    blurb: "Bon compromis pour un usage quotidien : accoudoirs 4D, appui-tête et support lombaire réglables."
+    title: "SONGMICS OBG73BRV1, Noir/Rouge, repose-pieds télescopique, charge 150 kg"
+    blurb: "Bon compromis pour un usage quotidien à petit prix : dossier inclinable de 90 à 135°, appui-tête, coussin lombaire et repose-pieds télescopique. Ses accoudoirs rembourrés ne sont pas réglables."
     pros:
-      - "Accoudoirs 4D réglables"
-      - "Appui-tête et lombaire ajustables"
+      - "Dossier inclinable de 90 à 135°"
+      - "Appui-tête et coussin lombaire fournis"
       - "Bon rapport qualité/prix"
     cons:
-      - "Assise ferme, look « gaming » marqué"
+      - "Accoudoirs non réglables"
       - "Assemblage à prévoir"
       - "Simili-cuir qui chauffe l’été"
 interactiveGuide:
@@ -35,7 +35,7 @@ interactiveGuide:
     - label: "Le plus petit budget possible"
       result: "Un premier prix peut dépanner, mais fuis les modèles <strong>sans réglage lombaire</strong> ni accoudoirs ajustables : ce sont eux qui font mal au dos et s'affaissent en quelques mois. Mieux vaut d'occasion un bon milieu de gamme."
 sources:
-  - label: "INRS, « Travail sur écran : Prévention des risques »"
+  - label: "INRS, « Travail sur écran. Prévention des risques »"
     url: "https://www.inrs.fr/risques/travail-ecran/prevention-risques.html"
   - label: "INRS, « Postures de travail statiques et repères techniques sur les sièges de travail » (ED 131)"
     url: "https://www.inrs.fr/dms/inrs/CataloguePapier/ED/TI-ED-131/ed131.pdf"
@@ -103,7 +103,7 @@ Une chaise haut de gamme mal réglée ne vaut pas mieux qu'un modèle médiocre.
 2. **La profondeur d'assise** (si réglable) : garde un petit espace entre le bord du siège et l'arrière des genoux, qui ne doivent pas être comprimés.
 3. **Le soutien lombaire** : positionne-le pile dans le creux du bas du dos, ni trop haut ni trop bas.
 4. **Les accoudoirs** : réglés pour que tes avant-bras reposent à la hauteur du bureau sans hausser les épaules.
-5. **L'inclinaison** : verrouille une position légèrement inclinée (100-110°) plutôt que parfaitement droite, plus reposante pour le dos.
+5. **L'inclinaison** : verrouille une position légèrement inclinée (100 à 110°, selon le guide d'ergonomie de l'université Cornell) plutôt que parfaitement droite à 90°, plus reposante pour le dos.
 
 ## Entretien et durée de vie
 
@@ -123,4 +123,4 @@ Le bon choix dépend surtout du nombre d'heures passées assis par jour et de la
 - [Souris gaming pour le travail](/articles/souris-gaming-pour-le-travail/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [Black Friday setup bureau : quoi acheter maintenant](/articles/black-friday-setup-bureau-gaming/)
-- [L'ergonomie au bureau : le guide complet](/guides/ergonomie-bureau/)
+- [Guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)

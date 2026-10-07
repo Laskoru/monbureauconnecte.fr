@@ -3,7 +3,7 @@ title: "Trackball vs souris classique : lequel choisir pour le poignet ?"
 seoTitle: "Trackball vs souris classique : lequel pour le poignet ?"
 description: "Douleurs au poignet avec une souris classique ? Notre comparatif trackball vs souris pour choisir selon ton usage, sans se tromper d'accessoire."
 pubDate: 2026-08-21
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Soulager le poignet, *autrement*"
 pinSub: "Trackball ou souris : le comparatif."
@@ -17,20 +17,20 @@ interactiveGuide:
   question: "Ta raison principale, c'est…"
   options:
     - label: "J'ai mal au poignet / à l'épaule"
-      result: "Le <strong>trackball</strong> est fait pour ça : la main ne se déplace plus, seul le pouce (ou le doigt) bouge la boule. Fini le glissement répété et l'extension du bras. Prévois 1 à 2 semaines d'adaptation."
+      result: "Le <strong>trackball</strong> est fait pour ça : la main ne se déplace plus, seul le pouce (ou le doigt) bouge la boule. Fini le glissement répété et l'extension du bras. Prévois une vraie période d'adaptation."
     - label: "Je manque de place sur le bureau"
       result: "Idéal : un trackball reste <strong>immobile</strong>, il ne lui faut aucune zone de déplacement. Parfait sur un petit bureau ou un plateau encombré, là où une souris manque de place."
     - label: "Je fais du travail de précision fine"
       result: "Le trackball <strong>à doigt</strong> (pas à pouce) offre plus de précision ; mais pour du dessin/retouche pointu, une <a href='/articles/souris-ergonomique-verticale/'>souris verticale</a> ou une souris classique de qualité peut rester plus adaptée."
     - label: "Je veux juste tester en douceur"
-      result: "Commence par un <strong>trackball à pouce</strong> (type Logitech ERGO M575) : c'est la transition la plus douce depuis une souris, on garde une forme de main familière."
+      result: "Commence par un <strong>trackball à pouce</strong> (type Logitech ERGO M575S) : c'est la transition la plus douce depuis une souris, on garde une forme de main familière."
 products:
   - asin: "B0DB5DMDW3"
     title: "Logitech ERGO M575S, trackball sans fil, contrôle au pouce, Bluetooth"
-    blurb: "Le trackball le plus simple pour passer le cap : forme contournée qui repose la main, autonomie de plusieurs mois, compatible PC et Mac."
+    blurb: "Le trackball le plus simple pour passer le cap : forme contournée qui repose la main, jusqu'à 18 mois sur une pile AA avec le récepteur (20 mois en Bluetooth) selon Logitech, compatible PC et Mac."
     pros:
       - "Le poignet ne bouge plus (bille au pouce)"
-      - "Autonomie de plusieurs mois"
+      - "Jusqu'à 18-20 mois sur une pile AA"
       - "PC/Mac, Bluetooth ou dongle"
     cons:
       - "Temps d’adaptation réel"
@@ -47,7 +47,7 @@ faq:
   - question: "Un trackball est-il vraiment plus ergonomique qu'une souris classique ?"
     answer: "Oui pour le poignet et l'avant-bras : comme la main ne bouge plus pour déplacer le pointeur, il n'y a plus de glissement répété ni d'extension du bras. En revanche, l'effort se déplace vers le pouce ou les doigts selon le modèle, ce qui demande une vraie période d'adaptation."
   - question: "Combien de temps faut-il pour s'habituer à un trackball ?"
-    answer: "Compte une à deux semaines d'usage quotidien avant de retrouver une précision confortable, surtout pour un usage fin comme la retouche photo ou le graphisme. Pour de la bureautique classique, l'adaptation est souvent plus rapide, en quelques jours."
+    answer: "Cela varie d'une personne à l'autre. Les premiers jours sont plus lents et moins précis, et l'adaptation est plus longue pour un usage fin comme la retouche photo ou le graphisme que pour de la bureautique classique. Garde ta souris à portée au début et juge après plusieurs jours d'usage régulier."
   - question: "Le trackball convient-il aussi pour jouer ?"
     answer: "Certains modèles à contrôle au pouce fonctionnent bien pour des jeux de stratégie ou de gestion, mais un trackball reste peu adapté aux jeux qui demandent des mouvements rapides et larges, comme les FPS. Pour un usage mixte bureau et gaming exigeant, une souris classique ergonomique reste plus polyvalente."
 ---
@@ -58,7 +58,7 @@ Dans le match trackball vs souris, tout part d'un constat : une souris classique
 
 Le résultat concret : moins de fatigue dans l'avant-bras en fin de journée, un besoin d'espace sur le bureau nettement réduit (plus la peine de dégager une zone pour glisser la souris), et un geste qui reste précis même sur un petit plan de travail. C'est aussi une bonne option pour qui a déjà mal au poignet et cherche une alternative franche plutôt qu'un simple ajustement, comme peut l'être notre comparatif des [souris ergonomiques verticales](/articles/souris-ergonomique-verticale/), qui corrige la rotation du poignet sans supprimer le mouvement de la main.
 
-Le revers de la médaille : l'effort ne disparaît pas, il se déplace. Sur un trackball à contrôle au pouce, c'est le pouce qui travaille en continu ; sur un modèle à contrôle par les doigts, ce sont l'index et le majeur. Si tu as déjà des douleurs localisées à cet endroit précis, le trackball n'est pas forcément la meilleure direction : il déplace le problème plutôt que de le résoudre, et il vaut mieux en parler avec un professionnel de santé avant d'investir dans un nouvel accessoire.
+Le revers de la médaille : l'effort ne disparaît pas, il se déplace. Sur un trackball à contrôle au pouce, c'est le pouce qui travaille en continu ; sur un modèle à contrôle par les doigts, ce sont l'index et le majeur. Or le pouce a ses propres TMS : l'INRS cite par exemple la maladie de De Quervain parmi les atteintes du membre supérieur. Si tu as déjà des douleurs localisées à cet endroit précis, le trackball n'est pas forcément la meilleure direction : il déplace le problème plutôt que de le résoudre, et il vaut mieux en parler avec un professionnel de santé avant d'investir dans un nouvel accessoire.
 
 Il faut aussi distinguer le trackball du pavé tactile qui équipe certains claviers ou ordinateurs portables : le principe de déplacement sans bouger la main est proche, mais la précision et le confort sur la durée n'ont rien à voir. Un trackball dédié reste bien plus adapté à un usage bureau prolongé qu'un pavé tactile pensé pour un usage occasionnel en mobilité.
 
@@ -86,7 +86,7 @@ Il faut aussi distinguer le trackball du pavé tactile qui équipe certains clav
 
 **Pour un usage mixte bureau et gaming**, sois honnête sur tes priorités : le trackball reste peu adapté aux jeux d'action rapide. Si le gaming occasionnel compte davantage que le confort du poignet, une souris classique ergonomique bien profilée restera un compromis plus polyvalent.
 
-Dans tous les cas, prévois une vraie période d'adaptation avant de juger. Les premiers jours sont souvent plus lents et moins précis qu'avec une souris habituelle : c'est normal, et ça s'améliore nettement après une à deux semaines d'usage régulier.
+Dans tous les cas, prévois une vraie période d'adaptation avant de juger. Les premiers jours sont souvent plus lents et moins précis qu'avec une souris habituelle : c'est normal, et ça s'améliore avec un usage régulier.
 
 ## Bien démarrer avec un trackball
 
@@ -97,7 +97,7 @@ Côté entretien, un coup de chiffon sec régulier sur la boule et sur les capte
 Enfin, ne néglige pas l'ensemble du poste de travail : un trackball bien choisi ne compense pas une chaise mal réglée ou un écran trop bas, qui restent des causes fréquentes de tensions au poignet et à la nuque par ricochet. L'accessoire fait sa part, mais il s'inscrit dans un ensemble.
 
 > **L'essentiel à retenir**
-> Le trackball soulage le poignet et l'épaule parce que **la main ne se déplace plus** : seul le pouce ou le doigt bouge. Il gagne aussi de la place (aucune zone de déplacement). En échange : une **adaptation** d'une à deux semaines, et l'effort se reporte sur le pouce. Débute par un **trackball à pouce** (transition douce) ; pour la précision fine, une souris verticale peut rester plus adaptée.
+> Le trackball soulage le poignet et l'épaule parce que **la main ne se déplace plus** : seul le pouce ou le doigt bouge. Il gagne aussi de la place (aucune zone de déplacement). En échange : une vraie **adaptation**, et l'effort se reporte sur le pouce. Débute par un **trackball à pouce** (transition douce) ; pour la précision fine, une souris verticale peut rester plus adaptée.
 
 ## Par quoi commencer si ton poignet te gêne
 
