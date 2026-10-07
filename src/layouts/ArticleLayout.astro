@@ -192,9 +192,9 @@ const breadcrumbItems = [{ label: 'Accueil', href: '/' }, ...(categoryInfo ? [{ 
           <div class="article-comparison" id="comparatif">
             <h2>Comparatif en un coup d'œil</h2>
             <div class="compare-table-wrap">
-              <table class="compare-table">
+              <table class:list={['compare-table', { 'compare-table--stack': comparison.columns.length > 3, 'compare-table--narrow': comparison.columns.length === 3 }]}>
                 <thead><tr>{comparison.columns.map((col, i) => <th class:list={{ 'is-choice': i > 0 && i - 1 === featuredIndex }}>{col}{comparisonColumnUnavailable?.[i] && <span class="compare-table__tag">épuisé</span>}</th>)}</tr></thead>
-                <tbody>{comparison.rows.map((row) => <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td class:list={{ 'is-choice': i - 1 === featuredIndex }}>{cell}</td>))}</tr>)}</tbody>
+                <tbody>{comparison.rows.map((row) => <tr>{row.map((cell, i) => (i === 0 ? <th scope="row">{cell}</th> : <td class:list={{ 'is-choice': i - 1 === featuredIndex }} data-label={comparison.columns[i]}>{cell}</td>))}</tr>)}</tbody>
               </table>
             </div>
             {someProductUnavailable && <p class="compare-table__note"><strong>épuisé</strong> : ce modèle n'est plus en vente chez Amazon. Les caractéristiques restent indicatives ; le bouton sous le produit propose des équivalents disponibles.</p>}

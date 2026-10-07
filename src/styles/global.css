@@ -202,9 +202,10 @@ hr { border: 0; height: 1px; background: var(--filet); margin: 3em 0; }
 .section__link:hover { border-color: var(--mine); text-decoration: none; }
 
 /* ───────── Tableau comparatif ───────── */
-.compare-table-wrap { overflow-x: auto; margin: 2rem 0; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
-.compare-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
-.compare-table th, .compare-table td { padding: 0.8em 1em; text-align: left; border-bottom: 1px solid var(--filet); white-space: nowrap; }
+/* Jamais de défilement horizontal : les cellules passent à la ligne ; cartes empilées sous 760 px (plus bas) */
+.compare-table-wrap { overflow: hidden; margin: 2rem 0; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+.compare-table th, .compare-table td { padding: 0.75em 0.8em; text-align: left; vertical-align: top; border-bottom: 1px solid var(--filet); overflow-wrap: anywhere; hyphens: auto; }
 .compare-table thead th { font-family: var(--font-body); font-weight: 700; font-size: 0.78rem; color: var(--gris); white-space: normal; background: var(--papier-2); vertical-align: bottom; }
 .compare-table tbody th { font-weight: 700; color: var(--mine); }
 .compare-table tbody tr:last-child td, .compare-table tbody tr:last-child th { border-bottom: 0; }
@@ -213,6 +214,25 @@ hr { border: 0; height: 1px; background: var(--filet); margin: 3em 0; }
 .compare-table thead .is-choice { color: var(--mine); }
 .compare-table__tag { display: inline-block; margin-left: 0.5em; padding: 0.15em 0.55em; font-family: var(--font-body); font-size: 0.76rem; font-weight: 700; color: var(--erreur); border: 1px solid currentColor; border-radius: 999px; white-space: nowrap; vertical-align: middle; }
 .compare-table__note { margin: 0.85rem 1rem 1rem; font-size: 0.88rem; line-height: 1.55; color: var(--gris); }
+@media (max-width: 760px) {
+  .compare-table--stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .compare-table--stack, .compare-table--stack tbody, .compare-table--stack tr, .compare-table--stack th, .compare-table--stack td { display: block; }
+  .compare-table--stack tr { padding: 0.6rem 1rem; border-bottom: 1px solid var(--filet); }
+  .compare-table--stack tbody tr:last-child { border-bottom: 0; }
+  .compare-table--stack th, .compare-table--stack td { padding: 0.2rem 0; border: 0; }
+  .compare-table--stack tbody th { font-size: 0.95rem; }
+  .compare-table--stack td[data-label]::before { content: attr(data-label); display: block; font-size: 0.74rem; font-weight: 700; color: var(--gris); }
+}
+/* Comparatif à 3 colonnes : cartes seulement sur petit téléphone */
+@media (max-width: 480px) {
+  .compare-table--narrow thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .compare-table--narrow, .compare-table--narrow tbody, .compare-table--narrow tr, .compare-table--narrow th, .compare-table--narrow td { display: block; }
+  .compare-table--narrow tr { padding: 0.6rem 1rem; border-bottom: 1px solid var(--filet); }
+  .compare-table--narrow tbody tr:last-child { border-bottom: 0; }
+  .compare-table--narrow th, .compare-table--narrow td { padding: 0.2rem 0; border: 0; }
+  .compare-table--narrow tbody th { font-size: 0.95rem; }
+  .compare-table--narrow td[data-label]::before { content: attr(data-label); display: block; font-size: 0.74rem; font-weight: 700; color: var(--gris); }
+}
 
 /* ───────── Sommaire ───────── */
 .toc { margin: 2rem 0; padding: 1.1rem 1.2rem; background: var(--papier); border: 1px solid var(--filet); border-radius: var(--radius-lg); }
@@ -266,4 +286,33 @@ html.js .reveal.is-in { opacity: 1; transform: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html.js .reveal { opacity: 1; transform: none; }
   .hot { opacity: 1; }
+}
+
+/* ───────── Tableaux du texte : jamais de défilement horizontal ─────────
+   Classes posées au build par rehypeTableCards (astro.config.mjs). Retour à la ligne et césure,
+   police un peu plus petite ; sous 760 px, au-delà de 3 colonnes, chaque ligne devient une carte.
+   Classe doublée : passe devant les styles scopés de l'ArticleLayout (display: block, overflow-x). */
+:is(.article-body, .prose) table.md-table.md-table { display: table; overflow: visible; max-width: 100%; font-size: 0.88rem; }
+:is(.article-body, .prose) .md-table.md-table :is(th, td) { white-space: normal; overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 760px) {
+  :is(.article-body, .prose) .md-table.md-table :is(th, td) { padding-left: 0.55rem; padding-right: 0.55rem; }
+  :is(.article-body, .prose) .md-table--stack.md-table--stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  :is(.article-body, .prose) table.md-table--stack.md-table--stack,
+  :is(.article-body, .prose) .md-table--stack.md-table--stack :is(tbody, tr, th, td) { display: block; }
+  :is(.article-body, .prose) .md-table--stack.md-table--stack tr { padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--color-border); }
+  :is(.article-body, .prose) .md-table--stack.md-table--stack tbody tr:last-child { border-bottom: 0; }
+  :is(.article-body, .prose) .md-table--stack.md-table--stack :is(th, td) { padding: 0.2rem 0; border: 0; }
+  :is(.article-body, .prose) .md-table--stack.md-table--stack td:first-child { font-weight: 700; }
+  :is(.article-body, .prose) .md-table--stack.md-table--stack td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-muted); }
+}
+/* 3 colonnes : cartes seulement sur petit téléphone */
+@media (max-width: 480px) {
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  :is(.article-body, .prose) table.md-table--narrow.md-table--narrow,
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow :is(tbody, tr, th, td) { display: block; }
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow tr { padding: 0.55rem 0.9rem; border-bottom: 1px solid var(--color-border); }
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow tbody tr:last-child { border-bottom: 0; }
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow :is(th, td) { padding: 0.2rem 0; border: 0; }
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow td:first-child { font-weight: 700; }
+  :is(.article-body, .prose) .md-table--narrow.md-table--narrow td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-muted); }
 }
