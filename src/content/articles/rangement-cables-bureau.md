@@ -3,7 +3,7 @@ title: "Rangement câbles de bureau : comment enfin avoir un bureau net"
 seoTitle: "Rangement câbles bureau : comment avoir un bureau net"
 description: "Chargeurs, multiprise, câbles d'écran : le rangement des câbles du bureau sans tout percer. Nos solutions, la bonne méthode et notre sélection."
 pubDate: 2026-07-24
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Enfin *fini*, le nœud de câbles"
 pinSub: "Un bureau net en quelques minutes."
@@ -40,6 +40,8 @@ sources:
     url: "https://www.inrs.fr/risques/chutes-de-plain-pied/mesures-de-prevention.html"
   - label: "INRS, « Risques électriques. Accidents d'origine électrique »"
     url: "https://www.inrs.fr/risques/electriques/accidents-origine-electrique.html"
+  - label: "IZI by EDF, « Multiprise sur multiprise : y a-t-il danger ? »"
+    url: "https://izi-by-edf.fr/blog/risque-trop-de-branchements-prises/"
 faq:
   - question: "Faut-il percer le bureau pour installer un rangement câbles ?"
     answer: "Non, la plupart des paniers et goulottes récents se fixent par pince ou adhésif renforcé, sans perçage. Le perçage reste une option plus stable mais n'est nécessaire que pour des installations très chargées."
@@ -99,7 +101,7 @@ Un bras d'écran ou une [station d'accueil](/articles/hub-usb-c-station-accueil/
 
 ## Sécurité électrique : le point à ne pas négliger
 
-Ranger ses câbles, c'est aussi l'occasion de vérifier deux choses trop souvent oubliées. D'abord, **ne pas surcharger la multiprise** : brancher plusieurs appareils très gourmands (chauffage d'appoint, gros écran, imprimante laser) sur une même prise multiple peut la faire chauffer. Une multiprise avec **interrupteur** et **protection contre les surtensions** est un bon réflexe pour un poste informatique. Ensuite, éviter d'**enrouler trop serré** un câble d'alimentation qui chauffe (bloc secteur d'un portable, par exemple) : laisse-lui un peu d'air dans le panier plutôt que de le comprimer en boucle. Ces précautions ne coûtent rien et évitent les vrais risques, là où l'esthétique n'est que la partie visible.
+Ranger ses câbles, c'est aussi l'occasion de vérifier deux choses trop souvent oubliées. D'abord, **ne pas surcharger la multiprise** : brancher plusieurs appareils très gourmands (chauffage d'appoint, gros écran, imprimante laser) sur une même prise multiple peut la faire chauffer. Ne branche jamais une multiprise sur une autre, additionne la puissance des appareils pour rester sous le maximum indiqué sur la multiprise, et branche les gros appareils directement sur une prise murale, comme le rappelle IZI by EDF. L'INRS cite aussi l'empilage des câbles, qui empêche la chaleur de s'évacuer, parmi les causes d'incendie d'origine électrique. Une multiprise avec **interrupteur** et **protection contre les surtensions** est un bon réflexe pour un poste informatique. Ensuite, éviter d'**enrouler trop serré** un câble d'alimentation qui chauffe (bloc secteur d'un portable, par exemple) : laisse-lui un peu d'air dans le panier plutôt que de le comprimer en boucle. Ces précautions ne coûtent rien et évitent les vrais risques, là où l'esthétique n'est que la partie visible.
 
 ## Garder un bureau rangé dans la durée
 

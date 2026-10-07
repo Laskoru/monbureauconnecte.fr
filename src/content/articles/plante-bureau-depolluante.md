@@ -3,7 +3,7 @@ title: "Plante de bureau dépolluante : laquelle choisir pour un poste de travai
 seoTitle: "Plante de bureau dépolluante : laquelle choisir"
 description: "Quelle plante de bureau dépolluante choisir selon la lumière disponible et le temps que tu peux consacrer à son entretien sur ton poste de travail."
 pubDate: 2026-08-16
-updatedDate: 2026-09-29
+updatedDate: 2026-10-07
 author: "Hugo B."
 pinHook: "Un bureau *plus sain*, plus agréable"
 pinSub: "La plante dépolluante idéale."
@@ -39,12 +39,12 @@ products:
 sources:
   - label: "ADEME, « Plantes et épuration de l'air intérieur »"
     url: "https://librairie.ademe.fr/air/3299-3311-plantes-et-epuration-de-l-air-interieur.html"
-  - label: "ADEME, « Epuration de l'air intérieur par les plantes - Dossier de presse »"
-    url: "https://librairie.ademe.fr/air/9040-10857-epuration-de-l-air-interieur-par-les-plantes-dossier-de-presse.html"
   - label: "NASA Technical Reports Server, « Interior Landscape Plants for Indoor Air Pollution Abatement »"
     url: "https://ntrs.nasa.gov/citations/19930073077"
   - label: "ASPCA, « Toxic and Non-toxic Plants: Snake Plant »"
     url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/snake-plant"
+  - label: "ASPCA, « Toxic and Non-toxic Plants: Spider Plant »"
+    url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/spider-plant"
 faq:
   - question: "Une plante dépolluante suffit-elle à assainir vraiment l'air d'un bureau ?"
     answer: "Il faut rester honnête sur ce point : l'effet mesuré d'une plante en pot sur la qualité de l'air d'une vraie pièce (par opposition à une chambre expérimentale fermée) est très faible. L'intérêt principal au quotidien tient surtout au confort visuel et à une ambiance de travail plus agréable, l'effet purement chimique sur l'air restant limité à l'échelle d'un bureau normal."
@@ -66,7 +66,7 @@ Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NAS
 - **La fréquence d'arrosage nécessaire** : sur un poste de travail, personne n'a envie de gérer un arrosage précis deux fois par semaine. Les espèces les plus résistantes se contentent d'un arrosage toutes les une à deux semaines, voire moins en hiver.
 - **La taille adulte de la plante** : un bureau a une surface limitée ; mieux vaut une variété qui reste compacte ou qui pousse lentement plutôt qu'une plante qui va rapidement déborder de son pot et envahir l'espace de travail.
 - **La résistance aux variations de température** : un bureau proche d'une fenêtre ou d'une climatisation subit des écarts de température plus marqués qu'une pièce de vie classique ; certaines plantes y sont plus sensibles que d'autres.
-- **La toxicité éventuelle** : un point à vérifier si des animaux ou de jeunes enfants ont accès au bureau à la maison, certaines plantes d'intérieur courantes étant légèrement toxiques en cas d'ingestion.
+- **La toxicité éventuelle** : un point à vérifier si des animaux ou de jeunes enfants ont accès au bureau à la maison. Selon l'ASPCA, la sansevieria, le pothos et le dracaena sont toxiques pour les chats et les chiens, alors que la plante araignée (chlorophytum) et le kentia ne le sont pas.
 - **Le pot et le drainage** : un pot sans trou de drainage associé à un arrosage trop généreux est la cause la plus fréquente de plante qui dépérit sur un bureau ; un pot adapté avec une soucoupe évite ce problème simple.
 
 > 🛒 **Notre sélection du moment**
