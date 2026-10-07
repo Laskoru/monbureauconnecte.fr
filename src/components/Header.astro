@@ -78,11 +78,10 @@ const menus = [
       if (e.key === 'Escape' && nav.classList.contains('is-open')) toggle.click();
     });
 
-    // Thème : clair ou mine de plomb, mémorisé (clé « theme »), sinon préférence système
+    // Thème : clair par défaut ; mine de plomb seulement si le visiteur le choisit (clé « theme »)
     var root = document.documentElement;
     var btn = document.getElementById('theme-toggle');
-    var media = window.matchMedia('(prefers-color-scheme: dark)');
-    function current() { return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light'); }
+    function current() { return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
     function label() { btn.setAttribute('aria-label', current() === 'dark' ? 'Passer en thème clair' : 'Passer en thème sombre'); }
     label();
     btn.addEventListener('click', function () {
@@ -91,7 +90,6 @@ const menus = [
       try { localStorage.setItem('theme', next); } catch (e) {}
       label();
     });
-    if (media.addEventListener) media.addEventListener('change', label);
   })();
 </script>
 
@@ -122,10 +120,6 @@ const menus = [
   .theme-btn :global(.i-sun) { display: none; }
   :global(:root[data-theme='dark']) .theme-btn :global(.i-sun) { display: block; }
   :global(:root[data-theme='dark']) .theme-btn :global(.i-moon) { display: none; }
-  @media (prefers-color-scheme: dark) {
-    :global(:root:not([data-theme='light'])) .theme-btn :global(.i-sun) { display: block; }
-    :global(:root:not([data-theme='light'])) .theme-btn :global(.i-moon) { display: none; }
-  }
   .hdr__toggle { display: none; flex-direction: column; justify-content: center; gap: 5px; }
   .hdr__toggle span { width: 18px; height: 1.5px; margin: 0 auto; background: var(--mine); transition: transform 0.2s ease, opacity 0.2s ease; }
   .hdr__toggle.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }

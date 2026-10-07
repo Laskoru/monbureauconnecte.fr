@@ -79,7 +79,7 @@ const nbArticles = (await getCollection('articles', ({ data }) => !data.draft)).
   .ftr__grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 2.5rem 2rem; }
   .ftr__logo { display: inline-flex; align-items: center; gap: 0.8rem; text-decoration: none; color: var(--mine); font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: -0.03em; }
   .ftr__tagline { margin: 1.1rem 0 0.5rem; color: var(--gris); max-width: 34ch; line-height: 1.55; }
-  .ftr__spec { margin: 0 0 1.3rem; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; color: var(--jaune); text-wrap: balance; }
+  .ftr__spec { display: inline-block; margin: 0 0 1.3rem; padding: 0.2rem 0.6rem; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.6; color: var(--sur-jaune); background: var(--jaune); border-radius: 4px; text-wrap: balance; }
   .ftr__social { display: flex; gap: 0.5rem; }
   .ftr__social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--filet); border-radius: 50%; background: var(--papier); color: var(--mine); transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease; }
   .ftr__social a:hover { background: var(--jaune); border-color: var(--jaune); color: var(--sur-jaune); }

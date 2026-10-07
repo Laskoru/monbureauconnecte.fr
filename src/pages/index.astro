@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { coverSrcSet, resolveCoverImage } from '../lib/covers';
+import { resolveCoverImage } from '../lib/covers';
 import { resolveProductImage } from '../lib/products';
 import { getRating } from '../lib/ratings';
 import { isAvailable, productUrl } from '../lib/availability';
@@ -25,6 +25,8 @@ const cote = (r: number) => Math.round(r * 175); // taille de départ : 175 cm
 
 // Photo d'ouverture : la couverture du comparatif de référence
 const heroCover = '/covers/accueil-setup.webp';
+// Élément LCP de l'accueil : variantes 480/960/1280/1600 (la 1280 sert les téléphones à haute densité).
+const heroSrcSet = '/covers/accueil-setup-480.webp 480w, /covers/accueil-setup-960.webp 960w, /covers/accueil-setup-1280.webp 1280w, /covers/accueil-setup.webp 1600w';
 
 // Comparatifs de référence, un par grand besoin
 const refSlugs = ['bureau-assis-debout-electrique', 'meilleures-chaises-gaming', 'souris-ergonomique-verticale', 'casque-reduction-bruit-teletravail', 'claviers-mecaniques-silencieux', 'bras-support-ecran-articule', 'webcams-1080p-vs-4k', 'hub-usb-c-station-accueil'];
@@ -96,9 +98,11 @@ const faqs = [
   title="Ergonomie, télétravail et setup gaming"
   description="Ergonomie de bureau, télétravail et setup gaming : des comparatifs et des outils gratuits pour choisir et régler chaise, bureau, écran et périphériques."
 >
+  <link slot="head" rel="preload" as="image" href={heroCover} imagesrcset={heroSrcSet} imagesizes="100vw" fetchpriority="high" />
+
   <!-- ═══ OUVERTURE : la photo de poste annotée ═══ -->
   <section class="hero" aria-labelledby="hero-titre">
-    <img class="hero__bg" src={heroCover} srcset={coverSrcSet(heroCover)} sizes="100vw" width="1600" height="1000" alt="" fetchpriority="high" decoding="async" />
+    <img class="hero__bg" src={heroCover} srcset={heroSrcSet} sizes="100vw" width="1600" height="995" alt="" loading="eager" fetchpriority="high" />
     <div class="wide hero__in">
       <div class="hero__txt">
         <h1 id="hero-titre" class="hero__titre">Ton setup, pièce <span class="hl">par pièce.</span></h1>
@@ -123,7 +127,7 @@ const faqs = [
   </section>
 
   <!-- ═══ BANDEAU DES BESOINS ═══ -->
-  <div class="marq" aria-hidden="true"><div>{[...marquee, ...marquee].map((m) => <span>{m}</span>)}</div></div>
+  <div class="marq" aria-hidden="true"><div class="wide">{marquee.map((m) => <span>{m}</span>)}</div></div>
 
   <!-- ═══ NOS CHOIX : le rail des pièces ═══ -->
   {picks.length > 0 && (
@@ -359,7 +363,7 @@ const faqs = [
   .piece__mesures { margin: 0; font-size: 0.78rem; color: var(--gris); }
   .piece .reglette { grid-template-columns: 1fr; }
   .piece__cta { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; align-self: end; padding-top: 0.3rem; }
-  .piece__lire { font-size: 0.85rem; font-weight: 700; }
+  .piece__lire { display: inline-flex; align-items: center; justify-self: start; min-height: 44px; font-size: 0.85rem; font-weight: 700; }
   .rail__disc { margin: 0.6rem auto 0; font-size: 0.8rem; color: var(--gris); }
 
   /* ═══ PAR PROBLÈME ═══ */
