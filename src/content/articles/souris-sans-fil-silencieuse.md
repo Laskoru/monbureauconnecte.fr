@@ -14,6 +14,7 @@ draft: false
 products:
   - asin: "B07W6G822T"
     title: "Logitech Signature M650, clics silencieux, Bluetooth ou récepteur Logi Bolt"
+    search: "logitech signature m650"
     blurb: "Bruit de clic réduit de 90 % selon Logitech (par rapport à sa M185), jusqu'à 24 mois sur une pile AA avec le récepteur Logi Bolt (20 mois en Bluetooth), boutons latéraux personnalisables."
     pros:
       - "Clics silencieux (−90 %)"

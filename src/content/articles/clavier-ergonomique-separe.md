@@ -13,6 +13,7 @@ draft: false
 products:
   - asin: "B07W6GVT3X"
     title: "Logitech ERGO K860, clavier incurvé en deux parties d'un seul tenant, repose-poignets"
+    search: "logitech ergo k860"
     blurb: "La référence du genre : courbe prononcée, repose-poignets rembourré, et une seule pièce pour une transition plus douce vers le format ergonomique."
     pros:
       - "Courbe qui détend les poignets"

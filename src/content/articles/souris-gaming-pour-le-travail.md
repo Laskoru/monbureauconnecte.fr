@@ -15,6 +15,7 @@ draft: false
 products:
   - asin: "B0B42XQNMH"
     title: "Razer Basilisk V3 Pro, souris gaming sans fil, 11 boutons programmables, capteur 30 000 DPI"
+    search: "razer basilisk v3 pro"
     blurb: "Onze boutons personnalisables et une molette à défilement libre ou cranté au choix : de quoi automatiser de vraies tâches répétitives, pas seulement des combos de jeu."
     pros:
       - "11 boutons programmables (macros utiles)"
