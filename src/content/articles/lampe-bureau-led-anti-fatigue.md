@@ -121,3 +121,4 @@ Une lampe de bureau LED bien choisie est l'un des accessoires les moins chers po
 - [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
 - [Bien régler sa chaise et son écran](/articles/bien-regler-chaise-ecran-ergonomie-gratuite/)
 - [Guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)
+- [Lampe de luminothérapie au bureau : utile en hiver ?](/articles/lampe-luminotherapie-bureau-hiver/)

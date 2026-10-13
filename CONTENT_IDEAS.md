@@ -18,7 +18,7 @@ Format : `- [ ] Sujet — angle — catégorie`.
 ## Saison hiver et fêtes : à publier d'octobre à décembre
 
 - [x] Chauffage d'appoint sous le bureau : lequel choisir pour le télétravail — pieds froids en hiver, consommation et sécurité — mobilier
-- [ ] Lampe de luminothérapie au bureau : utile en hiver ? — jours courts, intensité en lux, distance et durée d'exposition — mobilier
+- [x] Lampe de luminothérapie au bureau : utile en hiver ? — jours courts, intensité en lux, distance et durée d'exposition — mobilier
 - [ ] Chauffe-tasse USB pour le bureau — garder son café chaud en réunion — mobilier
 - [ ] Lampe à pince pour bureau — gagner de la place — mobilier
 - [ ] Filtre anti-lumière bleue pour écran — réduire la fatigue visuelle en soirée — audio-visio
