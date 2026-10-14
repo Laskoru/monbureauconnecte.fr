@@ -32,7 +32,7 @@ export const guides: Guide[] = [
       'Équiper un poste de télétravail confortable et efficace : bureau, image et son en visio, connectique et éclairage.',
     intro: [
       "Travailler depuis chez soi demande un peu plus qu'un ordinateur portable posé sur la table de la cuisine. Un poste de télétravail bien pensé, c'est moins de fatigue en fin de journée, des visioconférences où l'on vous voit et vous entend clairement, et un espace qui se range en quelques secondes quand la journée est finie.",
-      "Ce guide rassemble nos comparatifs les plus utiles pour bâtir un poste complet, étape par étape : de quoi alterner assis et debout, une image et un son nets pour les réunions, la bonne connectique pour tout brancher d'un seul câble, et un éclairage qui ménage les yeux. Pas besoin de tout acheter d'un coup : commence par ce qui te gêne le plus au quotidien.",
+      "Ce guide rassemble nos comparatifs les plus utiles pour bâtir un poste complet, étape par étape : de quoi alterner assis et debout, une image et un son nets pour les réunions, la bonne connectique pour tout brancher d'un seul câble (<a href='/articles/hub-usb-c-station-accueil/'>hub USB-C ou station d'accueil</a>), et un éclairage qui ménage les yeux. Pas besoin de tout acheter d'un coup : commence par ce qui te gêne le plus au quotidien.",
     ],
     articles: [
       'bureau-assis-debout-electrique',

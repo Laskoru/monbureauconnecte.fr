@@ -72,7 +72,7 @@ Vérifie le connecteur d'entrée : la plupart des hubs récents se branchent en 
 - **Disque dur externe ou plusieurs périphériques gourmands** : privilégie un hub avec **alimentation externe** pour éviter les coupures.
 - **Besoin ponctuel de lecteur de carte SD** : certains hubs combinent ports USB-A et lecteur de carte, pratique pour qui utilise encore un appareil photo.
 
-Si le besoin dépasse largement quelques ports USB-A (écran externe en plus, réseau filaire, charge du portable par le même câble), la solution la plus confortable n'est plus le simple hub mais une vraie [station d'accueil USB-C](/articles/hub-usb-c-station-accueil/), qui centralise tout en un seul branchement.
+Si le besoin dépasse largement quelques ports USB-A (écran externe en plus, réseau filaire, charge du portable par le même câble), la solution la plus confortable n'est plus le simple hub mais une vraie station d'accueil USB-C, qui centralise tout en un seul branchement. Le comparatif [hub USB-C ou station d'accueil](/articles/hub-usb-c-station-accueil/) t'aide à trancher.
 
 ## Un accessoire discret mais qui évite du gâchis
 

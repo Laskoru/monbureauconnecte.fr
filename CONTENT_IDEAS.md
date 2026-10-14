@@ -15,6 +15,14 @@ La routine quotidienne prend la première idée non cochée, écrit l'article en
 brouillon, puis coche l'idée. Ajoute librement de nouvelles idées en bas.
 Format : `- [ ] Sujet — angle — catégorie`.
 
+## Priorité SEO (Search Console du 14/10/2026)
+
+- [ ] Pavé numérique qui ne marche plus : les solutions — Verr Num, touche Fn, mode « touches souris » de Windows, BIOS ; requêtes « pavé numérique ne fonctionne plus », « touche numérique clavier ne fonctionne pas » ; lien vers le pavé numérique externe — peripheriques (conseil, sans produit)
+- [ ] Casque Bluetooth : son dégradé en visio, la solution — profil HFP contre A2DP, pourquoi le son baisse quand le micro s'active, dongle ou micro séparé ; requête « casque bluetooth son mauvais teams » ; liens vers casque filaire vs sans fil et micro USB — audio-visio (conseil)
+- [ ] Station d'accueil qui ne détecte pas l'écran : que faire — câble et port (DP Alt Mode, Thunderbolt), pilotes, limite d'écrans des Mac M1 et M2 ; requête « station d'accueil ne détecte pas l'écran » ; lien vers hub USB-C ou station d'accueil — peripheriques (conseil, sans produit)
+- [ ] Souris qui double-clique toute seule : causes et solutions — usure du micro-switch, réglages Windows, piles, garantie ; requête « souris qui double-clique toute seule » ; liens vers souris silencieuse et souris ergonomique — peripheriques (conseil)
+- [ ] Speakerphone USB en télétravail : utile ou gadget ? — réunions à plusieurs, Jabra Speak2, Poly Sync, Anker PowerConf ; requêtes « speakerphone usb », « micro usb visioconférence » ; lien depuis le micro USB — audio-visio
+
 ## Saison hiver et fêtes : à publier d'octobre à décembre
 
 - [x] Chauffage d'appoint sous le bureau : lequel choisir pour le télétravail — pieds froids en hiver, consommation et sécurité — mobilier
@@ -79,7 +87,6 @@ Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répo
 - [x] Webcam avec cache de confidentialité — sécuriser sa vie privée en visio — audio-visio
 - [x] Casque filaire vs sans fil pour le télétravail — latence, autonomie, fiabilité — audio-visio
 - [x] Écouteurs à réduction de bruit pour l'open space — alternative discrète au casque — audio-visio
-- [ ] Enceinte de conférence (speakerphone) — pour les réunions à plusieurs — audio-visio
 - [ ] Bras articulé pour microphone — libérer le bureau et bien placer le micro — audio-visio
 - [ ] Support / trépied pour webcam externe — cadrer correctement en visio — audio-visio
 - [ ] Casque à conduction osseuse pour le bureau — garder une oreille sur son environnement — audio-visio

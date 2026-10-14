@@ -1,12 +1,13 @@
 ---
 title: "Micro USB pour visioconférence et podcast : lequel choisir ?"
+seoTitle: "Micro USB pour visioconférence : lequel choisir ?"
 description: "Micro USB pour la visioconférence ou le podcast : captation, bouton muet, bras, filtre anti-pop. Les critères qui comptent pour être enfin bien entendu."
 pubDate: 2026-08-05
-updatedDate: 2026-10-07
+updatedDate: 2026-10-14
 author: "Hugo B."
 pinHook: "Une voix *claire et pro* en visio"
 pinSub: "Le micro USB bien choisi."
-keywords: ["micro usb visioconférence", "micro usb podcast", "meilleur micro usb pc"]
+keywords: ["micro usb visioconférence", "micro usb podcast", "meilleur micro usb pc", "micro usb ou speakerphone"]
 category: "audio-visio"
 coverAlt: "Microphone USB avec pied sur un bureau"
 draft: false
@@ -39,6 +40,8 @@ sources:
     url: "https://www.shure.com/en-US/insights/microphone-directionality-polar-pattern-basics"
   - label: "Shure, « Choosing a Microphone for Podcasting »"
     url: "https://www.shure.com/en-US/insights/choosing-a-microphone-for-podcasting"
+  - label: "Jabra, « Jabra Speak2 55 : présentation »"
+    url: "https://www.jabra.com/fr-fr/business/speakerphones/jabra-speak-series/jabra-speak2-55"
   - label: "Logitech G, « Microphone USB multi-diagramme Logitech Yeti avec Blue VO!CE »"
     url: "https://www.logitechg.com/fr-fr/products/streaming-gear/yeti-premium-usb-microphone.html"
 faq:
@@ -101,9 +104,19 @@ La première, la plus fréquente : **poser le micro trop loin**, au fond du bure
 
 Un dernier point souvent négligé : le **support**. Un micro posé directement sur le bureau transmet les vibrations (frappe au clavier, tasse qu'on repose). Un petit **pied découplé** ou un **bras articulé** avec suspension élimine ces bruits sourds et positionne le micro à la bonne hauteur sans encombrer le plan de travail.
 
-## Micro USB ou casque-micro : lequel choisir ?
+## Micro USB, casque ou speakerphone : lequel pour tes visios ?
 
-Question légitime, car un [casque à réduction de bruit](/articles/casque-reduction-bruit-teletravail/) avec micro fait aussi le travail. Les deux visent des priorités différentes. Le **casque-micro** est imbattable en **mobilité** et en environnement bruyant : le micro suit ta bouche, capte peu la pièce, et tu entends aussi tes interlocuteurs au calme, idéal en open space ou pour enchaîner les appels. Le **micro USB** posé sur le bureau donne une voix plus **naturelle et pleine** (on n'a rien sur la tête), et devient indispensable dès qu'on enregistre du contenu. Beaucoup de télétravailleurs finissent d'ailleurs avec les deux : le casque pour les réunions, le micro USB pour les enregistrements et les visios importantes où l'on veut sonner au mieux.
+Trois formats répondent à trois situations :
+
+| Situation | Format conseillé | Pourquoi |
+| --- | --- | --- |
+| Seul à ton bureau, voix nette voulue | Micro USB cardioïde | Voix naturelle, rien sur la tête |
+| Open space ou appels en série | Casque-micro | Le micro suit ta bouche, tu entends au calme |
+| Plusieurs personnes autour d'une table | Speakerphone | Micro et haut-parleur réunis, captation tout autour |
+
+Le **speakerphone** est un boîtier posé sur la table qui fait à la fois micro et haut-parleur. Il sert quand plusieurs personnes participent à la même visio depuis une pièce. Le Jabra Speak2 55, par exemple, réunit quatre micros à réduction de bruit et un haut-parleur de 50 mm, se branche en USB-C ou USB-A et se connecte aussi au téléphone en Bluetooth. Pour une visio en solo, un micro USB cardioïde reste plus simple et moins encombrant.
+
+Entre le micro USB et le casque, la question est légitime, car un [casque à réduction de bruit](/articles/casque-reduction-bruit-teletravail/) avec micro fait aussi le travail. Les deux visent des priorités différentes. Le **casque-micro** est imbattable en **mobilité** et en environnement bruyant : le micro suit ta bouche, capte peu la pièce, et tu entends aussi tes interlocuteurs au calme, idéal en open space ou pour enchaîner les appels. Le **micro USB** posé sur le bureau donne une voix plus **naturelle et pleine** (on n'a rien sur la tête), et devient indispensable dès qu'on enregistre du contenu. Beaucoup de télétravailleurs finissent d'ailleurs avec les deux : le casque pour les réunions, le micro USB pour les enregistrements et les visios importantes où l'on veut sonner au mieux.
 
 > **L'essentiel à retenir**
 > Le micro intégré capte le clavier et la pièce ; un **micro USB** bien placé isole ta voix. En **solo**, choisis un **cardioïde** avec bouton muet ; à **plusieurs**, un **omnidirectionnel** ; pour du **podcast**, un **condensateur** (ou un **dynamique** si la pièce résonne) sur bras articulé. Le plus gros gain vient du type de captation et du placement, pas du prix.

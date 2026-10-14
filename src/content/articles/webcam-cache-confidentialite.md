@@ -1,13 +1,13 @@
 ---
 title: "Cache de confidentialité pour webcam : pourquoi (et comment) bien le choisir"
-seoTitle: "Cache webcam de confidentialité : bien le choisir"
-description: "Un cache webcam de confidentialité protège ta vie privée en un geste. Adhésif universel ou obturateur intégré : comment le choisir et l'installer."
+seoTitle: "Cache webcam universel : lequel choisir, comment le poser"
+description: "Cache webcam universel : sur quels appareils il se pose, l'épaisseur à ne pas dépasser sur un portable (0,1 mm sur MacBook) et comment bien le coller."
 pubDate: 2026-09-15
-updatedDate: 2026-09-29
+updatedDate: 2026-10-14
 author: "Hugo B."
 pinHook: "Un geste, *ta vie privée protégée*"
 pinSub: "Le petit accessoire qui bloque la webcam en un clic."
-keywords: ["cache webcam confidentialité", "cache de confidentialité webcam", "protection vie privée webcam", "webcam avec obturateur intégré"]
+keywords: ["cache webcam confidentialité", "cache de confidentialité webcam", "protection vie privée webcam", "webcam avec obturateur intégré", "cache webcam universel", "cache pour webcam", "couvre webcam"]
 category: "audio-visio"
 coverAlt: "Cache de confidentialité coulissant fixé sur la webcam intégrée d'un écran"
 draft: false
@@ -40,6 +40,17 @@ faq:
   - question: "Faut-il un cache différent pour une webcam externe et une webcam intégrée à l'écran ?"
     answer: "Non, le même cache adhésif coulissant convient aux deux cas : il suffit qu'il soit assez fin et que sa largeur couvre l'objectif sans déborder sur le micro ou le capteur de luminosité, souvent placés à proximité. Pour une webcam externe, certains modèles récents intègrent directement un obturateur mécanique, ce qui rend le cache adhésif inutile."
 ---
+
+**Un cache webcam universel, une fine glissière adhésive, se pose sur presque toutes les webcams : portable, écran externe, tablette, webcam USB. Sur un portable, c'est l'épaisseur qui compte : Apple demande de retirer tout cache de plus de 0,1 mm avant de refermer un MacBook, car l'espace entre l'écran et le clavier n'est pas prévu pour ça.** Choisis donc le modèle le plus fin possible et vérifie la fermeture avant de le laisser en place.
+
+| Appareil | Cache adhésif universel | À vérifier |
+| --- | --- | --- |
+| Portable Windows | Oui | L'écart entre l'écran et le clavier une fois fermé ; en cas de doute, retire-le avant de refermer |
+| MacBook | Seulement s'il fait 0,1 mm au plus | Sinon, retire-le avant chaque fermeture (consigne Apple) |
+| Tablette | Oui | Que l'étui ou la coque ne frotte pas dessus |
+| Écran externe à webcam intégrée | Oui | La taille de l'ouverture, pour ne pas masquer un capteur voisin |
+| Webcam externe | Oui, ou modèle à obturateur intégré | Que le volet reste en place quand tu orientes la webcam |
+| Smartphone | Possible | La compatibilité avec la coque et le verre de protection |
 
 ## Pourquoi mettre un cache webcam de confidentialité
 

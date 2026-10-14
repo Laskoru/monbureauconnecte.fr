@@ -51,7 +51,7 @@ faq:
     answer: "Certains écrans grand public (souvent fins ou avec un pied design) n'ont pas de fixation VESA à l'arrière. Il existe des adaptateurs VESA universels (une plaque qui se glisse sous le pied ou se clipse), mais vérifie leur compatibilité avec ton modèle précis avant d'acheter, car ils ne conviennent pas à tous les châssis."
 ---
 
-## Pourquoi installer un bras support écran
+## Bras articulé écran : pourquoi en installer un
 
 Un écran posé sur son socle d'origine impose une hauteur et une distance qu'on ajuste rarement correctement : on finit par se pencher en avant ou à tendre le cou pour compenser, des heures durant. Un **bras support écran** articulé permet de régler précisément la **hauteur**, l'**inclinaison** et la **distance** de l'écran par rapport aux yeux : un réglage clé pour limiter les tensions cervicales, celles qui donnent mal à la nuque en fin de journée.
 

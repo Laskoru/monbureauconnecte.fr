@@ -3,7 +3,7 @@ title: "Hub USB-C et station d'accueil : lequel choisir ?"
 seoTitle: "Hub USB-C ou station d'accueil : lequel choisir ?"
 description: "Hub USB-C ou station d'accueil ? La vraie différence (écrans, Ethernet, charge), le bon choix selon ton setup et le piège de compatibilité à éviter."
 pubDate: 2026-07-27
-updatedDate: 2026-10-07
+updatedDate: 2026-10-14
 author: "Hugo B."
 pinHook: "Tout brancher *d'un seul câble*"
 pinSub: "Le hub USB-C / station idéal."
@@ -42,6 +42,10 @@ sources:
     url: "https://support.apple.com/fr-fr/117373"
   - label: "Intel, « Technologie Thunderbolt™ : la connexion USB-C la plus rapide, la plus simple et la plus fiable »"
     url: "https://www.intel.fr/content/www/fr/fr/architecture-and-technology/thunderbolt/overview.html"
+  - label: "Anker France, « Hubs USB-C et stations d'accueil » (boutique officielle)"
+    url: "https://www.anker.com/fr/collections/hubs"
+  - label: "VESA, « DisplayPort over USB-C »"
+    url: "https://www.displayport.org/displayport-over-usb-c/"
   - label: "Kensington, « Station d’accueil sans pilote SD4842P USB-C de 10 Gbit/s pour trois moniteurs avec 100 W PD »"
     url: "https://www.kensington.com/fr-ca/p/produits/connectivity/stations-pour-ordinateurs-portables-et-accessoires-usb/station-daccueil-sans-pilotesd4842p-usbc-de-10gbits-pour-trois-moniteurs-avec-100w-pd/"
 faq:
@@ -51,7 +55,20 @@ faq:
     answer: "Ça dépend du modèle et de la puce graphique de l'ordinateur portable : certains hubs gèrent bien le double écran, d'autres non. Vérifie explicitement la mention \"dual monitor\" ou \"double écran\" dans la fiche produit avant d'acheter."
   - question: "Les Mac sont-ils compatibles avec le double écran via un hub ?"
     answer: "Ça dépend de la puce. Les MacBook à puce M1 ou M2 de base ne gèrent qu'un seul écran externe, quel que soit le hub, sauf modèles intégrant la technologie DisplayLink (avec un pilote à installer). Les MacBook Air et MacBook Pro à puce M3 en gèrent deux capot fermé, et les MacBook à puce M4 en gèrent deux. Vérifie la fiche technique Apple de ton modèle avant d'acheter. Sur PC Windows, la plupart des machines gèrent le double écran sans souci."
+  - question: "Une station d'accueil fonctionne-t-elle avec n'importe quel portable ?"
+    answer: "Non. Pour afficher un écran, le port USB-C du portable doit transmettre la vidéo, grâce au mode alternatif DisplayPort (DP Alt Mode) ou à Thunderbolt : un port USB-C limité aux données et à la charge n'affichera rien. Certaines stations sont aussi réservées à Windows, comme la Kensington SD4842P selon son fabricant. Enfin, sur un MacBook à puce M1 ou M2 de base, un seul écran externe est géré, quel que soit le dock, sauf station DisplayLink avec pilote."
 ---
+
+**Hub USB-C si ton portable bouge souvent et que tu veux juste quelques ports. Station d'accueil s'il reste sur le même bureau, avec écran, réseau et charge par un seul câble.** Côté budget, la boutique officielle d'Anker (relevée le 14 octobre 2026) affiche ses hubs USB-C entre 27 et 90 € environ selon les promotions, et ses stations d'accueil entre 140 et 350 €.
+
+| Critère | Hub USB-C | Station d'accueil |
+| --- | --- | --- |
+| Alimentation propre | Non, il tire sur le port du portable | Oui, avec son bloc secteur |
+| Écrans externes | Souvent un seul | Deux ou trois selon le modèle et la machine |
+| Ethernet | Parfois | Le plus souvent |
+| Charge du portable (Power Delivery) | En passe-plat, avec ton chargeur | Fournie par la station (souvent 100 W) |
+| Prix (boutique Anker) | Environ 27 à 90 € | Environ 140 à 350 € |
+| Usage | Nomade, quelques ports en plus | Poste fixe complet, un seul câble |
 
 ## Pourquoi un hub ou une station d'accueil change le quotidien
 
