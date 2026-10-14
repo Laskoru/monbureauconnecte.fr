@@ -8,7 +8,7 @@ pinHook: "Un *coup de pouce* contre le coup de mou hivernal"
 pinSub: "La lampe de luminothérapie au bureau, utile ou pas."
 keywords: ["lampe de luminothérapie bureau", "luminothérapie au bureau", "lampe de luminothérapie hiver"]
 category: "mobilier"
-coverAlt: "Lampe de bureau blanche allumée posée près d'une plante verte sur une table claire et épurée"
+coverAlt: "Lampe de bureau noire à col flexible, allumée, près d'une petite plante en pot blanc sur un meuble sombre"
 draft: false
 topPick:
   name: "Lampe de luminothérapie 10 000 lux"
