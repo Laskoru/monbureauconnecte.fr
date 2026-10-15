@@ -116,3 +116,4 @@ Le bras support écran est l'un des accessoires au meilleur rapport entre le pri
 - [Lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
 - [Le guide de l'ergonomie au bureau](/guides/ergonomie-bureau/)
+- [Écran PC ne détecte pas le HDMI : que faire ?](/articles/deuxieme-ecran-non-detecte-hdmi/)

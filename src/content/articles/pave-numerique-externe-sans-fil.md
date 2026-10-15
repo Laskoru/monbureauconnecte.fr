@@ -116,3 +116,4 @@ La question se pose forcément quand on quitte un clavier complet. Le **clavier 
 - [Clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/)
 - [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
 - [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)
+- [Clavier ne fonctionne plus sur PC portable : les solutions](/articles/clavier-pc-portable-ne-fonctionne-plus/)

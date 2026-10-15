@@ -122,3 +122,4 @@ Côté budget, l'entrée de gamme suffit pour découvrir le format, et les réf�
 - [Souris sans fil silencieuse](/articles/souris-sans-fil-silencieuse/)
 - [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
 - [L'ergonomie au bureau](/guides/ergonomie-bureau/)
+- [Souris qui bouge toute seule : causes et solutions](/articles/souris-qui-bouge-toute-seule/)

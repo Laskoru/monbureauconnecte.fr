@@ -123,3 +123,4 @@ Le cache de confidentialité pour webcam fait partie de ces accessoires à quelq
 - [Webcams 1080p vs 4K en 2026 : laquelle choisir ?](/articles/webcams-1080p-vs-4k/)
 - [Éclairage d'appoint pour la visio](/articles/ring-light-eclairage-visio/)
 - [Micro USB pour visioconférence et podcast](/articles/micro-usb-visioconference-podcast/)
+- [Comment activer ma webcam sur Windows 11 et la réparer](/articles/webcam-ne-fonctionne-pas-windows-11/)

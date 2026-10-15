@@ -123,3 +123,4 @@ Pour la majorité des télétravailleurs, une bonne **1080p** avec une correctio
 - [Ring light : bien s'éclairer en visio](/articles/ring-light-eclairage-visio/)
 - [Micro USB pour visio et podcast](/articles/micro-usb-visioconference-podcast/)
 - [Casque à réduction de bruit pour le télétravail](/articles/casque-reduction-bruit-teletravail/)
+- [Comment activer ma webcam sur Windows 11 et la réparer](/articles/webcam-ne-fonctionne-pas-windows-11/)

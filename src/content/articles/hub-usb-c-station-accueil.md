@@ -135,3 +135,4 @@ Le bon hub ou la bonne station d'accueil dépend surtout du nombre d'écrans à 
 - [Support pour ordinateur portable](/articles/support-ordinateur-portable-ergonomique/)
 - [Pavé numérique externe sans fil](/articles/pave-numerique-externe-sans-fil/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
+- [Écran PC ne détecte pas le HDMI : que faire ?](/articles/deuxieme-ecran-non-detecte-hdmi/)
