@@ -88,3 +88,5 @@ Côté installation, le plus simple reste de laisser le hub branché en permanen
 - [Hub USB-C et station d'accueil : lequel choisir ?](/articles/hub-usb-c-station-accueil/)
 - [Souris sans fil silencieuse](/articles/souris-sans-fil-silencieuse/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
+- [Une imprimante peut-elle fonctionner avec une seule cartouche ?](/articles/imprimer-avec-une-seule-cartouche/)
+- [Port USB-C ne fonctionne plus : que vérifier ?](/articles/port-usb-c-ne-fonctionne-plus/)

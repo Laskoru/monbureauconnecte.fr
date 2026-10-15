@@ -73,7 +73,7 @@ Le même mécanisme touche les résolutions personnalisées créées dans le pan
 
 Une fois le câble, le pilote, la veille et la fréquence écartés, il reste à distinguer l'écran de la carte graphique. Le test le plus fiable consiste à brancher un autre écran sur le même PC : si les coupures persistent, la carte graphique ou le PC sont en cause ; si elles disparaissent, l'écran est défaillant. À l'inverse, brancher l'écran suspect sur un autre ordinateur ou une console confirme rapidement s'il coupe de la même façon ailleurs.
 
-Un indice supplémentaire : un écran noir accompagné de bruits inhabituels du ventilateur, d'artefacts colorés juste avant la coupure, ou de plantages complets du PC oriente plutôt vers la carte graphique ou l'alimentation. Un écran noir propre, sans aucun autre symptôme et qui revient instantanément, pointe plus souvent vers le câble, le port ou un réglage logiciel.
+Un indice supplémentaire : un écran noir accompagné de bruits inhabituels du ventilateur, d'artefacts colorés juste avant la coupure, ou de plantages complets du PC oriente plutôt vers la carte graphique ou l'alimentation. Un écran noir propre, sans aucun autre symptôme et qui revient instantanément, pointe plus souvent vers le câble, le port ou un réglage logiciel. Si l'écran reste noir dès l'allumage, sans jamais revenir, c'est un autre diagnostic : celui de l'[écran PC qui ne s'allume pas au démarrage](/articles/ecran-pc-ne-s-allume-pas-demarrage/).
 
 ## Ce qu'il faut retenir
 

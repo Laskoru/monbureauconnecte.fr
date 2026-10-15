@@ -113,3 +113,4 @@ Choisir une config PC gaming n'a rien de sorcier une fois la hiérarchie posée 
 - [Combien coûte vraiment un setup gaming complet ?](/articles/cout-reel-setup-gaming-complet/)
 - [Quelle chaise gaming choisir ?](/articles/meilleures-chaises-gaming/)
 - [Souris gaming au bureau : DPI et boutons programmables](/articles/souris-gaming-pour-le-travail/)
+- [Écran PC ne s'allume pas au démarrage : le diagnostic](/articles/ecran-pc-ne-s-allume-pas-demarrage/)

@@ -117,3 +117,4 @@ Le rangement des câbles n'a rien d'un détail cosmétique : un bureau dégagé 
 - [Caisson de rangement sous le bureau](/articles/caisson-rangement-sous-bureau/)
 - [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)
 - [Bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/)
+- [Une imprimante peut-elle fonctionner avec une seule cartouche ?](/articles/imprimer-avec-une-seule-cartouche/)
