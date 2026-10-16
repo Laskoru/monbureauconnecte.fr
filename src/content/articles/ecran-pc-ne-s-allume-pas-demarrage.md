@@ -8,7 +8,6 @@ pinHook: "Écran noir *dès l'allumage* du PC ?"
 pinSub: "Câble, carte graphique, BIOS, mémoire : le bon ordre."
 keywords: ["ecran pc ne s allume pas au demarrage", "écran pc ne s'allume pas", "pourquoi mon ecran pc ne s allume pas", "ecran noir pc quand je l allume"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1591238372338-22d30c883a86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8Mnx8ZGVza3RvcCUyMHBjJTIwdG93ZXIlMjBhbmQlMjBtb25pdG9yJTIwdHVybmVkJTIwb2ZmfGVufDB8MHx8fDE3OTIwODE0MDF8Mg&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Tour d'ordinateur noire en cours de montage posée sur une table blanche"
 draft: false
 faq:

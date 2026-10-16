@@ -8,7 +8,6 @@ pinHook: "On ne t'entend pas *en visio* ?"
 pinSub: "Volume d'entrée, amplification, Teams : les bons réglages."
 keywords: ["micro trop faible windows 11", "micro casque trop sensible", "micro casque qui grésille", "augmenter volume micro windows 11"]
 category: "audio-visio"
-coverImage: "https://images.unsplash.com/photo-1673669231301-09baa4d7761b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8M3x8aGVhZHNldCUyMG1pY3JvcGhvbmV8ZW58MHwwfHx8MTc5MjA4MTQyMHwy&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Gros plan sur un casque gaming noir équipé d'un micro sur perche, posé sur un fond noir"
 draft: false
 faq:

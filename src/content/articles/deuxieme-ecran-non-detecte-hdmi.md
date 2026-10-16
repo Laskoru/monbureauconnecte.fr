@@ -8,7 +8,6 @@ pinHook: "Deuxième écran *non détecté* en HDMI ?"
 pinSub: "Les vérifications dans l'ordre, du câble au pilote."
 keywords: ["écran pc ne détecte pas le hdmi", "double écran ne se détecte pas", "pourquoi mon double écran ne fonctionne pas", "deuxième écran non détecté"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1542315192-1f61a1792f33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8NXx8ZHVhbCUyMG1vbml0b3IlMjBkZXNrJTIwc2V0dXB8ZW58MHwwfHx8MTc5MjA4MDc1N3wy&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Poste de travail avec deux écrans allumés et un ordinateur portable ouvert, dans un bureau sombre"
 draft: false
 faq:

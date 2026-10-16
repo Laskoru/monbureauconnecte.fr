@@ -8,7 +8,6 @@ pinHook: "Ta souris *bouge toute seule* ?"
 pinSub: "Surface, capteur, piles, pavé tactile : les vraies causes."
 keywords: ["souris qui bouge toute seule", "souris ne fonctionne plus windows 10", "souris qui ne fonctionne plus sur pc portable", "souris trop sensible"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1616071358409-ef30a44a90bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8M3x8Y29tcHV0ZXIlMjBtb3VzZSUyMG9uJTIwbW91c2UlMjBwYWR8ZW58MHwwfHx8MTc5MjA4MTM5NXwy&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Souris sans fil noire posée sur une surface noire, vue de près sous une lumière douce"
 draft: false
 faq:

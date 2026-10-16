@@ -9,7 +9,6 @@ pinHook: "Imprimer avec *une seule cartouche* ?"
 pinSub: "HP, Epson, Canon : ce que chaque marque permet vraiment."
 keywords: ["une imprimante peut elle fonctionner avec une seule cartouche", "imprimer quand il manque une cartouche", "imprimante qui ne reconnait pas la cartouche", "mode cartouche unique hp"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1706895040634-62055892cbbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8aW5ramV0JTIwcHJpbnRlciUyMGluayUyMGNhcnRyaWRnZXN8ZW58MHx8fHwxNzkyMDgxNDA2fDI&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Gros plan sur une imprimante photo à jet d'encre couleur posée sur une table, dans une pièce sombre"
 draft: false
 faq:
