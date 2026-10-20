@@ -110,3 +110,4 @@ Pour un usage quotidien en télétravail, le panneau radiant avec thermostat res
 - [Tapis de sol pour chaise de bureau](/articles/tapis-sol-chaise-bureau/)
 - [Ranger les câbles de son bureau](/articles/rangement-cables-bureau/)
 - [Caisson de rangement sous bureau](/articles/caisson-rangement-sous-bureau/)
+- [Le chauffe-tasse USB garde-t-il vraiment le café chaud ?](/articles/chauffe-tasse-usb-bureau/)
