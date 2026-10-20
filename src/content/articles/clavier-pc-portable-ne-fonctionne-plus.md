@@ -8,7 +8,7 @@ pinHook: "Le clavier de ton portable *ne répond plus* ?"
 pinSub: "Pilote, QWERTY, touche Inser : les causes et les remèdes."
 keywords: ["clavier ne fonctionne plus sur pc portable", "clavier ne fonctionne plus windows 11", "clavier efface quand j écris", "clavier qui passe en qwerty tout seul"]
 category: "peripheriques"
-coverAlt: "Mains posées sur le clavier d'un ordinateur portable ouvert, sur une table, dans une pièce sombre"
+coverAlt: "Mains qui tapent sur le clavier d'un ordinateur portable gris ouvert, en gros plan dans une pièce sombre"
 draft: false
 faq:
   - question: "Comment écrire en attendant que le clavier remarche ?"

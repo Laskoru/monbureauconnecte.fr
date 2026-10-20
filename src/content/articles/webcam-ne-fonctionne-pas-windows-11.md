@@ -8,7 +8,7 @@ pinHook: "Ta webcam *ne marche plus* sous Windows 11 ?"
 pinSub: "Touche, confidentialité, Teams, pilote : dans l'ordre."
 keywords: ["comment activer ma webcam sur windows 11", "pourquoi la webcam de mon pc ne fonctionne pas", "pourquoi ma webcam ne fonctionne pas sur teams", "comment tester sa webcam"]
 category: "audio-visio"
-coverAlt: "Gros plan sur une webcam externe fixée en haut d'un écran d'ordinateur, dans une lumière bleutée"
+coverAlt: "Micro sur bras articulé devant un écran d'ordinateur, avec un clavier blanc et une souris lumineuse sur le bureau"
 draft: false
 faq:
   - question: "Pourquoi l'interrupteur caméra est-il grisé dans les paramètres de Windows 11 ?"

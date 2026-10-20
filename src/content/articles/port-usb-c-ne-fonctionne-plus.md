@@ -8,7 +8,7 @@ pinHook: "Ton port USB-C *ne répond plus* ?"
 pinSub: "Câble, chargeur, poussière, mode vidéo : les vrais coupables."
 keywords: ["port usb c ne fonctionne plus", "comment nettoyer port usb c", "port usb c trop lache", "usb c ne charge plus"]
 category: "peripheriques"
-coverAlt: "Gros plan sur une fiche USB-C branchée sur le côté d'un ordinateur portable fin posé sur une table"
+coverAlt: "Gros plan sur deux ports USB-C vides sur le côté d'un ordinateur portable fin et ouvert, sous une lumière chaude"
 draft: false
 faq:
   - question: "Pourquoi mon PC affiche « Chargeur lent » avec un chargeur USB-C ?"
