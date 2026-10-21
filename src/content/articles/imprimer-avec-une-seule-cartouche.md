@@ -85,3 +85,5 @@ Canon prévient aussi que de l'encre couleur peut être consommée même pour un
 - **Cartouche non reconnue** : cherche le ruban de protection oublié avant de racheter.
 
 Si ton imprimante est un vieux modèle USB que ton nouveau portable ne sait plus brancher, un [hub USB-A multiport](/articles/hub-usb-a-multiport-vieux-peripheriques/) lui évite la casse. Et pour qu'elle ne finisse pas au milieu des fils, le guide pour [ranger les câbles de son bureau](/articles/rangement-cables-bureau/) et un [caisson de rangement sous le bureau](/articles/caisson-rangement-sous-bureau/) libèrent de la place pour le papier et les cartouches de rechange.
+
+Et si tu n'as pas d'ordinateur sous la main, vois comment [imprimer sans ordinateur depuis un téléphone ou une clé USB](/articles/imprimante-sans-ordinateur/).
