@@ -15,6 +15,10 @@ La routine quotidienne prend la première idée non cochée, écrit l'article en
 brouillon, puis coche l'idée. Ajoute librement de nouvelles idées en bas.
 Format : `- [ ] Sujet — angle — catégorie`.
 
+## Requêtes Google peu couvertes (21/10)
+
+- [ ] Imprimante sans ordinateur : imprimer depuis un téléphone, une clé USB ou une carte SD — Wi-Fi Direct, applis des fabricants (HP Smart, Epson, Canon), AirPrint et Mopria, port USB hôte, ce qu'il faut vérifier sur la fiche technique ; requête « une imprimante peut elle fonctionner sans ordinateur », requêtes associées « imprimer depuis son téléphone sans wifi », « imprimante qui imprime depuis une clé usb », « imprimer sans ordinateur » ; documentation des fabricants (concurrence Google faible, 21/10)
+
 ## Requêtes Google peu couvertes (15/10)
 
 Requêtes tirées des suggestions Google du 15/10/2026, absentes des articles publiés et du backlog, avec une page 1 Google faible ou moyenne (forums, pages étrangères ou génériques). Garde la requête principale dans le titre, la description et un titre ##.
