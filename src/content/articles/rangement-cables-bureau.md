@@ -14,6 +14,7 @@ draft: false
 products:
   - asin: "B09CTYQYCH"
     title: "Panier passe-câbles sous bureau HomeProtek"
+    search: "panier passe câbles sous bureau"
     blurb: "Le classique efficace : un panier fixé sous le plateau qui regroupe multiprise et chargeurs, hors de vue."
     pros:
       - "Cache multiprise et chargeurs sous le plateau"
