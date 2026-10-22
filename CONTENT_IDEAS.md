@@ -15,6 +15,11 @@ La routine quotidienne prend la première idée non cochée, écrit l'article en
 brouillon, puis coche l'idée. Ajoute librement de nouvelles idées en bas.
 Format : `- [ ] Sujet — angle — catégorie`.
 
+> **Consignes techniques pour la routine (22/10/2026, économie de tokens)**
+> - Unsplash : appelle search_photos avec `per_page: 4` (les réponses à 8 photos sont très longues). Une seconde recherche seulement si aucune des 4 ne montre le sujet.
+> - Légifrance, economie.gouv.fr (DGCCRF), EUR-Lex, dyson.fr, miele.fr et certains sites de fabricants renvoient 403 ou une page vide à WebFetch : un seul essai par URL, puis `curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/141.0" <url>` ; si ça échoue encore, prends une autre source (service-public.gouv.fr, notice PDF du fabricant) au lieu de réessayer.
+> - Ne relis pas un fichier déjà lu et ne relance pas une recherche déjà faite.
+
 ## Requêtes Google peu couvertes (21/10)
 
 - [x] Imprimante sans ordinateur : imprimer depuis un téléphone, une clé USB ou une carte SD — Wi-Fi Direct, applis des fabricants (HP Smart, Epson, Canon), AirPrint et Mopria, port USB hôte, ce qu'il faut vérifier sur la fiche technique ; requête « une imprimante peut elle fonctionner sans ordinateur », requêtes associées « imprimer depuis son téléphone sans wifi », « imprimante qui imprime depuis une clé usb », « imprimer sans ordinateur » ; documentation des fabricants (concurrence Google faible, 21/10)
