@@ -8,7 +8,6 @@ pinHook: "Ton café, *chaud* jusqu'à la dernière gorgée"
 pinSub: "Le chauffe-tasse USB, utile ou pas sur ton bureau."
 keywords: ["chauffe-tasse USB", "chauffe-tasse USB bureau", "garder son café chaud au bureau"]
 category: "mobilier"
-coverImage: "https://images.unsplash.com/photo-1692938446967-f17f67c33143?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8Y29mZmVlJTIwbXVnJTIwd2FybWVyJTIwZGVza3xlbnwwfDB8fHwxNzkyNDczNjA3fDI&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Tasse de café posée sur un dessous de verre en bois, à côté d'un ordinateur sur un bureau"
 draft: false
 topPick:

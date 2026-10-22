@@ -7,7 +7,6 @@ updatedDate: 2026-10-21
 author: "Hugo B."
 keywords: ["une imprimante peut elle fonctionner sans ordinateur", "imprimer depuis son téléphone sans wifi", "imprimante qui imprime depuis une clé usb", "imprimer sans ordinateur", "wi-fi direct imprimante"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8cHJpbnRlciUyMHByaW50aW5nJTIwZG9jdW1lbnQlMjBob21lJTIwb2ZmaWNlfGVufDB8MHx8fDE3OTI2MDEzNTl8Mg&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Imprimante multifonction blanche et grise posée sur un bureau d'un coin bureau à la maison"
 pinHook: "Imprimer sans *ordinateur* ?"
 pinSub: "Téléphone, clé USB ou carte SD : ce qu'il faut vérifier sur la fiche."
