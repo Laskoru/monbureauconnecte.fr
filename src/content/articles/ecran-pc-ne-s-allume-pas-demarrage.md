@@ -85,4 +85,4 @@ Pas de logo, des bips ou un voyant qui clignote selon un motif : le PC n'arrive 
 2. Teste ensuite **une seule barrette à la fois**, dans chaque emplacement, en notant le résultat.
 3. Si la panne suit une barrette ou un emplacement précis, tu l'as trouvée, et le PC peut tourner avec moins de mémoire en attendant le remplacement.
 
-Si la panne reste identique quelle que soit la barrette, la mémoire n'est sans doute pas en cause. À ce stade, le manuel du fabricant (pour décoder les bips) ou le service après-vente prend le relais.
+Si la panne reste identique quelle que soit la barrette, la mémoire n'est sans doute pas en cause. À ce stade, le manuel du fabricant (pour décoder les bips) ou le service après-vente prend le relais. Avant de l'appeler, l'outil [Suis-je encore couvert ?](https://www.quellegarantie.fr/suis-je-encore-couvert/) te dit en quelques questions si ton PC ou ton écran est encore sous garantie.

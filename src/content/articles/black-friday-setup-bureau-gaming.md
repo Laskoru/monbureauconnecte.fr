@@ -87,6 +87,7 @@ Quelques réflexes simples pour aborder la période sereinement plutôt que dans
 - **Priorise un ou deux postes**, plutôt que de vouloir tout changer d'un coup. Notre [comparatif du coût réel d'un setup gaming complet](/articles/cout-reel-setup-gaming-complet/) aide à voir où concentrer le budget en premier.
 - **Protège ce que tu achètes** : un nouvel écran ou un nouveau PC mérite une bonne multiprise parasurtenseur, pour ne pas perdre le bénéfice de la promo à la première surtension.
 - **Pense aux cadeaux de fin d'année en même temps** : si tu comptes offrir du matériel, nos [idées cadeaux télétravail et gaming classées par budget](/articles/idees-cadeaux-teletravail-gaming-budget/) t'aident à fixer ta liste avant que les offres s'enchaînent.
+- **Ne coche pas l'extension de garantie par réflexe** : un écran ou un PC neuf a déjà deux ans de garantie légale, et ce guide aide à voir [quand une extension de garantie vaut vraiment son prix](https://www.quellegarantie.fr/articles/extension-de-garantie-vaut-elle-le-coup/).
 
 ## Cyber Monday : la suite logique du Black Friday
 

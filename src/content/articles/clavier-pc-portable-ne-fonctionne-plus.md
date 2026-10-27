@@ -70,6 +70,6 @@ Pour les touches F1 à F12 qui font autre chose que prévu (volume, luminosité)
 
 ## Quand c'est le clavier lui-même
 
-Si un clavier externe fonctionne et que le clavier intégré reste muet malgré un pilote neuf, la panne est matérielle : nappe débranchée après un choc, liquide renversé, touches usées. Après un liquide, éteins le PC sans attendre et ne le rallume pas avant une vérification. Pour un portable encore couvert, passe par le service après-vente du fabricant plutôt que de l'ouvrir toi-même.
+Si un clavier externe fonctionne et que le clavier intégré reste muet malgré un pilote neuf, la panne est matérielle : nappe débranchée après un choc, liquide renversé, touches usées. Après un liquide, éteins le PC sans attendre et ne le rallume pas avant une vérification. Pour un portable encore couvert, passe par le service après-vente du fabricant plutôt que de l'ouvrir toi-même. Les durées de couverture chez Dell, Acer, HP, Lenovo et Asus sont comparées dans ce point sur [la garantie des PC portables selon la marque](https://www.quellegarantie.fr/articles/garantie-pc-portable/).
 
 En attendant, un clavier externe posé devant le portable rend service, surtout si tu le places sur un [support d'ordinateur portable](/articles/support-ordinateur-portable-ergonomique/) pour remonter l'écran. Un [clavier compact TKL](/articles/clavier-compact-tkl-sans-pave-numerique/) prend peu de place et laisse de l'espace pour la souris.

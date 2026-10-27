@@ -58,7 +58,7 @@ Microsoft cite la poussière comme cause possible d'une charge lente ou absente,
 
 ## Port USB-C trop lâche
 
-Une fiche qui tient mal, qui se coupe au moindre mouvement du câble, alors que le port est propre : c'est de l'usure mécanique. Le nettoyage ne la répare pas. Teste avec un autre câble, car une fiche abîmée donne exactement la même sensation qu'un port fatigué. Si plusieurs câbles flottent dans le même port, le remplacement passe par un réparateur ou le service après-vente du fabricant.
+Une fiche qui tient mal, qui se coupe au moindre mouvement du câble, alors que le port est propre : c'est de l'usure mécanique. Le nettoyage ne la répare pas. Teste avec un autre câble, car une fiche abîmée donne exactement la même sensation qu'un port fatigué. Si plusieurs câbles flottent dans le même port, le remplacement passe par un réparateur ou le service après-vente du fabricant. Si le PC a moins de deux ans, regarde d'abord [s'il vaut mieux passer par la garantie légale ou celle du constructeur](https://www.quellegarantie.fr/articles/garantie-legale-ou-garantie-constructeur/) : la réparation peut ne rien te coûter.
 
 En attendant, limite les contraintes : un câble qui pend sur le côté du bureau tire en permanence sur le connecteur. Le guide pour [ranger les câbles de son bureau](/articles/rangement-cables-bureau/) aide à les fixer sans tension.
 

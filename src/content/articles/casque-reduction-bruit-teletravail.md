@@ -70,7 +70,7 @@ Un casque porté **6 à 8 h par jour** doit être léger, avec un arceau bien r�
 
 ### L'autonomie réelle en mode ANC
 
-L'autonomie est souvent annoncée **avec** la réduction de bruit active (environ 35 h pour le Sony WH-CH720N), mais certaines fiches donnent un chiffre sans ANC, plus flatteur : vérifie la mention avant de comparer deux modèles. Pour couvrir des journées complètes sans recharge quotidienne, vise une autonomie confortable (25 h et plus) et, idéalement, une recharge rapide.
+L'autonomie est souvent annoncée **avec** la réduction de bruit active (environ 35 h pour le Sony WH-CH720N), mais certaines fiches donnent un chiffre sans ANC, plus flatteur : vérifie la mention avant de comparer deux modèles. Pour couvrir des journées complètes sans recharge quotidienne, vise une autonomie confortable (25 h et plus) et, idéalement, une recharge rapide. Si la batterie de ton casque faiblit nettement dans les premiers mois, la page sur [la garantie des casques Sony](https://www.quellegarantie.fr/articles/garantie-sony-casque-audio/) explique vers qui te tourner.
 
 ### La qualité du micro
 
