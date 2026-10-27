@@ -117,3 +117,4 @@ La question se pose forcément quand on quitte un clavier complet. Le **clavier 
 - [Clavier ergonomique séparé](/articles/clavier-ergonomique-separe/)
 - [Hub USB-C / station d'accueil](/articles/hub-usb-c-station-accueil/)
 - [Clavier ne fonctionne plus sur PC portable : les solutions](/articles/clavier-pc-portable-ne-fonctionne-plus/)
+- [Pavé numérique ne fonctionne plus : les solutions](/articles/pave-numerique-ne-fonctionne-plus/)

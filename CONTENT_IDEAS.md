@@ -39,7 +39,7 @@ Requêtes tirées des suggestions Google du 15/10/2026, absentes des articles pu
 
 ## Priorité SEO (Search Console du 14/10/2026)
 
-- [ ] Pavé numérique qui ne marche plus : les solutions — Verr Num, touche Fn, mode « touches souris » de Windows, BIOS ; requêtes « pavé numérique ne fonctionne plus », « touche numérique clavier ne fonctionne pas » ; lien vers le pavé numérique externe — peripheriques (conseil, sans produit)
+- [x] Pavé numérique qui ne marche plus : les solutions — Verr Num, touche Fn, mode « touches souris » de Windows, BIOS ; requêtes « pavé numérique ne fonctionne plus », « touche numérique clavier ne fonctionne pas » ; lien vers le pavé numérique externe — peripheriques (conseil, sans produit)
 - [ ] Casque Bluetooth : son dégradé en visio, la solution — profil HFP contre A2DP, pourquoi le son baisse quand le micro s'active, dongle ou micro séparé ; requête « casque bluetooth son mauvais teams » ; liens vers casque filaire vs sans fil et micro USB — audio-visio (conseil)
 - [ ] Station d'accueil qui ne détecte pas l'écran : que faire — câble et port (DP Alt Mode, Thunderbolt), pilotes, limite d'écrans des Mac M1 et M2 ; requête « station d'accueil ne détecte pas l'écran » ; lien vers hub USB-C ou station d'accueil — peripheriques (conseil, sans produit)
 - [ ] Souris qui double-clique toute seule : causes et solutions — usure du micro-switch, réglages Windows, piles, garantie ; requête « souris qui double-clique toute seule » ; liens vers souris silencieuse et souris ergonomique — peripheriques (conseil)
