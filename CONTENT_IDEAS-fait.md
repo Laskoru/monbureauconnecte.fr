@@ -1,0 +1,41 @@
+# Idées faites (archivées depuis CONTENT_IDEAS.md)
+
+Lignes déjà publiées, dans l'ordre où elles figuraient dans CONTENT_IDEAS.md.
+
+- [x] Imprimante sans ordinateur : imprimer depuis un téléphone, une clé USB ou une carte SD : Wi-Fi Direct, applis des fabricants (HP Smart, Epson, Canon), AirPrint et Mopria, port USB hôte, ce qu'il faut vérifier sur la fiche technique ; requête « une imprimante peut elle fonctionner sans ordinateur », requêtes associées « imprimer depuis son téléphone sans wifi », « imprimante qui imprime depuis une clé usb », « imprimer sans ordinateur » ; documentation des fabricants (concurrence Google faible, 21/10)
+- [x] Deuxième écran non détecté en HDMI : que faire : câble et entrée de l'écran, Windows + P, Paramètres > Affichage > Détecter, pilote graphique, port de la carte graphique ou de la carte mère ; requête « écran pc ne détecte pas le hdmi » ; requêtes associées « pourquoi mon double écran ne fonctionne pas », « double écran ne se détecte pas », « eteindre ecran pc quand je branche sur tv » ; liens vers l'écran noir par intermittence et le hub USB-C ; catégorie : peripheriques (conseil, sans produit)
+- [x] Webcam qui ne fonctionne pas sous Windows 11 : l'activer et la réparer : interrupteur ou touche caméra, cache, confidentialité Windows, Gestionnaire de périphériques, application qui la bloque (Teams), test ; requête « comment activer ma webcam sur windows 11 » ; requêtes associées « pourquoi la webcam de mon pc ne fonctionne pas », « pourquoi ma webcam ne fonctionne pas sur teams », « comment tester sa webcam » ; liens vers le cache webcam et webcams 1080p ou 4K ; catégorie : audio-visio (conseil, sans produit)
+- [x] Clavier de PC portable qui ne fonctionne plus : les solutions : touche Fn ou verrouillage, pilote à réinstaller, mode sans échec, touche Inser qui efface, passage en QWERTY (Alt + Maj), nappe ou liquide, garantie ; requête « clavier ne fonctionne plus sur pc portable » ; requêtes associées « clavier ne fonctionne plus windows 11 », « clavier efface quand j écris », « clavier qui passe en qwerty tout seul » ; lien vers le clavier compact TKL ; catégorie : peripheriques (conseil, sans produit)
+- [x] Souris qui bouge toute seule ou ne répond plus : causes et solutions : surface et capteur, pavé tactile qui interfère, piles et récepteur, sensibilité et précision du pointeur sous Windows, pilote ; requête « souris qui bouge toute seule » ; requêtes associées « souris ne fonctionne plus windows 10 », « souris qui ne fonctionne plus sur pc portable », « souris trop sensible » ; liens vers la souris sans fil silencieuse et le tapis de souris XXL ; catégorie : peripheriques (conseil, sans produit)
+- [x] Écran PC qui ne s'allume pas au démarrage : le diagnostic : alimentation et câble, bonne entrée, sortie de la carte graphique plutôt que de la carte mère, autre écran pour isoler, BIOS visible ou non, RAM ; requête « ecran pc ne s allume pas au demarrage » ; requêtes associées « écran pc ne s'allume pas », « pourquoi mon ecran pc ne s allume pas », « ecran noir pc quand je l allume » ; lien vers l'écran noir par intermittence ; catégorie : peripheriques (conseil, sans produit)
+- [x] Imprimer avec une seule cartouche : quelles imprimantes le permettent : mode cartouche unique HP, impression temporaire en noir Epson, blocage Canon et Brother, pourquoi le noir est composé avec les couleurs ; s'appuyer sur les pages d'assistance des fabricants ; requête « une imprimante peut elle fonctionner avec une seule cartouche » ; requêtes associées « imprimer quand il manque une cartouche », « imprimante qui ne reconnait pas la cartouche » ; catégorie : peripheriques (conseil, sans produit)
+- [x] Port USB-C qui ne fonctionne plus : que vérifier : câble et chargeur, port données seules ou Power Delivery, BIOS et pilotes (UCSI), hub ou station en cause, poussière et nettoyage sans abîmer, port qui a du jeu ; requête « port usb c ne fonctionne plus » ; requêtes associées « comment nettoyer port usb c », « port usb c trop lache » ; lien vers le hub USB-C ou station d'accueil ; catégorie : peripheriques (conseil, sans produit)
+- [x] Micro trop faible sous Windows 11 : monter le volume sans saturer : volume d'entrée et amplification (Niveaux), bon périphérique par défaut, améliorations audio, réglages Teams et Discord, distance au micro ; requête « micro trop faible windows 11 » ; requêtes associées « micro casque trop sensible », « micro casque qui grésille » ; liens vers le micro USB et le casque filaire ou sans fil ; catégorie : audio-visio (conseil, sans produit)
+- [x] Pavé numérique qui ne marche plus : les solutions : Verr Num, touche Fn, mode « touches souris » de Windows, BIOS ; requêtes « pavé numérique ne fonctionne plus », « touche numérique clavier ne fonctionne pas » ; lien vers le pavé numérique externe ; catégorie : peripheriques (conseil, sans produit)
+- [x] Chauffage d'appoint sous le bureau : lequel choisir pour le télétravail : pieds froids en hiver, consommation et sécurité ; catégorie : mobilier
+- [x] Lampe de luminothérapie au bureau : utile en hiver ? : jours courts, intensité en lux, distance et durée d'exposition ; catégorie : mobilier
+- [x] Chauffe-tasse USB pour le bureau : garder son café chaud en réunion ; catégorie : mobilier
+- [x] Idées cadeaux pour un télétravailleur ou un gamer : sélection par budget (Noël 2026) : guide cadeaux utile, sans gadgets ; catégorie : peripheriques
+- [x] Black Friday setup bureau & gaming : ce qu'il faut attendre, ce qu'il faut acheter maintenant : guide d'achat malin ; catégorie : mobilier
+- [x] Écran PC qui devient noir par intermittence : le diagnostic pas à pas (câble, mise en veille, pilote, fréquence, écran ou carte graphique) : requête « écran pc qui devient noir par intermittence » ; catégorie : peripheriques (conseil, sans produit)
+- [x] Tapis de sol pour chaise de bureau : protéger le parquet et rouler sans forcer ; catégorie : mobilier
+- [x] Coussin d'assise ergonomique : soulager le coccyx en position assise prolongée ; catégorie : mobilier
+- [x] Coussin lombaire pour chaise : corriger le soutien du bas du dos à petit prix ; catégorie : mobilier
+- [x] Caisson de rangement sous bureau : libérer le plateau sans encombrer ; catégorie : mobilier
+- [x] Tabouret assis-debout (siège selle) : alterner les appuis sur un bureau haut ; catégorie : mobilier
+- [x] Plante de bureau dépolluante : améliorer l'air et le confort visuel ; catégorie : mobilier
+- [x] Chaise de bureau sans accoudoirs : pour les petits espaces et les bureaux bas ; catégorie : mobilier
+- [x] Bureau d'angle pour petit espace : optimiser un coin de pièce en télétravail ; catégorie : mobilier
+- [x] Tapis de souris XXL de bureau : surface étendue pour clavier + souris ; catégorie : peripheriques
+- [x] Souris sans fil silencieuse : clics discrets pour l'open space ; catégorie : peripheriques
+- [x] Trackball vs souris classique : soulager le poignet autrement ; catégorie : peripheriques
+- [x] Repose-poignet clavier et souris : prévenir les tensions au poignet ; catégorie : peripheriques
+- [x] Clavier compact sans pavé numérique (TKL) : gagner de la place pour la souris ; catégorie : peripheriques
+- [x] Souris gaming pour le travail : DPI et boutons programmables au quotidien ; catégorie : peripheriques
+- [x] Pavé numérique externe sans fil : compléter un clavier compact ; catégorie : peripheriques
+- [x] Tablette graphique d'entrée de gamme : pour annoter et dessiner au bureau ; catégorie : peripheriques
+- [x] Hub USB-A multiport : brancher ses vieux périphériques sur un portable récent ; catégorie : peripheriques
+- [x] Webcam avec cache de confidentialité : sécuriser sa vie privée en visio ; catégorie : audio-visio
+- [x] Casque filaire vs sans fil pour le télétravail : latence, autonomie, fiabilité ; catégorie : audio-visio
+- [x] Écouteurs à réduction de bruit pour l'open space : alternative discrète au casque ; catégorie : audio-visio
+- [x] Bien régler sa chaise et son écran : réglages ergonomiques gratuits ; catégorie : mobilier (sans produit)
