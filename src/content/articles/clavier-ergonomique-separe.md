@@ -2,7 +2,7 @@
 title: "Clavier ergonomique séparé : à qui s'adresse ce format ?"
 description: "Un clavier ergonomique séparé déroute au début, mais soulage vraiment les poignets. Notre comparatif, le temps d'adaptation, comment choisir."
 pubDate: 2026-08-02
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Taper *sans forcer* sur les poignets"
 pinSub: "Le clavier ergonomique séparé décrypté."
@@ -75,11 +75,7 @@ Certains modèles déplacent des touches usuelles (**Entrée**, **Retour arrièr
 
 ### La connectivité
 
-Sans-fil ou filaire selon la préférence, sans impact réel sur l'ergonomie elle-même. Le sans-fil libère le bureau (l'ERGO K860, par exemple, fonctionne sur piles et se couple à trois appareils) ; le filaire évite la question des piles ou de la recharge.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix bougent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les claviers ergonomiques sur Amazon](https://www.amazon.fr/s?k=clavier+ergonomique&tag=monbureauconnecte-21).
-
+Sans-fil ou filaire selon la préférence, sans impact réel sur l'ergonomie elle-même. Le sans-fil libère le bureau (l'[ERGO K860](https://www.amazon.fr/s?k=logitech+ergo+k860+azerty&tag=monbureauconnecte-21), par exemple, fonctionne sur piles et se couple à trois appareils) ; le filaire évite la question des piles ou de la recharge.
 ## Quel modèle selon ton profil
 
 | Ton besoin | Format conseillé | Adaptation |

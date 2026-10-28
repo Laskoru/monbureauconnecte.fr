@@ -3,7 +3,7 @@ title: "Tapis de souris XXL pour le bureau : lequel choisir pour clavier et sour
 seoTitle: "Tapis de souris XXL pour le bureau : lequel choisir"
 description: "Un tapis de souris XXL unifie clavier et souris sur une seule surface fluide. Nos critères et notre sélection pour un bureau télétravail ou gaming."
 pubDate: 2026-08-18
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Clavier *et* souris, une seule surface"
 pinSub: "Le tapis XXL qui habille le bureau."
@@ -13,15 +13,16 @@ coverImage: "/covers/tapis-souris-xxl-bureau-inbody.webp"
 coverAlt: "Grand tapis de souris posé sur un bureau, avec une souris et un clavier"
 draft: false
 products:
-  - asin: "B06X19FLTC"
-    title: "Grand tapis de souris gaming Amazon Basics, 90 x 43 cm"
-    blurb: "Surface tissu lisse, base antidérapante, largement de quoi accueillir clavier et souris côte à côte."
+  - asin: "B07W6JPVPF"
+    title: "Logitech G840 XL, tapis de souris en tissu, 90 x 40 cm"
+    blurb: "Surface tissu, base en caoutchouc, 3 mm d'épaisseur : largement de quoi accueillir clavier et souris côte à côte."
+    search: "logitech g840 xl"
     pros:
       - "Accueille clavier et souris côte à côte"
-      - "Surface lisse, glisse régulière"
-      - "Base antidérapante, prix mini"
+      - "Surface tissu, glisse régulière"
+      - "Base en caoutchouc antidérapante"
     cons:
-      - "Bords non surpiqués (usure possible)"
+      - "Plus cher qu'un tapis sans marque"
       - "Encombre tout le bureau"
       - "Se salit vite (à laver)"
 interactiveGuide:
@@ -64,10 +65,6 @@ L'intérêt dépasse le simple confort de glisse. Un grand tapis protège aussi 
 - **L'épaisseur** : quelques millimètres suffisent (3 mm pour le Logitech G840 XL, par exemple). Plus épais améliore le confort au poignet mais peut légèrement déstabiliser un clavier mécanique haut.
 - **Les bords cousus** : ils évitent l'effilochage du tissu dans le temps (c'est l'argument du Corsair MM300, par exemple), surtout avec un usage quotidien intensif.
 - **L'entretien** : privilégie une surface qui se nettoie facilement au chiffon humide ; un tapis qui accumule les miettes et les traces de café sans pouvoir être nettoyé perd vite son intérêt.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les tapis de souris XXL sur Amazon](https://www.amazon.fr/s?k=tapis+de+souris+xxl&tag=monbureauconnecte-21).
-
 ## Bureautique ou gaming : un même produit convient aux deux
 
 Contrairement à ce que le vocabulaire marketing laisse penser, un tapis XXL « gaming » fonctionne tout aussi bien pour un usage bureautique pur : la seule différence tient généralement à l'esthétique (finitions RGB, imprimés) plutôt qu'à la fonction. Si l'objectif est simplement d'unifier la zone clavier-souris, un modèle sobre en noir ou gris reste le choix le plus durable visuellement, en particulier sur un [bureau assis-debout électrique](/articles/bureau-assis-debout-electrique/) où le tapis doit rester en place malgré les changements de hauteur répétés. Ce double usage en fait aussi un cadeau sans risque pour quelqu'un qui télétravaille la semaine et joue le soir, comme le montrent nos [idées cadeaux bureau et gaming par budget](/articles/idees-cadeaux-teletravail-gaming-budget/).
@@ -86,7 +83,7 @@ Côté entretien, Logitech recommande pour ses tapis en tissu un **chiffon doux 
 
 ## Notre choix
 
-Le tapis Amazon Basics au format 90 x 43 cm coche les cases essentielles pour un usage bureau au quotidien : surface tissu lisse et silencieuse, base en caoutchouc qui ne bouge pas même sur un plateau lisse, et une taille qui accueille confortablement un clavier compact et une souris sans empiéter sur le reste du bureau. Une valeur sûre plutôt qu'un choix spectaculaire, ce qui correspond bien à l'usage recherché ici.
+Le [Logitech G840 XL](https://www.amazon.fr/s?k=logitech+g840+xl&tag=monbureauconnecte-21), au format 90 x 40 cm, coche les cases essentielles pour un usage bureau au quotidien : surface tissu lisse et silencieuse, base en caoutchouc qui ne bouge pas même sur un plateau lisse, et une taille qui accueille confortablement un clavier compact et une souris sans empiéter sur le reste du bureau. Une valeur sûre plutôt qu'un choix spectaculaire, ce qui correspond bien à l'usage recherché ici.
 
 > **L'essentiel à retenir**
 > Un tapis XXL **unifie** la zone clavier + souris sur une surface lisse, protège le plateau et met fin aux zones de glisse disparates. L'essentiel : une **taille adaptée** à ton bureau (80-90 cm sur un bureau standard) et une **base antidérapante** fiable. Le **tissu tissé** est le plus polyvalent, avec des **bords cousus** pour durer. Un modèle « gaming » sobre fait parfaitement l'affaire au bureau.

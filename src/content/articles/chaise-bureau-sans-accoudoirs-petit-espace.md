@@ -3,7 +3,7 @@ title: "Chaise de bureau sans accoudoirs : le bon choix pour un petit espace"
 seoTitle: "Chaise de bureau sans accoudoirs pour un petit espace"
 description: "Pourquoi une chaise de bureau sans accoudoirs se glisse mieux sous un plateau bas ou étroit, et comment en choisir une sans sacrifier le confort."
 pubDate: 2026-08-17
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "La chaise qui *se glisse partout*"
 pinSub: "Sans accoudoirs, pour les petits espaces."
@@ -63,10 +63,6 @@ Ce choix n'est pas réservé aux petits espaces à tout prix : il convient aussi
 - **La stabilité du piètement** : sur une base à 5 branches classique, vérifier le diamètre des roulettes et leur compatibilité avec le type de sol (dures pour moquette, souples pour parquet ou carrelage).
 - **L'encombrement replié** : au-delà de la largeur de l'assise, regarder la profondeur totale une fois la chaise poussée sous le bureau, un critère qui compte autant que la largeur dans une petite pièce.
 - **La charge maximale annoncée** : les modèles les plus compacts ont souvent une base plus légère ; vérifier ce chiffre avant l'achat plutôt qu'après.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les chaises de bureau sans accoudoirs sur Amazon](https://www.amazon.fr/s?k=chaise+bureau+sans+accoudoirs&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 **Pour un bureau dans une chambre ou un studio** : privilégier le modèle le plus compact possible, quitte à perdre un peu de rembourrage, si le gain de place conditionne l'organisation de la pièce. Une chaise à accoudoirs relevables comme la SONGMICS OBN37 coche aussi cette case : accoudoirs relevés, elle se range sous le bureau une fois le travail terminé.

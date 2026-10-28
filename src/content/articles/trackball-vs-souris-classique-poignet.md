@@ -3,11 +3,11 @@ title: "Trackball vs souris classique : lequel choisir pour le poignet ?"
 seoTitle: "Trackball vs souris classique : lequel pour le poignet ?"
 description: "Douleurs au poignet avec une souris classique ? Notre comparatif trackball vs souris pour choisir selon ton usage, sans se tromper d'accessoire."
 pubDate: 2026-08-21
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Soulager le poignet, *autrement*"
 pinSub: "Trackball ou souris : le comparatif."
-keywords: ["trackball vs souris", "trackball souris poignet", "meilleur trackball 2026", "trackball ergonomique bureau"]
+keywords: ["trackball ergonomique bureau", "trackball vs souris", "trackball souris poignet", "meilleur trackball 2026"]
 category: "peripheriques"
 coverImage: "/covers/trackball-vs-souris-classique-poignet-inbody.webp"
 coverAlt: "Trackball posé sur un bureau, boule de contrôle visible"
@@ -68,14 +68,10 @@ Il faut aussi distinguer le trackball du pavé tactile qui équipe certains clav
 - **La taille de la boule** : une boule large roule plus lentement mais avec plus de précision ; une petite boule est plus rapide à faire tourner mais pardonne moins les gestes imprécis
 - **La qualité du capteur optique** : détermine la fluidité du suivi et l'absence de saccades, surtout perceptible dans les tâches de précision (retouche photo, dessin technique)
 - **Le nombre de boutons programmables** : un vrai plus pour caler des raccourcis (copier/coller, navigation, zoom) sans lever la main
-- **La connectivité** : sans-fil (Bluetooth ou récepteur USB) pour éviter tout câble qui contraint le poignet, avec une autonomie qui se compte en mois plutôt qu'en jours sur les bons modèles
+- **La connectivité** : [sans-fil](https://www.amazon.fr/s?k=logitech+ergo+m575s&tag=monbureauconnecte-21) (Bluetooth ou récepteur USB) pour éviter tout câble qui contraint le poignet, avec une autonomie qui se compte en mois plutôt qu'en jours sur les bons modèles
 - **La possibilité de nettoyer la boule** : un trackball accumule poussière et gras à cet endroit ; un modèle qui se démonte facilement pour un nettoyage rapide évite les pertes de précision avec le temps
 - **Le poids et la stabilité du boîtier** : un trackball trop léger a tendance à glisser légèrement sous la pression du pouce ou des doigts, ce qui oblige à le retenir de l'autre main en permanence ; un boîtier lesté ou muni de patins antidérapants reste immobile même en usage intensif
 - **La compatibilité multi-appareils** : plusieurs modèles récents permettent de basculer d'un ordinateur à un autre (poste pro et poste personnel, par exemple) d'une simple pression, un vrai gain de temps si tu changes souvent de machine dans la journée
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les trackballs ergonomiques sur Amazon](https://www.amazon.fr/s?k=trackball+ergonomique&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 **Pour un usage bureautique classique (mail, navigation, tableurs)**, un trackball à contrôle au pouce d'entrée ou moyenne gamme suffit largement. C'est le format le plus simple pour une première transition depuis une souris classique, avec un temps d'adaptation raisonnable.

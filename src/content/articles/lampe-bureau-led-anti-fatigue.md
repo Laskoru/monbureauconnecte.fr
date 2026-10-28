@@ -2,7 +2,7 @@
 title: "Lampe de bureau LED anti-fatigue : comment bien la choisir"
 description: "Une bonne lampe de bureau LED réduit la fatigue oculaire en fin de journée. Nos critères (température, scintillement, IRC) et un modèle qui les coche."
 pubDate: 2026-07-21
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Une lumière *qui ménage les yeux*"
 pinSub: "La lampe LED anti-fatigue bien choisie."
@@ -74,15 +74,11 @@ Passer du **blanc neutre** (journée, travail sur écran) au **blanc chaud** (so
 
 ### L'absence de scintillement
 
-Le **flicker** est un défaut invisible à l'œil nu sur certaines LED bon marché, mais responsable d'une fatigue oculaire diffuse. Cherche la mention **« sans scintillement »** ou « flicker-free ».
+Le **flicker** est un défaut invisible à l'œil nu sur certaines LED bon marché, mais responsable d'une fatigue oculaire diffuse. Cherche la mention **« sans scintillement »** ou « flicker-free » sur la fiche des [lampes de bureau LED](https://www.amazon.fr/s?k=xiaomi+lampe+de+bureau+led&tag=monbureauconnecte-21) que tu compares.
 
 ### Le bras articulé et l'IRC
 
 Un **bras articulé** oriente précisément la lumière et évite les reflets sur l'écran. Et pour un travail sur les couleurs, un **indice de rendu des couleurs (IRC) élevé**, nettement au-dessus du seuil de 80 que l'INRS retient pour un éclairage de bureau, restitue fidèlement les teintes, crucial en photo, dessin ou couture.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les lampes de bureau LED sur Amazon](https://www.amazon.fr/s?k=lampe+de+bureau+led&tag=monbureauconnecte-21).
-
 ## À poser, à pince ou sur pied ?
 
 Le format compte autant que la lumière. La lampe **à poser** (socle lesté) est la plus simple et stable, mais occupe une place sur le plateau. La lampe **à pince** se fixe sur le bord du bureau ou une étagère et libère toute la surface, idéale sur un petit bureau, à condition d'un rebord accessible. Le modèle **sur pied ou à long bras articulé** couvre un très grand plan de travail et s'écarte quand on n'en a pas besoin. Pense aussi à l'alimentation : certaines lampes intègrent une **prise USB** ou une base à **charge sans fil** pour le téléphone, ce qui libère une prise et un accessoire de plus sur le bureau.

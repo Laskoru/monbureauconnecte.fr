@@ -2,7 +2,7 @@
 title: "Lampe de luminothérapie au bureau : utile en hiver ?"
 description: "Une lampe de luminothérapie au bureau aide-t-elle vraiment contre le coup de mou hivernal ? Lux, distance, durée et précautions à connaître."
 pubDate: 2026-10-13
-updatedDate: 2026-10-13
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Un *coup de pouce* contre le coup de mou hivernal"
 pinSub: "La lampe de luminothérapie au bureau, utile ou pas."
@@ -48,13 +48,9 @@ C'est une nuance importante pour qui pense à une lampe de bureau : la plupart d
 
 ## Le protocole qui fait la différence
 
-Pour les personnes concernées par un TAS, Sante.fr indique que **60 à 90 %** ressentent une amélioration grâce à la luminothérapie, avec un protocole précis : une lampe de **10 000 lux**, utilisée à environ **30 cm** du visage, pendant **30 minutes**, dans les **2 heures** qui suivent le réveil, chaque matin. Les premiers effets peuvent apparaître après 2 à 4 jours, mais l'amélioration est en général plus nette après 1 à 2 semaines, pour un traitement qui dure habituellement 2 ou 3 semaines.
+Pour les personnes concernées par un TAS, Sante.fr indique que **60 à 90 %** ressentent une amélioration grâce à la luminothérapie, avec un protocole précis : une [lampe de **10 000 lux**](https://www.amazon.fr/s?k=beurer+lampe+luminotherapie+10000+lux&tag=monbureauconnecte-21), utilisée à environ **30 cm** du visage, pendant **30 minutes**, dans les **2 heures** qui suivent le réveil, chaque matin. Les premiers effets peuvent apparaître après 2 à 4 jours, mais l'amélioration est en général plus nette après 1 à 2 semaines, pour un traitement qui dure habituellement 2 ou 3 semaines.
 
 Pour démarrer en douceur, Sante.fr conseille une puissance plus modérée (**2 500 à 5 000 lux**) ou des séances courtes de **5 à 10 minutes**, avant d'augmenter progressivement la durée ou l'intensité. Pendant la séance, rien n'empêche de lire ou de travailler sur son ordinateur : l'essentiel est que la lumière atteigne les yeux, pas de rester immobile à la regarder.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les lampes de luminothérapie sur Amazon](https://www.amazon.fr/s?k=lampe+luminotherapie+10000+lux&tag=monbureauconnecte-21).
-
 ## Lampe de luminothérapie ou lampe de bureau classique : ne pas confondre
 
 Une [lampe de bureau LED anti-fatigue](/articles/lampe-bureau-led-anti-fatigue/) n'a pas le même rôle : elle éclaire le plan de travail à une intensité de quelques centaines de lux, suffisante pour lire ou écrire sans fatiguer les yeux, mais bien trop faible pour reproduire un protocole de luminothérapie. À l'inverse, une lampe de 10 000 lux n'est pas pensée pour rester allumée toute la journée sur le bureau : elle sert pour une séance ciblée le matin, puis l'éclairage habituel reprend le relais. Les deux usages sont complémentaires, pas interchangeables.

@@ -2,7 +2,7 @@
 title: "Port USB-C ne fonctionne plus : que vérifier ?"
 description: "Port USB-C qui ne fonctionne plus, ne charge plus ou n'affiche rien : câble, chargeur, port de charge, mode vidéo, poussière. Les vérifications utiles."
 pubDate: 2026-10-15
-updatedDate: 2026-10-15
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Ton port USB-C *ne répond plus* ?"
 pinSub: "Câble, chargeur, poussière, mode vidéo : les vrais coupables."
@@ -30,7 +30,7 @@ Un port USB-C qui ne fonctionne plus n'est pas forcément cassé. Dans la plupar
 
 Sur un même ordinateur, deux ports USB-C identiques à l'œil ne font pas forcément la même chose. Microsoft le rappelle : un port peut charger le PC, transférer des données, sortir une image vers un écran ou accepter un appareil Thunderbolt, mais tous ne savent pas tout faire. Le port de charge n'est pas toujours celui qui gère l'écran, et inversement.
 
-Le câble ajoute une couche de confusion. Microsoft précise que certains câbles compatibles USB-C ne prennent pas en charge toutes les fonctionnalités : un câble livré avec un téléphone peut charger sans jamais transporter d'image. Résultat : un écran qui reste noir avec un câble et s'allume avec un autre, sans qu'aucun port soit en panne.
+Le câble ajoute une couche de confusion. Microsoft précise que certains câbles compatibles USB-C ne prennent pas en charge toutes les fonctionnalités : un câble livré avec un téléphone peut charger sans jamais transporter d'image. Pour un écran, il faut un [câble USB-C qui transporte la vidéo](https://www.amazon.fr/s?k=ugreen+cable+usb+c+4k+100w&tag=monbureauconnecte-21), mention 4K ou DisplayPort sur la fiche. Résultat : un écran qui reste noir avec un câble et s'allume avec un autre, sans qu'aucun port soit en panne.
 
 ## Le redémarrage complet, d'abord
 

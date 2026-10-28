@@ -3,7 +3,7 @@ title: "Plante de bureau dépolluante : laquelle choisir pour un poste de travai
 seoTitle: "Plante de bureau dépolluante : laquelle choisir"
 description: "Quelle plante de bureau dépolluante choisir selon la lumière disponible et le temps que tu peux consacrer à son entretien sur ton poste de travail."
 pubDate: 2026-08-16
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Un bureau *plus sain*, plus agréable"
 pinSub: "La plante dépolluante idéale."
@@ -68,10 +68,6 @@ Le terme "dépolluante" mérite d'être nuancé. Il vient d'une étude de la NAS
 - **La résistance aux variations de température** : un bureau proche d'une fenêtre ou d'une climatisation subit des écarts de température plus marqués qu'une pièce de vie classique ; certaines plantes y sont plus sensibles que d'autres.
 - **La toxicité éventuelle** : un point à vérifier si des animaux ou de jeunes enfants ont accès au bureau à la maison. Selon l'ASPCA, la sansevieria, le pothos et le dracaena sont toxiques pour les chats et les chiens, alors que la plante araignée (chlorophytum) et le kentia ne le sont pas.
 - **Le pot et le drainage** : un pot sans trou de drainage associé à un arrosage trop généreux est la cause la plus fréquente de plante qui dépérit sur un bureau ; un pot adapté avec une soucoupe évite ce problème simple.
-
-> 🛒 **Notre sélection du moment**
-> Envie de verdir ton poste ? Pour voir les plantes d'intérieur faciles et dépolluantes disponibles : [voir les plantes dépolluantes d'intérieur sur Amazon](https://www.amazon.fr/s?k=plante+depolluante+interieur&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 **Pour un bureau sans lumière naturelle directe** : la sansevieria reste la valeur la plus sûre. Elle tolère un éclairage artificiel standard, pousse lentement, et supporte sans problème un oubli d'arrosage de plusieurs semaines pendant les vacances.

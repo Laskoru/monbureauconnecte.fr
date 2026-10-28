@@ -2,7 +2,7 @@
 title: "Idées cadeaux télétravail et gaming : le guide par budget"
 description: "Petit, moyen ou gros budget : nos idées cadeaux télétravail et gaming vraiment utiles, pour un télétravailleur ou un gamer, sans gadgets inutiles."
 pubDate: 2026-09-22
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Le bon cadeau *sans te tromper de budget*"
 pinSub: "Idées cadeaux bureau et gaming, classées par budget."
@@ -51,10 +51,6 @@ La meilleure stratégie, c'est de partir du **budget** plutôt que de l'objet en
 - Une **[plante de bureau](/articles/plante-bureau-depolluante/)**, un cadeau plus original qui améliore l'ambiance du poste de travail (son effet dépolluant, en revanche, n'est pas validé scientifiquement selon l'ADEME).
 
 Ces trois options ont un point commun : elles s'adaptent à presque n'importe quel bureau, sans avoir besoin de connaître les préférences précises de la personne.
-
-> 🛒 **Comparer les idées cadeaux du moment**
-> Pour voir les références disponibles aujourd'hui : [voir les accessoires de bureau sur Amazon](https://www.amazon.fr/s?k=accessoires+bureau+cadeau&tag=monbureauconnecte-21).
-
 ## Budget moyen : de 20 à 60 €
 
 C'est la tranche où le cadeau commence vraiment à se voir et à changer le quotidien :
@@ -70,14 +66,10 @@ C'est la tranche où le cadeau commence vraiment à se voir et à changer le quo
 Ici, le cadeau devient le genre d'objet qu'on hésite parfois à s'acheter soi-même, ce qui en fait une très bonne surprise :
 
 - Un **[casque sans fil](/articles/casque-filaire-vs-sans-fil-teletravail/)** confortable avec un bon micro, pour libérer la personne du câble pendant ses appels.
-- Un **clavier mécanique silencieux**, qui combine le plaisir de frappe des claviers mécaniques et une discrétion compatible avec l'open space ou le télétravail en appartement.
+- Un **[clavier mécanique silencieux](https://www.amazon.fr/s?k=logitech+mx+mechanical+azerty&tag=monbureauconnecte-21)**, qui combine le plaisir de frappe des claviers mécaniques et une discrétion compatible avec l'open space ou le télétravail en appartement.
 - Une **webcam avec [cache de confidentialité](/articles/webcam-cache-confidentialite/)** et une bonne qualité d'image, pour des visioconférences nettement plus nettes qu'avec la caméra intégrée d'un ordinateur portable.
 
 Ces cadeaux demandent un peu plus d'attention aux préférences de la personne (filaire ou sans fil pour le casque, disposition du clavier), mais restent des valeurs sûres si tu connais un minimum ses habitudes de travail.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références évoluent souvent selon les promotions : [voir la sélection bureau et confort sur Amazon](https://www.amazon.fr/s?k=cadeau+bureau+teletravail&tag=monbureauconnecte-21).
-
 ## Spécial gamer : ce qui fait vraiment plaisir
 
 Pour un télétravailleur qui joue aussi le soir, ou pour un gamer pur, quelques accessoires font clairement mouche sans tomber dans le gadget inutile :

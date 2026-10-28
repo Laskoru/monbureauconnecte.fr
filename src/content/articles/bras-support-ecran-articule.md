@@ -3,7 +3,7 @@ title: "Bras support écran articulé : comment bien le choisir pour ton bureau"
 seoTitle: "Bras support écran articulé : comment bien le choisir"
 description: "Un bon bras support écran libère de la place et améliore la posture. Nos critères (VESA, charge, ressort à gaz) et notre sélection, 1 ou 2 écrans."
 pubDate: 2026-08-15
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "L'écran *à la bonne hauteur*, enfin"
 pinSub: "Le bras articulé qui libère le bureau."
@@ -73,15 +73,11 @@ Chaque bras annonce une **plage de poids** (et de taille en pouces). Compare-la 
 
 ### Le système de réglage
 
-Un **ressort à gaz** permet un ajustement fluide d'une seule main : on monte, descend, incline l'écran d'un geste. Les modèles à vis, moins chers, imposent de desserrer/resserrer à chaque changement : dans les faits, on ne les règle qu'une fois.
+Un [bras à **ressort à gaz**](https://www.amazon.fr/s?k=bras+ecran+ressort+a+gaz+pince+vesa&tag=monbureauconnecte-21) permet un ajustement fluide d'une seule main : on monte, descend, incline l'écran d'un geste. Les modèles à vis, moins chers, imposent de desserrer/resserrer à chaque changement : dans les faits, on ne les règle qu'une fois.
 
 ### La gestion des câbles
 
 Un bras avec **passe-câbles** intégré garde le fil de l'écran discipliné le long du bras : un détail qui compte pour garder un bureau net.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les bras supports d'écran articulés sur Amazon](https://www.amazon.fr/s?k=bras+support+ecran+articule&tag=monbureauconnecte-21).
-
 ## Un ou deux écrans : comment choisir
 
 | Setup | Solution | À vérifier |

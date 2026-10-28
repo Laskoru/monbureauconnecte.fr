@@ -2,7 +2,7 @@
 title: "Repose-pieds ergonomique de bureau : utile ou gadget ?"
 description: "Un repose-pieds ergonomique améliore-t-il vraiment la posture au bureau ? Ce qu'il change, nos critères de choix et un modèle réglable conseillé."
 pubDate: 2026-07-18
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Les jambes *soulagées* toute la journée"
 pinSub: "Repose-pieds : utile ou gadget ?"
@@ -68,15 +68,11 @@ Au moins **2 à 3 paliers** pour s'adapter à différentes chaises et différent
 
 ### L'inclinaison réglable
 
-Elle permet d'**alterner les angles** au fil de la journée plutôt que de garder les pieds à plat en permanence. Certains modèles proposent même une légère **bascule** qui sollicite doucement les mollets.
+Elle permet d'**alterner les angles** au fil de la journée plutôt que de garder les pieds à plat en permanence. Certains modèles proposent même une [légère **bascule**](https://www.amazon.fr/s?k=fellowes+repose+pieds+bascule&tag=monbureauconnecte-21) qui sollicite doucement les mollets.
 
 ### La stabilité et la surface
 
 Une **surface antidérapante** évite que le repose-pieds glisse au moindre mouvement, surtout sur sol dur. Un **socle assez lourd** ne bascule pas sous la pression. Enfin, un **revêtement texturé ou en mousse** est bien plus agréable qu'un plastique dur sous les pieds pendant des heures.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les repose-pieds ergonomiques sur Amazon](https://www.amazon.fr/s?k=repose-pieds+ergonomique+bureau&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 | Ton cas | Modèle conseillé |

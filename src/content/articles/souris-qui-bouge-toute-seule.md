@@ -2,7 +2,7 @@
 title: "Souris qui bouge toute seule : causes et solutions"
 description: "Souris qui bouge toute seule, curseur qui saute ou souris trop sensible : surface, capteur, piles, pavé tactile et vitesse du pointeur à vérifier."
 pubDate: 2026-10-15
-updatedDate: 2026-10-15
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Ta souris *bouge toute seule* ?"
 pinSub: "Surface, capteur, piles, pavé tactile : les vraies causes."
@@ -44,7 +44,7 @@ Un bureau en verre, très à la mode, est la cause idéale d'un curseur qui saut
 
 Une batterie faible ou vide perturbe directement les mouvements du curseur. C'est la cause la plus banale et la plus oubliée, parce que la souris continue de s'allumer. Remplace les piles ou recharge-la complètement avant de chercher plus loin.
 
-Le signal compte autant. Logitech recommande de déplacer le récepteur ou de rapprocher la souris de celui-ci. Un récepteur USB branché à l'arrière d'une tour, derrière un boîtier métallique, ou au milieu d'autres dongles reçoit mal. Une rallonge USB qui ramène le récepteur sur le bureau change souvent tout.
+Le signal compte autant. Logitech recommande de déplacer le récepteur ou de rapprocher la souris de celui-ci. Un récepteur USB branché à l'arrière d'une tour, derrière un boîtier métallique, ou au milieu d'autres dongles reçoit mal. Une [rallonge USB](https://www.amazon.fr/s?k=ugreen+rallonge+usb+3.0&tag=monbureauconnecte-21) qui ramène le récepteur sur le bureau change souvent tout.
 
 ## Pavé tactile : le faux coupable des portables
 

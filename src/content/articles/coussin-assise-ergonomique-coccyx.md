@@ -2,7 +2,7 @@
 title: "Coussin d'assise ergonomique : soulager le coccyx au bureau"
 description: "Comment choisir un coussin d'assise ergonomique pour soulager le coccyx et le bas du dos en position assise prolongée au bureau."
 pubDate: 2026-08-16
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Rester assis *sans douleur*"
 pinSub: "Le coussin qui soulage le coccyx."
@@ -75,15 +75,11 @@ Un coussin a ses limites. Il soulage une pression mécanique et améliore le con
 
 **Pour un inconfort léger, en prévention** : un coussin en mousse à mémoire de forme standard, avec une découpe en U modérée, suffit largement. Pas besoin de viser le modèle le plus épais ni le plus technique si la gêne n'est pas encore installée.
 
-**Pour une douleur déjà présente au coccyx** : privilégier une découpe en U bien marquée et une densité de mousse plus élevée, quitte à payer un peu plus cher. L'objectif est de retirer complètement l'appui sur cette zone, pas seulement de l'amortir.
+**Pour une douleur déjà présente au coccyx** : privilégier une [découpe en U bien marquée](https://www.amazon.fr/s?k=fellowes+coussin+assise+coccyx&tag=monbureauconnecte-21) et une densité de mousse plus élevée, quitte à payer un peu plus cher. L'objectif est de retirer complètement l'appui sur cette zone, pas seulement de l'amortir.
 
 **Pour un usage nomade (bureau, voiture, déplacements)** : chercher un modèle avec poignée de transport intégrée et housse facilement lavable, plus important dans ce cas que l'épaisseur maximale, qui peut nuire à la portabilité.
 
 **Pour les fortes chaleurs ou une pièce mal ventilée** : un coussin en gel ou à housse respirante limite l'effet « assise qui chauffe » que peut donner une mousse à mémoire de forme classique sur plusieurs heures d'affilée.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les coussins d'assise ergonomiques sur Amazon](https://www.amazon.fr/s?k=coussin+assise+ergonomique+coccyx&tag=monbureauconnecte-21).
-
 ## Entretien et bons réflexes d'usage
 
 Un coussin ergonomique perd de son efficacité s'il n'est pas entretenu régulièrement, notamment parce que l'humidité et la transpiration accumulées finissent par tasser la mousse plus vite que l'usage seul. Retirer et laver la housse régulièrement en usage quotidien permet de conserver ses propriétés plus longtemps.

@@ -3,7 +3,7 @@ title: "Clavier compact TKL : gagner de la place pour la souris sur un petit bur
 seoTitle: "Clavier TKL compact : gagner de la place pour la souris"
 description: "Le clavier TKL, sans pavé numérique, libère de l'espace pour la souris. Nos critères pour bien le choisir et notre sélection pour le bureau."
 pubDate: 2026-08-24
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Plus de place pour *la souris*"
 pinSub: "Le clavier compact TKL, bien choisi."
@@ -63,16 +63,12 @@ C'est aussi un choix qui a du sens pour qui travaille sur un support d'ordinateu
 ## Les critères qui font vraiment la différence
 
 - **La largeur réelle du clavier** : vérifie les dimensions annoncées plutôt que de te fier au terme « compact », qui recouvre des tailles assez différentes selon les marques et les gammes.
-- **La présence des touches de navigation** : un vrai TKL garde les flèches, Inser/Suppr, Origine/Fin et Pg préc/suiv à droite des lettres. Un format encore plus réduit (75 %, 65 % ou 60 %, comme le Logitech MX Keys Mini en 75 %) supprime tout ou partie de ces touches ou les renvoie sur la touche Fn, ce qui demande un vrai temps d'adaptation pour qui les utilise souvent.
+- **La présence des touches de navigation** : un [vrai TKL](https://www.amazon.fr/s?k=clavier+tkl+azerty+logitech&tag=monbureauconnecte-21) garde les flèches, Inser/Suppr, Origine/Fin et Pg préc/suiv à droite des lettres. Un format encore plus réduit (75 %, 65 % ou 60 %, comme le Logitech MX Keys Mini en 75 %) supprime tout ou partie de ces touches ou les renvoie sur la touche Fn, ce qui demande un vrai temps d'adaptation pour qui les utilise souvent.
 - **La connectivité** : filaire, Bluetooth ou récepteur USB. Le sans-fil simplifie le rangement et le nettoyage du bureau, mais vérifie l'autonomie annoncée si tu comptes t'en servir plusieurs heures par jour.
 - **Le type de frappe** : à membrane (plus silencieux et économique) ou mécanique (frappe plus précise, souvent plus bruyante sauf sur les switches dits « silencieux »). Si le bruit en open space ou en visio est un vrai sujet, notre comparatif des [claviers mécaniques silencieux](/articles/claviers-mecaniques-silencieux/) détaille les switches à privilégier.
 - **La disposition AZERTY complète** : certains modèles compacts, pensés d'abord pour un marché anglophone, réorganisent ou suppriment des touches spécifiques au français (accents, touches mortes). À vérifier avant d'acheter, surtout sur les modèles gaming importés.
 - **La compatibilité multi-appareils** : utile si tu bascules régulièrement entre un ordinateur professionnel et un ordinateur personnel dans la même journée.
 - **La qualité de fabrication du châssis** : un clavier compact repose souvent sur un socle plus fin qu'un clavier complet ; vérifie qu'il ne fléchit pas au centre lors d'une frappe rapide, un défaut fréquent sur les modèles d'entrée de gamme les moins chers.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les claviers compacts sans pavé numérique sur Amazon](https://www.amazon.fr/s?k=clavier+compact+sans+pave+numerique&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 Pour un usage bureautique classique (mails, navigateur, traitement de texte, tableur avec peu de saisie numérique), un TKL sans fil à membrane suffit largement et reste le choix le plus économique. L'essentiel du bénéfice (place gagnée pour la souris) est déjà là, sans surcoût lié à la frappe mécanique.

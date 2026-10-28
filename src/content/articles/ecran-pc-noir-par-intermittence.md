@@ -3,7 +3,7 @@ title: "Écran PC qui devient noir par intermittence : le diagnostic"
 seoTitle: "Écran PC qui devient noir puis revient : les causes"
 description: "Ton écran devient noir puis revient ? Câble, pilote graphique, veille USB ou fréquence d'affichage : la méthode pour trouver la cause, étape par étape."
 pubDate: 2026-09-29
-updatedDate: 2026-10-14
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Ton écran devient noir *sans prévenir* ?"
 pinSub: "Le diagnostic étape par étape, du câble à la carte graphique."
@@ -65,7 +65,7 @@ Deux réglages à vérifier dans les Paramètres d'alimentation de Windows : dé
 
 Un écran réglé sur une fréquence de rafraîchissement supérieure à ce que le câble ou le port peut transmettre de façon stable (144 Hz ou plus sur un câble ancien, par exemple) provoque des coupures qui ressemblent à un écran noir intermittent plutôt qu'à un vrai scintillement. C'est fréquent après une mise à jour Windows qui réinitialise la fréquence par défaut, ou après avoir forcé manuellement une fréquence plus haute que celle recommandée par le fabricant de l'écran.
 
-Dans les Paramètres d'affichage de Windows (Paramètres avancés d'affichage), reviens temporairement à la fréquence recommandée par défaut pour voir si les coupures disparaissent. Si c'est le cas, le câble ou le port vidéo limite la bande passante disponible pour la fréquence plus élevée : un câble récent et certifié pour la norme utilisée (DisplayPort certifié VESA, HDMI Premium High Speed ou Ultra High Speed) résout généralement le problème sans rien changer d'autre.
+Dans les Paramètres d'affichage de Windows (Paramètres avancés d'affichage), reviens temporairement à la fréquence recommandée par défaut pour voir si les coupures disparaissent. Si c'est le cas, le câble ou le port vidéo limite la bande passante disponible pour la fréquence plus élevée : un câble récent et certifié pour la norme utilisée (DisplayPort certifié VESA, HDMI Premium High Speed ou [Ultra High Speed](https://www.amazon.fr/s?k=ugreen+cable+hdmi+2.1+8k&tag=monbureauconnecte-21)) résout généralement le problème sans rien changer d'autre.
 
 Le même mécanisme touche les résolutions personnalisées créées dans le panneau du pilote graphique : une résolution ou une fréquence ajoutée manuellement au-delà des valeurs listées par défaut par l'écran peut fonctionner un temps puis provoquer des coupures aléatoires, car elle pousse le câble et l'écran hors des valeurs qu'ils sont censés tenir. Supprimer cette résolution personnalisée et revenir aux valeurs proposées nativement par l'écran élimine cette variable avant de chercher plus loin.
 

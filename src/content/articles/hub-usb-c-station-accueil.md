@@ -3,11 +3,11 @@ title: "Hub USB-C et station d'accueil : lequel choisir ?"
 seoTitle: "Hub USB-C ou station d'accueil : lequel choisir ?"
 description: "Hub USB-C ou station d'accueil ? La vraie différence (écrans, Ethernet, charge), le bon choix selon ton setup et le piège de compatibilité à éviter."
 pubDate: 2026-07-27
-updatedDate: 2026-10-14
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Tout brancher *d'un seul câble*"
 pinSub: "Le hub USB-C / station idéal."
-keywords: ["hub usb-c ou station d'accueil", "station d'accueil usb-c", "hub usb-c télétravail", "dock usb-c ordinateur portable", "hub usb-c 2026"]
+keywords: ["station d'accueil usb-c", "hub usb-c ou station d'accueil", "hub usb-c télétravail", "dock usb-c ordinateur portable", "hub usb-c 2026"]
 category: "peripheriques"
 coverAlt: "Ordinateur portable connecté à un moniteur externe sur un bureau"
 draft: false
@@ -94,15 +94,11 @@ Une station qui délivre **100 W** recharge la plupart des portables via le mêm
 
 ### Le port Ethernet
 
-En visio ou pour de gros transferts, une connexion **filaire** est bien plus stable qu'un Wi-Fi partagé. C'est souvent ce qui distingue une vraie station d'un simple hub.
+En visio ou pour de gros transferts, une connexion **filaire** est bien plus stable qu'un Wi-Fi partagé. C'est souvent ce qui distingue une [vraie station avec port Ethernet](https://www.amazon.fr/s?k=ugreen+station+accueil+usb+c+ethernet+double+hdmi&tag=monbureauconnecte-21) d'un simple hub.
 
 ### Les ports USB-A restants et la compatibilité
 
 Beaucoup d'accessoires (souris, clavier, clés) sont encore en **USB-A** : vérifie qu'il en reste assez. Et surtout, contrôle la **compatibilité** avec ta machine : c'est là que se cachent les mauvaises surprises, notamment le double écran sur Mac (voir la FAQ).
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les stations d'accueil USB-C sur Amazon](https://www.amazon.fr/s?k=station+d+accueil+usb-c&tag=monbureauconnecte-21).
-
 ## Quel modèle selon ton setup
 
 | Ton setup | Solution | Points à vérifier |

@@ -2,7 +2,7 @@
 title: "Repose-poignet clavier et souris : lequel choisir ?"
 description: "Tensions au poignet en tapant ou en cliquant ? Notre guide pour bien choisir un repose-poignet clavier et souris efficace, sans se tromper."
 pubDate: 2026-08-23
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Des poignets *sans tension*"
 pinSub: "Le repose-poignet clavier + souris."
@@ -73,16 +73,12 @@ C'est aussi l'accessoire le plus simple à essayer en premier : contrairement à
 
 ## Les critères qui font vraiment la différence
 
-- **Le matériau** : gel (frais, léger effet massant) ou mousse à mémoire de forme (s'adapte à la morphologie de la main, plus moelleuse). Les deux sont valables ; évite en revanche les modèles en mousse basique bon marché qui s'écrasent et perdent tout soutien après quelques semaines d'usage quotidien.
+- **Le matériau** : [gel](https://www.amazon.fr/s?k=fellowes+repose+poignet+gel+clavier&tag=monbureauconnecte-21) (frais, léger effet massant) ou mousse à mémoire de forme (s'adapte à la morphologie de la main, plus moelleuse). Les deux sont valables ; évite en revanche les modèles en mousse basique bon marché qui s'écrasent et perdent tout soutien après quelques semaines d'usage quotidien.
 - **La hauteur du repose-poignet** : elle doit correspondre à celle du clavier ou de la souris utilisée. Trop bas, il ne sert à rien ; trop haut, il force le poignet dans l'autre sens (en flexion), ce qui est tout aussi problématique. Pour un clavier plat, un modèle fin suffit le plus souvent ; réserve les modèles épais aux claviers hauts, mécaniques notamment.
 - **La base antidérapante** : indispensable pour qu'il ne glisse pas à chaque appui, surtout sur un bureau en verre ou en stratifié lisse. Vérifie la présence d'un revêtement en caoutchouc ou silicone sous l'accessoire.
 - **La longueur pour le clavier** : elle doit couvrir toute la largeur du clavier, sans quoi les poignets reposent alternativement sur l'accessoire puis sur le bureau nu selon la zone de frappe utilisée.
 - **La housse et l'entretien** : une housse en tissu doux, lavable ou au moins nettoyable à l'éponge, évite l'accumulation de saleté sur un accessoire en contact direct et prolongé avec la peau.
 - **La compatibilité avec ton clavier ou ta souris actuels** : un repose-poignet pour souris doit correspondre à peu près à la taille de la souris posée dessus ; un modèle trop petit ou trop grand rend l'ensemble instable.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les repose-poignets clavier et souris sur Amazon](https://www.amazon.fr/s?k=repose-poignet+clavier+souris&tag=monbureauconnecte-21).
-
 ## Quel repose-poignet pour clavier et souris selon ton usage
 
 **Si tu commences tout juste à ressentir des tensions au poignet**, vérifie d'abord les réglages du poste ; si la gêne reste, un set clavier + souris en gel est le point d'entrée le plus logique : investissement limité, mise en place immédiate, et un moyen simple de voir si un appui au repos te soulage. C'est aussi l'option la plus pertinente si tu ne sais pas encore si le problème vient du clavier, de la souris, ou des deux.

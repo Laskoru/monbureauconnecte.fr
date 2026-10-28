@@ -3,7 +3,7 @@ title: "Support ordinateur portable ergonomique : pourquoi c'est presque indispe
 seoTitle: "Support ordinateur portable ergonomique : indispensable ?"
 description: "Un portable posé à plat fatigue vite la nuque. Nos critères pour choisir un support d'ordinateur portable ergonomique, avec clavier externe."
 pubDate: 2026-07-30
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "L'écran *à hauteur des yeux*"
 pinSub: "Le support portable presque indispensable."
@@ -81,11 +81,7 @@ L'ordinateur surélevé doit rester **parfaitement stable**, même si tu tapes s
 
 ### Le poids et la pliabilité
 
-Critère décisif si le support fait l'aller-retour **bureau/domicile** : un modèle pliable et léger se transporte sans effort, au prix de quelques réglages en moins.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les supports pour ordinateur portable sur Amazon](https://www.amazon.fr/s?k=support+ordinateur+portable&tag=monbureauconnecte-21).
-
+Critère décisif si le support fait l'aller-retour **bureau/domicile** : un [modèle pliable et léger](https://www.amazon.fr/s?k=support+ordinateur+portable+pliable+reglable+hauteur&tag=monbureauconnecte-21) se transporte sans effort, au prix de quelques réglages en moins.
 ## Quel support selon ton usage
 
 | Ton usage | Support conseillé | Pourquoi |

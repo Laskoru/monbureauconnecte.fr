@@ -3,7 +3,7 @@ title: "Souris gaming au bureau : DPI et boutons programmables au quotidien"
 seoTitle: "Souris gaming pour le travail : DPI et boutons utiles"
 description: "Une souris gaming pour le travail ? DPI réglable, boutons programmables et macros : notre guide pour bien la choisir, loin des clichés du RGB."
 pubDate: 2026-08-26
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Des raccourcis *sous le pouce*"
 pinSub: "La souris gaming qui accélère ta journée de travail."
@@ -60,14 +60,10 @@ Une souris bureautique classique propose en général un clic gauche, un clic dr
 - **Le nombre de boutons programmables et leur accessibilité** : plus il y en a, plus tu peux automatiser de tâches, mais encore faut-il qu'ils soient placés là où le pouce ou l'annulaire les atteignent naturellement, sans devoir lâcher la souris ou changer de prise en main pour appuyer dessus.
 - **Le logiciel de personnalisation** : c'est lui qui permet d'assigner macros, raccourcis clavier ou lancements d'application à chaque bouton, et de sauvegarder plusieurs profils différents selon le logiciel utilisé. Un bon logiciel doit rester simple à configurer, sans obliger à créer un compte ou installer une usine à gaz.
 - **Le réglage du DPI à la volée** : au bureau, un DPI élevé n'est pas prioritaire, mais pouvoir le baisser d'un clic pour un travail de précision (retouche photo, dessin vectoriel) ou le remonter pour naviguer vite sur un grand écran est un vrai confort au quotidien. Pour dessiner ou signer à main levée, en revanche, un stylet reste plus naturel : voir notre guide de la [tablette graphique pas chère](/articles/tablette-graphique-entree-de-gamme/).
-- **La molette à débrayage libre** : certains modèles haut de gamme permettent de basculer entre une molette crantée classique et un mode "libre" qui tourne sans résistance, pratique pour défiler très vite dans un long document ou un tableau de plusieurs centaines de lignes.
+- **La molette à débrayage libre** : certains [modèles haut de gamme](https://www.amazon.fr/s?k=razer+basilisk+v3+pro&tag=monbureauconnecte-21) permettent de basculer entre une molette crantée classique et un mode "libre" qui tourne sans résistance, pratique pour défiler très vite dans un long document ou un tableau de plusieurs centaines de lignes.
 - **La connectique** : filaire, sans fil via dongle 2,4 GHz, ou Bluetooth. Le sans-fil libère le bureau des câbles, mais vérifie l'autonomie réelle annoncée, surtout si le rétroéclairage RGB reste actif en continu.
 - **Le poids et la forme** : les souris gaming sont souvent plus lourdes et plus texturées qu'une souris bureautique fine, pensées pour une prise en main ferme sur plusieurs heures. Ce n'est ni un avantage ni un inconvénient en soi, mais un critère à vérifier selon la taille de ta main.
 - **Le capteur optique** : les capteurs des souris gaming sont en général plus précis et plus réactifs que ceux des modèles d'entrée de gamme, ce qui se traduit par moins de saccades ou de pertes de suivi, même sur un usage purement bureautique.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les souris gaming à boutons programmables sur Amazon](https://www.amazon.fr/s?k=souris+gaming+programmable&tag=monbureauconnecte-21).
-
 ## Les idées reçues à laisser de côté
 
 Le RGB est sans doute le premier réflexe qui vient à l'esprit quand on pense "souris gaming", et c'est aussi le critère le moins utile au bureau. Un éclairage coloré n'apporte rien à la productivité ; la plupart des modèles permettent de le désactiver entièrement via le logiciel, ce qui a même l'avantage de préserver l'autonomie sur un modèle sans fil (Logitech annonce 130 heures sans éclairage pour sa G502 X Plus, 37 heures avec).

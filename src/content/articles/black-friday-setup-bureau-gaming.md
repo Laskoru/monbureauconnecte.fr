@@ -2,7 +2,7 @@
 title: "Black Friday setup bureau : quoi acheter maintenant"
 description: "Black Friday setup bureau : chaise, écran, PC gaming ou accessoires, ce qu'il vaut mieux attendre et ce que tu peux acheter dès maintenant sans regret."
 pubDate: 2026-09-24
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Le Black Friday, *sans te faire avoir*"
 pinSub: "Ce qu'il faut attendre, ce qu'il faut acheter maintenant."
@@ -13,7 +13,7 @@ draft: false
 topPick:
   name: "Multiprise parasurtenseur"
   blurb: "Avant de craquer sur un écran ou un PC gaming neuf pendant le Black Friday, protège-le : une multiprise parasurtenseur coûte trois fois rien face au prix d'un appareil à remplacer après une surtension."
-  url: "https://www.amazon.fr/s?k=multiprise+parasurtenseur&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=multiprise+parafoudre+apc+surgearrest&tag=monbureauconnecte-21"
   ctaLabel: "Voir les multiprises parasurtenseur sur Amazon"
 comparison:
   columns: ["Catégorie", "Attendre le Black Friday ?", "Pourquoi"]
@@ -65,9 +65,6 @@ Le **PC gaming complet** et les **composants** (carte graphique en tête) mérit
 
 Autrement dit : le Black Friday sert à économiser sur du matériel que tu peux attendre sereinement, pas à repousser un besoin urgent.
 
-> 🛒 **Comparer les prix du moment**
-> Les tarifs bougent vite d'une semaine à l'autre : [voir le matériel setup bureau et gaming sur Amazon](https://www.amazon.fr/s?k=setup+bureau+gaming&tag=monbureauconnecte-21).
-
 ## Comment repérer une vraie promo (et éviter les fausses)
 
 Le piège classique : un prix barré très élevé, comparé à un prix « Black Friday » qui, en réalité, ressemble beaucoup au prix normal du produit. Trois réflexes simples permettent d'éviter ce genre de fausse bonne affaire :
@@ -85,7 +82,7 @@ Quelques réflexes simples pour aborder la période sereinement plutôt que dans
 - **Fais ta liste avant**, pas le jour même. Note les produits qui t'intéressent et leur prix actuel, pour comparer facilement le jour J.
 - **Fixe-toi un budget global** pour éviter l'effet d'entraînement des promos qui s'enchaînent.
 - **Priorise un ou deux postes**, plutôt que de vouloir tout changer d'un coup. Notre [comparatif du coût réel d'un setup gaming complet](/articles/cout-reel-setup-gaming-complet/) aide à voir où concentrer le budget en premier.
-- **Protège ce que tu achètes** : un nouvel écran ou un nouveau PC mérite une bonne multiprise parasurtenseur, pour ne pas perdre le bénéfice de la promo à la première surtension.
+- **Protège ce que tu achètes** : un nouvel écran ou un nouveau PC mérite une bonne [multiprise parasurtenseur](https://www.amazon.fr/s?k=multiprise+parafoudre+apc+surgearrest&tag=monbureauconnecte-21), pour ne pas perdre le bénéfice de la promo à la première surtension.
 - **Pense aux cadeaux de fin d'année en même temps** : si tu comptes offrir du matériel, nos [idées cadeaux télétravail et gaming classées par budget](/articles/idees-cadeaux-teletravail-gaming-budget/) t'aident à fixer ta liste avant que les offres s'enchaînent.
 - **Ne coche pas l'extension de garantie par réflexe** : un écran ou un PC neuf a déjà deux ans de garantie légale, et ce guide aide à voir [quand une extension de garantie vaut vraiment son prix](https://www.quellegarantie.fr/articles/extension-de-garantie-vaut-elle-le-coup/).
 
@@ -98,6 +95,3 @@ Deux conséquences pratiques : si tu vises surtout un écran ou un PC gaming, ri
 ## Webcam, casque : la même logique s'applique
 
 Pour les périphériques audio et vidéo, la règle reste la même : compare avant de valider. Notre guide sur le [choix d'une webcam 1080p ou 4K](/articles/webcams-1080p-vs-4k/) permet de savoir quel niveau de qualité viser avant de se laisser tenter par une remise sur un modèle surdimensionné pour ton usage réel (une 4K a peu d'intérêt si ta connexion ou ton logiciel de visio compresse déjà fortement l'image).
-
-> 🛒 **Voir les offres bureau et gaming**
-> Pour comparer les références disponibles en ce moment : [voir la sélection setup bureau sur Amazon](https://www.amazon.fr/s?k=accessoires+bureau+black+friday&tag=monbureauconnecte-21).

@@ -3,7 +3,7 @@ title: "Caisson de rangement sous bureau : libérer le plateau sans encombrer"
 seoTitle: "Caisson de rangement sous bureau : bien le choisir"
 description: "Caisson de rangement sous bureau : roulettes ou fixe, tiroirs, serrure, hauteur sous le plateau. Les critères pour bien le choisir et libérer ton bureau."
 pubDate: 2026-08-16
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Un plateau *enfin dégagé*"
 pinSub: "Le caisson qui range tout, discret."
@@ -72,17 +72,13 @@ Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantag
 
 ## Comment choisir selon ton usage
 
-**Pour un bureau à la maison, usage quotidien léger** : un caisson compact à deux ou trois compartiments, avec au moins un tiroir fermé, couvre largement les besoins d'un poste de télétravail classique.
+**Pour un bureau à la maison, usage quotidien léger** : un [caisson compact à roulettes](https://www.amazon.fr/s?k=vasagle+caisson+bureau+roulettes&tag=monbureauconnecte-21) à deux ou trois compartiments, avec au moins un tiroir fermé, couvre largement les besoins d'un poste de télétravail classique.
 
 **Pour un usage professionnel avec des documents à protéger** : privilégier un modèle avec tiroir verrouillable et une structure plus robuste, quitte à sacrifier un peu de mobilité au profit de la sécurité.
 
 **Pour un espace très réduit** : chercher un modèle étroit et haut plutôt que large, ou une version sans roulettes qui se glisse dans un renfoncement précis sans laisser de jeu.
 
 **Pour un poste partagé ou souvent réorganisé** : les roulettes deviennent presque indispensables, pour pouvoir déplacer le caisson d'un bureau à l'autre sans avoir à le vider et le recharger à chaque fois.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les caissons de rangement à roulettes sur Amazon](https://www.amazon.fr/s?k=caisson+rangement+bureau+roulettes&tag=monbureauconnecte-21).
-
 ## Bien l'installer pour qu'il reste utile
 
 Un caisson de rangement mal positionné finit vite relégué contre un mur, loin du bureau, et perd tout son intérêt. Le placer directement sous le plateau, du côté de la main dominante, permet d'ouvrir les tiroirs sans avoir à se lever ni à pivoter tout le corps. Si le bureau est du type assis-debout électrique, il faut aussi vérifier que le caisson ne vient pas heurter le mécanisme de levage ou les câbles d'alimentation lorsque la hauteur change, ce qui peut arriver avec des modèles trop larges positionnés trop près du pied central.

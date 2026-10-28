@@ -3,7 +3,7 @@ title: "Quel clavier mécanique silencieux pour l'open space et la visio ?"
 seoTitle: "Clavier mécanique silencieux pour l'open space et la visio"
 description: "Notre sélection de claviers mécaniques silencieux pour taper sans déranger en open space ou en visio : quels switches, quel format, les pièges."
 pubDate: 2026-08-07
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "La frappe mécanique, *en silence*"
 pinSub: "Les claviers silencieux pour l'open space."
@@ -67,7 +67,7 @@ Le bruit d'un clavier mécanique vient surtout de son type de **switch**. Trois 
 - **Tactiles (bruns)** : une petite bosse signale l'activation, appréciée en bureautique. Les versions silencieuses réduisent le bruit tout en gardant ce retour tactile.
 - **Clicky (bleus)** : un clic sonore volontaire à chaque frappe. Très satisfaisant… et **à proscrire** en environnement partagé ou en visio.
 
-Retiens surtout le mot **« silent »** ou **« silencieux »** dans le nom du switch : un mécanique « normal » présenté comme « moins bruyant » ne vaut pas un vrai switch conçu pour le silence.
+Retiens surtout le mot **« silent »** ou **« silencieux »** dans le nom du switch (par exemple les [Cherry MX Silent Red](https://www.amazon.fr/s?k=clavier+cherry+mx+silent+red+azerty&tag=monbureauconnecte-21)) : un mécanique « normal » présenté comme « moins bruyant » ne vaut pas un vrai switch conçu pour le silence.
 
 ## Ce qui compte, au-delà du switch
 
@@ -76,10 +76,6 @@ Retiens surtout le mot **« silent »** ou **« silencieux »** dans le nom du s
 - **La connectivité** : sans-fil (Bluetooth ou récepteur USB) pour un bureau dégagé ; vérifie l'autonomie annoncée.
 - **La compatibilité multi-appareils** : pratique si tu alternes entre un ordinateur pro et un ordinateur personnel dans la même journée.
 - **La disposition AZERTY** : à confirmer, surtout sur les modèles importés d'abord pensés pour le QWERTY.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix bougent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les claviers mécaniques silencieux sur Amazon](https://www.amazon.fr/s?k=clavier+mecanique+silencieux&tag=monbureauconnecte-21).
-
 ## Quel profil de switch selon l'environnement
 
 | Environnement | Switch conseillé | À éviter |

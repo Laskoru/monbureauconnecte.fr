@@ -3,7 +3,7 @@ title: "Tabouret assis-debout (siège selle) : bien choisir pour un bureau haut"
 seoTitle: "Tabouret assis-debout (siège selle) : bien choisir"
 description: "Comment choisir un tabouret assis-debout ou un siège selle pour varier les appuis derrière un bureau haut, sans fatigue ni mauvaise surprise."
 pubDate: 2026-08-16
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Bouger *en travaillant*"
 pinSub: "Le tabouret assis-debout bien choisi."
@@ -62,15 +62,11 @@ Ce n'est pas un gadget réservé aux passionnés d'ergonomie. C'est un compléme
 
 - **La plage de hauteur réglable** : plus elle est large, plus le tabouret s'adapte à un bureau fixe classique et à un bureau assis-debout relevé. Une plage étroite limite son usage à une seule configuration.
 - **La stabilité de la base** : un pied large avec des patins antidérapants évite les glissades sur un sol dur, surtout en carrelage ou parquet verni. Une base trop étroite donne une impression d'instabilité qui décourage l'usage régulier.
-- **Le type d'assise (ronde, ovale ou selle)** : l'assise ronde classique convient à la plupart des morphologies et demande peu d'adaptation ; l'assise type selle ouvre davantage l'angle des hanches mais demande quelques jours d'habitude, en particulier pour les personnes peu habituées à ce genre de position.
+- **Le type d'assise (ronde, ovale ou selle)** : l'assise ronde classique convient à la plupart des morphologies et demande peu d'adaptation ; l'[assise type selle](https://www.amazon.fr/s?k=songmics+tabouret+selle+ergonomique&tag=monbureauconnecte-21) ouvre davantage l'angle des hanches mais demande quelques jours d'habitude, en particulier pour les personnes peu habituées à ce genre de position.
 - **L'amplitude de bascule** : un tabouret purement statique n'apporte pas grand-chose de plus qu'une chaise sans dossier. L'intérêt réside dans le mouvement libre à 360° ou l'inclinaison qui accompagne les changements de posture naturels.
 - **Le poids et la portabilité** : dans un bureau partagé ou pour un usage occasionnel, un modèle léger, facile à glisser sous le bureau ou à déplacer d'un poste à l'autre, est plus pratique qu'un tabouret volumineux fixe.
 - **La charge maximale annoncée** : un point à vérifier avant l'achat, en particulier sur les modèles les plus légers, dont la base étroite limite souvent le poids admissible.
 - **La présence d'un repose-pieds** : en position haute, les pieds ne touchent plus le sol. Sans repose-pieds réglable, tout le poids des jambes tire sur les cuisses et l'assise devient vite désagréable.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les tabourets assis-debout et sièges selle sur Amazon](https://www.amazon.fr/s?k=tabouret+assis-debout+selle&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 **Pour des sessions longues derrière un plan de travail haut** : un siège assis-debout doté d'un dossier et d'un repose-pieds réglable soulage nettement plus qu'un tabouret nu. Le dossier ne sert pas à s'avachir mais à caler ponctuellement le bas du dos, et le repose-pieds évite que les jambes pendent dans le vide en position haute.

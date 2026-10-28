@@ -3,7 +3,7 @@ title: "Combien coûte vraiment un setup gaming complet ?"
 seoTitle: "Combien coûte un setup gaming complet ? Le vrai budget"
 description: "Combien coûte un setup gaming complet ? PC, écran, périphériques, siège et bureau : le vrai budget poste par poste, et où économiser sans regret."
 pubDate: 2026-09-12
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Le *vrai* prix d'un setup gaming"
 pinSub: "Poste par poste, sans mauvaise surprise."
@@ -69,17 +69,13 @@ Fais le total et l'ordre de grandeur devient clair : un setup gaming complet et 
 Tous les postes ne se valent pas dans le temps. Pour bien répartir, sépare ce qu'il ne faut pas brader de ce sur quoi tu peux lever le pied.
 
 **À ne pas brader :**
-- **L'alimentation du PC** : elle protège tous les autres composants. Une alim au rabais est une fausse économie qui peut coûter cher.
+- **[L'alimentation du PC](https://www.amazon.fr/s?k=alimentation+pc+80+plus+gold+corsair&tag=monbureauconnecte-21)** : elle protège tous les autres composants. Une alim au rabais est une fausse économie qui peut coûter cher.
 - **Le siège** : c'est ton dos qui paie l'addition d'une mauvaise chaise. Un bon [siège gaming](/articles/meilleures-chaises-gaming/) se garde des années.
 - **L'écran** si tu joues beaucoup : c'est lui qui fait l'expérience au quotidien, et un bon écran survit à plusieurs générations de PC.
 
 **Où lever le pied sans regret :**
 - **L'esthétique pure** (RGB, boîtier tape-à-l'œil) : joli, mais sans effet sur les performances ni le confort.
 - **Les périphériques d'appoint** : on peut démarrer en entrée de gamme (souris, clavier, tapis) et améliorer plus tard, une pièce à la fois.
-
-> 🛒 **Comparer le matériel du moment**
-> Prix et disponibilités bougent vite. Pour voir ce qui existe aujourd'hui et à quel tarif : [voir le matériel setup gaming sur Amazon](https://www.amazon.fr/s?k=setup+gaming&tag=monbureauconnecte-21).
-
 ## Étaler la dépense : la méthode maligne
 
 Rien n'oblige à tout acheter le même mois, et c'est souvent contre-productif. La méthode qui marche : investir d'abord dans les **deux piliers** (un PC correct + un écran correct), qui conditionnent tout le reste. Puis compléter **progressivement**, au rythme de ton budget et de tes besoins réels : un meilleur siège quand le dos réclame, de vrais périphériques quand l'entrée de gamme montre ses limites, les accessoires en dernier.

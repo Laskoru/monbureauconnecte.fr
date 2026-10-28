@@ -3,7 +3,7 @@ title: "Souris ergonomique verticale : notre sélection contre les douleurs au p
 seoTitle: "Souris ergonomique verticale : notre sélection"
 description: "Tendinite, canal carpien, douleurs au poignet : notre comparatif des meilleures souris ergonomiques verticales pour le bureau, et comment choisir l'angle."
 pubDate: 2026-08-12
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Dire adieu *aux douleurs* du poignet"
 pinSub: "La souris verticale, bien choisie."
@@ -77,11 +77,7 @@ Des **boutons programmables** (avant/arrière, copier-coller) évitent de change
 
 ### La connectivité
 
-Le **sans-fil** (Bluetooth ou récepteur USB) supprime un câble qui tire sur le poignet et libère le bureau. L'autonomie se compte en général en semaines ou en mois ; ce n'est pas un point bloquant, mais un modèle rechargeable en USB-C est plus pratique qu'à piles.
-
-> 🛒 **Comparer les modèles du moment**
-> Les prix et références évoluent vite sur ce type de produit. Pour voir ce qui est disponible aujourd'hui : [voir les souris ergonomiques verticales sur Amazon](https://www.amazon.fr/s?k=souris+ergonomique+verticale&tag=monbureauconnecte-21).
-
+Le [**sans-fil**](https://www.amazon.fr/s?k=logitech+lift+souris+verticale&tag=monbureauconnecte-21) (Bluetooth ou récepteur USB) supprime un câble qui tire sur le poignet et libère le bureau. L'autonomie se compte en général en semaines ou en mois ; ce n'est pas un point bloquant, mais un modèle rechargeable en USB-C est plus pratique qu'à piles.
 ## Comment bien choisir selon ton usage
 
 | Ton profil | Inclinaison conseillée | Pourquoi |

@@ -2,7 +2,7 @@
 title: "Écran PC ne s'allume pas au démarrage : le diagnostic"
 description: "Écran PC qui ne s'allume pas au démarrage alors que la tour tourne ? Câble, entrée, carte graphique, logo du BIOS, mémoire : le diagnostic dans l'ordre."
 pubDate: 2026-10-15
-updatedDate: 2026-10-15
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Écran noir *dès l'allumage* du PC ?"
 pinSub: "Câble, carte graphique, BIOS, mémoire : le bon ordre."
@@ -46,7 +46,7 @@ Ce tableau évite l'erreur classique : changer d'écran alors que le PC ne déma
 
 Commence par le plus bête. Microsoft cite en premier le branchement et la mise sous tension du moniteur. Vérifie que le voyant de l'écran s'allume, que le câble secteur est bien enfoncé des deux côtés, puis que l'écran est sur la bonne entrée (HDMI 1, HDMI 2, DisplayPort) dans son menu.
 
-Ensuite, essaie un autre câble vidéo, et si possible un autre écran, ou ta télé. Si l'image revient, tu tiens le coupable sans avoir ouvert la tour. Si tu utilises deux écrans et qu'un seul reste noir, le guide sur le [deuxième écran non détecté en HDMI](/articles/deuxieme-ecran-non-detecte-hdmi/) couvre ce cas précis.
+Ensuite, essaie un autre [câble vidéo](https://www.amazon.fr/s?k=ugreen+cable+hdmi+2.1+8k&tag=monbureauconnecte-21), et si possible un autre écran, ou ta télé. Si l'image revient, tu tiens le coupable sans avoir ouvert la tour. Si tu utilises deux écrans et qu'un seul reste noir, le guide sur le [deuxième écran non détecté en HDMI](/articles/deuxieme-ecran-non-detecte-hdmi/) couvre ce cas précis.
 
 ## Carte graphique ou carte mère : la bonne prise
 

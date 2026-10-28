@@ -3,7 +3,7 @@ title: "Quelle config PC gaming choisir ? Le guide par budget"
 seoTitle: "Config PC gaming : laquelle choisir selon ton budget"
 description: "Monter ou acheter son PC gaming : par quoi commencer, quels composants prioriser et quelle config PC gaming viser selon ton budget (800, 1000 ou 1500 €)."
 pubDate: 2026-09-12
-updatedDate: 2026-09-29
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "La bonne config gaming, *selon ton budget*"
 pinSub: "Par où commencer, quoi prioriser."
@@ -70,11 +70,7 @@ Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise 
 
 ### L'alimentation et le boîtier
 
-Deux pièces qu'on néglige à tort. Une **alimentation** fiable, à la bonne puissance et certifiée 80+ (un label de rendement énergétique), protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
-
-> 🛒 **Comparer les composants du moment**
-> Les prix des cartes graphiques et des processeurs bougent sans arrêt. Pour voir ce qui est disponible aujourd'hui : [voir les cartes graphiques gaming sur Amazon](https://www.amazon.fr/s?k=carte+graphique+gaming&tag=monbureauconnecte-21).
-
+Deux pièces qu'on néglige à tort. Une [**alimentation** fiable](https://www.amazon.fr/s?k=alimentation+pc+80+plus+gold+corsair&tag=monbureauconnecte-21), à la bonne puissance et certifiée 80+ (un label de rendement énergétique), protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
 ## Quelle config PC gaming selon ton budget
 
 Voici les grands paliers. Ils bougent avec les prix, mais la **logique** reste stable : on ajuste le GPU et la plateforme, le reste suit.

@@ -2,7 +2,7 @@
 title: "Casque à réduction de bruit pour le télétravail"
 description: "Choisir un casque à réduction de bruit pour le télétravail ou l'open space : efficacité de l'ANC, confort, autonomie, micro. Nos critères et nos choix."
 pubDate: 2026-08-14
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Le calme, *même en open space*"
 pinSub: "Le casque anti-bruit pour le télétravail."
@@ -70,15 +70,11 @@ Un casque porté **6 à 8 h par jour** doit être léger, avec un arceau bien r�
 
 ### L'autonomie réelle en mode ANC
 
-L'autonomie est souvent annoncée **avec** la réduction de bruit active (environ 35 h pour le Sony WH-CH720N), mais certaines fiches donnent un chiffre sans ANC, plus flatteur : vérifie la mention avant de comparer deux modèles. Pour couvrir des journées complètes sans recharge quotidienne, vise une autonomie confortable (25 h et plus) et, idéalement, une recharge rapide. Si la batterie de ton casque faiblit nettement dans les premiers mois, la page sur [la garantie des casques Sony](https://www.quellegarantie.fr/articles/garantie-sony-casque-audio/) explique vers qui te tourner.
+L'autonomie est souvent annoncée **avec** la réduction de bruit active (environ 35 h pour le [Sony WH-CH720N](https://www.amazon.fr/s?k=sony+wh-ch720n&tag=monbureauconnecte-21)), mais certaines fiches donnent un chiffre sans ANC, plus flatteur : vérifie la mention avant de comparer deux modèles. Pour couvrir des journées complètes sans recharge quotidienne, vise une autonomie confortable (25 h et plus) et, idéalement, une recharge rapide. Si la batterie de ton casque faiblit nettement dans les premiers mois, la page sur [la garantie des casques Sony](https://www.quellegarantie.fr/articles/garantie-sony-casque-audio/) explique vers qui te tourner.
 
 ### La qualité du micro
 
 Déterminante si le casque sert aussi pour les **visios**. Un micro à réduction de bruit intégré suffit pour des appels clairs ; un **micro-perche** garantit d'être bien entendu même en environnement bruyant. Si tu utilises déjà un micro USB séparé, ce critère devient secondaire.
-
-> 🛒 **Comparer les modèles du moment**
-> Les modèles et les prix changent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les casques à réduction de bruit sur Amazon](https://www.amazon.fr/s?k=casque+reduction+de+bruit&tag=monbureauconnecte-21).
-
 ## Quel budget pour quel usage
 
 | Budget | Ce que tu obtiens | Pour qui |

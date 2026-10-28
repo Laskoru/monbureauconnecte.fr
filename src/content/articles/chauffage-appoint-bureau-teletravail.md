@@ -2,7 +2,7 @@
 title: "Chauffage d'appoint bureau télétravail : lequel choisir"
 description: "Chauffage d'appoint bureau télétravail : panneau radiant, chauffe-pieds ou soufflant. Consommation réelle, sécurité et notre choix pour l'hiver."
 pubDate: 2026-10-06
-updatedDate: 2026-10-06
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Finis les *pieds gelés* au bureau"
 pinSub: "Le bon chauffage d'appoint pour ton coin télétravail."
@@ -58,17 +58,13 @@ C'est justement l'intérêt d'un chauffage d'appoint ciblé : il corrige l'incon
 
 Tous les chauffages d'appoint ne se valent pas pour un usage assis, plusieurs heures par jour, dans un espace souvent restreint sous une table.
 
-Le **chauffe-pieds électrique fermé** reste la solution la plus sobre : un boîtier isolé dans lequel tu glisses les pieds, chauffé par une résistance basse consommation (généralement 30 à 100 W). Il ne chauffe que toi, pas la pièce, ce qui en fait l'option la moins énergivore si le froid se limite vraiment aux extrémités.
+Le [**chauffe-pieds électrique fermé**](https://www.amazon.fr/s?k=beurer+chauffe+pieds&tag=monbureauconnecte-21) reste la solution la plus sobre : un boîtier isolé dans lequel tu glisses les pieds, chauffé par une résistance basse consommation (généralement 30 à 100 W). Il ne chauffe que toi, pas la pièce, ce qui en fait l'option la moins énergivore si le froid se limite vraiment aux extrémités.
 
 Le **panneau radiant** (mural, sur pied ou posé au sol, autour de 400 à 600 W) diffuse une chaleur par rayonnement, comme le soleil, qui réchauffe directement les jambes et le buste sans trop assécher l'air. Il met un peu plus de temps à se faire sentir qu'un soufflant, mais la sensation de chaleur est plus stable une fois la séance de travail commencée.
 
 Le **radiateur soufflant céramique** (1 000 à 2 000 W) monte vite en température grâce à un ventilateur qui pousse l'air chaud, pratique pour réchauffer rapidement un petit bureau fermé avant de s'installer. Il consomme nettement plus à pleine puissance et son ventilateur se fait entendre en continu, un vrai défaut en visio.
 
 La **couverture chauffante pour les jambes** complète à moindre coût un chauffage déjà en place : elle n'apporte aucune chaleur à la pièce, seulement un confort local, mais sa consommation reste minime (autour de 50 W).
-
-> 🛒 **Comparer les modèles du moment**
-> Les puissances et les tailles varient beaucoup selon les fabricants : [voir les chauffages d'appoint pour bureau sur Amazon](https://www.amazon.fr/s?k=chauffage+appoint+bureau&tag=monbureauconnecte-21).
-
 ## Électrique ou à combustible : un seul choix sûr sous un bureau
 
 Pour un espace de travail fermé où tu passes plusieurs heures assis, le choix de l'énergie n'est pas négociable. Santé publique France rappelle que les chauffages d'appoint à combustible (gaz, pétrole, bioéthanol) dégagent du monoxyde de carbone, un gaz incolore et inodore responsable chaque année d'intoxications parfois mortelles en France. Ces appareils ne doivent jamais fonctionner en continu, seulement par intermittence et dans un local correctement ventilé, ce qui exclut d'emblée un usage de plusieurs heures dans un bureau fermé.
@@ -82,10 +78,6 @@ Pour éviter que le câble d'alimentation vienne s'ajouter au désordre déjà p
 La puissance de l'appareil donne une bonne idée du coût. Pour fixer les idées, prenons un tarif de 0,25 € le kWh, un ordre de grandeur à ajuster selon ton contrat. Un chauffe-pieds de 50 W utilisé 6 heures par jour consomme 0,3 kWh, soit environ 0,08 € par jour et 0,40 € par semaine de 5 jours. Un panneau radiant de 500 W sur le même rythme monte à 3 kWh par jour, soit 0,75 € par jour et environ 3,75 € par semaine s'il tourne en continu, mais la plupart des modèles intègrent un thermostat qui coupe l'alimentation une fois la température de consigne atteinte, ce qui réduit nettement la consommation réelle. Un radiateur soufflant de 2 000 W poussé à pleine puissance toute la journée devient vite le poste le plus coûteux du trio, raison pour laquelle il convient mieux à un usage court (faire remonter la température avant de s'installer) qu'à un fonctionnement continu.
 
 L'ADEME rappelle que baisser le chauffage général d'1 °C réduit la consommation d'énergie du logement de 7 %, ce qui remet les choses en perspective : un chauffage d'appoint ciblé de quelques dizaines ou centaines de watts, utilisé seulement pendant les heures de travail, coûte presque toujours moins cher que de maintenir toute la maison 1 ou 2 degrés plus chaude pour une seule pièce occupée.
-
-> 🛒 **Voir les panneaux radiants et chauffe-pieds disponibles**
-> Les prix bougent souvent selon la puissance et la marque : [comparer les chauffages d'appoint de bureau sur Amazon](https://www.amazon.fr/s?k=chauffe+pieds+electrique+bureau&tag=monbureauconnecte-21).
-
 ## Quel modèle choisir selon ta situation
 
 Si le froid se limite vraiment aux pieds et que le reste du corps va bien, un **chauffe-pieds fermé** suffit et reste le choix le moins cher à l'usage. Si tu sens le froid remonter aux jambes et au bas du dos, un **panneau radiant** de 400 à 600 W avec thermostat offre le meilleur compromis entre confort et consommation, sans le bruit d'un ventilateur. Réserve le **radiateur soufflant** aux pièces vraiment mal isolées où il faut remonter rapidement la température avant de t'installer, puis coupe-le une fois la chaleur installée. La couverture chauffante dépanne en complément, à petit budget, mais ne remplace pas un vrai chauffage d'appoint si le bureau reste froid toute la journée.

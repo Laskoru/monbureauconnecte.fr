@@ -3,7 +3,7 @@ title: "Pavé numérique externe sans fil : comment bien le choisir"
 seoTitle: "Pavé numérique sans fil : comment bien le choisir"
 description: "Pas de pavé sur ton portable ? Un pavé numérique sans fil accélère la saisie de chiffres. Les critères (RF ou Bluetooth, autonomie) et notre choix."
 pubDate: 2026-08-31
-updatedDate: 2026-09-29
+updatedDate: 2026-10-27
 author: "Hugo B."
 keywords: ["pavé numérique sans fil", "pavé numérique externe", "clavier numérique sans fil", "quel pavé numérique choisir"]
 category: "peripheriques"
@@ -76,15 +76,11 @@ Un pavé complet compte en général **une vingtaine de touches** (chiffres, op�
 
 ### La compacité et la stabilité
 
-Un pavé **fin et léger** se glisse dans un sac et se pose facilement à droite **ou à gauche** du clavier. Des **patins antidérapants** évitent qu'il ne glisse pendant la frappe rapide.
+Un [pavé **fin et léger**](https://www.amazon.fr/s?k=trust+pave+numerique+sans+fil&tag=monbureauconnecte-21) se glisse dans un sac et se pose facilement à droite **ou à gauche** du clavier. Des **patins antidérapants** évitent qu'il ne glisse pendant la frappe rapide.
 
 ### La compatibilité
 
 La plupart des modèles fonctionnent sous **Windows, macOS et Linux** sans pilote. Attention à la gestion du **Verr. Num** sur certains portables et à quelques agencements pensés pour un OS précis.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les pavés numériques sans fil sur Amazon](https://www.amazon.fr/s?k=pave+numerique+sans+fil&tag=monbureauconnecte-21).
-
 ## Comment choisir selon ton usage
 
 - **Poste fixe, simplicité maximale** : un modèle **RF 2,4 GHz** avec dongle, plug and play.

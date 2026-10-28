@@ -2,7 +2,7 @@
 title: "Écran PC ne détecte pas le HDMI : que faire ?"
 description: "Ton écran PC ne détecte pas le HDMI ou ton double écran reste noir ? Entrée, câble, Windows + P, bouton Détecter, pilote : les vérifications dans l'ordre."
 pubDate: 2026-10-15
-updatedDate: 2026-10-15
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Deuxième écran *non détecté* en HDMI ?"
 pinSub: "Les vérifications dans l'ordre, du câble au pilote."
@@ -32,7 +32,7 @@ Quand l'écran PC ne détecte pas le HDMI, la cause est presque toujours simple 
 
 Un moniteur qui affiche « Aucun signal » ou « No signal » est allumé et attend une image. Le premier réflexe se fait sur ses boutons : la plupart des écrans ont plusieurs entrées (HDMI 1, HDMI 2, DisplayPort) et ne basculent pas toujours seuls sur celle qui reçoit le signal. Ouvre le menu de l'écran, rubrique source ou entrée, et choisis celle où le câble est branché.
 
-Vérifie ensuite le câble aux deux bouts. Microsoft conseille de s'assurer qu'il est bien enfoncé, puis d'en essayer un autre : si le nouveau fonctionne, l'ancien était défectueux. Un câble HDMI qui a été plié serré derrière un bureau ou tiré par un [bras d'écran articulé](/articles/bras-support-ecran-articule/) peut lâcher sans aucun signe visible.
+Vérifie ensuite le câble aux deux bouts. Microsoft conseille de s'assurer qu'il est bien enfoncé, puis d'en essayer [un autre](https://www.amazon.fr/s?k=ugreen+cable+hdmi+2.1+8k&tag=monbureauconnecte-21) : si le nouveau fonctionne, l'ancien était défectueux. Un câble HDMI qui a été plié serré derrière un bureau ou tiré par un [bras d'écran articulé](/articles/bras-support-ecran-articule/) peut lâcher sans aucun signe visible.
 
 Dernier test matériel, et le plus parlant : branche l'écran sur un autre ordinateur. S'il reste noir ailleurs, le problème vient de lui. S'il fonctionne, cherche du côté du PC.
 

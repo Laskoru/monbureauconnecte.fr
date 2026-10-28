@@ -3,7 +3,7 @@ title: "Tapis de sol pour chaise de bureau : protéger le parquet efficacement"
 seoTitle: "Tapis de sol pour chaise de bureau : protéger le parquet"
 description: "Comment choisir un tapis de sol pour chaise de bureau qui laisse rouler sans forcer et évite les rayures sur parquet ou stratifié, sans se ruiner."
 pubDate: 2026-08-15
-updatedDate: 2026-10-07
+updatedDate: 2026-10-27
 author: "Hugo B."
 pinHook: "Le parquet *protégé*, la chaise qui roule"
 pinSub: "Le tapis de sol bien choisi."
@@ -74,17 +74,13 @@ Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifi
 
 ## Comment choisir selon ton usage
 
-**Pour un usage simple, sur un parquet en bon état** : un tapis PVC transparent standard, autour de 75 x 120 cm, suffit largement. C'est la solution la plus discrète et la moins chère, idéale si l'objectif est surtout préventif.
+**Pour un usage simple, sur un parquet en bon état** : un [tapis transparent standard](https://www.amazon.fr/s?k=floortex+tapis+chaise+bureau+transparent&tag=monbureauconnecte-21) en PVC, autour de 75 x 120 cm, suffit largement. C'est la solution la plus discrète et la moins chère, idéale si l'objectif est surtout préventif.
 
 **Pour une chaise qui bouge beaucoup ou un bureau dans une pièce de passage** : privilégier un modèle plus épais avec une base antidérapante renforcée, quitte à payer un peu plus cher. Un tapis qui glisse en permanence sous les mouvements finit par s'user prématurément sur les bords et perd son utilité.
 
 **Pour un sol déjà fragile ou ancien (parquet massif verni, par exemple)** : mieux vaut viser une taille généreuse qui couvre large sous le bureau, quitte à dépasser un peu la zone de roulement habituelle, pour ne laisser aucune portion du sol exposée aux roulettes.
 
 **Pour un budget serré** : les tapis d'entrée de gamme en PVC fin font le travail sur un sol déjà résistant (carrelage, béton), mais ne sont pas le meilleur choix sur un parquet ancien ou fragile où l'investissement dans un modèle plus épais se justifie davantage.
-
-> 🛒 **Comparer les modèles du moment**
-> Les références et les prix évoluent souvent. Pour voir ce qui est disponible aujourd'hui : [voir les tapis de protection de sol pour chaise de bureau sur Amazon](https://www.amazon.fr/s?k=tapis+protection+sol+chaise+bureau&tag=monbureauconnecte-21).
-
 ## Entretien et pose : les erreurs à éviter
 
 Un tapis mal posé perd une bonne partie de son intérêt. Avant l'installation, il vaut mieux dépoussiérer et sécher complètement le sol : la moindre particule coincée sous le tapis peut créer un point de friction qui marque le sol exactement comme une roulette nue. La plupart des modèles en PVC ou vinyle demandent aussi un temps de mise à plat après déballage : ils sont souvent roulés pour l'expédition et gardent une légère courbure les premiers jours, le temps que le matériau se détende.
