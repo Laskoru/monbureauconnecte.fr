@@ -1,7 +1,7 @@
 ---
 title: "Caisson de rangement sous bureau : libérer le plateau sans encombrer"
-seoTitle: "Caisson de rangement sous bureau : bien le choisir"
-description: "Caisson de rangement sous bureau : roulettes ou fixe, tiroirs, serrure, hauteur sous le plateau. Les critères pour bien le choisir et libérer ton bureau."
+seoTitle: "Caisson sous bureau : à roulettes ou fixe, quelle hauteur ?"
+description: "Caisson de rangement sous bureau : à roulettes ou fixe, tiroirs, serrure et hauteur libre sous le plateau à mesurer d'abord. Le bon modèle selon ton usage."
 pubDate: 2026-08-16
 updatedDate: 2026-10-27
 author: "Hugo B."

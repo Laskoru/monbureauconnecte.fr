@@ -1,6 +1,7 @@
 ---
 title: "Souris qui bouge toute seule : causes et solutions"
-description: "Souris qui bouge toute seule, curseur qui saute ou souris trop sensible : surface, capteur, piles, pavé tactile et vitesse du pointeur à vérifier."
+seoTitle: "Souris qui bouge toute seule : capteur, piles, pavé tactile"
+description: "Ta souris bouge seule ou le curseur saute ? Capteur ou surface, piles et récepteur, pavé tactile du portable, vitesse du pointeur : quoi vérifier."
 pubDate: 2026-10-15
 updatedDate: 2026-10-27
 author: "Hugo B."

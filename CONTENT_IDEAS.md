@@ -20,6 +20,20 @@ Format : `- [ ] Sujet : angle ; catégorie : <catégorie>`.
 > - Légifrance, economie.gouv.fr (DGCCRF), EUR-Lex, dyson.fr, miele.fr et certains sites de fabricants renvoient 403 ou une page vide à WebFetch : un seul essai par URL, puis `curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/141.0" <url>` ; si ça échoue encore, prends une autre source (service-public.gouv.fr, notice PDF du fabricant) au lieu de réessayer.
 > - Ne relis pas un fichier déjà lu et ne relance pas une recherche déjà faite.
 
+## 🎯 En tête : direction « SOS poste de travail » (étude de marché du 31/10/2026)
+
+Dépannage périphériques, écran, USB, audio et visio : articles conseil courts, sans produit ou avec un lien Amazon léger vers le remplacement. Chaque fiche dépannage est liée à 2 fiches sœurs et au comparatif de remplacement. Idées produit génériques (chargeur à induction, enceinte PC, support casque) écartées en bas du fichier.
+
+- [ ] SOS poste de travail : le guide de dépannage du bureau : page pilier classée par appareil (souris et clavier, écran, USB et connectique, audio et visio, imprimante), avec le symptôme, le premier réflexe et le lien vers la fiche ; relier souris-qui-bouge-toute-seule, pave-numerique-ne-fonctionne-plus, clavier-pc-portable-ne-fonctionne-plus, port-usb-c-ne-fonctionne-plus, hub-usb-c-station-accueil, deuxieme-ecran-non-detecte-hdmi, ecran-pc-ne-s-allume-pas-demarrage, ecran-pc-noir-par-intermittence, webcam-ne-fonctionne-pas-windows-11, micro-trop-faible-windows-11, imprimante-sans-ordinateur, imprimer-avec-une-seule-cartouche ; chaque nouvelle fiche dépannage y renvoie ; lien depuis l'accueil et le menu à ajouter ensuite à la main ; catégorie : peripheriques (sans produit)
+- [ ] Station d'accueil qui ne détecte pas l'écran : que faire : câble et port (DP Alt Mode, Thunderbolt), pilotes, limite d'écrans des Mac M1 et M2 ; requête « station d'accueil ne détecte pas l'écran » ; lien vers hub USB-C ou station d'accueil ; catégorie : peripheriques (conseil, sans produit)
+- [ ] Souris qui double-clique toute seule : causes et solutions : usure du micro-switch, réglages Windows, piles, garantie ; requête « souris qui double-clique toute seule » ; liens vers souris silencieuse et souris ergonomique ; catégorie : peripheriques (conseil)
+- [ ] Casque Bluetooth : son dégradé en visio, la solution : profil HFP contre A2DP, pourquoi le son baisse quand le micro s'active, dongle ou micro séparé ; requête « casque bluetooth son mauvais teams » ; liens vers casque filaire vs sans fil et micro USB ; catégorie : audio-visio (conseil)
+- [ ] Casque micro qui ne fonctionne pas sur PC : les réglages à vérifier (prise jack combinée, confidentialité Windows, périphérique par défaut, USB ou Bluetooth) : requête « casque micro ne fonctionne pas sur pc » ; catégorie : audio-visio (conseil, lien Amazon léger)
+- [ ] Double écran avec un ordinateur portable : écran portable USB-C, extension clipsable ou moniteur, et comment passer d'un écran à l'autre : requêtes « double écran pour ordinateur portable », « double écran faire passer de l'un à l'autre » ; catégorie : peripheriques (guide et comparatif)
+- [ ] Certaines touches du clavier ne fonctionnent plus : que vérifier : requête « certaines touches du clavier ne fonctionnent plus » ; touches filtres et verrouillages Windows, disposition du clavier, pilote, nettoyage, clavier de portable ou externe ; ne pas doublonner clavier-pc-portable-ne-fonctionne-plus ni pave-numerique-ne-fonctionne-plus, les lier ; catégorie : peripheriques (sans produit)
+- [ ] Chaise de bureau qui descend toute seule ou ne remonte plus : vérin, levier, que faire et comment changer le vérin : requêtes « chaise de bureau qui descend toute seule », « chaise de bureau ne remonte plus » ; catégorie : mobilier (conseil, lien de recherche vérin)
+- [ ] Webcam qui s'allume toute seule : trouver l'application en cause et écarter un piratage (Windows, Mac) : requête « pourquoi ma webcam s'allume toute seule » ; catégorie : audio-visio (conseil, sans produit)
+
 ## Requêtes Google peu couvertes (21/10)
 
 
@@ -30,9 +44,6 @@ Requêtes tirées des suggestions Google du 15/10/2026, absentes des articles pu
 
 ## Priorité SEO (Search Console du 14/10/2026)
 
-- [ ] Casque Bluetooth : son dégradé en visio, la solution : profil HFP contre A2DP, pourquoi le son baisse quand le micro s'active, dongle ou micro séparé ; requête « casque bluetooth son mauvais teams » ; liens vers casque filaire vs sans fil et micro USB ; catégorie : audio-visio (conseil)
-- [ ] Station d'accueil qui ne détecte pas l'écran : que faire : câble et port (DP Alt Mode, Thunderbolt), pilotes, limite d'écrans des Mac M1 et M2 ; requête « station d'accueil ne détecte pas l'écran » ; lien vers hub USB-C ou station d'accueil ; catégorie : peripheriques (conseil, sans produit)
-- [ ] Souris qui double-clique toute seule : causes et solutions : usure du micro-switch, réglages Windows, piles, garantie ; requête « souris qui double-clique toute seule » ; liens vers souris silencieuse et souris ergonomique ; catégorie : peripheriques (conseil)
 - [ ] Speakerphone USB en télétravail : utile ou gadget ? : réunions à plusieurs, Jabra Speak2, Poly Sync, Anker PowerConf ; requêtes « speakerphone usb », « micro usb visioconférence » ; lien depuis le micro USB ; catégorie : audio-visio
 
 ## Saison hiver et fêtes : à publier d'octobre à décembre
@@ -50,9 +61,6 @@ Requêtes tirées des suggestions Google du 15/10/2026, absentes des articles pu
 
 ## Dépannage : questions « ça ne marche pas »
 
-- [ ] Chaise de bureau qui descend toute seule ou ne remonte plus : vérin, levier, que faire et comment changer le vérin : requêtes « chaise de bureau qui descend toute seule », « chaise de bureau ne remonte plus » ; catégorie : mobilier (conseil, lien de recherche vérin)
-- [ ] Casque micro qui ne fonctionne pas sur PC : les réglages à vérifier (prise jack combinée, confidentialité Windows, périphérique par défaut, USB ou Bluetooth) : requête « casque micro ne fonctionne pas sur pc » ; catégorie : audio-visio (conseil, lien Amazon léger)
-- [ ] Webcam qui s'allume toute seule : trouver l'application en cause et écarter un piratage (Windows, Mac) : requête « pourquoi ma webcam s'allume toute seule » ; catégorie : audio-visio (conseil, sans produit)
 - [ ] Souris sans fil : faut-il l'éteindre ? Veille automatique, autonomie réelle, piles ou batterie : requête « souris sans fil faut il l'éteindre » ; catégorie : peripheriques (conseil, sans produit)
 
 ## 🎁 Saison, priorité : à publier avant mi-octobre (indexés pour Noël / Black Friday)
@@ -62,7 +70,6 @@ Requêtes tirées des suggestions Google du 15/10/2026, absentes des articles pu
 Requêtes réelles tirées des suggestions Google, avec peu de pages qui y répondent vraiment. Vérifié le 26/09/2026 : aucun article publié ne les traite déjà. Garde la requête principale dans le titre, la description et un titre ##.
 
 - [ ] Fauteuil de bureau ergonomique sans roulettes : les assises fixes qui soulagent le dos : requête « fauteuil de bureau ergonomique mal de dos sans roulettes » ; catégorie : mobilier (comparatif)
-- [ ] Double écran avec un ordinateur portable : écran portable USB-C, extension clipsable ou moniteur, et comment passer d'un écran à l'autre : requêtes « double écran pour ordinateur portable », « double écran faire passer de l'un à l'autre » ; catégorie : peripheriques (guide et comparatif)
 - [ ] Bureau pour ordinateur et imprimante : les modèles avec tablette et rangement : requête « bureau pour ordinateur et imprimante » ; catégorie : mobilier (comparatif)
 
 ## Mobilier & Confort
@@ -101,11 +108,8 @@ tag catégorie imposé (choisir mobilier/peripheriques/audio-visio selon le suje
 
 - [ ] Panneau acoustique de bureau : réduire l'écho en visio ; catégorie : mobilier
 - [ ] Rehausseur d'écran avec rangement ; catégorie : mobilier
-- [ ] Chargeur à induction de bureau ; catégorie : peripheriques
 - [ ] Clavier sans fil compact pour voyage ; catégorie : peripheriques
 - [ ] Souris de voyage fine et silencieuse ; catégorie : peripheriques
-- [ ] Enceinte PC compacte pour le télétravail ; catégorie : audio-visio
-- [ ] Support / stand pour casque audio ; catégorie : audio-visio
 - [ ] Webcam 4K avec cadrage automatique ; catégorie : audio-visio
 - [ ] Casque sans fil longue autonomie pour le bureau ; catégorie : audio-visio
 
@@ -113,3 +117,11 @@ tag catégorie imposé (choisir mobilier/peripheriques/audio-visio selon le suje
 
 - [ ] Quel bureau pour un petit studio ou une chambre d'étudiant : compact, pliant, escamotable : les bons formats ; catégorie : mobilier
 - [ ] Quelle chaise de bureau pour un grand gabarit ou une forte charge : charge admise, largeur d'assise, réglages ; catégorie : mobilier
+
+## Écartés le 31/10/2026 (étude de marché)
+
+Gardés pour mémoire, la routine les ignore (case `- [-]`).
+
+- [-] Chargeur à induction de bureau ; catégorie : peripheriques <!-- écarté 31/10 : produit générique face à Amazon et aux médias -->
+- [-] Enceinte PC compacte pour le télétravail ; catégorie : audio-visio <!-- écarté 31/10 : produit générique face à Amazon et aux médias -->
+- [-] Support / stand pour casque audio ; catégorie : audio-visio <!-- écarté 31/10 : produit générique face à Amazon et aux médias -->

@@ -1,6 +1,7 @@
 ---
 title: "Port USB-C ne fonctionne plus : que vérifier ?"
-description: "Port USB-C qui ne fonctionne plus, ne charge plus ou n'affiche rien : câble, chargeur, port de charge, mode vidéo, poussière. Les vérifications utiles."
+seoTitle: "Port USB-C qui ne marche plus : charge, écran, port lâche"
+description: "Ton port USB-C ne marche plus ? Redémarrage, charge qui ne passe plus, poussière à nettoyer, port trop lâche, écran non reconnu : quoi vérifier."
 pubDate: 2026-10-15
 updatedDate: 2026-10-27
 author: "Hugo B."

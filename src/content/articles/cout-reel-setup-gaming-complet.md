@@ -1,7 +1,7 @@
 ---
 title: "Combien coûte vraiment un setup gaming complet ?"
-seoTitle: "Combien coûte un setup gaming complet ? Le vrai budget"
-description: "Combien coûte un setup gaming complet ? PC, écran, périphériques, siège et bureau : le vrai budget poste par poste, et où économiser sans regret."
+seoTitle: "Coût d'un setup gaming : 1 500 à 3 000 €, poste par poste"
+description: "Combien coûte un setup gaming complet ? Souvent 1 500 à 3 000 € : PC, écran, périphériques, siège et bureau poste par poste, et où économiser sans regret."
 pubDate: 2026-09-12
 updatedDate: 2026-10-27
 author: "Hugo B."
