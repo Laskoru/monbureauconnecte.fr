@@ -27,10 +27,6 @@
     "available": true,
     "checked": ""
   },
-  "B06X19FLTC": {
-    "available": true,
-    "checked": ""
-  },
   "B07FNHV4MW": {
     "available": true,
     "checked": "2026-08-17"
@@ -50,6 +46,10 @@
   "B07W6GVT3X": {
     "available": false,
     "checked": "2026-10-08"
+  },
+  "B07W6JPVPF": {
+    "available": true,
+    "checked": ""
   },
   "B07W7JHZKR": {
     "available": true,
