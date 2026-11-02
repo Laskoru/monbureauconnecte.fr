@@ -8,7 +8,7 @@ pinHook: "Ton *pavé numérique* ne répond plus ?"
 pinSub: "Verr Num, touches souris, touche Fn : la bonne piste avant de paniquer."
 keywords: ["pavé numérique ne fonctionne plus", "touche numérique clavier ne fonctionne pas", "verr num ne fonctionne pas", "pavé numérique touches souris"]
 category: "peripheriques"
-coverAlt: "Clavier d'ordinateur noir vu de près, touches alignées sous un éclairage doux de bureau"
+coverAlt: "Clavier d'ordinateur sombre vu de très près, touches rétroéclairées en orange et bleu dans la pénombre"
 draft: false
 faq:
   - question: "Le voyant Verr Num est allumé mais le pavé numérique ne répond pas : que faire ?"
