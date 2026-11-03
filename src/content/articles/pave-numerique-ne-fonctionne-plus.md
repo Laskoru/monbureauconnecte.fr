@@ -18,7 +18,7 @@ faq:
   - question: "Pourquoi le pavé numérique de mon PC portable ne marche qu'en maintenant Fn ?"
     answer: "Sur un portable, les touches du pavé sont superposées à une partie du clavier normal (lettres ou flèches). Selon la marque, Verr Num seul suffit à les activer, ou il faut combiner Fn avec Verr Num : le comportement exact dépend du modèle, pas d'un standard commun à tous les fabricants."
 sources:
-  - label: "Microsoft Support, « Use Mouse keys to move the mouse pointer »"
+  - label: "Microsoft Support, « Utiliser les touches de la souris pour déplacer le pointeur de la souris »"
     url: "https://support.microsoft.com/windows/9e0c72c8-b882-7918-8e7b-391fd62adf33"
   - label: "Logitech Support, « Why is the NumPad KeyPad not working on the Logi K868 keyboard »"
     url: "https://support.logi.com/hc/fr/articles/35025209246359-Why-is-the-NumPad-KeyPad-not-working-on-the-Logi-K868-keyboard"
