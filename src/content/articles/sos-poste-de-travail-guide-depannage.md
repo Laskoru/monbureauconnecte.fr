@@ -23,7 +23,7 @@ sources:
     url: "https://support.microsoft.com/fr-fr/windows/obtenir-automatiquement-les-pilotes-mat%C3%A9riels-recommand%C3%A9s-et-mis-%C3%A0-jour-0549a8d9-4842-8acb-75fa-a6faadb62507"
   - label: "Microsoft Support, « L'appareil photo ne fonctionne pas dans Windows »"
     url: "https://support.microsoft.com/fr-fr/windows/hardware/camera/camera-doesn-t-work-in-windows"
-  - label: "Microsoft Support, « Use Mouse keys to move the mouse pointer »"
+  - label: "Microsoft Support, « Utiliser les touches de la souris pour déplacer le pointeur de la souris »"
     url: "https://support.microsoft.com/windows/9e0c72c8-b882-7918-8e7b-391fd62adf33"
   - label: "Microsoft Support, « Résoudre les problèmes liés à l'USB-C dans Windows »"
     url: "https://support.microsoft.com/fr-fr/windows/hardware/fix-usb-c-problems-in-windows"
