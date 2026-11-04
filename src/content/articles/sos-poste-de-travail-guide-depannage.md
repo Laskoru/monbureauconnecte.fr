@@ -8,7 +8,6 @@ pinHook: "Un truc *qui ne marche plus* sur ton bureau ?"
 pinSub: "Souris, écran, USB, webcam : le bon réflexe, classé par panne."
 keywords: ["sos poste de travail", "panne poste de travail", "ordinateur de bureau qui ne fonctionne plus", "dépannage matériel bureau"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1587831990711-23ca6441447b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8b2ZmaWNlJTIwZGVzayUyMGtleWJvYXJkJTIwbW91c2UlMjBtb25pdG9yJTIwc2V0dXB8ZW58MHwwfHx8MTc5MzY4MzE3Nnwy&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Écran d'ordinateur, clavier et manettes de jeu posés sur un bureau blanc, dans un espace de travail épuré"
 draft: false
 faq:
