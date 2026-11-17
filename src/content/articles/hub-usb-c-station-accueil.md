@@ -134,3 +134,4 @@ Le bon hub ou la bonne station d'accueil dépend surtout du nombre d'écrans à 
 - [Écran PC ne détecte pas le HDMI : que faire ?](/articles/deuxieme-ecran-non-detecte-hdmi/)
 - [Port USB-C ne fonctionne plus : que vérifier ?](/articles/port-usb-c-ne-fonctionne-plus/)
 - [SOS poste de travail : le guide de dépannage par panne](/articles/sos-poste-de-travail-guide-depannage/)
+- [Station d'accueil ne détecte pas l'écran : que faire ?](/articles/station-accueil-ne-detecte-pas-ecran/)
