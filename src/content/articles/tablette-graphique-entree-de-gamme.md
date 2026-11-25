@@ -12,7 +12,7 @@ category: "peripheriques"
 topPick:
   name: "Wacom Intuos S"
   blurb: "Le choix sûr pour débuter : format compact, stylet sans pile à 4096 niveaux de pression, 4 touches programmables, compatible Windows, macOS, ChromeOS et Android. La marque de référence, au prix d'une entrée de gamme."
-  url: "https://www.amazon.fr/s?k=wacom+intuos+s&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=wacom+intuos+s&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir la Wacom Intuos S sur Amazon"
 coverAlt: "Une main tenant un stylet sur une tablette graphique, posée à côté d'un clavier d'ordinateur portable et de feutres de dessin"
 draft: false
@@ -54,7 +54,7 @@ Les stylets récents fonctionnent le plus souvent **sans pile** (alimentés par 
 
 ### La connectique et la compatibilité logicielle
 
-La plupart des [tablettes d'entrée de gamme](https://www.amazon.fr/s?k=xp-pen+deco+tablette+graphique&tag=monbureauconnecte-21) se branchent en **USB** et sont reconnues nativement par Windows et macOS, sans configuration complexe. Vérifie la compatibilité avec les logiciels que tu utilises réellement (lecteur PDF, suite bureautique, logiciel de visioconférence) plutôt que de viser uniquement des logiciels de dessin professionnels que tu n'utiliseras peut-être jamais. Regarde aussi le type de prise côté ordinateur : si ton portable n'a plus que des ports USB-C et que la tablette est livrée avec un câble USB-A, prévois un adaptateur ou un [hub USB-A](/articles/hub-usb-a-multiport-vieux-peripheriques/).
+La plupart des [tablettes d'entrée de gamme](https://www.amazon.fr/s?k=xp-pen+deco+tablette+graphique&tag=monbureauconnecte0d-21) se branchent en **USB** et sont reconnues nativement par Windows et macOS, sans configuration complexe. Vérifie la compatibilité avec les logiciels que tu utilises réellement (lecteur PDF, suite bureautique, logiciel de visioconférence) plutôt que de viser uniquement des logiciels de dessin professionnels que tu n'utiliseras peut-être jamais. Regarde aussi le type de prise côté ordinateur : si ton portable n'a plus que des ports USB-C et que la tablette est livrée avec un câble USB-A, prévois un adaptateur ou un [hub USB-A](/articles/hub-usb-a-multiport-vieux-peripheriques/).
 
 ### Les touches de raccourci sur la tablette elle-même
 

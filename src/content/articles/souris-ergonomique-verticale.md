@@ -77,7 +77,7 @@ Des **boutons programmables** (avant/arrière, copier-coller) évitent de change
 
 ### La connectivité
 
-Le [**sans-fil**](https://www.amazon.fr/s?k=logitech+lift+souris+verticale&tag=monbureauconnecte-21) (Bluetooth ou récepteur USB) supprime un câble qui tire sur le poignet et libère le bureau. L'autonomie se compte en général en semaines ou en mois ; ce n'est pas un point bloquant, mais un modèle rechargeable en USB-C est plus pratique qu'à piles.
+Le [**sans-fil**](https://www.amazon.fr/s?k=logitech+lift+souris+verticale&tag=monbureauconnecte0d-21) (Bluetooth ou récepteur USB) supprime un câble qui tire sur le poignet et libère le bureau. L'autonomie se compte en général en semaines ou en mois ; ce n'est pas un point bloquant, mais un modèle rechargeable en USB-C est plus pratique qu'à piles.
 ## Comment bien choisir selon ton usage
 
 | Ton profil | Inclinaison conseillée | Pourquoi |

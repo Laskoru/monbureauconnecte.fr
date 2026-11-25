@@ -74,7 +74,7 @@ Passer du **blanc neutre** (journée, travail sur écran) au **blanc chaud** (so
 
 ### L'absence de scintillement
 
-Le **flicker** est un défaut invisible à l'œil nu sur certaines LED bon marché, mais responsable d'une fatigue oculaire diffuse. Cherche la mention **« sans scintillement »** ou « flicker-free » sur la fiche des [lampes de bureau LED](https://www.amazon.fr/s?k=xiaomi+lampe+de+bureau+led&tag=monbureauconnecte-21) que tu compares.
+Le **flicker** est un défaut invisible à l'œil nu sur certaines LED bon marché, mais responsable d'une fatigue oculaire diffuse. Cherche la mention **« sans scintillement »** ou « flicker-free » sur la fiche des [lampes de bureau LED](https://www.amazon.fr/s?k=xiaomi+lampe+de+bureau+led&tag=monbureauconnecte0d-21) que tu compares.
 
 ### Le bras articulé et l'IRC
 

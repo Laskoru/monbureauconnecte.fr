@@ -72,7 +72,7 @@ Le **vérin** (le cylindre à gaz qui règle la hauteur) doit être **certifié*
 
 ### Le revêtement et la charge
 
-Le **similicuir** a du style et se nettoie d'un coup d'éponge mais respire peu ; le [**tissu**](https://www.amazon.fr/s?k=songmics+chaise+gaming+tissu&tag=monbureauconnecte-21) est plus frais sur la durée. Vérifie enfin la **charge maximale supportée** et garde une marge par rapport à ton poids : une chaise utilisée près de sa limite se fatigue plus vite.
+Le **similicuir** a du style et se nettoie d'un coup d'éponge mais respire peu ; le [**tissu**](https://www.amazon.fr/s?k=songmics+chaise+gaming+tissu&tag=monbureauconnecte0d-21) est plus frais sur la durée. Vérifie enfin la **charge maximale supportée** et garde une marge par rapport à ton poids : une chaise utilisée près de sa limite se fatigue plus vite.
 
 ![Chaise gaming à dossier haut à côté d'un setup deux écrans](/covers/meilleures-chaises-gaming-inbody.webp)
 

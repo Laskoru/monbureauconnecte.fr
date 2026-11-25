@@ -14,7 +14,7 @@ draft: false
 topPick:
   name: "Bureau d'angle compact"
   blurb: "Pour un coin de pièce, un bureau d'angle bien dimensionné loge autant de surface de travail qu'un grand bureau droit, sans bloquer le passage."
-  url: "https://www.amazon.fr/s?k=bureau+d%27angle+en+L+compact&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=bureau+d%27angle+en+L+compact&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les bureaux d'angle sur Amazon"
 comparison:
   columns: ["Format", "Idéal pour", "Point d'attention"]
@@ -51,7 +51,7 @@ Le résultat, c'est une **surface de travail équivalente à un grand bureau dro
 
 Tous les bureaux d'angle ne se ressemblent pas, et le bon choix dépend surtout de la configuration de ton coin de pièce et de ce que tu comptes y poser.
 
-Le [**bureau d'angle fixe en forme de L**](https://www.amazon.fr/s?k=bureau+d%27angle+en+L+compact&tag=monbureauconnecte-21) reste le format le plus courant : un plateau en deux parties qui se rejoignent à 90°, calé contre deux murs. C'est le plus stable et le plus généreux en surface, mais aussi le plus difficile à déplacer une fois monté.
+Le [**bureau d'angle fixe en forme de L**](https://www.amazon.fr/s?k=bureau+d%27angle+en+L+compact&tag=monbureauconnecte0d-21) reste le format le plus courant : un plateau en deux parties qui se rejoignent à 90°, calé contre deux murs. C'est le plus stable et le plus généreux en surface, mais aussi le plus difficile à déplacer une fois monté.
 
 Le **bureau d'angle avec étagères intégrées** ajoute du rangement vertical au-dessus ou à côté du plan de travail, utile quand le petit espace ne permet pas d'installer une bibliothèque séparée. Vérifie simplement que la profondeur du plateau reste suffisante pour ton matériel, certains modèles compacts sacrifient cette dimension pour gagner en hauteur de rangement. Une étagère accueille aussi volontiers une [plante de bureau peu exigeante](/articles/plante-bureau-depolluante/), qui égaie le coin sans prendre de place sur le plateau.
 

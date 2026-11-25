@@ -68,7 +68,7 @@ Au moins **2 à 3 paliers** pour s'adapter à différentes chaises et différent
 
 ### L'inclinaison réglable
 
-Elle permet d'**alterner les angles** au fil de la journée plutôt que de garder les pieds à plat en permanence. Certains modèles proposent même une [légère **bascule**](https://www.amazon.fr/s?k=fellowes+repose+pieds+bascule&tag=monbureauconnecte-21) qui sollicite doucement les mollets.
+Elle permet d'**alterner les angles** au fil de la journée plutôt que de garder les pieds à plat en permanence. Certains modèles proposent même une [légère **bascule**](https://www.amazon.fr/s?k=fellowes+repose+pieds+bascule&tag=monbureauconnecte0d-21) qui sollicite doucement les mollets.
 
 ### La stabilité et la surface
 

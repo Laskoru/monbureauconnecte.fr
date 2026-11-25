@@ -75,7 +75,7 @@ Un coussin a ses limites. Il soulage une pression mécanique et améliore le con
 
 **Pour un inconfort léger, en prévention** : un coussin en mousse à mémoire de forme standard, avec une découpe en U modérée, suffit largement. Pas besoin de viser le modèle le plus épais ni le plus technique si la gêne n'est pas encore installée.
 
-**Pour une douleur déjà présente au coccyx** : privilégier une [découpe en U bien marquée](https://www.amazon.fr/s?k=fellowes+coussin+assise+coccyx&tag=monbureauconnecte-21) et une densité de mousse plus élevée, quitte à payer un peu plus cher. L'objectif est de retirer complètement l'appui sur cette zone, pas seulement de l'amortir.
+**Pour une douleur déjà présente au coccyx** : privilégier une [découpe en U bien marquée](https://www.amazon.fr/s?k=fellowes+coussin+assise+coccyx&tag=monbureauconnecte0d-21) et une densité de mousse plus élevée, quitte à payer un peu plus cher. L'objectif est de retirer complètement l'appui sur cette zone, pas seulement de l'amortir.
 
 **Pour un usage nomade (bureau, voiture, déplacements)** : chercher un modèle avec poignée de transport intégrée et housse facilement lavable, plus important dans ce cas que l'épaisseur maximale, qui peut nuire à la portabilité.
 

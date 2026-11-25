@@ -12,7 +12,7 @@ category: "peripheriques"
 topPick:
   name: "Hub USB-C vers 4 ports USB-A 3.0 UGREEN"
   blurb: "Une valeur sûre et compacte : une entrée USB-C, quatre ports USB-A à 5 Gbps, et un fonctionnement plug and play, sans pilote ni logiciel à installer."
-  url: "https://www.amazon.fr/s?k=ugreen+hub+usb+c+4+ports+usb+3.0&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=ugreen+hub+usb+c+4+ports+usb+3.0&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les hubs USB UGREEN sur Amazon"
 coverAlt: "Hub USB noir avec plusieurs ports et interrupteurs, posé sur un bureau"
 draft: false
@@ -60,7 +60,7 @@ Un hub **non alimenté** (sans bloc secteur) puise l'énergie directement du por
 
 ### La connectique côté PC
 
-Vérifie le connecteur d'entrée : la plupart des [hubs récents se branchent en **USB-C**](https://www.amazon.fr/s?k=ugreen+hub+usb+c+4+ports+usb+3.0&tag=monbureauconnecte-21), mais certains modèles existent aussi en USB-A classique (pour l'usage inverse, brancher un vieux hub sur un PC qui a encore des ports USB-A). Regarde bien la fiche produit avant de commander, l'erreur est fréquente.
+Vérifie le connecteur d'entrée : la plupart des [hubs récents se branchent en **USB-C**](https://www.amazon.fr/s?k=ugreen+hub+usb+c+4+ports+usb+3.0&tag=monbureauconnecte0d-21), mais certains modèles existent aussi en USB-A classique (pour l'usage inverse, brancher un vieux hub sur un PC qui a encore des ports USB-A). Regarde bien la fiche produit avant de commander, l'erreur est fréquente.
 ## Comment choisir selon ton usage
 
 - **Déplacement occasionnel, un seul périphérique à brancher** : un petit **adaptateur USB-C vers USB-A**, léger et peu cher, suffit amplement.

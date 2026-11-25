@@ -13,7 +13,7 @@ draft: false
 topPick:
   name: "Lampe de luminothérapie 10 000 lux"
   blurb: "Le repère à chercher : une puissance de 10 000 lux annoncée à environ 30 cm, pour suivre le protocole le plus courant."
-  url: "https://www.amazon.fr/s?k=lampe+luminotherapie+10000+lux&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=lampe+luminotherapie+10000+lux&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les lampes de luminothérapie"
 comparison:
   columns: ["Critère", "Lampe de luminothérapie", "Lampe de bureau LED classique"]
@@ -48,7 +48,7 @@ C'est une nuance importante pour qui pense à une lampe de bureau : la plupart d
 
 ## Le protocole qui fait la différence
 
-Pour les personnes concernées par un TAS, Sante.fr indique que **60 à 90 %** ressentent une amélioration grâce à la luminothérapie, avec un protocole précis : une [lampe de **10 000 lux**](https://www.amazon.fr/s?k=beurer+lampe+luminotherapie+10000+lux&tag=monbureauconnecte-21), utilisée à environ **30 cm** du visage, pendant **30 minutes**, dans les **2 heures** qui suivent le réveil, chaque matin. Les premiers effets peuvent apparaître après 2 à 4 jours, mais l'amélioration est en général plus nette après 1 à 2 semaines, pour un traitement qui dure habituellement 2 ou 3 semaines.
+Pour les personnes concernées par un TAS, Sante.fr indique que **60 à 90 %** ressentent une amélioration grâce à la luminothérapie, avec un protocole précis : une [lampe de **10 000 lux**](https://www.amazon.fr/s?k=beurer+lampe+luminotherapie+10000+lux&tag=monbureauconnecte0d-21), utilisée à environ **30 cm** du visage, pendant **30 minutes**, dans les **2 heures** qui suivent le réveil, chaque matin. Les premiers effets peuvent apparaître après 2 à 4 jours, mais l'amélioration est en général plus nette après 1 à 2 semaines, pour un traitement qui dure habituellement 2 ou 3 semaines.
 
 Pour démarrer en douceur, Sante.fr conseille une puissance plus modérée (**2 500 à 5 000 lux**) ou des séances courtes de **5 à 10 minutes**, avant d'augmenter progressivement la durée ou l'intensité. Pendant la séance, rien n'empêche de lire ou de travailler sur son ordinateur : l'essentiel est que la lumière atteigne les yeux, pas de rester immobile à la regarder.
 ## Lampe de luminothérapie ou lampe de bureau classique : ne pas confondre

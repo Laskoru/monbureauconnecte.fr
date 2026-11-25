@@ -74,7 +74,7 @@ Ce n'est pas non plus un sujet réservé aux parquets anciens. Même un stratifi
 
 ## Comment choisir selon ton usage
 
-**Pour un usage simple, sur un parquet en bon état** : un [tapis transparent standard](https://www.amazon.fr/s?k=floortex+tapis+chaise+bureau+transparent&tag=monbureauconnecte-21) en PVC, autour de 75 x 120 cm, suffit largement. C'est la solution la plus discrète et la moins chère, idéale si l'objectif est surtout préventif.
+**Pour un usage simple, sur un parquet en bon état** : un [tapis transparent standard](https://www.amazon.fr/s?k=floortex+tapis+chaise+bureau+transparent&tag=monbureauconnecte0d-21) en PVC, autour de 75 x 120 cm, suffit largement. C'est la solution la plus discrète et la moins chère, idéale si l'objectif est surtout préventif.
 
 **Pour une chaise qui bouge beaucoup ou un bureau dans une pièce de passage** : privilégier un modèle plus épais avec une base antidérapante renforcée, quitte à payer un peu plus cher. Un tapis qui glisse en permanence sous les mouvements finit par s'user prématurément sur les bords et perd son utilité.
 

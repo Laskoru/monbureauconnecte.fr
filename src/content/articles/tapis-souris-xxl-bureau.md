@@ -83,7 +83,7 @@ Côté entretien, Logitech recommande pour ses tapis en tissu un **chiffon doux 
 
 ## Notre choix
 
-Le [Logitech G840 XL](https://www.amazon.fr/s?k=logitech+g840+xl&tag=monbureauconnecte-21), au format 90 x 40 cm, coche les cases essentielles pour un usage bureau au quotidien : surface tissu lisse et silencieuse, base en caoutchouc qui ne bouge pas même sur un plateau lisse, et une taille qui accueille confortablement un clavier compact et une souris sans empiéter sur le reste du bureau. Une valeur sûre plutôt qu'un choix spectaculaire, ce qui correspond bien à l'usage recherché ici.
+Le [Logitech G840 XL](https://www.amazon.fr/s?k=logitech+g840+xl&tag=monbureauconnecte0d-21), au format 90 x 40 cm, coche les cases essentielles pour un usage bureau au quotidien : surface tissu lisse et silencieuse, base en caoutchouc qui ne bouge pas même sur un plateau lisse, et une taille qui accueille confortablement un clavier compact et une souris sans empiéter sur le reste du bureau. Une valeur sûre plutôt qu'un choix spectaculaire, ce qui correspond bien à l'usage recherché ici.
 
 > **L'essentiel à retenir**
 > Un tapis XXL **unifie** la zone clavier + souris sur une surface lisse, protège le plateau et met fin aux zones de glisse disparates. L'essentiel : une **taille adaptée** à ton bureau (80-90 cm sur un bureau standard) et une **base antidérapante** fiable. Le **tissu tissé** est le plus polyvalent, avec des **bords cousus** pour durer. Un modèle « gaming » sobre fait parfaitement l'affaire au bureau.

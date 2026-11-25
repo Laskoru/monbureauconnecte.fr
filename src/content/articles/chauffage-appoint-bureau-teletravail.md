@@ -13,7 +13,7 @@ draft: false
 topPick:
   name: "Panneau radiant 500 à 600 W"
   blurb: "La puissance la plus adaptée à un coin de bureau fermé, avec un thermostat et une sécurité anti-basculement."
-  url: "https://www.amazon.fr/s?k=panneau+chauffant+radiant+bureau&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=panneau+chauffant+radiant+bureau&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les panneaux radiants sur Amazon"
 comparison:
   columns: ["Type", "Idéal pour", "Point d'attention"]
@@ -58,7 +58,7 @@ C'est justement l'intérêt d'un chauffage d'appoint ciblé : il corrige l'incon
 
 Tous les chauffages d'appoint ne se valent pas pour un usage assis, plusieurs heures par jour, dans un espace souvent restreint sous une table.
 
-Le [**chauffe-pieds électrique fermé**](https://www.amazon.fr/s?k=beurer+chauffe+pieds&tag=monbureauconnecte-21) reste la solution la plus sobre : un boîtier isolé dans lequel tu glisses les pieds, chauffé par une résistance basse consommation (généralement 30 à 100 W). Il ne chauffe que toi, pas la pièce, ce qui en fait l'option la moins énergivore si le froid se limite vraiment aux extrémités.
+Le [**chauffe-pieds électrique fermé**](https://www.amazon.fr/s?k=beurer+chauffe+pieds&tag=monbureauconnecte0d-21) reste la solution la plus sobre : un boîtier isolé dans lequel tu glisses les pieds, chauffé par une résistance basse consommation (généralement 30 à 100 W). Il ne chauffe que toi, pas la pièce, ce qui en fait l'option la moins énergivore si le froid se limite vraiment aux extrémités.
 
 Le **panneau radiant** (mural, sur pied ou posé au sol, autour de 400 à 600 W) diffuse une chaleur par rayonnement, comme le soleil, qui réchauffe directement les jambes et le buste sans trop assécher l'air. Il met un peu plus de temps à se faire sentir qu'un soufflant, mais la sensation de chaleur est plus stable une fois la séance de travail commencée.
 

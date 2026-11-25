@@ -75,7 +75,7 @@ Utile en dépannage, mais un **micro externe** reste préférable pour un usage 
 
 ## Quand la 4K devient utile
 
-Une [webcam **4K**](https://www.amazon.fr/s?k=logitech+brio+4k&tag=monbureauconnecte-21) a un vrai intérêt dans deux cas : les **présentations** où le partage d'écran zoome sur des détails, et l'**enregistrement de contenu** (formations, démonstrations) destiné à être revu ou monté ensuite. La 4K autorise alors un recadrage net sans perte visible. Pour de la visio classique au quotidien, l'investissement supplémentaire se justifie moins, et le débit plus lourd peut même poser problème sur une connexion modeste.
+Une [webcam **4K**](https://www.amazon.fr/s?k=logitech+brio+4k&tag=monbureauconnecte0d-21) a un vrai intérêt dans deux cas : les **présentations** où le partage d'écran zoome sur des détails, et l'**enregistrement de contenu** (formations, démonstrations) destiné à être revu ou monté ensuite. La 4K autorise alors un recadrage net sans perte visible. Pour de la visio classique au quotidien, l'investissement supplémentaire se justifie moins, et le débit plus lourd peut même poser problème sur une connexion modeste.
 ## 1080p ou 4K : le récapitulatif
 
 | Critère | 1080p | 4K |

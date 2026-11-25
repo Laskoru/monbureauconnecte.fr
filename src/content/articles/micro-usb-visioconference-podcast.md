@@ -71,7 +71,7 @@ Un **bouton muet** sur le micro est plus rapide et plus fiable qu'un raccourci l
 
 ### Le bras ou le pied
 
-Un micro trop bas oblige à se pencher ; un [**bras articulé**](https://www.amazon.fr/s?k=bras+articule+micro+blue+yeti&tag=monbureauconnecte-21) le positionne près de la bouche sans encombrer le bureau, et il isole des vibrations de la table. Pour du podcast ou un usage quotidien intensif, c'est un vrai confort.
+Un micro trop bas oblige à se pencher ; un [**bras articulé**](https://www.amazon.fr/s?k=bras+articule+micro+blue+yeti&tag=monbureauconnecte0d-21) le positionne près de la bouche sans encombrer le bureau, et il isole des vibrations de la table. Pour du podcast ou un usage quotidien intensif, c'est un vrai confort.
 
 ### La qualité pour l'enregistrement
 

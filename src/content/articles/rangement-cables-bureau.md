@@ -72,7 +72,7 @@ Le plus efficace pour un setup complet. Fixé sous le plateau (par vis ou par pi
 
 ### La gaine tressée et les clips
 
-Une [**gaine tressée extensible**](https://www.amazon.fr/s?k=gaine+range+cable+tressee+bureau&tag=monbureauconnecte-21) rassemble plusieurs câbles en un seul faisceau souple, parfait pour les câbles qui bougent (clavier, casque). Des **clips adhésifs** maintiennent un câble isolé en place, comme un câble de charge sur le bord du bureau, toujours à portée.
+Une [**gaine tressée extensible**](https://www.amazon.fr/s?k=gaine+range+cable+tressee+bureau&tag=monbureauconnecte0d-21) rassemble plusieurs câbles en un seul faisceau souple, parfait pour les câbles qui bougent (clavier, casque). Des **clips adhésifs** maintiennent un câble isolé en place, comme un câble de charge sur le bord du bureau, toujours à portée.
 
 ### La goulotte de sol
 

@@ -81,7 +81,7 @@ L'ordinateur surélevé doit rester **parfaitement stable**, même si tu tapes s
 
 ### Le poids et la pliabilité
 
-Critère décisif si le support fait l'aller-retour **bureau/domicile** : un [modèle pliable et léger](https://www.amazon.fr/s?k=support+ordinateur+portable+pliable+reglable+hauteur&tag=monbureauconnecte-21) se transporte sans effort, au prix de quelques réglages en moins.
+Critère décisif si le support fait l'aller-retour **bureau/domicile** : un [modèle pliable et léger](https://www.amazon.fr/s?k=support+ordinateur+portable+pliable+reglable+hauteur&tag=monbureauconnecte0d-21) se transporte sans effort, au prix de quelques réglages en moins.
 ## Quel support selon ton usage
 
 | Ton usage | Support conseillé | Pourquoi |

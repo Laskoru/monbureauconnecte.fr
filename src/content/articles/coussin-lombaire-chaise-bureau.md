@@ -74,7 +74,7 @@ C'est un accessoire particulièrement pertinent pour deux profils : les personne
 
 ## Comment choisir selon ton usage
 
-**Pour une gêne légère ou en prévention** : un [modèle standard en mousse à mémoire de forme](https://www.amazon.fr/s?k=fellowes+support+lombaire+memoire+de+forme&tag=monbureauconnecte-21), avec une courbure modérée, suffit largement. Pas besoin de viser le maintien le plus ferme si le dos ne réclame pas encore un soutien marqué.
+**Pour une gêne légère ou en prévention** : un [modèle standard en mousse à mémoire de forme](https://www.amazon.fr/s?k=fellowes+support+lombaire+memoire+de+forme&tag=monbureauconnecte0d-21), avec une courbure modérée, suffit largement. Pas besoin de viser le maintien le plus ferme si le dos ne réclame pas encore un soutien marqué.
 
 **Pour une douleur lombaire déjà installée** : privilégier une mousse plus dense et une courbure plus prononcée, quitte à traverser une courte période d'adaptation. L'objectif est de forcer un peu le maintien de la cambrure, pas seulement de l'accompagner mollement.
 

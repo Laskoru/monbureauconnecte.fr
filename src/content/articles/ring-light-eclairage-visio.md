@@ -75,7 +75,7 @@ Passer du **blanc froid au blanc chaud** permet d'accorder le ring light à l'é
 
 ### Le clip sur écran, le pied ou le bras
 
-Trois façons de le poser, selon ton bureau. Le [**clip sur l'écran**](https://www.amazon.fr/s?k=neewer+ring+light+clip+ecran&tag=monbureauconnecte-21) est le plus discret pour la visio : le ring light se fixe directement au-dessus de la webcam, pile dans l'axe du regard, et se range en un geste. Le **petit trépied à poser** offre plus de liberté de hauteur et d'angle, mais occupe une place sur le plateau. Le **grand pied au sol ou le bras articulé** vise plutôt la création de contenu, avec un positionnement précis mais un encombrement réel. Pour de simples réunions, le clip ou le petit trépied suffisent largement.
+Trois façons de le poser, selon ton bureau. Le [**clip sur l'écran**](https://www.amazon.fr/s?k=neewer+ring+light+clip+ecran&tag=monbureauconnecte0d-21) est le plus discret pour la visio : le ring light se fixe directement au-dessus de la webcam, pile dans l'axe du regard, et se range en un geste. Le **petit trépied à poser** offre plus de liberté de hauteur et d'angle, mais occupe une place sur le plateau. Le **grand pied au sol ou le bras articulé** vise plutôt la création de contenu, avec un positionnement précis mais un encombrement réel. Pour de simples réunions, le clip ou le petit trépied suffisent largement.
 
 ### La fixation et l'encombrement
 

@@ -13,7 +13,7 @@ draft: false
 topPick:
   name: "Chauffe-tasse USB avec plaque chauffante et coupure automatique"
   blurb: "Le format le plus simple : une plaque alimentée en USB, posée sous n'importe quelle tasse, avec arrêt automatique quand tu la retires."
-  url: "https://www.amazon.fr/s?k=chauffe+tasse+usb&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=chauffe+tasse+usb&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les chauffe-tasses USB sur Amazon"
 comparison:
   columns: ["Type", "Idéal pour", "Point d'attention"]
@@ -75,7 +75,7 @@ Pour qui travaille plusieurs heures d'affilée, mieux vaut parfois alterner avec
 
 La **plaque chauffante USB nue** convient à qui a déjà un mug préféré en céramique ou en acier : elle s'adapte à presque tous les formats et reste la solution la moins chère. Le **chauffe-tasse livré avec sa propre tasse** rassure qui ne veut pas se poser la question de la compatibilité, à condition que le fond du mug fourni reste bien plat pour un contact optimal avec la plaque. La version avec **chargeur à induction Qi intégré** regroupe deux usages sur le bureau, pratique si la place manque, mais demande en général une alimentation plus puissante qu'un simple port USB du PC, donc un adaptateur secteur dédié plutôt qu'un branchement direct sur l'ordinateur. Enfin, le **sous-verre chauffant sur batterie** dépanne un bureau sans port USB accessible, mais son autonomie limitée le réserve à un usage ponctuel plutôt qu'à une utilisation continue sur toute une journée de travail.
 
-Pour un usage quotidien, qui tourne sans y repenser pendant plusieurs heures, la [plaque USB simple avec coupure automatique](https://www.amazon.fr/s?k=chauffe+tasse+usb+coupure+automatique&tag=monbureauconnecte-21) reste le choix le plus polyvalent, surtout si plusieurs personnes du foyer n'ont pas le même mug.
+Pour un usage quotidien, qui tourne sans y repenser pendant plusieurs heures, la [plaque USB simple avec coupure automatique](https://www.amazon.fr/s?k=chauffe+tasse+usb+coupure+automatique&tag=monbureauconnecte0d-21) reste le choix le plus polyvalent, surtout si plusieurs personnes du foyer n'ont pas le même mug.
 ## Où le placer sans encombrer le poste de travail
 
 Un chauffe-tasse USB prend peu de place, mais mal rangé, il ajoute un câble de plus à un bureau déjà chargé. Si tes câbles s'accumulent déjà sous le plateau, notre guide pour le [rangement des câbles de bureau](/articles/rangement-cables-bureau/) aide à garder un passage propre entre la multiprise et les petits appareils comme celui-ci. Évite aussi de le poser trop près du clavier : un renversement de tasse reste toujours possible, chauffe-tasse ou pas, et l'eau ou le café n'ont rien à faire sous les touches.

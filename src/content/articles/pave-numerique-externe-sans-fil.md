@@ -76,7 +76,7 @@ Un pavé complet compte en général **une vingtaine de touches** (chiffres, op�
 
 ### La compacité et la stabilité
 
-Un [pavé **fin et léger**](https://www.amazon.fr/s?k=trust+pave+numerique+sans+fil&tag=monbureauconnecte-21) se glisse dans un sac et se pose facilement à droite **ou à gauche** du clavier. Des **patins antidérapants** évitent qu'il ne glisse pendant la frappe rapide.
+Un [pavé **fin et léger**](https://www.amazon.fr/s?k=trust+pave+numerique+sans+fil&tag=monbureauconnecte0d-21) se glisse dans un sac et se pose facilement à droite **ou à gauche** du clavier. Des **patins antidérapants** évitent qu'il ne glisse pendant la frappe rapide.
 
 ### La compatibilité
 

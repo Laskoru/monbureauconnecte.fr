@@ -75,7 +75,7 @@ Certains modèles déplacent des touches usuelles (**Entrée**, **Retour arrièr
 
 ### La connectivité
 
-Sans-fil ou filaire selon la préférence, sans impact réel sur l'ergonomie elle-même. Le sans-fil libère le bureau (l'[ERGO K860](https://www.amazon.fr/s?k=logitech+ergo+k860+azerty&tag=monbureauconnecte-21), par exemple, fonctionne sur piles et se couple à trois appareils) ; le filaire évite la question des piles ou de la recharge.
+Sans-fil ou filaire selon la préférence, sans impact réel sur l'ergonomie elle-même. Le sans-fil libère le bureau (l'[ERGO K860](https://www.amazon.fr/s?k=logitech+ergo+k860+azerty&tag=monbureauconnecte0d-21), par exemple, fonctionne sur piles et se couple à trois appareils) ; le filaire évite la question des piles ou de la recharge.
 ## Quel modèle selon ton profil
 
 | Ton besoin | Format conseillé | Adaptation |

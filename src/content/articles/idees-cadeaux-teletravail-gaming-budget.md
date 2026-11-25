@@ -13,7 +13,7 @@ draft: false
 topPick:
   name: "Lampe de bureau LED à variation d'intensité"
   blurb: "Le cadeau qui plaît presque à coup sûr : elle s'adapte à n'importe quel bureau et rend service dès le premier soir, quel que soit le budget que tu y mets."
-  url: "https://www.amazon.fr/s?k=lampe+de+bureau+led+variation+intensite&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=lampe+de+bureau+led+variation+intensite&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les lampes de bureau LED sur Amazon"
 comparison:
   columns: ["Budget", "Idées cadeaux", "Pour qui"]
@@ -66,7 +66,7 @@ C'est la tranche où le cadeau commence vraiment à se voir et à changer le quo
 Ici, le cadeau devient le genre d'objet qu'on hésite parfois à s'acheter soi-même, ce qui en fait une très bonne surprise :
 
 - Un **[casque sans fil](/articles/casque-filaire-vs-sans-fil-teletravail/)** confortable avec un bon micro, pour libérer la personne du câble pendant ses appels.
-- Un **[clavier mécanique silencieux](https://www.amazon.fr/s?k=logitech+mx+mechanical+azerty&tag=monbureauconnecte-21)**, qui combine le plaisir de frappe des claviers mécaniques et une discrétion compatible avec l'open space ou le télétravail en appartement.
+- Un **[clavier mécanique silencieux](https://www.amazon.fr/s?k=logitech+mx+mechanical+azerty&tag=monbureauconnecte0d-21)**, qui combine le plaisir de frappe des claviers mécaniques et une discrétion compatible avec l'open space ou le télétravail en appartement.
 - Une **webcam avec [cache de confidentialité](/articles/webcam-cache-confidentialite/)** et une bonne qualité d'image, pour des visioconférences nettement plus nettes qu'avec la caméra intégrée d'un ordinateur portable.
 
 Ces cadeaux demandent un peu plus d'attention aux préférences de la personne (filaire ou sans fil pour le casque, disposition du clavier), mais restent des valeurs sûres si tu connais un minimum ses habitudes de travail.

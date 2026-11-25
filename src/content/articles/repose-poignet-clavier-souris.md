@@ -73,7 +73,7 @@ C'est aussi l'accessoire le plus simple à essayer en premier : contrairement à
 
 ## Les critères qui font vraiment la différence
 
-- **Le matériau** : [gel](https://www.amazon.fr/s?k=fellowes+repose+poignet+gel+clavier&tag=monbureauconnecte-21) (frais, léger effet massant) ou mousse à mémoire de forme (s'adapte à la morphologie de la main, plus moelleuse). Les deux sont valables ; évite en revanche les modèles en mousse basique bon marché qui s'écrasent et perdent tout soutien après quelques semaines d'usage quotidien.
+- **Le matériau** : [gel](https://www.amazon.fr/s?k=fellowes+repose+poignet+gel+clavier&tag=monbureauconnecte0d-21) (frais, léger effet massant) ou mousse à mémoire de forme (s'adapte à la morphologie de la main, plus moelleuse). Les deux sont valables ; évite en revanche les modèles en mousse basique bon marché qui s'écrasent et perdent tout soutien après quelques semaines d'usage quotidien.
 - **La hauteur du repose-poignet** : elle doit correspondre à celle du clavier ou de la souris utilisée. Trop bas, il ne sert à rien ; trop haut, il force le poignet dans l'autre sens (en flexion), ce qui est tout aussi problématique. Pour un clavier plat, un modèle fin suffit le plus souvent ; réserve les modèles épais aux claviers hauts, mécaniques notamment.
 - **La base antidérapante** : indispensable pour qu'il ne glisse pas à chaque appui, surtout sur un bureau en verre ou en stratifié lisse. Vérifie la présence d'un revêtement en caoutchouc ou silicone sous l'accessoire.
 - **La longueur pour le clavier** : elle doit couvrir toute la largeur du clavier, sans quoi les poignets reposent alternativement sur l'accessoire puis sur le bureau nu selon la zone de frappe utilisée.

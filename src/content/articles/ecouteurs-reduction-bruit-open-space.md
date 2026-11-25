@@ -14,7 +14,7 @@ draft: false
 topPick:
   name: "Écouteurs sans fil à réduction de bruit active (intra-auriculaires)"
   blurb: "Le format le plus discret pour atténuer le bruit de fond de l'open space sans porter un casque visible toute la journée."
-  url: "https://www.amazon.fr/s?k=anker+soundcore+ecouteurs+reduction+de+bruit&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=anker+soundcore+ecouteurs+reduction+de+bruit&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les écouteurs à réduction de bruit sur Amazon"
 comparison:
   columns: ["Critère", "Écouteurs intra-auriculaires ANC", "Casque à réduction de bruit"]

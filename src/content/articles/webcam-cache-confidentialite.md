@@ -14,7 +14,7 @@ draft: false
 topPick:
   name: "Cache de webcam coulissant universel (lot)"
   blurb: "Une fine glissière autocollante qui s'adapte à la plupart des laptops, écrans et tablettes, sans abîmer la vitre de la caméra."
-  url: "https://www.amazon.fr/s?k=cache+webcam+confidentialite&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=cache+webcam+confidentialite&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir les caches de webcam sur Amazon"
 comparison:
   columns: ["Critère", "Cache adhésif universel", "Webcam externe à obturateur intégré"]
@@ -99,7 +99,7 @@ Le cache physique règle l'essentiel, mais il se combine bien avec un réglage g
 
 Pour une visio de meilleure qualité une fois le cache ouvert, le reste du setup compte tout autant : un [éclairage d'appoint pour la visio](/articles/ring-light-eclairage-visio/) évite un rendu trop sombre, et un [micro USB dédié](/articles/micro-usb-visioconference-podcast/) améliore souvent plus la perception des interlocuteurs qu'une meilleure définition d'image.
 
-Si tu changes de webcam de toute façon, autant choisir un modèle équipé d'un cache mécanique d'origine, comme la [Logitech C920s](https://www.amazon.fr/s?k=logitech+c920s+pro+hd+webcam&tag=monbureauconnecte-21).
+Si tu changes de webcam de toute façon, autant choisir un modèle équipé d'un cache mécanique d'origine, comme la [Logitech C920s](https://www.amazon.fr/s?k=logitech+c920s+pro+hd+webcam&tag=monbureauconnecte0d-21).
 
 ## Quelle option choisir selon ta situation
 

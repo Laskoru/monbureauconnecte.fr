@@ -70,7 +70,7 @@ Un **SSD NVMe** est indispensable : chargements courts, système réactif. Vise 
 
 ### L'alimentation et le boîtier
 
-Deux pièces qu'on néglige à tort. Une [**alimentation** fiable](https://www.amazon.fr/s?k=alimentation+pc+80+plus+gold+corsair&tag=monbureauconnecte-21), à la bonne puissance et certifiée 80+ (un label de rendement énergétique), protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
+Deux pièces qu'on néglige à tort. Une [**alimentation** fiable](https://www.amazon.fr/s?k=alimentation+pc+80+plus+gold+corsair&tag=monbureauconnecte0d-21), à la bonne puissance et certifiée 80+ (un label de rendement énergétique), protège tous les autres composants. Ce n'est pas là qu'il faut économiser au rabais. Le **boîtier**, lui, doit surtout bien ventiler ; le style vient après.
 ## Quelle config PC gaming selon ton budget
 
 Voici les grands paliers. Ils bougent avec les prix, mais la **logique** reste stable : on ajuste le GPU et la plateforme, le reste suit.

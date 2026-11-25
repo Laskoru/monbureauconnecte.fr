@@ -72,7 +72,7 @@ Le format caisson, généralement plus compact qu'une armoire, a aussi l'avantag
 
 ## Comment choisir selon ton usage
 
-**Pour un bureau à la maison, usage quotidien léger** : un [caisson compact à roulettes](https://www.amazon.fr/s?k=vasagle+caisson+bureau+roulettes&tag=monbureauconnecte-21) à deux ou trois compartiments, avec au moins un tiroir fermé, couvre largement les besoins d'un poste de télétravail classique.
+**Pour un bureau à la maison, usage quotidien léger** : un [caisson compact à roulettes](https://www.amazon.fr/s?k=vasagle+caisson+bureau+roulettes&tag=monbureauconnecte0d-21) à deux ou trois compartiments, avec au moins un tiroir fermé, couvre largement les besoins d'un poste de télétravail classique.
 
 **Pour un usage professionnel avec des documents à protéger** : privilégier un modèle avec tiroir verrouillable et une structure plus robuste, quitte à sacrifier un peu de mobilité au profit de la sécurité.
 

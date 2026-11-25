@@ -73,7 +73,7 @@ Chaque bras annonce une **plage de poids** (et de taille en pouces). Compare-la 
 
 ### Le système de réglage
 
-Un [bras à **ressort à gaz**](https://www.amazon.fr/s?k=bras+ecran+ressort+a+gaz+pince+vesa&tag=monbureauconnecte-21) permet un ajustement fluide d'une seule main : on monte, descend, incline l'écran d'un geste. Les modèles à vis, moins chers, imposent de desserrer/resserrer à chaque changement : dans les faits, on ne les règle qu'une fois.
+Un [bras à **ressort à gaz**](https://www.amazon.fr/s?k=bras+ecran+ressort+a+gaz+pince+vesa&tag=monbureauconnecte0d-21) permet un ajustement fluide d'une seule main : on monte, descend, incline l'écran d'un geste. Les modèles à vis, moins chers, imposent de desserrer/resserrer à chaque changement : dans les faits, on ne les règle qu'une fois.
 
 ### La gestion des câbles
 

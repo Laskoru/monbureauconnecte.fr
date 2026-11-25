@@ -67,7 +67,7 @@ Le bruit d'un clavier mécanique vient surtout de son type de **switch**. Trois 
 - **Tactiles (bruns)** : une petite bosse signale l'activation, appréciée en bureautique. Les versions silencieuses réduisent le bruit tout en gardant ce retour tactile.
 - **Clicky (bleus)** : un clic sonore volontaire à chaque frappe. Très satisfaisant… et **à proscrire** en environnement partagé ou en visio.
 
-Retiens surtout le mot **« silent »** ou **« silencieux »** dans le nom du switch (par exemple les [Cherry MX Silent Red](https://www.amazon.fr/s?k=clavier+cherry+mx+silent+red+azerty&tag=monbureauconnecte-21)) : un mécanique « normal » présenté comme « moins bruyant » ne vaut pas un vrai switch conçu pour le silence.
+Retiens surtout le mot **« silent »** ou **« silencieux »** dans le nom du switch (par exemple les [Cherry MX Silent Red](https://www.amazon.fr/s?k=clavier+cherry+mx+silent+red+azerty&tag=monbureauconnecte0d-21)) : un mécanique « normal » présenté comme « moins bruyant » ne vaut pas un vrai switch conçu pour le silence.
 
 ## Ce qui compte, au-delà du switch
 

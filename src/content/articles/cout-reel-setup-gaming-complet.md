@@ -69,7 +69,7 @@ Fais le total et l'ordre de grandeur devient clair : un setup gaming complet et 
 Tous les postes ne se valent pas dans le temps. Pour bien répartir, sépare ce qu'il ne faut pas brader de ce sur quoi tu peux lever le pied.
 
 **À ne pas brader :**
-- **[L'alimentation du PC](https://www.amazon.fr/s?k=alimentation+pc+80+plus+gold+corsair&tag=monbureauconnecte-21)** : elle protège tous les autres composants. Une alim au rabais est une fausse économie qui peut coûter cher.
+- **[L'alimentation du PC](https://www.amazon.fr/s?k=alimentation+pc+80+plus+gold+corsair&tag=monbureauconnecte0d-21)** : elle protège tous les autres composants. Une alim au rabais est une fausse économie qui peut coûter cher.
 - **Le siège** : c'est ton dos qui paie l'addition d'une mauvaise chaise. Un bon [siège gaming](/articles/meilleures-chaises-gaming/) se garde des années.
 - **L'écran** si tu joues beaucoup : c'est lui qui fait l'expérience au quotidien, et un bon écran survit à plusieurs générations de PC.
 

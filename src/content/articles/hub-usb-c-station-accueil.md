@@ -94,7 +94,7 @@ Une station qui délivre **100 W** recharge la plupart des portables via le mêm
 
 ### Le port Ethernet
 
-En visio ou pour de gros transferts, une connexion **filaire** est bien plus stable qu'un Wi-Fi partagé. C'est souvent ce qui distingue une [vraie station avec port Ethernet](https://www.amazon.fr/s?k=ugreen+station+accueil+usb+c+ethernet+double+hdmi&tag=monbureauconnecte-21) d'un simple hub.
+En visio ou pour de gros transferts, une connexion **filaire** est bien plus stable qu'un Wi-Fi partagé. C'est souvent ce qui distingue une [vraie station avec port Ethernet](https://www.amazon.fr/s?k=ugreen+station+accueil+usb+c+ethernet+double+hdmi&tag=monbureauconnecte0d-21) d'un simple hub.
 
 ### Les ports USB-A restants et la compatibilité
 

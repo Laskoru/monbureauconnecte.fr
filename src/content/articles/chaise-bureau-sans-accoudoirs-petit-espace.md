@@ -27,7 +27,7 @@ interactiveGuide:
 topPick:
   name: "SONGMICS OBN37, chaise de bureau en maille à accoudoirs relevables"
   blurb: "Le compromis pour une petite pièce : accoudoirs qu'on relève pour glisser la chaise sous le bureau, hauteur d'assise réglable de 46 à 54 cm, dossier en S avec soutien lombaire réglable, et une charge annoncée de 120 kg."
-  url: "https://www.amazon.fr/s?k=SONGMICS+OBN37+chaise+bureau+accoudoirs+relevables&tag=monbureauconnecte-21"
+  url: "https://www.amazon.fr/s?k=SONGMICS+OBN37+chaise+bureau+accoudoirs+relevables&tag=monbureauconnecte0d-21"
   ctaLabel: "Voir la SONGMICS OBN37 sur Amazon"
 sources:
   - label: "INRS, « Travail sur écran. Prévention des risques »"
