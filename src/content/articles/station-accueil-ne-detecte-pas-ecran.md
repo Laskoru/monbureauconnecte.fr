@@ -8,7 +8,6 @@ pinHook: "Ta station d'accueil *ne détecte pas l'écran* ?"
 pinSub: "Câble, pilote et la limite Mac M1/M2, dans l'ordre."
 keywords: ["station d'accueil ne détecte pas l'écran", "écran non détecté station d'accueil", "dock usb-c écran qui ne s'affiche pas", "mac m1 m2 un seul écran externe"]
 category: "peripheriques"
-coverImage: "https://images.unsplash.com/photo-1760376789487-994070337c76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDE3MjIwfDB8MXxzZWFyY2h8MXx8VVNCLUMlMjBodWIlMjBjYWJsZXMlMjBwbHVnZ2VkJTIwbW9uaXRvcnxlbnwwfDB8fHwxNzk0ODkyNjE0fDI&ixlib=rb-4.1.0&q=80&w=1080"
 coverAlt: "Hub ou station d'accueil USB-C noir avec plusieurs ports et interrupteurs, posé sur un fond blanc"
 draft: false
 faq:
